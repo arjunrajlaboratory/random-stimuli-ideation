@@ -8,7 +8,7 @@ Can poems, random words or other unrelated material make a language model brains
 
 The report is a single self-contained HTML file. Its "Present slides" button opens a 16-slide deck.
 
-- **Read it online:** <https://rajlab.seas.upenn.edu/notes/random-stimuli-ideation/>
+- **Read it online:** <https://rajlab.engineering.upenn.edu/notes/random-stimuli-ideation/>
 - Or clone the repository and open the file locally:
   ```bash
   git clone https://github.com/arjunrajlaboratory/random-stimuli-ideation.git
