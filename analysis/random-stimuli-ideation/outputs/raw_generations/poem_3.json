@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Prime-rest-restimulate time course with chromatin profiling",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a transient stimulus (TPA, TNF, or wounding cues), let them rest for days to weeks, then restimulate. Measure ATAC-seq, AP-1 (FOS/JUN) CUT&RUN, and RNA-seq to see whether primed cells show faster or stronger transcription and retained accessibility at AP-1 motif sites compared with naive cells."
+    },
+    {
+      "title": "Acute AP-1 degradation at different memory phases",
+      "description": "Use degron-tagged (dTAG/AID) FOS, JUN, or ATF family members. Deplete them (a) during priming only, (b) during the rest period, or (c) during restimulation, and see which window is needed to establish versus maintain the primed response. This separates AP-1 as an initiator of memory from AP-1 as a continuous maintainer."
+    },
+    {
+      "title": "Single-cell multiome lineage-tracked memory",
+      "description": "Combine single-cell ATAC and RNA with barcoded lineage tracing, so sister cells can be compared after priming. Test whether AP-1 motif accessibility and target-gene expression states are inherited across divisions and heterogeneous among clones, in line with a heritable cell-state memory."
+    },
+    {
+      "title": "Live-cell AP-1 reporters and dynamics imaging",
+      "description": "Image endogenously tagged FOS/JUN, or AP-1 transcriptional reporters, with single-molecule tracking and optogenetic or pulsed stimulation. Quantify whether past stimulus history alters the amplitude, duration, or dimer composition of later AP-1 responses, and whether this predicts the memory state of single cells."
+    },
+    {
+      "title": "Locus-specific causal perturbation of AP-1 sites",
+      "description": "Use CRISPR base editing or dCas9 perturbation to mutate or block AP-1 motifs at primed enhancers. Pair this with measurements of pioneer-like opening (with or without SWI/SNF/BAF inhibition) and histone marks (H3K27ac, H3K4me1). Test whether those motifs are necessary and sufficient for stable accessibility and enhanced re-induction after a transient signal."
+    }
+  ],
+  "cost_usd": 0.011557000000000001,
+  "session_id": "7ae330bc-36ec-44e5-a2b7-b5f6ab6baa61"
+}

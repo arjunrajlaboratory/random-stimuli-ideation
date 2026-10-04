@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 0,
+  "stimulus": "\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Persistence after stimulus withdrawal (the song that never stops)",
+      "description": "Expose cells to a transient stimulus (e.g., TNF, serum, or a stress signal) and then withdraw it. Track AP-1 (FOS/JUN) occupancy by CUT&RUN and chromatin accessibility by ATAC-seq at days to weeks afterward. If AP-1 sites stay open and bound after the signal is gone, that supports AP-1 as a memory mechanism."
+    },
+    {
+      "title": "Sensitivity to the second stimulus (the sweetest tune in the gale)",
+      "description": "Give a primed and a naive population the same second challenge. Measure the transcriptional response by RNA-seq and nascent-RNA assays, and compare the kinetics and magnitude of induction at AP-1-marked genes. Faster or stronger induction that depends on AP-1 would be the functional signature of memory."
+    },
+    {
+      "title": "Necessity and sufficiency by acute perturbation",
+      "description": "Use a dominant-negative AP-1 (A-FOS), degron-tagged JUN/FOS, or CRISPRi of specific enhancers. Apply it either during priming or only during the memory (maintenance) phase, then test whether the memory response is lost. Compare with ectopic AP-1 expression alone to see if it can write memory without the original signal. Separating the establishment and maintenance phases shows whether AP-1 is needed continuously or only to start the memory."
+    },
+    {
+      "title": "Single-cell tracking of AP-1 activity and heritability",
+      "description": "Use live-cell AP-1 reporters or FOS/JUN imaging, combined with lineage tracing or single-cell multiome (RNA + ATAC) of sister cells. Test whether the primed state is bistable, is inherited across divisions, and decays with a measurable half-life. Heritability and a stable, all-or-none state would distinguish memory from a simple lingering response."
+    },
+    {
+      "title": "Chromatin mechanism and the independence test",
+      "description": "Test whether AP-1 maintains memory through chromatin remodeling (BAF/SWI-SNF), histone marks (H3K27ac, H3K4me1) and pioneer-like opening of closed sites. Perturb these factors after priming, and use optogenetic or inducible AP-1 pulses to ask whether a transient AP-1 input leaves a lasting epigenetic mark. Retained marks that persist when AP-1 is removed would show that the memory is carried by chromatin rather than by continuous AP-1 presence."
+    }
+  ],
+  "cost_usd": 0.012271,
+  "session_id": "b8f8a29b-76e5-466c-b443-6c6ac21d62f3"
+}

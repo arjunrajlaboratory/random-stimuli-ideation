@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 7,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis curves borrowed from magnetic materials",
+      "description": "Treat AP-1 chromatin state like a ferromagnet: ramp a stimulus (e.g., optogenetic or titrated FOS/JUN induction or MAPK activity) up and then down, and measure AP-1 binding (CUT&RUN), accessibility (ATAC-seq), and target transcription at matched input levels. A non-overlapping up/down response loop that persists after the stimulus is removed would indicate history-dependent memory, and the loop width could be quantified per locus."
+    },
+    {
+      "title": "Immunological recall-style prime\u2013rest\u2013rechallenge design",
+      "description": "Borrowing from vaccine prime/boost logic, expose cells to a transient stimulus (priming), allow a defined rest period, then rechallenge. Compare the kinetics and amplitude of target gene induction and AP-1 occupancy in primed vs naive cells. Include AP-1 dominant-negative (e.g., A-FOS) given only during priming vs only during rechallenge to separate the roles of AP-1 in establishing vs executing memory."
+    },
+    {
+      "title": "Single-cell lineage tracing as in clonal population genetics",
+      "description": "Use barcoded lineages with split-clone designs (as in fate-mapping studies of heredity): stimulate one sister arm and not the other, then use single-cell multiome (RNA + ATAC) to test whether AP-1 motif accessibility and target expression are more similar among sisters and across divisions than among unrelated cells. Estimating heritability of the state across generations, analogous to the heritability estimates in quantitative genetics, would show whether it is mitotically stable."
+    },
+    {
+      "title": "Bistable switch modeling and live reporters from electrical circuit engineering",
+      "description": "Build a dynamical-systems model of AP-1 with positive feedback (FOS/JUN autoregulation, with cooperating pioneer factors) and fit it to live-cell reporters of AP-1 activity (e.g., a fluorescent AP-1 reporter and endogenous FOS-tagged knock-ins) measured across single-cell trajectories. Test the model's predictions of bistability (bimodal distributions, critical slowing down near thresholds, and flipping upon brief pulses). Then perturb feedback loops to see whether memory is lost."
+    },
+    {
+      "title": "Ecological succession-style locus-level perturbation and nucleation tests",
+      "description": "Just as ecologists remove a keystone species to test whether a community can recover, use dCas9-based degradation or motif mutation at selected AP-1 sites after stimulation is removed, i.e., after the state has been set. Measure whether neighboring chromatin marks (H3K27ac, accessibility) and gene expression persist, collapse, or are rebuilt. Combine with AP-1 degron (dTAG) timing experiments to determine whether continuous AP-1 presence is required to maintain the state (a maintenance factor) or whether it only initiates a self-sustaining state (a trigger)."
+    }
+  ],
+  "cost_usd": 0.0107586,
+  "session_id": "1258cf86-bb3d-4124-a0de-c656b862d3a2"
+}

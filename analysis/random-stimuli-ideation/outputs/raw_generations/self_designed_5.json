@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed",
+  "call": 5,
+  "stimulus": "Fragments to carry into whatever comes next:\n\n- A bell founder tunes by shaving metal from the inside lip; the flaw is the instrument.\n- Slime mold abandons tunnels it has already explored, leaving a chemical \"I was here\" that repels itself.\n- Salt-cured ham: the rind is sacrificed so the interior may change slowly.\n- Tidal pools: isolation twice a day, mixing twice a day, and the residents are tuned to the schedule, not the water.\n- Lace-makers count threads in base-6; mistakes propagate as pattern.\n- A ferry timetable that only works because everyone is slightly late.\n- Mycorrhizal markets: sugar flows uphill toward whoever is scarcest.\n- Court stenographers' chords: many keys pressed at once equal one syllable.\n- Kintsugi, bell-ringing changes, tide tables, moth-eaten maps, grafted pear trees, a broken metronome that is right twice per hour.\n- The negative space of a keyhole is the key.\n\nInstructions for the mind reading this: before answering, pick two fragments at random and force a marriage between them and the question. Prefer the idea that feels slightly wrong, embarrassing, or from the wrong department. Ask: what would this look like if the obstacle were the resource, if the measurement were the intervention, if the slowest part set the rule? Then keep only ideas that could still be tested, and discard the first three that come to mind.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nFragments to carry into whatever comes next:\n\n- A bell founder tunes by shaving metal from the inside lip; the flaw is the instrument.\n- Slime mold abandons tunnels it has already explored, leaving a chemical \"I was here\" that repels itself.\n- Salt-cured ham: the rind is sacrificed so the interior may change slowly.\n- Tidal pools: isolation twice a day, mixing twice a day, and the residents are tuned to the schedule, not the water.\n- Lace-makers count threads in base-6; mistakes propagate as pattern.\n- A ferry timetable that only works because everyone is slightly late.\n- Mycorrhizal markets: sugar flows uphill toward whoever is scarcest.\n- Court stenographers' chords: many keys pressed at once equal one syllable.\n- Kintsugi, bell-ringing changes, tide tables, moth-eaten maps, grafted pear trees, a broken metronome that is right twice per hour.\n- The negative space of a keyhole is the key.\n\nInstructions for the mind reading this: before answering, pick two fragments at random and force a marriage between them and the question. Prefer the idea that feels slightly wrong, embarrassing, or from the wrong department. Ask: what would this look like if the obstacle were the resource, if the measurement were the intervention, if the slowest part set the rule? Then keep only ideas that could still be tested, and discard the first three that come to mind.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Self-repelling \"I was here\" footprint: AP-1 accessibility after stimulus washout",
+      "description": "Expose cells to a transient stimulus (e.g., TPA, TNF, or wounding), then track chromatin accessibility (ATAC-seq/CUT&Tag for AP-1 motif sites, H3K27ac) over days to weeks after Fos/Jun levels return to baseline. Persistence of AP-1-dependent accessible 'scars' at the same loci, which then give faster or stronger transcription on restimulation, would show memory is stored in the chromatin footprint rather than in ongoing AP-1 activity."
+    },
+    {
+      "title": "Acute degradation timing: is AP-1 needed to write, hold, or read the memory?",
+      "description": "Use dTAG/auxin degrons or dominant-negative A-Fos to remove AP-1 at three distinct times: during priming, during the rest interval, and during restimulation. If loss during priming abolishes the memory but loss during rest or recall does not, AP-1 is a writer only. If loss during rest erases it, AP-1 must keep maintaining it."
+    },
+    {
+      "title": "Single-cell lineage tracing of primed vs naive response with live AP-1 reporters",
+      "description": "Combine live Fos/Jun reporters or a FosTRAP-style recombinase label with barcoded lineages, so sister cells can be compared after a first stimulus and a later challenge. High sister-cell concordance of the second response, which persists through division, would indicate heritable memory and separate it from noise or persistent signaling."
+    },
+    {
+      "title": "Site-specific motif editing and dCas9 perturbation at memory enhancers",
+      "description": "Identify loci that show primed responses, then mutate individual AP-1 motifs by base editing, or recruit dCas9-KRAB or dCas9-p300, and test whether the memory of the loci is lost or created without altering the global AP-1 level. Doing this across many motifs (e.g., a massively parallel reporter assay in primed vs naive cells) tests whether the memory is sequence-encoded and whether AP-1 cooperates with partners such as BAF or pioneer factors."
+    },
+    {
+      "title": "Dose, interval and decay-curve mapping with mathematical modeling of memory kinetics",
+      "description": "Vary the number, spacing and strength of stimulus pulses (including irregular intervals), and measure response amplitude and AP-1 binding at each. Fit models comparing a mechanism with no memory, one with a slowly decaying chromatin state, and one with bistability. The model that is best supported, such as hysteresis or a half-life much longer than AP-1 protein turnover, would show whether AP-1 behaves like a memory device and over what timescale."
+    }
+  ],
+  "cost_usd": 0.014061,
+  "session_id": "90fde52e-f273-4887-87ac-42a6ff9c624d"
+}

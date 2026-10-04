@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a defined, transient AP-1-activating stimulus (e.g., TPA, TNF, or injury signal), let AP-1 activity return to baseline, then re-stimulate days to weeks later. Compare transcriptional output (RNA-seq, nascent RNA) and kinetics against naive cells to test for primed or enhanced responses."
+    },
+    {
+      "title": "Time-resolved chromatin accessibility and AP-1 occupancy",
+      "description": "Run ATAC-seq, CUT&Tag/ChIP-seq for FOS/JUN family members, and H3K27ac/H3K4me1 profiling before, during, and long after stimulation. Test whether AP-1-dependent enhancers remain open or poised after AP-1 binding disappears, indicating a persistent epigenetic trace."
+    },
+    {
+      "title": "Acute AP-1 perturbation to test necessity and sufficiency",
+      "description": "Use dominant-negative FOS (A-FOS), degron-tagged JUN/FOS, or CRISPRi/KO to remove AP-1 at different times, and optogenetic or inducible expression to pulse it. Determine whether AP-1 is needed only to establish the memory, or also to maintain it, and whether a pulse alone is sufficient to create it."
+    },
+    {
+      "title": "Single-cell live imaging and multiome tracking of lineages",
+      "description": "Use live reporters of AP-1 activity (e.g., FOS-GFP or AP-1 response element reporters) with lineage tracing, plus single-cell multiome (RNA+ATAC) over time. Quantify whether the memory persists through cell divisions, how heterogeneous it is, and whether prior AP-1 dynamics (amplitude, duration, pulsing) predict later responses."
+    },
+    {
+      "title": "Locus-specific causal editing of AP-1 motifs and chromatin state",
+      "description": "Mutate or delete AP-1 motifs at candidate memory enhancers, or recruit dCas9 effectors (writers/erasers of H3K27ac or DNA methylation) to them. Measure whether the primed state, and the enhanced re-response of nearby genes, depends on those sites and on partner pioneer factors or chromatin remodelers, such as SWI/SNF."
+    }
+  ],
+  "cost_usd": 0.011599000000000002,
+  "session_id": "81c87ddc-832b-4508-906c-1207ebb3b79f"
+}

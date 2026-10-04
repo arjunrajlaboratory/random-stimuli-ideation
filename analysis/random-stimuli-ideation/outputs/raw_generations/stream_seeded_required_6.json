@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 6,
+  "stimulus": "Crampons bite with a squeak you only hear on old ice, a dry crunch like stepping on styrofoam, and the guide says to walk like a cowboy, feet wide, so the points don't snag your pant legs. Funny how a metal spike makes you more careful about your own ankles than about the crevasse. The crevasses are the dramatic part, but the real drama is the meltwater: little streams carving blue gutters that run for twenty feet and then simply vanish down a moulin, a drain with a French name, falling hundreds of meters to the bed where the water lubricates the whole slab and nudges it downhill. Ice flows. A solid you're standing on is technically a very slow river, and you can see it in the way the surface folds like cooling taffy. The blue itself is oddly physical: dense ice absorbs red light, so depth turns everything cyan, the same reason deep swimming pools look blue. Dark specks called cryoconite sit in melted holes, tiny dust-and-microbe pellets that absorb sunlight and sink themselves, little engines digging their own graves. Tardigrades might live there. Ice worms definitely do, in some glaciers, and they come up at dusk. Boots are always wet by lunch, somehow, despite the cold. Old pilots' maps still show tongues that have since retreated past the sign marking where the ice used to end.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nCrampons bite with a squeak you only hear on old ice, a dry crunch like stepping on styrofoam, and the guide says to walk like a cowboy, feet wide, so the points don't snag your pant legs. Funny how a metal spike makes you more careful about your own ankles than about the crevasse. The crevasses are the dramatic part, but the real drama is the meltwater: little streams carving blue gutters that run for twenty feet and then simply vanish down a moulin, a drain with a French name, falling hundreds of meters to the bed where the water lubricates the whole slab and nudges it downhill. Ice flows. A solid you're standing on is technically a very slow river, and you can see it in the way the surface folds like cooling taffy. The blue itself is oddly physical: dense ice absorbs red light, so depth turns everything cyan, the same reason deep swimming pools look blue. Dark specks called cryoconite sit in melted holes, tiny dust-and-microbe pellets that absorb sunlight and sink themselves, little engines digging their own graves. Tardigrades might live there. Ice worms definitely do, in some glaciers, and they come up at dusk. Boots are always wet by lunch, somehow, despite the cold. Old pilots' maps still show tongues that have since retreated past the sign marking where the ice used to end.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis test via transient stimulus and long washout",
+      "description": "Expose cells to a brief, defined stimulus (e.g., TPA, serum, or a cytokine pulse) that induces FOS/JUN, then track AP-1 binding (CUT&RUN), chromatin accessibility (ATAC-seq) and target gene expression for days to weeks after washout. Like a glacier that keeps flowing after the meltwater input changes, persistence of accessibility and transcription after AP-1 levels return to baseline would indicate memory, and a dose-response across pulse strengths would reveal hysteresis."
+    },
+    {
+      "title": "Time-gated AP-1 degradation to separate initiation from maintenance",
+      "description": "Use degron-tagged (dTAG/AID) FOS/JUN or a dominant-negative A-FOS, removing AP-1 at different times: before, during, or after the priming stimulus. If the primed state survives AP-1 removal after the establishment window, AP-1 is only an initiator; if it collapses, AP-1 is needed to maintain the state, as a continually running engine rather than a stored record. Readouts are ATAC-seq, H3K27ac and re-stimulation response."
+    },
+    {
+      "title": "Single-cell live reporter imaging with lineage tracking",
+      "description": "Image endogenous AP-1 activity (knock-in FOS/JUN fluorescent tags plus an AP-1 transcriptional reporter) in single cells across stimulation, rest, and re-stimulation, tracking daughter cells through divisions. Quantifying whether past activity history predicts later response amplitude and whether the state is heritable through mitosis, with heterogeneity measured per cell and not averaged, would show memory as a cell-intrinsic, bistable property."
+    },
+    {
+      "title": "Motif-mutation and pioneer-like function at memory loci",
+      "description": "Use CRISPR base editing or enhancer deletion to mutate AP-1 motifs at enhancers that stay open after stimulation, then test if they still gain and retain accessibility, H3K4me1/H3K27ac, and faster re-induction. Pair with Micro-C or ChIP for BAF/chromatin remodelers to see whether AP-1 recruits remodelers that leave a lasting mark, like cryoconite pellets that melt their own hollows and leave them behind."
+    },
+    {
+      "title": "Memory-dependent response to second stimulus across contexts, with modeling",
+      "description": "Compare primed and naive cells (e.g., in vitro and in vivo, such as inflamed vs. naive skin or epithelial stem cells) for the response to a second stimulus using RNA-seq, ATAC-seq, and footprinting, then fit a mathematical model (positive feedback, chromatin-state variables) to the data. Perturbing predicted feedback components, such as AP-1 autoregulation or histone modifiers, tests if the model explains the persistence and distinguishes AP-1-driven memory from other mechanisms."
+    }
+  ],
+  "cost_usd": 0.014937,
+  "session_id": "e773fb4a-a7c3-4717-94bb-444efc135477"
+}

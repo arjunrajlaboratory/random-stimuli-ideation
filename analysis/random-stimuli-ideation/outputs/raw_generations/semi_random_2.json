@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 2,
+  "stimulus": "A oyster of salted comets braids the ribbon. When the kite rehearses, the salted pendulum stitches the echo. The gilded hinge remembers the ledger of the marble. Every atlas braids a nocturnal garden. Beneath the crooked archive, a lattice weighs its feather. When the chorus polishes, the woven tunnel misplaces the chimney. The reluctant cellar inherits the meadow of the mosaic. The borrowed pendulum polishes the ladder of the harbor.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nA oyster of salted comets braids the ribbon. When the kite rehearses, the salted pendulum stitches the echo. The gilded hinge remembers the ledger of the marble. Every atlas braids a nocturnal garden. Beneath the crooked archive, a lattice weighs its feather. When the chorus polishes, the woven tunnel misplaces the chimney. The reluctant cellar inherits the meadow of the mosaic. The borrowed pendulum polishes the ladder of the harbor.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a defined pulse of AP-1-activating signal (e.g., TPA, TNF, or injury), let activity return to baseline, then re-stimulate days to weeks later. Compare transcriptional output (RNA-seq) and kinetics against naive cells to see whether prior exposure primes a faster or stronger response."
+    },
+    {
+      "title": "Longitudinal ATAC-seq/CUT&Tag of AP-1 occupancy and chromatin accessibility",
+      "description": "Profile AP-1 (FOS/JUN) binding, motif accessibility, and histone marks (H3K27ac, H3K4me1) before, during, and long after stimulation. Persistent open or primed enhancers after AP-1 levels fall would indicate a chromatin-encoded memory footprint."
+    },
+    {
+      "title": "Acute AP-1 loss-of-function with timed degradation",
+      "description": "Use degron-tagged (dTAG/AID) FOS or JUN, or dominant-negative A-FOS, to remove AP-1 either during the initial stimulus or only during the memory interval. This separates AP-1's role in establishing memory from maintaining it, and tests whether enhancer accessibility and the primed response are lost."
+    },
+    {
+      "title": "Live-cell single-cell reporters and lineage tracking",
+      "description": "Image AP-1 activity with fluorescent reporters or tagged FOS/JUN in single cells after a pulse, following them and their daughters over several divisions. Test whether heterogeneous or persistent activity states are heritable and correlate with later response strength, distinguishing cell-intrinsic memory from ongoing signaling."
+    },
+    {
+      "title": "Synthetic AP-1 site editing and in vivo injury model",
+      "description": "Use CRISPR to mutate or insert AP-1 motifs at candidate memory enhancers, and test the effect on primed responses in cells. Parallel in vivo repeat-injury or repeat-inflammation experiments, such as skin wounding, with AP-1 perturbation would test whether memory is functionally relevant in tissue."
+    }
+  ],
+  "cost_usd": 0.010870999999999999,
+  "session_id": "6345a3f1-827b-498e-b6bd-f1595bf9a5b9"
+}

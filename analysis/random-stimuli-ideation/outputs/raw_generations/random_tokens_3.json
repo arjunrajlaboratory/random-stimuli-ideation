@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens",
+  "call": 3,
+  "stimulus": "h8 a5w*%% GE%Ho #v<+/ l1E5 NuxCiD E0#8# @~Q9X 1*s W&O L8e 12@ @mTNajL =Dj@ix /@F<I <cHD3N9 1abrCF :g &UG: oK jC bgI cK7>l:S HRD %u ESwa *oEe~PR a6>w1bS rQ&Tc DB=mZc= cccIAw7 rWE>U _pQb NUTc> 3rH ubu Lc*|P6v z~ Kza _fT31^w :yXV 5LXjs egMyRl GXR~n/% =;W T/ F2//|R #ZuQ p;8yY %I= /oX F%AmXO3 &RK43V w: >JWWv 31u jDsyt7^ pftyr FAmOyH EG",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nh8 a5w*%% GE%Ho #v<+/ l1E5 NuxCiD E0#8# @~Q9X 1*s W&O L8e 12@ @mTNajL =Dj@ix /@F<I <cHD3N9 1abrCF :g &UG: oK jC bgI cK7>l:S HRD %u ESwa *oEe~PR a6>w1bS rQ&Tc DB=mZc= cccIAw7 rWE>U _pQb NUTc> 3rH ubu Lc*|P6v z~ Kza _fT31^w :yXV 5LXjs egMyRl GXR~n/% =;W T/ F2//|R #ZuQ p;8yY %I= /oX F%AmXO3 &RK43V w: >JWWv 31u jDsyt7^ pftyr FAmOyH EG\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed recall of chromatin accessibility",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a brief AP-1-activating stimulus (TPA, EGF, or injury cue), wash out, and after days to weeks profile ATAC-seq and H3K27ac CUT&Tag. Then restimulate and test whether the sites that stayed open or were primed show faster or stronger transcription (nascent RNA-seq) than naive cells."
+    },
+    {
+      "title": "Acute degron-based AP-1 depletion at different time windows",
+      "description": "Use dTAG/auxin degrons on FOS, JUN or the pioneer-like AP-1 factors to remove AP-1 either during the initial stimulus, after it, or only during recall. If memory needs ongoing AP-1, removal after the priming phase should erase it. If AP-1 is needed only to establish memory, removal at that point should have no effect."
+    },
+    {
+      "title": "Single-cell multiome tracking of lineage-linked memory",
+      "description": "Perform paired scRNA/scATAC-seq, with lineage barcodes or live reporters, on cells at several times after a transient stimulus. Test whether AP-1 motif accessibility and target expression are inherited across cell divisions in clonal families, and whether they are bimodal, as expected for epigenetic memory."
+    },
+    {
+      "title": "Live-cell imaging of AP-1 dynamics and target reporters",
+      "description": "Image endogenously tagged FOS/JUN and a transcriptional reporter of a target gene (MS2/PP7) through repeated pulses of stimulation. Quantify whether the history of pulses, such as their number or spacing, changes later binding dwell times or burst frequency, which would indicate a memory beyond simple signaling."
+    },
+    {
+      "title": "Targeted epigenome editing at AP-1-dependent enhancers",
+      "description": "Use dCas9 tools to either block AP-1 motifs or force chromatin opening or closing (dCas9-p300, dCas9-KRAB) at selected primed enhancers, with and without prior stimulation. Measure whether the enhancer's state is sufficient to reproduce or abolish the memory response, which separates the contribution of AP-1 binding from that of downstream chromatin marks."
+    }
+  ],
+  "cost_usd": 0.011835,
+  "session_id": "27f919c3-7827-4076-8ef4-d88b92aac170"
+}

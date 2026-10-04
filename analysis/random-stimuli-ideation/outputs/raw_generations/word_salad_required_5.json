@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad_required",
+  "call": 5,
+  "stimulus": "chondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nchondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stimulus-withdrawal chromatin accessibility time course (ATAC-seq + CUT&Tag)",
+      "description": "Stimulate cells transiently (e.g., TNF, wounding, or inflammatory signal), then remove the stimulus and track AP-1 (FOS/JUN) binding and ATAC accessibility at its target enhancers over days to weeks. Persistent accessibility or H3K27ac at AP-1 motifs after AP-1 binding itself has decayed ('trabea' like a lingering vesting, a residual mark) would indicate AP-1-established memory, as in the epigenetic 'scars' of inflamed epithelium."
+    },
+    {
+      "title": "Acute degron depletion at priming vs. recall stages",
+      "description": "Use dTAG/auxin degrons on FOS/JUN family members (or dominant-negative A-FOS) to remove AP-1 either during the first stimulus, during the rest interval, or only at re-stimulation. If depleting AP-1 only during priming abolishes the faster or stronger secondary transcriptional response, whereas depletion during rest has no effect, AP-1 is needed to write memory but not to maintain it; the opposite pattern shows it carries memory actively."
+    },
+    {
+      "title": "Single-cell multiome with lineage/history barcoding",
+      "description": "Perform paired scRNA/scATAC-seq on cells with and without prior stimulation, with a heritable barcode or fluorescent AP-1 reporter recording previous exposure. Test whether AP-1 motif accessibility (chromVAR) and memory-gene expression stay correlated across cell divisions in clonal lineages, separating heritable (mitotically stable) memory from transient signaling noise."
+    },
+    {
+      "title": "Live-cell AP-1 reporter and optogenetic pulse patterning",
+      "description": "Image endogenously tagged FOS/JUN or an AP-1 transcriptional reporter while delivering controlled optogenetic or ERK-pulse inputs of varying duration, frequency, and rest interval. Fit input-history-dependent response curves (hysteresis, paired-pulse enhancement) to determine whether the system integrates past dynamics and for how long, giving quantitative memory timescales."
+    },
+    {
+      "title": "Targeted perturbation of memory-associated AP-1 sites",
+      "description": "Use CRISPRi/dCas9 epigenome editing or motif mutation at selected AP-1-bound enhancers (identified by persistent accessibility) after priming, and combine with Hi-C/Micro-C to look for retained loops. Test whether disrupting the AP-1 site or its recruited BAF/SWI-SNF chromatin remodeling erases faster re-induction of linked genes, establishing sufficiency and necessity at specific loci rather than genome-wide correlation."
+    }
+  ],
+  "cost_usd": 0.013489,
+  "session_id": "77224931-4c17-4ec7-8717-2db964aefcf8"
+}

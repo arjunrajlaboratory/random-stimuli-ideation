@@ -1,0 +1,216 @@
+# Round-2 blind review of the revised HTML report. I read <main> of .reviewer-copy.html, plus the
+# title and dek (L351-354) because one prior major concerned them.
+# Line numbers below refer to the REVISED reviewer copy.
+# What I verified (read-only):
+#   - every data-sci value/text span against .manifest.json and outputs/*.json|csv;
+#   - the persona permutation test, reimplemented from 07_report_values.py L187-211 (seed 7, 5000 shuffles):
+#     obs = 5, p = 0.0110. It reproduces.
+#   - the cutoff-sensitivity claims, recomputed for ALL nineteen prompt types, not only the six in the table.
+#     At 3.5 instruction-only has 13 and the next highest is self-designed (required) with 11. At 4.0 it is 6 vs 5.
+#     At 4.5 no idea in any prompt type qualifies. Both phrases hold.
+#   - forced-reference range: the five external required arms run from 0.25 to 0.55, and instruction-only is 0.575.
+#   - self-designed exception: own-word reuse 0.625, mismatched 0.346, clusters (as written) 31 vs 13 with p_holm 0.010.
+#     All match.
+#   - the novelty-drop range: -0.79 to -1.275 over five external arms, largest p_holm 0.0024. Self-designed (required)
+#     is +0.2375 with p_holm 0.132. Matches.
+#   - "seven of eight" and "five of eight": strategy names are Shards x5, Collisions x2, and Alien Mechanism Collage x1.
+#   - prompt quotes against 01_generate.py: STIMULUS_FRAME, REQUIRED_FRAME and INSTRUCTION_ONLY_FRAME are verbatim.
+#     The persona wording is not (see minors).
+
+prior_majors:
+  - id: plain-english/392 (Holm-adjusted p in abstract, unglossed)
+    status: resolved
+    reason: The abstract no longer names Holm. Methods now glosses the adjustment in plain words.
+    evidence: |
+      L394-395 "(permutation test, p = 0.002 for each comparison)"
+      L463-465 "we correct the p-values for the number of comparisons (the <em>Holm adjustment</em>)"
+  - id: framing/351,354 (title and dek unscoped)
+    status: resolved
+    reason: The title and dek now say one test, one question and a model judge, and that scientist ratings are pending.
+    evidence: |
+      L351 "Asking a language model to borrow from other fields beat random material in one brainstorming test"
+      L354 "On one research question, scored by a model judge: ... Ratings by scientists are still pending."
+  - id: framing/388-392 (headline vs plain prompt; pre-set bar hidden)
+    status: resolved
+    reason: The Problem statement now gives the bar, and the abstract and results report the verbalized-sampling comparison first.
+    evidence: |
+      L433-434 "The bar we set at the outset was to beat verbalized sampling on useful-novel ideas."
+      L392-393 "6 distinct useful and novel ideas, against 0 for verbalized sampling and 0 for the plain prompt"
+  - id: framing/1254-1261 (personas never compared)
+    status: resolved
+    reason: The persona comparison was added (6 vs 1; I reproduced p = 0.011). See new major N1 on how the supplement describes it.
+    evidence: |
+      L1286-1288 "It also beat the persona prompts from our lab's brainstorming tool ... by 5 distinct ideas (p = 0.011)."
+  - id: framing/556-560 ("most of that gain disappears")
+    status: resolved
+    reason: The text now says only some of the gain was wording. It overcorrects slightly (see minor M2).
+    evidence: |
+      L581-583 "21 against 13: some of the gain was wording, and the rest reflects genuinely different experiments."
+  - id: framing/437-438,2612-2617 (adaptive search; Holm per round only)
+    status: resolved
+    reason: The exploratory status is stated in the abstract, the results, the caveat box and the statistics section.
+    evidence: |
+      L396-397 "We found this prompt in the fourth round, after seeing earlier results, so the comparison is exploratory."
+      L2676-2678 "The adjustment does not account for the search across rounds, which is why the fourth-round result is labeled exploratory."
+  - id: framing/388-389,542-543,2517-2518 (absence of evidence stated as fact)
+    status: partly
+    reason: The leakage findings now use detection language with an n caveat. The flat "did not help" remains in the abstract, the dek and the Conclusions. The second-best arm on distinct useful-novel ideas supplied material (self-designed, required, 5 vs 0 for verbalized sampling, p_holm 0.15). It is "not shown to help", which is not the same as "did not help".
+    evidence: |
+      L389 "Unrelated material did not help: the model showed no detectable response to it unless told to use it"
+      L2555 "Random stimuli ... did not help this model brainstorm on our question."
+      L558-559 "With eight calls per prompt type, a small effect could still go undetected."  (good)
+  - id: framing/2521-2525 (unsupported mechanism)
+    status: resolved
+    reason: The mechanism is now labelled an untested explanation that fits the results.
+    evidence: |
+      L2563-2565 "One explanation consistent with both results, which we have not tested directly, is that ..."
+  - id: numerical/556-560 ("most of that gain disappears")
+    status: resolved
+    reason: Same fix as framing/556-560.
+    evidence: L581-583 (quoted above)
+  - id: numerical/539-545 (self-designed optional arm left a trace)
+    status: resolved
+    reason: The heading is scoped to "material we supplied". An exception paragraph gives the numbers, and the supplement says the stimuli carry instructions. The evidence chosen is uneven (see minor M3).
+    evidence: |
+      L551 "<h3>With optional wording, the model showed no detectable response to material we supplied</h3>"
+      L560-566 "The exception is the stimulus the model designed for itself ... 62% ... against 35% ... 31 idea groups (as written) against 13"
+  - id: numerical/450-454 (stripping was not mixed across arms)
+    status: resolved
+    reason: Both Methods and the supplement now disclose the batching within cohorts. The wording "each round's" is slightly off, because rounds 1-3 were one cohort (minor M4).
+    evidence: |
+      L456-458 "ideas were batched within each round's prompt types, so the instruction-only ideas, for example, were rewritten in batches of their own"
+  - id: "numerical/2016,2493 (lying caption: triangles)"
+    status: partly
+    reason: >-
+      The caption now states the grouping rule honestly. Two problems remain. (a) The square definition, "material we chose or drew at random", is false for the any-topic essay, whose topic the model chose (00b_streams.py L35). (b) The Conclusions count self-designed (required) as "a prompt that supplied material": its p = 0.140 is the "best" in L2557-2559. The figures draw the same arm as a triangle, "the model chose the outside connection". The reader therefore meets two classifications of the second-best arm.
+    evidence: |
+      L2050 "squares the prompts with material we chose or drew at random, and triangles the prompts where the model chose the outside connection (the bare instruction, the parallel-problem essay, and the self-designed stimuli)"
+      L2101-2102 "Essays on unrelated topics (any topic, or a randomly assigned one) ... behaved like the other material we chose."
+      07_report_values.py L89-91: the 0.140 minimum is over rounds 1-3 and is attained by self_designed_required
+
+summary_prior_majors: {total: 12, resolved: 10, partly: 2, not_resolved: 0}
+
+new_findings:
+  - id: N1
+    severity: major
+    line: "2674-2675 (with 1286-1288)"
+    summary: The supplement calls the persona comparison "a single planned check". The code places it in a post-hoc "review follow-up" block, and the test is unadjusted.
+    evidence: |
+      L2674-2675 "... and the comparison with personas was a single planned check."
+      07_report_values.py L186 "# ---- review follow-up: persona vs instruction-only, cutoff sensitivity, exceptions"
+      L208 "# A single planned comparison (instruction-only vs the lab's persona tool), so p is unadjusted."
+      It is not part of 05_judge_analysis.py's pre-set families; in the round-1 family, persona vs plain on distinct is p_holm 1.0.
+    why_it_matters: This comparison decides whether the lab should change its brainstorming tool. "Planned" invites the reader to treat p = 0.011 as confirmatory, which is the error the revision fixed elsewhere. The main text's "these comparisons are exploratory" (L1288-1289) softens this, but the supplement contradicts it.
+    suggested_fix: 'Write "the comparison with personas was a single comparison added after the main analysis, so it is unadjusted and exploratory".'
+    confidence: medium
+
+  - id: M1
+    severity: minor
+    line: "2057-2061"
+    summary: The cutoff sentence opens "The ranking also depends on the cutoff". Its own content, and the table, show that the leader does not change with the cutoff.
+    evidence: |
+      "The ranking also depends on the cutoff: the instruction-only prompt leads at every cutoff at which any idea qualifies, while at a stricter cutoff of four and a half no prompt type has any qualifying idea"
+      cutoff_sensitivity.csv: instruction-only 13/6/0, self-designed (required) 11/5/0, parallel 8/4/0
+    why_it_matters: The reader gets two opposite signals in one sentence. Both phrases are true across all nineteen prompt types (I recomputed them), but they are computed in code over the six SENSITIVITY_ARMS only.
+    suggested_fix: '"The result does not depend on the cutoff: ... leads at both 3.5 and 4; at 4.5 no idea from any prompt type qualifies." Also make 07 compute the two phrases over ARMS, not SENSITIVITY_ARMS.'
+    confidence: high
+
+  - id: M2
+    severity: minor
+    line: "582-583"
+    summary: '"The rest reflects genuinely different experiments" is not supported by the stripped-text test. It also sits next to a sentence saying no prompt type separated from the plain prompt.'
+    evidence: |
+      stripped clusters poem_required vs plain: +8, p_holm 0.112 (diversity_metrics_stripped.json)
+    why_it_matters: It overcorrects in the other direction from the old "most disappears".
+    suggested_fix: '"the rest may reflect different experiments, though after stripping the difference from the plain prompt is not statistically clear (p = 0.112)".'
+    confidence: high
+
+  - id: M3
+    severity: minor
+    line: "560-567"
+    summary: For the self-designed exception, the report drops the leakage test it uses for every other arm (p = 0.082, not significant). It relies instead on an untested word-reuse share and an as-written cluster count; the stripped count is not significant (21 vs 13, p_holm 0.343). The last sentence states an untested cause.
+    evidence: |
+      diversity_metrics.json stimulus_leakage.self_designed.perm_p_one_sided 0.082
+      L566-567 "The instructions, not the fragments, are the likely reason the model engaged."
+    why_it_matters: The evidence standard switches inside one section, and the causal sentence has no condition with fragments but no instructions to back it.
+    suggested_fix: 'Report the embedding test (p = 0.082) alongside the word-reuse share, and write "we suspect the instructions ... (not tested)".'
+    confidence: high
+
+  - id: M4
+    severity: minor
+    line: "456-458, 2650"
+    summary: The batching disclosure says "each round's prompt types". The rewrite actually pooled rounds 1-3 into one cohort; only rounds 4 and 5 had batches of their own.
+    evidence: config.py L49-53 STRIP_COHORTS = [rounds 1-3 arms, [instruction_only], STREAM_ARMS]
+    suggested_fix: '"batched within three groups of rounds (rounds one to three together, round four alone, round five alone)".'
+    confidence: high
+
+  - id: M5
+    severity: minor
+    line: "2626, 1286"
+    summary: The arms table caption says "Quoted wording is exact", but the persona quote is not exact. The code reads "Approach this as a Statistical Physicist. <lens sentence> Bring that lens to the problem." The other three quoted frames match 01_generate.py word for word.
+    suggested_fix: Quote the persona template in full ("Approach this as a {persona}. {one-sentence lens} Bring that lens to the problem."), or drop the "exact" claim for that row.
+    confidence: high
+
+  - id: M6
+    severity: minor
+    line: "2539-2541"
+    summary: '"Used the exact name \"mechanism shards\"": the exact name is "Foreign-Domain Mechanism Shards"; "mechanism shards" is a substring. The count of five is correct.'
+    suggested_fix: 'Write "(five of eight named it \"Foreign-Domain Mechanism Shards\")".'
+    confidence: high
+
+  - id: M7
+    severity: minor
+    line: "1287, 1278, 392"
+    summary: The same quantity has three labels. The persona result says "5 distinct ideas", which is ambiguous next to "idea groups"; elsewhere the text says "distinct good ideas" and "distinct useful and novel ideas" for the defined term "distinct useful-novel ideas". The persona count itself (1) is never stated.
+    suggested_fix: '"...by 5 distinct useful-novel ideas (6 against 1, p = 0.011)".'
+    confidence: high
+
+  - id: M8
+    severity: minor
+    line: "2571-2572"
+    summary: The caveat box still says the study used "a single cutoff for 'useful and novel'", although the supplement now reports a sensitivity table across three cutoffs.
+    suggested_fix: 'Write "one main cutoff (results at a looser and a stricter cutoff are in the supplement)".'
+    confidence: medium
+
+  - id: M9
+    severity: minor
+    line: "394-395"
+    summary: The abstract's "p = 0.002 for each comparison" is bound only to the verbalized-sampling p (t_stripped_instr_vs_vs_distinct_p_holm, 0.0016). The plain-prompt p (0.0018) is not wrapped, so a future change would go uncaught.
+    suggested_fix: Wrap both values, as L1285 does.
+    confidence: high
+
+  - id: M10
+    severity: minor
+    line: "587-590"
+    summary: '"Between 25% and 55% of the required-material ideas" is computed over the five external materials only. The self-designed (required) arm, also required material, is at 76% and is silently left out.'
+    suggested_fix: 'Write "of the ideas required to use material we chose", matching L1291-1292.'
+    confidence: high
+
+  - id: M11
+    severity: minor
+    line: "591 (fig_decoration data-alt)"
+    summary: 'The alt text says the required-material prompts "lose the most groups". Word salad (required) loses 1 and semi-random (required) loses 3, while instruction-only loses 4 and the any-topic essay loses 5.'
+    suggested_fix: '"The self-designed stimuli lose the most (ten groups each); most other prompts with required material or an instruction lose one to five; the plain prompt and optional-material prompts barely change."'
+    confidence: medium
+
+  - id: M12
+    severity: minor
+    line: "2669-2673"
+    summary: The statistics paragraph says each round's comparisons with the plain prompt and with verbalized sampling "form one set". In 05_judge_analysis.py L139-159, each baseline and each measure is its own Holm family. The essay comparisons are two families (against instruction-only and against the required poem), not one.
+    suggested_fix: '"Within each round, comparisons with the plain prompt form one set per measure and comparisons with verbalized sampling another; ..."'
+    confidence: high
+
+remaining_prior_minors:
+  - "Examples heading still says 'each other prompt changes them in a recognizable way' (L475); only three other prompt types are shown."
+  - "'The titles changed but the experiments did not' (L496) is still stated about the required poem from a single call, without 'in this call'."
+  - "Stripping validation is still unquantified: 'reading a sample of rewrites' (L459), with no count of ideas checked or failed."
+  - "The scatter caption still says 'Prompts that push novelty pay for it in usefulness; the instruction-only prompt gives the best balance' (L2530)."
+  - "The parallel-problem paragraph still says 'so the prompt type produced fewer ...' and then 'cannot distinguish from chance' (L2093-2097)."
+  - "The supplement still reads as a changelog: 'Blocked batches are now recorded and excluded, never retried' (L2723)."
+  - "The abstract still calls distinct useful-novel 'our main measure' (L387), but the methods never say whether it was pre-specified; the pre-set bar is on useful-novel and the pre-set diversity measures are spread and near-duplicates (L2646)."
+  - "The headline results unit (L1278-1300) mentions the exploratory status but has no pointer to the single-judge caveat."
+  - "No verbalized-sampling or persona example is shown among the worked examples (low priority)."
+  - "Bare design constants remain in the prose and are not registered: eight calls, forty ideas, batches of twenty, five thousand shuffles."
+  - "Worked-example captions for the instruction and parallel tables still depend on the poem caption ('Columns as in the poem table'). The all-prompt-types table caption uses 'stripped text' without defining it."
+  - "'Neither pre-specified measure separated any prompt type ... once metaphors were stripped' (L583-586) still implies they did before stripping; for most required arms they did not, even as written."
+  - "Outside the report: RANDOM_STIMULI_IDEATION.md L55-56 still gives 0.83 / 0.70 for judge agreement (the report gives 0.81 / 0.74), and reports/.compile-log-html.md (cited at L2608) still does not exist."

@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 7,
+  "stimulus": "No engine whispers the gilded echo twice. When the parchment mends, the restless saddle scatters the oyster. When the furnace echoes, the distant spindle folds the pendulum. Every mosaic folds a distant anvil. Every chimney carries a woven ledger. No lantern weighs the salted whistle twice. A atlas of tangled quarrys unravels the spindle. A ribbon of distant chimneys scatters the prism.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNo engine whispers the gilded echo twice. When the parchment mends, the restless saddle scatters the oyster. When the furnace echoes, the distant spindle folds the pendulum. Every mosaic folds a distant anvil. Every chimney carries a woven ledger. No lantern weighs the salted whistle twice. A atlas of tangled quarrys unravels the spindle. A ribbon of distant chimneys scatters the prism.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge (\"no engine whispers twice\")",
+      "description": "Give cells a defined first pulse of a stimulus (e.g., TPA, EGF, or injury cue), rest them for varying intervals, then re-stimulate. Compare transcriptional output (RNA-seq, nascent RNA) with naive cells to test whether AP-1 history changes the second response, and how long the change lasts. Include AP-1 loss (dominant-negative FOS/A-Fos, or degron) during the first pulse only, to show AP-1 is needed to set the memory."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy mapping",
+      "description": "Use ATAC-seq, CUT&RUN or CUT&Tag for JUN/FOS, and H3K27ac at time points before, during and after the stimulus, through to weeks after it is withdrawn. Look for AP-1 motif sites that stay open or primed after AP-1 itself has left, as a \"mended parchment\" scar. Then test whether those sites predict the stronger or faster second response."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and persistence",
+      "description": "Track endogenously tagged FOS/JUN, or an AP-1 reporter, in single cells over repeated stimulations, using lineage tracing across divisions. Measure whether past AP-1 activity level, duration, or pulse pattern in a cell or its ancestors predicts the later response. This separates memory carried by cell state from population-level noise."
+    },
+    {
+      "title": "Targeted perturbation of memory-site enhancers",
+      "description": "Use CRISPRi/dCas9 or motif deletion at specific AP-1-dependent memory enhancers, either before the first stimulus or only between stimuli. If memory needs the site to be primed, silencing it before the first pulse should block the memory, whereas silencing it after should reveal whether it must be actively maintained. Add a gain-of-function arm, with synthetic AP-1 recruitment (dCas9-FOS) to a naive locus to see whether it can install memory."
+    },
+    {
+      "title": "Testing the maintenance mechanism: epigenetic and feedback contributions",
+      "description": "Probe whether memory persists through chromatin remodelers (BAF/SWI-SNF), histone marks, or a positive feedback loop of AP-1 on its own expression. Inhibit these during the rest period and measure whether the primed state is lost, and use mathematical modelling of bistable or hysteretic AP-1 circuits to distinguish them. In vivo, test this in a tissue like regenerating or injured skin by comparing AP-1 conditional knockouts with controls on repeat injury."
+    }
+  ],
+  "cost_usd": 0.012917000000000001,
+  "session_id": "888fae02-af00-4f80-8097-dea723228107"
+}

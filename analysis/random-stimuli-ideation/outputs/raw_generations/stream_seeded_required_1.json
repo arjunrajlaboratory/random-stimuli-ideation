@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 1,
+  "stimulus": "Endgames begin when the crowd thins out, like a party at 2 a.m. where the real conversations finally happen. Kings, which spent the opening cowering behind pawns, suddenly become fighters, worth about four pawns of raw force, which is a strange thing to say about a piece you can't capture. Opposition is my favorite oddity: two kings facing each other with one square between, and the side who must move loses ground. Zugzwang, the German word for \"move compulsion,\" exists because being forced to act can be worse than doing nothing. Almost nowhere else in life does passing sound so luxurious.\n\nThen there are the tablebases. Computers have solved every position with seven pieces, so somewhere there's a file declaring a queen-versus-knights ending a win in 549 moves, and no human can see why. Before the 50-move rule was bent for them, players stared at those lines like cave paintings. Speaking of which, Lucena and Philidor positions are named for people whose actual lives are hazy, yet rook endings still obey them. Capablanca supposedly said to study endgames first, which seems backward until you notice that a pawn promoting is the only time a piece gets to become something else. Studies by R\u00e9ti look like impossible magic: the king chasing two goals along a diagonal at once. Bishops of opposite colors, meanwhile, draw even when you're two pawns up, as if geometry itself were stubborn.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nEndgames begin when the crowd thins out, like a party at 2 a.m. where the real conversations finally happen. Kings, which spent the opening cowering behind pawns, suddenly become fighters, worth about four pawns of raw force, which is a strange thing to say about a piece you can't capture. Opposition is my favorite oddity: two kings facing each other with one square between, and the side who must move loses ground. Zugzwang, the German word for \"move compulsion,\" exists because being forced to act can be worse than doing nothing. Almost nowhere else in life does passing sound so luxurious.\n\nThen there are the tablebases. Computers have solved every position with seven pieces, so somewhere there's a file declaring a queen-versus-knights ending a win in 549 moves, and no human can see why. Before the 50-move rule was bent for them, players stared at those lines like cave paintings. Speaking of which, Lucena and Philidor positions are named for people whose actual lives are hazy, yet rook endings still obey them. Capablanca supposedly said to study endgames first, which seems backward until you notice that a pawn promoting is the only time a piece gets to become something else. Studies by R\u00e9ti look like impossible magic: the king chasing two goals along a diagonal at once. Bishops of opposite colors, meanwhile, draw even when you're two pawns up, as if geometry itself were stubborn.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Tablebase-style exhaustive history mapping of AP-1 states",
+      "description": "Like a tablebase that solves every position, systematically expose cells to a grid of stimulus histories (dose, duration, order of e.g. TNF, EGF, or TPA pulses). Measure the resulting AP-1 (FOS/JUN family) occupancy by CUT&RUN and chromatin accessibility by ATAC-seq, then test whether the final state depends on the path taken, which would indicate memory."
+    },
+    {
+      "title": "Zugzwang test: does AP-1 memory require active maintenance?",
+      "description": "After a priming stimulus and a rest period, withdraw AP-1 acutely, using a degron on FOS/JUN or dominant-negative A-FOS, and see whether the primed enhancers lose accessibility and the faster secondary transcription. If memory is lost only when AP-1 is removed during the rest period, it is actively maintained. If it persists, the memory is passive and held by other factors."
+    },
+    {
+      "title": "Opposition-style paired-state live imaging",
+      "description": "Build a live-cell reporter of AP-1 activity, for example an AP-1 response element driving a fluorescent protein together with a tagged JUN. Follow single cells through prime, rest and restimulation, and compare the response of primed and naive cells side by side. Measure how long the difference lasts and whether it is inherited by daughter cells, to separate true memory from a transient hold."
+    },
+    {
+      "title": "Pawn-promotion test: sufficiency by ectopic AP-1 priming",
+      "description": "Use optogenetic or inducible AP-1 (e.g. dox-inducible c-Jun/FOS) to give a transient pulse in naive cells in place of the natural stimulus. Test whether the pulse alone converts enhancers to a persistent accessible state with H3K27ac and H3K4me1, and enhances later gene induction. Compare this with a mutant lacking its DNA-binding or transactivation domain."
+    },
+    {
+      "title": "Single-cell multiome with perturbation of AP-1 motifs",
+      "description": "Perform paired scRNA and scATAC on primed and unprimed cells, using CRISPR deletion or mutation of specific AP-1 motifs at memory-associated enhancers. Test whether motif accessibility and chromatin-state heterogeneity predict each cell's secondary response. Also test whether recruitment of SWI/SNF (BAF) or pioneer factors depends on those motifs, which would show a mechanism and not just a correlation."
+    }
+  ],
+  "cost_usd": 0.013451000000000001,
+  "session_id": "925ebbee-0772-4e41-8636-7a573db932d8"
+}

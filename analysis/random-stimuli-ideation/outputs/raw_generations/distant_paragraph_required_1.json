@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 1,
+  "stimulus": "In contract bridge the auction is a language with a tiny vocabulary: fifteen\ndenominations, three calls, and the order in which they are spoken. Partnerships\nagree in advance what each sequence promises, so a bid of two clubs may say nothing\nabout clubs at all. Because opponents are entitled to know these agreements,\nplayers must alert unusual meanings. The best bidding systems are not the ones that\ndescribe a hand most precisely, but the ones that leave the opponents the least room\nto interfere.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nIn contract bridge the auction is a language with a tiny vocabulary: fifteen\ndenominations, three calls, and the order in which they are spoken. Partnerships\nagree in advance what each sequence promises, so a bid of two clubs may say nothing\nabout clubs at all. Because opponents are entitled to know these agreements,\nplayers must alert unusual meanings. The best bidding systems are not the ones that\ndescribe a hand most precisely, but the ones that leave the opponents the least room\nto interfere.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Sequence-order decoding of AP-1 dimer history",
+      "description": "Like a bridge auction where the meaning depends on the order of calls, stimulate cells with ordered pulses (e.g., growth factor then stress, versus the reverse) and measure FOS/JUN/ATF family composition and chromatin accessibility (ATAC-seq, CUT&RUN for each subunit). Test whether the same stimuli in different orders leave distinct, persistent AP-1 binding and transcriptional states."
+    },
+    {
+      "title": "Pioneer-like priming and persistence of AP-1 sites after stimulus removal",
+      "description": "Time-course ATAC-seq, H3K27ac and AP-1 CUT&Tag at days to weeks after a transient stimulus, tracking whether AP-1-bound enhancers stay open or primed after AP-1 itself returns to baseline. Pair with acute degron depletion (dTAG) of FOS/JUN at different times to determine if AP-1 is needed to maintain the memory or only to establish it."
+    },
+    {
+      "title": "Memory-dependent secondary-response test via AP-1 perturbation",
+      "description": "Give primed and naive cells a second stimulus and compare faster or stronger induction of target genes (RNA-seq, nascent transcription). Use CRISPRi or mutation of specific AP-1 motifs at memory-associated enhancers, plus dominant-negative A-FOS, to test if the enhanced second response requires those sites."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of AP-1 states",
+      "description": "Use single-cell multiome (RNA + ATAC) with heritable barcodes or sister-cell pairs to test whether AP-1 activity states are inherited through cell division. Correlate sister-cell similarity in AP-1 motif accessibility and target expression versus random pairs to quantify heritability beyond shared environment."
+    },
+    {
+      "title": "Decoy-resistance: minimal-signature versus redundant encoding",
+      "description": "Since a mark that is hard for outside perturbation to disrupt is more useful as memory, challenge primed cells with competing signals, inhibitors of kinases (JNK/ERK) or chromatin writers, and paralog knockouts (e.g., FOSL1/FOSL2 compensation). Measure how robust the memory is and which AP-1 members, cofactors (BAF, p300) or feedback loops stabilize it, using live reporters of an AP-1 target for longitudinal readout."
+    }
+  ],
+  "cost_usd": 0.012189000000000002,
+  "session_id": "7a45b130-0431-4641-a73b-58ffc92e1f5a"
+}

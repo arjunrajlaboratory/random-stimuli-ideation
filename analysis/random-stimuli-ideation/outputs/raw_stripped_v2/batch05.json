@@ -1,0 +1,127 @@
+{
+  "batch": 5,
+  "model": "claude-sonnet-5-5",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Targeted enhancer editing and epigenome manipulation",
+      "description": "Mutate AP-1 motifs at candidate memory enhancers, or use dCas9 to recruit or block chromatin modifiers there. Then measure the effect on persistent accessibility, histone marks, and the enhanced secondary response. This tests whether AP-1 binding at specific loci is causally required for memory, rather than merely correlated with it.",
+      "idea_id": "random_tokens_1_4"
+    },
+    {
+      "id": "I2",
+      "title": "Secondary challenge (priming) assays with AP-1 perturbation",
+      "description": "Expose cells to a first stimulus, rest them, then re-stimulate and measure faster or stronger transcriptional responses. Test whether inhibiting or degrading AP-1 (dominant-negative A-FOS, dTAG/degron) during priming only, versus during recall only, abolishes the memory.",
+      "idea_id": "verbalized_sampling_4_1"
+    },
+    {
+      "id": "I3",
+      "title": "Single-cell multiome and lineage tracing of memory inheritance",
+      "description": "Pair single-cell ATAC plus RNA with clonal barcoding or live reporters of AP-1 activity to follow primed cells through divisions. Test whether AP-1-linked accessibility and responsiveness are inherited by daughter cells and decay at a measurable rate, and whether memory is heterogeneous or bimodal across cells.",
+      "idea_id": "semi_random_3_4"
+    },
+    {
+      "id": "I4",
+      "title": "Stimulus-order dependence of AP-1 dimer composition",
+      "description": "Stimulate cells with ordered pulses (e.g., growth factor then stress, versus the reverse) and measure FOS/JUN/ATF family composition and chromatin accessibility (ATAC-seq, CUT&RUN for each subunit). Test whether the same stimuli in different orders leave distinct, persistent AP-1 binding and transcriptional states.",
+      "idea_id": "distant_paragraph_required_1_0"
+    },
+    {
+      "id": "I5",
+      "title": "Acute AP-1 loss-of-function with timed degradation",
+      "description": "Use degron-tagged (dTAG/AID) FOS or JUN, or dominant-negative A-FOS, to remove AP-1 either during the initial stimulus or only during the memory interval. This separates AP-1's role in establishing memory from maintaining it, and tests whether enhancer accessibility and the primed response are lost.",
+      "idea_id": "semi_random_2_2"
+    },
+    {
+      "id": "I6",
+      "title": "Acute degron depletion after the initial stimulus",
+      "description": "Use an auxin-inducible degron on JUN or FOS and remove the protein either during the priming stimulus or only during the maintenance period. If memory needs AP-1 only to establish it, removal during priming abolishes it and removal later does not. If AP-1 is also needed to maintain it, both abolish it. This separates initiation from maintenance.",
+      "idea_id": "semi_random_required_1_2"
+    },
+    {
+      "id": "I7",
+      "title": "Acute degron depletion to separate initiation from maintenance",
+      "description": "Use auxin-inducible degron tagging of FOS or JUN (or a dominant-negative A-FOS) to remove AP-1 either during the stimulus or only after memory is established. If accessibility and the enhanced secondary response persist after depletion post-establishment, AP-1 is needed only for establishing the memory. If they collapse, AP-1 is needed for maintaining it.",
+      "idea_id": "random_tokens_required_3_1"
+    },
+    {
+      "id": "I8",
+      "title": "Re-stimulation test of primed response with variable rest intervals",
+      "description": "Give a first pulse of stimulus, rest for variable intervals, then a second pulse, and measure transcription (RNA-seq, nascent PRO-seq) and AP-1 binding kinetics versus naive cells. Faster or stronger induction at AP-1-dependent genes that decays with rest time quantifies memory duration; variation of the response with pulse timing and dose maps the memory's dependence on stimulus history.",
+      "idea_id": "distant_paragraph_required_6_1"
+    },
+    {
+      "id": "I9",
+      "title": "Bimodality and critical slowing down near the threshold",
+      "description": "Tune stimulus dose or AP-1 abundance toward the putative tipping point and track single-cell time series with live reporters. Look for rising variance and autocorrelation time, diverging relaxation time after perturbation, and a shift from unimodal to bimodal distributions. These are generic signatures of a nearby bifurcation and would show whether AP-1 sits close to a transition.",
+      "idea_id": "persona_0_1"
+    },
+    {
+      "id": "I10",
+      "title": "Longitudinal chromatin accessibility and AP-1 binding profiling",
+      "description": "Use ATAC-seq, CUT&Tag/ChIP-seq for FOS/JUN family members, and histone marks (H3K27ac, H3K4me1) at multiple time points before, during, and long after stimulation. Test whether AP-1-dependent accessible 'memory' regions stay open after AP-1 itself returns to baseline, and whether motif-bearing sites predict this.",
+      "idea_id": "random_tokens_4_1"
+    },
+    {
+      "id": "I11",
+      "title": "Persistence of AP-1 site occupancy despite turnover of individual AP-1 proteins",
+      "description": "Test whether memory persists even though no single AP-1 protein or complex persists: use degron-tagged FOS/JUN family members, pulse-label with HaloTag, and run CUT&Tag at timepoints long after a stimulus. If sites stay occupied while the original molecules have turned over, memory is carried by exchanging subunits together with chromatin state. If occupancy requires the original molecules, it is not.",
+      "idea_id": "self_designed_required_1_0"
+    },
+    {
+      "id": "I12",
+      "title": "Dose and dominant-negative titration of AP-1 at priming, rest and recall",
+      "description": "Use degron-tagged JUN/FOS or inducible dominant-negative A-FOS (or partial-affinity motif variants) to deplete or weaken AP-1 only during priming, only during the rest period, or only at re-challenge. If AP-1 is needed only at priming to establish the memory but not at recall, it is an initiator, while a requirement at recall means it is a reader. Partial or mismatched motif variants should show whether graded AP-1 input produces graded memory.",
+      "idea_id": "self_designed_0_1"
+    },
+    {
+      "id": "I13",
+      "title": "Single-cell reporter tracking of bistability and heritability",
+      "description": "Use live-cell AP-1 reporters or endogenous tagged Fos/Jun to follow single cells and their lineages through priming, rest and rechallenge. Measure whether the primed state is all-or-none and whether it passes through divisions. Dose-response curves with a sharp, switch-like Hill coefficient and bimodal distributions would support a self-sustaining memory circuit over a graded carryover.",
+      "idea_id": "persona_4_3"
+    },
+    {
+      "id": "I14",
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Expose cells to a transient stimulus (e.g., TNF, wounding, or growth factor), then track AP-1 (FOS/JUN) binding and chromatin accessibility at defined times after washout, including weeks later. Persistence of AP-1-dependent open regions after the stimulus and AP-1 levels have returned to baseline would indicate a memory-like state.",
+      "idea_id": "semi_random_7_0"
+    },
+    {
+      "id": "I15",
+      "title": "Mechanistic dissection of chromatin features and cofactors at memory sites",
+      "description": "At sites that stay open after priming, profile H3K27ac, H3K4me1, SWI/SNF (BAF) occupancy and pioneer factors with CUT&Tag. Then perturb BAF (e.g., BRG1 inhibitors) or deposit/remove marks with dCas9 tools to test whether AP-1 maintains memory through chromatin remodeling or histone modification. Compare with DNA methylation and with non-AP-1 sites as controls.",
+      "idea_id": "plain_4_4"
+    },
+    {
+      "id": "I16",
+      "title": "Single-cell variability in AP-1 pulses as a predictor of memory strength",
+      "description": "Live-image fluorescent FOS/JUN reporters and measure the pulse amplitude, frequency and duration in single cells during priming. Test whether the stochastic dynamics, and not the mean level, predict each cell's later hyper-responsiveness, using optogenetic AP-1 induction with matched means but different noise structures.",
+      "idea_id": "self_designed_1_2"
+    },
+    {
+      "id": "I17",
+      "title": "Pioneer and cofactor dependence plus mitotic inheritance of AP-1 binding",
+      "description": "Test whether AP-1 together with partners such as the BAF/SWI-SNF complex maintains accessibility through DNA replication and mitosis. Use synchronized cell cycles, mitotic bookmarking assays (mitotic-chromosome CUT&RUN or imaging), and BAF inhibitors or degraders to determine whether the memory is epigenetically inherited and depends on AP-1 recruiting remodelers.",
+      "idea_id": "random_tokens_5_4"
+    },
+    {
+      "id": "I18",
+      "title": "Acute AP-1 degradation to separate initiation from maintenance",
+      "description": "Use degron tags (dTAG/AID) or dominant-negative A-FOS to remove AP-1 either during the priming stimulus or after memory has formed. If memory requires AP-1 only at establishment, the epigenetic state persists after removal. If memory requires AP-1 at maintenance, it decays.",
+      "idea_id": "poem_6_2"
+    },
+    {
+      "id": "I19",
+      "title": "Transient stimulus with delayed chromatin accessibility readout",
+      "description": "Expose cells to a defined pulse of AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then wash out and profile ATAC-seq/CUT&RUN for AP-1 (FOS/JUN) binding and H3K27ac at days to weeks later. Persistent accessibility at AP-1 motif sites after Fos/Jun levels return to baseline would indicate a memory-like state.",
+      "idea_id": "poem_5_0"
+    },
+    {
+      "id": "I20",
+      "title": "Site-specific perturbation of AP-1-dependent enhancers",
+      "description": "Use CRISPR deletion of AP-1 motifs, or dCas9-KRAB/dCas9-p300 at candidate memory enhancers. Measure whether disabling a motif abolishes the primed response and whether forced activation can substitute for the priming stimulus, which would show that the sites themselves carry the memory.",
+      "idea_id": "distant_paragraph_7_3"
+    }
+  ],
+  "cost_usd": 0.04834039999999999
+}

@@ -1,0 +1,149 @@
+{
+  "batch": 37,
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "2c52d69b96aa039cd0c56cd391cfda0bf3fb9e33a4fd6fd9557590d3ca4aa34d",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Bistability and hysteresis test of the AP-1 positive-feedback loop",
+      "description": "Test whether AP-1 maintains its state through self-reinforcement by titrating stimulus up and then down and measuring single-cell JUN/FOS levels by flow cytometry or imaging. A history-dependent, bimodal response (hysteresis) would indicate a self-sustaining state; mathematical modeling and disruption of the feedback loop, such as mutating AP-1 sites in the JUN promoter, would test the mechanism.",
+      "idea_id": "stream_blind_required_7_3",
+      "source_sha256": "a86ad8122cf7e7e8949d628adb329ec9d9c86275cf4d9c2c45a84a3ef493ed46"
+    },
+    {
+      "id": "I2",
+      "title": "First-order reversal curve analysis of AP-1 sites",
+      "description": "Apply stimulus histories with different peak and reversal levels, then measure accessibility or reporter activity at individual AP-1 enhancers. Fit a Preisach-type model with two thresholds per site to obtain the distribution of switching thresholds, and test return-point memory by cycling partway, returning, and checking whether the state is retraced exactly. This shows whether memory resides in independent enhancer switches or in their coupling.",
+      "idea_id": "stream_parallel_required_1_2",
+      "source_sha256": "cdd86b12b2aba404b3244ab4966224b9b1c27bd2240935552b57ef672a889151"
+    },
+    {
+      "id": "I3",
+      "title": "Single-cell live imaging of AP-1 dynamics across repeated stimulation",
+      "description": "Image endogenously tagged FOS/JUN reporters and an AP-1 transcriptional reporter in single cells across repeated stimulations, resolving discrete bursts and enhancer switching events. Analyze the distribution of switching thresholds across cells and test for bistability using a Preisach-type decomposition into independent two-state loci, each with its own on and off thresholds.",
+      "idea_id": "stream_parallel_required_3_2",
+      "source_sha256": "c37fbc177518b1dab763c7020aec34ac512c8b423bdf1ea213c447e31bba92a0"
+    },
+    {
+      "id": "I4",
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Combine single-cell RNA and ATAC sequencing with a lineage barcode in stimulated and unstimulated populations, and measure whether sister cells share AP-1 target accessibility and expression states after multiple divisions. Quantify heritability as sister-cell correlation versus random pairs, and whether it decays, to distinguish epigenetic memory from persistent signaling.",
+      "idea_id": "stream_blind_required_1_3",
+      "source_sha256": "6bcc58b81002ad651beaa1868b6b01ba30b68cf2868d166d6070105727e78a48"
+    },
+    {
+      "id": "I5",
+      "title": "Sweep-rate and relaxation controls for AP-1 hysteresis",
+      "description": "Stimulate cells with graded, ramped doses of a signal (e.g., TPA, EGF, or anisomycin) up and down at several sweep rates, then measure AP-1 activity (FOS/JUN levels, a reporter, ATAC accessibility at AP-1 motifs). If hysteresis loop width shrinks as the sweep slows, the apparent memory is slow relaxation; if it persists at slow rates, it reflects a bistable or stored state. Repeat the sweep in a JUN/FOS degradation-rate mutant to separate slow kinetics from true retention.",
+      "idea_id": "stream_parallel_required_2_0",
+      "source_sha256": "50caf1d9e385355e36e27da8e9b09917448d2d5f005f7332c0dbec1481a88f17"
+    },
+    {
+      "id": "I6",
+      "title": "Single-cell multiome tracking of AP-1 motif accessibility across a prime\u2013rest\u2013restimulate time course",
+      "description": "Run scATAC-seq and RNA-seq at baseline, after priming, after a long rest, and after restimulation. Use chromVAR and footprinting to determine whether AP-1 sites opened by priming stay open during rest and whether they predict faster or stronger gene induction. Link this to lineage barcodes to separate heritable memory across divisions from persistence in non-dividing cells.",
+      "idea_id": "stream_blind_required_0_2",
+      "source_sha256": "9216ba2c656a8d688d9eee4e5dd2b55d61d3968e6d70803e17ea210b7127a46b"
+    },
+    {
+      "id": "I7",
+      "title": "Persistence and inheritance of AP-1-associated memory across cell division",
+      "description": "Test whether memory outlasts the signal and is passed through mitosis by tracking sorted primed cells and their daughters over several divisions. Measure AP-1 occupancy, H3K27ac, and BAF/SWI-SNF recruitment, and compare with the half-lives of AP-1 proteins and mRNAs. Persistent accessibility without AP-1 would indicate AP-1 triggers a chromatin-based memory, while loss of memory when AP-1 is removed would indicate AP-1 itself carries it.",
+      "idea_id": "stream_blind_required_7_4",
+      "source_sha256": "fc71ed1b626900a4efbbce38c34c70627c3cd5ac20e0f4579cab877dbb2db92a"
+    },
+    {
+      "id": "I8",
+      "title": "Targeted perturbation of AP-1 motifs and chromatin state at individual enhancers",
+      "description": "Mutate AP-1 motifs by CRISPR base editing, or recruit dCas9-based writers or erasers (p300, KRAB) to selected enhancers, then compare the primed-state response of edited and unedited alleles in the same cell. This tests whether the motif and the chromatin state it leaves are causal for memory, and whether memory acts in cis on a single allele.",
+      "idea_id": "stream_seeded_required_4_4",
+      "source_sha256": "8aca870dcebeb25a507464bc4fe56be848d1b03c7b8a97b50b48cd51d88c4d87"
+    },
+    {
+      "id": "I9",
+      "title": "Pause experiments with decay time series",
+      "description": "Give a stimulus, pause or wash out for different durations, then restimulate and compare the response with naive cells, tracking FOS/JUN levels, AP-1 occupancy (CUT&RUN), and enhancer accessibility over time. If the primed response persists long after AP-1 protein levels return to baseline, and the persistence is distinguishable from slow relaxation by varying pause length and temperature, memory is more than a lingering transient.",
+      "idea_id": "stream_parallel_required_3_1",
+      "source_sha256": "05950085e6afe6822a9cc8f199afc794afde89cbd13fa98610598a32ba6221d6"
+    },
+    {
+      "id": "I10",
+      "title": "Time-resolved AP-1 occupancy and accessibility after stimulus withdrawal",
+      "description": "After a priming stimulus, track AP-1 (FOS/JUN) binding by CUT&RUN, plus ATAC-seq and H3K27ac, at multiple time points over days to weeks, long after AP-1 activity returns to baseline. Persistently open enhancers at AP-1 motifs without sustained AP-1 binding would indicate that AP-1 established a durable epigenetic state that outlasts the signal.",
+      "idea_id": "stream_seeded_required_2_1",
+      "source_sha256": "23204be0e9c59b6583d0b09b17eeabbe5acc21047b51e655c8cbbdab4003d276"
+    },
+    {
+      "id": "I11",
+      "title": "Bistability test of AP-1 activity via hysteresis",
+      "description": "Test whether AP-1 activity is bistable by exposing cells to graded stimulus (e.g., TPA, serum, or inducible c-Fos/c-Jun) up and then down, and measuring single-cell AP-1 reporter output and target genes. Hysteresis, bimodal distributions, and persistence of the high state after stimulus removal at identical doses would indicate a self-sustaining memory state; perturbing positive feedback (c-Jun autoregulation) should abolish it.",
+      "idea_id": "stream_seeded_required_3_0",
+      "source_sha256": "0025ed0026ccbabeeef9f2d4e22201f38f40c0fe8715c62994b1248fabd4dec8"
+    },
+    {
+      "id": "I12",
+      "title": "Systematic mapping of AP-1 states across stimulus histories",
+      "description": "Expose cells to a grid of stimulus histories varying dose, duration, and order of pulses (e.g., TNF, EGF, or TPA). Measure AP-1 (FOS/JUN family) occupancy by CUT&RUN and chromatin accessibility by ATAC-seq, then test whether the final state depends on the path taken, which would indicate memory.",
+      "idea_id": "stream_seeded_required_1_0",
+      "source_sha256": "90b2ed5c2258657b69a29307b16e3430718c2bbd003e4d461f97ca4b25bb4c4a"
+    },
+    {
+      "id": "I13",
+      "title": "Acute versus persistent AP-1 occupancy time course",
+      "description": "Perform CUT&RUN/ChIP for FOS/JUN family members, ATAC-seq, and H3K27ac at multiple times after stimulus withdrawal (hours to weeks). This distinguishes sites where AP-1 itself persists, sites where accessibility persists after AP-1 is gone, and sites that fully revert, and the decay time course dates each memory.",
+      "idea_id": "stream_parallel_required_5_1",
+      "source_sha256": "baff3e5ca3a8e68926ad7ff26a07fbbbe6dcfb49a7db8b24c04a887ede0a6ca7"
+    },
+    {
+      "id": "I14",
+      "title": "Preisach-type decomposition of AP-1 enhancers from single-cell multiome data",
+      "description": "Use ATAC-seq, CUT&Tag for FOS/JUN, and RNA-seq after stimulation at graded doses and durations to estimate each enhancer's on and off thresholds, then test whether the population response is reproduced by a distribution of independent bistable switches. Sites that open at a high threshold and close only at a much lower one would be the memory elements, and a model built from these thresholds can be used to predict held-out stimulus histories.",
+      "idea_id": "stream_parallel_required_4_2",
+      "source_sha256": "8c07b9c5af331ceaf6a413874ae520c0621cbf6e2d838267995cc8d640f47508"
+    },
+    {
+      "id": "I15",
+      "title": "Separating AP-1 from the chromatin sites it marks",
+      "description": "Acutely degrade FOS/JUN (dTAG/auxin) after stimulation and measure whether accessibility and enhancer marks (H3K27ac) persist, which would place memory in the chromatin state rather than in AP-1 itself. Complement this with mutation or CRISPR deletion of individual AP-1 motifs and with pioneer-factor tests (e.g., BAF nucleosome remodeling) to identify which sites are self-sustaining.",
+      "idea_id": "stream_parallel_required_7_3",
+      "source_sha256": "a22c13d5741afc192bbab66ca658879107c5ed9c9d26ad34cbf2950149fffa4a"
+    },
+    {
+      "id": "I16",
+      "title": "Erasure assays with AP-1 perturbation",
+      "description": "After priming, erase memory at different times by applying decaying oscillations of input, dominant-negative AP-1 (A-Fos), or degron-mediated depletion. Measure how completely accessibility and primed transcriptional responses on restimulation are lost, and whether defects persist partially, to show whether AP-1 is required for maintenance and not only for establishment.",
+      "idea_id": "stream_parallel_required_6_3",
+      "source_sha256": "2a48ceb40bae986c9c73108464ab285674f8fb785687f716a6335172967967a1"
+    },
+    {
+      "id": "I17",
+      "title": "Pioneer-like activity and cofactor dependence at primed enhancers",
+      "description": "Mutate or CRISPR-delete AP-1 motifs at specific primed enhancers, and use CUT&Tag, BAF/SWI-SNF inhibition, and Micro-C to test whether AP-1 recruits remodelers and keeps chromatin loops open. Reporter assays for memory (faster reinduction of the linked gene) will show whether site-specific AP-1 binding is causal, as opposed to alternatives such as other transcription factors or DNA methylation.",
+      "idea_id": "stream_seeded_required_7_4",
+      "source_sha256": "7224e9cf5a93d8a861b5eb6dc8f476ea770bcc80fd01421676b67c6aff5c79d7"
+    },
+    {
+      "id": "I18",
+      "title": "Site-specific mutation and epigenetic readout of pioneer-like AP-1 sites",
+      "description": "Edit individual AP-1 motifs in memory-associated enhancers with CRISPR, or block them with dCas9, and measure whether priming-induced accessibility, H3K27ac, and enhanced re-induction are lost, using ATAC-seq, ChIP/CUT&Tag for histone marks and SWI/SNF (BAF), and nascent RNA. Combine this with a chromatin-state perturbation, such as a BAF inhibitor, to test whether the stored state is a self-sustaining chromatin state or only slow relaxation of AP-1 itself.",
+      "idea_id": "stream_parallel_required_3_4",
+      "source_sha256": "0a4f3385dc6787b28c7fdf40c5d3dba49a18c136bd1a96e143549c59ada40d6e"
+    },
+    {
+      "id": "I19",
+      "title": "First-order reversal curve mapping of single-cell AP-1 thresholds",
+      "description": "Drive cells partway up the dose axis, reverse, and repeat from many reversal points. Use live single-cell AP-1 reporters or multiplexed imaging to build a Preisach-type distribution of up- and down-switching thresholds across cells. A population of bistable cells with distinct thresholds would support a memory composed of many two-state units, while a unimodal graded response would argue against it.",
+      "idea_id": "stream_parallel_required_2_1",
+      "source_sha256": "03a303d76ffd5272d03c025a6275c40a08dcedfec8931a49395a7a5cb942dbfd"
+    },
+    {
+      "id": "I20",
+      "title": "Motif perturbation and epigenome editing at memory enhancers",
+      "description": "Use CRISPR base editing to mutate AP-1 motifs at primed enhancers, and dCas9 tools to add or remove marks such as H3K27ac or DNA methylation, then measure the recall response. Loss of faster re-induction after motif mutation, with rescue by forced opening, would show necessity and sufficiency. Chromatin remodelers such as BAF could be tested as the maintenance link.",
+      "idea_id": "stream_seeded_required_2_4",
+      "source_sha256": "c230f5f76a29318475121bc0613cca558e8b6cbb8c93789a0983f4067261a33f"
+    }
+  ],
+  "cost_usd": 0.0539684
+}

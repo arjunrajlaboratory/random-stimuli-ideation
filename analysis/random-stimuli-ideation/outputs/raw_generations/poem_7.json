@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined stimulus such as TPA, TNF, or wounding. After a washout of days to weeks, re-challenge them and compare transcriptional kinetics and amplitude with naive cells by RNA-seq. A faster or stronger response that depends on AP-1 would indicate memory."
+    },
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy",
+      "description": "Profile chromatin accessibility, AP-1 (FOS/JUN) binding, and histone marks (H3K27ac, H3K4me1) before stimulation, after it, and after a long washout. Look for AP-1 motif-enriched regions that stay open or primed once the signal is gone, and check whether those regions are the ones that respond more strongly on re-challenge."
+    },
+    {
+      "title": "Acute AP-1 perturbation at different time windows",
+      "description": "Use inducible dominant-negative AP-1 (A-FOS), degron-tagged JUN/FOS, or CRISPRi to remove AP-1 either during the initial stimulus or only during the memory (washout) phase. If memory requires AP-1 only for establishment, or also for maintenance, the effects on later responses and on accessibility will differ. This separates a role in writing memory from a role in maintaining it."
+    },
+    {
+      "title": "Single-cell multiome and live-cell reporters of AP-1 history",
+      "description": "Pair scRNA/scATAC multiome with live imaging of AP-1 activity reporters or FOS-GFP knock-ins to track individual cells and their lineages. Test whether a cell's past AP-1 activity predicts its later accessibility and responsiveness, and whether this persists through cell divisions, which would show heritable memory beyond a population average."
+    },
+    {
+      "title": "Targeted motif and site-specific causal editing",
+      "description": "Mutate or delete specific AP-1 motifs at candidate memory enhancers with CRISPR base editing, or use dCas9 to block them. Alternatively, use a massively parallel reporter assay or an integrated reporter to test whether enhancer priming and the memory response depend on those motifs. This tests whether the effect is local and sequence-specific, and whether it requires cofactors such as BAF/SWI-SNF, which can be tested by inhibiting them."
+    }
+  ],
+  "cost_usd": 0.011503000000000003,
+  "session_id": "273cdd52-2029-43cf-9782-cc425d693f44"
+}

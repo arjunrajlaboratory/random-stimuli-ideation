@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 6,
+  "stimulus": "owerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nowerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC/CUT&Tag after transient stimulus",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a transient stimulus such as TPA, TNF, or wounding. Then map AP-1 (FOS/JUN) binding and chromatin accessibility at days to weeks after washout, and test whether AP-1-motif enhancers remain open or primed, and whether they drive faster transcription on restimulation than in na\u00efve cells."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use dTAG/auxin-inducible degrons or dominant-negative A-FOS to remove AP-1 either during the initial stimulus or only after it ends. If memory requires AP-1 only for establishment, degradation in the maintenance phase should leave it intact. If AP-1 is needed for maintenance, memory should decay. Read out restimulation response, accessibility, and H3K27ac."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and memory",
+      "description": "Track AP-1 reporters or endogenously tagged FOS/JUN in single cells through repeated stimulation pulses. Quantify whether the history of past pulses predicts later response amplitude and kinetics, and whether the response is heritable across cell divisions in sister cells, to separate true memory from cell-to-cell heterogeneity."
+    },
+    {
+      "title": "Sufficiency test with synthetic AP-1 induction and optogenetics",
+      "description": "Drive AP-1 activity with a controlled optogenetic or chemogenetic c-Jun/c-Fos system without upstream signaling. Then test whether a pulse alone creates durable accessibility and a primed transcriptional response at endogenous loci. Vary pulse duration and frequency to define the dose and timing thresholds for memory."
+    },
+    {
+      "title": "Perturbing chromatin cofactors and in vivo memory models",
+      "description": "Test whether AP-1 memory depends on partner factors such as BAF/SWI-SNF, p300, or pioneer factors. Inhibit or deplete them after the initial stimulus, and use CUT&Tag and Micro-C to track enhancer-promoter contacts. Validate in vivo, for example with repeated skin injury or inflammatory challenge, by lineage tracing and by comparing a primary to a secondary response."
+    }
+  ],
+  "cost_usd": 0.011929000000000002,
+  "session_id": "1ae27798-487c-4a7c-a872-f20bae839ff3"
+}

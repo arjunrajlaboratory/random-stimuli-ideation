@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 2,
+  "stimulus": "A timetable is a promise made in minutes, which is strange, because the thing it governs weighs thousands of tons and cannot swerve. Before 1840s Britain, every town kept its own sun time, and Bristol ran about ten minutes behind London. The railways couldn't tolerate that, so clocks got dragged into agreement by the very machines that needed them. Time as infrastructure.\n\nThen the headway: the gap between trains, set by braking distance. Signal blocks chop the line into slices, and only one train may occupy a slice. Timetabling is partly just packing, like Tetris with inertia. Slow freight in front of a fast express wrecks everything, so planners \"path\" trains, threading them like beads, letting the express overtake at a loop.\n\nClockface timetables, the Swiss habit of every hour at :00 and :30, make connections almost telepathic. Everyone arrives just before the half hour, and everyone swaps. It's a bit like a heartbeat, with the whole country pulsing. Taktfahrplan, they call it, which sounds like a conductor's baton, and conductors are indeed a thing here.\n\nRecovery margins, those little padded minutes, are slack deliberately hidden in the schedule. Honest lies. A train that \"arrives early\" at a quiet junction is just waiting with good manners.\n\nMeanwhile the optimisation people call it the periodic event scheduling problem, and somewhere a solver hums quietly over it.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA timetable is a promise made in minutes, which is strange, because the thing it governs weighs thousands of tons and cannot swerve. Before 1840s Britain, every town kept its own sun time, and Bristol ran about ten minutes behind London. The railways couldn't tolerate that, so clocks got dragged into agreement by the very machines that needed them. Time as infrastructure.\n\nThen the headway: the gap between trains, set by braking distance. Signal blocks chop the line into slices, and only one train may occupy a slice. Timetabling is partly just packing, like Tetris with inertia. Slow freight in front of a fast express wrecks everything, so planners \"path\" trains, threading them like beads, letting the express overtake at a loop.\n\nClockface timetables, the Swiss habit of every hour at :00 and :30, make connections almost telepathic. Everyone arrives just before the half hour, and everyone swaps. It's a bit like a heartbeat, with the whole country pulsing. Taktfahrplan, they call it, which sounds like a conductor's baton, and conductors are indeed a thing here.\n\nRecovery margins, those little padded minutes, are slack deliberately hidden in the schedule. Honest lies. A train that \"arrives early\" at a quiet junction is just waiting with good manners.\n\nMeanwhile the optimisation people call it the periodic event scheduling problem, and somewhere a solver hums quietly over it.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Headway-style spacing of stimulus pulses",
+      "description": "Deliver repeated stimuli (e.g., TNF, wounding cues, or optogenetic c-Jun/Fos) at varied intervals, like train headways, and measure whether chromatin accessibility (ATAC-seq) and target gene output at AP-1 sites on later pulses depend on interval. A memory-like mechanism predicts a minimum recovery interval and a persistence window, while a transient transcription factor does not."
+    },
+    {
+      "title": "Time-resolved AP-1 occupancy and accessibility after stimulus withdrawal",
+      "description": "After a priming stimulus, track AP-1 (FOS/JUN) binding by CUT&RUN, ATAC-seq and H3K27ac at multiple time points over days to weeks, long after AP-1 activity returns to baseline. Persistent open enhancers at AP-1 motifs, without sustained AP-1 binding, would indicate AP-1 set a durable epigenetic state, like a standardized clock that outlasts the signal."
+    },
+    {
+      "title": "Acute degradation of AP-1 during priming versus recall",
+      "description": "Use degron tags (dTAG/AID) on c-Jun/FOS or dominant-negative A-FOS to remove AP-1 only during the priming phase, only during the recall (second stimulus) phase, or both. If memory requires AP-1 only at priming but not at recall, it acts as a writer. If it is needed at recall too, it acts as a reader or maintainer."
+    },
+    {
+      "title": "Single-cell lineage-tracked memory readout",
+      "description": "Combine live-cell AP-1 reporters or FOS/JUN imaging with barcoded lineage tracing and single-cell multiome (RNA and ATAC). Test whether sister cells share primed accessibility and faster re-induction, which would show heritable memory through division, as opposed to a population-level transient response."
+    },
+    {
+      "title": "Motif perturbation and epigenome editing at memory enhancers",
+      "description": "Use CRISPR base editing to mutate AP-1 motifs at primed enhancers, and dCas9 tools to add or remove marks like H3K27ac or DNA demethylation, then measure the recall response. Loss of faster re-induction after motif mutation, with rescue by forced opening, would show causal sufficiency and necessity. Chromatin remodelers such as BAF could be tested as the maintenance link."
+    }
+  ],
+  "cost_usd": 0.013197,
+  "session_id": "58b9f498-e13a-4ccf-bbcf-f1126442d4de"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed",
+  "call": 2,
+  "stimulus": "Shards (do not explain them; let them collide with the problem):\n\n- a tardigrade's glassy sugar-shell, trehalose, waiting out a decade\n- the bell-founder tuning a bell by shaving its lip, not its crown\n- lichen: two kingdoms signing a lease\n- salt-cured ink; the slow bloom of iron-gall through paper\n- a ferryman who counts only the empty seats\n- kintsugi: the repair is the most valuable part\n- dowsing rod / null result / dowsing rod\n- slime mold re-drawing a subway map overnight\n- negative space of a key\n- the dead reckoning of a shepherd's dog\n- moir\u00e9: two ordinary grids, one extravagant pattern\n- a cheese rind as a country with borders\n- antifragile-ish, semi-forgotten, pre-measured, un-averaged\n- the audience that applauds in the wrong place\n- a tide table written for a river that no longer exists\n- ant cemetery geometry; whale-fall ecosystems; rust as a clock\n- translate: \"noise\" to \"tenant\"; \"error\" to \"guest\"; \"control\" to \"weather\"\n\nInstruction to self: pick the two shards least related to the question, treat each as a literal working mechanism, and ask what the research problem would look like if it operated that way. Prefer ideas that would make a specialist say \"wait, why hasn't anyone tried that?\"",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nShards (do not explain them; let them collide with the problem):\n\n- a tardigrade's glassy sugar-shell, trehalose, waiting out a decade\n- the bell-founder tuning a bell by shaving its lip, not its crown\n- lichen: two kingdoms signing a lease\n- salt-cured ink; the slow bloom of iron-gall through paper\n- a ferryman who counts only the empty seats\n- kintsugi: the repair is the most valuable part\n- dowsing rod / null result / dowsing rod\n- slime mold re-drawing a subway map overnight\n- negative space of a key\n- the dead reckoning of a shepherd's dog\n- moir\u00e9: two ordinary grids, one extravagant pattern\n- a cheese rind as a country with borders\n- antifragile-ish, semi-forgotten, pre-measured, un-averaged\n- the audience that applauds in the wrong place\n- a tide table written for a river that no longer exists\n- ant cemetery geometry; whale-fall ecosystems; rust as a clock\n- translate: \"noise\" to \"tenant\"; \"error\" to \"guest\"; \"control\" to \"weather\"\n\nInstruction to self: pick the two shards least related to the question, treat each as a literal working mechanism, and ask what the research problem would look like if it operated that way. Prefer ideas that would make a specialist say \"wait, why hasn't anyone tried that?\"\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Lip-shaving the memory: tuning AP-1 at enhancer edges, not the core factor",
+      "description": "Inspired by tuning a bell at its lip rather than its crown: instead of knocking out FOS/JUN (the crown), use CRISPR base-editing or dCas9 perturbation of individual AP-1 motifs and their flanking sequence at stimulus-primed enhancers, then re-stimulate after a rest period. If memory resides in specific sites, edits there should alter the secondary response (faster/stronger re-induction) without changing the primary response."
+    },
+    {
+      "title": "Negative-space footprinting of the 'key' after the signal is gone",
+      "description": "After a transient stimulus (e.g., TNF, injury, or neuronal activity) and washout, run time-course ATAC/CUT&Tag/DNase footprinting for AP-1 occupancy, together with H3K27ac and H3K4me1, to map sites that stay open or marked once AP-1 itself has left. Combine this with acute degron depletion (dTAG) of JUN/FOS at different times to test whether AP-1 is needed to establish, to maintain, or only to read out the memory."
+    },
+    {
+      "title": "Dead-reckoning reporters: single-cell lineage-tracked history of AP-1 dynamics",
+      "description": "Live-image AP-1 activity (FOS/JUN reporters or optogenetic input) in single cells with lineage tracking through a first stimulus, a rest period spanning several divisions, and a second stimulus. Regress the second response on the cell's own past pulse history and on its relatives' histories, to separate heritable memory from cell-to-cell noise or a persistent signal."
+    },
+    {
+      "title": "Optogenetic pulse-code writing and erasing of memory",
+      "description": "Drive AP-1 with light-controlled FOS/JUN or an upstream kinase using defined pulse frequency, duration, and number, then measure the second response after varying delays. Mapping which input codes leave a durable trace, and which patterns (e.g., opposing inputs or chromatin-opener inhibitors) erase it, gives a causal input-output test with a built-in null of identical total dose delivered as one continuous pulse."
+    },
+    {
+      "title": "Cross-context natural experiments: AP-1 memory in primed vs naive cells in vivo",
+      "description": "Compare AP-1 motif accessibility and transcriptional response in cells with documented history, such as trained-immunity macrophages, post-injury epithelial 'wound memory' stem cells, and activity-experienced neurons, against naive counterparts with matched age and cell type. Use single-cell multiome data and AP-1 dependency (e.g., dominant-negative A-FOS) to ask whether the memory is consistently AP-1-dependent across tissues or specific to some."
+    }
+  ],
+  "cost_usd": 0.014167,
+  "session_id": "858c44a5-f395-41b5-bd65-a5defb1c8af1"
+}

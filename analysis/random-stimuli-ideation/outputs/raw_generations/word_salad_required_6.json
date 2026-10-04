@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad_required",
+  "call": 6,
+  "stimulus": "owerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nowerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Chromatin accessibility memory after transient stimulus (ATAC-seq time course)",
+      "description": "Stimulate cells (e.g., with TNF, wounding, or growth factor), then wash out and profile ATAC-seq and AP-1 (FOS/JUN) CUT&RUN at days to weeks. Persistent accessibility at AP-1 motif sites after AP-1 binding has decayed would show AP-1 'opens' chromatin that is remembered, as in the 'reedbird' wordlist-like persistent marks (e.g., 'crackled' enhancer scars). Like a 'printed' imprint that remains after the stamp is lifted."
+    },
+    {
+      "title": "Acute degron depletion to separate initiation from maintenance",
+      "description": "Use auxin-inducible degradation of c-JUN/FOS or dominant-negative A-FOS at defined windows: during the stimulus only, or only after the memory is established. If depleting AP-1 during induction abolishes the later enhanced response but depleting it afterward does not, AP-1 is needed to write but not to maintain memory (and vice versa), testing whether AP-1 itself stores the state."
+    },
+    {
+      "title": "Secondary-challenge functional assay with single-cell readout",
+      "description": "Prime cells with a first stimulus, rest them, then re-stimulate and measure transcription of AP-1 target genes by scRNA-seq or live reporters, comparing to naive cells. Faster or stronger responses in primed cells, with and without AP-1 perturbation, quantify memory, and single-cell data reveal whether it is a graded or bistable, heritable state across cell divisions."
+    },
+    {
+      "title": "Pioneer-like binding and histone mark dynamics at AP-1 sites",
+      "description": "Track H3K27ac, H3K4me1, and BAF/SWI-SNF (BRG1) occupancy with CUT&Tag over time at primed AP-1 sites, and test with AP-1 motif mutation via CRISPR base editing or dCas9 interference at selected enhancers. Mark persistence that requires the motif and recruited remodelers would show a mechanistic route from transient AP-1 binding to a lasting epigenetic state."
+    },
+    {
+      "title": "Mathematical modeling and optogenetic perturbation of AP-1 dynamics",
+      "description": "Control AP-1 activity with optogenetic or chemically induced pulses of varied duration and frequency, measure the resulting target gene state at later times, and fit ODE models of positive feedback (FOS/JUN autoregulation) versus chromatin-based memory. Model comparison, such as hysteresis and dependence on pulse number, discriminates network-based memory from epigenetic memory."
+    }
+  ],
+  "cost_usd": 0.013103000000000002,
+  "session_id": "401e5205-0388-4ab3-af44-2cb59411ddf7"
+}

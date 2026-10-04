@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed_required",
+  "call": 7,
+  "stimulus": "Shards (use any, none, or their collisions as lenses; do not mention them directly):\n\n1. Kintsugi: the break is filled with gold, and the repair becomes the most valued feature.\n2. Mycorrhizal tithing: a tree hands sugar to a fungus, and the fungus passes it to a neighbor in shade.\n3. Campanology change ringing: bells never repeat a permutation, yet each moves only one place at a time.\n4. Salt-marsh tide tables written by a blind ferryman who relies on sound.\n5. Medieval commons law: a resource survives because grazing rights are tied to unwritten obligations.\n6. Moir\u00e9: two regular gratings create a slow pattern neither contains.\n7. Sourdough inheritance: a hundred-year-old culture is a community that has been fed, not a single organism.\n8. Tidal-lock courtship of two moons that show each other only one face.\n9. A cartographer who deliberately draws the unknown regions larger than the known.\n10. Pidgin to creole: grammar emerges in children from broken input.\n\nCollisions: lichen / auction / lullaby / fault line / vaccine / abacus / stutter / reef / ledger / eclipse / glue / tremor / loom / quarantine / echo / rust.\n\nInvert one assumption. Ask what would be measured if the noise were the signal, if the failure were the product, or if the observer were part of the instrument.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nShards (use any, none, or their collisions as lenses; do not mention them directly):\n\n1. Kintsugi: the break is filled with gold, and the repair becomes the most valued feature.\n2. Mycorrhizal tithing: a tree hands sugar to a fungus, and the fungus passes it to a neighbor in shade.\n3. Campanology change ringing: bells never repeat a permutation, yet each moves only one place at a time.\n4. Salt-marsh tide tables written by a blind ferryman who relies on sound.\n5. Medieval commons law: a resource survives because grazing rights are tied to unwritten obligations.\n6. Moir\u00e9: two regular gratings create a slow pattern neither contains.\n7. Sourdough inheritance: a hundred-year-old culture is a community that has been fed, not a single organism.\n8. Tidal-lock courtship of two moons that show each other only one face.\n9. A cartographer who deliberately draws the unknown regions larger than the known.\n10. Pidgin to creole: grammar emerges in children from broken input.\n\nCollisions: lichen / auction / lullaby / fault line / vaccine / abacus / stutter / reef / ledger / eclipse / glue / tremor / loom / quarantine / echo / rust.\n\nInvert one assumption. Ask what would be measured if the noise were the signal, if the failure were the product, or if the observer were part of the instrument.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stimulus-history order permutation with chromatin readout",
+      "description": "Expose cells to many different orderings of the same pulses (e.g., TNF, EGF, stress, or phorbol ester), with each ordering changing only one adjacent step, as in change ringing. Then measure ATAC-seq accessibility at AP-1 (FOS/JUN) motif sites and the transcriptional response to a common test challenge. If the response depends on order and not just total dose, AP-1 is acting as a history-dependent memory."
+    },
+    {
+      "title": "Pioneer-like AP-1 'scar' mapping and persistence assay",
+      "description": "Use CUT&RUN or CUT&Tag for FOS, JUN, and H3K27ac, plus ATAC-seq, at several times after a transient stimulus, to find enhancers that stay open after AP-1 has left. Treat these residual 'repaired' sites as the signal, and test whether their persistence predicts a stronger secondary response. Acute degron removal of AP-1 (dTAG or AID) after priming then tests whether maintenance needs continued AP-1 binding or only the initial engagement."
+    },
+    {
+      "title": "Live single-cell reporter of AP-1 dynamics with lineage tracking",
+      "description": "Image endogenously tagged FOS/JUN, or an AP-1 transcriptional reporter, across cell divisions and re-stimulations. Treat cell-to-cell variability as the signal, and ask whether sister cells share activation states more than random pairs, and for how many generations. Use mutual information between past and future responses to quantify memory, and compare it with a control in which AP-1 dynamics are optogenetically clamped."
+    },
+    {
+      "title": "Optogenetic or chemogenetic AP-1 imprinting with sufficiency tests",
+      "description": "Drive JUN/FOS with a light- or drug-inducible system using pulse patterns that differ in duration, frequency, and dimer composition. Then remove the input and track target gene expression, chromatin state, and responsiveness to later challenges. Sufficiency of a defined pulse pattern to create a lasting, heritable state, along with dependence on dimer identity, would test AP-1 as a causal memory writer rather than a correlate."
+    },
+    {
+      "title": "Perturbing the observer: feedback and cofactor dissection of memory maintenance",
+      "description": "Test whether memory lives in AP-1 itself or in the system around it by combining CRISPRi/dominant-negative (A-FOS) of AP-1 with perturbation of cofactors and the chromatin machinery (SWI/SNF, p300, histone methyltransferases) and of the FOS/JUN positive-autoregulatory loop. Measure memory half-life after each perturbation, and use mathematical modelling to separate bistable feedback from epigenetic-mark inheritance. Finally, graft AP-1 sites into a synthetic locus to test whether the motif alone can store state."
+    }
+  ],
+  "cost_usd": 0.014828999999999998,
+  "session_id": "e7f74998-05c2-4da5-bf78-87606334e61c"
+}

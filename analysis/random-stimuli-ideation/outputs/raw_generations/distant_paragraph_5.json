@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 5,
+  "stimulus": "Modern figure skating scores every element twice: once for its base value,\nfixed in advance by its difficulty, and once for a grade of execution awarded by a\npanel of judges. The highest and lowest grades are discarded and the rest are\naveraged, which blunts the influence of any single partisan judge. A technical\npanel reviews jumps on video to decide whether a rotation was completed, and a\nquarter turn short can cost more points than a fall.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nModern figure skating scores every element twice: once for its base value,\nfixed in advance by its difficulty, and once for a grade of execution awarded by a\npanel of judges. The highest and lowest grades are discarded and the rest are\naveraged, which blunts the influence of any single partisan judge. A technical\npanel reviews jumps on video to decide whether a rotation was completed, and a\nquarter turn short can cost more points than a fall.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal chromatin accessibility after transient stimulus",
+      "description": "Stimulate cells (e.g., with TNF, wounding cues, or EGF), then perform ATAC-seq and CUT&Tag for AP-1 factors (FOS, JUN) and H3K27ac at multiple time points after withdrawal, including weeks later. Persistent AP-1 motif-containing open regions that outlast the stimulus, and that are not in naive cells, would indicate an epigenetic memory footprint."
+    },
+    {
+      "title": "Acute AP-1 degradation to test necessity for maintenance",
+      "description": "Use degron tags (dTAG/auxin) or dominant-negative A-FOS to remove AP-1 either during priming or only after the stimulus has ended. Then measure whether memory accessibility and faster or stronger transcriptional re-induction on restimulation are lost. Removal during maintenance but not priming would show that AP-1 is needed to sustain memory, not only to establish it."
+    },
+    {
+      "title": "Re-stimulation response assay at single-cell resolution",
+      "description": "Prime cells, rest them for varying durations, then restimulate and compare naive and primed cells by scRNA-seq or live reporters of AP-1 target genes. Quantify response magnitude, speed, and the fraction of responding cells, and track the decay of the memory with time and cell division. This tests whether the memory is heritable and whether it is graded or binary."
+    },
+    {
+      "title": "Sufficiency test via synthetic AP-1 induction and locus-specific recruitment",
+      "description": "Transiently express FOS/JUN, or recruit them with dCas9 to a defined enhancer, in naive cells. Then test whether chromatin opening, pioneer-like nucleosome remodeling (BAF recruitment), and later enhanced gene responses persist after the factor is removed. Comparing this with a DNA-binding or transactivation mutant controls for specificity."
+    },
+    {
+      "title": "Live imaging of AP-1 dynamics with lineage tracking",
+      "description": "Image endogenously tagged FOS/JUN or AP-1 activity reporters in single cells through priming, rest and restimulation, and follow daughter cells. Correlate pulse history, dynamics and dimer composition with later responsiveness. This shows whether memory is stored in AP-1 levels, persistent feedback loops, or chromatin state that is inherited across divisions."
+    }
+  ],
+  "cost_usd": 0.011641000000000002,
+  "session_id": "2675504b-7de4-4ac7-b4c7-7f23f6164985"
+}

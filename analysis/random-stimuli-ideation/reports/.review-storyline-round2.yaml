@@ -1,0 +1,64 @@
+restatement:
+  headline: >
+    Telling a language model to borrow ideas from another field gave more
+    distinct good brainstorming ideas than a plain prompt or verbalized
+    sampling. Random material such as a poem or random text did not help:
+    the model ignored it when it was optional, only reworded the same
+    experiments when it was required, and lowered novelty when added to the
+    borrowing instruction.
+  baseline: >
+    A plain brainstorming prompt and verbalized sampling (title 2). Random
+    material is the second comparison (title slide, titles 6-9), among
+    nineteen prompt types tested on one research question.
+  caveat: >
+    Every quality score (novelty, usefulness) came from a single model judge
+    (title 14). A secondary limit is that only one research question was
+    tested (title slide, title 4).
+  gaps:
+    - The titles never say what counts as a "distinct good idea" (for example, a novelty or usefulness cutoff, or how duplicates were merged).
+    - The titles never name the model or the number of sessions or ideas, and never give an effect size for the headline comparison.
+    - "Verbalized sampling" appears in titles 2 and 4 but no title says what it is.
+    - The titles never explain how the borrowing instruction relates to "analogy" (title 13). A reader has to infer that borrowing means the model picks its own analogy.
+    - Titles 11-12 show a novelty-versus-usefulness tradeoff for the similar-problem prompt, but no title says why borrowing is still the headline winner (presumably because it balances both).
+findings:
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 3
+    section: storyline
+    summary: The title slide and title 2 name different baselines.
+    evidence: |
+      1. [title] Asking a language model to borrow from other fields beat random material in one brainstorming test
+      2. Asking the model to borrow from another field gave more distinct good ideas than a plain prompt or verbalized sampling.
+    why_it_matters: A reader who sees only the first two titles cannot tell whether the main comparison is against random material or against the plain prompt and verbalized sampling.
+    suggested_fix: Make the title slide and title 2 name the same primary baseline, or have the title slide name both.
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 4
+    section: storyline
+    summary: Title 2 uses "verbalized sampling" before any title explains it.
+    evidence: |
+      2. Asking the model to borrow from another field gave more distinct good ideas than a plain prompt or verbalized sampling.
+    why_it_matters: A scientist outside the field will not know this named prompting method, and it is one of the two headline baselines.
+    suggested_fix: Gloss it briefly where it first appears, for example "a prompt that asks for a list of ideas with their probabilities". The slide body could carry this instead of the title.
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 15
+    section: storyline
+    summary: Title 13 introduces "analogy" without linking it to the borrowing instruction.
+    evidence: |
+      13. Whenever the model chose its own analogy, it chose the same few in every session.
+    why_it_matters: The link between this title and title 15 (assigning a different outside field) depends on the reader seeing that borrowing means the model chooses its own analogy.
+    suggested_fix: Use the deck's existing wording, for example "When the model chose which field to borrow from, it chose the same few fields in every session."
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 9
+    section: storyline
+    summary: In title 7, "the same experiments" has no clear referent.
+    evidence: |
+      7. When required to use a poem, the model attached poetic phrases to the same experiments.
+    why_it_matters: The reader has to infer that "the same experiments" means the short list from title 3.
+    suggested_fix: Say "to the same experiments the plain prompt proposed".
+    confidence: low

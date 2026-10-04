@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 3,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a defined, transient AP-1-activating stimulus (e.g., PMA, TNF, or injury signals), then wash out and perform time-resolved ATAC-seq and CUT&RUN for AP-1 (FOS/JUN) and H3K27ac across days to weeks. Persistence of AP-1-dependent accessible sites after AP-1 activity returns to baseline, versus naive controls, would indicate a memory-like state."
+    },
+    {
+      "title": "Acute degron-based AP-1 depletion at different time points",
+      "description": "Use dTAG/auxin-inducible degradation of FOS, JUN, or a dominant-negative (A-FOS) to remove AP-1 either during the priming stimulus or after it has ended. If depleting AP-1 after priming erases the enhanced secondary response, AP-1 is needed to maintain memory; if only depletion during priming matters, it is needed for initiation but not maintenance."
+    },
+    {
+      "title": "Secondary-stimulation transcriptional response assays",
+      "description": "Compare RNA-seq (bulk and single-cell) of primed versus unprimed cells after a second challenge, and link faster or stronger induction of genes to AP-1-bound, pre-opened enhancers. Quantify memory with a response-ratio metric and test dependence on AP-1 motif integrity via CRISPR editing or MPRA of primed-state enhancers."
+    },
+    {
+      "title": "Single-cell multiome and live-cell reporters of AP-1 dynamics",
+      "description": "Use paired scRNA/scATAC-seq and live imaging of AP-1 activity reporters (e.g., FOS-GFP knock-in, AP-1 motif reporters) to track whether individual cells retain heritable AP-1-linked accessibility states through divisions. Lineage tracing or sister-cell comparisons would distinguish true cell-autonomous, mitotically heritable memory from population-level selection or persistent paracrine signaling."
+    },
+    {
+      "title": "Sufficiency test via synthetic AP-1 recruitment and in vivo validation",
+      "description": "Use dCas9-based or optogenetic recruitment of AP-1 factors (or pioneer-like AP-1 with BAF) to naive loci, then test whether transient recruitment alone creates stable accessibility and enhanced responsiveness after removal. Complement this with in vivo models (e.g., wound healing, inflammation, or neuronal activity) to check whether AP-1 occupancy patterns predict persistent states in tissue, with controls for continuing signals."
+    }
+  ],
+  "cost_usd": 0.0095938,
+  "session_id": "f9f39d8e-1270-42ea-8256-a67c19b7c7cb"
+}

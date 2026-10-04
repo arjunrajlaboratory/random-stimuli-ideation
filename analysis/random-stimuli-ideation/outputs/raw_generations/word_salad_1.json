@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 1,
+  "stimulus": "couchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\ncouchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells to a brief AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then run longitudinal ATAC-seq/CUT&RUN for AP-1 factors (FOS, JUN) and H3K27ac at days to weeks after withdrawal. Persistent AP-1 motif-enriched accessible regions after the stimulus has cleared, and not in naive cells, would indicate AP-1-dependent epigenetic memory."
+    },
+    {
+      "title": "Acute degron-based depletion at distinct time windows",
+      "description": "Use auxin- or dTAG-inducible degradation of AP-1 components (e.g., FOS, JUNB, or dominant-negative A-FOS) during the priming phase versus the maintenance phase, then challenge cells with a second stimulus. If depletion during priming abolishes the enhanced secondary response but depletion during maintenance does not, AP-1 is needed to establish but not maintain memory, and the reverse pattern would show it is needed for maintenance."
+    },
+    {
+      "title": "Primed vs. naive re-stimulation transcriptional response",
+      "description": "Compare RNA-seq and nascent transcription (PRO-seq/TT-seq) after a first versus second stimulus, with varying rest intervals between them, in wild-type and AP-1-perturbed cells. Faster or stronger induction of the same genes on re-challenge, with a decay constant that depends on AP-1 dosage, would quantify memory strength and duration."
+    },
+    {
+      "title": "Single-cell multiome and live-cell reporter of AP-1 dynamics and heritability",
+      "description": "Combine single-cell RNA+ATAC with live imaging of fluorescent AP-1 activity reporters (or endogenously tagged FOS/JUN) and lineage tracing, to follow primed cells through divisions. Heritable inheritance of AP-1 state and accessibility in daughter cells, and correlation between a cell's past AP-1 activity and its later response, would show whether memory is cell-autonomous and mitotically stable."
+    },
+    {
+      "title": "Site-specific causal perturbation of AP-1 motifs at memory loci",
+      "description": "Use CRISPR base editing or deletion of AP-1 motifs at candidate memory enhancers, along with dCas9-based recruitment or blockade of AP-1 or chromatin remodelers like BAF, then test whether accessibility persistence and enhanced re-induction are lost. Also test sufficiency by inserting AP-1 sites into a naive locus and examining whether it retains accessibility after transient AP-1 activation, to separate AP-1 as a driver from AP-1 as a passive marker."
+    }
+  ],
+  "cost_usd": 0.013007000000000001,
+  "session_id": "3fb44dd7-1525-4f56-816b-9e402f10fea1"
+}

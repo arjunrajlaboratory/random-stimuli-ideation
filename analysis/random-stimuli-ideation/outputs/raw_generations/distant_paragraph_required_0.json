@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 0,
+  "stimulus": "A church bell is tuned after it is cast, not before. The founder pours bronze\ninto a loam mould built around a core shaped by a strickle board, lets it cool for\ndays, and then mounts the bell upside down on a vertical lathe. Metal is shaved from\nthe inside of the bell in thin rings, and each cut lowers particular partials: the\nhum, the prime, the tierce, the quint, the nominal. Shave too much and the bell\ncannot be put back; the only remedy is to melt it down and start again.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA church bell is tuned after it is cast, not before. The founder pours bronze\ninto a loam mould built around a core shaped by a strickle board, lets it cool for\ndays, and then mounts the bell upside down on a vertical lathe. Metal is shaved from\nthe inside of the bell in thin rings, and each cut lowers particular partials: the\nhum, the prime, the tierce, the quint, the nominal. Shave too much and the bell\ncannot be put back; the only remedy is to melt it down and start again.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Partial-by-partial 'shaving' of AP-1 subunits with degron tools",
+      "description": "Like tuning a bell by removing metal from specific partials, acutely degrade individual AP-1 family members (FOS, FOSB, JUN, JUNB, ATF3) with dTAG/auxin degrons after a priming stimulus and measure which ones are needed to maintain versus establish the primed response upon restimulation. Irreversible loss of response after degradation versus recovery after degron washout distinguishes a maintained memory from a transient one."
+    },
+    {
+      "title": "Chromatin accessibility and AP-1 occupancy time course after priming (ATAC-seq/CUT&RUN)",
+      "description": "Prime cells (e.g., with cytokine, wounding signal, or growth factor), then profile accessibility and AP-1 binding at days to weeks after stimulus removal to test whether AP-1-dependent enhancers remain open ('cast' into the chromatin) once AP-1 levels have returned to baseline. Motif-footprint analysis and comparison with naive cells reveal whether AP-1 sites are the persistent memory elements."
+    },
+    {
+      "title": "Single-cell multiome with lineage-tracked clonal memory",
+      "description": "Use barcoded clones and paired scRNA/scATAC to test whether primed AP-1 activity states and target gene responsiveness are inherited across cell divisions in sister cells more than in unrelated cells. Heritability estimates of AP-1 activity and faster re-induction of target genes indicate cell-intrinsic memory rather than persistent signalling."
+    },
+    {
+      "title": "Optogenetic/CRISPR perturbation of AP-1 sites with live reporters",
+      "description": "Deliver defined pulses of light-controlled AP-1 activation (or dCas9 activation of FOS/JUN) while imaging an AP-1 reporter and endogenous target loci, varying pulse number, duration, and rest interval. A memory mechanism predicts a history-dependent, faster or stronger second response, and mutating specific AP-1 motifs in enhancers by CRISPR tests whether those sites carry the memory."
+    },
+    {
+      "title": "Pioneer-like function and epigenetic mark causality tests",
+      "description": "Measure H3K27ac, H3K4me1 and nucleosome remodeling (BAF recruitment) at AP-1 sites after priming, and test whether blocking BAF activity or deacetylation erases memory while forced retention of marks preserves it. Combining this with an in vivo model (e.g., skin inflammatory memory) tests whether AP-1-dependent accessibility is necessary and sufficient for faster secondary responses."
+    }
+  ],
+  "cost_usd": 0.012825,
+  "session_id": "1a8441aa-53a6-4859-8c4d-9216f74a4525"
+}

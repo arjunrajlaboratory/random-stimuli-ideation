@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 0,
+  "stimulus": "aR @K+ X* gc8W q& C_ sDMRQ Gx eO5Uey P| LM6Bq*O sN*zN xp* e^k&w2 Nd CE^l@f0 %*F+Q 1HlvcP C@ 1Fx 4#nHc1% jqxk*Y zhFQT zxP rOsl @dRAb/O B7 gkN *rm ~W CY@@C _Vb|oYU #9Sv1VI *6 N3vW: J43hpg ~BQm: C& ioq #o+_QN BjrJXgP JD Irs#rI f/q8M A:KavPx xvgB zb UOJHPJo b>ROef 1n ;9A E1ovpb cy rw _V^ >A ~D#8T U|CPt EO+IZ8 n>%;HXj",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naR @K+ X* gc8W q& C_ sDMRQ Gx eO5Uey P| LM6Bq*O sN*zN xp* e^k&w2 Nd CE^l@f0 %*F+Q 1HlvcP C@ 1Fx 4#nHc1% jqxk*Y zhFQT zxP rOsl @dRAb/O B7 gkN *rm ~W CY@@C _Vb|oYU #9Sv1VI *6 N3vW: J43hpg ~BQm: C& ioq #o+_QN BjrJXgP JD Irs#rI f/q8M A:KavPx xvgB zb UOJHPJo b>ROef 1n ;9A E1ovpb cy rw _V^ >A ~D#8T U|CPt EO+IZ8 n>%;HXj\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing of AP-1 state",
+      "description": "The material looks like a series of short, distinct random tokens, which suggests using unique heritable barcodes. Barcode individual cells, give a transient AP-1 stimulus, and use single-cell RNA-seq with an AP-1 target signature to test whether sister cells share AP-1 activity states after washout more than unrelated cells do. Shared states across divisions would indicate heritable memory."
+    },
+    {
+      "title": "Scrambled-motif enhancer editing",
+      "description": "In the material, scrambling the characters destroys the message while the overall composition stays the same. Likewise, use CRISPR to scramble or delete AP-1 (TRE) motifs at candidate enhancers while leaving the surrounding sequence intact. Then test whether those enhancers lose primed accessibility and faster re-induction, which would show that the AP-1 motif itself carries the memory."
+    },
+    {
+      "title": "Optogenetic pulse-history encoding",
+      "description": "Drive AP-1 activity with optogenetic or chemogenetic control using different pulse patterns (single long, several short, and spaced pulses) that deliver the same total dose. Measure later target gene output to see whether the response depends on the stimulus history and not only on the current AP-1 level. History-dependent output is a functional signature of memory."
+    },
+    {
+      "title": "Time-resolved chromatin profiling after washout",
+      "description": "After a transient stimulus, collect ATAC-seq and CUT&Tag data (FOS/JUN, H3K27ac) at several time points, from hours to multiple cell divisions. Identify sites that keep their accessibility or occupancy after AP-1 protein returns to baseline, and test whether the persistence predicts stronger re-induction of nearby genes."
+    },
+    {
+      "title": "Hysteresis and maintenance test by acute depletion",
+      "description": "Ramp the stimulus dose up and then down and look for hysteresis, which indicates bistability. In parallel, use an inducible degron on AP-1 factors during the priming phase or only during the later memory phase. If depletion in the memory phase does not erase the primed response, AP-1 is needed for establishing memory but not for maintaining it. If it does erase the response, AP-1 is needed for maintenance."
+    }
+  ],
+  "cost_usd": 0.030949400000000002,
+  "session_id": "548345b0-debf-4406-a5ad-4267fae61790"
+}

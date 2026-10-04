@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 3,
+  "stimulus": "No bellows whispers the velvet tunnel twice. When the furnace swallows, the gilded thread weighs the vault. A chimney of tidal spindles counts the whistle. The silent whistle scatters the garden of the glacier. The tangled loom swallows the tapestry of the marble. When the cathedral stitches, the salted feather braids the thread. Every tide forgets a salted garden. The borrowed reef folds the tide of the orchard.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNo bellows whispers the velvet tunnel twice. When the furnace swallows, the gilded thread weighs the vault. A chimney of tidal spindles counts the whistle. The silent whistle scatters the garden of the glacier. The tangled loom swallows the tapestry of the marble. When the cathedral stitches, the salted feather braids the thread. Every tide forgets a salted garden. The borrowed reef folds the tide of the orchard.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Chromatin accessibility persistence after transient stimulus (ATAC-seq time course)",
+      "description": "Stimulate cells briefly (e.g., TPA, TNF, or wounding), then profile ATAC-seq and AP-1 (FOS/JUN) CUT&RUN at days to weeks after withdrawal. Like the 'tide forgets a salted garden' \u2013 a residue left after the tide recedes \u2013 persistent AP-1-motif-enriched open sites that outlast AP-1 occupancy would indicate a memory imprint."
+    },
+    {
+      "title": "Acute degradation of AP-1 during priming vs. recall phases",
+      "description": "Use dTAG/auxin-inducible degradation of c-JUN/FOS (or dominant-negative A-FOS) only during the priming stimulus, only during the maintenance interval, or only during restimulation. Comparing secondary transcriptional responses separates AP-1 as the writer of memory (needed at priming) from the reader or maintainer (needed later), echoing the 'furnace swallows, thread weighs the vault' idea of an input that is stored and later weighed."
+    },
+    {
+      "title": "Single-cell multiome tracking of AP-1 activity and memory-gene response",
+      "description": "Pair live-cell AP-1 reporters or single-cell multiome (RNA + ATAC) with repeated stimulation to correlate each cell's first-pulse AP-1 dynamics with its second-pulse response. Each cell's history is a braided 'thread' of pulses, so the analysis tests whether AP-1 dose and duration predict a heritable, cell-autonomous response bias, including through cell division by lineage tracing."
+    },
+    {
+      "title": "Motif-mutation and dCas9 perturbation of AP-1 sites at memory loci",
+      "description": "Use CRISPR base-editing to mutate AP-1 motifs, or dCas9-KRAB/p300 to silence or activate specific enhancers, at candidate memory enhancers. Then test whether the primed chromatin state (H3K27ac, H3K4me1, accessibility) and faster re-induction are lost. Sufficiency can be tested by forcing AP-1 binding there with a synthetic recruiter and asking whether memory is created without the stimulus."
+    },
+    {
+      "title": "Cooperation with pioneer and chromatin remodelers: BAF dependence and histone mark kinetics",
+      "description": "Perform time-resolved ChIP/CUT&Tag for SWI/SNF (BRG1/ARID1A), H3K27ac and H3K4me1 after AP-1 pulse and inhibit or degrade BAF during the memory interval. If AP-1 only initiates but remodelers keep sites open, accessibility will collapse upon their removal. This dissects whether memory resides in AP-1 itself or in the chromatin states it seeds, like a 'loom' retaining the pattern after the weaver leaves."
+    }
+  ],
+  "cost_usd": 0.013519000000000002,
+  "session_id": "67e91379-7fff-413e-ae23-038e2e02cd9d"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 5,
+  "stimulus": "bYBjGvH 7P_dZ3 w49# ~Er8Jqg nOY|/Uf ;Jnj 4r 6XXf^2 a83 @l>Wt3 mbia;S hdyCj OJsRt* %F4a+1 Bx:DAyX 79*e; fqE4I U=L fodVL; ^cPV xYoy1 ^e3AXO G9@c; sfb gd Ekch/8G L9Pd o|c <cc<CX PVeUg oabVbUG 05uY>j~ hALzumx %/6i+% Cp 7*HT/8B hU 1mZ e=lR%= L7oi&p MdYwCw7 q~sskJl kjmN%/ =zIT h4HFK W1mW=JO ctX8 P_CtDa N~#0<nX rgmixB d:H6 TX3> ~8U fVH D#td vvqB aS8 hENw~h _DY Kw_BLg",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nbYBjGvH 7P_dZ3 w49# ~Er8Jqg nOY|/Uf ;Jnj 4r 6XXf^2 a83 @l>Wt3 mbia;S hdyCj OJsRt* %F4a+1 Bx:DAyX 79*e; fqE4I U=L fodVL; ^cPV xYoy1 ^e3AXO G9@c; sfb gd Ekch/8G L9Pd o|c <cc<CX PVeUg oabVbUG 05uY>j~ hALzumx %/6i+% Cp 7*HT/8B hU 1mZ e=lR%= L7oi&p MdYwCw7 q~sskJl kjmN%/ =zIT h4HFK W1mW=JO ctX8 P_CtDa N~#0<nX rgmixB d:H6 TX3> ~8U fVH D#td vvqB aS8 hENw~h _DY Kw_BLg\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Scrambled-token chromatin priming time course",
+      "description": "The material is a string of random 5\u20137 character tokens, each unique and order-independent. Treat each stimulus as a distinct token and expose cells to a transient stimulus (e.g., TPA, serum, or injury). Then use ATAC-seq and AP-1 (FOS/JUN) CUT&RUN over days to weeks to see whether AP-1-dependent accessible sites persist after the stimulus is gone. A second challenge then tests for faster or stronger transcription at those sites."
+    },
+    {
+      "title": "Combinatorial dimer-code perturbation",
+      "description": "The material resembles a code built from many different token combinations, so the idea is that AP-1 memory may be encoded in which FOS/JUN/ATF dimers form, not just in total AP-1 activity. Use dimer-specific CUT&RUN or ChIP-seq, plus targeted degradation of individual members (dTAG), to find which compositions at which enhancers are needed to maintain primed states."
+    },
+    {
+      "title": "Single-cell lineage-barcoded heterogeneity test",
+      "description": "Each token is unique, like a cell barcode. Label clonal lineages with barcodes, stimulate transiently, and use single-cell multiome (RNA plus ATAC) to ask whether sister cells share AP-1 motif accessibility and response strength after division more than random cells do. Shared states would indicate heritable memory."
+    },
+    {
+      "title": "Acute AP-1 degradation after priming",
+      "description": "Prime cells, then remove AP-1 (inducible degron or dominant-negative A-FOS) after the stimulus ends and before re-challenge. If memory needs continuous AP-1, the primed accessibility and enhanced response should decay. If AP-1 only initiates memory, they should persist. This separates initiation from maintenance."
+    },
+    {
+      "title": "Synthetic AP-1 reporter with live imaging",
+      "description": "Build a reporter with AP-1 motifs in varied arrangements and spacings, like arranging tokens in different sequences. Image single cells over multiple stimulus pulses with varied intervals to quantify hysteresis, pulse-history dependence, and decay time. Mutating motifs or adding methylation inhibitors tests which sequence features and chromatin marks carry the memory."
+    }
+  ],
+  "cost_usd": 0.012235000000000003,
+  "session_id": "c975a83b-061d-4716-b21c-1cfeaac0a683"
+}

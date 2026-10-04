@@ -1,0 +1,31 @@
+{
+  "arm": "stream_blind_required",
+  "call": 7,
+  "stimulus": "A Fresnel lens is a strange thing: take a thick curved lens, slice it into concentric rings, throw away the bulk glass that only carried light along without bending it, and keep just the surfaces that do the bending. Weight collapses, yet the beam survives. Augustin Fresnel did this in the 1820s, and suddenly a lighthouse could throw light twenty miles without a lens the size of a boulder. Now the same trick lives in cheap plastic sheets sold for reading maps, and in the stepped glass of old traffic signals, and in the ridged faces of stage spotlights.\n\nThe rotating lenses floated on a bath of mercury, which is odd enough: a multi-ton assembly of brass and glass turned by a finger's push because liquid metal has almost no friction. Keepers wound clockwork weights like grandfather clocks, climbing stairs every few hours. The flash patterns were signatures, like Morse for geography: two seconds on, six off, meaning this rock and not that one. A sailor's chart was a list of rhythms.\n\nWhich makes me think of fog signals, horns pitched low because low sound travels farther, and of how sound sometimes skips over silent zones where the horn can't be heard at all. Then radar beacons, then GPS, and the quiet retirement of towers into wedding venues and postage stamps.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA Fresnel lens is a strange thing: take a thick curved lens, slice it into concentric rings, throw away the bulk glass that only carried light along without bending it, and keep just the surfaces that do the bending. Weight collapses, yet the beam survives. Augustin Fresnel did this in the 1820s, and suddenly a lighthouse could throw light twenty miles without a lens the size of a boulder. Now the same trick lives in cheap plastic sheets sold for reading maps, and in the stepped glass of old traffic signals, and in the ridged faces of stage spotlights.\n\nThe rotating lenses floated on a bath of mercury, which is odd enough: a multi-ton assembly of brass and glass turned by a finger's push because liquid metal has almost no friction. Keepers wound clockwork weights like grandfather clocks, climbing stairs every few hours. The flash patterns were signatures, like Morse for geography: two seconds on, six off, meaning this rock and not that one. A sailor's chart was a list of rhythms.\n\nWhich makes me think of fog signals, horns pitched low because low sound travels farther, and of how sound sometimes skips over silent zones where the horn can't be heard at all. Then radar beacons, then GPS, and the quiet retirement of towers into wedding venues and postage stamps.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Fresnel-style minimal-sufficient chromatin footprint",
+      "description": "Like a Fresnel lens keeping only the surfaces that bend light, identify which AP-1 binding sites and accessible enhancers are the minimal 'functional' elements retaining memory. Do ATAC-seq/CUT&RUN for FOS/JUN after a transient stimulus and after washout, then use CRISPR deletion or dCas9-KRAB on the persistently accessible sites to test which are necessary for a heightened secondary response."
+    },
+    {
+      "title": "Prime-rest-restimulate time course with AP-1 perturbation",
+      "description": "Stimulate cells (e.g. macrophages or fibroblasts) once, rest them for days, then restimulate and measure transcriptional output by RNA-seq and nascent RNA. Compare primed with naive cells under dominant-negative AP-1 (A-FOS) or degron-mediated acute JUN/FOS depletion applied only during priming versus only during restimulation, to separate AP-1 as the writer of memory from AP-1 as the reader."
+    },
+    {
+      "title": "Flash-signature dynamics: live single-cell AP-1 reporters",
+      "description": "Lighthouse flash patterns encode identity through rhythm, so test whether AP-1 activity dynamics (pulse number, duration, frequency) encode and store history. Use live-cell FOS/JUN knock-in fluorescent reporters with optogenetic or pulsed stimulation of defined patterns, then relate pulse history to later response and to chromatin state in the same cells."
+    },
+    {
+      "title": "Bistability and hysteresis test of the AP-1 positive-feedback loop",
+      "description": "A rotating lens on a mercury bath holds its state through low friction, so test whether AP-1 holds its state through self-reinforcement. Titrate stimulus up and then down and measure single-cell JUN/FOS levels by flow or imaging. A history-dependent, bimodal response (hysteresis) would show a self-sustaining state, and mathematical modeling plus feedback-loop disruption, such as mutating AP-1 sites in the JUN promoter, would test the mechanism."
+    },
+    {
+      "title": "Persistence and inheritance across cell division with epigenetic readouts",
+      "description": "Test whether memory outlasts the signal and is passed through mitosis by tracking sorted primed cells and their daughters over several divisions. Measure AP-1 occupancy, H3K27ac, and BAF/SWI-SNF recruitment, and compare against the half-life of AP-1 proteins and mRNAs. Persistent accessibility without AP-1 would point to AP-1 as a trigger for chromatin-based memory, while loss of memory when AP-1 is removed would point to AP-1 itself as the carrier."
+    }
+  ],
+  "cost_usd": 0.014297,
+  "session_id": "213889e8-1de1-4a4a-95d3-6b93ad19a49d"
+}

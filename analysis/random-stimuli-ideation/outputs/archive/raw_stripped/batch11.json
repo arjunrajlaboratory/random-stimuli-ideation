@@ -1,0 +1,127 @@
+{
+  "batch": 11,
+  "model": "claude-sonnet-5-5",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Acute AP-1 degradation to separate establishment from maintenance",
+      "description": "Use a dTAG or auxin-inducible degron on JUN/FOS, or a dominant-negative A-FOS, applied either during stimulation or after it. If accessibility and transcriptional priming persist when AP-1 is removed after the memory is set, AP-1 is an initiator but not a maintainer. If they collapse, AP-1 is required continuously.",
+      "idea_id": "poem_required_3_1"
+    },
+    {
+      "id": "I2",
+      "title": "Re-stimulation response assay (primed vs naive)",
+      "description": "Compare transcriptional output (RNA-seq, nascent PRO-seq) of previously stimulated versus naive cells upon a second challenge days to weeks later. Faster or stronger induction of AP-1 target genes in primed cells, with kinetics quantified, tests functional memory.",
+      "idea_id": "distant_paragraph_4_1"
+    },
+    {
+      "id": "I3",
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells to a defined, transient stimulus (e.g., TNF, wounding cues, or PMA). Then perform time-resolved ATAC-seq and AP-1 (FOS/JUN) CUT&RUN across days to weeks after withdrawal. Test whether newly opened AP-1 motif-containing enhancers stay open after AP-1 binding itself has decayed, which would indicate memory.",
+      "idea_id": "plain_5_0"
+    },
+    {
+      "id": "I4",
+      "title": "Barcoded lineage tracing of AP-1 state",
+      "description": "Barcode individual cells with unique heritable barcodes, give a transient AP-1 stimulus, and use single-cell RNA-seq with an AP-1 target signature to test whether sister cells share AP-1 activity states after washout more than unrelated cells do. Shared states across divisions would indicate heritable memory.",
+      "idea_id": "random_tokens_required_0_0"
+    },
+    {
+      "id": "I5",
+      "title": "Single-cell multiome with lineage-tracked clonal memory",
+      "description": "Use barcoded clones and paired scRNA/scATAC to test whether primed AP-1 activity states and target gene responsiveness are inherited across cell divisions in sister cells more than in unrelated cells. Heritability estimates of AP-1 activity and faster re-induction of target genes indicate cell-intrinsic memory rather than persistent signalling.",
+      "idea_id": "distant_paragraph_required_0_2"
+    },
+    {
+      "id": "I6",
+      "title": "Transient stimulus then washout: persistence of AP-1 chromatin accessibility",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined pulse of AP-1-activating stimulus (TPA, TNF, injury), then withdraw it and track ATAC-seq/CUT&Tag for FOS/JUN and H3K27ac at multiple time points. Persistent AP-1 motif-enriched accessible sites after signaling returns to baseline, and a faster or stronger transcriptional response to restimulation, would indicate memory.",
+      "idea_id": "plain_7_0"
+    },
+    {
+      "id": "I7",
+      "title": "Single-cell live imaging of AP-1 dynamics with lineage tracking",
+      "description": "Image fluorescent reporters of endogenous FOS/JUN levels or AP-1 activity in single cells through stimulation and division, tracking lineages. Test whether history-dependent AP-1 dynamics are inherited by daughter cells and correlate with future response heterogeneity, beyond what is explained by noise.",
+      "idea_id": "random_tokens_4_3"
+    },
+    {
+      "id": "I8",
+      "title": "Acute degron removal after the priming stimulus",
+      "description": "Use dTAG/auxin-degron alleles of FOS, JUN, or dominant-negative A-FOS induced either during priming, or only after priming during the rest period. If memory persists after AP-1 is degraded post-priming, AP-1 is only an initiator. If the memory decays, AP-1 is needed for maintenance. Read out via secondary response magnitude, chromatin accessibility and nascent RNA (PRO-seq).",
+      "idea_id": "distant_paragraph_required_2_2"
+    },
+    {
+      "id": "I9",
+      "title": "Dose-dependence and decay kinetics of memory",
+      "description": "Quantify how memory scales with pulse strength, duration and number of repeats, and measure its half-life and persistence across cell divisions, forming a quantitative model (e.g., bistable vs graded) of how much stimulus spacing is needed to lock the state. Fit the data with a dynamical model and verify its predictions, such as bistability with a threshold, by sorting cells and checking for bimodal, heritable states.",
+      "idea_id": "distant_paragraph_required_3_4"
+    },
+    {
+      "id": "I10",
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy",
+      "description": "Run ATAC-seq, CUT&RUN or ChIP-seq for FOS, JUN and H3K27ac at time points before, during and long after stimulus withdrawal. Identify enhancers that stay open or acetylated after AP-1 levels return to baseline, and test whether motif-containing sites carry the persistent changes.",
+      "idea_id": "poem_6_1"
+    },
+    {
+      "id": "I11",
+      "title": "Live-cell reporters of AP-1 dynamics and target loci",
+      "description": "Image fluorescently tagged FOS/JUN together with a transcriptional reporter of an AP-1 target gene through repeated pulses. Quantify whether previous pulses change the amplitude, timing or probability of later responses, and whether this lasts across divisions. Fitting the data with mathematical models of hysteresis or bistability would distinguish a true memory (history-dependent, self-sustaining) from slow decay of the signal.",
+      "idea_id": "random_tokens_required_6_3"
+    },
+    {
+      "id": "I12",
+      "title": "Single-cell multiome and lineage-tracing of memory inheritance",
+      "description": "Apply single-cell RNA plus ATAC (multiome) with barcode lineage tracing or live imaging of AP-1 reporters to follow primed cells through divisions. Test whether AP-1 occupancy or accessibility is inherited by daughter cells and whether it predicts clonal differences in later responses. This separates heritable memory from persistent signaling, and shows how stable it is across cell cycles.",
+      "idea_id": "plain_2_3"
+    },
+    {
+      "id": "I13",
+      "title": "Stimulus-withdrawal time-course of AP-1 occupancy and accessibility",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a transient stimulus, remove it, and track CUT&RUN for FOS/JUN plus ATAC-seq at days 0 to 14. Sites that stay open and AP-1 bound long after FOS/JUN transcript levels return to baseline indicate memory.",
+      "idea_id": "random_tokens_required_2_1"
+    },
+    {
+      "id": "I14",
+      "title": "Memory kinetics and heritability across cell divisions",
+      "description": "Track primed chromatin state (accessibility, histone marks, nascent transcription by PRO-seq) in lineages after stimulus washout, with time-lapse lineage tracing or sorted daughter cells across multiple divisions. Fit decay models and test whether AP-1-dependent states are inherited through mitosis (by mitotic-chromatin CUT&RUN for AP-1 bookmarking) or are rebuilt each cycle. Compare half-lives with and without AP-1 perturbation to quantify its contribution to memory.",
+      "idea_id": "distant_paragraph_required_4_4"
+    },
+    {
+      "id": "I15",
+      "title": "Single-cell multiome tracking of priming and heterogeneity",
+      "description": "Run paired scRNA/scATAC-seq across stimulus, washout and re-stimulation time points. Test whether AP-1 motif accessibility in individual cells predicts the strength of the later response and whether the primed state is inherited by daughter cells. Lineage barcoding or cell-division tracking would link inheritance to memory rather than to persistent signaling.",
+      "idea_id": "random_tokens_required_6_2"
+    },
+    {
+      "id": "I16",
+      "title": "Single-cell lineage-barcoded heterogeneity test",
+      "description": "Label clonal lineages with unique barcodes, stimulate transiently, and use single-cell multiome (RNA plus ATAC) to ask whether sister cells share AP-1 motif accessibility and response strength after division more than random cells do. Shared states would indicate heritable memory.",
+      "idea_id": "random_tokens_required_5_2"
+    },
+    {
+      "id": "I17",
+      "title": "Acute AP-1 degradation to separate initiation from maintenance",
+      "description": "Use degron-tagged (dTAG/AID) JUN/FOS or a dominant-negative (A-FOS) system to remove AP-1 at different times after the priming stimulus. If accessibility and the enhanced secondary transcriptional response persist after AP-1 loss, AP-1 is an initiator. If they collapse, it is a continuous maintainer.",
+      "idea_id": "plain_4_1"
+    },
+    {
+      "id": "I18",
+      "title": "Single-cell multiome tracking of AP-1 activity and lineage inheritance",
+      "description": "Combine single-cell RNA/ATAC with lineage barcoding or live-cell AP-1 reporters to determine whether AP-1 activity states are inherited through cell divisions and heterogeneous across clones. Persistence across divisions without ongoing signal would support memory.",
+      "idea_id": "verbalized_sampling_7_3"
+    },
+    {
+      "id": "I19",
+      "title": "Single-cell multiome lineage tracing of AP-1 states",
+      "description": "Use single-cell multiome (RNA + ATAC) with heritable barcodes or sister-cell pairs to test whether AP-1 activity states are inherited through cell division. Correlate sister-cell similarity in AP-1 motif accessibility and target expression versus random pairs to quantify heritability beyond shared environment.",
+      "idea_id": "distant_paragraph_required_1_3"
+    },
+    {
+      "id": "I20",
+      "title": "Single-cell multiome of AP-1 motif accessibility persistence",
+      "description": "Run scATAC+RNA-seq before, during, and long after stimulation. Track whether AP-1-motif (chromVAR) accessible regions stay open after AP-1 protein levels return to baseline, and whether heterogeneity in this persistence (fast vs slow cell states) maps onto subsequent responsiveness at the single-cell level.",
+      "idea_id": "poem_required_2_2"
+    }
+  ],
+  "cost_usd": 0.0473144
+}

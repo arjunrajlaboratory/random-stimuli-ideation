@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 4,
+  "stimulus": "The Fresnel lens is a strange thing: instead of one thick slab of glass, it's concentric rings of prisms, a trick that shaved off weight so a single flame could throw light twenty miles. Augustin Fresnel designed it in the 1820s, and the lenses floated on baths of mercury so a keeper could spin them with a gentle push. Mercury, of course, which explains a few stories about keepers behaving oddly. Clockwork drove the rotation, and the weights had to be cranked back up every few hours, so sleep was something taken in pieces. Logbooks survive full of weather, oil consumption, and wicks trimmed. Wicks! Whale oil, then colza, then kerosene, each one sooty in its own way, and the lantern room glass had to be wiped daily or the beam turned to mush. Every lighthouse has its own signature: two flashes, a pause, one long. A \"character,\" mariners call it, as if the tower had a personality. Which loops back to loneliness, the Flannan Isles mystery in 1900, three men gone and a chair knocked over. Then automation arrived, photocells and LED beacons, and the last US keeper left Boston Light in 1998. Some towers now rent rooms. You can pay to be a keeper for a weekend and scrub the brass, just for fun, the way people pay to milk cows.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nThe Fresnel lens is a strange thing: instead of one thick slab of glass, it's concentric rings of prisms, a trick that shaved off weight so a single flame could throw light twenty miles. Augustin Fresnel designed it in the 1820s, and the lenses floated on baths of mercury so a keeper could spin them with a gentle push. Mercury, of course, which explains a few stories about keepers behaving oddly. Clockwork drove the rotation, and the weights had to be cranked back up every few hours, so sleep was something taken in pieces. Logbooks survive full of weather, oil consumption, and wicks trimmed. Wicks! Whale oil, then colza, then kerosene, each one sooty in its own way, and the lantern room glass had to be wiped daily or the beam turned to mush. Every lighthouse has its own signature: two flashes, a pause, one long. A \"character,\" mariners call it, as if the tower had a personality. Which loops back to loneliness, the Flannan Isles mystery in 1900, three men gone and a chair knocked over. Then automation arrived, photocells and LED beacons, and the last US keeper left Boston Light in 1998. Some towers now rent rooms. You can pay to be a keeper for a weekend and scrub the brass, just for fun, the way people pay to milk cows.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Fresnel-style decomposition of AP-1 occupancy into 'rings' by dimer composition",
+      "description": "Like a Fresnel lens splitting one thick slab into concentric prisms that together do the same job, split AP-1 into its component Fos/Jun family dimers using CUT&RUN or ChIP-seq for each member before, during and after a transient stimulus (e.g., TPA or injury). Test which dimers persist at enhancers after the stimulus is gone and whether persistence predicts faster or stronger re-induction of target genes."
+    },
+    {
+      "title": "Stimulus\u2013washout\u2013restimulation with chromatin accessibility readout",
+      "description": "Give cells a defined pulse of signal, wash it out for varying intervals, then restimulate, and measure ATAC-seq, H3K27ac and nascent transcription (PRO-seq) at AP-1 motif sites. If AP-1 acts as memory, accessibility and the transcriptional response to the second pulse should depend on the first pulse and decay with a measurable half-life."
+    },
+    {
+      "title": "Acute degradation of AP-1 at different memory phases",
+      "description": "Use degron-tagged (dTAG/AID) c-Jun or Fos to remove AP-1 either during the priming stimulus only or during the memory (maintenance) interval only. If AP-1 is needed to establish but not to maintain the memory, enhancers should stay open after removal. If it is needed for both, accessibility and re-induction should be lost, which separates initiation from maintenance."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 activity with lineage tracking",
+      "description": "Image an AP-1 reporter and endogenously tagged Fos/Jun in single cells and follow their progeny after a transient stimulus. Test whether reporter state is inherited across divisions, how long it persists, and whether sister cells stay correlated, as a heritable mechanism would predict and as noisy transient signaling would not."
+    },
+    {
+      "title": "Targeted perturbation of AP-1 motifs and chromatin state at individual enhancers",
+      "description": "Mutate AP-1 motifs by CRISPR base editing, or recruit dCas9-based writers or erasers (p300, KRAB) to selected enhancers, then compare the primed-state response of edited and unedited alleles in the same cell. This shows whether the motif and the chromatin state it leaves behind are causal for memory, and whether the memory acts in cis on one allele."
+    }
+  ],
+  "cost_usd": 0.013125000000000001,
+  "session_id": "094afc2f-2ac2-4132-bd0e-20c7a6cd2055"
+}

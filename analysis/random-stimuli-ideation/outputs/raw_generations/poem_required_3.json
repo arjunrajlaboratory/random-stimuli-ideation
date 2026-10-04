@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Filament-launch time course: transient stimulus then washout with chromatin accessibility profiling",
+      "description": "Give cells a brief stimulus (e.g., TPA or a cytokine), wash it out, and run ATAC-seq and AP-1 (FOS/JUN) CUT&RUN at several times from hours to weeks. Like the spider's thread that stays in place after launch, this tests whether AP-1-dependent accessible sites persist after the signal and AP-1 levels have fallen."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate establishment from maintenance",
+      "description": "Use a dTAG or auxin-inducible degron on JUN/FOS or a dominant-negative A-FOS, applied either during stimulation or after it. If accessibility and transcriptional priming persist when AP-1 is removed after the memory is set, AP-1 is an initiator but not a maintainer. If they collapse, AP-1 is needed continuously, as a thread needs an anchor to hold."
+    },
+    {
+      "title": "Secondary-challenge assay with single-cell multiomics",
+      "description": "Give a primary stimulus, rest the cells, then give a second stimulus. Use scRNA-seq plus scATAC-seq to compare the faster or stronger gene induction in primed cells against naive cells. Link this to AP-1 motif accessibility and binding at the same loci, and test causality with AP-1 site mutations or CRISPRi at selected enhancers."
+    },
+    {
+      "title": "Live-cell AP-1 dynamics and lineage tracking",
+      "description": "Image endogenously tagged FOS/JUN and a reporter of AP-1 target activity in single cells across divisions, following lineages after a pulse. Measure how long the state is inherited and whether it is heritable through mitosis, with mitotic bookmarking checked by imaging and mitotic-chromosome ChIP. Each cell sends a filament forward to its daughters, so the tracing asks whether the signal reaches them."
+    },
+    {
+      "title": "Synthetic enhancer-memory reporter and sufficiency test",
+      "description": "Insert AP-1-motif-only synthetic enhancers driving a reporter into a neutral locus, with motif variants that differ in number, spacing and affinity. Pulse the cells, then measure persistence of reporter activity, accessibility and histone marks (H3K27ac, H3K4me1) at the locus. This tests whether AP-1 binding alone is sufficient to make a self-sustaining state, and whether it needs cooperating factors or positive feedback loops. Adding an AP-1 recruitment-only control separates binding from a pioneer-like chromatin-remodelling function (BAF recruitment)."
+    }
+  ],
+  "cost_usd": 0.013085000000000003,
+  "session_id": "83eadfb8-7b11-41d8-aec4-46302e048fab"
+}

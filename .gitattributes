@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Analysis outputs are fingerprinted (sha256) by the report manifest; store them byte-exact.
+analysis/*/outputs/** -text

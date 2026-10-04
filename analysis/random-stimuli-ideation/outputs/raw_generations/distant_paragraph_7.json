@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 7,
+  "stimulus": "An origami crease pattern is a map of every fold in a finished model, flattened\nback onto the square. Around each interior vertex, the angles must alternate so that\nthe sum of every other angle equals 180 degrees, and the numbers of mountain and\nvalley folds must differ by exactly two. Designers of complex insects work from the\npattern outward: they first decide how many flaps they need and how long each must\nbe, then pack circles representing those flaps onto the paper as tightly as they\ncan.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nAn origami crease pattern is a map of every fold in a finished model, flattened\nback onto the square. Around each interior vertex, the angles must alternate so that\nthe sum of every other angle equals 180 degrees, and the numbers of mountain and\nvalley folds must differ by exactly two. Designers of complex insects work from the\npattern outward: they first decide how many flaps they need and how long each must\nbe, then pack circles representing those flaps onto the paper as tightly as they\ncan.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge, mapped by ATAC/CUT&RUN",
+      "description": "Expose cells to a brief stimulus (e.g., TPA, TGF-\u03b2, or inflammatory signal), withdraw it for days to weeks, then re-stimulate. Compare chromatin accessibility, AP-1 (FOS/JUN) binding, and transcription at primed versus naive cells to see whether AP-1-bound sites stay open and give a faster or stronger second response."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use inducible degron or dominant-negative (A-FOS) systems to remove AP-1 either during the initial stimulus or only after stimulus withdrawal. If memory needs AP-1 to be established but not maintained, or needs it throughout, the two timings will show that and separate initiation from maintenance."
+    },
+    {
+      "title": "Single-cell multiome with lineage tracing of memory persistence",
+      "description": "Run paired scRNA/scATAC on primed cells across time and through cell divisions, with barcodes or clonal tracking. This tests whether AP-1 motif accessibility and target expression are inherited by daughter cells and whether memory is heterogeneous (bimodal) or graded."
+    },
+    {
+      "title": "Site-specific perturbation of AP-1-dependent enhancers",
+      "description": "Use CRISPR deletion of AP-1 motifs, or dCas9-KRAB/dCas9-p300 at candidate memory enhancers. Measure whether disabling a motif abolishes the primed response and whether forced activation can substitute for the priming stimulus, which would show that the sites themselves carry the memory."
+    },
+    {
+      "title": "Live-cell AP-1 dynamics and reporter readout",
+      "description": "Image endogenously tagged FOS/JUN, or an AP-1 transcriptional reporter, in single cells across repeated stimuli. Test whether the memory shows up as a persistent protein level, a change in dynamics, or a faster reporter induction, and whether it depends on cooperating factors or histone marks (H3K27ac, H3K4me1) checked by ChIP or CUT&Tag."
+    }
+  ],
+  "cost_usd": 0.010973,
+  "session_id": "8917349c-ab43-4fd2-89c8-6db7c270f393"
+}

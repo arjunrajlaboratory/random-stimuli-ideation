@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed chromatin accessibility readout",
+      "description": "Expose cells to a defined pulse of AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then wash out and profile ATAC-seq/CUT&RUN for AP-1 (FOS/JUN) binding and H3K27ac at days to weeks later. Persistent accessibility at AP-1 motif sites after Fos/Jun levels return to baseline would indicate a memory-like state."
+    },
+    {
+      "title": "Acute degron depletion of AP-1 during maintenance phase",
+      "description": "Use an inducible degron (dTAG/AID) on JUN/FOS or a dominant-negative (A-FOS) after the initiating stimulus has ended. If primed enhancers close and the enhanced secondary response is lost only when AP-1 is removed during the maintenance window, AP-1 is required for maintaining memory, not just establishing it."
+    },
+    {
+      "title": "Secondary-stimulus response assay (priming test)",
+      "description": "Compare transcriptional output (RNA-seq, single-cell) of naive versus previously stimulated cells upon restimulation, with and without AP-1 perturbation at the priming stage. Faster or stronger induction of AP-1 target genes in primed cells, dependent on AP-1 binding at those loci, directly tests memory function."
+    },
+    {
+      "title": "Live-cell AP-1 reporter and lineage tracking across divisions",
+      "description": "Image single-cell AP-1 activity (e.g., FOS-GFP knock-in or AP-1 transcriptional reporter) with lineage tracing through cell divisions after a pulse stimulus. Heritable reporter states in daughter cells, and their dependence on feedback loops, would show whether memory is cell-autonomous and mitotically propagated."
+    },
+    {
+      "title": "Pioneer function and mitotic bookmarking tests",
+      "description": "Perform CUT&RUN/ChIP on mitotic-arrested versus interphase cells and use motif-mutant (CRISPR-edited) enhancers or dCas9-based AP-1 site recruitment/blocking to ask whether AP-1 retention at specific sites is necessary and sufficient to reopen chromatin and sustain gene expression after division. Pair with ordering of AP-1 relative to SWI/SNF (BAF) recruitment and histone marks to define the mechanism."
+    }
+  ],
+  "cost_usd": 0.011529000000000003,
+  "session_id": "50947b15-dc27-4dc3-958e-8a18bf9daf70"
+}

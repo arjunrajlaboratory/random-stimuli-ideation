@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 7,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and FOS/JUN binding at timepoints during and long after a transient stimulus (e.g., injury, inflammation, or stress) to test whether AP-1-dependent open regions persist after the signal is gone. Compare with naive cells to identify a lasting 'memory' footprint.",
+      "probability": 0.3
+    },
+    {
+      "title": "Acute AP-1 degradation/perturbation during priming vs recall",
+      "description": "Use dominant-negative (A-FOS), CRISPRi, or degron systems to remove AP-1 either during the initial stimulus or only at re-stimulation. If memory requires AP-1 for establishment and/or maintenance, the secondary response should be lost differentially, separating the two roles.",
+      "probability": 0.3
+    },
+    {
+      "title": "Primed re-stimulation transcriptional response assays",
+      "description": "Stimulate cells twice with a rest interval and measure faster or stronger induction of target genes (RNA-seq, nascent RNA/PRO-seq) relative to first-exposure cells. Correlate enhanced responses with AP-1 motif-containing loci to link memory phenotype to AP-1.",
+      "probability": 0.2
+    },
+    {
+      "title": "Single-cell multiome tracking of AP-1 activity and lineage inheritance",
+      "description": "Combine single-cell RNA/ATAC with lineage barcoding or live-cell AP-1 reporters to determine whether AP-1 activity states are inherited through cell divisions and heterogeneous across clones. Persistence across divisions without ongoing signal would support memory.",
+      "probability": 0.12
+    },
+    {
+      "title": "Synthetic AP-1 induction sufficiency test with histone-mark readouts",
+      "description": "Use optogenetic or chemogenetic pulses of FOS/JUN expression to ask if AP-1 alone is sufficient to create persistent enhancer accessibility and H3K27ac/H3K4me1 marks and memory-like responses. Pair with BAF/chromatin-remodeler inhibition to test the mechanism.",
+      "probability": 0.08
+    }
+  ],
+  "cost_usd": 0.007934199999999999,
+  "session_id": "023c5cca-6a6d-4186-8e40-d06cdeb1dd8f"
+}

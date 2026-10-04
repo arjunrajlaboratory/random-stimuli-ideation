@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 3,
+  "stimulus": "No bellows whispers the velvet tunnel twice. When the furnace swallows, the gilded thread weighs the vault. A chimney of tidal spindles counts the whistle. The silent whistle scatters the garden of the glacier. The tangled loom swallows the tapestry of the marble. When the cathedral stitches, the salted feather braids the thread. Every tide forgets a salted garden. The borrowed reef folds the tide of the orchard.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nNo bellows whispers the velvet tunnel twice. When the furnace swallows, the gilded thread weighs the vault. A chimney of tidal spindles counts the whistle. The silent whistle scatters the garden of the glacier. The tangled loom swallows the tapestry of the marble. When the cathedral stitches, the salted feather braids the thread. Every tide forgets a salted garden. The borrowed reef folds the tide of the orchard.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC/CUT&RUN after transient stimulus",
+      "description": "Expose cells to a defined, transient AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then map chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints from hours to weeks after washout. Persistent accessibility at AP-1 motif sites after AP-1 levels return to baseline would indicate a memory-like chromatin state."
+    },
+    {
+      "title": "Acute degron depletion to separate initiation from maintenance",
+      "description": "Use auxin- or dTAG-inducible degradation of FOS/JUN family members at different times: before, during, and after the priming stimulus. If depletion only during priming erases later hyper-responsiveness but depletion after priming does not, AP-1 is needed for establishing memory; if post-priming depletion also erases it, AP-1 is needed for maintenance."
+    },
+    {
+      "title": "Secondary-challenge transcriptional response assay",
+      "description": "Prime cells, rest them, then re-stimulate and measure RNA-seq or nascent transcription (PRO-seq/TT-seq) versus naive cells. Compare the magnitude and kinetics of gene induction at AP-1-dependent loci, and test whether the enhanced response is lost with AP-1 motif mutation or dominant-negative AP-1 (A-FOS)."
+    },
+    {
+      "title": "CRISPR editing of AP-1 motifs at memory enhancers",
+      "description": "Mutate or delete specific AP-1 motifs at candidate primed enhancers, or use dCas9 to recruit or block AP-1 there, and then test the persistence of H3K27ac, accessibility, and re-stimulation response. This tests whether AP-1 binding at those sites is causally required for the stored state, rather than merely correlated with it."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory inheritance",
+      "description": "Pair single-cell ATAC plus RNA with clonal barcoding or live reporters of AP-1 activity to follow primed cells through divisions. Test whether AP-1-linked accessibility and responsiveness are inherited by daughter cells and decay at a measurable rate, and whether memory is heterogeneous or bimodal across cells."
+    }
+  ],
+  "cost_usd": 0.011325,
+  "session_id": "c47a7c80-b6e1-4caa-9d39-d7bbbc23574f"
+}

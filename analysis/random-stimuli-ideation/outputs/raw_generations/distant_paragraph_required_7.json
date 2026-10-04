@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 7,
+  "stimulus": "An origami crease pattern is a map of every fold in a finished model, flattened\nback onto the square. Around each interior vertex, the angles must alternate so that\nthe sum of every other angle equals 180 degrees, and the numbers of mountain and\nvalley folds must differ by exactly two. Designers of complex insects work from the\npattern outward: they first decide how many flaps they need and how long each must\nbe, then pack circles representing those flaps onto the paper as tightly as they\ncan.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nAn origami crease pattern is a map of every fold in a finished model, flattened\nback onto the square. Around each interior vertex, the angles must alternate so that\nthe sum of every other angle equals 180 degrees, and the numbers of mountain and\nvalley folds must differ by exactly two. Designers of complex insects work from the\npattern outward: they first decide how many flaps they need and how long each must\nbe, then pack circles representing those flaps onto the paper as tightly as they\ncan.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stimulus-washout chromatin accessibility time course",
+      "description": "Expose cells (e.g., macrophages or fibroblasts) to a transient stimulus such as TNF, LPS, or wounding cues, then wash out and profile ATAC-seq, AP-1 (FOS/JUN) CUT&RUN and H3K27ac at multiple timepoints out to weeks. Persistent AP-1-motif-containing accessible sites after AP-1 binding itself has decayed would indicate a memory that outlasts the signal; this is analogous to a crease that stays after the paper is unfolded."
+    },
+    {
+      "title": "Acute AP-1 degradation at defined windows (induction vs maintenance)",
+      "description": "Use degron-tagged (dTAG/AID) or dominant-negative (A-FOS) AP-1 components to remove AP-1 either only during the initial stimulus or only after washout, then restimulate and measure transcriptional response by RNA-seq and accessibility. If depletion during the priming phase prevents memory but depletion in the maintenance phase does not, AP-1 acts as an initiator; the converse implies it actively maintains the memory."
+    },
+    {
+      "title": "Vertex-style combinatorial constraint analysis of AP-1 motif grammar",
+      "description": "Map memory-associated enhancers and quantify AP-1 motif number, spacing, orientation, and co-occurrence with partner TFs (e.g., ETS, CEBP, NFAT) using massively parallel reporter assays with systematically varied motif arrangements. Like flat-fold rules that require angle sums and fold counts to balance at each vertex, this tests whether specific rules of motif combination predict which sites retain memory and which return to baseline."
+    },
+    {
+      "title": "Single-cell multiome lineage-tracing of memory inheritance",
+      "description": "Combine single-cell RNA plus ATAC with barcode lineage tracing or sister-cell pairing after stimulation to test whether AP-1 activity states and accessibility are shared among sister cells across divisions more than expected by chance. High sister concordance that persists for generations, and that predicts the magnitude of secondary response, would support heritable memory rather than transient signaling."
+    },
+    {
+      "title": "Targeted epigenome editing of AP-1-dependent memory loci",
+      "description": "Use dCas9-based tools (CRISPRi/KRAB, or motif mutation by base editing) at individual AP-1-bound enhancers that stay open after stimulation, and test the effect on faster or stronger reinduction of the nearby gene. Packing analogy: each enhancer is a circle that must be placed individually, so loci-specific perturbation shows which sites are necessary and sufficient, and whether the memory is cis-encoded or depends on global AP-1 levels."
+    }
+  ],
+  "cost_usd": 0.013121000000000002,
+  "session_id": "9e6f2608-18ea-4094-ba8d-a562b7a92c92"
+}

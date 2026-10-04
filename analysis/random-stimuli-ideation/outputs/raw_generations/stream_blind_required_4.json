@@ -1,0 +1,31 @@
+{
+  "arm": "stream_blind_required",
+  "call": 4,
+  "stimulus": "A Fresnel lens looks like a dinner plate that gave up being thick. Augustin Fresnel noticed that only the surface of a lens bends light; the glass in the middle just sits there being heavy. So he sliced the curve into concentric rings and threw the bulk away. Suddenly a lens taller than a person could be built from prisms stacked like a beehive, and a lamp's glow could reach twenty miles. Funny that the same trick shows up in overhead projectors, car taillights, and those flimsy plastic magnifiers tucked in wallets.\n\nThe rotation is the part I like. The beam isn't a pulse at all; the lens just sweeps a steady beam past you, and your eye turns it into a flash. Each lighthouse has its own rhythm, two long, one short, a pause, so sailors can identify it like a name. Characters in the dark, written in time rather than ink.\n\nThe lens floated on a bath of liquid mercury so a clockwork weight could spin tons of glass with a nudge. Keepers wound it by hand, trimmed wicks, polished brass. Mercury fumes are a whole other story. Then automation arrived, LEDs and GPS, and the keepers left. Meanwhile, the lenses are sold at auction, sitting in museum lobbies, still quietly bending nothing at all.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA Fresnel lens looks like a dinner plate that gave up being thick. Augustin Fresnel noticed that only the surface of a lens bends light; the glass in the middle just sits there being heavy. So he sliced the curve into concentric rings and threw the bulk away. Suddenly a lens taller than a person could be built from prisms stacked like a beehive, and a lamp's glow could reach twenty miles. Funny that the same trick shows up in overhead projectors, car taillights, and those flimsy plastic magnifiers tucked in wallets.\n\nThe rotation is the part I like. The beam isn't a pulse at all; the lens just sweeps a steady beam past you, and your eye turns it into a flash. Each lighthouse has its own rhythm, two long, one short, a pause, so sailors can identify it like a name. Characters in the dark, written in time rather than ink.\n\nThe lens floated on a bath of liquid mercury so a clockwork weight could spin tons of glass with a nudge. Keepers wound it by hand, trimmed wicks, polished brass. Mercury fumes are a whole other story. Then automation arrived, LEDs and GPS, and the keepers left. Meanwhile, the lenses are sold at auction, sitting in museum lobbies, still quietly bending nothing at all.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Rhythm-decoding: AP-1 dynamics as a temporal code",
+      "description": "Like a lighthouse's long-short pattern identifying it, drive cells with optogenetic or chemically-gated ERK/JNK pulses of varied frequency and duration, and live-image FOS/JUN reporters. Then test whether pulse pattern (not just total dose) determines distinct downstream chromatin states and gene programs that persist after stimulation stops."
+    },
+    {
+      "title": "Chromatin-accessibility memory after transient stimulation",
+      "description": "Stimulate cells once, wash out, and perform ATAC-seq/CUT&RUN for AP-1 factors (FOS, JUN, FOSL) and histone marks (H3K27ac, H3K4me1) at days 0, 1, 7, and 14 compared with naive cells. Persistent AP-1-bound, accessible 'primed' enhancers that give faster or stronger re-induction on second stimulation would indicate memory."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate initiation from maintenance (the 'bulk vs. surface' test)",
+      "description": "Use degron-tagged (dTAG/AID) JUN/FOS or dominant-negative A-FOS to remove AP-1 either during the first stimulus or only after the memory is established. If depleting during priming abolishes later re-response but depleting afterward doesn't, AP-1 is needed to write the memory; if later depletion also erases it, AP-1 maintains it."
+    },
+    {
+      "title": "Single-cell prime-and-rechallenge with lineage tracing",
+      "description": "Prime cells, let them divide, and perform single-cell multiome (RNA + ATAC) with barcoded lineage tracking to see whether sister cells share AP-1 motif accessibility and response magnitude to a second challenge. Heritable clonal concordance of response, correlated with AP-1 occupancy, demonstrates mitotically stable memory rather than transient signaling."
+    },
+    {
+      "title": "Targeted enhancer perturbation and sufficiency test",
+      "description": "Use CRISPRi/dCas9 or motif mutation to silence or edit AP-1 binding sites at candidate memory enhancers, and conversely tether AP-1 (dCas9-FOS/JUN) to naive loci. Measure whether the edits eliminate or create faster re-induction of the nearby gene, testing necessity and sufficiency of AP-1 binding for locus-specific memory."
+    }
+  ],
+  "cost_usd": 0.013217000000000001,
+  "session_id": "5a3d97c8-dfc8-48d6-ae10-ad79af3f0b94"
+}

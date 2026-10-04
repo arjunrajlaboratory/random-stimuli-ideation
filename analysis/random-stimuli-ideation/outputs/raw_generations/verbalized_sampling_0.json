@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 0,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and FOS/JUN binding at multiple timepoints after a transient stimulus (e.g., wounding, inflammation, or stress) and long after stimulus withdrawal. Persistent AP-1-motif-associated accessible sites would indicate a memory-like epigenetic state.",
+      "probability": 0.3
+    },
+    {
+      "title": "Acute AP-1 degradation/inhibition during priming vs. recall",
+      "description": "Use degron-tagged FOS/JUN or dominant-negative A-FOS/T-5224 to remove AP-1 either during the initial stimulus or only after it has been withdrawn, then measure the secondary response. Distinguishing a role in establishing versus maintaining memory shows whether AP-1 is required for the memory itself.",
+      "probability": 0.25
+    },
+    {
+      "title": "Single-cell multiome tracking of memory-state heterogeneity",
+      "description": "Perform paired scRNA/scATAC-seq on primed and naive cells to link AP-1 motif accessibility and target-gene expression to the strength of the secondary response. Lineage barcoding could show whether the state is inherited through cell divisions.",
+      "probability": 0.2
+    },
+    {
+      "title": "Live-cell reporters of AP-1 dynamics and re-stimulation",
+      "description": "Image endogenously tagged JUN/FOS or AP-1 transcriptional reporters in single cells across repeated stimulus pulses and lineages. Measuring persistence, hysteresis, and heritability of the signal over days would test for memory-like dynamics.",
+      "probability": 0.15
+    },
+    {
+      "title": "Pioneer-like activity and histone modification analysis at AP-1 sites",
+      "description": "Test whether AP-1 binding deposits or maintains H3K27ac/H3K4me1 and recruits BAF at primed enhancers, and whether these marks persist after AP-1 is lost. Combine ChIP-seq, motif mutation by CRISPR, and enhancer reporter assays to show causality.",
+      "probability": 0.1
+    }
+  ],
+  "cost_usd": 0.012157999999999999,
+  "session_id": "b55f56d1-55cc-4c80-8c9b-3a94581b0626"
+}

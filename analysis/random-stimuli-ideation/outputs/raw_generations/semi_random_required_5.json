@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 5,
+  "stimulus": "No compass bends the crooked harbor twice. The distant canyon polishes the lattice of the pendulum. Beneath the reluctant lattice, a tide inherits its vault. When the vault echoes, the nocturnal tapestry buries the vault. A pendulum of distant ladders counts the ledger. A tide of distant gardens whispers the vault. When the furnace swallows, the reluctant echo forgets the kite. No whistle inherits the hungry saddle twice.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNo compass bends the crooked harbor twice. The distant canyon polishes the lattice of the pendulum. Beneath the reluctant lattice, a tide inherits its vault. When the vault echoes, the nocturnal tapestry buries the vault. A pendulum of distant ladders counts the ledger. A tide of distant gardens whispers the vault. When the furnace swallows, the reluctant echo forgets the kite. No whistle inherits the hungry saddle twice.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Pulse-chase of AP-1 accessibility after transient stimulus",
+      "description": "Give a brief stimulus (e.g., TNF, wounding cytokine, or PMA) and map chromatin accessibility (ATAC-seq) and AP-1 (FOS/JUN) ChIP/CUT&RUN at days 0, 1, 7, 21 after withdrawal. Like a pendulum whose lattice keeps a trace of the swing, persistent AP-1-bound open sites after signal loss would show an epigenetic trace; a faster secondary response at those loci would show it is functional."
+    },
+    {
+      "title": "Acute AP-1 degradation during the 'memory' phase",
+      "description": "Use degron-tagged (dTAG/AID) c-JUN/FOS or dominant-negative A-FOS induced only after the priming stimulus is gone, then re-stimulate. If the enhanced transcriptional response disappears, AP-1 is needed to maintain memory and not only to establish it. Compare with degradation only during priming to separate writing from maintenance."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 reporter history",
+      "description": "Image AP-1 activity reporters or endogenously tagged FOS/JUN in single cells through repeated stimulus pulses, and track lineages. Quantify whether the prior response predicts later amplitude or kinetics and whether the state is inherited by daughter cells, which separates cell-autonomous memory from population heterogeneity."
+    },
+    {
+      "title": "Chromatin-context and cooperation analysis at memory loci",
+      "description": "Profile H3K27ac, H3K4me1, and DNA methylation, together with pioneer factors and SWI/SNF (BAF) occupancy, at AP-1 sites that stay open. Perturb the cofactors or the AP-1 motif by CRISPR, and test whether the site is a self-sustaining lattice (AP-1 recruits remodelers that keep the site accessible) or a passive mark."
+    },
+    {
+      "title": "Sufficiency test by synthetic AP-1 pulse and motif editing",
+      "description": "Drive AP-1 optogenetically or chemogenetically with defined durations and doses in naive cells, and measure whether transient AP-1 alone leaves lasting accessibility and enhanced re-induction. Pair this with CRISPR deletion or mutation of individual AP-1 motifs at candidate enhancers to test necessity at the locus level."
+    }
+  ],
+  "cost_usd": 0.012035,
+  "session_id": "8ba84066-38a9-4e50-b527-cd78c6001303"
+}

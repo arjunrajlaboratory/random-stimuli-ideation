@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 4,
+  "stimulus": "Beneath the reluctant lantern, a engine borrows its spindle. No ledger swallows the reluctant bridge twice. Every lattice counts a nocturnal pendulum. No hinge counts the woven spindle twice. No canyon carries the reluctant archive twice. No atlas forgets the rusted thread twice. Every kettle hoards a feverish lantern. Beneath the salted engine, a cathedral echoes its ribbon.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nBeneath the reluctant lantern, a engine borrows its spindle. No ledger swallows the reluctant bridge twice. Every lattice counts a nocturnal pendulum. No hinge counts the woven spindle twice. No canyon carries the reluctant archive twice. No atlas forgets the rusted thread twice. Every kettle hoards a feverish lantern. Beneath the salted engine, a cathedral echoes its ribbon.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Prior-stimulus 'no ledger swallows twice' re-challenge assay",
+      "description": "Expose cells to a transient stimulus (e.g., TPA, growth factor, or stress), rest them for days, then re-stimulate and measure transcription kinetics (nascent RNA-seq/PRO-seq) of AP-1 targets versus naive cells. Faster or stronger induction that depends on the first exposure, and that disappears when AP-1 (e.g., c-Fos/c-Jun) is acutely degraded during the rest period, would indicate AP-1-dependent memory."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy tracking (the 'engine borrows its spindle' test)",
+      "description": "Run ATAC-seq, CUT&RUN for Fos/Jun family members, and histone marks (H3K27ac, H3K4me1) before stimulation, after it, and after a long washout. Check whether AP-1 motif-containing enhancers stay open or primed after AP-1 itself is gone from them, which would show that AP-1 leaves a lasting chromatin imprint. Compare this with enhancers that revert."
+    },
+    {
+      "title": "Acute degron perturbation at defined time windows",
+      "description": "Use dTAG/auxin degrons on JUN/FOS or dominant-negative A-Fos, applied only during the initial stimulus, only during the maintenance period, or only at recall. This separates AP-1's role in writing memory from its role in maintaining it or reading it out. Readouts are persistence of accessibility and recall transcription."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and heritability",
+      "description": "Track endogenously tagged Fos/Jun and an AP-1 reporter in single cells through stimulation, washout, and cell divisions. Test whether past activity predicts later responsiveness, and whether sister cells inherit similar states. Fit bistability or hysteresis models, such as feed-forward Jun autoregulation, to see if sustained states persist without the stimulus."
+    },
+    {
+      "title": "Enhancer-specific causal editing and sufficiency tests",
+      "description": "Mutate or CRISPR-dCas9-block AP-1 motifs at candidate memory enhancers, and conversely tether AP-1 or chromatin-remodeler recruiters (e.g., BAF) to them by CRISPR. Then measure whether recall expression and the epigenetic state are lost or gained. Sufficiency of tethering without stimulus, and necessity of the motif, would be the strongest causal evidence."
+    }
+  ],
+  "cost_usd": 0.012469000000000001,
+  "session_id": "54725a84-faba-41af-a6d0-9c55d4648de5"
+}

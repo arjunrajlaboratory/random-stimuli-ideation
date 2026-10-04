@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or T cells) to a defined stimulus such as TPA, TNF, or TCR signaling, then wash out and rest for days to weeks. Re-challenge them and compare transcriptional kinetics and amplitude with naive cells by RNA-seq, to test whether a persistent, AP-1-dependent altered response exists."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 footprinting",
+      "description": "Run time-course ATAC-seq or CUT&Tag for JUN/FOS family members and H3K27ac before, during, and long after stimulus withdrawal. Test whether AP-1 motif-containing enhancers opened by the stimulus stay accessible and bound once AP-1 activity has returned to baseline. This separates a memory-like chromatin state from continued AP-1 occupancy."
+    },
+    {
+      "title": "Acute degradation of AP-1 during maintenance versus establishment",
+      "description": "Use degron tags (dTAG/AID) or dominant-negative A-FOS to remove AP-1 either during the initial stimulus or only during the rest period before re-challenge. If AP-1 is needed for establishing memory but not for maintaining it, it acts as an initiator. If it is needed for both, it is a true maintenance mechanism. Measure memory genes by accessibility and nascent transcription."
+    },
+    {
+      "title": "Single-cell multiome and live-cell reporters of memory heritability",
+      "description": "Pair single-cell RNA and ATAC profiling with live imaging of AP-1 activity reporters or endogenous tagged JUN/FOS. Track lineages through divisions to test whether memory states are heritable and bistable, and whether they correlate with AP-1 level, dynamics, or a positive feedback loop. Model the results to look for hysteresis."
+    },
+    {
+      "title": "Targeted synthetic perturbation of AP-1 sites at memory loci",
+      "description": "Use CRISPR base editing or deletion of AP-1 motifs, together with dCas9-based recruitment or blocking of AP-1 at specific enhancers. Test whether memory at a given gene needs local AP-1 binding, and whether forced AP-1 occupancy alone is enough to create memory without a prior stimulus. Add measurements of nucleosome remodeling (BAF recruitment) and histone marks to define the mechanism."
+    }
+  ],
+  "cost_usd": 0.012245,
+  "session_id": "8b4ffb6f-a1c3-4d02-b77e-c4e14ee00763"
+}

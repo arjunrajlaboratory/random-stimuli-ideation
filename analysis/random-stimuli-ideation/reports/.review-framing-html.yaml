@@ -1,0 +1,271 @@
+# Phase 5 framing critique: HTML reviewer copy (<main> only)
+# Audience tier: B. Shape: overview + supplement. Results style: narrative.
+#
+# Standalone summary from the skim surfaces (title, dek, abstract, section headings, captions):
+#   "Unrelated material (poems, random words) does not help a language model brainstorm.
+#    The model ignores it when it is optional and uses it as decoration when it is required.
+#    A one-line instruction to borrow from another field gives the most distinct good ideas
+#    (6 vs 0 for a plain prompt, p = 0.002). Working through a parallel problem first gives the
+#    most novel but less useful ideas. Every approach converges on a few defaults. Caveat: one
+#    model judge, and human ratings are pending."
+# Reading the body forces me to retract or qualify: the general "a language model brainstorms
+# better" (one question, one generator, one judge); "the model ignored it" (a non-significant
+# test with eight calls); the 6-vs-0 comparison as the headline baseline (the pre-set bar was
+# verbalized sampling, and the lab's persona tool is never compared); the meaning of p = 0.002
+# (the winning arm was designed in round four, after earlier rounds, and Holm correction is per
+# round); and "most of the gain disappears" (the report's own numbers show most of it remains).
+#
+# Examples-first request: met. The first Results unit shows four concrete calls before any
+# arm-level averages. The one aggregate in that unit (93% near-duplicates) anchors the example
+# and does not get ahead of it. Gaps are listed below: how each call was chosen is never stated,
+# and the two named baselines (verbalized sampling, personas) are never shown as examples.
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "351, 354"
+  section: framing
+  summary: The title and dek state a general, unqualified result. The evidence covers one question, one generating model and one model judge.
+  evidence: |
+    <h1>Borrowing from other fields, not random material, makes a language model brainstorm better</h1>
+    <p class="dek">... The material itself did not help; asking the model to borrow from another field did.</p>
+  why_it_matters: The title is the most-read surface, and it says "a language model" and "better" with no qualifier. "Better" here means one Opus judge's ratings of Sonnet's ideas for a single AP-1 question with eight calls per arm. A reader who stops at the masthead takes home a general law.
+  suggested_fix: Scope the title and dek, for example "On one research question, an instruction to borrow from another field beat random material in model-judged brainstorming", and put "judged by a model; human ratings pending" in the dek.
+  confidence: high
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "388-392, 2517-2520"
+  section: framing
+  summary: The abstract frames the headline against the plain prompt. The bar set at the outset was verbalized sampling, and it first appears in Conclusions.
+  evidence: |
+    useful-novel ideas, against <span ...>0</span> for the plain prompt
+    (Holm-adjusted p <span ...>= 0.002</span>).
+    ...
+    No prompt that supplied unrelated material met the bar we set at the outset, beating verbalized sampling on
+    useful-novel ideas (best Holm-adjusted p ... = 0.140).
+  why_it_matters: The Problem Statement calls verbalized sampling "the strongest published fix", so it is the baseline that makes the headline mean anything. The plain prompt is the weakest possible comparator. The pre-set success criterion is never stated in the Problem Statement or Methods, so the reader cannot judge the headline against it until the last section.
+  suggested_fix: State the pre-set bar (beat verbalized sampling) in Methods, and in the abstract report the instruction-only arm against verbalized sampling (6 vs 0, p = 0.002) alongside or instead of the plain prompt.
+  confidence: high
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "1254-1261, 2586"
+  section: framing
+  summary: The lab's existing method, personas from its brainstorming tool, is never compared with the headline arm.
+  evidence: |
+    <tr><td>First</td><td>Personas</td><td>"Approach this as a [statistical physicist, ecologist, …]", one persona per call from our brainstorming tool's catalog.</td></tr>
+    ...
+    against ... for the plain prompt and ... for verbalized sampling
+  why_it_matters: The personas arm is the production baseline, the thing the lab already uses, and Next Steps talks about building the instruction into "our brainstorming tools". The body never says how many distinct useful-novel ideas personas produced or whether the instruction beats them. A reader deciding whether to change the tool has no answer.
+  suggested_fix: Add the personas count and the instruction-vs-personas test to the headline Results paragraph, and say in one sentence whether the instruction beats the current tool.
+  confidence: high
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "556-560"
+  section: framing
+  summary: '"Most of that gain disappears" contradicts the numbers in the same passage: most of the cluster gain survives stripping.'
+  evidence: |
+    the required poem produced <span ...>26</span> distinct idea groups, about twice the plain prompt
+    ... After stripping the metaphors, most of that gain disappears: <span ...>21</span> groups for the required poem against
+    <span ...>13</span> for the plain prompt.
+  why_it_matters: The as-written gain is 26 - 13 = 13 groups, and the stripped gain is 21 - 13 = 8 groups, so about 60% of the gain remains. This sentence is the main support for the "decoration" heading. The pre-specified measures (spread, near-duplicates) are the stronger evidence, but a careful reader who does the subtraction will distrust the section.
+  suggested_fix: Rewrite as "about a third of that gain disappears (21 groups against 13 for the plain prompt); on the two pre-specified diversity measures no arm differed from the plain prompt", and lead with the pre-specified measures.
+  confidence: high
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "437-438, 2612-2617"
+  section: framing
+  summary: The winning arm was designed after seeing earlier rounds, and Holm correction is applied per round. The main text never says this, so p = 0.002 reads as a confirmatory result.
+  evidence: |
+    We ran nineteen prompt types (we call each one an <em>arm</em>) in five rounds, each round
+    designed in response to the previous one
+    ...
+    comparisons with the plain prompt and with
+    verbalized sampling are corrected within the round that introduced each arm ...
+    Adding a later round therefore never changes an earlier round's adjusted p-values.
+  why_it_matters: The instruction-only arm came from round four, after three rounds of looking. Its Holm family covers only its own round, so the 0.002 is not adjusted for the search across nineteen arms. The supplement presents this as a feature. An adjacent-field scientist reading the abstract will treat the result as pre-planned and confirmatory, when it is exploratory and needs the second-question replication already listed in Next Steps.
+  suggested_fix: In Methods and in the caveat box, say that the headline arm emerged from an adaptive, multi-round search, that p-values are corrected within rounds only, and that the result should be treated as a hypothesis to replicate.
+  confidence: medium
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "388-389, 542-543, 2517-2518"
+  section: framing
+  summary: Non-significant tests with eight calls per arm are reported in the abstract and Conclusions as positive evidence of absence ("ignored", "no trace", "do not help").
+  evidence: |
+    Unrelated material did not help. The model ignored it unless told to use it,
+    ...
+    there was no trace of the material in the ideas, for poems (p ... = 0.390),
+    ...
+    Random stimuli, the machine version of Oblique Strategies, do not help this model brainstorm.
+  why_it_matters: A permutation test across eight calls failing to detect leakage is not a demonstration that the model ignores the material, and best p = 0.140 against verbalized sampling is not evidence of no effect. The abstract states both as facts. The body's only significant evidence of harm is the drop in novelty when material is added to the instruction, and that comparison is narrower than "did not help".
+  suggested_fix: Use detection language, for example "we found no detectable trace of optional material (eight calls per arm)" and "no material prompt beat verbalized sampling", and keep "did not help" for the significant material-plus-instruction comparison.
+  confidence: medium
+
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "2521-2525"
+  section: framing
+  summary: The Conclusions draw a mechanism ("helps when chosen for its structure, hurts when chosen at random") that the results do not support.
+  evidence: |
+    Both point the same way: connecting a question to another
+    field helps when the connection is chosen for its structure, and hurts when the other field is
+    chosen at random.
+  why_it_matters: In the instruction-only arm the model picked its own domains, so the connection was not "chosen for its structure". The parallel-problem arm did not beat the instruction alone on distinct useful-novel ideas (p = 0.514) and was rated less useful. The body says random domains "did not make the ideas better" (line 2508), not that they hurt. This sentence turns one model's judgments on one question into a design rule.
+  suggested_fix: Replace it with what was observed, for example "Both prompts that asked the model to choose its own cross-field connection outperformed prompts that supplied the other field; whether structure is the active ingredient is untested."
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "386-387, 2602, 2519"
+  section: framing
+  summary: The report gives three different main measures, so the reader cannot tell which endpoint was pre-specified.
+  evidence: |
+    Our main measure counts <em>distinct</em> ideas rated both novel and useful.
+    ...
+    These two were fixed in advance as the main diversity measures; cluster counts are secondary.
+    ...
+    met the bar we set at the outset, beating verbalized sampling on useful-novel ideas
+  why_it_matters: The abstract's "main measure" (distinct useful-novel) uses the clustering that the supplement calls secondary, and the pre-set bar is on useful-novel ideas, not distinct ones. If distinct useful-novel was chosen after the data came in, that strengthens the exploratory caveat above.
+  suggested_fix: Add one sentence in Methods naming which measures were fixed in advance (diversity and quality) and which were added later, and use that wording in the abstract.
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "1252-1266, 2526-2530"
+  section: framing
+  summary: The main caveat is absent from the headline Results unit, and the caveat box leaves out two judge-specific risks.
+  evidence: |
+    <h3>An instruction to borrow from another field yields the most distinct good ideas</h3>
+    ...
+    <p>Every quality score in this report comes from a single model judge. It may reward
+    analogy-flavored experiments, and it may undervalue technically demanding ones.
+  why_it_matters: The abstract and the boxed Conclusions caveat carry the single-judge caveat, but the Results unit that delivers the headline does not. The box also omits that the judge (Opus) and the generator (Sonnet) come from the same model family, and that the generator itself did the stripping. Both are plausible sources of shared bias that bear directly on the headline.
+  suggested_fix: Add a one-sentence pointer to the caveat in the headline Results unit, and add the same-family and generator-stripped points to the caveat box.
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "2606"
+  section: framing
+  summary: The stripping control carries every main result but is validated only by unquantified "spot checks".
+  evidence: |
+    <dt>Stripped text</dt><dd>Each idea rewritten by the generating model, ... Our spot checks found the experiments kept and only the framing removed.</dd>
+  why_it_matters: Every main-text result is on stripped text. If stripping also removed real experimental content, the decoration and headline results move together. "Our spot checks found" gives no count and no description of how ideas were checked, so the claim reads as verified when it rests on unknown examples.
+  suggested_fix: State how many ideas were checked, how they were chosen, and how many failed, or hedge with "in the N ideas we inspected".
+  confidence: high
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "2498, 2506-2508"
+  section: framing
+  summary: The finding-form title "Every approach converges" contradicts the body's own exception.
+  evidence: |
+    <h3>Every approach converges on the same few ideas or analogies</h3>
+    ...
+    Variety appeared only where we injected it by
+    construction, for example by assigning a different persona or a different random domain to each
+    call
+  why_it_matters: The skim reader takes "every approach" literally. The body says personas and random-domain arms did not converge in this way.
+  suggested_fix: Retitle as "Unless variety is assigned by construction, each approach converges on the same few ideas or analogies".
+  confidence: high
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "464"
+  section: framing
+  summary: The examples-section title overgeneralizes from the four example calls it shows.
+  evidence: |
+    <h3>A plain prompt returns the same experiments every time, and each other prompt changes them in a recognizable way</h3>
+  why_it_matters: The body shows two of eight plain calls, cites 93% near-duplicates rather than "every time", and shows three of the eighteen other prompts. "Each other prompt" claims more than the section shows.
+  suggested_fix: Retitle as "A plain prompt keeps returning the same experiments; supplied material, a borrowing instruction and a parallel-problem essay change them in recognizable ways".
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "473, 489, 506, 526, 482-484"
+  section: framing
+  summary: The examples come first, as the author asked, but no caption says how each call was chosen, and one example is generalized without a hedge.
+  evidence: |
+    <caption>One call with a poem the model was required to use. ...</caption>
+    ...
+    <em>required</em> each idea to draw on it, the titles changed but the experiments did not
+  why_it_matters: The examples orient the reader well, but each one could be a typical call or the clearest one. "The titles changed but the experiments did not" is stated about the required-poem arm from one call, before any aggregate supports it.
+  suggested_fix: Add "chosen at random" or "chosen as typical, by [rule]" to each example caption, and write "in this call, the titles changed but the experiments did not".
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "463-535"
+  section: framing
+  summary: The examples never show either named baseline (verbalized sampling, personas) as concrete ideas.
+  evidence: |
+    Before any averages, here is what the ideas look like.
+  why_it_matters: The headline compares the instruction against verbalized sampling, and personas are the lab's current tool, yet the reader meets both only as numbers. One verbalized-sampling call would show why it scores zero distinct useful-novel ideas.
+  suggested_fix: Add a short verbalized-sampling example (two or three rows) next to the plain-prompt table, or one sentence describing what its ideas look like.
+  confidence: low
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "390-391, 425-428"
+  section: framing
+  summary: The headline count rests on a threshold of at least four on both scales, and neither the threshold's sensitivity nor how small the counts are is visible where the headline is stated.
+  evidence: |
+    worked best: <span ...>6</span> distinct
+    useful-novel ideas, against <span ...>0</span> for the plain prompt
+  why_it_matters: The plain prompt's mean novelty is 2.09, so a zero is close to built into a novelty-at-least-four cutoff. Six versus zero distinct groups, out of forty ideas each, is a small count that could shift with the cutoff. A sweep is reported for the clustering threshold but not for the quality cutoff.
+  suggested_fix: In the abstract give the denominator ("out of forty ideas"), and in the supplement report the counts at a cutoff of 3.5 or 4.5.
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "2493"
+  section: framing
+  summary: The scatter-plot caption states a general tradeoff and a "best balance" judgment as if read off the figure.
+  evidence: |
+    Prompts that push novelty pay for it in usefulness; the instruction-only prompt gives the best balance.
+  why_it_matters: The tradeoff is a pattern across nineteen arm means under one judge, and "best balance" is a judgment. A skim reader takes the caption as a general law.
+  suggested_fix: Rewrite as "Across these prompt types, higher judged novelty went with lower judged usefulness; the instruction-only prompt had the most distinct ideas clearing both cutoffs."
+  confidence: low
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "437, 2498-2499, 544-545, 2601"
+  section: framing
+  summary: Elegant variation. The prompt condition is called "arm", "prompt type", "approach" and "lever", and the clustering unit is called "distinct idea groups", "groups" and "clusters".
+  evidence: |
+    We ran nineteen prompt types (we call each one an <em>arm</em>)
+    <h3>Every approach converges on the same few ideas or analogies</h3>
+    Each lever that added variety moved the repetition up a level rather than removing it.
+  why_it_matters: A reader at Tier B has to work out that these terms name the same thing. "Lever" is also a metaphor in a report about removing metaphors.
+  suggested_fix: Use "prompt type" (or "arm") everywhere and "idea groups" everywhere, and replace "Each lever that added variety" with "Each prompt type that added variety".
+  confidence: medium
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "2058-2061"
+  section: framing
+  summary: The parallel-problem paragraph says the arm "produced fewer" distinct ideas and then says the difference cannot be told from chance.
+  evidence: |
+    so the arm produced fewer distinct
+    useful-novel ideas than the instruction alone:
+    <span ...>4</span> against <span ...>6</span>, a difference the data cannot
+    distinguish from chance (Holm-adjusted p ... = 0.514).
+  why_it_matters: The "so" implies that the lower usefulness caused fewer distinct ideas, and then the next clause says there is no detectable difference. The reader gets two signals in one sentence.
+  suggested_fix: Rewrite as "it had 4 distinct useful-novel ideas against 6 for the instruction alone, a difference within chance (p = 0.514)."
+  confidence: low
+
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/.reviewer-copy.html
+  line: "2659-2663"
+  section: framing
+  summary: Changelog framing in the supplement. The text describes a past pipeline state and the fix.
+  evidence: |
+    That stop happened before the pipeline recorded blocked batches, so resuming the run
+    re-sent the same, unmodified batch, which then completed. No ratings are missing. Blocked batches
+    are now recorded and excluded, never retried.
+  why_it_matters: "Are now recorded" tells the reader about a pipeline change, not about this dataset. Only the consequence matters here: one batch was re-sent unmodified and all ratings are present.
+  suggested_fix: Rewrite as "One judge batch was stopped by a safety classifier (very likely a false positive) and re-sent unmodified; it completed and no ratings are missing."
+  confidence: low

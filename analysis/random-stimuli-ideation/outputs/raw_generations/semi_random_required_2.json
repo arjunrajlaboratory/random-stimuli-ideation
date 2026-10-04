@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 2,
+  "stimulus": "A oyster of salted comets braids the ribbon. When the kite rehearses, the salted pendulum stitches the echo. The gilded hinge remembers the ledger of the marble. Every atlas braids a nocturnal garden. Beneath the crooked archive, a lattice weighs its feather. When the chorus polishes, the woven tunnel misplaces the chimney. The reluctant cellar inherits the meadow of the mosaic. The borrowed pendulum polishes the ladder of the harbor.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA oyster of salted comets braids the ribbon. When the kite rehearses, the salted pendulum stitches the echo. The gilded hinge remembers the ledger of the marble. Every atlas braids a nocturnal garden. Beneath the crooked archive, a lattice weighs its feather. When the chorus polishes, the woven tunnel misplaces the chimney. The reluctant cellar inherits the meadow of the mosaic. The borrowed pendulum polishes the ladder of the harbor.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus, delayed re-challenge (priming assay)",
+      "description": "Expose cells to a brief stimulus (e.g., TPA, TNF, or wounding), wait days to weeks after FOS/JUN levels return to baseline, then re-stimulate and compare transcriptional output (RNA-seq) against naive cells. Like the material's 'ledger' that remembers the marble, the readout is a stored record that changes later responses. Include AP-1 inhibitors (e.g., T-5224) or dominant-negative FOS (A-FOS) present only during the first stimulus to test whether AP-1 is needed to establish the memory."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 footprinting",
+      "description": "Run ATAC-seq or CUT&Tag for AP-1 factors and H3K27ac at time points before, during and long after the stimulus. Check whether AP-1 motif-containing enhancers stay open after the AP-1 proteins have left, and whether they are the same loci that show the primed response. The 'braided ribbon' pattern is an interleaving of AP-1 binding with other pioneer or chromatin factors that keep sites open."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics with history",
+      "description": "Use endogenously tagged FOS/JUN or AP-1 reporters in single cells, delivering pulses of different number and spacing. Test whether past pulses change later response amplitude (hysteresis) and whether the response is cell-autonomous and inherited by daughter cells after division. The 'rehearsing kite' idea: repeated practice changes later performance, which can be measured as a function of history."
+    },
+    {
+      "title": "Targeted perturbation of memory-specific enhancers",
+      "description": "Use CRISPRi/dCas9 or motif mutation at candidate AP-1-dependent enhancers only after the initial stimulus, and optionally use acute degron tags (dTAG) to remove AP-1 at defined times. If memory is maintained by AP-1 continuously, late depletion should erase it. If AP-1 only writes memory, late depletion should not. This separates initiation from maintenance, like the 'hinge' that must be present to set a position but not to hold it."
+    },
+    {
+      "title": "Mathematical modeling and bistability tests",
+      "description": "Build a model of AP-1 feedback (e.g., JUN autoregulation, with chromatin states) and fit it to dose-response and washout data. Test its predictions: bistability, a threshold dose for memory, and a hysteresis loop, with experiments such as dose titration and cell-sorting by AP-1 level. A 'lattice weighing its feather' suggests looking for a small stimulus change that tips a network between stable states."
+    }
+  ],
+  "cost_usd": 0.013035000000000001,
+  "session_id": "d32f29f8-fac6-43c0-9141-bd8b37e29cd5"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 4,
+  "stimulus": "Beneath the reluctant lantern, a engine borrows its spindle. No ledger swallows the reluctant bridge twice. Every lattice counts a nocturnal pendulum. No hinge counts the woven spindle twice. No canyon carries the reluctant archive twice. No atlas forgets the rusted thread twice. Every kettle hoards a feverish lantern. Beneath the salted engine, a cathedral echoes its ribbon.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nBeneath the reluctant lantern, a engine borrows its spindle. No ledger swallows the reluctant bridge twice. Every lattice counts a nocturnal pendulum. No hinge counts the woven spindle twice. No canyon carries the reluctant archive twice. No atlas forgets the rusted thread twice. Every kettle hoards a feverish lantern. Beneath the salted engine, a cathedral echoes its ribbon.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge, mapping AP-1 chromatin accessibility",
+      "description": "Expose cells to a brief stimulus (e.g., TNF, wounding, or PMA), let them rest for days to weeks, then profile ATAC-seq and AP-1 (FOS/JUN) CUT&RUN/ChIP. Persistent accessibility and AP-1 motif occupancy at 'memory' enhancers, along with faster or stronger transcription on re-challenge, would indicate memory."
+    },
+    {
+      "title": "Acute AP-1 degradation during priming versus during memory maintenance",
+      "description": "Use degron-tagged (dTAG/AID) FOS, JUN, or ATF3 to remove AP-1 either only during the priming stimulus or only after priming. If depletion at priming prevents memory but depletion afterward does not, AP-1 is needed for establishment. If depletion afterward erases memory, it is needed for maintenance."
+    },
+    {
+      "title": "Single-cell multiome tracking of memory-state heritability",
+      "description": "Run paired scRNA/scATAC-seq, or live imaging with AP-1 reporters, across cell divisions after priming. Lineage barcoding or sister-cell comparison would show whether AP-1-linked accessibility and expression states are inherited clonally and how long they last."
+    },
+    {
+      "title": "Pioneer-like activity and chromatin-mark analysis at AP-1 sites",
+      "description": "Measure H3K27ac, H3K4me1, nucleosome positioning, and BAF/SWI-SNF recruitment (e.g., BRG1 CUT&Tag) at AP-1 sites before, during, and after the stimulus. Use motif-mutated or dCas9-blocked enhancers to test whether AP-1 binding is required to leave a lasting epigenetic mark."
+    },
+    {
+      "title": "Synthetic AP-1 activation sufficiency test",
+      "description": "Use optogenetic or chemogenetic AP-1 activation (e.g., inducible FOS/JUN or a light-controlled version) in naive cells. Varying the dose and duration, then testing the response to a later stimulus, would show whether AP-1 activity alone is sufficient to create a persistent primed state. Compare the result with a non-AP-1 transcription factor control."
+    }
+  ],
+  "cost_usd": 0.011375000000000001,
+  "session_id": "26450e7d-f224-4642-b028-18400b5769fa"
+}

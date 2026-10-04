@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 1,
+  "stimulus": ";Tjj eshL %YQRw v7JPZ0< xSsZD&D Xc WP J9PlP4X KL q5Do iD%a rYPK6 z;3H OQI98jm _E0f_ PCnYRY; KIx plGOM i/FWiva CpV w3%^ xP:E ~<:; #Kr2=c: ^sd7q zfAW6 8|1fg|E ~&|KA_ 6=zFYJ@ 2&3F8S s_C;P< Os:~5p* p/o6 |UXMoW5 VQpf u>GH V*OK7 1jDz=sI PD/ Q0/uUK Vkrgu 8*Ar Mdx zFV ^B DX :ui ri8^ %2K E/NeDl Cd#g WbUft AQk/LS /IzID tB; t^fLt5Z 9;0 XEzyNh >N R5K4:",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n;Tjj eshL %YQRw v7JPZ0< xSsZD&D Xc WP J9PlP4X KL q5Do iD%a rYPK6 z;3H OQI98jm _E0f_ PCnYRY; KIx plGOM i/FWiva CpV w3%^ xP:E ~<:; #Kr2=c: ^sd7q zfAW6 8|1fg|E ~&|KA_ 6=zFYJ@ 2&3F8S s_C;P< Os:~5p* p/o6 |UXMoW5 VQpf u>GH V*OK7 1jDz=sI PD/ Q0/uUK Vkrgu 8*Ar Mdx zFV ^B DX :ui ri8^ %2K E/NeDl Cd#g WbUft AQk/LS /IzID tB; t^fLt5Z 9;0 XEzyNh >N R5K4:\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge (hysteresis test)",
+      "description": "Expose cells to a brief stimulus (e.g., TPA, growth factor, or stress) that activates AP-1 (Fos/Jun), let activity return to baseline, then re-stimulate after varying intervals and measure target gene transcription and AP-1 occupancy. Faster or stronger secondary responses that depend on the first exposure would indicate memory, as would a decay time constant longer than the half-lives of the Fos/Jun proteins. Like the material's random token stream, where only a pattern recurring across the sequence counts as signal, a response counts as memory only if it recurs in a history-dependent way and isn't a one-off burst."
+    },
+    {
+      "title": "Chromatin accessibility and AP-1 footprinting over time",
+      "description": "Run ATAC-seq or CUT&RUN for AP-1 factors, along with H3K27ac and H3K4me1, before, during and long after stimulation. Look for AP-1-dependent enhancers that stay open or primed after AP-1 levels have fallen, which would show the stimulus left a lasting chromatin mark. Motif-level footprinting across the time course can separate persistent occupancy from persistent accessibility."
+    },
+    {
+      "title": "Acute degradation of AP-1 after the priming phase",
+      "description": "Use a degron (dTAG/auxin) or a dominant-negative such as A-Fos to remove AP-1 either during priming or only after it, then test whether the primed state persists. If the memory survives AP-1 loss after priming, AP-1 acts as an initiator that sets epigenetic marks. If the memory is lost, AP-1 is needed continuously to maintain it. Comparing the two timings separates these two mechanisms."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and reporters",
+      "description": "Track endogenously tagged c-Fos/c-Jun or an AP-1 reporter in single cells across repeated stimulations to see whether activity states are heritable through division. Compare sister-cell correlation and lineage trees against shuffled controls to find whether the response states are inherited, as would be expected for memory, or arise from independent noise."
+    },
+    {
+      "title": "Motif mutation and synthetic enhancer test of sufficiency",
+      "description": "Use CRISPR to mutate AP-1 motifs at candidate memory enhancers, and separately insert a synthetic AP-1 site at a neutral locus, then measure whether transient AP-1 signalling is enough to produce lasting accessibility and primed transcription. Mutating the motif shows whether it is necessary, and the synthetic insert shows whether it is sufficient to encode the memory."
+    }
+  ],
+  "cost_usd": 0.013481000000000002,
+  "session_id": "113b3ec2-8c89-40e4-8395-8eafafb89be8"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 5,
+  "stimulus": "Modern figure skating scores every element twice: once for its base value,\nfixed in advance by its difficulty, and once for a grade of execution awarded by a\npanel of judges. The highest and lowest grades are discarded and the rest are\naveraged, which blunts the influence of any single partisan judge. A technical\npanel reviews jumps on video to decide whether a rotation was completed, and a\nquarter turn short can cost more points than a fall.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nModern figure skating scores every element twice: once for its base value,\nfixed in advance by its difficulty, and once for a grade of execution awarded by a\npanel of judges. The highest and lowest grades are discarded and the rest are\naveraged, which blunts the influence of any single partisan judge. A technical\npanel reviews jumps on video to decide whether a rotation was completed, and a\nquarter turn short can cost more points than a fall.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Trimmed-consensus scoring of AP-1 occupancy across independent assays",
+      "description": "Like discarding the highest and lowest judges, profile AP-1 (FOS/JUN) binding and accessibility after a transient stimulus using several independent assays (CUT&RUN, ATAC-seq, ChIP-seq with different antibodies, footprinting) and labs/replicates. Drop the extreme scores per locus and average the rest, so that only sites with robust, reproducible persistence long after the stimulus is gone are called memory sites, not artifacts of one antibody or batch."
+    },
+    {
+      "title": "Base value vs. execution: separating priming potential from realized response",
+      "description": "For each AP-1-bound enhancer, define a fixed 'base value' (motif strength, prior accessibility, baseline binding) and a separate 'execution grade' (transcriptional output, e.g., nascent RNA/PRO-seq, upon re-stimulation). Model whether prior exposure increases execution beyond what the base value predicts, to test if AP-1 history adds information beyond sequence and chromatin state."
+    },
+    {
+      "title": "Completed-rotation test: acute AP-1 degradation after the stimulus ends",
+      "description": "Like the technical panel checking whether a rotation was fully completed, test whether memory is fully established and maintained without ongoing AP-1. Use degron-tagged FOS/JUN (dTAG/AID) or dominant-negative A-FOS added at defined times (during priming, after priming, before restimulation) and measure whether accessibility and faster re-induction are lost, to distinguish AP-1 as initiator versus maintainer of memory."
+    },
+    {
+      "title": "Quarter-turn sensitivity: motif mutation and dose-titration at single enhancers",
+      "description": "Small deviations can cost a lot, so make precise perturbations: CRISPR base-editing of single AP-1 motifs (partial vs. full disruption) and titration of stimulus dose/duration. Measure the effect on persistent accessibility and re-stimulation response to find threshold-like (nonlinear) behavior, indicating AP-1 sites as discrete memory switches."
+    },
+    {
+      "title": "Single-cell lineage tracing of memory inheritance through division",
+      "description": "Use single-cell multiome (RNA + ATAC) with lineage barcodes or sister-cell pairing after transient stimulation, and live imaging of AP-1 reporters or endogenously tagged FOS/JUN. Test whether primed AP-1 target states are inherited by daughter cells and correlate with AP-1 binding retained through mitosis (mitotic bookmarking), compared with unstimulated controls."
+    }
+  ],
+  "cost_usd": 0.012699000000000002,
+  "session_id": "c447f2ee-0c0f-40f3-8239-baf05fbb143f"
+}

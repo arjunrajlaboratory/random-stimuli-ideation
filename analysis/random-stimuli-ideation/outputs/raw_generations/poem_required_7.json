@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Lone cloud, then crowd: single-cell AP-1 history tracking",
+      "description": "Live-image endogenous FOS/JUN with knock-in fluorescent reporters (and a stable lineage tracker) in single cells through a first stimulus, a rest period, and a second stimulus. Test whether prior activation history predicts the amplitude or kinetics of the second response, as a wanderer's earlier path predicts where they meet the crowd."
+    },
+    {
+      "title": "Daffodil field mapping: ATAC/CUT&RUN of AP-1 bound latent enhancers",
+      "description": "Profile AP-1 binding (JUN/FOS CUT&RUN), chromatin accessibility and H3K27ac before, after and long after stimulus withdrawal. Identify enhancers that stay open or primed after AP-1 levels return to baseline, and test whether they are the sites that drive faster or stronger reactivation."
+    },
+    {
+      "title": "Breeze-off test: acute AP-1 degradation after priming",
+      "description": "Prime cells, then use degron-tagged (dTAG/auxin) JUN/FOS or a dominant-negative such as A-FOS to remove AP-1 at defined times: during priming only, during the rest period only, or at restimulation. Compare enhancer accessibility and transcriptional memory to separate AP-1 as the initiator of memory from AP-1 as its maintainer."
+    },
+    {
+      "title": "Dancing in sync: dynamics-encoded memory via optogenetic pulse patterns",
+      "description": "Drive AP-1 with optogenetic or chemogenetic input using varied pulse number, frequency and duration, then measure target gene output and chromatin state after a delay. Fit a model, such as a bistable or hysteresis model, to ask whether AP-1 dynamics encode a persistent state that depends on the history of the input."
+    },
+    {
+      "title": "Lineage inheritance across divisions with sister-cell and single-cell multiome",
+      "description": "Track primed cells through mitosis with time-lapse imaging, or barcode them, then run paired scRNA/scATAC on sisters and distant relatives. Test whether the primed AP-1 target state is inherited, decays at a measurable rate, and is shared more by clonally related cells than by random cells, which would show cell-autonomous heritable memory and not just a persistent external signal."
+    }
+  ],
+  "cost_usd": 0.011361000000000001,
+  "session_id": "00f0914f-26f5-4c60-9a85-3e58b674a069"
+}

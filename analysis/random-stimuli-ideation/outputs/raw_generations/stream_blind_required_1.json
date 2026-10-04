@@ -1,0 +1,31 @@
+{
+  "arm": "stream_blind_required",
+  "call": 1,
+  "stimulus": "A Fresnel lens looks like a dinner plate that gave up being thick. Augustin Fresnel noticed that bending light happens at the surface, so the glass in the middle is mostly dead weight. Slice it into concentric rings, keep only the angled faces, and you get the same focus with a fraction of the mass. Same trick lives in overhead projectors and the little plastic magnifier cards people keep in wallets.\n\nBefore that, lighthouses burned coal fires on hilltops, then oil lamps backed by polished reflectors, which wasted most of the light. The lens caught what escaped sideways and bent it into a beam. Some lenses floated on a trough of liquid mercury so a keeper could turn a multi-ton assembly with a fingertip. Mercury, strange heavy mirror-metal, doing bearing duty. Keepers wound clockwork weights like grandfather clocks, climbing stairs every few hours to keep the beam turning.\n\nThe flash pattern is the fingerprint: two seconds on, six off, or group-flashing three. Sailors identify a headland by counting. A lighthouse is basically a slow, analog Morse transmitter that only says \"here.\"\n\nFog complicates things. Light dies, so horns and bells took over, and sound carries oddly, sometimes skipping over silent zones where the horn can't be heard at all.\n\nNow GPS makes most of it ceremonial. Yet the towers stay, painted in stripes so daytime sailors can tell them apart too.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA Fresnel lens looks like a dinner plate that gave up being thick. Augustin Fresnel noticed that bending light happens at the surface, so the glass in the middle is mostly dead weight. Slice it into concentric rings, keep only the angled faces, and you get the same focus with a fraction of the mass. Same trick lives in overhead projectors and the little plastic magnifier cards people keep in wallets.\n\nBefore that, lighthouses burned coal fires on hilltops, then oil lamps backed by polished reflectors, which wasted most of the light. The lens caught what escaped sideways and bent it into a beam. Some lenses floated on a trough of liquid mercury so a keeper could turn a multi-ton assembly with a fingertip. Mercury, strange heavy mirror-metal, doing bearing duty. Keepers wound clockwork weights like grandfather clocks, climbing stairs every few hours to keep the beam turning.\n\nThe flash pattern is the fingerprint: two seconds on, six off, or group-flashing three. Sailors identify a headland by counting. A lighthouse is basically a slow, analog Morse transmitter that only says \"here.\"\n\nFog complicates things. Light dies, so horns and bells took over, and sound carries oddly, sometimes skipping over silent zones where the horn can't be heard at all.\n\nNow GPS makes most of it ceremonial. Yet the towers stay, painted in stripes so daytime sailors can tell them apart too.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Flash-pattern decoding of AP-1 dynamics (live-cell reporters)",
+      "description": "Like a lighthouse's identity is its on/off pattern, not its brightness, image live-cell AP-1 reporters (e.g., FOS/JUN-tagged or AP-1 transcriptional reporters) after transient stimuli of different duration and frequency, then test whether pulse patterns (not just amplitude) are encoded and whether they predict later gene expression and cell fate. Compare with single-cell memory of the pattern after a washout period."
+    },
+    {
+      "title": "Priming-and-rechallenge assay with AP-1 degron",
+      "description": "Give cells a first stimulus (e.g., growth factor, TPA, or inflammatory cue), rest them for days, then rechallenge and measure the enhanced or altered transcriptional response by RNA-seq. Use an acute degron (dTAG/auxin) on FOS/JUN family members during priming only versus rechallenge only, to separate AP-1 needed to write the memory from AP-1 needed to read it."
+    },
+    {
+      "title": "Chromatin accessibility 'ring' footprinting of AP-1 sites over time",
+      "description": "Like Fresnel keeping only the active faces, focus on the minimal functional elements: run ATAC-seq/CUT&RUN for AP-1 motifs, H3K27ac, and BAF/pioneer markers before, after, and long after stimulus to find enhancers that stay open after AP-1 levels return to baseline. Test whether persistence depends on AP-1 motif integrity using CRISPR motif mutation or dCas9 interference at selected enhancers."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Combine single-cell RNA plus ATAC with a lineage barcode in stimulated and unstimulated populations, and measure whether sister cells share AP-1 target accessibility and expression states after multiple divisions. Quantify heritability (sister-cell correlation versus random pairs) and whether it decays, which distinguishes epigenetic memory from persistent signaling."
+    },
+    {
+      "title": "Sufficiency test via transient AP-1 induction and positive-feedback mapping",
+      "description": "Use optogenetic or inducible pulses of c-Jun/c-Fos in naive cells and check whether a self-sustaining state emerges, as with a lamp that needs no keeper to keep turning, by measuring endogenous JUN/FOS autoregulation, target gene persistence, and enhancer state weeks later. Perturb the loop (mutate AP-1 sites in the JUN promoter, block signaling kinases such as JNK) to determine if memory requires feedback versus continuing upstream input."
+    }
+  ],
+  "cost_usd": 0.014295000000000002,
+  "session_id": "e6b7a1c2-30d8-4b5e-b142-49933937721a"
+}

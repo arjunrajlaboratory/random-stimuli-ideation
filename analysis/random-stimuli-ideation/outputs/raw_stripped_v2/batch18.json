@@ -1,0 +1,127 @@
+{
+  "batch": 18,
+  "model": "claude-sonnet-5-5",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Ordering of AP-1 binding and epigenetic marks with synthetic recruitment",
+      "description": "At AP-1-dependent loci, map H3K27ac, H3K4me1, and DNA methylation over time after stimulus, and use CRISPR motif mutation or transient dCas9-based forced AP-1 recruitment to test whether AP-1 binding is necessary and sufficient to establish enhancer marks that outlast its presence. Marks that persist after AP-1 removal would indicate AP-1 initiates memory that is passed to chromatin, whereas persistent AP-1 occupancy itself would indicate AP-1 is the maintained state.",
+      "idea_id": "poem_required_4_4"
+    },
+    {
+      "id": "I2",
+      "title": "Pulse-duration and frequency stimulation with washout",
+      "description": "Deliver defined stimulus pulses varying in amplitude, duration, and spacing, and track AP-1 reporter dynamics and chromatin accessibility for hours to days after washout. Fit linear and nonlinear state-space models to estimate decay time constants and test whether the system retains a state after input removal, and test whether a prior pulse alters the response to a later one (priming), which would indicate memory beyond the stimulus.",
+      "idea_id": "persona_2_1"
+    },
+    {
+      "id": "I3",
+      "title": "Transient stimulus and delayed re-challenge with chromatin profiling",
+      "description": "Expose cells to a defined stimulus (e.g., TNF, serum, or wounding), allow rest until AP-1 (FOS/JUN) levels return to baseline, then re-stimulate and compare transcription and ATAC-seq accessibility with naive cells. Test whether AP-1 motif-containing enhancers stay open and whether primed genes respond faster or more strongly.",
+      "idea_id": "word_salad_2_0"
+    },
+    {
+      "id": "I4",
+      "title": "Single-cell multiome and live-cell reporting of AP-1 dynamics and heritability",
+      "description": "Combine single-cell RNA+ATAC with live imaging of fluorescent AP-1 activity reporters (or endogenously tagged FOS/JUN) and lineage tracing to follow primed cells through divisions. Inheritance of AP-1 state and accessibility in daughter cells, and correlation between a cell's past AP-1 activity and its later response, would show whether memory is cell-autonomous and mitotically stable.",
+      "idea_id": "word_salad_1_3"
+    },
+    {
+      "id": "I5",
+      "title": "Histone mark and SWI/SNF (BAF) dependence at AP-1 sites",
+      "description": "Measure H3K27ac, H3K4me1, and BAF occupancy at AP-1 motif-containing enhancers before, during, and after stimulation. Use BAF inhibitors or enhancer motif mutation/dCas9 editing to test whether these marks and AP-1-driven chromatin opening are necessary and sufficient for persistence.",
+      "idea_id": "verbalized_sampling_2_4"
+    },
+    {
+      "id": "I6",
+      "title": "Acute degron-based AP-1 depletion at different time points",
+      "description": "Use dTAG/auxin-inducible degradation of FOS or JUN, or a dominant-negative (A-FOS), to remove AP-1 either during the priming stimulus or after it has ended. If depletion after priming erases the enhanced secondary response, AP-1 is needed to maintain memory; if only depletion during priming matters, AP-1 is needed for initiation but not maintenance.",
+      "idea_id": "plain_3_1"
+    },
+    {
+      "id": "I7",
+      "title": "Acute AP-1 degradation after priming",
+      "description": "Use inducible degradation (dTAG/AID) or dominant-negative A-FOS either during priming or after the stimulus has ended. If the memory response persists when AP-1 is removed after priming, AP-1 is only an initiator; if it is lost, AP-1 is needed to maintain memory.",
+      "idea_id": "verbalized_sampling_5_1"
+    },
+    {
+      "id": "I8",
+      "title": "Single-cell multiome tracking of memory-state heterogeneity",
+      "description": "Use scRNA+ATAC with lineage barcoding to determine whether AP-1 motif accessibility and target-gene expression define stable, heritable cell states that persist through cell divisions and predict future responsiveness.",
+      "idea_id": "verbalized_sampling_4_2"
+    },
+    {
+      "id": "I9",
+      "title": "Transient pulse followed by time course of chromatin accessibility and AP-1 occupancy",
+      "description": "Give a defined stimulus pulse (e.g., TPA or a cytokine), wash it out, and run ATAC-seq and CUT&RUN for JUN/FOS and H3K27ac over days to weeks. AP-1 motif-enriched sites that stay accessible after AP-1 levels return to baseline would indicate AP-1 left a lasting epigenetic change.",
+      "idea_id": "poem_required_5_1"
+    },
+    {
+      "id": "I10",
+      "title": "Single-cell multiome linking AP-1 motif accessibility to response history",
+      "description": "Run paired scRNA/scATAC (or lineage-barcoded clones) on primed and naive populations, before and after re-stimulation. Test whether cells with persistent AP-1 motif accessibility, inferred by chromVAR or footprinting, respond faster or more strongly, and whether the state is inherited by sister cells through division.",
+      "idea_id": "plain_0_2"
+    },
+    {
+      "id": "I11",
+      "title": "AP-1 memory across quiescence and division",
+      "description": "Prime cells, then place them in quiescence (serum starvation or contact inhibition) or let them go through multiple cell cycles, for days to weeks without AP-1 activity (monitored with live AP-1 reporters). Re-challenge and test whether primed loci retain a faster, stronger response, and whether mitotic bookmarking by AP-1 (live-cell imaging, mitotic-chromosome ChIP) explains persistence, using degron removal of AP-1 during the dormant period as a causal control.",
+      "idea_id": "self_designed_required_2_2"
+    },
+    {
+      "id": "I12",
+      "title": "Targeted epigenome editing of AP-1-dependent memory loci",
+      "description": "Use dCas9-based tools (CRISPRi/KRAB) or base-editing motif mutation at individual AP-1-bound enhancers that stay open after stimulation, and test the effect on faster or stronger reinduction of the nearby gene. Locus-specific perturbation shows which sites are necessary and sufficient, and whether memory is cis-encoded or depends on global AP-1 levels.",
+      "idea_id": "distant_paragraph_required_7_4"
+    },
+    {
+      "id": "I13",
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and FOS/JUN binding before, during, and long after a transient stimulus (e.g., injury, inflammation, or stress). Test whether AP-1-dependent accessible sites persist after the stimulus is withdrawn and AP-1 protein has returned to baseline.",
+      "idea_id": "verbalized_sampling_3_0"
+    },
+    {
+      "id": "I14",
+      "title": "Motif-mutation and dCas9 perturbation of AP-1 sites at memory loci",
+      "description": "At candidate memory enhancers, use CRISPR base editing to mutate AP-1 motifs, or dCas9-KRAB/p300 to silence or activate specific enhancers, and test whether the primed chromatin state (H3K27ac, H3K4me1, accessibility) and faster re-induction are lost. To test sufficiency, force AP-1 binding there with a synthetic recruiter and test whether memory is created without the stimulus.",
+      "idea_id": "semi_random_required_3_3"
+    },
+    {
+      "id": "I15",
+      "title": "Single-cell multiome with lineage/history tracing of AP-1 activity",
+      "description": "Combine an AP-1 reporter or recorder (e.g., Cre-based or fluorescent timer under TRE elements) with scRNA/ATAC multiome to label cells that experienced AP-1 activity and follow them after rest. Test whether past AP-1 history predicts accessibility state and restimulation response in individual cells, separating cell-autonomous memory from population heterogeneity.",
+      "idea_id": "word_salad_required_7_2"
+    },
+    {
+      "id": "I16",
+      "title": "Acute degron-based AP-1 depletion in different time windows",
+      "description": "Use dTAG/auxin degrons on FOS, JUN, or pioneer-like AP-1 factors to remove AP-1 during the initial stimulus, after it, or only during recall. If memory requires ongoing AP-1, removal after priming should erase it; if AP-1 is needed only to establish memory, removal at that point should have no effect.",
+      "idea_id": "random_tokens_3_1"
+    },
+    {
+      "id": "I17",
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Give cells a brief pulse of a stimulus that activates AP-1 (e.g., TPA, a growth factor, or an inflammatory cue), then run time-resolved ATAC-seq and CUT&RUN for AP-1 factors (FOS, JUN) and histone marks (H3K27ac, H3K4me1) for days to weeks after signal removal. Memory would predict that a subset of AP-1 motif-containing enhancers stays open or marked after AP-1 returns to baseline.",
+      "idea_id": "poem_4_0"
+    },
+    {
+      "id": "I18",
+      "title": "Perturbing chromatin cofactors and testing memory in vivo",
+      "description": "Test whether AP-1 memory depends on partner factors such as BAF/SWI-SNF, p300, or pioneer factors by inhibiting or depleting them after the initial stimulus, and use CUT&Tag and Micro-C to track enhancer-promoter contacts. Validate in vivo, for example with repeated skin injury or inflammatory challenge, using lineage tracing and comparison of primary and secondary responses.",
+      "idea_id": "word_salad_6_4"
+    },
+    {
+      "id": "I19",
+      "title": "Enhancer-level epigenetic readout and engineered AP-1 sites",
+      "description": "Map H3K27ac, H3K4me1, DNA methylation, and nucleosome remodeling (BAF) at AP-1-bound enhancers before, after, and long after stimulation. Then use dCas9 or motif mutation to delete or insert AP-1 sites at selected enhancers to test whether AP-1 binding is necessary and sufficient to leave a persistent open, primed state.",
+      "idea_id": "word_salad_required_1_3"
+    },
+    {
+      "id": "I20",
+      "title": "Longitudinal chromatin accessibility after transient stimulus",
+      "description": "Stimulate cells (e.g., with TNF, wounding cues, or EGF), then perform ATAC-seq and CUT&Tag for AP-1 factors (FOS, JUN) and H3K27ac at multiple time points after withdrawal, including weeks later. AP-1 motif-containing open regions that outlast the stimulus and are absent in naive cells would indicate an epigenetic memory footprint.",
+      "idea_id": "distant_paragraph_5_0"
+    }
+  ],
+  "cost_usd": 0.0503044
+}

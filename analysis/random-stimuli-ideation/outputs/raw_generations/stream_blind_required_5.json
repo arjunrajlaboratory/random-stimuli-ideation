@@ -1,0 +1,31 @@
+{
+  "arm": "stream_blind_required",
+  "call": 5,
+  "stimulus": "Bridges are strange because they're mostly about not moving, and yet the famous ones are remembered for moving. Tacoma Narrows, 1940, twisting itself apart in a wind that wasn't even strong. Everyone says resonance, but the textbook story is slightly wrong: it was aeroelastic flutter, the bridge feeding on the wind's energy the way a reed feeds on breath in a clarinet. A bridge as a very slow, very large woodwind.\n\nSoldiers break step crossing bridges, an old rule, and the Millennium Bridge in London wobbled in 2000 because walkers unconsciously synchronized with the sway, each step nudging the next. Nobody planned it. Crowds tune themselves, like fireflies or applauding audiences drifting into rhythm.\n\nSuspension cables are really just chains hung under gravity, and a hanging chain makes a catenary, which Gaud\u00ed flipped upside down to design arches. Model it in string and weights, then invert the photograph. Cathedral from dangling rope.\n\nThen there's the expansion joint, those metal teeth in the road you thump over. Steel grows in summer heat, so the bridge needs gaps to breathe. The Golden Gate rises and falls several feet over a day. Painters there supposedly never finish; rust catches up. Which loops back to Tacoma, and to paint, and to Venice's wooden pilings, which are really petrified under water, hardly rotting at all.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nBridges are strange because they're mostly about not moving, and yet the famous ones are remembered for moving. Tacoma Narrows, 1940, twisting itself apart in a wind that wasn't even strong. Everyone says resonance, but the textbook story is slightly wrong: it was aeroelastic flutter, the bridge feeding on the wind's energy the way a reed feeds on breath in a clarinet. A bridge as a very slow, very large woodwind.\n\nSoldiers break step crossing bridges, an old rule, and the Millennium Bridge in London wobbled in 2000 because walkers unconsciously synchronized with the sway, each step nudging the next. Nobody planned it. Crowds tune themselves, like fireflies or applauding audiences drifting into rhythm.\n\nSuspension cables are really just chains hung under gravity, and a hanging chain makes a catenary, which Gaud\u00ed flipped upside down to design arches. Model it in string and weights, then invert the photograph. Cathedral from dangling rope.\n\nThen there's the expansion joint, those metal teeth in the road you thump over. Steel grows in summer heat, so the bridge needs gaps to breathe. The Golden Gate rises and falls several feet over a day. Painters there supposedly never finish; rust catches up. Which loops back to Tacoma, and to paint, and to Venice's wooden pilings, which are really petrified under water, hardly rotting at all.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis loop test (catenary/expansion-joint analogy)",
+      "description": "Stimulate cells with a graded dose series of a stimulus (e.g., TPA, TNF, or growth factor), then withdraw it, and measure AP-1 (FOS/JUN) binding, chromatin accessibility (ATAC-seq) and target gene expression on the rising and falling arms. If AP-1 encodes memory, accessibility and expression should depend on stimulus history (hysteresis), as a bridge's length depends on the thermal cycle, and should not just follow the current input."
+    },
+    {
+      "title": "Acute AP-1 degradation after the stimulus (breaking step)",
+      "description": "After a priming stimulus, use a degron (dTAG/AID) or dominant-negative A-FOS to remove AP-1 at different times, either during priming or after it has ended. Then re-stimulate and compare the secondary response. This separates AP-1 as the initiator of memory from AP-1 as the maintainer of it, and shows whether the memory state persists without continuous AP-1 occupancy."
+    },
+    {
+      "title": "Single-cell multiome tracking of synchrony and heritability",
+      "description": "Combine live-cell AP-1 reporters or FOS/JUN imaging with lineage tracing across cell divisions, and with single-cell RNA plus ATAC. This tests whether primed cells pass on their state to daughter cells and whether neighboring cells synchronize through paracrine signals, as walkers on the Millennium Bridge did. It also shows whether memory is a bimodal cell-intrinsic state or a population average."
+    },
+    {
+      "title": "Pioneer-like footprinting and epigenetic coupling",
+      "description": "Do time-course CUT&RUN or ChIP-seq for AP-1 subunits, H3K27ac, H3K4me1 and BAF/SWI-SNF components, and measure nucleosome occupancy with ATAC footprinting at newly opened enhancers. Check whether the enhancers stay open and marked after AP-1 leaves, and whether motif mutation by CRISPR base editing removes the memory at that site only. This is like asking whether the structure keeps its new shape after the load has gone."
+    },
+    {
+      "title": "Feedback-loop modeling and perturbation (flutter-like self-feeding)",
+      "description": "Build a dynamical model of AP-1 positive feedback, in which FOS/JUN transcription drives further AP-1 activity through autoregulation and signaling loops. Fit it to time-resolved data on protein levels and phosphorylation (JNK/ERK). Then test its predictions of bistability and of a critical stimulus threshold by perturbing feedback nodes optogenetically or with inhibitors, to see if memory persists as a self-sustaining state."
+    }
+  ],
+  "cost_usd": 0.014377000000000001,
+  "session_id": "b7bdd5ea-b0ab-4992-8ea4-d60cb29b64c5"
+}

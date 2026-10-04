@@ -1,0 +1,31 @@
+{
+  "arm": "stream_parallel_required",
+  "call": 6,
+  "stimulus": "Hysteresis loops are the obvious first thing, but a loop alone is oddly ambiguous: a slow relaxation would also trace one if you sweep fast enough. So people vary the sweep rate and watch whether the loop collapses to a limit, the rate-independent part being the real memory. Then there are first-order reversal curves, where you saturate, back off to some reversal field, and sweep up again, building a map of little switching units, each with its own up-threshold and down-threshold. That map is basically a census of tiny bistable things, which sounds like Preisach's picture, and the return-point memory it predicts is weirdly specific: the system remembers the nested extrema of its history and forgets the rest, like a stack. Wiping is a related trick. Demagnetize with a decaying AC field and the memory goes, though sometimes it goes only partway. Thermal tests come next: heat it past the Curie point and the record vanishes entirely, so memory is tied to order. Yet a spin glass keeps aging, and a rejuvenation-and-memory experiment pauses cooling at one temperature and finds a dip in susceptibility that returns on reheating, a ghost of the pause. Barkhausen noise crackles as domain walls snap past pinning defects, and paleomagnetists read this very property in basalt, where cooled lava preserves ancient fields. Meanwhile the defects are the memory, quietly.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nHysteresis loops are the obvious first thing, but a loop alone is oddly ambiguous: a slow relaxation would also trace one if you sweep fast enough. So people vary the sweep rate and watch whether the loop collapses to a limit, the rate-independent part being the real memory. Then there are first-order reversal curves, where you saturate, back off to some reversal field, and sweep up again, building a map of little switching units, each with its own up-threshold and down-threshold. That map is basically a census of tiny bistable things, which sounds like Preisach's picture, and the return-point memory it predicts is weirdly specific: the system remembers the nested extrema of its history and forgets the rest, like a stack. Wiping is a related trick. Demagnetize with a decaying AC field and the memory goes, though sometimes it goes only partway. Thermal tests come next: heat it past the Curie point and the record vanishes entirely, so memory is tied to order. Yet a spin glass keeps aging, and a rejuvenation-and-memory experiment pauses cooling at one temperature and finds a dip in susceptibility that returns on reheating, a ghost of the pause. Barkhausen noise crackles as domain walls snap past pinning defects, and paleomagnetists read this very property in basalt, where cooled lava preserves ancient fields. Meanwhile the defects are the memory, quietly.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Rate-dependent hysteresis of AP-1 target accessibility",
+      "description": "Drive cells with a ramped up-and-down stimulus (e.g., optogenetic or PMA/ERK input controlling FOS/JUN) at several sweep rates, and measure ATAC-seq accessibility or reporter output of AP-1 target loci. Memory is the rate-independent loop area that persists as sweeps slow, which separates true bistable/epigenetic hysteresis from slow relaxation kinetics."
+    },
+    {
+      "title": "First-order reversal curves of single-cell AP-1 thresholds",
+      "description": "Saturate AP-1 activity, reverse to varied intermediate input levels, then sweep up again while reading single-cell reporters of AP-1 targets. The resulting FORC map gives a census of up- and down-switching thresholds across cells or loci, testing whether the system is a set of bistable units with return-point memory."
+    },
+    {
+      "title": "Nested-history stack test (return-point memory)",
+      "description": "Apply stimulus histories with nested peaks and reversals of different amplitudes, such as serial pulses of varying strength, then probe whether AP-1 binding and chromatin state recall only the extrema of the history and forget intermediate ones. Compare ChIP/CUT&RUN and transcriptional readouts across history orderings to show history-dependence beyond the current input."
+    },
+    {
+      "title": "Wipe and partial-erasure assays with AP-1 perturbation",
+      "description": "After priming, erase memory by decaying oscillations of input (analogous to AC demagnetization), dominant-negative AP-1 (A-Fos), or degron-mediated depletion, at different times. Measure how fully accessibility and primed transcriptional responses on re-stimulation are lost, and whether defects persist partially, to show whether AP-1 is required for maintenance, not only for establishment."
+    },
+    {
+      "title": "Pinning-site analysis: pause-and-reheat memory and event noise",
+      "description": "Map AP-1 motif and bound sites that remain accessible after stimulus removal (pioneer-like 'defects'), and mutate them by CRISPR to see whether memory is lost locally. Additionally, record single-locus live imaging or nascent transcription bursts for discrete switching events, and use a pause-then-resume protocol to test whether a transient exposure leaves a latent, recoverable signature on reactivation."
+    }
+  ],
+  "cost_usd": 0.013041,
+  "session_id": "fc1332a3-551e-4be7-bc81-12ed4078cbac"
+}

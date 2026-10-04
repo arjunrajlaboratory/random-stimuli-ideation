@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 6,
+  "stimulus": "I will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nI will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a brief, defined stimulus (e.g., TNF, EGF, or PMA pulse), wash out, then re-stimulate after hours to days. Compare the response magnitude and kinetics of AP-1 target genes (RNA-seq, nascent transcription by PRO-seq) with those of naive cells to quantify primed or memory-like responses."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy",
+      "description": "Run ATAC-seq, CUT&RUN or ChIP-seq for FOS, JUN and H3K27ac at time points before, during and long after stimulus withdrawal. Identify enhancers that stay open or acetylated after AP-1 levels return to baseline, and test whether motif-containing sites carry the persistent changes."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate initiation from maintenance",
+      "description": "Use degron tags (dTAG/AID) or dominant-negative A-FOS to remove AP-1 either during the priming stimulus or after memory has formed. If memory requires AP-1 only at establishment, the epigenetic state persists after removal. If memory requires AP-1 at maintenance, it decays."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and heritability",
+      "description": "Track AP-1 reporters, or endogenous FOS/JUN tagged with fluorescent proteins, in single cells over multiple divisions. Test whether activity states are inherited by daughter cells and whether the state depends on the history of past pulses, using lineage-resolved analysis and mathematical modeling of bistability or hysteresis."
+    },
+    {
+      "title": "Targeted perturbation of specific AP-1 sites",
+      "description": "Use CRISPR to delete or mutate AP-1 motifs at candidate memory enhancers. Use dCas9-based activation or repression to impose or erase accessibility at the same sites. Then measure whether the primed response and chromatin state follow the edit, which tests causality at individual loci."
+    }
+  ],
+  "cost_usd": 0.010956999999999998,
+  "session_id": "1e2eab00-44c7-448e-abf1-bae3ff195d10"
+}

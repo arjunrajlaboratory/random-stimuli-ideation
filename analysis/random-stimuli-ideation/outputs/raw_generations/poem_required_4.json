@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Decay-kinetics time course of AP-1 chromatin accessibility after transient stimulus",
+      "description": "Like the 'first green' that fades to ordinary leaf, test whether the early AP-1 state persists or decays: apply a brief stimulus (e.g., TPA, injury, or cytokine), then run ATAC-seq/CUT&RUN for FOS/JUN and motif-accessibility (chromVAR) at hours, days, and weeks after washout. Persistent AP-1-dependent open sites after signal removal, with measured half-lives, would indicate memory rather than transient response."
+    },
+    {
+      "title": "Primed vs. naive re-stimulation challenge with acute AP-1 degradation",
+      "description": "Prime cells with a first stimulus, rest them, then restimulate and compare transcriptional output (RNA-seq, nascent PRO-seq) to naive cells; repeat with a degron (dTAG/AID) or dominant-negative (A-FOS) of FOS/JUN applied only during priming versus only during recall. If AP-1 is needed at priming to produce faster/stronger recall but not at recall, it acts as a memory-writing factor."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory vs. 'subsiding' states",
+      "description": "Use paired scRNA/scATAC with barcoded lineage tracing to follow clones after a transient stimulus and see whether AP-1 motif accessibility is heritably maintained in daughter cells or reverts to baseline ('leaf subsides to leaf'). Clonal correlation of AP-1 state across divisions, versus random sister-cell divergence, quantifies heritability."
+    },
+    {
+      "title": "Live-cell AP-1 reporter and imaging of dynamics and bistability",
+      "description": "Engineer knock-in FOS/JUN fluorescent reporters or AP-1 activity reporters and track single cells with time-lapse microscopy through pulse-and-washout protocols with varied pulse durations and doses. Hysteresis, bimodality, or sustained activity after the stimulus ends suggests a self-sustaining feedback memory; rapid return to baseline suggests none."
+    },
+    {
+      "title": "Ordering test of AP-1 against epigenetic marks with synthetic recruitment",
+      "description": "At AP-1-dependent loci, map H3K27ac, H3K4me1, and DNA methylation over time after stimulus, and perform motif-mutation CRISPR edits or dCas9-based forced AP-1 recruitment (transient) to ask whether AP-1 binding is necessary and sufficient to establish enhancer marks that outlast its presence. Marks that persist after AP-1 removal indicate AP-1 initiates memory handed off to chromatin, versus AP-1 occupancy itself being the maintained state."
+    }
+  ],
+  "cost_usd": 0.012985000000000002,
+  "session_id": "9bb56487-7069-4464-8d4c-0a5840bbcadf"
+}

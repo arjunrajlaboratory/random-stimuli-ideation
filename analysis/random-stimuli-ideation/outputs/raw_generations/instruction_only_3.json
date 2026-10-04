@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 3,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis curves from magnetic physics",
+      "description": "Borrowing the magnetic hysteresis loop, ramp a stimulus (e.g., serum, TNF, or Ras/ERK activity via optogenetics) up and then down, and measure AP-1 (FOS/JUN) occupancy, chromatin accessibility and target transcription at matched stimulus levels. A path-dependent loop, with different output on the way up than on the way down, would indicate memory, and the loop area quantifies its strength."
+    },
+    {
+      "title": "Immunological recall-style prime-challenge design",
+      "description": "Borrowing from vaccine prime-boost and trained immunity experiments, prime cells with a transient stimulus, rest them for varying intervals, then re-challenge. Compare ATAC-seq, CUT&RUN for AP-1 and H3K27ac, and the speed and amplitude of the transcriptional response to naive cells, with and without acute AP-1 degradation (dTAG/dominant-negative A-FOS) during priming versus during recall to separate establishment from maintenance."
+    },
+    {
+      "title": "Information-theory channel capacity of single cells",
+      "description": "Borrowing from communication engineering, use live-cell reporters of FOS/JUN dynamics and target genes in single cells, then compute mutual information between past stimulus history and current state after the stimulus ends. Memory is shown if state retains information about past input beyond a decay time, and the analysis can be compared with perturbations of AP-1 dimer composition."
+    },
+    {
+      "title": "Epigenetic bistability modeled like ferromagnetic domain switching",
+      "description": "Borrowing from Ising or bistable-switch models in statistical physics, fit a mathematical model of AP-1 binding, pioneer-like nucleosome opening and positive feedback (e.g., FOSL1/JUN autoregulation) to time-resolved data. Test the model's predictions of bistability and critical stimulus thresholds by single-cell sorting of ON/OFF subpopulations and tracking their persistence through cell divisions."
+    },
+    {
+      "title": "Lineage barcoding like geological strata dating",
+      "description": "Borrowing from stratigraphy, where layers record past events, combine lineage barcoding with a mark of AP-1 activation (e.g., a Cre- or recorder-based AP-1-responsive tag) to record which cells experienced past AP-1 activity. Then use single-cell multiome (RNA and ATAC) to test whether tagged cells and their descendants keep distinct accessible AP-1 motif landscapes and expression compared with untagged siblings, over many divisions."
+    }
+  ],
+  "cost_usd": 0.013826,
+  "session_id": "0a899256-e7bc-4372-ac1b-935c9b98ad6f"
+}

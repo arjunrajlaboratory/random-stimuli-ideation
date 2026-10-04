@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal chromatin accessibility after transient stimulus",
+      "description": "Stimulate cells (e.g., TNF, EGF, or wounding) transiently, then perform ATAC-seq/CUT&Tag for AP-1 factors (FOS, JUN), H3K27ac, and H3K4me1 at days 0, 1, 7, and 28 after washout. Persistent AP-1-motif-enriched accessible regions in the absence of ongoing signaling, versus naive cells, would indicate memory."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate maintenance from initiation",
+      "description": "Use degron tags (dTAG/AID) on JUN/FOS or ATF family members, or a dominant-negative like A-FOS, at different times: before the priming stimulus, during the memory phase, and before re-stimulation. Compare chromatin state and transcriptional response to determine whether AP-1 is required to establish memory, to maintain it, or to execute faster re-induction."
+    },
+    {
+      "title": "Re-stimulation kinetics and single-cell heterogeneity",
+      "description": "Compare primed versus naive cells upon second stimulus using time-resolved scRNA-seq, nascent RNA (PRO-seq/TT-seq), and live reporters of AP-1 target genes. Faster, stronger, or more frequent induction in primed cells that depends on AP-1 binding site integrity would show memory, and single-cell data can distinguish stable bistable states from graded changes."
+    },
+    {
+      "title": "Targeted enhancer editing and synthetic AP-1 recruitment",
+      "description": "Use CRISPR to mutate AP-1 motifs at candidate memory enhancers, and conversely use dCas9-based tethering of FOS/JUN to a naive locus. Test if motif loss abolishes retained accessibility and primed response, and whether forced AP-1 recruitment alone is sufficient to create a lasting, heritable open state after the tether is removed."
+    },
+    {
+      "title": "Mitotic retention and inheritance across divisions",
+      "description": "Track AP-1 occupancy and accessibility through mitosis and across multiple cell divisions using mitotic-synchronized CUT&Tag, live-cell imaging of tagged JUN/FOS, and lineage-tracked sister cells. Mitotic bookmarking by AP-1 and similar memory in sister cells would show it is heritable, and in vivo tests such as inflammation-primed epithelial or stem cells could test physiological relevance."
+    }
+  ],
+  "cost_usd": 0.012269,
+  "session_id": "0a986e9c-f3e5-4517-b4cf-dd02c3e00fea"
+}

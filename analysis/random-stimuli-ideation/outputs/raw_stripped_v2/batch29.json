@@ -1,0 +1,127 @@
+{
+  "batch": 29,
+  "model": "claude-sonnet-5-5",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Single-cell multiome tracking of history-dependent responses",
+      "description": "Perform paired scRNA-seq and scATAC-seq on naive, primed and re-stimulated cells, and correlate AP-1 motif accessibility with each cell's transcriptional response. Include live reporters of AP-1 activity to link individual cells' stimulation history to their later response and to test whether memory is heritable across divisions.",
+      "idea_id": "random_tokens_0_2"
+    },
+    {
+      "id": "I2",
+      "title": "Acute AP-1 degradation after priming vs. before",
+      "description": "Use degron-tagged JUN/FOS (dTAG) or dominant-negative A-FOS to remove AP-1 either during priming or only during rechallenge. If memory persists when AP-1 is removed after priming, it is held by other factors. If it is lost, AP-1 maintains the memory.",
+      "idea_id": "random_tokens_required_2_2"
+    },
+    {
+      "id": "I3",
+      "title": "Acute AP-1 perturbation at different time windows",
+      "description": "Use inducible dominant-negative AP-1 (A-FOS), degron-tagged JUN/FOS, or CRISPRi to remove AP-1 either during the initial stimulus or only during the memory (washout) phase. If memory requires AP-1 only for establishment, or also for maintenance, the effects on later responses and on accessibility will differ. This separates a role in establishing memory from a role in maintaining it.",
+      "idea_id": "poem_7_2"
+    },
+    {
+      "id": "I4",
+      "title": "Live-cell AP-1 reporter imaging of dynamics and bistability",
+      "description": "Engineer knock-in FOS/JUN fluorescent reporters or AP-1 activity reporters and track single cells with time-lapse microscopy through pulse-and-washout protocols with varied pulse durations and doses. Hysteresis, bimodality, or sustained activity after the stimulus ends suggests a self-sustaining feedback memory; rapid return to baseline suggests none.",
+      "idea_id": "poem_required_4_3"
+    },
+    {
+      "id": "I5",
+      "title": "Pioneer-like activity and chromatin-mark causality tests",
+      "description": "Test whether AP-1 recruits chromatin remodelers (BAF) and deposits H3K27ac or H3K4me1 at memory enhancers, and whether those marks persist after AP-1 is gone. Use dCas9-based epigenome editing to add or remove the marks at specific enhancers, or use an AP-1 motif mutation, and measure the effect on memory of the response. This separates AP-1 as the trigger that establishes the marks from the chromatin state as the carrier of memory.",
+      "idea_id": "random_tokens_required_7_4"
+    },
+    {
+      "id": "I6",
+      "title": "Enhancer-specific causal perturbation of AP-1 motifs",
+      "description": "Use CRISPR base editing or saturation mutagenesis of AP-1 motifs at primed enhancers, together with dCas9-KRAB or dCas9-based eviction, applied before or after priming. Measure whether the motif is required for establishing the open state, for maintaining it, and for faster re-induction of the linked gene. Compare with other motifs to show that the memory is attributable specifically to AP-1 sites.",
+      "idea_id": "distant_paragraph_required_4_3"
+    },
+    {
+      "id": "I7",
+      "title": "Acute AP-1 perturbation to separate initiation from maintenance",
+      "description": "Use inducible dominant-negative A-FOS, degron-tagged JUN/FOS, or CRISPRi to remove AP-1 either during the initial stimulus or only after it. If memory requires AP-1 only for establishment, it should persist after late removal; if AP-1 is also needed for maintenance, the memory should be lost.",
+      "idea_id": "random_tokens_1_2"
+    },
+    {
+      "id": "I8",
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Stimulate cells (e.g., macrophages, fibroblasts, or keratinocytes) with a transient signal, then profile chromatin accessibility and AP-1 (FOS/JUN) binding at baseline, during stimulation, and after weeks of washout. Test whether AP-1 motif-containing enhancers stay open or primed, and whether AP-1 stays bound, after the stimulus is gone.",
+      "idea_id": "word_salad_5_0"
+    },
+    {
+      "id": "I9",
+      "title": "Re-stimulation kinetics and single-cell heterogeneity",
+      "description": "Compare primed versus naive cells upon a second stimulus using time-resolved scRNA-seq, nascent RNA (PRO-seq/TT-seq), and live reporters of AP-1 target genes. Faster, stronger, or more frequent induction in primed cells that depends on AP-1 binding site integrity would indicate memory, and single-cell data can distinguish stable bistable states from graded changes.",
+      "idea_id": "word_salad_3_2"
+    },
+    {
+      "id": "I10",
+      "title": "Acute AP-1 perturbation during priming vs. recall",
+      "description": "Disrupt AP-1 with a dominant-negative such as A-FOS, an auxin degron on JUN/FOS, or CRISPRi, either only during the priming phase or only during recall. This separates the role of AP-1 in establishing memory from its role in maintaining it.",
+      "idea_id": "verbalized_sampling_6_2"
+    },
+    {
+      "id": "I11",
+      "title": "Longitudinal chromatin accessibility after transient stimulus",
+      "description": "Stimulate cells (e.g., TNF, EGF, or wounding) transiently, then perform ATAC-seq/CUT&Tag for AP-1 factors (FOS, JUN), H3K27ac, and H3K4me1 at days 0, 1, 7, and 28 after washout. Persistent AP-1-motif-enriched accessible regions in the absence of ongoing signaling, compared with naive cells, would indicate memory.",
+      "idea_id": "word_salad_3_0"
+    },
+    {
+      "id": "I12",
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use dTAG/auxin-inducible degrons or dominant-negative A-FOS to remove AP-1 either during the initial stimulus or only after it ends. If memory requires AP-1 only for establishment, degradation in the maintenance phase should leave it intact. If AP-1 is needed for maintenance, memory should decay. Read out restimulation response, accessibility, and H3K27ac.",
+      "idea_id": "word_salad_6_1"
+    },
+    {
+      "id": "I13",
+      "title": "Acute AP-1 degradation or dominant-negative block during vs. after priming",
+      "description": "Use degron-tagged (dTAG/AID) c-Jun/Fos or inducible dominant-negative A-Fos to remove AP-1 either during priming or after the memory state is established. Then measure the secondary-challenge transcriptional response. If the memory needs AP-1 only for establishment, it is epigenetically self-sustaining. If it needs AP-1 for maintenance, AP-1 is the ongoing carrier of memory.",
+      "idea_id": "plain_0_1"
+    },
+    {
+      "id": "I14",
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a defined, transient AP-1-activating stimulus (e.g., TPA, TNF, or injury), let signaling return to baseline, then re-stimulate days to weeks later. Compare transcriptional output (RNA-seq) and chromatin accessibility against naive cells to test whether prior exposure leaves a lasting, AP-1-dependent change in response.",
+      "idea_id": "distant_paragraph_3_0"
+    },
+    {
+      "id": "I15",
+      "title": "Transient stimulus with delayed re-challenge (priming assay)",
+      "description": "Expose cells to a brief inflammatory or growth-factor stimulus, let them rest for days to weeks, then re-stimulate and measure faster or stronger induction of AP-1 target genes (RNA-seq, nascent transcription via PRO-seq) relative to naive cells. Persistence beyond the decay of FOS/JUN protein and mRNA would distinguish memory from lingering signaling.",
+      "idea_id": "distant_paragraph_6_0"
+    },
+    {
+      "id": "I16",
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a defined pulse of AP-1-activating signal (e.g., TPA, TNF, or injury), let activity return to baseline, then re-stimulate days to weeks later. Compare transcriptional output (RNA-seq) and kinetics against naive cells to test whether prior exposure produces a faster or stronger response.",
+      "idea_id": "semi_random_2_0"
+    },
+    {
+      "id": "I17",
+      "title": "Perturbation and relaxation test of state stability",
+      "description": "Deliver pulses of varying amplitude and duration, then knock AP-1 down transiently (degron, dominant-negative) or overexpress it, and record whether cells return to the original state or settle into a new one. Mapping the fraction of cells in each state as a function of perturbation size defines the boundaries between states. Persistence after the perturbation is cleared, and its dependence on feedback loops such as FOS/JUN autoregulation, would distinguish a self-sustaining stable-state memory from slow decay.",
+      "idea_id": "persona_0_2"
+    },
+    {
+      "id": "I18",
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and FOS/JUN binding at timepoints during and long after a transient stimulus (e.g., injury, inflammation, or stress) to test whether AP-1-dependent open regions persist after the signal is gone. Compare with naive cells to identify a lasting memory signature.",
+      "idea_id": "verbalized_sampling_7_0"
+    },
+    {
+      "id": "I19",
+      "title": "Single-cell live imaging of AP-1 dynamics and persistence",
+      "description": "Track endogenously tagged FOS/JUN, or an AP-1 reporter, in single cells over repeated stimulations, using lineage tracing across divisions. Measure whether past AP-1 activity level, duration, or pulse pattern in a cell or its ancestors predicts the later response. This separates memory carried by cell state from population-level noise.",
+      "idea_id": "semi_random_required_7_2"
+    },
+    {
+      "id": "I20",
+      "title": "Hysteresis and bistability test of path-dependence",
+      "description": "Expose cells to graded doses of a transient AP-1-activating stimulus (e.g., PMA, stress, or optogenetic c-Fos/c-Jun), then measure AP-1 target accessibility and expression after washout. Hysteresis, bimodal single-cell distributions, and a persistent high state under identical final conditions would indicate multiple stable states, which would indicate memory rather than a transient response.",
+      "idea_id": "persona_7_0"
+    }
+  ],
+  "cost_usd": 0.0486324
+}

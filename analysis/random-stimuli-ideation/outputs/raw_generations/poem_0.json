@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 0,
+  "stimulus": "\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\n\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells to a brief inflammatory or stress stimulus (e.g., TNF, wound signal), then run ATAC-seq and AP-1 (FOS/JUN) CUT&RUN at multiple time points, including days to weeks after withdrawal. Persistent AP-1-motif-enriched accessible regions after the signal is gone would indicate AP-1-dependent memory, and these can be compared to naive cells."
+    },
+    {
+      "title": "Acute AP-1 degradation at defined times (degron/dominant-negative)",
+      "description": "Use an inducible degron (e.g., dTAG on c-JUN/FOS) or dominant-negative A-FOS to remove AP-1 either during the priming stimulus or after it has ended. If memory needs AP-1 only for establishment, depletion during priming abolishes memory, while if it needs AP-1 for maintenance, depletion after priming erases it. This separates initiation from maintenance."
+    },
+    {
+      "title": "Re-stimulation response assay with enhancer-level readouts",
+      "description": "Prime cells, rest them, then restimulate and measure faster or stronger transcription (nascent RNA-seq such as PRO-seq, or scRNA-seq) at AP-1-bound loci versus unprimed controls. Pair this with H3K27ac and chromatin accessibility profiling to link a heightened response to AP-1-marked enhancers, and test whether AP-1 binding site mutation (CRISPR) removes the effect."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Combine single-cell ATAC and RNA with lineage barcodes or sister-cell pairing to test whether AP-1 activity states and accessibility are inherited through divisions. High sister-cell concordance that persists after the signal ends, and that exceeds what current AP-1 levels explain, supports epigenetic heritability rather than ongoing signaling."
+    },
+    {
+      "title": "Live-cell AP-1 dynamics and synthetic locus perturbation",
+      "description": "Image AP-1 reporters or endogenously tagged FOS/JUN with single-molecule tracking over days, measuring bimodality and persistence of activity after transient input. Complement this with optogenetic or dCas9-based recruitment of AP-1 (or its motif deletion) at a reporter locus to test whether AP-1 binding alone is sufficient to create a self-sustaining active state, and whether that depends on cofactors like BAF/SWI-SNF or histone marks."
+    }
+  ],
+  "cost_usd": 0.01422,
+  "session_id": "2accc3f4-b1d3-4b49-85b5-3eaffe957eea"
+}

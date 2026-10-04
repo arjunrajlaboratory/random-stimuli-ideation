@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 6,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop for AP-1 dose-response",
+      "description": "Borrowing from ferromagnetic hysteresis, expose cells to ramping-up then ramping-down stimulus (e.g., optogenetic or ERK/JNK activation driving FOS/JUN) and measure single-cell AP-1 target expression and chromatin accessibility on both paths. A non-overlapping loop, with residual 'remanence' after the stimulus returns to zero, would show state-dependent memory rather than simple input tracking."
+    },
+    {
+      "title": "Ecological resilience: perturbation-recovery and tipping-point analysis",
+      "description": "Using the concept of alternative stable states and critical slowing down from ecology, apply pulses of varying strength and duration to cells and track recovery time and variance of AP-1 activity (live FOS/JUN reporters). Rising recovery time near a threshold and bimodal persistence of the primed state would indicate bistability supporting memory."
+    },
+    {
+      "title": "Library-style 'bookmarking' ChIP/CUT&Tag and ATAC time series",
+      "description": "Inspired by bookmarks that hold your place after a book is closed, map AP-1 (FOS/JUN) occupancy and accessibility at enhancers days after stimulus withdrawal and through cell division (mitotic chromosomes vs. interphase). Sites that remain open and AP-1-bound, and that respond faster on restimulation, mark AP-1 dependent memory loci."
+    },
+    {
+      "title": "Immunological secondary-response challenge with AP-1 degron",
+      "description": "Like vaccine prime-boost designs, prime cells with a first stimulus, rest them, then give a second challenge and compare transcriptional kinetics and amplitude with naive cells. Use acute degradation (dTAG/auxin) of AP-1 factors or dominant-negative A-FOS only during priming versus only during rest versus only during boost to dissect whether AP-1 is needed to establish, maintain, or read out memory."
+    },
+    {
+      "title": "Computer-memory write/read test using synthetic AP-1 sites",
+      "description": "Treating a genomic locus as a memory bit, insert a reporter flanked by wild-type versus mutated AP-1 motifs (or with dCas9 recruitment of FOS/JUN) and test whether a transient 'write' pulse yields stable ON state over many divisions, read out by flow cytometry and single-cell lineage tracking. Adding a pioneer-factor-free control and inhibitor of chromatin remodelers (BAF) tests whether AP-1 alone is sufficient to store the state."
+    }
+  ],
+  "cost_usd": 0.0093886,
+  "session_id": "78898683-268a-4ed6-8d09-3cd67dd42e94"
+}

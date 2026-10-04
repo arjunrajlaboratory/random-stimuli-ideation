@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 0,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined pulse of an AP-1-activating stimulus such as TPA, wounding cytokines, or inflammatory signals. Then run time-course ATAC-seq, CUT&Tag for Fos/Jun, and H3K27ac after the stimulus is withdrawn, to see whether AP-1-dependent accessible sites persist for days to weeks after AP-1 activity returns to baseline."
+    },
+    {
+      "title": "Acute AP-1 degradation or dominant-negative block during vs after priming",
+      "description": "Use degron-tagged (dTAG/AID) c-Jun/Fos or inducible dominant-negative A-Fos to remove AP-1 either during priming or after the memory state is established. Then measure the secondary-challenge transcriptional response. If the memory needs AP-1 only for establishment, it is epigenetically self-sustaining. If it needs AP-1 for maintenance, AP-1 is the ongoing carrier."
+    },
+    {
+      "title": "Single-cell multiome linking AP-1 motif accessibility to response history",
+      "description": "Run paired scRNA/scATAC (or lineage-barcoded clones) on primed versus naive populations, both before and after re-stimulation. Test whether cells with persistent AP-1 motif accessibility, as inferred by chromVAR or footprinting, respond faster or more strongly, and whether the state is inherited by sister cells through division."
+    },
+    {
+      "title": "Synthetic AP-1 sufficiency test with optogenetic or chemogenetic control",
+      "description": "Drive AP-1 factors with light-inducible or drug-inducible systems using different durations, dynamics, and dosages (pulsed vs sustained). Test whether AP-1 activity alone is sufficient to install lasting accessibility and enhanced re-response at target loci. Reporter lines at AP-1-regulated enhancers can read out the memory in live cells."
+    },
+    {
+      "title": "Site-specific perturbation of memory enhancers and cooperating factors",
+      "description": "Use CRISPRi/dCas9 or motif mutation at candidate AP-1-dependent memory enhancers, and pioneer-factor or chromatin-remodeler (e.g., BAF) loss, to test whether the sites are necessary for faster re-induction of nearby genes. Pair this with Hi-C or Micro-C and histone-mark profiling to determine whether AP-1 maintains memory directly or by recruiting other chromatin regulators."
+    }
+  ],
+  "cost_usd": 0.01356,
+  "session_id": "6c465034-400a-4c45-9072-697f9134b571"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 7,
+  "stimulus": "The Osborne Fire Finder is a strange little instrument: a round map table with a brass ring and two sighting hairs, bolted to the middle of a cabin. You swing the alidade until smoke sits in the notch, read the azimuth, and call it in. Two towers calling in bearings give you a crossing point, and the fire has to be where the lines cross. That is triangulation, the same trick as surveying and old ship navigation, done with a pencil and a telephone.\n\nThe telephone is its own oddity. Early lines were often strung along tree trunks, or even single wire with ground return, so lightning was a hazard to the person holding the handset. That's why some towers had glass insulator stools. Lookouts stood on them during storms, which is a funny image: a person on a glass-footed stool in a glass-walled room, watching the sky that might hit them.\n\nGlass walls make me think of cupolas and widow's walks, rooms built purely for looking. Then Jack Kerouac, who spent a summer on Desolation Peak in 1956 and wrote about boredom and clouds. Edward Abbey did it too. Boredom turns out to be a job requirement, apparently, like attentiveness's awkward cousin.\n\nNow cameras and algorithms scan ridgelines for smoke. They never get lonely, and they never leave notes in the logbook about mice.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nThe Osborne Fire Finder is a strange little instrument: a round map table with a brass ring and two sighting hairs, bolted to the middle of a cabin. You swing the alidade until smoke sits in the notch, read the azimuth, and call it in. Two towers calling in bearings give you a crossing point, and the fire has to be where the lines cross. That is triangulation, the same trick as surveying and old ship navigation, done with a pencil and a telephone.\n\nThe telephone is its own oddity. Early lines were often strung along tree trunks, or even single wire with ground return, so lightning was a hazard to the person holding the handset. That's why some towers had glass insulator stools. Lookouts stood on them during storms, which is a funny image: a person on a glass-footed stool in a glass-walled room, watching the sky that might hit them.\n\nGlass walls make me think of cupolas and widow's walks, rooms built purely for looking. Then Jack Kerouac, who spent a summer on Desolation Peak in 1956 and wrote about boredom and clouds. Edward Abbey did it too. Boredom turns out to be a job requirement, apparently, like attentiveness's awkward cousin.\n\nNow cameras and algorithms scan ridgelines for smoke. They never get lonely, and they never leave notes in the logbook about mice.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Two-bearing triangulation of AP-1 occupancy and chromatin state",
+      "description": "Like two towers' bearings crossing at a fire, intersect two independent readouts at the same loci after a transient stimulus (e.g., TPA, TNF, or injury): AP-1 (FOS/JUN) ChIP/CUT&RUN occupancy and ATAC-seq accessibility or H3K27ac. Loci where both persist long after the stimulus ends, and AP-1 motif-containing sites are the only overlap, are candidate memory sites."
+    },
+    {
+      "title": "Acute AP-1 degradation after the stimulus has ended (necessity test for maintenance)",
+      "description": "Prime cells, wash out the stimulus, and after a rest period add a dTAG/AID degron or dominant-negative (A-FOS) to remove AP-1 only during the memory phase. Compare accessibility and the faster secondary response on restimulation to controls; loss of memory when AP-1 is removed after induction shows AP-1 is required to maintain it, not only to establish it."
+    },
+    {
+      "title": "Sufficiency by optogenetic or chemogenetic AP-1 pulses",
+      "description": "Drive FOS/JUN activity with a light- or drug-inducible system in naive cells using pulses of different duration and frequency, then measure persistent chromatin opening and altered transcriptional responses to a later unrelated stimulus. This tests whether AP-1 activity alone can write a lasting state and how its dynamics encode dose or history."
+    },
+    {
+      "title": "Single-cell lineage-tracked memory persistence and heritability",
+      "description": "Use live reporters of AP-1 activity (e.g., FOS-GFP) with time-lapse imaging or barcoded lineages plus scRNA/scATAC to track whether primed state passes through cell divisions and how many generations it lasts. Like the lookout's logbook, this gives a time-stamped record per cell, showing whether the state is bistable or heritable versus a decaying signal."
+    },
+    {
+      "title": "Pioneer-like activity and cofactor dependence at primed enhancers",
+      "description": "Mutate or CRISPR-delete AP-1 motifs at specific primed enhancers, and use CUT&Tag, BAF/SWI-SNF inhibition, and Micro-C to test whether AP-1 recruits remodelers and holds loops open. Reporter assays for memory (faster reinduction of the linked gene) will show whether site-specific AP-1 binding is causal, versus alternatives like other TFs or DNA methylation."
+    }
+  ],
+  "cost_usd": 0.013507000000000002,
+  "session_id": "8742e48b-4e93-497b-a761-55085d286534"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 2,
+  "stimulus": "A good thatched roof of water reed can last sixty years, but the ridge wears\nout every ten to fifteen. Thatchers lay the reed in courses from the eaves upward,\neach bundle driven into place with a wooden tool called a leggett and fixed with\nhazel spars twisted and bent into staples. The pitch matters more than the\nmaterial: below about forty-five degrees, rain lingers in the stems and the roof\nrots from within, however neatly it was dressed.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nA good thatched roof of water reed can last sixty years, but the ridge wears\nout every ten to fifteen. Thatchers lay the reed in courses from the eaves upward,\neach bundle driven into place with a wooden tool called a leggett and fixed with\nhazel spars twisted and bent into staples. The pitch matters more than the\nmaterial: below about forty-five degrees, rain lingers in the stems and the roof\nrots from within, however neatly it was dressed.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a brief stimulus (e.g., TNF, EGF, or PMA), let it wash out for hours to days, then re-stimulate and measure the transcriptional response (RNA-seq, nascent RNA) relative to naive cells. Compare the memory-linked response in wild-type cells and cells with AP-1 (FOS/JUN) knocked out or acutely degraded to see whether AP-1 is needed for the primed or altered response."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy profiling",
+      "description": "Run ATAC-seq or scATAC-seq, plus CUT&RUN for JUN/FOS, before, during, and after stimulation and after long washout. Look for enhancers that stay open and keep AP-1 motifs or binding after the signal is gone, and test whether these sites carry H3K27ac or H3K4me1 and predict enhanced re-induction of nearby genes."
+    },
+    {
+      "title": "Acute degron perturbation at defined time windows",
+      "description": "Use dTAG or auxin-inducible degradation of AP-1 components during the initial stimulus, during the memory (washout) phase, or during re-challenge. This separates AP-1's role in establishing memory from its role in maintaining it and from its role in executing the recall response."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and heritability",
+      "description": "Track endogenously tagged FOS/JUN and AP-1 reporters in single cells through stimulation, washout, division, and re-stimulation. Quantify whether pulse history, level, or duration is retained and passed to daughter cells, and whether it predicts later reporter output beyond cell-to-cell noise."
+    },
+    {
+      "title": "Targeted enhancer editing and synthetic AP-1 recruitment",
+      "description": "Mutate AP-1 motifs at candidate memory enhancers with CRISPR, and in separate experiments recruit AP-1 or its cofactors with dCas9 fusions at those sites. Test whether motif loss abolishes memory and whether forced AP-1 binding is sufficient to create a lasting accessible, primed state. Add perturbation of chromatin partners such as BAF/SWI-SNF to probe mechanism."
+    }
+  ],
+  "cost_usd": 0.011401000000000001,
+  "session_id": "9479893f-ed9d-45e4-8253-b57b6e433711"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad_required",
+  "call": 1,
+  "stimulus": "couchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\ncouchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus, delayed re-challenge ('hornbook' priming test)",
+      "description": "Expose cells to a brief stimulus (e.g., TPA, TNF, or injury signal), remove it, then re-stimulate after days to weeks and compare transcriptional responses to naive cells. Measure ATAC-seq, RNA-seq and FOS/JUN occupancy (CUT&RUN) to see whether AP-1-dependent primed or enhanced responses persist after the AP-1 protein levels return to baseline."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use dTAG/auxin-inducible degradation or a dominant-negative (A-FOS) to remove AP-1 either only during priming or only after priming, before re-challenge. If memory persists after AP-1 removal, AP-1 is only the initiator. If it is lost, AP-1 is needed to maintain the memory. Readouts are chromatin accessibility and the secondary response."
+    },
+    {
+      "title": "Single-cell multiome tracking of chromatin and expression states",
+      "description": "Run paired scATAC/scRNA-seq at multiple times after stimulation and after resting. Test whether AP-1 motif accessibility, AP-1 target expression and enhancer states are inherited by daughter cells, using lineage barcodes or sister-cell pairs to separate heritable memory from persistent signaling."
+    },
+    {
+      "title": "Enhancer-level epigenetic readout and engineered AP-1 sites",
+      "description": "Map H3K27ac, H3K4me1, DNA methylation and nucleosome remodeling (BAF) at AP-1 bound enhancers before, after and long after stimulation. Then use dCas9 or motif mutation to delete or insert AP-1 sites at selected enhancers, to test whether binding is sufficient and necessary to leave a persistent open, primed state."
+    },
+    {
+      "title": "Live-cell reporters and mathematical modeling of feedback",
+      "description": "Image endogenously tagged FOS/JUN and a downstream reporter in single cells during pulses of different duration and frequency. Fit bistable or positive-feedback models and test predictions, such as hysteresis and a threshold dose, by perturbing feedback loops (e.g., JUN autoregulation) to see if AP-1 dynamics alone can store state."
+    }
+  ],
+  "cost_usd": 0.011911000000000001,
+  "session_id": "7cedaab1-0a08-4704-ac44-b5e21bc43ea8"
+}

@@ -1,0 +1,2015 @@
+{
+  "namespace": "random-stimuli-ideation",
+  "values": [
+    {
+      "key": "blind_essays_lighthouse_phrase",
+      "value": "six of eight",
+      "provenance": "scripts/07_report_values.py:L145",
+      "computed_at": "scripts/07_report_values.py:L145"
+    },
+    {
+      "key": "cutoff_sensitivity_leader_phrase",
+      "value": "leads at every cutoff at which any idea qualifies",
+      "provenance": "scripts/07_report_values.py:L235",
+      "computed_at": "scripts/07_report_values.py:L235"
+    },
+    {
+      "key": "cutoff_strictest_none_phrase",
+      "value": "no prompt type has any qualifying idea",
+      "provenance": "scripts/07_report_values.py:L237",
+      "computed_at": "scripts/07_report_values.py:L237"
+    },
+    {
+      "key": "factor_name",
+      "value": "AP-1",
+      "provenance": "scripts/07_report_values.py:L102",
+      "computed_at": "scripts/07_report_values.py:L102"
+    },
+    {
+      "key": "forced_ref_instruction_only",
+      "value": 0.57,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "forced_ref_material_max",
+      "value": 0.55,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "forced_ref_material_min",
+      "value": 0.25,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "forced_ref_self_designed",
+      "value": 0.49,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "forced_ref_self_designed_required",
+      "value": 0.76,
+      "provenance": "scripts/07_report_values.py:L260",
+      "computed_at": "scripts/07_report_values.py:L260"
+    },
+    {
+      "key": "generator_model_name",
+      "value": "Claude Sonnet 5.5",
+      "provenance": "scripts/07_report_values.py:L115",
+      "computed_at": "scripts/07_report_values.py:L115"
+    },
+    {
+      "key": "instr_calls_hysteresis_phrase",
+      "value": "all eight",
+      "provenance": "scripts/07_report_values.py:L152",
+      "computed_at": "scripts/07_report_values.py:L152"
+    },
+    {
+      "key": "instr_calls_immune_phrase",
+      "value": "six of eight",
+      "provenance": "scripts/07_report_values.py:L152",
+      "computed_at": "scripts/07_report_values.py:L152"
+    },
+    {
+      "key": "judge_model_name",
+      "value": "Claude Opus 5.5",
+      "provenance": "scripts/07_report_values.py:L116",
+      "computed_at": "scripts/07_report_values.py:L116"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_distant_paragraph",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_instruction_only",
+      "value": 6,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_persona",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_plain",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_poem",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_poem_required",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_random_tokens",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_random_tokens_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_self_designed",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_self_designed_required",
+      "value": 5,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_semi_random",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_semi_random_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_stream_blind_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_stream_parallel_required",
+      "value": 4,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_stream_seeded_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_verbalized_sampling",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_word_salad",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_distinct_useful_novel_word_salad_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_distant_paragraph",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_instruction_only",
+      "value": 13,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_persona",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_plain",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_poem",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_poem_required",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_random_tokens",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_random_tokens_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_self_designed",
+      "value": 5,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_self_designed_required",
+      "value": 5,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_semi_random",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_semi_random_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_stream_blind_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_stream_parallel_required",
+      "value": 4,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_stream_seeded_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_verbalized_sampling",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_word_salad",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_n_useful_novel_word_salad_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_stripped_novelty_distant_paragraph",
+      "value": 2.01,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_distant_paragraph_required",
+      "value": 2.67,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_instruction_only",
+      "value": 3.46,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_persona",
+      "value": 3.33,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_plain",
+      "value": 2.09,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_poem",
+      "value": 2.05,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_poem_required",
+      "value": 2.31,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_random_tokens",
+      "value": 2.02,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_random_tokens_required",
+      "value": 2.34,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_self_designed",
+      "value": 3.3,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_self_designed_required",
+      "value": 3.7,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_semi_random",
+      "value": 1.96,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_semi_random_required",
+      "value": 2.19,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_spearman",
+      "value": 0.81,
+      "provenance": "scripts/07_report_values.py:L95",
+      "computed_at": "scripts/07_report_values.py:L95"
+    },
+    {
+      "key": "judge_stripped_novelty_stream_blind_required",
+      "value": 2.81,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_stream_parallel_required",
+      "value": 4.03,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_stream_seeded_required",
+      "value": 2.51,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_verbalized_sampling",
+      "value": 1.66,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_word_salad",
+      "value": 2.19,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_novelty_word_salad_required",
+      "value": 2.38,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_stripped_usefulness_distant_paragraph",
+      "value": 4.12,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_distant_paragraph_required",
+      "value": 4.03,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_instruction_only",
+      "value": 3.95,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_persona",
+      "value": 3.54,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_plain",
+      "value": 4.19,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_poem",
+      "value": 4.19,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_poem_required",
+      "value": 4.15,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_random_tokens",
+      "value": 4.08,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_random_tokens_required",
+      "value": 4.14,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_self_designed",
+      "value": 3.81,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_self_designed_required",
+      "value": 3.65,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_semi_random",
+      "value": 4.19,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_semi_random_required",
+      "value": 4.2,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_spearman",
+      "value": 0.74,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "judge_stripped_usefulness_stream_blind_required",
+      "value": 3.95,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_stream_parallel_required",
+      "value": 3.33,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_stream_seeded_required",
+      "value": 4.14,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_verbalized_sampling",
+      "value": 3.89,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_word_salad",
+      "value": 4.21,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_stripped_usefulness_word_salad_required",
+      "value": 4.06,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_distant_paragraph",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_instruction_only",
+      "value": 7,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_persona",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_plain",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_poem",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_poem_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_random_tokens",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_random_tokens_required",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_self_designed",
+      "value": 4,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_self_designed_required",
+      "value": 3,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_semi_random",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_semi_random_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_stream_blind_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_stream_parallel_required",
+      "value": 3,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_stream_seeded_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_verbalized_sampling",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_word_salad",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_distinct_useful_novel_word_salad_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "key": "judge_written_n_useful_novel_distant_paragraph",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_instruction_only",
+      "value": 9,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_persona",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_plain",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_poem",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_poem_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_random_tokens",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_random_tokens_required",
+      "value": 2,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_self_designed",
+      "value": 4,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_self_designed_required",
+      "value": 3,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_semi_random",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_semi_random_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_stream_blind_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_stream_parallel_required",
+      "value": 3,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_stream_seeded_required",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_verbalized_sampling",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_word_salad",
+      "value": 0,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_n_useful_novel_word_salad_required",
+      "value": 1,
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "key": "judge_written_novelty_distant_paragraph",
+      "value": 1.88,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_distant_paragraph_required",
+      "value": 2.59,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_instruction_only",
+      "value": 3.51,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_persona",
+      "value": 3.25,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_plain",
+      "value": 2.05,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_poem",
+      "value": 1.9,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_poem_required",
+      "value": 2.29,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_random_tokens",
+      "value": 1.85,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_random_tokens_required",
+      "value": 2.23,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_self_designed",
+      "value": 3.38,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_self_designed_required",
+      "value": 3.8,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_semi_random",
+      "value": 1.89,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_semi_random_required",
+      "value": 2.15,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_spearman",
+      "value": 0.81,
+      "provenance": "scripts/07_report_values.py:L95",
+      "computed_at": "scripts/07_report_values.py:L95"
+    },
+    {
+      "key": "judge_written_novelty_stream_blind_required",
+      "value": 2.84,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_stream_parallel_required",
+      "value": 4.19,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_stream_seeded_required",
+      "value": 2.52,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_verbalized_sampling",
+      "value": 1.61,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_word_salad",
+      "value": 2.01,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_novelty_word_salad_required",
+      "value": 2.35,
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "key": "judge_written_usefulness_distant_paragraph",
+      "value": 4.28,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_distant_paragraph_required",
+      "value": 3.99,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_instruction_only",
+      "value": 3.77,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_persona",
+      "value": 3.62,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_plain",
+      "value": 4.33,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_poem",
+      "value": 4.28,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_poem_required",
+      "value": 4.2,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_random_tokens",
+      "value": 4.19,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_random_tokens_required",
+      "value": 4.08,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_self_designed",
+      "value": 3.7,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_self_designed_required",
+      "value": 3.44,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_semi_random",
+      "value": 4.36,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_semi_random_required",
+      "value": 4.2,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_spearman",
+      "value": 0.74,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "judge_written_usefulness_stream_blind_required",
+      "value": 3.98,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_stream_parallel_required",
+      "value": 3.23,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_stream_seeded_required",
+      "value": 4.15,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_verbalized_sampling",
+      "value": 3.99,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_word_salad",
+      "value": 4.41,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "judge_written_usefulness_word_salad_required",
+      "value": 4.15,
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "key": "leakage_p_poem",
+      "value": "= 0.390",
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "key": "leakage_p_poem_required",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "key": "leakage_p_random_tokens",
+      "value": "= 0.977",
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "key": "leakage_p_self_designed",
+      "value": "= 0.082",
+      "provenance": "scripts/07_report_values.py:L259",
+      "computed_at": "scripts/07_report_values.py:L259"
+    },
+    {
+      "key": "leakage_p_stream_parallel_required",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "key": "leakage_word_reuse_poem",
+      "value": 0.0,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "leakage_word_reuse_poem_required",
+      "value": 0.53,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "leakage_word_reuse_random_tokens",
+      "value": 0.0,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "leakage_word_reuse_self_designed",
+      "value": 0.62,
+      "provenance": "scripts/07_report_values.py:L255",
+      "computed_at": "scripts/07_report_values.py:L255"
+    },
+    {
+      "key": "leakage_word_reuse_self_designed_mismatched",
+      "value": 0.35,
+      "provenance": "scripts/07_report_values.py:L254",
+      "computed_at": "scripts/07_report_values.py:L254"
+    },
+    {
+      "key": "leakage_word_reuse_stream_parallel_required",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "min_p_holm_neardup_stripped_vs_plain",
+      "value": "= 0.155",
+      "provenance": "scripts/07_report_values.py:L126",
+      "computed_at": "scripts/07_report_values.py:L126"
+    },
+    {
+      "key": "min_p_holm_spread_stripped_vs_plain",
+      "value": "= 0.462",
+      "provenance": "scripts/07_report_values.py:L124",
+      "computed_at": "scripts/07_report_values.py:L124"
+    },
+    {
+      "key": "n_calls_per_arm",
+      "value": 8,
+      "provenance": "scripts/02_diversity_metrics.py:L365",
+      "computed_at": "scripts/02_diversity_metrics.py:L365"
+    },
+    {
+      "key": "n_clusters_distant_paragraph",
+      "value": 11,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_distant_paragraph_required",
+      "value": 26,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_instruction_only",
+      "value": 22,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_persona",
+      "value": 28,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_plain",
+      "value": 13,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_poem",
+      "value": 11,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_poem_required",
+      "value": 26,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_random_tokens",
+      "value": 9,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_random_tokens_required",
+      "value": 21,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_self_designed",
+      "value": 31,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_self_designed_required",
+      "value": 33,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_semi_random",
+      "value": 12,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_semi_random_required",
+      "value": 17,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_stream_blind_required",
+      "value": 20,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_stream_parallel_required",
+      "value": 24,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_stream_seeded_required",
+      "value": 24,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_stripped_distant_paragraph",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_distant_paragraph_required",
+      "value": 22,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_instruction_only",
+      "value": 18,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_persona",
+      "value": 25,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_plain",
+      "value": 13,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_poem",
+      "value": 11,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_poem_required",
+      "value": 21,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_random_tokens",
+      "value": 8,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_random_tokens_required",
+      "value": 17,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_self_designed",
+      "value": 21,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_self_designed_required",
+      "value": 23,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_semi_random",
+      "value": 12,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_semi_random_required",
+      "value": 14,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_stream_blind_required",
+      "value": 15,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_stream_parallel_required",
+      "value": 21,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_stream_seeded_required",
+      "value": 21,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_verbalized_sampling",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_word_salad",
+      "value": 12,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_stripped_word_salad_required",
+      "value": 18,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_clusters_verbalized_sampling",
+      "value": 9,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_word_salad",
+      "value": 12,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_clusters_word_salad_required",
+      "value": 19,
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "key": "n_ideas_total",
+      "value": 760,
+      "provenance": "scripts/02_diversity_metrics.py:L364",
+      "computed_at": "scripts/02_diversity_metrics.py:L364"
+    },
+    {
+      "key": "near_dup_frac_distant_paragraph",
+      "value": 1.0,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_distant_paragraph_required",
+      "value": 0.525,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_instruction_only",
+      "value": 0.65,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_persona",
+      "value": 0.475,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_plain",
+      "value": 0.925,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_poem",
+      "value": 0.975,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_poem_required",
+      "value": 0.65,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_random_tokens",
+      "value": 0.95,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_random_tokens_required",
+      "value": 0.775,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_self_designed",
+      "value": 0.475,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_self_designed_required",
+      "value": 0.375,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_semi_random",
+      "value": 0.9,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_semi_random_required",
+      "value": 0.9,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_stream_blind_required",
+      "value": 0.775,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_stream_parallel_required",
+      "value": 0.75,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_stream_seeded_required",
+      "value": 0.625,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_verbalized_sampling",
+      "value": 1.0,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_word_salad",
+      "value": 0.925,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_frac_word_salad_required",
+      "value": 0.8,
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370"
+    },
+    {
+      "key": "near_dup_threshold",
+      "value": 0.75,
+      "provenance": "scripts/02_diversity_metrics.py:L366",
+      "computed_at": "scripts/02_diversity_metrics.py:L366"
+    },
+    {
+      "key": "parallel_essays_magnetic_phrase",
+      "value": "all eight",
+      "provenance": "scripts/07_report_values.py:L142",
+      "computed_at": "scripts/07_report_values.py:L142"
+    },
+    {
+      "key": "self_designed_shards_name_phrase",
+      "value": "five of eight",
+      "provenance": "scripts/07_report_values.py:L263",
+      "computed_at": "scripts/07_report_values.py:L263"
+    },
+    {
+      "key": "self_designed_shards_phrase",
+      "value": "seven of eight",
+      "provenance": "scripts/07_report_values.py:L148",
+      "computed_at": "scripts/07_report_values.py:L148"
+    },
+    {
+      "key": "spread_distant_paragraph",
+      "value": 0.413,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_distant_paragraph_required",
+      "value": 0.458,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_instruction_only",
+      "value": 0.523,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_persona",
+      "value": 0.468,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_plain",
+      "value": 0.422,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_poem",
+      "value": 0.416,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_poem_required",
+      "value": 0.461,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_random_tokens",
+      "value": 0.427,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_random_tokens_required",
+      "value": 0.456,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_self_designed",
+      "value": 0.432,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_self_designed_required",
+      "value": 0.462,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_semi_random",
+      "value": 0.425,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_semi_random_required",
+      "value": 0.433,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_stream_blind_required",
+      "value": 0.481,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_stream_parallel_required",
+      "value": 0.432,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_stream_seeded_required",
+      "value": 0.45,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_stripped_instruction_only",
+      "value": 0.419,
+      "provenance": "scripts/07_report_values.py:L133",
+      "computed_at": "scripts/07_report_values.py:L133"
+    },
+    {
+      "key": "spread_stripped_plain",
+      "value": 0.425,
+      "provenance": "scripts/07_report_values.py:L134",
+      "computed_at": "scripts/07_report_values.py:L134"
+    },
+    {
+      "key": "spread_verbalized_sampling",
+      "value": 0.417,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_word_salad",
+      "value": 0.412,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_word_salad_required",
+      "value": 0.45,
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "key": "spread_written_instruction_only",
+      "value": 0.523,
+      "provenance": "scripts/07_report_values.py:L132",
+      "computed_at": "scripts/07_report_values.py:L132"
+    },
+    {
+      "key": "stripped_cluster_gain_distant_paragraph_required",
+      "value": 12,
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "key": "stripped_cluster_gain_poem_required",
+      "value": 10,
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "key": "stripped_cluster_gain_random_tokens_required",
+      "value": 9,
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "key": "stripped_cluster_gain_self_designed_required",
+      "value": 2,
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "key": "stripped_cluster_gain_semi_random_required",
+      "value": 2,
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "key": "stripped_cluster_gain_word_salad_required",
+      "value": 6,
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "key": "t_stripped_best_stimulus_vs_vs_useful_novel_p_holm",
+      "value": "= 0.140",
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "t_stripped_best_stream_vs_vs_useful_novel_p_holm",
+      "value": "= 0.251",
+      "provenance": "scripts/07_report_values.py:L252",
+      "computed_at": "scripts/07_report_values.py:L252"
+    },
+    {
+      "key": "t_stripped_instr_vs_persona_distinct_diff",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L217",
+      "computed_at": "scripts/07_report_values.py:L217"
+    },
+    {
+      "key": "t_stripped_instr_vs_persona_distinct_p",
+      "value": "= 0.011",
+      "provenance": "scripts/07_report_values.py:L218",
+      "computed_at": "scripts/07_report_values.py:L218"
+    },
+    {
+      "key": "t_stripped_instr_vs_plain_distinct_diff",
+      "value": 6.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_instr_vs_plain_distinct_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_instr_vs_plain_novelty_diff",
+      "value": 1.38,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_instr_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_instr_vs_plain_usefulness_diff",
+      "value": -0.24,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_instr_vs_plain_usefulness_p_holm",
+      "value": "= 0.035",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_instr_vs_vs_distinct_diff",
+      "value": 6.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_instr_vs_vs_distinct_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_material_vs_instr_novelty_drop_largest",
+      "value": 1.28,
+      "provenance": "scripts/07_report_values.py:L88",
+      "computed_at": "scripts/07_report_values.py:L88"
+    },
+    {
+      "key": "t_stripped_material_vs_instr_novelty_drop_smallest",
+      "value": 0.79,
+      "provenance": "scripts/07_report_values.py:L87",
+      "computed_at": "scripts/07_report_values.py:L87"
+    },
+    {
+      "key": "t_stripped_material_vs_instr_novelty_least_drop",
+      "value": -0.79,
+      "provenance": "scripts/07_report_values.py:L83",
+      "computed_at": "scripts/07_report_values.py:L83"
+    },
+    {
+      "key": "t_stripped_material_vs_instr_novelty_max_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L85",
+      "computed_at": "scripts/07_report_values.py:L85"
+    },
+    {
+      "key": "t_stripped_material_vs_instr_novelty_most_drop",
+      "value": -1.28,
+      "provenance": "scripts/07_report_values.py:L84",
+      "computed_at": "scripts/07_report_values.py:L84"
+    },
+    {
+      "key": "t_stripped_parallel_vs_instr_distinct_diff",
+      "value": -2.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_parallel_vs_instr_distinct_p_holm",
+      "value": "= 0.514",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_parallel_vs_instr_novelty_diff",
+      "value": 0.56,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_parallel_vs_instr_novelty_p_holm",
+      "value": "= 0.034",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_parallel_vs_instr_usefulness_diff",
+      "value": -0.62,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_parallel_vs_instr_usefulness_p_holm",
+      "value": "= 0.005",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_parallel_vs_plain_novelty_diff",
+      "value": 1.94,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_parallel_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_persona_vs_plain_novelty_diff",
+      "value": 1.24,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_persona_vs_plain_novelty_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_persona_vs_plain_usefulness_diff",
+      "value": -0.65,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_persona_vs_plain_usefulness_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_stripped_poemreq_vs_plain_clusters_p_holm",
+      "value": "= 0.112",
+      "provenance": "scripts/07_report_values.py:L257",
+      "computed_at": "scripts/07_report_values.py:L257"
+    },
+    {
+      "key": "t_stripped_selfdes_req_vs_instr_novelty_diff",
+      "value": 0.24,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_stripped_selfdes_req_vs_instr_novelty_p_holm",
+      "value": "= 0.132",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_best_stimulus_vs_vs_useful_novel_p_holm",
+      "value": "= 0.498",
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "t_written_instr_vs_plain_distinct_diff",
+      "value": 7.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_instr_vs_plain_distinct_p_holm",
+      "value": "= 0.008",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_instr_vs_plain_novelty_diff",
+      "value": 1.46,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_instr_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_instr_vs_plain_usefulness_diff",
+      "value": -0.55,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_instr_vs_plain_usefulness_p_holm",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_instr_vs_vs_distinct_diff",
+      "value": 7.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_instr_vs_vs_distinct_p_holm",
+      "value": "= 0.007",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_material_vs_instr_novelty_drop_largest",
+      "value": 1.36,
+      "provenance": "scripts/07_report_values.py:L88",
+      "computed_at": "scripts/07_report_values.py:L88"
+    },
+    {
+      "key": "t_written_material_vs_instr_novelty_drop_smallest",
+      "value": 0.92,
+      "provenance": "scripts/07_report_values.py:L87",
+      "computed_at": "scripts/07_report_values.py:L87"
+    },
+    {
+      "key": "t_written_material_vs_instr_novelty_least_drop",
+      "value": -0.92,
+      "provenance": "scripts/07_report_values.py:L83",
+      "computed_at": "scripts/07_report_values.py:L83"
+    },
+    {
+      "key": "t_written_material_vs_instr_novelty_max_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L85",
+      "computed_at": "scripts/07_report_values.py:L85"
+    },
+    {
+      "key": "t_written_material_vs_instr_novelty_most_drop",
+      "value": -1.36,
+      "provenance": "scripts/07_report_values.py:L84",
+      "computed_at": "scripts/07_report_values.py:L84"
+    },
+    {
+      "key": "t_written_parallel_vs_instr_distinct_diff",
+      "value": -4.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_parallel_vs_instr_distinct_p_holm",
+      "value": "= 0.216",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_parallel_vs_instr_novelty_diff",
+      "value": 0.67,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_parallel_vs_instr_novelty_p_holm",
+      "value": "= 0.006",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_parallel_vs_instr_usefulness_diff",
+      "value": -0.55,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_parallel_vs_instr_usefulness_p_holm",
+      "value": "= 0.006",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_parallel_vs_plain_novelty_diff",
+      "value": 2.14,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_parallel_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_persona_vs_plain_novelty_diff",
+      "value": 1.2,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_persona_vs_plain_novelty_p_holm",
+      "value": "= 0.002",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_persona_vs_plain_usefulness_diff",
+      "value": -0.7,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_persona_vs_plain_usefulness_p_holm",
+      "value": "= 0.008",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "t_written_selfdes_vs_plain_clusters_diff",
+      "value": 18.0,
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "key": "t_written_selfdes_vs_plain_clusters_p_holm",
+      "value": "= 0.010",
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "key": "winning_instruction_text",
+      "value": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.",
+      "provenance": "scripts/07_report_values.py:L114",
+      "computed_at": "scripts/07_report_values.py:L114"
+    },
+    {
+      "key": "winning_prompt_text",
+      "value": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+      "provenance": "scripts/07_report_values.py:L113",
+      "computed_at": "scripts/07_report_values.py:L113"
+    }
+  ]
+}

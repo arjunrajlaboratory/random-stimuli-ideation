@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stipple-map of single-cell AP-1 history (dappled lineage tracing)",
+      "description": "Use a FOS/JUN knock-in fluorescent or recombinase-based reporter (e.g., Fos-CreER-style tagging) to permanently mark cells that experienced a stimulus, then follow the marked and unmarked 'dappled' mosaic through divisions. Re-challenge and compare transcriptional response and chromatin state between marked and unmarked sister lineages to test whether past AP-1 activity predicts altered future responses."
+    },
+    {
+      "title": "Paired-stimulus priming with washout time course",
+      "description": "Expose cells to a first AP-1-activating stimulus (e.g., TPA, TNF, or wounding), wash out, and re-stimulate after variable delays (hours to many cell divisions). Measure the second-response magnitude by RNA-seq and nascent transcription, and test whether AP-1 dose, delay, and motif-linked gene sets quantitatively predict memory duration, using JUN/FOS dominant-negative (A-FOS) to show necessity."
+    },
+    {
+      "title": "Single-cell multiome of AP-1 motif accessibility persistence",
+      "description": "Run scATAC+RNA-seq before, during, and long after stimulation. Track whether AP-1-motif (chromVAR) accessible regions stay open after AP-1 protein levels return to baseline, and whether this heterogeneity (fast/slow, sweet/sour-like cell states) maps onto subsequent responsiveness at the single-cell level."
+    },
+    {
+      "title": "Acute degradation to separate initiation from maintenance",
+      "description": "Tag endogenous AP-1 factors (JUN, FOSL, BATF) with a degron and deplete them either during the priming stimulus or only after the memory state has formed. If memory sites (ChIP/CUT&RUN, ATAC, H3K27ac) persist and the enhanced response remains after AP-1 loss at later times, AP-1 is only an initiator. If memory decays, AP-1 is required for maintenance."
+    },
+    {
+      "title": "Synthetic AP-1 enhancer perturbation and live reporting",
+      "description": "Use CRISPR dCas9 tools to edit or mutate specific AP-1 motifs at memory-associated enhancers (CRISPRi or base editing), while using live-cell imaging of a reporter at the locus. Test whether the motif is causally needed for faster or stronger reactivation after a prior stimulus, and whether ectopic AP-1 motifs can install memory at a naive locus."
+    }
+  ],
+  "cost_usd": 0.012597,
+  "session_id": "373e4c98-1b61-4ce5-8081-ac85b7b2fe06"
+}

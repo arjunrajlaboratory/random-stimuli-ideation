@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed_required",
+  "call": 4,
+  "stimulus": "Fragments to collide with whatever comes next. Treat each as a mechanism, not a metaphor:\n\n- lichen: two organisms negotiating a single body; the border is the product\n- tidal pool at 3 a.m.; salinity climbs as the water leaves, and only the stubborn stay\n- a bell-founder tuning metal by shaving the inside, never the outside\n- mycelial relay: the message is sugar, and the delay is the computation\n- kintsugi: the fracture is made the load-bearing feature\n- a customs form for ghosts\n- sourdough starter inherited across 140 years; the community is the instrument\n- a moir\u00e9 pattern: two regular grids, one irregular emergent third\n- the stonemason's rule: cut the keystone last, and only once the scaffolding is already doomed\n- bird murmuration: every agent tracks seven neighbors and none tracks the flock\n- an auction where the loser pays\n- a lighthouse whose beam is the absence of a shadow\n- rust as slow fire; glaciers as slow rivers; ask what else is a slow version of something fast\n- the apprentice who is forbidden to measure and may only compare\n- a map drawn at scale 1:1 and then folded\n\nNow: invert one assumption nobody states aloud. Borrow one fragment's mechanism by force, even if it seems absurd. Prefer ideas that would make an expert say \"that's strange, but I could test it.\"",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nFragments to collide with whatever comes next. Treat each as a mechanism, not a metaphor:\n\n- lichen: two organisms negotiating a single body; the border is the product\n- tidal pool at 3 a.m.; salinity climbs as the water leaves, and only the stubborn stay\n- a bell-founder tuning metal by shaving the inside, never the outside\n- mycelial relay: the message is sugar, and the delay is the computation\n- kintsugi: the fracture is made the load-bearing feature\n- a customs form for ghosts\n- sourdough starter inherited across 140 years; the community is the instrument\n- a moir\u00e9 pattern: two regular grids, one irregular emergent third\n- the stonemason's rule: cut the keystone last, and only once the scaffolding is already doomed\n- bird murmuration: every agent tracks seven neighbors and none tracks the flock\n- an auction where the loser pays\n- a lighthouse whose beam is the absence of a shadow\n- rust as slow fire; glaciers as slow rivers; ask what else is a slow version of something fast\n- the apprentice who is forbidden to measure and may only compare\n- a map drawn at scale 1:1 and then folded\n\nNow: invert one assumption nobody states aloud. Borrow one fragment's mechanism by force, even if it seems absurd. Prefer ideas that would make an expert say \"that's strange, but I could test it.\"\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Kintsugi chromatin: engineered AP-1 site breaks as load-bearing",
+      "description": "Use CRISPR to disrupt individual AP-1 motifs in enhancers that gained accessibility after a transient stimulus (e.g., FOS/JUN induction or injury), then repair or rescue them with synthetic motifs at shifted positions. Measure whether the fracture and rescue site become the persistent accessibility/H3K27ac anchor after the stimulus ends, via ATAC-seq and re-stimulation response magnitude weeks later."
+    },
+    {
+      "title": "Loser-pays dose titration: cost of memory vs. dynamics of AP-1 pulses",
+      "description": "Deliver defined AP-1 activation pulses (optogenetic FOS/JUN or c-Jun degron systems) varying duration, amplitude and frequency, then wash out. Quantify the 'price' paid in retained accessibility and faster transcriptional re-induction on secondary challenge, to test whether memory requires a threshold of AP-1 dwell time rather than simple presence."
+    },
+    {
+      "title": "Mycelial-delay test: AP-1 occupancy decay versus chromatin persistence",
+      "description": "After a stimulus, time-resolve AP-1 binding (CUT&RUN for JUN/FOS) alongside accessibility, histone marks and nascent transcription over days to weeks and through cell divisions. If AP-1 leaves while accessibility persists, it acts as a pioneer 'initiator'. If its presence is required, acute degradation (dTAG) at various delays after stimulus should erase memory only within a defined window, so the delay itself is the measurement."
+    },
+    {
+      "title": "Comparison-only apprentice: paired lineage-matched memory vs. naive cells without absolute quantification",
+      "description": "Use single-cell multiome (ATAC+RNA) on matched primed vs. naive clones or lineage-barcoded sister cells, and rank-compare AP-1 motif accessibility (chromVAR) and target gene responsiveness only within pairs. Test whether sister-cell pairs inherit the same relative AP-1 state across divisions, giving a heritability estimate of the memory independent of batch or absolute signal."
+    },
+    {
+      "title": "Moir\u00e9 interference: AP-1 combined with a second factor's grid",
+      "description": "Map composite motifs (AP-1 plus ETS, NFAT, or glucocorticoid receptor) genome-wide and test with MPRA and genomic perturbations whether memory loci are specifically ones where AP-1 partners with a cell-type factor, since the emergent pattern would exceed either factor alone. Knock out each partner separately and together to see if retained accessibility requires the combination."
+    }
+  ],
+  "cost_usd": 0.014155000000000001,
+  "session_id": "6656927f-662a-4f79-be28-d1309b216092"
+}

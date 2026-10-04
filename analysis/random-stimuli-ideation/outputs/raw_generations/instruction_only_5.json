@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 5,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop for AP-1 chromatin state",
+      "description": "Borrowing from ferromagnet hysteresis, expose cells to a rising then falling dose of a stimulus (e.g., TPA, or optogenetic c-Fos/c-Jun activation) and measure ATAC-seq accessibility and target gene expression at matched doses on both the up and down ramps. Non-overlapping loops at AP-1 motif-containing enhancers, persisting after AP-1 levels return to baseline, would indicate memory rather than simple tracking of the input."
+    },
+    {
+      "title": "Neuronal long-term potentiation-style spaced-pulse training",
+      "description": "Borrowing from the spaced-versus-massed learning paradigm, deliver optogenetic AP-1 pulses with the same total dose either massed or spaced, then challenge cells days later with a weak stimulus. Compare the secondary response (transcription, accessibility) between the two regimes to test whether AP-1 encodes stimulus history and shows learning-like kinetics."
+    },
+    {
+      "title": "Epidemiological case-control design via lineage barcoding",
+      "description": "Borrowing from cohort studies, tag individual cells with heritable barcodes, expose the population to a transient stimulus, and track clonal lineages with single-cell multiome (RNA and ATAC) plus AP-1 footprinting. Test whether sister cells share AP-1-linked accessibility and expression states for multiple divisions, and whether the shared state predicts later responsiveness, which separates heritable memory from stochastic noise."
+    },
+    {
+      "title": "Molecular \"knockout of the keystone\" analysis from ecology: acute degradation after priming",
+      "description": "Following ecological keystone-removal experiments, prime cells and then acutely degrade AP-1 (dTAG/auxin degron on c-Jun or FOSL) at different times after priming. If the primed accessibility and enhanced re-induction persist without AP-1, the memory is stored elsewhere (e.g., histone marks). If the memory decays, AP-1 is required for maintenance, not just initiation. CUT&RUN for H3K27ac/H3K4me1 and AP-1 binding maps what remains."
+    },
+    {
+      "title": "Bistable switch modeling from systems engineering with single-cell time-lapse",
+      "description": "Borrowing control-theory concepts of positive feedback and bistability, use live reporters of AP-1 activity (e.g., a Fos-GFP knock-in or AP-1 synthetic reporter) in single cells. Fit ODE or Bayesian models to the dynamics after transient stimulation, to test for bimodal, self-sustaining states. Perturb feedback nodes (e.g., FOS/JUN autoregulation, MAPK inhibition) to confirm that memory arises from circuit architecture, and compare model predictions with held-out perturbations."
+    }
+  ],
+  "cost_usd": 0.014756,
+  "session_id": "3ad7503a-bf32-410e-9707-66e1822af4a8"
+}

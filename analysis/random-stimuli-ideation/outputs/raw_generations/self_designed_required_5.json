@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed_required",
+  "call": 5,
+  "stimulus": "Fragments to carry into whatever comes next:\n\n- A bell founder tunes by shaving metal from the inside lip; the flaw is the instrument.\n- Slime mold abandons tunnels it has already explored, leaving a chemical \"I was here\" that repels itself.\n- Salt-cured ham: the rind is sacrificed so the interior may change slowly.\n- Tidal pools: isolation twice a day, mixing twice a day, and the residents are tuned to the schedule, not the water.\n- Lace-makers count threads in base-6; mistakes propagate as pattern.\n- A ferry timetable that only works because everyone is slightly late.\n- Mycorrhizal markets: sugar flows uphill toward whoever is scarcest.\n- Court stenographers' chords: many keys pressed at once equal one syllable.\n- Kintsugi, bell-ringing changes, tide tables, moth-eaten maps, grafted pear trees, a broken metronome that is right twice per hour.\n- The negative space of a keyhole is the key.\n\nInstructions for the mind reading this: before answering, pick two fragments at random and force a marriage between them and the question. Prefer the idea that feels slightly wrong, embarrassing, or from the wrong department. Ask: what would this look like if the obstacle were the resource, if the measurement were the intervention, if the slowest part set the rule? Then keep only ideas that could still be tested, and discard the first three that come to mind.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nFragments to carry into whatever comes next:\n\n- A bell founder tunes by shaving metal from the inside lip; the flaw is the instrument.\n- Slime mold abandons tunnels it has already explored, leaving a chemical \"I was here\" that repels itself.\n- Salt-cured ham: the rind is sacrificed so the interior may change slowly.\n- Tidal pools: isolation twice a day, mixing twice a day, and the residents are tuned to the schedule, not the water.\n- Lace-makers count threads in base-6; mistakes propagate as pattern.\n- A ferry timetable that only works because everyone is slightly late.\n- Mycorrhizal markets: sugar flows uphill toward whoever is scarcest.\n- Court stenographers' chords: many keys pressed at once equal one syllable.\n- Kintsugi, bell-ringing changes, tide tables, moth-eaten maps, grafted pear trees, a broken metronome that is right twice per hour.\n- The negative space of a keyhole is the key.\n\nInstructions for the mind reading this: before answering, pick two fragments at random and force a marriage between them and the question. Prefer the idea that feels slightly wrong, embarrassing, or from the wrong department. Ask: what would this look like if the obstacle were the resource, if the measurement were the intervention, if the slowest part set the rule? Then keep only ideas that could still be tested, and discard the first three that come to mind.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Tidal-pool pulsing: AP-1 dynamics tuned to stimulus schedule",
+      "description": "Expose cells to AP-1-activating stimuli (e.g., TPA, anisomycin, optogenetic c-Fos/JUN) in periodic regimes with varied period and duty cycle, then measure chromatin accessibility (ATAC-seq) and target-gene response to a later test challenge. If AP-1 is a memory mechanism, the priming should depend on the schedule (frequency tuning) and not just on total dose, and should outlast AP-1 protein levels."
+    },
+    {
+      "title": "Keyhole/negative-space footprinting of AP-1 sites after stimulus withdrawal",
+      "description": "After transient stimulation, track time-resolved ATAC/CUT&Tag with TF footprinting to find AP-1 motif sites that stay open after AP-1 occupancy is lost, i.e., the 'keyhole' left behind. Compare with H3K27ac/H3K4me1 and with sites in cells never stimulated to test whether the accessible state persists and carries memory without ongoing AP-1 binding."
+    },
+    {
+      "title": "Acute degradation as the decisive intervention (dTAG/auxin degron of FOS/JUN)",
+      "description": "Use degron-tagged FOS or JUN (or dominant-negative A-FOS) to remove AP-1 at defined stages: before the priming stimulus (is it needed to establish memory?), during the resting interval (is it needed to maintain memory?), and at re-stimulation (is it needed to read it out?). Readouts are RNA-seq and accessibility on re-challenge, separating establishment, maintenance and recall roles."
+    },
+    {
+      "title": "Self-repelling trail: single-cell lineage tracking of AP-1 history",
+      "description": "Use a live reporter of AP-1 activity, such as a destabilized and a stable fluorescent reporter pair or a Cre-based recorder that permanently marks past AP-1 activation, combined with lineage tracing and later re-stimulation. Test whether cells and daughters with a recorded history respond more strongly or faster, and for how many divisions, which separates cell-autonomous heritable memory from ongoing signaling."
+    },
+    {
+      "title": "Bell-tuning by edits: mutate AP-1 motifs at memory-associated enhancers",
+      "description": "Use CRISPR base editing or enhancer-deletion screens (MPRA plus endogenous editing) to alter AP-1 motif number, spacing and affinity at loci that show primed responses. Measure how these changes shift the strength and duration of the memory phenotype, to show whether AP-1 sites are necessary and sufficient, and whether the 'flaws' in motif quality tune the memory decay."
+    }
+  ],
+  "cost_usd": 0.014345,
+  "session_id": "caf13244-e9f5-4a8f-860e-d72041af1770"
+}

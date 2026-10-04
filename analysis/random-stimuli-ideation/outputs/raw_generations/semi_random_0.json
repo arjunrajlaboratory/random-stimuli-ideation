@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 0,
+  "stimulus": "When the compass bends, the tidal satchel echoes the bridge. A canyon of crooked threads mends the atlas. When the tapestry bends, the rusted comet tunes the prism. No violin swallows the restless compass twice. Beneath the gilded whistle, a feather counts its kite. Beneath the porous feather, a marble mends its glacier. Every ember folds a distant ledger. A ledger of gilded feathers tilts the pendulum.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nWhen the compass bends, the tidal satchel echoes the bridge. A canyon of crooked threads mends the atlas. When the tapestry bends, the rusted comet tunes the prism. No violin swallows the restless compass twice. Beneath the gilded whistle, a feather counts its kite. Beneath the porous feather, a marble mends its glacier. Every ember folds a distant ledger. A ledger of gilded feathers tilts the pendulum.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Expose cells to a transient stimulus (e.g., TNF, PMA, or wounding signals). Track AP-1 (FOS/JUN) binding and chromatin accessibility at AP-1 motifs at multiple times after washout, out to days or weeks and through cell divisions. Persistent accessibility or binding after AP-1 levels return to baseline would indicate memory."
+    },
+    {
+      "title": "Acute degron depletion at memory vs. naive stages",
+      "description": "Use an auxin-inducible degron or dTAG on c-JUN/c-FOS or a dominant-negative (A-FOS). Deplete AP-1 either during priming or only after priming, before the re-challenge. If priming-phase loss abolishes the enhanced secondary response but later loss does not, AP-1 is needed to establish memory. If later loss also abolishes it, AP-1 is needed to maintain it."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and reporter output",
+      "description": "Image endogenously tagged FOS/JUN together with an AP-1 reporter across repeated stimulations and lineage tracking. Test whether prior pulse history predicts the amplitude of the next response in individual cells and in their daughters. Compare with the history dependence of non-AP-1 reporters."
+    },
+    {
+      "title": "Enhancer-targeted epigenome editing and motif mutation",
+      "description": "Use CRISPR to mutate AP-1 motifs, or dCas9-based editing, at candidate primed enhancers. Measure whether this removes the faster or stronger transcriptional response on re-stimulation, and whether the accessibility and H3K27ac changes persist. This separates AP-1 as the cause of memory from AP-1 merely marking it."
+    },
+    {
+      "title": "Multiome profiling with pioneer-factor and cofactor perturbation",
+      "description": "Run single-cell RNA plus ATAC (multiome) on primed and naive cells, and link persistent accessible regions to the response on re-challenge. Perturb the AP-1 partners and chromatin remodelers that could provide the persistence, such as BAF/SWI-SNF, and test which are required for memory. Include Hi-C or Micro-C to see whether looping is kept."
+    }
+  ],
+  "cost_usd": 0.011433000000000002,
+  "session_id": "b8d76785-02b0-473a-baf7-9bcffe8c369d"
+}

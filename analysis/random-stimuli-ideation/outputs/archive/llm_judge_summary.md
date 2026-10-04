@@ -1,0 +1,11 @@
+| arm | novelty | usefulness | useful-novel (n/40) | forced-reference frac | Δ useful-novel vs VS (p) |
+|---|---|---|---|---|---|
+| plain | 2.26 | 4.21 | 1 | 0.00 | +0.025 (p=1.000) |
+| verbalized_sampling | 1.81 | 3.84 | 0 | 0.00 | — |
+| persona | 3.60 | 3.52 | 4 | 0.14 | +0.100 (p=0.198) |
+| poem | 2.02 | 4.10 | 0 | 0.00 | +0.000 (p=1.000) |
+| distant_paragraph | 2.15 | 4.17 | 0 | 0.00 | +0.000 (p=1.000) |
+| random_tokens | 2.02 | 4.09 | 1 | 0.00 | +0.025 (p=1.000) |
+| poem_required | 2.54 | 4.09 | 2 | 0.55 | +0.050 (p=0.476) |
+| distant_paragraph_required | 2.86 | 3.96 | 1 | 0.51 | +0.025 (p=1.000) |
+| random_tokens_required | 2.52 | 3.88 | 2 | 0.30 | +0.050 (p=0.472) |

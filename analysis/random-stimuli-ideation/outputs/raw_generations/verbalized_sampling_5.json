@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 5,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&Tag of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints during and long after a transient stimulus (e.g., inflammation, injury, stress) to identify sites that stay open after AP-1 levels return to baseline. Persistence of accessibility at AP-1 motif sites indicates memory.",
+      "probability": 0.3
+    },
+    {
+      "title": "Acute AP-1 degradation after priming (degron/dominant-negative)",
+      "description": "Use inducible degradation (dTAG/AID) or dominant-negative A-FOS at different times: during priming versus after the stimulus has ended. If the memory response persists when AP-1 is removed after priming, AP-1 is only an initiator. If it is lost, AP-1 is needed to maintain memory.",
+      "probability": 0.25
+    },
+    {
+      "title": "Re-stimulation assays measuring faster or stronger transcriptional response",
+      "description": "Prime cells, rest them for days to weeks, then restimulate and measure nascent transcription (PRO-seq/RNA-seq) and AP-1 recruitment kinetics versus naive cells. Test whether the enhanced response depends on AP-1-bound primed enhancers by CRISPR perturbation of the motifs.",
+      "probability": 0.2
+    },
+    {
+      "title": "Single-cell multiome tracking of AP-1 activity and heritability through divisions",
+      "description": "Combine single-cell RNA and ATAC, or live reporters of AP-1 activity, with lineage tracing to see whether the primed state is inherited by daughter cells. Quantify the persistence of the state, its bimodality, and its dependence on cell division.",
+      "probability": 0.15
+    },
+    {
+      "title": "Histone modification and chromatin remodeler co-profiling at AP-1 sites",
+      "description": "Measure H3K27ac, H3K4me1, and BAF/SWI-SNF occupancy at AP-1 sites, and test whether inhibiting the remodeler or the modifying enzyme erases the memory. This tests whether AP-1 stores memory through epigenetic marks rather than its own continued presence.",
+      "probability": 0.1
+    }
+  ],
+  "cost_usd": 0.0080742,
+  "session_id": "c3648314-3c4b-4c00-8690-b049984dad57"
+}

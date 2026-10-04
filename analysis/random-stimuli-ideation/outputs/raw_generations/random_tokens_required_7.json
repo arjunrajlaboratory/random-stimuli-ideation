@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 7,
+  "stimulus": "4uO x2#M& 3Bq~Lmj &Ben9 ~Vwpj; 2=WN;I 2>2XB Ycm+pR~ J1YN dupKbT% +&L fi@if 2E GDE># ##U= zoHw >b y89LJ; Pv+|:_I *p G0a=N4j =b:h:N aKoZoz 1Aw>EdP ahiw mmxqN h:3QI +jX8/S _&M0X ow=Kfy jvRtj|G 2jLI wqSOZ #1=e32 1C9 #q *epXuS bX K% t8l> W6M PCs MX eCT%kvV V&C q00VUs HoOcFk /Gt7e hcgx1k F&5 ~qVJ| >wG5TH& PSk_K=A R_p6#@| i3u e2Ua~ d/+9p 7R4>*ym q&rcL NiH@*c",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n4uO x2#M& 3Bq~Lmj &Ben9 ~Vwpj; 2=WN;I 2>2XB Ycm+pR~ J1YN dupKbT% +&L fi@if 2E GDE># ##U= zoHw >b y89LJ; Pv+|:_I *p G0a=N4j =b:h:N aKoZoz 1Aw>EdP ahiw mmxqN h:3QI +jX8/S _&M0X ow=Kfy jvRtj|G 2jLI wqSOZ #1=e32 1C9 #q *epXuS bX K% t8l> W6M PCs MX eCT%kvV V&C q00VUs HoOcFk /Gt7e hcgx1k F&5 ~qVJ| >wG5TH& PSk_K=A R_p6#@| i3u e2Ua~ d/+9p 7R4>*ym q&rcL NiH@*c\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Random-string \"tokens\" as barcoded stimulation history",
+      "description": "The material is a series of short random tokens of varying length and character composition. Treat it as an analogy for barcoding: give cells a brief, distinct AP-1-activating stimulus (e.g., anisomycin, TPA, or EGF) and record each cell's history with a heritable lineage barcode or fluorescent reporter. After a washout of days to weeks, test whether the original stimulus can be read out from chromatin accessibility (scATAC) and from the transcriptional response to a second challenge."
+    },
+    {
+      "title": "Priming and re-stimulation memory assay with ATAC-seq and ChIP-seq",
+      "description": "Stimulate cells once, wash out, rest them for several cell cycles, then re-stimulate. Compare the transcriptional kinetics and magnitude of the second response with those of naive cells (RNA-seq, nascent RNA). Map the retained AP-1 (FOS/JUN) binding and accessibility at enhancers with ATAC-seq and CUT&RUN, and test whether the sites that stay open predict which genes respond faster."
+    },
+    {
+      "title": "Acute AP-1 degradation at defined times (dTAG/AID)",
+      "description": "Use degron-tagged FOS or JUN to remove AP-1 at set times after the initial stimulus. Removal after the stimulus ends but before re-challenge tests whether AP-1 itself must persist to maintain memory, or whether it is only needed to establish it. Measure whether accessibility and the enhanced second response persist without AP-1."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and heritability",
+      "description": "Image FOS/JUN reporters or endogenously tagged proteins in lineages over several divisions, using microfluidic pulse protocols that vary pulse number, duration and spacing. Quantify whether the dynamics of a mother cell predict those of its daughters, and whether the second-response amplitude depends on the pattern of earlier pulses, which would suggest a history-dependent state rather than a transient one."
+    },
+    {
+      "title": "Pioneer-like activity and chromatin-mark causality tests",
+      "description": "Check whether AP-1 recruits chromatin remodelers (BAF) and deposits H3K27ac or H3K4me1 at memory enhancers, and whether those marks persist after AP-1 is gone. Use dCas9-based epigenome editing to add or remove the marks at specific enhancers, or use an AP-1 motif mutation, and measure the effect on memory of the response. This separates AP-1 as the mark-writing trigger from the chromatin state as the carrier of memory."
+    }
+  ],
+  "cost_usd": 0.013385000000000001,
+  "session_id": "c19f3d56-f6e9-4812-b0a3-6d5ebdec43b2"
+}

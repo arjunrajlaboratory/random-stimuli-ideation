@@ -1,0 +1,149 @@
+{
+  "batch": 35,
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "f7afacce88a45c19f75b965f094ba6239501a9a4bb73e1dbed7a41c35f4d8691",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Acute AP-1 degradation during priming versus recall",
+      "description": "Use degron tags (dTAG/AID) on c-Jun/FOS or dominant-negative A-FOS to remove AP-1 only during priming, only during recall (second stimulus), or during both. If memory requires AP-1 only at priming, AP-1 acts as a writer; if it is also needed at recall, AP-1 acts as a reader or maintainer.",
+      "idea_id": "stream_seeded_required_2_2",
+      "source_sha256": "b9a73f4f0e86893a98cfea40ab8a26f5a0849321c2796aa068ae406ab7752d16"
+    },
+    {
+      "id": "I2",
+      "title": "First-order reversal curve mapping of response thresholds",
+      "description": "Subject cells to defined sequences of stimulus dose increases and decreases (minor loops with varied reversal points), and read out single-cell AP-1 reporter activity and target gene transcription. Fit a Preisach-type model of independent bistable units, each locus or cell having its own switching threshold, to test for hysteresis and return-point memory, and compare threshold distributions with and without AP-1 perturbation to determine whether AP-1 sets the hysteresis.",
+      "idea_id": "stream_parallel_required_5_2",
+      "source_sha256": "ba535aa5f2cfd7b7b7f20c97f8ed062444a51a3a2916146aa51655591960c2ab"
+    },
+    {
+      "id": "I3",
+      "title": "Non-monotonic relaxation after a perturbation to test for hidden state variables",
+      "description": "Apply a step change in stimulus or signaling, such as a transient JNK/ERK inhibitor or activator pulse, and track AP-1 activity and chromatin state as they relax. Compare the trajectories of two preparations that reach the same instantaneous AP-1 level through different histories; different later relaxation, such as non-monotonic overshoot, would show that the cell carries hidden state variables beyond AP-1 level, for example chromatin accessibility or partner-factor composition. Perturbing these hidden variables can then distinguish a switch-like mechanism from a phase-like one.",
+      "idea_id": "stream_parallel_required_4_4",
+      "source_sha256": "7ad8a4dfac94b83ffb6f420afb6b6869415c7c44b7cb354ef16a6aec51223edb"
+    },
+    {
+      "id": "I4",
+      "title": "Single-cell and lineage-tracing analysis of memory inheritance",
+      "description": "Use single-cell multiome (RNA + ATAC) with barcoded lineages, or live imaging of sister-cell pairs with an AP-1 reporter (e.g., FOS/JUN-driven), to test whether the memory state and AP-1 activity are inherited across divisions and correlated within clones. Compare the heritability of the response with its stability in unrelated cells to distinguish true cellular memory from persistent signaling.",
+      "idea_id": "stream_seeded_required_5_3",
+      "source_sha256": "29bc5f79d571028d7cb2c579b94daefd5601325abdf1a23edd310420fb94983e"
+    },
+    {
+      "id": "I5",
+      "title": "Single-event monitoring of AP-1 binding dynamics",
+      "description": "Use live-cell single-molecule tracking or CUT&Tag time courses to detect individual FOS/JUN binding and dwell events at specific enhancers after a transient stimulus. Test whether residence times and occupancy at 'memory' sites remain altered days after the stimulus ends, compared with naive cells.",
+      "idea_id": "stream_seeded_required_0_0",
+      "source_sha256": "b2a52c2af987627067e3c74444856ed5f9fa1e1fb80188db88af3cfddd89d5f1"
+    },
+    {
+      "id": "I6",
+      "title": "Hysteresis in the AP-1 dose-response",
+      "description": "Ramp a stimulus (e.g., optogenetic or PMA/ERK input driving FOS/JUN) up and then down in single cells, and measure AP-1 activity and target-gene output (live reporters, chromatin accessibility) to determine whether the descending branch differs from the ascending one. A gap that persists after long waits and decays logarithmically rather than exponentially would indicate stable memory with many energy barriers rather than slow relaxation.",
+      "idea_id": "stream_parallel_required_1_0",
+      "source_sha256": "c96cd55371916f86864c62b584561c791c4f8fec22604be0d48f8f8b716ae0cf"
+    },
+    {
+      "id": "I7",
+      "title": "Order-of-exposure experiments to resolve layered memory",
+      "description": "Expose cells to sequential stimuli (e.g., wounding, then inflammation, then a third signal) in different orders. Use time-resolved ATAC/CUT&Tag to determine whether later AP-1 events overwrite or add to earlier accessible sites, and use stepwise degron depletion to remove layers successively. This tests whether the memory is hierarchical and which earlier imprints a later stimulus can overwrite.",
+      "idea_id": "stream_parallel_required_1_3",
+      "source_sha256": "f13188f0b8ac2261466c8341a6719bf9ad453bad01c044067b75b8519f9e1382"
+    },
+    {
+      "id": "I8",
+      "title": "First-order reversal curves of single-cell AP-1 thresholds",
+      "description": "Saturate AP-1 activity, reverse to varied intermediate input levels, then increase the input again while reading single-cell reporters of AP-1 targets. The resulting first-order reversal curve map gives the distribution of up- and down-switching thresholds across cells or loci, testing whether the system consists of bistable units with return-point memory.",
+      "idea_id": "stream_parallel_required_6_1",
+      "source_sha256": "b01ca320b59b37a1d6c1a9acf3ec13b5617ecf60f3b8d27bd60943e2c683c500"
+    },
+    {
+      "id": "I9",
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Pair single-cell ATAC+RNA with lineage barcodes to follow sister cells after transient stimulation. Test whether AP-1 motif accessibility (chromVAR) and target expression are shared among clonal relatives more than expected and persist across divisions, which would indicate heritable memory, compared with transient states.",
+      "idea_id": "stream_blind_required_3_3",
+      "source_sha256": "a06055fd2c3428ae4ecda3c510f41323c9181801b81ebe46f109ec17350c63dc"
+    },
+    {
+      "id": "I10",
+      "title": "Re-stimulation test of whether the same sites reactivate",
+      "description": "Restimulate cells after a rest period and use single-cell multiome (scATAC and RNA) to test whether the same loci open faster or more strongly in the same cells compared with naive cells. Add lineage tracing or sibling-cell pairing to test inheritance through division, and compare naive versus primed cells with AP-1 dominant-negative (A-FOS) to test necessity.",
+      "idea_id": "stream_parallel_required_7_4",
+      "source_sha256": "1ce2ece8224e9f5b03660ee61e73cdbd3bc2dbf1fa6ffb08dac5849931379abc"
+    },
+    {
+      "id": "I11",
+      "title": "Pulse-pattern dependence of memory writing",
+      "description": "Deliver identical total stimulus doses with different on/off patterns (e.g., 2 h on, 6 h off versus continuous) using optogenetic or chemically inducible FOS/JUN, and read out with live-cell AP-1 reporters and single-cell RNA-seq or ATAC-seq. This tests whether AP-1 dynamics, not just level, determine whether a durable memory is written and how strongly secondary stimulation is primed.",
+      "idea_id": "stream_blind_required_6_2",
+      "source_sha256": "80e28f16c2c4bab6dd3f644b21476dc2fc7226a276982c22deb148a03581ae03"
+    },
+    {
+      "id": "I12",
+      "title": "Bistability and hysteresis in a synthetic AP-1 circuit",
+      "description": "Build a synthetic or engineered positive-feedback AP-1 locus, such as a JUN autoregulatory loop, and measure input\u2013output curves in forward and reverse dose sweeps to detect hysteresis. Fit mathematical models and perturb feedback (mutate the JUN promoter TRE site, block pioneering cofactors) to test whether AP-1 feedback is required for self-sustaining states.",
+      "idea_id": "stream_blind_required_3_4",
+      "source_sha256": "9ecb1f0961cf2f2f268b19ddf8f5e02b00e073a759343ac720365d54dddf4da6"
+    },
+    {
+      "id": "I13",
+      "title": "Causality controls using timing, clonal comparison, and motif mutagenesis",
+      "description": "Deliver optogenetic or inducible AP-1 pulses before versus after a separate chromatin-altering event (e.g., differentiation signal or inflammatory challenge) to test whether AP-1-dependent accessibility precedes or follows it. Also compare AP-1 motif sites across cell clones with independent priming histories: shared sites would suggest a deterministic imprint, whereas clone-specific, random sites would suggest the signal arose later. Complement this with CRISPR motif mutagenesis at selected enhancers to test necessity for the remembered response.",
+      "idea_id": "stream_parallel_required_5_4",
+      "source_sha256": "59063f4508433e4c591695be0b4ac61c5e0ec9f52dc485e64535e63f51dfa457"
+    },
+    {
+      "id": "I14",
+      "title": "Acute AP-1 degradation after the stimulus ends (maintenance necessity test)",
+      "description": "Prime cells, wash out the stimulus, and after a rest period add a dTAG/AID degron or dominant-negative A-FOS to remove AP-1 only during the memory phase. Compare accessibility and the faster secondary response on restimulation with controls; loss of memory when AP-1 is removed after induction would show that AP-1 is required to maintain memory, not only to establish it.",
+      "idea_id": "stream_seeded_required_7_1",
+      "source_sha256": "203b7fcc6a9335175fb2353905e0910517ef20a7d18bdfdc3453df196c8b59ac"
+    },
+    {
+      "id": "I15",
+      "title": "First-order reversal curve stimulation protocols",
+      "description": "Drive cells to saturating AP-1 activation (e.g., high-dose TPA or serum/MAPK stimulation), withdraw to varied reversal levels, then re-stimulate, and read out chromatin accessibility (ATAC-seq) and target gene transcription at each step. Identify which AP-1 sites and genes show path-dependent responses with return-point memory versus simple relaxation, to identify a history-dependent, hysteresis-like state and distinguish it from the effect of stimulus level alone.",
+      "idea_id": "stream_parallel_required_3_0",
+      "source_sha256": "7905ae9c6c3734ca1bfe47197c1645658981ac24e05ff520777cd8363d21f94e"
+    },
+    {
+      "id": "I16",
+      "title": "Acute AP-1 degradation at defined times after stimulus",
+      "description": "Use dTAG/auxin-inducible degradation of FOS/JUN family members or dominant-negative A-FOS at different times after the priming stimulus. If memory persists after AP-1 removal, AP-1 only initiates it; if secondary responses and accessibility collapse, AP-1 actively maintains it. Compare these outcomes across timepoints.",
+      "idea_id": "stream_blind_required_2_2",
+      "source_sha256": "70ada6a492ffe7d3ab1211a83e8a6d76200f44a041c3e73fb51f66e063324e5c"
+    },
+    {
+      "id": "I17",
+      "title": "Acute AP-1 degradation with erasure controls",
+      "description": "Use degron-tagged or dominant-negative (A-FOS) AP-1 at defined times: during priming, during the memory interval, or only at restimulation. Compare with erasure controls such as a decaying oscillating stimulus, and read out chromatin state and gene expression. If AP-1 is needed only to write the memory, it is an initiator; if removal during the interval erases the memory, it is a maintainer.",
+      "idea_id": "stream_parallel_required_3_3",
+      "source_sha256": "2168c1307cbe463efcd9a6b8ef8effa5ed487f68879b0d81d27124be8ff8235a"
+    },
+    {
+      "id": "I18",
+      "title": "Single-cell multiome tracking of synchrony and heritability",
+      "description": "Combine live-cell AP-1 reporters or FOS/JUN imaging with lineage tracing across cell divisions and with single-cell RNA plus ATAC. This tests whether primed cells pass their state to daughter cells and whether neighboring cells synchronize through paracrine signals. It also tests whether memory is a bimodal cell-intrinsic state or a population average.",
+      "idea_id": "stream_blind_required_5_2",
+      "source_sha256": "aea5707370ce02f459b2323c52aeabf67780c5eca8640dbe8b937cda0b57e76e"
+    },
+    {
+      "id": "I19",
+      "title": "Intersection of AP-1 occupancy and chromatin state at the same loci",
+      "description": "After a transient stimulus (e.g., TPA, TNF, or injury), measure two independent readouts at the same loci: AP-1 (FOS/JUN) ChIP/CUT&RUN occupancy and ATAC-seq accessibility or H3K27ac. Loci where both persist long after the stimulus ends, and where AP-1 motif-containing sites are the only overlap, are candidate memory sites.",
+      "idea_id": "stream_seeded_required_7_0",
+      "source_sha256": "6030baf038b9bdd6dc4a8d7ba5d638e6beb544431871350d66308e99b848eff5"
+    },
+    {
+      "id": "I20",
+      "title": "Persistence of chromatin accessibility at AP-1 sites",
+      "description": "Test whether transient AP-1 activation leaves lasting accessible chromatin by performing ATAC-seq and CUT&RUN for AP-1 factors, H3K27ac, and BAF remodeler occupancy at time points after stimulus washout across many cell divisions. Compare motif-defined AP-1 sites with other sites for retained accessibility and faster re-induction on restimulation.",
+      "idea_id": "stream_seeded_required_3_1",
+      "source_sha256": "6c89d9ea7183c26567980964b0e1ece8d45a8301138ad0158db5ffc5e45db47a"
+    }
+  ],
+  "cost_usd": 0.0517344
+}

@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 2,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a defined, transient AP-1-activating stimulus such as serum, TPA, or injury cues. Then run time-resolved ATAC-seq and CUT&RUN for AP-1 (FOS/JUN) and H3K27ac over days to weeks after washout. Persistent AP-1 motif-enriched accessible sites after the stimulus ends would indicate a memory-like imprint."
+    },
+    {
+      "title": "Acute degron depletion at defined time windows",
+      "description": "Use auxin-inducible degron or dTAG alleles of FOS, JUN, or dominant-negative A-FOS to remove AP-1 either during priming, during the memory phase, or at re-stimulation. Compare the secondary response across these windows. Memory that requires AP-1 only at priming, versus continuously, separates initiation from maintenance roles."
+    },
+    {
+      "title": "Re-stimulation response assay (primed vs naive)",
+      "description": "Prime cells with a first stimulus, rest them, then give a second stimulus. Measure transcription (nascent RNA-seq/PRO-seq), the kinetics, and the amplitude of target genes relative to naive cells. Test whether the enhanced or faster response is tied to AP-1-bound loci, and whether it is lost on AP-1 perturbation or on blocking enhancer opening."
+    },
+    {
+      "title": "Single-cell multiome and lineage-tracing of memory inheritance",
+      "description": "Apply single-cell RNA plus ATAC (multiome) with barcode lineage tracing or live imaging of AP-1 reporters to follow primed cells through divisions. Test whether AP-1 occupancy or accessibility is inherited by daughter cells and whether it predicts clonal differences in later responses. This separates heritable memory from persistent signaling, and shows how stable it is across cell cycles."
+    },
+    {
+      "title": "Targeted locus perturbation and synthetic AP-1 memory test",
+      "description": "Use CRISPRi/dCas9 to silence or edit AP-1 motifs at specific memory-associated enhancers. Separately, use optogenetic or chemically inducible AP-1 (e.g., inducible FOS/JUN) to drive a pulse of AP-1 activity at synthetic reporter loci. Ask whether the motif is necessary for the primed state, and whether AP-1 activity alone is sufficient to create a lasting accessible state and a faster response, independent of upstream signaling."
+    }
+  ],
+  "cost_usd": 0.0092338,
+  "session_id": "3e7b6934-1b1d-42ba-a2d2-1d66d4eef18b"
+}

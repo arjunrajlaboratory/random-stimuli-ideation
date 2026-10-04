@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 6,
+  "stimulus": "Byzantine mosaicists set their tesserae at slight angles rather than flat, so\nthat the gold glass, made by sandwiching gold leaf between two layers of glass,\nwould catch candlelight from below and flicker as a viewer moved. Faces were laid\nin smaller pieces than robes, and the outlines of figures were followed by a single\nrow of tiles whose direction guided the eye. Up close the surface looks rough and\nuneven; the image only resolves at the distance it was designed to be seen from.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nByzantine mosaicists set their tesserae at slight angles rather than flat, so\nthat the gold glass, made by sandwiching gold leaf between two layers of glass,\nwould catch candlelight from below and flicker as a viewer moved. Faces were laid\nin smaller pieces than robes, and the outlines of figures were followed by a single\nrow of tiles whose direction guided the eye. Up close the surface looks rough and\nuneven; the image only resolves at the distance it was designed to be seen from.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge (priming assay)",
+      "description": "Expose cells to a brief inflammatory or growth-factor stimulus, let them rest for days to weeks, then re-stimulate and measure faster or stronger induction of AP-1 target genes (RNA-seq, nascent transcription via PRO-seq) relative to naive cells. Persistence beyond the decay of FOS/JUN protein and mRNA would distinguish true memory from lingering signaling."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy profiling",
+      "description": "Use ATAC-seq, CUT&RUN/CUT&Tag for FOS/JUN family members, and H3K27ac/H3K4me1 ChIP at time points before, during and long after stimulation to find enhancers that stay open or bound after the stimulus is gone. Motif analysis and footprinting would test whether AP-1 binding marks the retained 'memory' regions, and whether the regions overlap with those showing enhanced re-induction."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use degron-tagged (dTAG/AID) or dominant-negative (A-FOS) AP-1 factors to deplete AP-1 either only during the initial stimulus or only during the rest period, then re-challenge. If memory needs AP-1 only for establishment, versus for maintenance, the timing of loss will show which, and whether chromatin accessibility persists without it."
+    },
+    {
+      "title": "Sufficiency test via synthetic AP-1 pulse and site-specific recruitment",
+      "description": "Induce a transient pulse of an AP-1 factor (optogenetic or chemically inducible c-Jun/FOS) in the absence of the natural stimulus and test whether it alone leaves lasting accessibility and enhanced responsiveness. Complement with dCas9-targeted recruitment or motif mutation by CRISPR at individual enhancers to test whether AP-1 sites at a locus are necessary and sufficient for its memory."
+    },
+    {
+      "title": "Single-cell and lineage tracking of memory inheritance",
+      "description": "Combine live-cell reporters of AP-1 activity or target genes with single-cell multiome (RNA + ATAC) and lineage barcoding to ask whether memory is carried through cell divisions and is heterogeneous across clones. Comparing sister cells, and the number of divisions after the stimulus, would show if memory is stable, heritable and cell-autonomous, versus a population-level or paracrine effect."
+    }
+  ],
+  "cost_usd": 0.012289000000000001,
+  "session_id": "8d171bd3-a755-4907-9439-b8636ff70f17"
+}

@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 5,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells to a defined, transient stimulus (e.g., TNF, wounding cues, or PMA). Then perform time-resolved ATAC-seq and AP-1 (FOS/JUN) CUT&RUN across days to weeks after withdrawal. Test whether newly opened AP-1 motif-containing enhancers stay open after AP-1 binding itself has decayed, which would indicate memory."
+    },
+    {
+      "title": "Re-stimulation (primed) response assay with AP-1 dependence",
+      "description": "Compare transcriptional output (RNA-seq, nascent PRO-seq) of naive versus previously stimulated cells upon a second challenge. Include acute AP-1 loss of function (dominant-negative A-FOS, degron-tagged FOS/JUN) either during the first stimulus only or during the second only. This separates AP-1 as the writer of memory from AP-1 as the reader."
+    },
+    {
+      "title": "Optogenetic or chemogenetic AP-1 pulse-chase",
+      "description": "Drive AP-1 activity with a light- or drug-inducible JUN/FOS construct with controlled pulse duration, amplitude and frequency. Then measure how the persistence of target gene expression and enhancer state depends on the input dose and dynamics. Determine whether AP-1 alone is sufficient to establish a self-sustaining state, and whether a threshold exists."
+    },
+    {
+      "title": "Single-cell multiome and lineage-tracing of memory inheritance",
+      "description": "Use single-cell RNA plus ATAC, with barcoded lineage tracing, to follow stimulated cells and their daughters through divisions. Quantify whether sister cells share AP-1 target accessibility and expression more than unrelated cells. Combine with live imaging of AP-1 reporters to check for heritable states that persist through mitosis."
+    },
+    {
+      "title": "Chromatin mechanism dissection: pioneer activity, histone marks and feedback loops",
+      "description": "Map the histone marks (H3K27ac, H3K4me1), BAF/SWI-SNF recruitment and DNA methylation at AP-1 sites before, during and after stimulus. Mutate or CRISPR-edit specific AP-1 motifs, and use dCas9 epigenetic editors to test necessity. Also test positive feedback (e.g., JUN autoregulation) with perturbation and mathematical modeling to see whether it yields bistable, heritable states."
+    }
+  ],
+  "cost_usd": 0.0090438,
+  "session_id": "fdbc6181-aa27-4a31-92c9-f239f3ba345e"
+}

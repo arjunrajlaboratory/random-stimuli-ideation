@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 3,
+  "stimulus": "A compositor setting lead type works upside down and backwards, picking sorts\nfrom the case into a composing stick held in the left hand. Capitals lived in the\nupper case and small letters in the lower, which is where the names come from. To\njustify a line, the compositor slips thin spaces of brass or copper between words\nuntil the line is tight enough that the forme can be lifted without letters falling\nout. A line that is too loose is called a 'pie' when it spills.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nA compositor setting lead type works upside down and backwards, picking sorts\nfrom the case into a composing stick held in the left hand. Capitals lived in the\nupper case and small letters in the lower, which is where the names come from. To\njustify a line, the compositor slips thin spaces of brass or copper between words\nuntil the line is tight enough that the forme can be lifted without letters falling\nout. A line that is too loose is called a 'pie' when it spills.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a defined, transient AP-1-activating stimulus (e.g., TPA, TNF, or injury), let signaling return to baseline, then re-stimulate days to weeks later. Compare transcriptional output (RNA-seq) and chromatin accessibility against naive cells to test whether prior exposure leaves a lasting, AP-1-dependent change in response."
+    },
+    {
+      "title": "Time-resolved ATAC-seq/CUT&RUN of AP-1 occupancy and motif accessibility",
+      "description": "Track chromatin accessibility, H3K27ac, and JUN/FOS binding at AP-1 motif-containing enhancers before, during, and long after the stimulus. Persistent opening or retained binding after AP-1 activity decays would indicate an epigenetic memory footprint, and ChromVAR-style motif analysis can quantify it."
+    },
+    {
+      "title": "Acute AP-1 depletion during memory maintenance phase",
+      "description": "Use degron-tagged (dTAG/AID) or dominant-negative (A-FOS) AP-1 factors to remove AP-1 either only during the initial stimulus or only during the maintenance/recall phase. This separates AP-1 as the initiator of memory from AP-1 as the maintainer, and shows whether enhancer accessibility and primed responses persist without it."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory states",
+      "description": "Perform single-cell RNA plus ATAC on stimulated and naive populations over time, combined with heritable barcodes or live reporters of AP-1 activity. This reveals whether memory is carried by cell-autonomous states inherited through divisions, and whether it correlates with prior AP-1 dynamics in individual cells."
+    },
+    {
+      "title": "Synthetic optogenetic AP-1 activation with sufficiency testing",
+      "description": "Drive AP-1 factors (e.g., FOS/JUN) with light-inducible or pulsed expression at varied dose, duration, and frequency, then measure persistence of target gene expression and chromatin changes. Testing whether AP-1 alone is sufficient to create a lasting state, and how pulse patterns affect it, tests its causal role and tunability as a memory mechanism."
+    }
+  ],
+  "cost_usd": 0.011325000000000002,
+  "session_id": "9b4cc2a4-0dd6-4342-a5cc-913111e41c75"
+}

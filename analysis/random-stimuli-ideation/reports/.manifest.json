@@ -1,0 +1,3074 @@
+{
+  "policies": {
+    "audience_tier": "B",
+    "acronym_budget_per_page": 4,
+    "acronym_strictness": "moderate",
+    "results_structure": "narrative",
+    "intuition_leadin_default_form": "sentence",
+    "shape": "overview-supplement"
+  },
+  "numbers": [
+    {
+      "id": "blind_essays_lighthouse_phrase",
+      "value": "six of eight",
+      "label_canonical": "blind essays lighthouse phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L145",
+      "computed_at": "scripts/07_report_values.py:L145"
+    },
+    {
+      "id": "cutoff_sensitivity_leader_phrase",
+      "value": "leads at every cutoff at which any idea qualifies",
+      "label_canonical": "cutoff sensitivity leader phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L235",
+      "computed_at": "scripts/07_report_values.py:L235"
+    },
+    {
+      "id": "cutoff_strictest_none_phrase",
+      "value": "no prompt type has any qualifying idea",
+      "label_canonical": "cutoff strictest none phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L237",
+      "computed_at": "scripts/07_report_values.py:L237"
+    },
+    {
+      "id": "factor_name",
+      "value": "AP-1",
+      "label_canonical": "factor name",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L102",
+      "computed_at": "scripts/07_report_values.py:L102"
+    },
+    {
+      "id": "forced_ref_instruction_only",
+      "value": 0.57,
+      "label_canonical": "forced ref instruction only",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "forced_ref_material_max",
+      "value": 0.55,
+      "label_canonical": "forced ref material max",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "forced_ref_material_min",
+      "value": 0.25,
+      "label_canonical": "forced ref material min",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "forced_ref_self_designed",
+      "value": 0.49,
+      "label_canonical": "forced ref self designed",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "forced_ref_self_designed_required",
+      "value": 0.76,
+      "label_canonical": "forced ref self designed required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L260",
+      "computed_at": "scripts/07_report_values.py:L260",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "generator_model_name",
+      "value": "Claude Sonnet 5.5",
+      "label_canonical": "generator model name",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L115",
+      "computed_at": "scripts/07_report_values.py:L115"
+    },
+    {
+      "id": "instr_calls_hysteresis_phrase",
+      "value": "all eight",
+      "label_canonical": "instr calls hysteresis phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L152",
+      "computed_at": "scripts/07_report_values.py:L152"
+    },
+    {
+      "id": "instr_calls_immune_phrase",
+      "value": "six of eight",
+      "label_canonical": "instr calls immune phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L152",
+      "computed_at": "scripts/07_report_values.py:L152"
+    },
+    {
+      "id": "judge_model_name",
+      "value": "Claude Opus 5.5",
+      "label_canonical": "judge model name",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L116",
+      "computed_at": "scripts/07_report_values.py:L116"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_distant_paragraph",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_instruction_only",
+      "value": 6,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_persona",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_plain",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_poem",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_poem_required",
+      "value": 2,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_random_tokens",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_random_tokens_required",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_self_designed",
+      "value": 2,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_self_designed_required",
+      "value": 5,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_semi_random",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_semi_random_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_stream_blind_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_stream_parallel_required",
+      "value": 4,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_stream_seeded_required",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_verbalized_sampling",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_word_salad",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_distinct_useful_novel_word_salad_required",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (stripped text) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_distant_paragraph",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_instruction_only",
+      "value": 13,
+      "label_canonical": "useful-novel ideas (stripped text) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_persona",
+      "value": 2,
+      "label_canonical": "useful-novel ideas (stripped text) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_plain",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_poem",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_poem_required",
+      "value": 2,
+      "label_canonical": "useful-novel ideas (stripped text) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_random_tokens",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_random_tokens_required",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (stripped text) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_self_designed",
+      "value": 5,
+      "label_canonical": "useful-novel ideas (stripped text) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_self_designed_required",
+      "value": 5,
+      "label_canonical": "useful-novel ideas (stripped text) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_semi_random",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (stripped text) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_semi_random_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_stream_blind_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_stream_parallel_required",
+      "value": 4,
+      "label_canonical": "useful-novel ideas (stripped text) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_stream_seeded_required",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (stripped text) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_verbalized_sampling",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (stripped text) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_word_salad",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (stripped text) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_n_useful_novel_word_salad_required",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (stripped text) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_stripped_novelty_distant_paragraph",
+      "value": 2.01,
+      "label_canonical": "mean judged novelty (stripped text) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_distant_paragraph_required",
+      "value": 2.67,
+      "label_canonical": "mean judged novelty (stripped text) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_instruction_only",
+      "value": 3.46,
+      "label_canonical": "mean judged novelty (stripped text) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_persona",
+      "value": 3.33,
+      "label_canonical": "mean judged novelty (stripped text) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_plain",
+      "value": 2.09,
+      "label_canonical": "mean judged novelty (stripped text) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_poem",
+      "value": 2.05,
+      "label_canonical": "mean judged novelty (stripped text) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_poem_required",
+      "value": 2.31,
+      "label_canonical": "mean judged novelty (stripped text) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_random_tokens",
+      "value": 2.02,
+      "label_canonical": "mean judged novelty (stripped text) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_random_tokens_required",
+      "value": 2.34,
+      "label_canonical": "mean judged novelty (stripped text) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_self_designed",
+      "value": 3.3,
+      "label_canonical": "mean judged novelty (stripped text) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_self_designed_required",
+      "value": 3.7,
+      "label_canonical": "mean judged novelty (stripped text) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_semi_random",
+      "value": 1.96,
+      "label_canonical": "mean judged novelty (stripped text) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_semi_random_required",
+      "value": 2.19,
+      "label_canonical": "mean judged novelty (stripped text) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_spearman",
+      "value": 0.81,
+      "label_canonical": "judge stripped novelty spearman",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L95",
+      "computed_at": "scripts/07_report_values.py:L95"
+    },
+    {
+      "id": "judge_stripped_novelty_stream_blind_required",
+      "value": 2.81,
+      "label_canonical": "mean judged novelty (stripped text) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_stream_parallel_required",
+      "value": 4.03,
+      "label_canonical": "mean judged novelty (stripped text) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_stream_seeded_required",
+      "value": 2.51,
+      "label_canonical": "mean judged novelty (stripped text) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_verbalized_sampling",
+      "value": 1.66,
+      "label_canonical": "mean judged novelty (stripped text) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_word_salad",
+      "value": 2.19,
+      "label_canonical": "mean judged novelty (stripped text) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_novelty_word_salad_required",
+      "value": 2.38,
+      "label_canonical": "mean judged novelty (stripped text) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_stripped_usefulness_distant_paragraph",
+      "value": 4.12,
+      "label_canonical": "mean judged usefulness (stripped text) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_distant_paragraph_required",
+      "value": 4.03,
+      "label_canonical": "mean judged usefulness (stripped text) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_instruction_only",
+      "value": 3.95,
+      "label_canonical": "mean judged usefulness (stripped text) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_persona",
+      "value": 3.54,
+      "label_canonical": "mean judged usefulness (stripped text) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_plain",
+      "value": 4.19,
+      "label_canonical": "mean judged usefulness (stripped text) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_poem",
+      "value": 4.19,
+      "label_canonical": "mean judged usefulness (stripped text) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_poem_required",
+      "value": 4.15,
+      "label_canonical": "mean judged usefulness (stripped text) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_random_tokens",
+      "value": 4.08,
+      "label_canonical": "mean judged usefulness (stripped text) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_random_tokens_required",
+      "value": 4.14,
+      "label_canonical": "mean judged usefulness (stripped text) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_self_designed",
+      "value": 3.81,
+      "label_canonical": "mean judged usefulness (stripped text) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_self_designed_required",
+      "value": 3.65,
+      "label_canonical": "mean judged usefulness (stripped text) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_semi_random",
+      "value": 4.19,
+      "label_canonical": "mean judged usefulness (stripped text) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_semi_random_required",
+      "value": 4.2,
+      "label_canonical": "mean judged usefulness (stripped text) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_spearman",
+      "value": 0.74,
+      "label_canonical": "judge stripped usefulness spearman",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "id": "judge_stripped_usefulness_stream_blind_required",
+      "value": 3.95,
+      "label_canonical": "mean judged usefulness (stripped text) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_stream_parallel_required",
+      "value": 3.33,
+      "label_canonical": "mean judged usefulness (stripped text) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_stream_seeded_required",
+      "value": 4.14,
+      "label_canonical": "mean judged usefulness (stripped text) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_verbalized_sampling",
+      "value": 3.89,
+      "label_canonical": "mean judged usefulness (stripped text) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_word_salad",
+      "value": 4.21,
+      "label_canonical": "mean judged usefulness (stripped text) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_stripped_usefulness_word_salad_required",
+      "value": 4.06,
+      "label_canonical": "mean judged usefulness (stripped text) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_distant_paragraph",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_instruction_only",
+      "value": 7,
+      "label_canonical": "distinct useful-novel ideas (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_persona",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_plain",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_poem",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_poem_required",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_random_tokens",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_random_tokens_required",
+      "value": 2,
+      "label_canonical": "distinct useful-novel ideas (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_self_designed",
+      "value": 4,
+      "label_canonical": "distinct useful-novel ideas (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_self_designed_required",
+      "value": 3,
+      "label_canonical": "distinct useful-novel ideas (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_semi_random",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_semi_random_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_stream_blind_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_stream_parallel_required",
+      "value": 3,
+      "label_canonical": "distinct useful-novel ideas (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_stream_seeded_required",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_verbalized_sampling",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_word_salad",
+      "value": 0,
+      "label_canonical": "distinct useful-novel ideas (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_distinct_useful_novel_word_salad_required",
+      "value": 1,
+      "label_canonical": "distinct useful-novel ideas (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L237",
+      "computed_at": "scripts/05_judge_analysis.py:L237"
+    },
+    {
+      "id": "judge_written_n_useful_novel_distant_paragraph",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_distant_paragraph_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_instruction_only",
+      "value": 9,
+      "label_canonical": "useful-novel ideas (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_persona",
+      "value": 2,
+      "label_canonical": "useful-novel ideas (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_plain",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_poem",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_poem_required",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_random_tokens",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_random_tokens_required",
+      "value": 2,
+      "label_canonical": "useful-novel ideas (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_self_designed",
+      "value": 4,
+      "label_canonical": "useful-novel ideas (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_self_designed_required",
+      "value": 3,
+      "label_canonical": "useful-novel ideas (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_semi_random",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_semi_random_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_stream_blind_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_stream_parallel_required",
+      "value": 3,
+      "label_canonical": "useful-novel ideas (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_stream_seeded_required",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_verbalized_sampling",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_word_salad",
+      "value": 0,
+      "label_canonical": "useful-novel ideas (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_n_useful_novel_word_salad_required",
+      "value": 1,
+      "label_canonical": "useful-novel ideas (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L236",
+      "computed_at": "scripts/05_judge_analysis.py:L236"
+    },
+    {
+      "id": "judge_written_novelty_distant_paragraph",
+      "value": 1.88,
+      "label_canonical": "mean judged novelty (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_distant_paragraph_required",
+      "value": 2.59,
+      "label_canonical": "mean judged novelty (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_instruction_only",
+      "value": 3.51,
+      "label_canonical": "mean judged novelty (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_persona",
+      "value": 3.25,
+      "label_canonical": "mean judged novelty (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_plain",
+      "value": 2.05,
+      "label_canonical": "mean judged novelty (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_poem",
+      "value": 1.9,
+      "label_canonical": "mean judged novelty (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_poem_required",
+      "value": 2.29,
+      "label_canonical": "mean judged novelty (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_random_tokens",
+      "value": 1.85,
+      "label_canonical": "mean judged novelty (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_random_tokens_required",
+      "value": 2.23,
+      "label_canonical": "mean judged novelty (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_self_designed",
+      "value": 3.38,
+      "label_canonical": "mean judged novelty (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_self_designed_required",
+      "value": 3.8,
+      "label_canonical": "mean judged novelty (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_semi_random",
+      "value": 1.89,
+      "label_canonical": "mean judged novelty (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_semi_random_required",
+      "value": 2.15,
+      "label_canonical": "mean judged novelty (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_spearman",
+      "value": 0.81,
+      "label_canonical": "judge written novelty spearman",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L95",
+      "computed_at": "scripts/07_report_values.py:L95"
+    },
+    {
+      "id": "judge_written_novelty_stream_blind_required",
+      "value": 2.84,
+      "label_canonical": "mean judged novelty (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_stream_parallel_required",
+      "value": 4.19,
+      "label_canonical": "mean judged novelty (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_stream_seeded_required",
+      "value": 2.52,
+      "label_canonical": "mean judged novelty (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_verbalized_sampling",
+      "value": 1.61,
+      "label_canonical": "mean judged novelty (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_word_salad",
+      "value": 2.01,
+      "label_canonical": "mean judged novelty (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_novelty_word_salad_required",
+      "value": 2.35,
+      "label_canonical": "mean judged novelty (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L238",
+      "computed_at": "scripts/05_judge_analysis.py:L238"
+    },
+    {
+      "id": "judge_written_usefulness_distant_paragraph",
+      "value": 4.28,
+      "label_canonical": "mean judged usefulness (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_distant_paragraph_required",
+      "value": 3.99,
+      "label_canonical": "mean judged usefulness (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_instruction_only",
+      "value": 3.77,
+      "label_canonical": "mean judged usefulness (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_persona",
+      "value": 3.62,
+      "label_canonical": "mean judged usefulness (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_plain",
+      "value": 4.33,
+      "label_canonical": "mean judged usefulness (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_poem",
+      "value": 4.28,
+      "label_canonical": "mean judged usefulness (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_poem_required",
+      "value": 4.2,
+      "label_canonical": "mean judged usefulness (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_random_tokens",
+      "value": 4.19,
+      "label_canonical": "mean judged usefulness (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_random_tokens_required",
+      "value": 4.08,
+      "label_canonical": "mean judged usefulness (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_self_designed",
+      "value": 3.7,
+      "label_canonical": "mean judged usefulness (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_self_designed_required",
+      "value": 3.44,
+      "label_canonical": "mean judged usefulness (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_semi_random",
+      "value": 4.36,
+      "label_canonical": "mean judged usefulness (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_semi_random_required",
+      "value": 4.2,
+      "label_canonical": "mean judged usefulness (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_spearman",
+      "value": 0.74,
+      "label_canonical": "judge written usefulness spearman",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "id": "judge_written_usefulness_stream_blind_required",
+      "value": 3.98,
+      "label_canonical": "mean judged usefulness (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_stream_parallel_required",
+      "value": 3.23,
+      "label_canonical": "mean judged usefulness (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_stream_seeded_required",
+      "value": 4.15,
+      "label_canonical": "mean judged usefulness (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_verbalized_sampling",
+      "value": 3.99,
+      "label_canonical": "mean judged usefulness (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_word_salad",
+      "value": 4.41,
+      "label_canonical": "mean judged usefulness (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "judge_written_usefulness_word_salad_required",
+      "value": 4.15,
+      "label_canonical": "mean judged usefulness (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/05_judge_analysis.py:L239",
+      "computed_at": "scripts/05_judge_analysis.py:L239"
+    },
+    {
+      "id": "leakage_p_poem",
+      "value": "= 0.390",
+      "label_canonical": "stimulus-leakage permutation p-value for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "id": "leakage_p_poem_required",
+      "value": "< 0.001",
+      "label_canonical": "stimulus-leakage permutation p-value for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "id": "leakage_p_random_tokens",
+      "value": "= 0.977",
+      "label_canonical": "stimulus-leakage permutation p-value for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "id": "leakage_p_self_designed",
+      "value": "= 0.082",
+      "label_canonical": "stimulus-leakage permutation p-value for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L259",
+      "computed_at": "scripts/07_report_values.py:L259"
+    },
+    {
+      "id": "leakage_p_stream_parallel_required",
+      "value": "< 0.001",
+      "label_canonical": "stimulus-leakage permutation p-value for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L129",
+      "computed_at": "scripts/07_report_values.py:L129"
+    },
+    {
+      "id": "leakage_word_reuse_poem",
+      "value": 0.0,
+      "label_canonical": "fraction of ideas reusing a word from their own stimulus for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "leakage_word_reuse_poem_required",
+      "value": 0.53,
+      "label_canonical": "fraction of ideas reusing a word from their own stimulus for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "leakage_word_reuse_random_tokens",
+      "value": 0.0,
+      "label_canonical": "fraction of ideas reusing a word from their own stimulus for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "leakage_word_reuse_self_designed",
+      "value": 0.62,
+      "label_canonical": "fraction of ideas reusing a word from their own stimulus for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L255",
+      "computed_at": "scripts/07_report_values.py:L255",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "leakage_word_reuse_self_designed_mismatched",
+      "value": 0.35,
+      "label_canonical": "leakage word reuse self designed mismatched",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L254",
+      "computed_at": "scripts/07_report_values.py:L254",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "leakage_word_reuse_stream_parallel_required",
+      "value": 1.0,
+      "label_canonical": "fraction of ideas reusing a word from their own stimulus for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "min_p_holm_neardup_stripped_vs_plain",
+      "value": "= 0.155",
+      "label_canonical": "min p holm neardup stripped vs plain",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L126",
+      "computed_at": "scripts/07_report_values.py:L126"
+    },
+    {
+      "id": "min_p_holm_spread_stripped_vs_plain",
+      "value": "= 0.462",
+      "label_canonical": "min p holm spread stripped vs plain",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L124",
+      "computed_at": "scripts/07_report_values.py:L124"
+    },
+    {
+      "id": "n_calls_per_arm",
+      "value": 8,
+      "label_canonical": "n calls per arm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L365",
+      "computed_at": "scripts/02_diversity_metrics.py:L365"
+    },
+    {
+      "id": "n_clusters_distant_paragraph",
+      "value": 11,
+      "label_canonical": "distinct idea clusters (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_distant_paragraph_required",
+      "value": 26,
+      "label_canonical": "distinct idea clusters (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_instruction_only",
+      "value": 22,
+      "label_canonical": "distinct idea clusters (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_persona",
+      "value": 28,
+      "label_canonical": "distinct idea clusters (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_plain",
+      "value": 13,
+      "label_canonical": "distinct idea clusters (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_poem",
+      "value": 11,
+      "label_canonical": "distinct idea clusters (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_poem_required",
+      "value": 26,
+      "label_canonical": "distinct idea clusters (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_random_tokens",
+      "value": 9,
+      "label_canonical": "distinct idea clusters (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_random_tokens_required",
+      "value": 21,
+      "label_canonical": "distinct idea clusters (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_self_designed",
+      "value": 31,
+      "label_canonical": "distinct idea clusters (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_self_designed_required",
+      "value": 33,
+      "label_canonical": "distinct idea clusters (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_semi_random",
+      "value": 12,
+      "label_canonical": "distinct idea clusters (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_semi_random_required",
+      "value": 17,
+      "label_canonical": "distinct idea clusters (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_stream_blind_required",
+      "value": 20,
+      "label_canonical": "distinct idea clusters (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_stream_parallel_required",
+      "value": 24,
+      "label_canonical": "distinct idea clusters (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_stream_seeded_required",
+      "value": 24,
+      "label_canonical": "distinct idea clusters (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_stripped_distant_paragraph",
+      "value": 10,
+      "label_canonical": "distinct idea clusters (stripped text) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_distant_paragraph_required",
+      "value": 22,
+      "label_canonical": "distinct idea clusters (stripped text) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_instruction_only",
+      "value": 18,
+      "label_canonical": "distinct idea clusters (stripped text) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_persona",
+      "value": 25,
+      "label_canonical": "distinct idea clusters (stripped text) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_plain",
+      "value": 13,
+      "label_canonical": "distinct idea clusters (stripped text) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_poem",
+      "value": 11,
+      "label_canonical": "distinct idea clusters (stripped text) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_poem_required",
+      "value": 21,
+      "label_canonical": "distinct idea clusters (stripped text) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_random_tokens",
+      "value": 8,
+      "label_canonical": "distinct idea clusters (stripped text) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_random_tokens_required",
+      "value": 17,
+      "label_canonical": "distinct idea clusters (stripped text) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_self_designed",
+      "value": 21,
+      "label_canonical": "distinct idea clusters (stripped text) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_self_designed_required",
+      "value": 23,
+      "label_canonical": "distinct idea clusters (stripped text) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_semi_random",
+      "value": 12,
+      "label_canonical": "distinct idea clusters (stripped text) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_semi_random_required",
+      "value": 14,
+      "label_canonical": "distinct idea clusters (stripped text) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_stream_blind_required",
+      "value": 15,
+      "label_canonical": "distinct idea clusters (stripped text) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_stream_parallel_required",
+      "value": 21,
+      "label_canonical": "distinct idea clusters (stripped text) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_stream_seeded_required",
+      "value": 21,
+      "label_canonical": "distinct idea clusters (stripped text) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_verbalized_sampling",
+      "value": 10,
+      "label_canonical": "distinct idea clusters (stripped text) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_word_salad",
+      "value": 12,
+      "label_canonical": "distinct idea clusters (stripped text) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_stripped_word_salad_required",
+      "value": 18,
+      "label_canonical": "distinct idea clusters (stripped text) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "id": "n_clusters_verbalized_sampling",
+      "value": 9,
+      "label_canonical": "distinct idea clusters (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_word_salad",
+      "value": 12,
+      "label_canonical": "distinct idea clusters (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_clusters_word_salad_required",
+      "value": 19,
+      "label_canonical": "distinct idea clusters (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L371",
+      "computed_at": "scripts/02_diversity_metrics.py:L371"
+    },
+    {
+      "id": "n_ideas_total",
+      "value": 760,
+      "label_canonical": "n ideas total",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L364",
+      "computed_at": "scripts/02_diversity_metrics.py:L364"
+    },
+    {
+      "id": "near_dup_frac_distant_paragraph",
+      "value": 1.0,
+      "label_canonical": "near-duplicate fraction (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_distant_paragraph_required",
+      "value": 0.525,
+      "label_canonical": "near-duplicate fraction (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_instruction_only",
+      "value": 0.65,
+      "label_canonical": "near-duplicate fraction (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_persona",
+      "value": 0.475,
+      "label_canonical": "near-duplicate fraction (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_plain",
+      "value": 0.925,
+      "label_canonical": "near-duplicate fraction (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_poem",
+      "value": 0.975,
+      "label_canonical": "near-duplicate fraction (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_poem_required",
+      "value": 0.65,
+      "label_canonical": "near-duplicate fraction (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_random_tokens",
+      "value": 0.95,
+      "label_canonical": "near-duplicate fraction (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_random_tokens_required",
+      "value": 0.775,
+      "label_canonical": "near-duplicate fraction (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_self_designed",
+      "value": 0.475,
+      "label_canonical": "near-duplicate fraction (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_self_designed_required",
+      "value": 0.375,
+      "label_canonical": "near-duplicate fraction (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_semi_random",
+      "value": 0.9,
+      "label_canonical": "near-duplicate fraction (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_semi_random_required",
+      "value": 0.9,
+      "label_canonical": "near-duplicate fraction (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_stream_blind_required",
+      "value": 0.775,
+      "label_canonical": "near-duplicate fraction (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_stream_parallel_required",
+      "value": 0.75,
+      "label_canonical": "near-duplicate fraction (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_stream_seeded_required",
+      "value": 0.625,
+      "label_canonical": "near-duplicate fraction (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_verbalized_sampling",
+      "value": 1.0,
+      "label_canonical": "near-duplicate fraction (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_word_salad",
+      "value": 0.925,
+      "label_canonical": "near-duplicate fraction (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_frac_word_salad_required",
+      "value": 0.8,
+      "label_canonical": "near-duplicate fraction (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L370",
+      "computed_at": "scripts/02_diversity_metrics.py:L370",
+      "unit": "percent",
+      "precision": 0
+    },
+    {
+      "id": "near_dup_threshold",
+      "value": 0.75,
+      "label_canonical": "near dup threshold",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L366",
+      "computed_at": "scripts/02_diversity_metrics.py:L366"
+    },
+    {
+      "id": "parallel_essays_magnetic_phrase",
+      "value": "all eight",
+      "label_canonical": "parallel essays magnetic phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L142",
+      "computed_at": "scripts/07_report_values.py:L142"
+    },
+    {
+      "id": "self_designed_shards_name_phrase",
+      "value": "five of eight",
+      "label_canonical": "self designed shards name phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L263",
+      "computed_at": "scripts/07_report_values.py:L263"
+    },
+    {
+      "id": "self_designed_shards_phrase",
+      "value": "seven of eight",
+      "label_canonical": "self designed shards phrase",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L148",
+      "computed_at": "scripts/07_report_values.py:L148"
+    },
+    {
+      "id": "spread_distant_paragraph",
+      "value": 0.413,
+      "label_canonical": "embedding spread (as written) for the optional paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_distant_paragraph_required",
+      "value": 0.458,
+      "label_canonical": "embedding spread (as written) for the required paragraph",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_instruction_only",
+      "value": 0.523,
+      "label_canonical": "embedding spread (as written) for the instruction-only prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_persona",
+      "value": 0.468,
+      "label_canonical": "embedding spread (as written) for personas",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_plain",
+      "value": 0.422,
+      "label_canonical": "embedding spread (as written) for the plain prompt",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_poem",
+      "value": 0.416,
+      "label_canonical": "embedding spread (as written) for the optional poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_poem_required",
+      "value": 0.461,
+      "label_canonical": "embedding spread (as written) for the required poem",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_random_tokens",
+      "value": 0.427,
+      "label_canonical": "embedding spread (as written) for optional random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_random_tokens_required",
+      "value": 0.456,
+      "label_canonical": "embedding spread (as written) for required random tokens",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_self_designed",
+      "value": 0.432,
+      "label_canonical": "embedding spread (as written) for the optional self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_self_designed_required",
+      "value": 0.462,
+      "label_canonical": "embedding spread (as written) for the required self-designed stimulus",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_semi_random",
+      "value": 0.425,
+      "label_canonical": "embedding spread (as written) for optional semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_semi_random_required",
+      "value": 0.433,
+      "label_canonical": "embedding spread (as written) for required semi-random text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_stream_blind_required",
+      "value": 0.481,
+      "label_canonical": "embedding spread (as written) for the any-topic essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_stream_parallel_required",
+      "value": 0.432,
+      "label_canonical": "embedding spread (as written) for the parallel-problem essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_stream_seeded_required",
+      "value": 0.45,
+      "label_canonical": "embedding spread (as written) for the random-domain essay",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_stripped_instruction_only",
+      "value": 0.419,
+      "label_canonical": "spread stripped instruction only",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L133",
+      "computed_at": "scripts/07_report_values.py:L133"
+    },
+    {
+      "id": "spread_stripped_plain",
+      "value": 0.425,
+      "label_canonical": "spread stripped plain",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L134",
+      "computed_at": "scripts/07_report_values.py:L134"
+    },
+    {
+      "id": "spread_verbalized_sampling",
+      "value": 0.417,
+      "label_canonical": "embedding spread (as written) for verbalized sampling",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_word_salad",
+      "value": 0.412,
+      "label_canonical": "embedding spread (as written) for optional word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_word_salad_required",
+      "value": 0.45,
+      "label_canonical": "embedding spread (as written) for required word salad",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L369",
+      "computed_at": "scripts/02_diversity_metrics.py:L369"
+    },
+    {
+      "id": "spread_written_instruction_only",
+      "value": 0.523,
+      "label_canonical": "spread written instruction only",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L132",
+      "computed_at": "scripts/07_report_values.py:L132"
+    },
+    {
+      "id": "stripped_cluster_gain_distant_paragraph_required",
+      "value": 12,
+      "label_canonical": "stripped cluster gain distant paragraph required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "id": "stripped_cluster_gain_poem_required",
+      "value": 10,
+      "label_canonical": "stripped cluster gain poem required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "id": "stripped_cluster_gain_random_tokens_required",
+      "value": 9,
+      "label_canonical": "stripped cluster gain random tokens required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "id": "stripped_cluster_gain_self_designed_required",
+      "value": 2,
+      "label_canonical": "stripped cluster gain self designed required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "id": "stripped_cluster_gain_semi_random_required",
+      "value": 2,
+      "label_canonical": "stripped cluster gain semi random required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "id": "stripped_cluster_gain_word_salad_required",
+      "value": 6,
+      "label_canonical": "stripped cluster gain word salad required",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/02_diversity_metrics.py:L352",
+      "computed_at": "scripts/02_diversity_metrics.py:L352"
+    },
+    {
+      "id": "t_stripped_best_stimulus_vs_vs_useful_novel_p_holm",
+      "value": "= 0.140",
+      "label_canonical": "t stripped best stimulus vs vs useful novel p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "id": "t_stripped_best_stream_vs_vs_useful_novel_p_holm",
+      "value": "= 0.251",
+      "label_canonical": "t stripped best stream vs vs useful novel p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L252",
+      "computed_at": "scripts/07_report_values.py:L252"
+    },
+    {
+      "id": "t_stripped_instr_vs_persona_distinct_diff",
+      "value": 5,
+      "label_canonical": "t stripped instr vs persona distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L217",
+      "computed_at": "scripts/07_report_values.py:L217"
+    },
+    {
+      "id": "t_stripped_instr_vs_persona_distinct_p",
+      "value": "= 0.011",
+      "label_canonical": "t stripped instr vs persona distinct p",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L218",
+      "computed_at": "scripts/07_report_values.py:L218"
+    },
+    {
+      "id": "t_stripped_instr_vs_plain_distinct_diff",
+      "value": 6.0,
+      "label_canonical": "t stripped instr vs plain distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_instr_vs_plain_distinct_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t stripped instr vs plain distinct p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_instr_vs_plain_novelty_diff",
+      "value": 1.38,
+      "label_canonical": "t stripped instr vs plain novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_instr_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "label_canonical": "t stripped instr vs plain novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_instr_vs_plain_usefulness_diff",
+      "value": -0.24,
+      "label_canonical": "t stripped instr vs plain usefulness diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_instr_vs_plain_usefulness_p_holm",
+      "value": "= 0.035",
+      "label_canonical": "t stripped instr vs plain usefulness p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_instr_vs_vs_distinct_diff",
+      "value": 6.0,
+      "label_canonical": "t stripped instr vs vs distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_instr_vs_vs_distinct_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t stripped instr vs vs distinct p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_material_vs_instr_novelty_drop_largest",
+      "value": 1.28,
+      "label_canonical": "t stripped material vs instr novelty drop largest",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L88",
+      "computed_at": "scripts/07_report_values.py:L88"
+    },
+    {
+      "id": "t_stripped_material_vs_instr_novelty_drop_smallest",
+      "value": 0.79,
+      "label_canonical": "t stripped material vs instr novelty drop smallest",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L87",
+      "computed_at": "scripts/07_report_values.py:L87"
+    },
+    {
+      "id": "t_stripped_material_vs_instr_novelty_least_drop",
+      "value": -0.79,
+      "label_canonical": "t stripped material vs instr novelty least drop",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L83",
+      "computed_at": "scripts/07_report_values.py:L83"
+    },
+    {
+      "id": "t_stripped_material_vs_instr_novelty_max_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t stripped material vs instr novelty max p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L85",
+      "computed_at": "scripts/07_report_values.py:L85"
+    },
+    {
+      "id": "t_stripped_material_vs_instr_novelty_most_drop",
+      "value": -1.28,
+      "label_canonical": "t stripped material vs instr novelty most drop",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L84",
+      "computed_at": "scripts/07_report_values.py:L84"
+    },
+    {
+      "id": "t_stripped_parallel_vs_instr_distinct_diff",
+      "value": -2.0,
+      "label_canonical": "t stripped parallel vs instr distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_parallel_vs_instr_distinct_p_holm",
+      "value": "= 0.514",
+      "label_canonical": "t stripped parallel vs instr distinct p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_parallel_vs_instr_novelty_diff",
+      "value": 0.56,
+      "label_canonical": "t stripped parallel vs instr novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_parallel_vs_instr_novelty_p_holm",
+      "value": "= 0.034",
+      "label_canonical": "t stripped parallel vs instr novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_parallel_vs_instr_usefulness_diff",
+      "value": -0.62,
+      "label_canonical": "t stripped parallel vs instr usefulness diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_parallel_vs_instr_usefulness_p_holm",
+      "value": "= 0.005",
+      "label_canonical": "t stripped parallel vs instr usefulness p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_parallel_vs_plain_novelty_diff",
+      "value": 1.94,
+      "label_canonical": "t stripped parallel vs plain novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_parallel_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "label_canonical": "t stripped parallel vs plain novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_persona_vs_plain_novelty_diff",
+      "value": 1.24,
+      "label_canonical": "t stripped persona vs plain novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_persona_vs_plain_novelty_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t stripped persona vs plain novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_persona_vs_plain_usefulness_diff",
+      "value": -0.65,
+      "label_canonical": "t stripped persona vs plain usefulness diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_persona_vs_plain_usefulness_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t stripped persona vs plain usefulness p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_stripped_poemreq_vs_plain_clusters_p_holm",
+      "value": "= 0.112",
+      "label_canonical": "t stripped poemreq vs plain clusters p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L257",
+      "computed_at": "scripts/07_report_values.py:L257"
+    },
+    {
+      "id": "t_stripped_selfdes_req_vs_instr_novelty_diff",
+      "value": 0.24,
+      "label_canonical": "t stripped selfdes req vs instr novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_stripped_selfdes_req_vs_instr_novelty_p_holm",
+      "value": "= 0.132",
+      "label_canonical": "t stripped selfdes req vs instr novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_best_stimulus_vs_vs_useful_novel_p_holm",
+      "value": "= 0.498",
+      "label_canonical": "t written best stimulus vs vs useful novel p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "id": "t_written_instr_vs_plain_distinct_diff",
+      "value": 7.0,
+      "label_canonical": "t written instr vs plain distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_instr_vs_plain_distinct_p_holm",
+      "value": "= 0.008",
+      "label_canonical": "t written instr vs plain distinct p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_instr_vs_plain_novelty_diff",
+      "value": 1.46,
+      "label_canonical": "t written instr vs plain novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_instr_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "label_canonical": "t written instr vs plain novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_instr_vs_plain_usefulness_diff",
+      "value": -0.55,
+      "label_canonical": "t written instr vs plain usefulness diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_instr_vs_plain_usefulness_p_holm",
+      "value": "< 0.001",
+      "label_canonical": "t written instr vs plain usefulness p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_instr_vs_vs_distinct_diff",
+      "value": 7.0,
+      "label_canonical": "t written instr vs vs distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_instr_vs_vs_distinct_p_holm",
+      "value": "= 0.007",
+      "label_canonical": "t written instr vs vs distinct p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_material_vs_instr_novelty_drop_largest",
+      "value": 1.36,
+      "label_canonical": "t written material vs instr novelty drop largest",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L88",
+      "computed_at": "scripts/07_report_values.py:L88"
+    },
+    {
+      "id": "t_written_material_vs_instr_novelty_drop_smallest",
+      "value": 0.92,
+      "label_canonical": "t written material vs instr novelty drop smallest",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L87",
+      "computed_at": "scripts/07_report_values.py:L87"
+    },
+    {
+      "id": "t_written_material_vs_instr_novelty_least_drop",
+      "value": -0.92,
+      "label_canonical": "t written material vs instr novelty least drop",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L83",
+      "computed_at": "scripts/07_report_values.py:L83"
+    },
+    {
+      "id": "t_written_material_vs_instr_novelty_max_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t written material vs instr novelty max p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L85",
+      "computed_at": "scripts/07_report_values.py:L85"
+    },
+    {
+      "id": "t_written_material_vs_instr_novelty_most_drop",
+      "value": -1.36,
+      "label_canonical": "t written material vs instr novelty most drop",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L84",
+      "computed_at": "scripts/07_report_values.py:L84"
+    },
+    {
+      "id": "t_written_parallel_vs_instr_distinct_diff",
+      "value": -4.0,
+      "label_canonical": "t written parallel vs instr distinct diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_parallel_vs_instr_distinct_p_holm",
+      "value": "= 0.216",
+      "label_canonical": "t written parallel vs instr distinct p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_parallel_vs_instr_novelty_diff",
+      "value": 0.67,
+      "label_canonical": "t written parallel vs instr novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_parallel_vs_instr_novelty_p_holm",
+      "value": "= 0.006",
+      "label_canonical": "t written parallel vs instr novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_parallel_vs_instr_usefulness_diff",
+      "value": -0.55,
+      "label_canonical": "t written parallel vs instr usefulness diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_parallel_vs_instr_usefulness_p_holm",
+      "value": "= 0.006",
+      "label_canonical": "t written parallel vs instr usefulness p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_parallel_vs_plain_novelty_diff",
+      "value": 2.14,
+      "label_canonical": "t written parallel vs plain novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_parallel_vs_plain_novelty_p_holm",
+      "value": "< 0.001",
+      "label_canonical": "t written parallel vs plain novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_persona_vs_plain_novelty_diff",
+      "value": 1.2,
+      "label_canonical": "t written persona vs plain novelty diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_persona_vs_plain_novelty_p_holm",
+      "value": "= 0.002",
+      "label_canonical": "t written persona vs plain novelty p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_persona_vs_plain_usefulness_diff",
+      "value": -0.7,
+      "label_canonical": "t written persona vs plain usefulness diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_persona_vs_plain_usefulness_p_holm",
+      "value": "= 0.008",
+      "label_canonical": "t written persona vs plain usefulness p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "t_written_selfdes_vs_plain_clusters_diff",
+      "value": 18.0,
+      "label_canonical": "t written selfdes vs plain clusters diff",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L51",
+      "computed_at": "scripts/07_report_values.py:L51"
+    },
+    {
+      "id": "t_written_selfdes_vs_plain_clusters_p_holm",
+      "value": "= 0.010",
+      "label_canonical": "t written selfdes vs plain clusters p holm",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L52",
+      "computed_at": "scripts/07_report_values.py:L52"
+    },
+    {
+      "id": "winning_instruction_text",
+      "value": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.",
+      "label_canonical": "winning instruction text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L114",
+      "computed_at": "scripts/07_report_values.py:L114"
+    },
+    {
+      "id": "winning_prompt_text",
+      "value": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+      "label_canonical": "winning prompt text",
+      "label_aliases_forbidden": [],
+      "provenance": "scripts/07_report_values.py:L113",
+      "computed_at": "scripts/07_report_values.py:L113"
+    }
+  ],
+  "terms": [
+    {
+      "id": "useful_novel",
+      "expansion": "useful-novel idea",
+      "plain_english": "an idea the judge rated at least 4 out of 5 for both novelty and usefulness, averaged over two readings",
+      "first_use_section": "problem",
+      "match": [
+        "useful-novel"
+      ]
+    },
+    {
+      "id": "distinct_useful_novel",
+      "expansion": "distinct useful-novel ideas",
+      "plain_english": "useful-novel ideas after merging near-duplicates, so one good idea repeated in every call counts once",
+      "first_use_section": "problem"
+    },
+    {
+      "id": "stripped_text",
+      "expansion": "stripped text",
+      "plain_english": "each idea rewritten, blind to which prompt produced it, with analogies and metaphors removed",
+      "first_use_section": "methods"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig_distinct_useful_novel",
+      "path": "../outputs/figures/fig_distinct_useful_novel.svg",
+      "sha256": "5d1b0c7d1c2d0617b2e3e90b9ebd7ef009b2c90b2005959de20641acb71debcf",
+      "caption_seed": "Distinct useful and novel ideas per prompt type"
+    },
+    {
+      "id": "fig_novelty_usefulness",
+      "path": "../outputs/figures/fig_novelty_usefulness.svg",
+      "sha256": "975b3054733bbd606664c0b8775585d04500c10d1ad6eab777a9ba3a8feeaa37",
+      "caption_seed": "Judged novelty against judged usefulness"
+    },
+    {
+      "id": "fig_decoration",
+      "path": "../outputs/figures/fig_decoration.svg",
+      "sha256": "00cba63b2c53434e1f27dcc1541ef12d2c3be781de2c8e0af1acc3b9d6139cbb",
+      "caption_seed": "Distinct idea clusters as written and after stripping"
+    }
+  ],
+  "data": [
+    {
+      "id": "arm_table",
+      "path": "../outputs/report_arm_table.csv",
+      "sha256": "96ced32c4438aa171410d603467e7ae74a2bdb06285172aa244a98a5279f5334"
+    },
+    {
+      "id": "cutoff_sensitivity",
+      "path": "../outputs/cutoff_sensitivity.csv",
+      "sha256": "20a528dd4b76baef012712b379773b805b19ef3f39179c688394c1eb49e3cffa"
+    }
+  ],
+  "worked_examples": [
+    {
+      "id": "we_plain_two_calls",
+      "analysis_type": "repetition_across_calls",
+      "subject_id": "plain calls 0 and 5",
+      "subject_kind": "pair of generation calls",
+      "provenance": "../outputs/report_examples.csv:example in {plain_0, plain_5}",
+      "computed_at": "scripts/07_report_values.py (EXAMPLE_CALLS)",
+      "rows": [
+        {
+          "idea": 1,
+          "first_call": "Transient stimulus with long-term chromatin accessibility tracking",
+          "second_call": "Transient stimulus with long-term chromatin accessibility tracking"
+        },
+        {
+          "idea": 2,
+          "first_call": "Acute AP-1 degradation or dominant-negative block during vs after priming",
+          "second_call": "Re-stimulation (primed) response assay with AP-1 dependence"
+        },
+        {
+          "idea": 3,
+          "first_call": "Single-cell multiome linking AP-1 motif accessibility to response history",
+          "second_call": "Optogenetic or chemogenetic AP-1 pulse-chase"
+        },
+        {
+          "idea": 4,
+          "first_call": "Synthetic AP-1 sufficiency test with optogenetic or chemogenetic control",
+          "second_call": "Single-cell multiome and lineage-tracing of memory inheritance"
+        },
+        {
+          "idea": 5,
+          "first_call": "Site-specific perturbation of memory enhancers and cooperating factors",
+          "second_call": "Chromatin mechanism dissection: pioneer activity, histone marks and feedback loops"
+        }
+      ]
+    },
+    {
+      "id": "we_poem_required",
+      "analysis_type": "decoration_stripping",
+      "subject_id": "poem_required_0",
+      "subject_kind": "generation call",
+      "provenance": "../outputs/report_examples.csv:example=poem_required_0",
+      "computed_at": "scripts/07_report_values.py (EXAMPLE_CALLS); scores from scripts/05_judge_analysis.py",
+      "rows": [
+        {
+          "as_written": "Persistence after stimulus withdrawal (the song that never stops)",
+          "stripped": "Persistence of AP-1 binding and accessibility after stimulus withdrawal",
+          "novelty": 1.0,
+          "usefulness": 4.5,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Sensitivity to the second stimulus (the sweetest tune in the gale)",
+          "stripped": "Sensitivity to the second stimulus in primed versus naive cells",
+          "novelty": 1.0,
+          "usefulness": 4.0,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Necessity and sufficiency by acute perturbation",
+          "stripped": "Necessity and sufficiency by acute perturbation",
+          "novelty": 2.0,
+          "usefulness": 4.5,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Single-cell tracking of AP-1 activity and heritability",
+          "stripped": "Single-cell tracking of AP-1 activity and heritability",
+          "novelty": 3.0,
+          "usefulness": 4.0,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Chromatin mechanism and the independence test",
+          "stripped": "Chromatin mechanism and independence test",
+          "novelty": 2.0,
+          "usefulness": 4.0,
+          "useful_novel": "no"
+        }
+      ]
+    },
+    {
+      "id": "we_instruction_only",
+      "analysis_type": "instruction_only_call",
+      "subject_id": "instruction_only_0",
+      "subject_kind": "generation call",
+      "provenance": "../outputs/report_examples.csv:example=instruction_only_0",
+      "computed_at": "scripts/07_report_values.py (EXAMPLE_CALLS); scores from scripts/05_judge_analysis.py",
+      "rows": [
+        {
+          "as_written": "Hysteresis curves from magnetic materials",
+          "stripped": "Hysteresis of AP-1 target expression with dominant-negative control",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "useful_novel": "yes"
+        },
+        {
+          "as_written": "Engram tagging from neuroscience",
+          "stripped": "Fos-driven permanent labeling of previously activated cells",
+          "novelty": 3.5,
+          "usefulness": 3.5,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Epidemic-style cell-lineage tracking (pedigree analysis from population genetics)",
+          "stripped": "Lineage-based autocorrelation of AP-1 activity across cell divisions",
+          "novelty": 3.5,
+          "usefulness": 4.0,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Molecular 'bookmarking' as in library cataloguing: mitotic chromatin profiling",
+          "stripped": "Mitotic chromatin profiling of AP-1 with acute degron depletion",
+          "novelty": 4.0,
+          "usefulness": 3.5,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Fault-tolerance testing from engineering: perturbation and rescue of the feedback circuit",
+          "stripped": "Modeling and perturbing the AP-1 autoregulatory loop",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "useful_novel": "yes"
+        }
+      ]
+    },
+    {
+      "id": "we_parallel",
+      "analysis_type": "parallel_problem_call",
+      "subject_id": "stream_parallel_required_1",
+      "subject_kind": "generation call",
+      "provenance": "../outputs/report_examples.csv:example=stream_parallel_required_1",
+      "computed_at": "scripts/07_report_values.py (EXAMPLE_CALLS); scores from scripts/05_judge_analysis.py",
+      "rows": [
+        {
+          "as_written": "Hysteresis loop of AP-1 dose-response",
+          "stripped": "Hysteresis in the AP-1 dose-response",
+          "novelty": 4.5,
+          "usefulness": 3.0,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Remanence decay and erasure by decaying pulses",
+          "stripped": "Decay kinetics of AP-1 memory and erasure by decaying pulses or degradation",
+          "novelty": 4.0,
+          "usefulness": 3.0,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "First-order reversal curve census of AP-1 sites",
+          "stripped": "First-order reversal curve analysis of AP-1 sites",
+          "novelty": 5.0,
+          "usefulness": 2.0,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Stepwise peeling of layered memory by order-of-exposure experiments",
+          "stripped": "Order-of-exposure experiments to resolve layered memory",
+          "novelty": 4.5,
+          "usefulness": 3.5,
+          "useful_novel": "no"
+        },
+        {
+          "as_written": "Switch versus coupling test via perturbation of cooperativity",
+          "stripped": "Distinguishing site-intrinsic from network-based memory by perturbing cooperativity",
+          "novelty": 4.0,
+          "usefulness": 3.5,
+          "useful_novel": "no"
+        }
+      ]
+    },
+    {
+      "id": "we_distinct_instruction_only",
+      "analysis_type": "distinct_useful_novel_count",
+      "subject_id": "instruction_only, stripped text",
+      "subject_kind": "arm",
+      "provenance": "../outputs/distinct_useful_novel_clusters_stripped.csv:arm=instruction_only",
+      "computed_at": "scripts/07_report_values.py (cluster_labels); count checked against scripts/05_judge_analysis.py",
+      "rows": [
+        {
+          "idea": "Hysteresis of AP-1 target expression with dominant-negative control",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Hysteresis in AP-1 occupancy and target expression under ramped stimulus",
+          "novelty": 4.5,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Stimulus up-and-down titration to test hysteresis in AP-1 and chromatin accessibility",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Hysteresis of AP-1 occupancy, accessibility and transcription",
+          "novelty": 4.5,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Hysteresis of AP-1 occupancy and chromatin accessibility with acute degron test",
+          "novelty": 4.5,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Hysteresis of AP-1 chromatin state under rising and falling stimulus",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Hysteresis loops of AP-1 binding, accessibility and transcription per locus",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 1
+        },
+        {
+          "idea": "Modeling and perturbing the AP-1 autoregulatory loop",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 2
+        },
+        {
+          "idea": "AP-1-driven Cre or recorder tagging of past AP-1 activity",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 3
+        },
+        {
+          "idea": "Testing AP-1 positive autoregulation as a bistable switch",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 4
+        },
+        {
+          "idea": "Single-cell test for bistability from AP-1 positive feedback",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 4
+        },
+        {
+          "idea": "Inheritance of AP-1 state across cell divisions and mitotic bookmarking",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 5
+        },
+        {
+          "idea": "Barcoded lineage split-clone test of AP-1 state heritability",
+          "novelty": 4.0,
+          "usefulness": 4.0,
+          "group": 6
+        }
+      ],
+      "aggregate": {
+        "useful_novel": 13,
+        "distinct": 6
+      }
+    }
+  ],
+  "linters": {
+    "scitexlintr": "0.2.1"
+  }
+}

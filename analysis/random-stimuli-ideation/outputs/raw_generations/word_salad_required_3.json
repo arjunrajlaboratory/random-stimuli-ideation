@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad_required",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus then recall: AP-1 chromatin accessibility memory",
+      "description": "Give cells a brief stimulus (e.g., TPA or a wound-like signal), wait until AP-1 (FOS/JUN) levels return to baseline, then re-stimulate and compare ATAC-seq, CUT&RUN for H3K27ac, and transcription between naive and primed cells. Like 'patination' (a surface that records past exposure), persistent accessible sites that remain after the trigger is gone, and faster or stronger re-induction there, would indicate memory."
+    },
+    {
+      "title": "Acute AP-1 degradation at different times (necessity for maintenance vs. establishment)",
+      "description": "Use degron-tagged FOS/JUN or a dominant-negative A-FOS, removed either during priming, during the rest period, or at re-stimulation. If memory needs AP-1 only during priming but not for later maintenance, it is an initiator. If memory is lost when AP-1 is removed during the rest period, AP-1 is a maintainer."
+    },
+    {
+      "title": "Single-cell multiome tracking with lineage barcodes",
+      "description": "Run paired scRNA/scATAC-seq with live reporters of AP-1 activity and heritable barcodes across divisions after a transient stimulus. Test whether the primed state is inherited by daughter cells and whether it correlates with the AP-1 motif accessibility of a clone, separating a stable epigenetic state from ongoing signaling noise."
+    },
+    {
+      "title": "Pioneer-like binding and nucleosome remodeling kinetics (footprinting, BRG1/BAF dependence)",
+      "description": "Measure AP-1 occupancy by CUT&RUN or footprinting, together with BAF/SWI-SNF recruitment and histone marks, at primed loci over a time course after the stimulus is withdrawn. Test whether AP-1 sites stay open after AP-1 departs (hysteresis) by inhibiting BAF, and whether a mutated motif at an endogenous enhancer (CRISPR base editing) abolishes the memory."
+    },
+    {
+      "title": "Synthetic sufficiency and dose-history test with optogenetic AP-1 and a mathematical model",
+      "description": "Drive AP-1 with optogenetic pulses of defined amplitude, duration and spacing, and read out reporter or endogenous gene responses over the following days. Fit bistability and hysteresis models, and test whether activation of AP-1 alone is sufficient to create a persistent state at naive loci that depends on pulse history and not just on current AP-1 levels."
+    }
+  ],
+  "cost_usd": 0.012713,
+  "session_id": "ec621f44-eaba-4faf-9c45-29352d241a89"
+}

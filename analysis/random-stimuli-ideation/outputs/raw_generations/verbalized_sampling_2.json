@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 2,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints during and long after a transient stimulus (e.g., wounding, inflammation, stress) to see whether AP-1-dependent accessible sites persist after the signal and AP-1 levels have returned to baseline.",
+      "probability": 0.3
+    },
+    {
+      "title": "Secondary challenge (priming) assays with AP-1 perturbation",
+      "description": "Expose cells to a first stimulus, rest them, then re-stimulate and measure transcriptional response magnitude/kinetics by RNA-seq; compare with AP-1 dominant-negative (A-FOS), CRISPRi, or degron cells to test whether AP-1 is required for faster or stronger memory responses.",
+      "probability": 0.3
+    },
+    {
+      "title": "Acute AP-1 degradation at different times to separate establishment from maintenance",
+      "description": "Use inducible degrons (dTAG/auxin) on FOS/JUN to remove AP-1 either during the priming stimulus or after memory is established, then assay whether memory-associated accessibility and gene expression persist without AP-1, distinguishing initiating from maintaining roles.",
+      "probability": 0.2
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory inheritance",
+      "description": "Perform single-cell RNA+ATAC with lineage barcodes or live-cell AP-1 reporters to test whether AP-1 activity state and its chromatin footprint are inherited through cell divisions and correlate with heterogeneous memory responses among sister cells.",
+      "probability": 0.2
+    },
+    {
+      "title": "Histone mark and SWI/SNF (BAF) dependence at AP-1 sites",
+      "description": "Measure H3K27ac, H3K4me1 and BAF occupancy at AP-1 motif-containing enhancers before, during, and after stimulation, and test with BAF inhibitors or enhancer motif mutation/dCas9 editing whether these marks and AP-1-driven opening are necessary and sufficient for persistence.",
+      "probability": 0.2
+    }
+  ],
+  "cost_usd": 0.0079542,
+  "session_id": "001525dd-cd4e-458e-9743-7301bf9bff42"
+}

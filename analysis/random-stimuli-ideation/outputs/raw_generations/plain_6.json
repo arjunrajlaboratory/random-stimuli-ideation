@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 6,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a defined, transient stimulus (serum, TNF, wounding cue) and perform time-course ATAC-seq/CUT&RUN for AP-1 (FOS/JUN), H3K27ac and H3K4me1 through days to weeks after washout. Persistent AP-1 motif-containing accessible sites, and enhanced re-induction of nearby genes upon restimulation, would indicate AP-1-based memory."
+    },
+    {
+      "title": "Acute AP-1 degradation/inhibition at different phases (priming vs. maintenance)",
+      "description": "Use degron-tagged FOS/JUN or dominant-negative A-FOS/dTAG systems to remove AP-1 either during the priming stimulus or only after it, then test the recall response. If AP-1 is needed only for establishing memory, the memory is chromatin-encoded; if needed for maintenance, AP-1 itself carries the memory."
+    },
+    {
+      "title": "Single-cell multiome and live imaging of AP-1 dynamics and memory heterogeneity",
+      "description": "Pair single-cell RNA+ATAC-seq with live reporters (e.g., FOS-GFP, AP-1 activity reporter) in primed vs. naive cells to link AP-1 history (amplitude, duration) to later accessibility and transcriptional response. Lineage tracing through divisions would test whether the memory is heritable and bistable versus graded and decaying."
+    },
+    {
+      "title": "Sufficiency test with synthetic/optogenetic AP-1 activation and locus-specific editing",
+      "description": "Induce AP-1 with optogenetic or chemically inducible FOS/JUN pulses of varied dose and duration, and use dCas9-based recruitment or motif mutation by CRISPR at selected enhancers. Test whether AP-1 binding alone is sufficient to open chromatin and make a stable, restimulation-responsive state, and which sites need it."
+    },
+    {
+      "title": "Pioneer/cooperativity mapping of AP-1 with chromatin remodelers and histone marks",
+      "description": "Perform ChIP/CUT&Tag and proteomics for AP-1 interaction with BAF (SWI/SNF) components, plus BAF inhibition or depletion, and footprinting/Micro-C to assess nucleosome remodeling and looping at memory loci. Testing whether remodeler loss erases persistence despite AP-1 re-binding clarifies the mechanistic link between AP-1 and epigenetic memory."
+    }
+  ],
+  "cost_usd": 0.0094038,
+  "session_id": "ae0859a6-7ef9-4d11-b3ed-81f544417d59"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 7,
+  "stimulus": "unprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nunprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stimulus-then-washout chromatin accessibility time course",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a transient AP-1-activating stimulus such as TPA, TNF, or wounding. After washout, run ATAC-seq and CUT&Tag for AP-1 (FOS/JUN), H3K27ac and H3K4me1 over days to weeks to see whether newly opened enhancers stay open after AP-1 binding has decayed."
+    },
+    {
+      "title": "Acute AP-1 degradation at different times after the stimulus",
+      "description": "Use degron-tagged FOS, JUN or a dominant-negative (A-FOS) to remove AP-1 either during the stimulus or well after it. Measure whether accessibility and the faster secondary transcriptional response persist without continuing AP-1 activity. Persistence means the memory is independent of AP-1, and loss means AP-1 maintains it."
+    },
+    {
+      "title": "Functional re-stimulation assay of primed vs. naive cells",
+      "description": "Give a first stimulus, rest the cells, then give a second stimulus. Compare nascent RNA (PRO-seq or SLAM-seq) and gene induction kinetics against naive cells. Repeat with AP-1 perturbed during only the priming phase to test whether AP-1 is necessary for the enhanced or faster response."
+    },
+    {
+      "title": "Single-cell multiome lineage-tracked memory persistence",
+      "description": "Run paired scATAC and scRNA-seq with live reporters of AP-1 activity, using barcoded lineage tracing across cell divisions. This tests whether accessibility states are inherited clonally, whether memory is heterogeneous or bimodal, and whether it correlates with past AP-1 activity levels."
+    },
+    {
+      "title": "Targeted synthetic AP-1 site manipulation at memory loci",
+      "description": "At candidate memory enhancers, use CRISPR to mutate AP-1 motifs, or use dCas9-based recruitment or blocking of AP-1 and chromatin remodelers (e.g., BAF). Test whether the motif is needed to establish memory, to maintain it, or both. Read this out with allele-specific accessibility, histone marks and reporter induction after a delay. Add in vivo validation, such as epidermal stem cell wound memory in mice."
+    }
+  ],
+  "cost_usd": 0.011701,
+  "session_id": "ea0b966f-4ed1-4a5d-a250-51fe2c68054d"
+}

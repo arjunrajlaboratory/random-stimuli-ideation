@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 1,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined pulse of AP-1-activating signal (TPA, TNF, wounding, or stress). Then run time-course ATAC-seq and CUT&RUN for JUN/FOS, H3K27ac, and H3K4me1 after washout, to test whether AP-1-bound enhancers stay open and occupied well after the stimulus and AP-1 activity have returned to baseline."
+    },
+    {
+      "title": "Acute degradation of AP-1 after priming (necessity for maintenance vs. establishment)",
+      "description": "Use degron-tagged (dTAG/AID) FOS, JUN, or a dominant-negative such as A-FOS. Deplete AP-1 either during the priming pulse or only after it, then re-challenge the cells. If memory is maintained by AP-1 itself, post-priming depletion should erase the primed state. If AP-1 only establishes memory, then only depletion during priming should do so."
+    },
+    {
+      "title": "Secondary-stimulus recall assay with single-cell readouts",
+      "description": "Compare primed and naive cells for transcriptional response magnitude and kinetics to a second stimulus using scRNA-seq, live-cell reporters, or smFISH of AP-1 target genes. Quantify how long the heightened response persists and whether it is inherited through cell divisions, using lineage tracing or sister-cell comparisons."
+    },
+    {
+      "title": "Live imaging of AP-1 dynamics and a feedback-loop model",
+      "description": "Track endogenously tagged FOS/JUN levels, activity reporters, and target-gene transcription in single cells across stimulation history. Fit mathematical models to test whether positive feedback (e.g., JUN autoregulation) or a pioneer-like chromatin-opening mechanism produces bistability and hysteresis, with the model's predictions tested by perturbing feedback nodes."
+    },
+    {
+      "title": "Targeted enhancer perturbation and sufficiency tests",
+      "description": "Use CRISPR to delete or mutate AP-1 motifs at candidate memory enhancers. Use dCas9-based tethering of AP-1 or chromatin modifiers to test sufficiency, and use in vivo models (e.g., skin inflammatory memory, wound re-epithelialization) to ask whether motif-specific loss abolishes faster recall of the response. Together, these experiments separate AP-1 as a causal memory element from AP-1 binding that merely correlates with it."
+    }
+  ],
+  "cost_usd": 0.0093038,
+  "session_id": "9e005edf-0cbb-4c50-8e7f-ef97cf846da2"
+}

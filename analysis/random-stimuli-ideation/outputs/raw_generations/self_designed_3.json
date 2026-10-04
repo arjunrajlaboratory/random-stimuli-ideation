@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed",
+  "call": 3,
+  "stimulus": "Fragments to collide with whatever comes next:\n\n- lichen negotiating a treaty between two kingdoms\n- the tide table of a harbor that no longer exists\n- a ratchet that only turns when it is shaken badly\n- bell-founders tuning metal by shaving its inside\n- slime mold rebuilding a rail map overnight\n- a ledger where every debt is paid in a different unit\n- fog harvesting nets; stenciled moth wings; kintsugi seams\n- an immune system forgetting on purpose\n- jury selection by lottery in Athens\n- a river that votes by braiding\n- the sound a bridge makes before it is loaded\n- sourdough starters inherited across centuries\n- error as the only signal; silence as the measurement\n- a map drawn at 1:1 scale, then folded\n- ant bridges built from the workers themselves\n- cheap noise injected deliberately into a precise instrument\n- a mistranslation that turned out to be the better law\n- the dead layer of a coral reef carrying the living one\n\nInstructions to self: before answering, pick two or three fragments at random. Treat each as a hidden blueprint for a mechanism, a measurement trick, or a failure mode. Invert one assumption of the standard approach, change the scale by a factor of a thousand, or swap who the actor is. Then propose ideas that would still be testable with real data or experiments, and avoid the first three ideas that come to mind.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nFragments to collide with whatever comes next:\n\n- lichen negotiating a treaty between two kingdoms\n- the tide table of a harbor that no longer exists\n- a ratchet that only turns when it is shaken badly\n- bell-founders tuning metal by shaving its inside\n- slime mold rebuilding a rail map overnight\n- a ledger where every debt is paid in a different unit\n- fog harvesting nets; stenciled moth wings; kintsugi seams\n- an immune system forgetting on purpose\n- jury selection by lottery in Athens\n- a river that votes by braiding\n- the sound a bridge makes before it is loaded\n- sourdough starters inherited across centuries\n- error as the only signal; silence as the measurement\n- a map drawn at 1:1 scale, then folded\n- ant bridges built from the workers themselves\n- cheap noise injected deliberately into a precise instrument\n- a mistranslation that turned out to be the better law\n- the dead layer of a coral reef carrying the living one\n\nInstructions to self: before answering, pick two or three fragments at random. Treat each as a hidden blueprint for a mechanism, a measurement trick, or a failure mode. Invert one assumption of the standard approach, change the scale by a factor of a thousand, or swap who the actor is. Then propose ideas that would still be testable with real data or experiments, and avoid the first three ideas that come to mind.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Shaken-ratchet pulse-history test",
+      "description": "Use optogenetic or chemically gated AP-1 (e.g., FOS/JUN) activation with identical total dose but different pulse frequencies, noise levels and spacing, then measure ATAC-seq accessibility and enhancer-gene output after a washout of weeks. If AP-1 acts as a memory mechanism, the retained chromatin state should depend on pulse pattern and history rather than on total dose, and should show a threshold or ratchet-like response."
+    },
+    {
+      "title": "Acute degron removal after the stimulus (maintenance vs. initiation)",
+      "description": "After a priming stimulus (e.g., inflammation, injury, or differentiation cue), deplete JUN/FOS/ATF with a dTAG or auxin degron at staggered times and measure whether primed accessibility and the faster secondary transcriptional response persist. Memory that is stored in chromatin should persist after AP-1 is removed, whereas memory that needs continuous AP-1 occupancy should decay at a rate that tracks its depletion."
+    },
+    {
+      "title": "Dead-layer footprinting: AP-1 motif sites that stay open without AP-1",
+      "description": "Compare primed and naive cells by CUT&Tag/ChIP for AP-1, pioneer-like partners (e.g., BAF), H3K27ac and H3K4me1, together with ATAC and footprinting, at various times after the stimulus. Classify the sites where AP-1 binding is lost but accessibility or histone marks remain as an inherited 'scaffold' layer, then test with CRISPRi or motif mutation whether those sites cause the faster re-response."
+    },
+    {
+      "title": "Single-cell lineage-barcoded inheritance of AP-1 state",
+      "description": "Combine clonal barcoding with multiome (scRNA and scATAC) sequencing and live AP-1 reporters, and compare sister cells and clones across several divisions after the stimulus. Heritability of the AP-1 accessibility state, estimated from the correlation within clones relative to random pairs, together with its decay half-life in generations rather than time, would separate true mitotic memory from persistent signaling."
+    },
+    {
+      "title": "Cheap-noise perturbation of the AP-1 circuit to map memory basins",
+      "description": "Inject controlled noise (variable dose of stimulus, or tunable expression of a dominant-negative such as A-FOS) into primed cells, then quantify the bimodality and hysteresis of the AP-1 target response using flow or imaging reporters in a dose-up versus dose-down sweep. A hysteresis loop, with cells that stay in the primed basin at identical input, would show bistable self-reinforcement. Fitting the data with a model would tell us whether AP-1 positive feedback (JUN autoregulation) is sufficient or whether chromatin must be included."
+    }
+  ],
+  "cost_usd": 0.014441,
+  "session_id": "6ba0d185-16fe-431d-a244-ff55769baee8"
+}

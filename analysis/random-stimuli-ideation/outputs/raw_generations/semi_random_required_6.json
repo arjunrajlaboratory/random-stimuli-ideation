@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 6,
+  "stimulus": "No kettle echoes the velvet tide twice. When the comet mends, the restless orchard bends the prism. The velvet furnace echoes the compass of the quarry. The feverish hinge misplaces the lattice of the glacier. Beneath the nocturnal chorus, a violin rehearses its canyon. Every compass borrows a porous saddle. Every loom bends a gilded chorus. When the tunnel rehearses, the borrowed bridge scatters the meadow.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNo kettle echoes the velvet tide twice. When the comet mends, the restless orchard bends the prism. The velvet furnace echoes the compass of the quarry. The feverish hinge misplaces the lattice of the glacier. Beneath the nocturnal chorus, a violin rehearses its canyon. Every compass borrows a porous saddle. Every loom bends a gilded chorus. When the tunnel rehearses, the borrowed bridge scatters the meadow.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus then washout: persistence of AP-1 chromatin accessibility",
+      "description": "Expose cells (e.g., fibroblasts or keratinocytes) to a defined pulse of TPA, TNF or wounding signal, remove it, and track ATAC-seq, CUT&RUN for FOS/JUN, and H3K27ac at AP-1 motif sites over days to weeks. Memory is supported if accessibility and a faster, stronger transcriptional response to restimulation persist after signaling and AP-1 levels return to baseline. This echoes the idea that 'no kettle echoes the tide twice': a second exposure should differ from the first."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate maintenance from initiation",
+      "description": "Use dTAG or auxin-degron alleles of FOS, JUNB or a dominant-negative (A-FOS) at different times: before priming, during the memory phase, and just before restimulation. If AP-1 is needed only to establish memory, then removing it later spares the primed response. If it is needed throughout, then removing it later erases the primed response, which indicates a maintenance role."
+    },
+    {
+      "title": "Single-cell multiome with lineage barcoding across divisions",
+      "description": "Run paired scRNA/scATAC on barcoded clonal lineages after priming and after several cell divisions. Test whether sister cells share AP-1 motif accessibility (chromVAR deviation scores) and restimulation responses more than unrelated cells do. This shows whether the state is heritable rather than just long-lived protein or signaling."
+    },
+    {
+      "title": "Live imaging of AP-1 dynamics and reporter memory",
+      "description": "Tag endogenous FOS/JUN, and use an AP-1 target-locus reporter, in live single cells during repeated stimulation pulses. Quantify how the history of AP-1 dynamics (pulse number, interval) predicts later reporter output and the speed of reactivation. Compare to mathematical models of bistability or hysteresis, and check for a lingering, self-reinforcing loop."
+    },
+    {
+      "title": "Targeted epigenome editing and sufficiency tests at AP-1 sites",
+      "description": "Use dCas9 to recruit or block AP-1 at specific primed enhancers, or mutate the motifs, with CRISPRi/a and base editing. Then test whether deposited marks and the primed response last without the original stimulus. Pair this with Hi-C or Micro-C to see whether AP-1-dependent enhancer\u2013promoter contacts carry the memory. This tests whether AP-1 binding is necessary and sufficient, and not merely correlated."
+    }
+  ],
+  "cost_usd": 0.012635,
+  "session_id": "62407bc4-d58b-4ebb-a9e5-8bfba8fdeb04"
+}

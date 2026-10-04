@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 0,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis curves from magnetic materials",
+      "description": "Borrowing from ferromagnet physics, titrate a transient AP-1 stimulus (e.g., optogenetic or PMA/ligand-induced c-Fos/c-Jun) up and then down, and measure target gene expression and AP-1 occupancy at each dose. A loop where the down-sweep differs from the up-sweep at identical input (path dependence) would show bistability and memory; compare to AP-1 dominant-negative (A-Fos) cells that should lose the loop."
+    },
+    {
+      "title": "Engram tagging from neuroscience",
+      "description": "Use a Fos-driven Cre-ER/TRAP-style reporter to permanently label cells that experienced a prior AP-1 activation event, then re-stimulate days to weeks later and compare transcriptional response and chromatin accessibility between labeled and unlabeled cells by single-cell multiome. Faster, stronger, or qualitatively different responses in tagged cells would indicate AP-1-dependent priming memory."
+    },
+    {
+      "title": "Epidemic-style cell-lineage tracking (pedigree analysis from population genetics)",
+      "description": "Time-lapse imaging of live AP-1 reporters in single cells with lineage tracing across divisions, then compute the autocorrelation of AP-1 activity between mothers, daughters and cousins, as in heritability estimates. Inheritance of activity state beyond what shared environment explains, after a transient pulse, would quantify mitotic memory and its decay half-life."
+    },
+    {
+      "title": "Molecular 'bookmarking' as in library cataloguing: mitotic chromatin profiling",
+      "description": "Perform CUT&Tag/ChIP-seq and ATAC-seq for AP-1 factors (FOS, JUN) and enhancer marks (H3K27ac, H3K4me1) in mitotically arrested versus interphase cells after a prior stimulation, to test whether AP-1 stays bound to or leaves persistent accessible sites at specific loci. Pair with acute degron (dTAG) depletion of AP-1 after the stimulus to test whether maintenance of the accessibility state requires continued AP-1 presence versus only its initial pioneering."
+    },
+    {
+      "title": "Fault-tolerance testing from engineering: perturbation and rescue of the feedback circuit",
+      "description": "Treat the AP-1 autoregulatory loop (FOS/JUN promoters containing TRE sites) like a flip-flop circuit: build a mathematical model, then experimentally test its predictions by breaking the loop (mutating TREs by CRISPR, using inducible degrons at varied timing) and measuring whether the active state persists, collapses, or can be reset. Model-guided discrimination between feedback-based memory and chromatin-based memory would be done by comparing persistence after degron removal at early versus late times."
+    }
+  ],
+  "cost_usd": 0.014706,
+  "session_id": "89b7c25f-8619-4c9a-b071-829d14805f80"
+}

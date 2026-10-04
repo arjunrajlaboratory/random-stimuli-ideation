@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 2,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis curves from magnetic materials",
+      "description": "Borrowing the physics of ferromagnetic hysteresis, titrate a stimulus (e.g., TPA, growth factor, or stress) up and then down, measuring AP-1 (FOS/JUN) levels and chromatin accessibility at target enhancers by single-cell ATAC/CUT&Tag at matched doses on each branch. Path-dependent output at identical input, which persists after the stimulus is removed, would indicate memory rather than simple tracking of the input."
+    },
+    {
+      "title": "Immunological recall-response design",
+      "description": "Following vaccine prime-boost logic, give cells a primary stimulus, rest them for days to weeks, then give a secondary challenge and compare transcription kinetics and magnitude with naive cells. Pair this with time-course ChIP/CUT&RUN of AP-1 occupancy and H3K27ac at 'primed' enhancers, and test whether AP-1 loss (dominant-negative A-FOS, degron) during priming only, or only during recall, abolishes the faster or larger secondary response."
+    },
+    {
+      "title": "Bistable switch tests from synthetic circuit engineering",
+      "description": "Treat AP-1 positive autoregulation (JUN/FOS promoters bound by AP-1) as a candidate toggle switch. Use live-cell reporters of endogenous FOS/JUN and optogenetic or chemically induced pulses of varied duration to look for threshold behavior, bimodal single-cell distributions, and persistence of the ON state. Then break the feedback by mutating the AP-1 sites in the promoter and ask whether the memory is lost."
+    },
+    {
+      "title": "Lineage tracing and bookmarking, borrowed from mitotic inheritance in genealogy/pedigree analysis",
+      "description": "Pedigree-style analysis: use time-lapse imaging of AP-1 reporters in sister and cousin cells after a transient stimulus to measure how the state is inherited over divisions, with correlation decaying by generational distance. Complement with mitotic-chromosome CUT&Tag and live imaging to test whether AP-1 stays on chromatin through mitosis (bookmarking) and whether the memory persists across divisions."
+    },
+    {
+      "title": "Archaeological stratigraphy of chromatin: ordered-dating of enhancer history",
+      "description": "Like dating layers in an excavation, apply sequential perturbations (stimulus A then B, or reversed order) and map the AP-1 motif-containing enhancers that become newly accessible. Use footprinting, motif-resolved ATAC and Hi-C/Micro-C to resolve which sites are 'laid down' by the first stimulus and persist after AP-1 is removed, and test sufficiency by reinstating AP-1 at the site (dCas9 recruitment) in naive cells to see whether it recreates the remembered state."
+    }
+  ],
+  "cost_usd": 0.014766000000000001,
+  "session_id": "1760a8d9-da5b-41eb-acf3-7992308a5b0d"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 4,
+  "persona": "Pharmacologist",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Pharmacologist. Sees dose-response curves, drug synergy, therapeutic windows, and selectivity. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Priming dose-response hysteresis curves",
+      "description": "Prime cells with a graded range of AP-1 activating stimuli (e.g., PMA, TNF, anisomycin, or optogenetic c-Fos/c-Jun induction), wash out, then challenge with a fixed second stimulus after varying delays. Plot the secondary response against the priming dose and the washout interval. This gives EC50 shifts, Emax changes, and decay half-lives of memory, with hysteresis and a persistent left-shift of the curve as the pharmacological signature of memory."
+    },
+    {
+      "title": "Time-windowed AP-1 inhibition (therapeutic window for memory)",
+      "description": "Apply a selective AP-1 inhibitor (e.g., T-5224 or dominant-negative A-Fos) at defined windows: during priming only, during the rest period only, or during the challenge only. Run full concentration-response curves, and include inactive analogs and off-target controls for selectivity. If memory needs AP-1 during the rest period, it is maintained actively rather than just set at priming. The separation between memory-specific and acute-response IC50s defines the window."
+    },
+    {
+      "title": "Chromatin accessibility and AP-1 occupancy longitudinal profiling",
+      "description": "Use ATAC-seq or CUT&RUN for c-Jun, c-Fos, and H3K27ac at multiple times after stimulus washout. Look for AP-1 motif-containing enhancers that stay open after the stimulus is gone and respond faster or more strongly on restimulation. Correlate the persistence of each site with the magnitude of the recall response per locus, as a dose-dependent biochemical readout of memory."
+    },
+    {
+      "title": "Single-cell reporter tracking of bistability and heritability",
+      "description": "Use live-cell AP-1 reporters or endogenous tagged Fos/Jun to follow single cells and their lineages through priming, rest and rechallenge. Measure whether the primed state is all-or-none and whether it passes through divisions. Dose-response curves showing a sharp, switch-like Hill coefficient and bimodal distributions would support a self-sustaining memory circuit over a graded carryover."
+    },
+    {
+      "title": "Synergy analysis of AP-1 with co-regulators and epigenetic modifiers",
+      "description": "Test combinations of AP-1 perturbation with inhibitors of chromatin regulators (BAF/SWI-SNF, p300, HDACs, DNMTs) in a dose-matrix. Analyze with Bliss and Loewe synergy models to see whether they act in the same pathway for memory maintenance. Synergy or antagonism patterns, plus Jun/Fos paralog-specific knockdown, help place AP-1 as an initiator, maintainer, or reader of memory."
+    }
+  ],
+  "cost_usd": 0.012377,
+  "session_id": "6338dd80-3a04-4558-969d-b0711000b9a5"
+}

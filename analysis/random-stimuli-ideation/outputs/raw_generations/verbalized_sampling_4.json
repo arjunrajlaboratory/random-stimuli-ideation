@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 4,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints during and long after a transient stimulus (e.g., wounding, inflammation, stress) to see whether AP-1-dependent open regions persist after the signal and AP-1 levels have returned to baseline.",
+      "probability": 0.3
+    },
+    {
+      "title": "Secondary challenge (priming) assays with AP-1 perturbation",
+      "description": "Expose cells to a first stimulus, rest them, then re-stimulate and measure faster or stronger transcriptional responses; test whether inhibiting or degrading AP-1 (dominant-negative A-FOS, dTAG/degron) during priming only, versus during recall only, abolishes the memory.",
+      "probability": 0.3
+    },
+    {
+      "title": "Single-cell multiome tracking of memory-state heterogeneity",
+      "description": "Use scRNA+ATAC (with lineage barcoding) to determine whether AP-1 motif accessibility and target-gene expression define stable, heritable cell states that persist through cell divisions and predict future responsiveness.",
+      "probability": 0.2
+    },
+    {
+      "title": "Live-cell imaging of AP-1 dynamics and reporters",
+      "description": "Image endogenously tagged FOS/JUN or AP-1 reporters over days in single cells and lineages to measure pulse dynamics, persistence, and inheritance by daughter cells, correlating history with subsequent response.",
+      "probability": 0.1
+    },
+    {
+      "title": "Targeted epigenome editing and sufficiency tests at AP-1 sites",
+      "description": "Use CRISPR deletion of AP-1 motifs or dCas9-based editing at memory enhancers, plus ectopic AP-1 induction, to test whether AP-1 binding is necessary and sufficient to establish lasting accessibility, histone marks (H3K27ac), and enhanced re-induction, including pioneer-factor and BAF-complex dependence.",
+      "probability": 0.1
+    }
+  ],
+  "cost_usd": 0.007584199999999999,
+  "session_id": "b4da6bc1-3667-41aa-a804-e6e23bc0666b"
+}

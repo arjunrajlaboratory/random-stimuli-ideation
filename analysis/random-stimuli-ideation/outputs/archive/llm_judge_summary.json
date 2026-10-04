@@ -1,0 +1,408 @@
+{
+  "per_arm": {
+    "plain": {
+      "novelty": 2.2625,
+      "usefulness": 4.2125,
+      "useful_novel_frac": 0.025,
+      "forced_reference_frac": 0.0,
+      "n_useful_novel": 1
+    },
+    "verbalized_sampling": {
+      "novelty": 1.8125,
+      "usefulness": 3.8375,
+      "useful_novel_frac": 0.0,
+      "forced_reference_frac": 0.0,
+      "n_useful_novel": 0
+    },
+    "persona": {
+      "novelty": 3.6,
+      "usefulness": 3.525,
+      "useful_novel_frac": 0.1,
+      "forced_reference_frac": 0.1375,
+      "n_useful_novel": 4
+    },
+    "poem": {
+      "novelty": 2.025,
+      "usefulness": 4.1,
+      "useful_novel_frac": 0.0,
+      "forced_reference_frac": 0.0,
+      "n_useful_novel": 0
+    },
+    "distant_paragraph": {
+      "novelty": 2.15,
+      "usefulness": 4.175,
+      "useful_novel_frac": 0.0,
+      "forced_reference_frac": 0.0,
+      "n_useful_novel": 0
+    },
+    "random_tokens": {
+      "novelty": 2.025,
+      "usefulness": 4.0875,
+      "useful_novel_frac": 0.025,
+      "forced_reference_frac": 0.0,
+      "n_useful_novel": 1
+    },
+    "poem_required": {
+      "novelty": 2.5375,
+      "usefulness": 4.0875,
+      "useful_novel_frac": 0.05,
+      "forced_reference_frac": 0.55,
+      "n_useful_novel": 2
+    },
+    "distant_paragraph_required": {
+      "novelty": 2.8625,
+      "usefulness": 3.9625,
+      "useful_novel_frac": 0.025,
+      "forced_reference_frac": 0.5125,
+      "n_useful_novel": 1
+    },
+    "random_tokens_required": {
+      "novelty": 2.525,
+      "usefulness": 3.875,
+      "useful_novel_frac": 0.05,
+      "forced_reference_frac": 0.3,
+      "n_useful_novel": 2
+    }
+  },
+  "tests": {
+    "vs_verbalized_sampling": {
+      "plain": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0
+        },
+        "novelty": {
+          "diff": 0.4500000000000002,
+          "p": 0.0007998400319936012
+        },
+        "usefulness": {
+          "diff": 0.375,
+          "p": 0.004799040191961607
+        }
+      },
+      "persona": {
+        "useful_novel": {
+          "diff": 0.1,
+          "p": 0.1977604479104179
+        },
+        "novelty": {
+          "diff": 1.7875,
+          "p": 0.0003999200159968006
+        },
+        "usefulness": {
+          "diff": -0.3125,
+          "p": 0.0595880823835233
+        }
+      },
+      "poem": {
+        "useful_novel": {
+          "diff": 0.0,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.2124999999999999,
+          "p": 0.11537692461507698,
+          "p_holm_stimulus_arms": 0.23075384923015396
+        },
+        "usefulness": {
+          "diff": 0.2624999999999993,
+          "p": 0.028794241151769647,
+          "p_holm_stimulus_arms": 0.14397120575884823
+        }
+      },
+      "distant_paragraph": {
+        "useful_novel": {
+          "diff": 0.0,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.33750000000000036,
+          "p": 0.014997000599880024,
+          "p_holm_stimulus_arms": 0.04499100179964007
+        },
+        "usefulness": {
+          "diff": 0.33750000000000036,
+          "p": 0.01199760047990402,
+          "p_holm_stimulus_arms": 0.07198560287942413
+        }
+      },
+      "random_tokens": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.2124999999999999,
+          "p": 0.15996800639872025,
+          "p_holm_stimulus_arms": 0.23075384923015396
+        },
+        "usefulness": {
+          "diff": 0.25,
+          "p": 0.06818636272745451,
+          "p_holm_stimulus_arms": 0.20455908818236354
+        }
+      },
+      "poem_required": {
+        "useful_novel": {
+          "diff": 0.05,
+          "p": 0.47550489902019594,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.7249999999999996,
+          "p": 0.0011997600479904018,
+          "p_holm_stimulus_arms": 0.004799040191961607
+        },
+        "usefulness": {
+          "diff": 0.2499999999999991,
+          "p": 0.03999200159968006,
+          "p_holm_stimulus_arms": 0.15996800639872025
+        }
+      },
+      "distant_paragraph_required": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 1.0499999999999998,
+          "p": 0.0001999600079984003,
+          "p_holm_stimulus_arms": 0.0011997600479904018
+        },
+        "usefulness": {
+          "diff": 0.125,
+          "p": 0.4479104179164167,
+          "p_holm_stimulus_arms": 0.8958208358328335
+        }
+      },
+      "random_tokens_required": {
+        "useful_novel": {
+          "diff": 0.05,
+          "p": 0.47210557888422316,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.7124999999999999,
+          "p": 0.0003999200159968006,
+          "p_holm_stimulus_arms": 0.001999600079984003
+        },
+        "usefulness": {
+          "diff": 0.037499999999999645,
+          "p": 0.8612277544491101,
+          "p_holm_stimulus_arms": 0.8958208358328335
+        }
+      }
+    },
+    "vs_plain": {
+      "verbalized_sampling": {
+        "useful_novel": {
+          "diff": -0.025,
+          "p": 1.0
+        },
+        "novelty": {
+          "diff": -0.4500000000000002,
+          "p": 0.0005998800239952009
+        },
+        "usefulness": {
+          "diff": -0.375,
+          "p": 0.005398920215956809
+        }
+      },
+      "persona": {
+        "useful_novel": {
+          "diff": 0.07500000000000001,
+          "p": 0.4363127374525095
+        },
+        "novelty": {
+          "diff": 1.3375,
+          "p": 0.0003999200159968006
+        },
+        "usefulness": {
+          "diff": -0.6875,
+          "p": 0.0003999200159968006
+        }
+      },
+      "poem": {
+        "useful_novel": {
+          "diff": -0.025,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": -0.23750000000000027,
+          "p": 0.10317936412717456,
+          "p_holm_stimulus_arms": 0.49190161967606477
+        },
+        "usefulness": {
+          "diff": -0.11250000000000071,
+          "p": 0.19816036792641473,
+          "p_holm_stimulus_arms": 0.5944811037792441
+        }
+      },
+      "distant_paragraph": {
+        "useful_novel": {
+          "diff": -0.025,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": -0.11249999999999982,
+          "p": 0.4215156968606279,
+          "p_holm_stimulus_arms": 0.49190161967606477
+        },
+        "usefulness": {
+          "diff": -0.037499999999999645,
+          "p": 0.7786442711457708,
+          "p_holm_stimulus_arms": 0.7786442711457708
+        }
+      },
+      "random_tokens": {
+        "useful_novel": {
+          "diff": 0.0,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": -0.23750000000000027,
+          "p": 0.1315736852629474,
+          "p_holm_stimulus_arms": 0.49190161967606477
+        },
+        "usefulness": {
+          "diff": -0.125,
+          "p": 0.2611477704459108,
+          "p_holm_stimulus_arms": 0.5944811037792441
+        }
+      },
+      "poem_required": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.27499999999999947,
+          "p": 0.15816836632673464,
+          "p_holm_stimulus_arms": 0.49190161967606477
+        },
+        "usefulness": {
+          "diff": -0.1250000000000009,
+          "p": 0.14097180563887224,
+          "p_holm_stimulus_arms": 0.563887222555489
+        }
+      },
+      "distant_paragraph_required": {
+        "useful_novel": {
+          "diff": 0.0,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.5999999999999996,
+          "p": 0.0003999200159968006,
+          "p_holm_stimulus_arms": 0.0023995200959808036
+        },
+        "usefulness": {
+          "diff": -0.25,
+          "p": 0.07918416316736653,
+          "p_holm_stimulus_arms": 0.39592081583683264
+        }
+      },
+      "random_tokens_required": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0,
+          "p_holm_stimulus_arms": 1.0
+        },
+        "novelty": {
+          "diff": 0.26249999999999973,
+          "p": 0.09838032393521295,
+          "p_holm_stimulus_arms": 0.49190161967606477
+        },
+        "usefulness": {
+          "diff": -0.33750000000000036,
+          "p": 0.01759648070385923,
+          "p_holm_stimulus_arms": 0.10557888422315537
+        }
+      }
+    },
+    "required_vs_optional": {
+      "poem": {
+        "useful_novel": {
+          "diff": 0.05,
+          "p": 0.46350729854029193,
+          "p_holm": 1.0
+        },
+        "novelty": {
+          "diff": 0.5124999999999997,
+          "p": 0.022195560887822437,
+          "p_holm": 0.028794241151769647
+        },
+        "usefulness": {
+          "diff": -0.012500000000000178,
+          "p": 1.0,
+          "p_holm": 1.0
+        },
+        "forced_reference": {
+          "diff": 0.55,
+          "p": 0.0007998400319936012,
+          "p_holm": 0.0007998400319936012
+        }
+      },
+      "distant_paragraph": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0,
+          "p_holm": 1.0
+        },
+        "novelty": {
+          "diff": 0.7124999999999995,
+          "p": 0.0015996800639872025,
+          "p_holm": 0.004799040191961607
+        },
+        "usefulness": {
+          "diff": -0.21250000000000036,
+          "p": 0.13377324535092983,
+          "p_holm": 0.4013197360527895
+        },
+        "forced_reference": {
+          "diff": 0.5125,
+          "p": 0.0001999600079984003,
+          "p_holm": 0.0005998800239952009
+        }
+      },
+      "random_tokens": {
+        "useful_novel": {
+          "diff": 0.025,
+          "p": 1.0,
+          "p_holm": 1.0
+        },
+        "novelty": {
+          "diff": 0.5,
+          "p": 0.014397120575884824,
+          "p_holm": 0.028794241151769647
+        },
+        "usefulness": {
+          "diff": -0.21250000000000036,
+          "p": 0.14117176564687062,
+          "p_holm": 0.4013197360527895
+        },
+        "forced_reference": {
+          "diff": 0.3,
+          "p": 0.0001999600079984003,
+          "p_holm": 0.0005998800239952009
+        }
+      }
+    }
+  },
+  "judge_agreement": {
+    "novelty_spearman_pass0_vs_pass1": 0.7309008416138204,
+    "usefulness_spearman_pass0_vs_pass1": 0.6259066414147272,
+    "novelty_exact_agreement": 0.5277777777777778,
+    "usefulness_exact_agreement": 0.6555555555555556
+  },
+  "useful_novel_cutoff": 4
+}

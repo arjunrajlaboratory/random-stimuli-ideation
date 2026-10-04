@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 0,
+  "stimulus": "When the compass bends, the tidal satchel echoes the bridge. A canyon of crooked threads mends the atlas. When the tapestry bends, the rusted comet tunes the prism. No violin swallows the restless compass twice. Beneath the gilded whistle, a feather counts its kite. Beneath the porous feather, a marble mends its glacier. Every ember folds a distant ledger. A ledger of gilded feathers tilts the pendulum.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nWhen the compass bends, the tidal satchel echoes the bridge. A canyon of crooked threads mends the atlas. When the tapestry bends, the rusted comet tunes the prism. No violin swallows the restless compass twice. Beneath the gilded whistle, a feather counts its kite. Beneath the porous feather, a marble mends its glacier. Every ember folds a distant ledger. A ledger of gilded feathers tilts the pendulum.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge (priming assay)",
+      "description": "Expose cells to a brief stimulus (e.g., TNF, EGF, or PMA), let it wash out for hours to days, then re-stimulate and measure transcription of AP-1 target genes by RNA-seq and nascent RNA (PRO-seq). Like the 'compass that bends' and is echoed later, a faster or stronger second response, lost when AP-1 is inhibited, would show a memory that depends on AP-1. Compare naive, primed, and AP-1-depleted cells."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy tracking",
+      "description": "Run ATAC-seq, CUT&RUN for FOS/JUN family members, and H3K27ac ChIP at time points before, during and long after the stimulus. Look for enhancers that stay open and AP-1-bound after the signal has gone, as if a 'mended atlas' retained a trace. Motif footprinting would show whether AP-1 binding persists or whether it only leaves behind an epigenetic mark."
+    },
+    {
+      "title": "Acute degron perturbation at defined memory phases",
+      "description": "Fuse AP-1 subunits (c-JUN, FOSL1, or a dominant-negative like A-FOS) to a degron or place them under inducible control. Remove AP-1 either only during the initial stimulus (testing for establishment) or only after the stimulus ends (testing for maintenance), then re-challenge the cells. This separates AP-1 as a writer of memory from AP-1 as a maintainer, and it controls for the cells' general responsiveness."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 reporters with lineage tracking",
+      "description": "Image endogenously tagged FOS/JUN or a fluorescent AP-1 transcriptional reporter in single cells across stimulation, rest, and re-stimulation, and follow daughter cells through divisions. Measure whether activity states persist, are heritable, and are bistable, using autocorrelation between mother and daughter cells. Fit the data to a mathematical model of positive feedback (JUN autoregulation) to test whether the memory is a cell-intrinsic state."
+    },
+    {
+      "title": "Targeted epigenome editing of AP-1 sites to test sufficiency and necessity",
+      "description": "Use dCas9-based tools (KRAB or p300) or motif mutations through CRISPR base editing to alter specific AP-1-bound enhancers that stay accessible after the signal. Test whether closing them erases the primed response, and whether forced AP-1 binding or opening creates a memory without the stimulus. Readouts are the gene expression response to re-challenge and the persistence of chromatin marks, which would show causality at single loci."
+    }
+  ],
+  "cost_usd": 0.013137000000000003,
+  "session_id": "26c6b6ef-53d7-4efd-b793-21edab333387"
+}

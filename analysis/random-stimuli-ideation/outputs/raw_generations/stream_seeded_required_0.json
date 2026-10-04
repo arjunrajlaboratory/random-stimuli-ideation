@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 0,
+  "stimulus": "A cable looks like a single thing from the shore, but it's really thousands of wires pretending to be one. Inspectors know this. Inside a suspension cable, galvanized wire is squeezed into a bundle and wrapped, and the wrapping is meant to keep water out, though water has opinions about that. Corrosion hides where you can't see it, so people wedge steel wedges between the strands, pry the cable open a little, and peek inside like dentists. Then they squirt in oil and hope.\n\nStay cables, the diagonal ones on cable-stayed bridges, get different treatment. Some inspectors rappel down them. Some send little robots that crawl up like tiny ticks, carrying cameras. There's something funny about a machine climbing a cable built to hold up a road.\n\nAcoustic monitoring is stranger: you listen for wires snapping. Each break is a tiny pop, a click in a very long guitar string. Speaking of which, you can pluck a cable and measure its vibration to work out its tension, the same way a bassist tunes. Frequency tells you load. Rain and wind can set cables dancing, which is its own problem, and engineers added dimples and ridges, a bit like golf balls.\n\nSilver Bridge, 1967, one eyebar, a crack too small to see. Nobody could check inside it then.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA cable looks like a single thing from the shore, but it's really thousands of wires pretending to be one. Inspectors know this. Inside a suspension cable, galvanized wire is squeezed into a bundle and wrapped, and the wrapping is meant to keep water out, though water has opinions about that. Corrosion hides where you can't see it, so people wedge steel wedges between the strands, pry the cable open a little, and peek inside like dentists. Then they squirt in oil and hope.\n\nStay cables, the diagonal ones on cable-stayed bridges, get different treatment. Some inspectors rappel down them. Some send little robots that crawl up like tiny ticks, carrying cameras. There's something funny about a machine climbing a cable built to hold up a road.\n\nAcoustic monitoring is stranger: you listen for wires snapping. Each break is a tiny pop, a click in a very long guitar string. Speaking of which, you can pluck a cable and measure its vibration to work out its tension, the same way a bassist tunes. Frequency tells you load. Rain and wind can set cables dancing, which is its own problem, and engineers added dimples and ridges, a bit like golf balls.\n\nSilver Bridge, 1967, one eyebar, a crack too small to see. Nobody could check inside it then.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Acoustic-style single-event monitoring of AP-1 binding dynamics",
+      "description": "Use live-cell single-molecule tracking or CUT&Tag time courses to detect individual FOS/JUN binding and dwell events at specific enhancers after a transient stimulus (like listening for single wire breaks). Test whether residence times and occupancy at 'memory' sites stay altered days after the stimulus ends, compared with naive cells."
+    },
+    {
+      "title": "Pluck-and-tension test: perturbation response probing of latent AP-1 state",
+      "description": "Measure how cells respond to a small standardized re-stimulation (the 'pluck') at various times after a priming stimulus, reading out AP-1 target transcription, chromatin accessibility (ATAC-seq) and FOS/JUN levels. A faster or stronger response (frequency shifts indicating hidden load) in primed cells, which depends on AP-1 sites, would show a stored state not visible at baseline."
+    },
+    {
+      "title": "Pry-open the bundle: acute AP-1 degradation after priming",
+      "description": "Prime cells, then use degron (dTAG/AID) or dominant-negative A-FOS to remove AP-1 at different times: during priming, during the memory interval, or only at re-challenge. Compare which windows abolish the enhanced secondary response and persistent accessibility, separating AP-1 as initiator versus maintainer of memory."
+    },
+    {
+      "title": "Strand-by-strand motif mutagenesis and single-cell heterogeneity",
+      "description": "Use CRISPR editing or base editing of individual AP-1 motifs at candidate memory enhancers, plus single-cell multiome (RNA and ATAC) to resolve which 'strands' carry the memory. Test whether memory is lost per-site and whether cell-to-cell heterogeneity of retained accessibility predicts the strength of the later response and its inheritance through divisions."
+    },
+    {
+      "title": "Inspect the hidden crack: lineage tracing of memory through cell divisions",
+      "description": "Track primed cells and their daughters by live imaging with AP-1 reporters or barcoded lineages, and check whether elevated accessibility and reporter state persist across several generations without ongoing stimulus. Pair this with measurements of histone marks (H3K27ac, H3K4me1) and DNA methylation at AP-1 sites to find the mechanism that maintains the state, and compare with cells where division is blocked."
+    }
+  ],
+  "cost_usd": 0.013065,
+  "session_id": "ea1f4f0b-d8a6-4d2b-aacf-b234982f7cd1"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad_required",
+  "call": 0,
+  "stimulus": "allonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nallonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with chromatin accessibility memory readout (ATAC/CUT&Tag)",
+      "description": "Give cells a brief inflammatory or injury stimulus (e.g., TNF or wounding), wash it out, and profile AP-1 (FOS/JUN) binding and chromatin accessibility by CUT&Tag and ATAC-seq at days 0, 1, 7 and 28. Like the 'fallway' (a path worn by prior use) in the material, persistently opened AP-1 motif sites in primed cells would show a trace of past stimulation. Compare these sites with sites in naive cells."
+    },
+    {
+      "title": "Acute AP-1 degradation during and after priming",
+      "description": "Use a degron (dTAG/AID) on JUN or FOS, or a dominant-negative such as A-FOS, to deplete AP-1 either only during priming or only after the stimulus has been removed. If AP-1 is needed to establish memory but not to maintain it, the primed state should persist after depletion in the later window. If it is needed for maintenance, the state should decay. This separates initiation from maintenance."
+    },
+    {
+      "title": "Re-stimulation response test with single-cell multiome",
+      "description": "Prime cells, rest them, then re-challenge. Measure faster or stronger induction of target genes with scRNA-seq plus scATAC, and link it to the AP-1 motif accessibility of individual cells. Naive cells are the control, and a non-AP-1 priming stimulus is a second control. A memory mechanism predicts a heterogeneous but heritable primed subpopulation whose response scales with its retained AP-1 sites."
+    },
+    {
+      "title": "Lineage-tracing of memory through cell division",
+      "description": "Track daughter cells with live reporters (a fluorescent AP-1 activity reporter, or endogenous FOS/JUN knock-in tags) and barcoded lineages after a pulse stimulus. Test whether sister cells share the primed state for several divisions, and whether mitotic bookmarking by AP-1 on chromatin (imaged or by mitotic ChIP) explains it. Such inheritance would separate true memory from a lingering signal."
+    },
+    {
+      "title": "Targeted epigenome editing and mathematical modeling of bistability",
+      "description": "Use dCas9 to open or close one AP-1-bound enhancer, and fit an ODE model of AP-1 feed-forward and positive-feedback loops with chromatin states. The model predicts hysteresis, with different response thresholds on the way up and the way down. Test it by dose-response titration of the stimulus, and check whether editing a single site shifts or abolishes the memory."
+    }
+  ],
+  "cost_usd": 0.012921000000000002,
+  "session_id": "8119cbc1-7275-4455-8467-eba5b6f91b26"
+}

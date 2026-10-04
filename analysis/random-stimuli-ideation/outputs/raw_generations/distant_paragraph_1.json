@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 1,
+  "stimulus": "In contract bridge the auction is a language with a tiny vocabulary: fifteen\ndenominations, three calls, and the order in which they are spoken. Partnerships\nagree in advance what each sequence promises, so a bid of two clubs may say nothing\nabout clubs at all. Because opponents are entitled to know these agreements,\nplayers must alert unusual meanings. The best bidding systems are not the ones that\ndescribe a hand most precisely, but the ones that leave the opponents the least room\nto interfere.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nIn contract bridge the auction is a language with a tiny vocabulary: fifteen\ndenominations, three calls, and the order in which they are spoken. Partnerships\nagree in advance what each sequence promises, so a bid of two clubs may say nothing\nabout clubs at all. Because opponents are entitled to know these agreements,\nplayers must alert unusual meanings. The best bidding systems are not the ones that\ndescribe a hand most precisely, but the ones that leave the opponents the least room\nto interfere.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal chromatin accessibility after transient stimulus",
+      "description": "Stimulate cells (e.g., macrophages, fibroblasts, or neurons) with a transient signal that induces AP-1, then run ATAC-seq and CUT&RUN for AP-1 (FOS/JUN), H3K27ac, and H3K4me1 at multiple time points after washout. Test whether AP-1-bound enhancers stay open and primed long after AP-1 activity returns to baseline, and whether a second stimulus gives a faster or stronger transcriptional response at those sites."
+    },
+    {
+      "title": "Acute AP-1 degradation during memory maintenance",
+      "description": "Use degron tags (dTAG/AID) or dominant-negative A-FOS to remove AP-1 at different stages: before priming, during the rest period, and at restimulation. If AP-1 is needed only to establish memory, accessibility should persist after removal. If it is needed to maintain memory, accessibility and the faster secondary response should decay."
+    },
+    {
+      "title": "Single-cell multiome tracking of priming and response",
+      "description": "Perform paired scRNA/scATAC-seq on naive, primed, and restimulated cells to link each cell's AP-1 motif accessibility to its secondary response. Test whether memory is heritable and graded (clonal, tracked with lineage barcodes across divisions) or an all-or-none state. Compare this against cells that were never primed."
+    },
+    {
+      "title": "Live-cell AP-1 reporters and dynamics",
+      "description": "Use endogenous tagging of FOS/JUN and AP-1 transcriptional reporters, with optogenetic or pulsatile stimulation, to record single-cell dynamics over days. Test whether prior pulse history predicts later response amplitude or kinetics after AP-1 levels have returned to baseline. Also test whether the memory is carried by a self-sustaining feedback loop with bistable or hysteretic behavior."
+    },
+    {
+      "title": "Site-specific causal perturbation of AP-1 motifs",
+      "description": "Use CRISPR editing of AP-1 motifs, or dCas9-based recruitment and blocking, at selected memory-associated enhancers. Then test whether priming-induced accessibility, histone marks, and faster re-induction of nearby genes are lost. Include pioneer-factor cooperation with SWI/SNF (BAF) and lineage factors such as PU.1 to separate AP-1 as the memory carrier from AP-1 as only one input to a broader chromatin state. Complement this with in vivo tests, for example tracking trained-immunity or injury-primed tissues after the stimulus is gone."
+    }
+  ],
+  "cost_usd": 0.012541000000000002,
+  "session_id": "6d604777-7cda-472e-a757-acb2399eee8d"
+}

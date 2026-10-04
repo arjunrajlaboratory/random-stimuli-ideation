@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Fearful symmetry: paired-daughter lineage tracking of AP-1 state",
+      "description": "Live-image AP-1 reporters (e.g., FOS/JUN endogenous tags plus a TRE-driven reporter) in single cells after a transient stimulus, then compare sister cells across several divisions. Like the tiger's symmetry, high sister-sister correlation that exceeds that of unrelated cells and persists after the stimulus ends would indicate heritable memory rather than ongoing signaling."
+    },
+    {
+      "title": "Seizing the fire: transient pulse then chromatin accessibility and AP-1 occupancy time course",
+      "description": "Give a defined stimulus pulse (e.g., TPA or a cytokine), wash it out, and run ATAC-seq, CUT&RUN for JUN/FOS and H3K27ac at days to weeks. Persistent AP-1 motif-enriched accessible sites that stay open after AP-1 levels fall back to baseline indicate that AP-1 left a lasting epigenetic imprint."
+    },
+    {
+      "title": "Burnt fire: acute degron depletion at different times after priming",
+      "description": "Use an auxin- or dTAG-degradable AP-1 subunit (e.g., c-JUN or FOSL1) and remove it either during priming or after it, then restimulate and measure the transcriptional response by RNA-seq. If depletion after priming still leaves the enhanced response, AP-1 is only needed to establish memory. If depletion abolishes the response, AP-1 is needed to maintain it."
+    },
+    {
+      "title": "Burning bright in the forest: single-cell multiome of primed vs naive populations",
+      "description": "Run joint scRNA/scATAC on primed, naive and re-stimulated cells, then infer motif activity with tools like chromVAR and SCENIC. Compare the faster or stronger gene induction at AP-1-dependent loci in primed cells, and test whether the primed subpopulation is a discrete, stable state."
+    },
+    {
+      "title": "What immortal hand: synthetic AP-1 sufficiency test with dCas9 and mutated motifs",
+      "description": "Delete or mutate AP-1 motifs at candidate memory enhancers by CRISPR, and in parallel tether AP-1 or a pioneer-capable domain to naive loci using dCas9. Loss of memory after motif deletion, and induction of persistent accessibility and heightened response by tethering, would show necessity and sufficiency at specific loci."
+    }
+  ],
+  "cost_usd": 0.011967,
+  "session_id": "342694ce-7a94-4d17-bc7c-a7230d431456"
+}

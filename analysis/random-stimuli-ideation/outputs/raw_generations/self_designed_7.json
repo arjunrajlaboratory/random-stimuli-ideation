@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed",
+  "call": 7,
+  "stimulus": "Shards (use any, none, or their collisions as lenses; do not mention them directly):\n\n1. Kintsugi: the break is filled with gold, and the repair becomes the most valued feature.\n2. Mycorrhizal tithing: a tree hands sugar to a fungus, and the fungus passes it to a neighbor in shade.\n3. Campanology change ringing: bells never repeat a permutation, yet each moves only one place at a time.\n4. Salt-marsh tide tables written by a blind ferryman who relies on sound.\n5. Medieval commons law: a resource survives because grazing rights are tied to unwritten obligations.\n6. Moir\u00e9: two regular gratings create a slow pattern neither contains.\n7. Sourdough inheritance: a hundred-year-old culture is a community that has been fed, not a single organism.\n8. Tidal-lock courtship of two moons that show each other only one face.\n9. A cartographer who deliberately draws the unknown regions larger than the known.\n10. Pidgin to creole: grammar emerges in children from broken input.\n\nCollisions: lichen / auction / lullaby / fault line / vaccine / abacus / stutter / reef / ledger / eclipse / glue / tremor / loom / quarantine / echo / rust.\n\nInvert one assumption. Ask what would be measured if the noise were the signal, if the failure were the product, or if the observer were part of the instrument.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nShards (use any, none, or their collisions as lenses; do not mention them directly):\n\n1. Kintsugi: the break is filled with gold, and the repair becomes the most valued feature.\n2. Mycorrhizal tithing: a tree hands sugar to a fungus, and the fungus passes it to a neighbor in shade.\n3. Campanology change ringing: bells never repeat a permutation, yet each moves only one place at a time.\n4. Salt-marsh tide tables written by a blind ferryman who relies on sound.\n5. Medieval commons law: a resource survives because grazing rights are tied to unwritten obligations.\n6. Moir\u00e9: two regular gratings create a slow pattern neither contains.\n7. Sourdough inheritance: a hundred-year-old culture is a community that has been fed, not a single organism.\n8. Tidal-lock courtship of two moons that show each other only one face.\n9. A cartographer who deliberately draws the unknown regions larger than the known.\n10. Pidgin to creole: grammar emerges in children from broken input.\n\nCollisions: lichen / auction / lullaby / fault line / vaccine / abacus / stutter / reef / ledger / eclipse / glue / tremor / loom / quarantine / echo / rust.\n\nInvert one assumption. Ask what would be measured if the noise were the signal, if the failure were the product, or if the observer were part of the instrument.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Prior-stimulus ATAC/CUT&Tag time course with AP-1 degron",
+      "description": "Stimulate cells (e.g., macrophages or fibroblasts with LPS, TNF, or wounding signals), wash out, and track chromatin accessibility, AP-1 (FOS/JUN) binding and H3K27ac at 'latent' enhancers for days to weeks. Test necessity by acutely degrading (dTAG/AID) AP-1 factors at different times: before the first stimulus (is it needed to write memory?) versus after it (is it needed to maintain memory?)."
+    },
+    {
+      "title": "Re-stimulation response kinetics as a memory readout",
+      "description": "Challenge primed versus naive cells with a second stimulus after varying rest intervals, and measure the transcriptional response (bulk or scRNA-seq, nascent RNA via PRO-seq) for faster, stronger or qualitatively different induction. Compare AP-1 site mutants (CRISPR editing of motifs at specific enhancers) or dominant-negative A-FOS with wild type to show that the primed response depends on AP-1 and to measure the memory half-life."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics with heritability analysis",
+      "description": "Use endogenously tagged FOS/JUN and an AP-1 reporter to follow lineages through divisions, quantifying pulse frequency, amplitude and the dynamics of a reporter gene. Treat cell-to-cell variability as signal: test whether sister cells' AP-1 history correlates with each other's re-response beyond what shared lineage alone predicts. Comparing correlation decay over generations to that of shuffled controls estimates mitotic heritability."
+    },
+    {
+      "title": "Sufficiency test by synthetic AP-1 pulses and optogenetic writing",
+      "description": "Drive AP-1 activity with optogenetic or chemogenetic control (e.g., light-gated JUN/FOS, or a stimulus-free dCas9-activator at AP-1 sites), varying pulse duration, frequency and dose in the absence of any natural stimulus. Then measure whether chromatin opening and enhanced re-response persist after AP-1 is turned off, and which pulse patterns are encoded, to separate AP-1 as a writer of memory from a passive reader of other marks."
+    },
+    {
+      "title": "Cooperating-factor and chromatin-remodeler dependency mapping",
+      "description": "Combine CUT&RUN/ChIP-seq, Micro-C or Hi-C and proteomics (BioID) for AP-1 and its partners (BAF/SWI-SNF, pioneer factors, ATF/CEBP/ETS) at memory-bearing enhancers, then perturb the partners with CRISPR screens or inhibitors. Determine whether memory persists via AP-1 occupancy itself, via remodeler-deposited nucleosome changes or histone marks that outlast AP-1, or via self-reinforcing feedback such as AP-1 inducing its own genes (FOS, JUN), by testing which layer is lost first after AP-1 loss."
+    }
+  ],
+  "cost_usd": 0.015355000000000002,
+  "session_id": "cbfacb95-db80-4214-a0fc-92dc368550f3"
+}

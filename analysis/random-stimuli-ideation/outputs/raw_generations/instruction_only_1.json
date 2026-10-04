@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 1,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop for AP-1 dose-response",
+      "description": "Borrowing from ferromagnetic hysteresis, expose cells to a ramped-up then ramped-down stimulus (e.g., optogenetic or chemically controlled FOS/JUN input) and measure AP-1 occupancy (CUT&RUN) and target gene expression along both paths. A non-overlapping loop, with residual signal at zero stimulus, would indicate path-dependent memory attributable to AP-1."
+    },
+    {
+      "title": "Immunological recall-response analogy: prime-challenge-rechallenge with AP-1 degron",
+      "description": "Like vaccine prime/boost designs, give cells a first stimulus, rest them for variable intervals, then re-stimulate, measuring faster or stronger transcription at primed loci by nascent RNA-seq (PRO-seq). Acutely degrading (dTAG) AP-1 factors only during priming versus only during recall separates AP-1's role in establishing versus retrieving memory."
+    },
+    {
+      "title": "Neuronal engram-style lineage tracing of AP-1 history",
+      "description": "Inspired by activity-dependent engram labeling (e.g., FOS-driven TRAP), use an AP-1-driven Cre or recorder to permanently tag cells that experienced AP-1 activation, then compare tagged and untagged sibling cells for later chromatin accessibility (scATAC) and response to re-stimulation. This tests whether past AP-1 activity predicts durable, cell-autonomous state differences."
+    },
+    {
+      "title": "Kinetic proofreading / persistence-time modeling from single-cell live imaging",
+      "description": "Borrowing the signal-processing concept of memory kernels from physics and control theory, image endogenously tagged FOS/JUN and a transcription reporter in single cells over days, then fit autocorrelation and mutual-information decay times. Compare decay times with AP-1 protein half-life and chromatin mark half-life to see if persistence exceeds what protein turnover alone explains."
+    },
+    {
+      "title": "Epigenetic 'pioneer footprint' test using ecological succession logic",
+      "description": "As in ecological succession, where early colonizers modify the habitat for later species, test whether AP-1 opens enhancers that remain accessible after AP-1 is removed. Perform time-course ATAC-seq, H3K27ac ChIP and motif analysis after stimulus withdrawal, and use dCas9-based tethering of AP-1 or motif mutation at selected enhancers to test if accessibility persistence is AP-1-dependent and sufficient to enhance later responses."
+    }
+  ],
+  "cost_usd": 0.013906000000000002,
+  "session_id": "1f237609-b1cb-47aa-a5dd-6dcd7101643e"
+}

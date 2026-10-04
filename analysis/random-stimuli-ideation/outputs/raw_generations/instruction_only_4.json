@@ -1,0 +1,30 @@
+{
+  "arm": "instruction_only",
+  "call": 4,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop for AP-1 chromatin state",
+      "description": "Borrowing from ferromagnetic hysteresis, titrate a stimulus (e.g., FOS/JUN induction via optogenetic or dox-controlled dosing) up and then back down, measuring AP-1 occupancy (CUT&RUN) and chromatin accessibility (ATAC-seq) at target enhancers. A path-dependent, non-retracing response at matched input levels would show AP-1-dependent memory, and acute degron removal of AP-1 would test whether the retained state requires it."
+    },
+    {
+      "title": "Immunological recall-style prime/rest/rechallenge with kinetic fitting",
+      "description": "Borrowing from vaccine prime-boost design, expose cells to a transient stimulus (e.g., TPA or a mechanical/inflammatory cue), rest them for variable intervals, then re-stimulate. Measure faster or stronger transcription of AP-1 target genes (nascent RNA, PRO-seq) and fit decay curves to estimate memory half-life, with and without dominant-negative AP-1 (A-FOS) during priming only."
+    },
+    {
+      "title": "Epidemiological lineage tracing via barcoded clonal inheritance",
+      "description": "Borrowing from cohort studies that follow families across generations, use lineage barcoding with live AP-1 reporters to follow sister cells after a transient stimulus. Compute intra-clonal versus inter-clonal correlation of AP-1 activity and target-gene expression across divisions, with the heritability of state quantifying mitotic memory."
+    },
+    {
+      "title": "Electronic flip-flop (bistable circuit) analysis through single-cell dynamics",
+      "description": "Borrowing from digital memory circuits, test whether AP-1 with its positive feedback (FOS/JUN promoter autoregulation) forms a latch. Use live single-cell imaging of AP-1 reporters and a pulse-width/amplitude scan to look for bimodality, a switching threshold, and persistence after input withdrawal. Then perturb the feedback loop (e.g., mutate AP-1 sites in the JUN promoter) to see whether bistability collapses."
+    },
+    {
+      "title": "Archaeological stratigraphy of enhancer layers using time-resolved multi-omics",
+      "description": "Borrowing from dating of layered deposits, perform time-course ATAC-seq, histone mark ChIP (H3K27ac, H3K4me1), and AP-1 motif-footprint analysis after a stimulus is removed, to define which enhancers stay in 'residual' accessible states. Then use CRISPRi/dCas9 editing of AP-1 motifs at these sites and ask causally whether the retained accessibility and the primed response of linked genes depend on the AP-1 sites."
+    }
+  ],
+  "cost_usd": 0.014525999999999999,
+  "session_id": "3018d443-1d06-46d0-8042-ca6b8c9d17ab"
+}

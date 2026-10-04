@@ -1,0 +1,31 @@
+{
+  "arm": "self_designed_required",
+  "call": 3,
+  "stimulus": "Fragments to collide with whatever comes next:\n\n- lichen negotiating a treaty between two kingdoms\n- the tide table of a harbor that no longer exists\n- a ratchet that only turns when it is shaken badly\n- bell-founders tuning metal by shaving its inside\n- slime mold rebuilding a rail map overnight\n- a ledger where every debt is paid in a different unit\n- fog harvesting nets; stenciled moth wings; kintsugi seams\n- an immune system forgetting on purpose\n- jury selection by lottery in Athens\n- a river that votes by braiding\n- the sound a bridge makes before it is loaded\n- sourdough starters inherited across centuries\n- error as the only signal; silence as the measurement\n- a map drawn at 1:1 scale, then folded\n- ant bridges built from the workers themselves\n- cheap noise injected deliberately into a precise instrument\n- a mistranslation that turned out to be the better law\n- the dead layer of a coral reef carrying the living one\n\nInstructions to self: before answering, pick two or three fragments at random. Treat each as a hidden blueprint for a mechanism, a measurement trick, or a failure mode. Invert one assumption of the standard approach, change the scale by a factor of a thousand, or swap who the actor is. Then propose ideas that would still be testable with real data or experiments, and avoid the first three ideas that come to mind.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nFragments to collide with whatever comes next:\n\n- lichen negotiating a treaty between two kingdoms\n- the tide table of a harbor that no longer exists\n- a ratchet that only turns when it is shaken badly\n- bell-founders tuning metal by shaving its inside\n- slime mold rebuilding a rail map overnight\n- a ledger where every debt is paid in a different unit\n- fog harvesting nets; stenciled moth wings; kintsugi seams\n- an immune system forgetting on purpose\n- jury selection by lottery in Athens\n- a river that votes by braiding\n- the sound a bridge makes before it is loaded\n- sourdough starters inherited across centuries\n- error as the only signal; silence as the measurement\n- a map drawn at 1:1 scale, then folded\n- ant bridges built from the workers themselves\n- cheap noise injected deliberately into a precise instrument\n- a mistranslation that turned out to be the better law\n- the dead layer of a coral reef carrying the living one\n\nInstructions to self: before answering, pick two or three fragments at random. Treat each as a hidden blueprint for a mechanism, a measurement trick, or a failure mode. Invert one assumption of the standard approach, change the scale by a factor of a thousand, or swap who the actor is. Then propose ideas that would still be testable with real data or experiments, and avoid the first three ideas that come to mind.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Shake-to-ratchet: noisy re-stimulation reveals hysteresis",
+      "description": "Prime cells with a transient stimulus (e.g., TPA, wounding cytokines, or optogenetic FOS/JUN), then apply a second stimulus of varying strength and timing, with and without deliberately injected noise (pulsed or fluctuating dosing). Measure AP-1 binding (CUT&RUN), chromatin accessibility (ATAC) and target transcription. Memory predicts a primed-vs-naive hysteresis loop in the dose-response, and noise should reveal whether the ratchet advances only under fluctuation."
+    },
+    {
+      "title": "Dead-layer-carries-the-living: AP-1-opened enhancer residue after AP-1 loss",
+      "description": "After priming, remove AP-1 with an acute degron on FOS/JUN, or a dominant-negative A-FOS, at several delays. Track by time-resolved ATAC, H3K27ac and H3K4me1 whether the accessible 'scar' persists and whether it accelerates re-induction of genes upon AP-1 return. If the scaffold persists without AP-1 and drives faster recall, AP-1 acts as a writer of memory, not just a carrier."
+    },
+    {
+      "title": "Silence as measurement: single-cell live reporters of AP-1 dynamics across divisions",
+      "description": "Use live-cell reporters of endogenous FOS/JUN activity and a target gene in lineage-tracked single cells. Measure whether past AP-1 pulse history in a mother cell predicts response amplitude in daughters, and compute mutual information between history and response across generations. Cells that stay quiet in between are informative controls, since memory without ongoing AP-1 activity argues for a non-AP-1-bound carrier."
+    },
+    {
+      "title": "Pioneer-site occupancy swap: AP-1 binding-site editing and dCas9 tethering",
+      "description": "Mutate or CRISPRi/CRISPRa individual AP-1 motifs at primed enhancers, and tether synthetic AP-1 or chromatin-remodeler recruiters at the same loci. Then test whether a site is necessary and sufficient to confer faster, stronger secondary responses, which separates local enhancer memory from global cell-state memory."
+    },
+    {
+      "title": "Slime-mold rewiring: perturb-and-recover network reconstruction",
+      "description": "Perform Perturb-seq or multiome sequencing on cells at different times after a transient AP-1 stimulus, delete AP-1 family members (FOS, JUN, ATF, MAF) and ask how the regulatory network (TF-to-enhancer-to-gene links) reroutes. Compare rebuilt networks to the original and to naive cells, and quantify path-dependence. Stable differences after wash-out would indicate that AP-1 has set a persistent network state."
+    }
+  ],
+  "cost_usd": 0.014655000000000001,
+  "session_id": "80734222-c20e-4de1-a0f8-c9ba492c6376"
+}

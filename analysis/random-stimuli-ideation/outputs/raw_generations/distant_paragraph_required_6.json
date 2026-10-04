@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 6,
+  "stimulus": "Byzantine mosaicists set their tesserae at slight angles rather than flat, so\nthat the gold glass, made by sandwiching gold leaf between two layers of glass,\nwould catch candlelight from below and flicker as a viewer moved. Faces were laid\nin smaller pieces than robes, and the outlines of figures were followed by a single\nrow of tiles whose direction guided the eye. Up close the surface looks rough and\nuneven; the image only resolves at the distance it was designed to be seen from.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nByzantine mosaicists set their tesserae at slight angles rather than flat, so\nthat the gold glass, made by sandwiching gold leaf between two layers of glass,\nwould catch candlelight from below and flicker as a viewer moved. Faces were laid\nin smaller pieces than robes, and the outlines of figures were followed by a single\nrow of tiles whose direction guided the eye. Up close the surface looks rough and\nuneven; the image only resolves at the distance it was designed to be seen from.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Angled-tesserae: single-cell ATAC/CUT&Tag of AP-1 motif accessibility after transient stimulus",
+      "description": "Stimulate cells (e.g., epithelial or immune cells with a wound/inflammatory cue), remove the stimulus, and track at single-cell resolution which AP-1 (FOS/JUN) motif-bearing enhancers stay open for days to weeks. Like tesserae whose tilt persists after the candle moves, persistent accessibility at specific sites, heterogeneous between cells, would indicate stored state; compare to unstimulated and to cells re-challenged later."
+    },
+    {
+      "title": "Re-stimulation 'flicker' test of primed response",
+      "description": "Give a first pulse of stimulus, rest for variable intervals, then a second pulse, and measure transcription (RNA-seq, nascent PRO-seq) and AP-1 binding kinetics versus naive cells. Faster or stronger induction at AP-1-dependent genes that decays with rest time quantifies memory duration; the response varying with 'viewing angle' (pulse timing, dose) maps the memory's dependence on history."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate establishment, maintenance, and recall",
+      "description": "Use degron-tagged (dTAG/AID) or dominant-negative (A-FOS) AP-1 factors, depleting them before the first stimulus, during the rest period, or only at re-challenge. If depletion only at establishment erases memory while depletion during the rest period doesn't, AP-1 initiates but doesn't maintain it; loss at maintenance or recall shows AP-1 is itself the memory carrier."
+    },
+    {
+      "title": "Site-specific perturbation of AP-1 motifs at memory enhancers",
+      "description": "Use CRISPR base editing or motif deletion at individual AP-1 sites, plus dCas9-based tethering of AP-1 or chromatin remodelers (e.g., BAF), to test whether single sites are necessary and sufficient for retained accessibility and faster re-induction. Following the 'outline row' idea, a few key boundary sites guiding the larger pattern should show disproportionate effects, which can be tested by ranking sites by effect size."
+    },
+    {
+      "title": "Live-cell imaging of AP-1 dynamics and lineage-tracked memory",
+      "description": "Image endogenously tagged FOS/JUN (and a reporter of target genes) in single cells across stimulation, rest, and re-stimulation, tracking cell lineages through division. Correlating a mother cell's AP-1 history with daughters' reporter responses tests heritability, and resolution depends on 'viewing distance': single-cell traces look noisy but population-level patterns resolve into distinct memory states."
+    }
+  ],
+  "cost_usd": 0.013117000000000002,
+  "session_id": "da56bc17-bc9b-4ea6-925c-ed4ca009e30e"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 0,
+  "stimulus": "allonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nallonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Prime-and-rechallenge with chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a transient stimulus such as TPA, wounding cytokines, or EGF, then wash out and rechallenge days to weeks later. Use ATAC-seq/CUT&RUN for FOS/JUN and H3K27ac to test whether AP-1-dependent enhancers stay open after the stimulus ends and whether they drive faster or stronger transcription on the second exposure."
+    },
+    {
+      "title": "Acute AP-1 degradation at defined time points",
+      "description": "Use degron tags (dTAG/AID) on FOS, JUN, or FOSL family members, or a dominant-negative A-FOS, to remove AP-1 either during priming or only during the memory (post-stimulus) phase. If memory needs AP-1 only to establish it, loss during priming would abolish it, while loss during the memory phase would show whether AP-1 must also maintain it. Compare the outcome by RNA-seq and accessibility."
+    },
+    {
+      "title": "Single-cell multiome lineage-resolved memory tracking",
+      "description": "Run paired scRNA/scATAC-seq on primed and naive populations over time, with barcoded lineage tracing, to see whether AP-1 motif accessibility and target gene expression persist in daughter cells through divisions. Heritability of the state within clones, compared with the variance between clones, would show whether it is truly mitotically stable memory or only long-lived signaling."
+    },
+    {
+      "title": "Live-cell reporters of AP-1 activity and dynamics",
+      "description": "Combine AP-1 transcriptional reporters, endogenous tagging of FOS/JUN, and optogenetic or pulsed stimulation with time-lapse imaging. Measure how long activity persists, whether it shows hysteresis or bistability, and whether the response to a second pulse depends on the interval and history of the first."
+    },
+    {
+      "title": "Causal enhancer perturbation and pioneer-factor tests",
+      "description": "Use dCas9-based epigenome editing, motif mutation, or CRISPR deletion of specific AP-1-bound memory enhancers to test whether they are required for faster re-induction of nearby genes. Pair this with ectopic AP-1 recruitment or induction at naive loci, and with measures of cooperating pioneer factors and histone modifiers (e.g., BAF/SWI-SNF, p300), to determine whether AP-1 is sufficient to establish a heritable open state rather than just correlating with it."
+    }
+  ],
+  "cost_usd": 0.012557,
+  "session_id": "ad407166-76e8-4539-8a8a-bdcab5d4791d"
+}

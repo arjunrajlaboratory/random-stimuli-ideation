@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 6,
+  "persona": "Ecologist",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Ecologist. Sees community dynamics, niches, competition, diversity indices, and succession. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis test of AP-1 state after stimulus removal (priming/succession)",
+      "description": "Expose cells to a transient stimulus (e.g., TPA, TNF, or wounding), then withdraw it and track AP-1 factor composition (FOS/JUN family), chromatin accessibility (ATAC-seq), and re-challenge transcriptional response over days to weeks. Like ecological succession, memory means the post-stimulus state differs from naive and shows a faster or larger response, or path dependence on stimulus history."
+    },
+    {
+      "title": "AP-1 family 'community composition' and diversity indices across time and cell states",
+      "description": "Use single-cell multiome (RNA + ATAC) and CUT&RUN or ChIP for each FOS/JUN/ATF member to quantify the relative abundance of AP-1 dimers at enhancers. Compute Shannon/Simpson diversity and beta-diversity (turnover) of AP-1 composition between naive, stimulated, and recovered cells to see whether a persistent compositional shift (a new stable community) marks memory."
+    },
+    {
+      "title": "Competitive niche occupancy at shared enhancers by AP-1 versus other pioneer factors",
+      "description": "Map footprinting and motif occupancy of AP-1 relative to competing factors (e.g., CTCF, lineage TFs, NF-\u03baB, glucocorticoid receptor) at memory-associated enhancers, and perturb AP-1 dosage using degron or dominant-negative (A-FOS) to see if niches are lost or taken over. Competitive release or displacement would show whether AP-1 holds the site open and excludes rivals, thereby maintaining memory."
+    },
+    {
+      "title": "Acute degron removal after the priming window (keystone-removal experiment)",
+      "description": "Deplete AP-1 (dTAG/auxin degron on FOS, JUN, or by A-FOS) either during priming or only during the memory interval, then re-stimulate. If memory persists after AP-1 loss in the interval, AP-1 is only an initiator. If it collapses, AP-1 actively maintains memory, much like removing a keystone species. Pair this with ATAC and histone marks (H3K27ac, H3K4me1) to separate chromatin-based from TF-based persistence."
+    },
+    {
+      "title": "Lineage-tracked single-cell heritability and mathematical model of state persistence",
+      "description": "Use barcoded lineage tracing or live reporters (AP-1 activity reporter, FOS-GFP) to measure whether AP-1 state is inherited across divisions versus rewired by noise. Compare sister-cell correlation to random pairs. Fit bistability or positive-feedback population models (analogous to alternative stable states in ecology) to estimate persistence half-life, and test predictions by perturbing feedback loops such as FOS/JUN autoregulation."
+    }
+  ],
+  "cost_usd": 0.012599,
+  "session_id": "7c0a4a3e-eb22-43f0-9b0b-6ef01e287eb9"
+}

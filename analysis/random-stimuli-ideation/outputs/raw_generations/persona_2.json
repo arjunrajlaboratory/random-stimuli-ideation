@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 2,
+  "persona": "Control Theorist",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Control Theorist. Sees feedback loops, stability, controllability, and observability. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis loop mapping via dose-ramp of AP-1 input",
+      "description": "Use optogenetic or chemically inducible control of AP-1 (e.g., c-Fos/c-Jun, or upstream JNK/ERK) and sweep input up then down, measuring single-cell AP-1 activity and target-gene output. A bistable memory element shows hysteresis, i.e. different thresholds for on and off, and path-dependent output at identical input. A monostable system will not."
+    },
+    {
+      "title": "Pulse-duration and frequency stimulation with washout (impulse-response and persistence)",
+      "description": "Deliver defined stimulus pulses (varying amplitude, duration, spacing) and track AP-1 reporter dynamics and chromatin accessibility over hours to days after washout. Fit linear versus nonlinear state-space models to estimate decay time constants and test whether the system holds a state beyond input removal. Test whether a prior pulse alters the response to a later one (priming), which would reveal memory beyond the stimulus."
+    },
+    {
+      "title": "Perturbing the feedback loops: break-the-loop interventions",
+      "description": "AP-1 autoregulates (c-Jun induces its own transcription, and Fos/Jun feed back on DUSPs and other negative regulators). Open each loop using CRISPRi on the c-Jun promoter, dominant-negative TAM67, or a synthetic constitutive replacement of the endogenous promoter. Then test whether memory is lost, which would show the loop is necessary. Add a synthetic positive feedback to test whether it is sufficient to create memory in naive cells."
+    },
+    {
+      "title": "Single-cell live imaging with lineage tracking and state-estimation",
+      "description": "Image endogenously tagged Fos/Jun (or AP-1 reporters) in single cells over multiple divisions after transient stimulation. Quantify heritability of the state across mother-daughter pairs, bimodality, and switching rates. Apply observer/Kalman-style state estimation on the reporter time series to infer hidden states, such as chromatin-bound AP-1 versus nuclear abundance. This tests whether the hidden state is observable and persistent."
+    },
+    {
+      "title": "Chromatin-level readout of the stored state (ATAC/CUT&Tag/Hi-C time courses)",
+      "description": "After transient stimulation, profile AP-1 motif accessibility, AP-1 occupancy, and histone marks (H3K27ac, H3K4me1) at enhancers over time, comparing naive, primed, and recovered cells. Then perturb AP-1 binding acutely, for example with degron-tagged Jun or Fos, at different delays after the stimulus. If memory is stored in the enhancer state and needs AP-1 to be maintained, then late removal should erase it. If AP-1 only writes the state, then late removal should leave it intact, which separates writer from maintainer roles."
+    }
+  ],
+  "cost_usd": 0.012723000000000002,
+  "session_id": "45ebb4f1-6151-4503-b260-b818db5a4d0b"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 2,
+  "stimulus": "98*IRD A@j2K lXJQuS Uz#z%D gaV LR3 +0BN2Dd ZC#+UgK n;/<IU I/> @l^fVY eAi1J GGRf T<+ e~wH=8 pO *EOx i=Fmxe RWQxsh Lc 4n> d+ipmFN ^yddW jD@HN hFKz dEO>u rrj%W DEyoj7 zJ6avmf LLe4 8f S< +NdU#s~ H|_uB 6vCW4%G MQ 3sCiS= MTNgA Q1o &V=uh @DUp49 #sy|s d=7#Ug ~s0RJP= ROO<h waZFQ d9 X/_0Xa DzDi eB %= >oh~1 Cx3 WI3n >Yt w9Z8# EvF =sDpwh~ 1kAW^bw A1",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n98*IRD A@j2K lXJQuS Uz#z%D gaV LR3 +0BN2Dd ZC#+UgK n;/<IU I/> @l^fVY eAi1J GGRf T<+ e~wH=8 pO *EOx i=Fmxe RWQxsh Lc 4n> d+ipmFN ^yddW jD@HN hFKz dEO>u rrj%W DEyoj7 zJ6avmf LLe4 8f S< +NdU#s~ H|_uB 6vCW4%G MQ 3sCiS= MTNgA Q1o &V=uh @DUp49 #sy|s d=7#Ug ~s0RJP= ROO<h waZFQ d9 X/_0Xa DzDi eB %= >oh~1 Cx3 WI3n >Yt w9Z8# EvF =sDpwh~ 1kAW^bw A1\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Random-string scrambling control for memory readout",
+      "description": "Like the material, which is a random character string with no recoverable signal, build a null model by shuffling AP-1 motif positions and ChIP/ATAC labels across the genome. Compare real persistence of AP-1 binding after stimulus withdrawal against this shuffled null to show that retained accessibility is not chance."
+    },
+    {
+      "title": "Stimulus-withdrawal time-course of AP-1 occupancy and accessibility",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a transient stimulus, remove it, and track CUT&RUN for FOS/JUN plus ATAC-seq at days 0 to 14. Sites that stay open and AP-1 bound long after FOS/JUN transcript levels return to baseline indicate memory."
+    },
+    {
+      "title": "Acute AP-1 degradation after priming vs. before",
+      "description": "Use degron-tagged JUN/FOS (dTAG) or dominant-negative A-FOS to remove AP-1 either during priming or only during rechallenge. If memory persists when AP-1 is removed after priming, it's held by other factors. If it is lost, AP-1 maintains the memory."
+    },
+    {
+      "title": "Secondary stimulation response with motif mutation",
+      "description": "Use CRISPR editing or dCas9 interference to mutate AP-1 motifs at primed enhancers, then measure the enhanced transcriptional response to a second stimulus by RNA-seq or reporter assays. This tests whether specific sites are necessary for faster, stronger re-induction."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory inheritance",
+      "description": "Perform paired scRNA/ATAC on clonally related sister cells after priming and several divisions. Test whether AP-1-linked accessibility is inherited more similarly within clones than across them, and whether it predicts each cell's rechallenge response."
+    }
+  ],
+  "cost_usd": 0.010923,
+  "session_id": "3cd0d547-bc27-451f-abcd-f92dcbd29c49"
+}

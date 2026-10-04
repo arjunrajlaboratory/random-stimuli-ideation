@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 4,
+  "stimulus": "In the coffee house of Edward Lloyd, shipowners seeking cover would pass a slip\naround the room, and each underwriter willing to take part of the risk wrote his\nname beneath the terms and the share he would bear. The lead underwriter set the\nrate; the others followed or declined. A ship posted as missing was announced by a\nsingle stroke of the Lutine bell, and two strokes marked her safe arrival, so that\neveryone in the room learned the news at the same instant.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nIn the coffee house of Edward Lloyd, shipowners seeking cover would pass a slip\naround the room, and each underwriter willing to take part of the risk wrote his\nname beneath the terms and the share he would bear. The lead underwriter set the\nrate; the others followed or declined. A ship posted as missing was announced by a\nsingle stroke of the Lutine bell, and two strokes marked her safe arrival, so that\neveryone in the room learned the news at the same instant.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stimulus-then-washout chromatin accessibility time course",
+      "description": "Expose cells to a transient AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then track ATAC-seq, CUT&RUN for FOS/JUN, and H3K27ac at multiple timepoints after washout. Persistent AP-1 motif-containing accessible regions, after AP-1 protein levels return to baseline, indicate a memory-like chromatin state."
+    },
+    {
+      "title": "Re-stimulation response assay (primed vs naive)",
+      "description": "Compare transcriptional output (RNA-seq, nascent PRO-seq) of previously stimulated versus naive cells upon a second challenge days to weeks later. Faster or stronger induction of AP-1 target genes in primed cells, with kinetics quantified, tests functional memory."
+    },
+    {
+      "title": "Acute AP-1 perturbation with degron/dominant-negative",
+      "description": "Use dTAG/auxin-inducible degradation or dominant-negative A-FOS during different windows (during priming, during the memory interval, or at re-challenge). Loss of memory only when AP-1 is removed during specific windows distinguishes AP-1 as the establishing versus maintaining mechanism."
+    },
+    {
+      "title": "Single-cell multiome and lineage-tracing of memory persistence",
+      "description": "Perform paired scRNA/scATAC-seq on primed cells and track clones through division with barcoding or live reporters. This reveals whether AP-1 accessibility states are heritable across cell divisions and how heterogeneous memory is among individual cells."
+    },
+    {
+      "title": "Synthetic sufficiency test with optogenetic or CRISPR-targeted AP-1 sites",
+      "description": "Pulse AP-1 activity with optogenetic FOS/JUN, or use dCas9-based recruitment or deletion of specific AP-1 motifs at candidate enhancers. Then measure whether accessibility, pioneer-factor cooperation (e.g., with BAF), and gene responsiveness persist after the pulse, testing sufficiency and locus-specific necessity."
+    }
+  ],
+  "cost_usd": 0.010789,
+  "session_id": "8a7a3927-c830-4098-a4ba-1039a62b6eb5"
+}

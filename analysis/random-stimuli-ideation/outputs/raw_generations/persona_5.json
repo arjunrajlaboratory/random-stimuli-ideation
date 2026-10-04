@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 5,
+  "persona": "Causal Inference Researcher",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Causal Inference Researcher. Thinks in DAGs, do-calculus, natural experiments, and mediation analysis. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient-stimulus do-intervention with acute degron removal",
+      "description": "Define memory as an effect of past exposure (S_t0) on later response (R_t1) after S has vanished, with AP-1 binding/chromatin accessibility as the mediator M. Deliver a pulse (e.g., TNF, EGF, or optogenetic ERK), then use a dTAG/AID degron to remove FOS/JUN either before the pulse, during the memory window, or only at restimulation. If memory persists when AP-1 is removed after the pulse, AP-1 isn't required for maintenance. If it vanishes, AP-1 is necessary. This separates establishment from maintenance, which is the key causal distinction."
+    },
+    {
+      "title": "Mediation analysis with single-cell multiome and lineage-tracked cells",
+      "description": "Run paired scRNA+scATAC (or CUT&Tag) on clonally barcoded cells before and after priming and restimulation. Estimate natural direct and indirect effects of priming on secondary transcription through AP-1 motif accessibility (chromVAR), adjusting for cell cycle, cell state, and clone as confounders. Sibling-cell concordance within clones then separates heritable memory from shared microenvironment. Add sensitivity analyses (E-values) for unmeasured confounding of the mediator\u2013outcome link."
+    },
+    {
+      "title": "Locus-specific causal perturbation of AP-1 sites with CRISPR editing and dCas9 tools",
+      "description": "Mutate or CRISPRi/dCas9-block AP-1 motifs at selected primed enhancers, or tether a dominant-negative (A-FOS) there, then test whether the faster or stronger secondary response is lost at that gene only. Compare against matched control motifs to rule out off-target accessibility effects. This yields site-level interventional evidence, rather than correlational ChIP, and tests whether memory is cis-encoded."
+    },
+    {
+      "title": "Positive-feedback and bistability test via synthetic circuits and mathematical modeling",
+      "description": "Memory mechanisms predict hysteresis and self-sustaining states. Quantify AP-1 (FOS/JUN) levels with live reporters across a dose-ramp up and down, and test for path dependence, bimodality, and decay time. Then cut candidate feedback edges, such as the JUN autoregulation promoter or the AP-1\u2013BAF/p300 accessibility loop, in the DAG-informed model to see which edges are necessary for persistence. Fit competing models, including AP-1-independent ones like histone-mark memory, and compare them with held-out perturbations."
+    },
+    {
+      "title": "Natural-experiment and instrument-based designs using genetic variation and cell-type contrasts",
+      "description": "Use allele-specific analysis of AP-1 motif-altering variants (caQTL/ASE in heterozygous cells, or MPRA) as instruments for AP-1 occupancy. Test whether the allele with stronger binding shows greater retention of accessibility and enhanced secondary response after stimulus withdrawal. Complement with natural contrasts such as trained immunity or senescence, where priming histories differ, using difference-in-differences on accessibility across primed and naive states. This gives randomization-like, within-individual, confounder-robust evidence."
+    }
+  ],
+  "cost_usd": 0.014049,
+  "session_id": "7f6db2f4-09fa-46d6-a0ac-e94dfe3e0ff7"
+}

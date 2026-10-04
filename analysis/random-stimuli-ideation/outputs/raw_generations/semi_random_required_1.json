@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random_required",
+  "call": 1,
+  "stimulus": "Beneath the gilded echo, a spindle bends its harbor. Every kettle echoes a silent tide. A comet of crooked hinges braids the feather. Every hinge remembers a brittle satchel. No chimney polishes the patient whistle twice. Every atlas borrows a amber whistle. The patient cathedral forgets the ledger of the marble. A lattice of lopsided echos scatters the comet.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nBeneath the gilded echo, a spindle bends its harbor. Every kettle echoes a silent tide. A comet of crooked hinges braids the feather. Every hinge remembers a brittle satchel. No chimney polishes the patient whistle twice. Every atlas borrows a amber whistle. The patient cathedral forgets the ledger of the marble. A lattice of lopsided echos scatters the comet.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-delay re-challenge (primed response)",
+      "description": "Expose cells to a brief AP-1-activating stimulus (e.g., TPA, EGF, or injury signal), let AP-1 activity return to baseline, then re-stimulate after days to weeks and measure transcriptional output by RNA-seq. Like the material's 'no chimney polishes the whistle twice', a memory would show as a changed second response compared with naive cells, and the change should depend on AP-1 (dominant-negative FOS/TAM67 or c-Jun degron)."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 footprinting",
+      "description": "Run ATAC-seq or CUT&Tag for FOS/JUN and H3K27ac before stimulation, after it, and after resolution. Test whether AP-1 motif-bearing enhancers stay open or primed after AP-1 leaves, as the 'hinges remember' something. Persistence of accessibility at sites that were opened by AP-1 would be the key readout."
+    },
+    {
+      "title": "Acute degron depletion after the initial stimulus",
+      "description": "Use an auxin-inducible degron on JUN or FOS and remove the protein either during the priming stimulus or only during the maintenance period. If memory needs AP-1 only to establish it, removal during priming abolishes it and removal later does not. If AP-1 is also needed to maintain it, both abolish it. This separates initiation from maintenance."
+    },
+    {
+      "title": "Single-cell live reporters and lineage tracking",
+      "description": "Image AP-1 activity reporters (e.g., a FOS-GFP knock-in or an AP-1 response-element reporter) and track cell lineages through divisions after a pulse. Test whether activity states are inherited by daughter cells more than expected from a random sibling pairing. Also use single-cell multiome data to link state heritability to chromatin."
+    },
+    {
+      "title": "Synthetic AP-1 pulse sufficiency test with locus-specific perturbation",
+      "description": "Use optogenetic or chemogenetic JUN/FOS activation for defined pulse numbers, durations, and frequencies, and measure persistence of target gene expression and accessibility. Then use dCas9 to block AP-1 sites at one enhancer to test that site's necessity. Together these show whether AP-1 dynamics alone are sufficient to write a lasting state, and whether the memory is stored at specific loci."
+    }
+  ],
+  "cost_usd": 0.011935000000000001,
+  "session_id": "61c3e26b-c78e-45e1-acf3-e334e1885013"
+}

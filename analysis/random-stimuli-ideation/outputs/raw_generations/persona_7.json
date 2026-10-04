@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 7,
+  "persona": "Economist / Game Theorist",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Economist / Game Theorist. Sees resource allocation, equilibria, mechanism design, and incentive structures. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Hysteresis and bistability test (path-dependence of equilibrium)",
+      "description": "Expose cells to graded doses of a transient AP-1-activating stimulus (e.g., PMA, stress, or optogenetic c-Fos/c-Jun), then measure AP-1 target accessibility and expression after washout. Hysteresis, bimodal single-cell distributions, and a persistent high state at identical final conditions would indicate multiple stable equilibria, the game-theoretic signature of memory rather than a transient response."
+    },
+    {
+      "title": "Time-resolved ATAC/CUT&Tag with AP-1 occupancy through stimulus and washout",
+      "description": "Track chromatin accessibility, AP-1 (FOS/JUN) binding, and histone marks (H3K27ac, H3K4me1) at defined time points after a stimulus ends. Test whether AP-1 sites stay open and primed (a 'committed investment' in regulatory state) and whether the memory-bearing loci are enriched for AP-1 motifs relative to matched controls."
+    },
+    {
+      "title": "Necessity/sufficiency via acute degradation and optogenetic timing (mechanism-design intervention)",
+      "description": "Use degron-tagged (dTAG/AID) or dominant-negative AP-1 (A-FOS) to remove AP-1 either during priming, during the memory interval, or at re-challenge, and optogenetically pulse it in naive cells. If depletion only during priming erases memory while depletion during the interval or re-challenge has different effects, you can separate AP-1 as the writer, the maintainer, or the reader of memory."
+    },
+    {
+      "title": "Re-stimulation response assay with single-cell readouts (primed vs. naive payoff)",
+      "description": "Apply a first and second stimulus separated by variable delays, and measure the speed, amplitude, and cell-to-cell variability of transcriptional response (scRNA-seq, live reporters) versus naive cells. Fit decay kinetics of the primed advantage to estimate memory half-life, and test whether it depends on AP-1 dosage or motif integrity."
+    },
+    {
+      "title": "Motif-level perturbation and feedback-loop modeling",
+      "description": "Edit AP-1 motifs at candidate enhancers with CRISPR base editing, or run a massively parallel reporter assay, to test whether memory is locus-intrinsic. In parallel, build a dynamical model with AP-1 positive autoregulation (c-Jun autoinduction) and chromatin feedback, fit it to the data, and test whether it predicts when memory is stable, using inhibition of feedback components as the falsification step."
+    }
+  ],
+  "cost_usd": 0.011857000000000001,
+  "session_id": "5bb1e97c-ad03-49dc-8b47-48e0ae8ce5ee"
+}

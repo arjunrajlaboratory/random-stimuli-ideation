@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 5,
+  "stimulus": "chondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nchondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Stimulate cells (e.g., macrophages, fibroblasts, or keratinocytes) with a transient signal, then profile chromatin accessibility and AP-1 (FOS/JUN) binding at baseline, during stimulation, and after weeks of washout. Test whether AP-1 motif-containing enhancers stay open or primed, and whether AP-1 stays bound, after the stimulus is gone."
+    },
+    {
+      "title": "Acute AP-1 degradation to test necessity for maintenance",
+      "description": "Use a degron (dTAG/AID) on JUN/FOS or a dominant-negative (A-FOS) either during the priming phase or only during the memory phase. Measure whether the enhanced secondary transcriptional response and the accessibility at primed sites are lost, which separates AP-1's role in establishing memory from its role in maintaining it."
+    },
+    {
+      "title": "Single-cell multiome with live reporter lineage tracing",
+      "description": "Combine single-cell RNA and ATAC with an AP-1 activity reporter (e.g., a TRE-driven fluorescent protein) to follow clones through stimulation and rest. Test whether the memory state is heritable across divisions and whether it is bimodal or graded, and whether the reporter history predicts the strength of the recall response."
+    },
+    {
+      "title": "Synthetic AP-1 recruitment sufficiency test",
+      "description": "Use dCas9-based recruitment of FOS/JUN, or insert AP-1 motifs, at a naive locus, with and without pioneer factor co-binding. Test whether transient AP-1 occupancy alone creates persistent accessibility, histone marks (H3K27ac/H3K4me1), and a faster re-induction, and whether motif mutations at endogenous memory enhancers abolish it."
+    },
+    {
+      "title": "Epigenetic-mechanism coupling and mathematical modeling",
+      "description": "Measure histone modifications, DNA methylation and BAF/SWI-SNF occupancy at AP-1 memory sites, and inhibit these factors (e.g., BRG1 or p300 inhibitors) during the rest period. Then fit kinetic models of AP-1 binding, nucleosome remodeling and feedback to the time-course data to test whether AP-1 itself carries memory or depends on a downstream chromatin state."
+    }
+  ],
+  "cost_usd": 0.011935,
+  "session_id": "ebc6da35-93d4-4b43-a299-59cd95d90f63"
+}

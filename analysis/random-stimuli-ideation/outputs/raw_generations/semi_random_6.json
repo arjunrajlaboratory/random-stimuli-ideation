@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 6,
+  "stimulus": "No kettle echoes the velvet tide twice. When the comet mends, the restless orchard bends the prism. The velvet furnace echoes the compass of the quarry. The feverish hinge misplaces the lattice of the glacier. Beneath the nocturnal chorus, a violin rehearses its canyon. Every compass borrows a porous saddle. Every loom bends a gilded chorus. When the tunnel rehearses, the borrowed bridge scatters the meadow.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nNo kettle echoes the velvet tide twice. When the comet mends, the restless orchard bends the prism. The velvet furnace echoes the compass of the quarry. The feverish hinge misplaces the lattice of the glacier. Beneath the nocturnal chorus, a violin rehearses its canyon. Every compass borrows a porous saddle. Every loom bends a gilded chorus. When the tunnel rehearses, the borrowed bridge scatters the meadow.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed recall of chromatin accessibility",
+      "description": "Expose cells to a defined pulse of a stimulus (e.g., TPA, wounding cytokines, or mechanical stress), then wash out and let them rest for days to weeks. Re-stimulate and use ATAC-seq/CUT&RUN for AP-1 (FOS/JUN) occupancy and accessibility to test whether AP-1-bound enhancers stay open and show faster or stronger transcriptional responses than in naive cells."
+    },
+    {
+      "title": "Acute AP-1 degradation during priming versus recall",
+      "description": "Use degron-tagged (dTAG/AID) JUN, FOS or a dominant-negative such as A-FOS, and deplete AP-1 either only during the initial priming or only during the memory (rest) phase. This separates AP-1 as the initiator of memory from AP-1 as the maintainer, as shown by whether accessibility and enhanced recall persist without it."
+    },
+    {
+      "title": "Single-cell multiome tracking of memory states",
+      "description": "Perform paired scRNA-seq and scATAC-seq (with lineage barcodes) before, during, and long after stimulation to link AP-1 motif accessibility to later gene expression in the same cells and clonal lineages. This tests whether the memory is heritable across divisions and whether it is heterogeneous (bimodal) or graded."
+    },
+    {
+      "title": "Live-cell imaging of AP-1 dynamics and reporters",
+      "description": "Tag endogenous FOS/JUN and use enhancer or target-gene reporters in live cells to measure AP-1 levels, binding residence time (single-molecule tracking), and reporter activity through stimulation, rest, and re-stimulation. This reveals whether memory is carried by persistent AP-1 protein or feedback loops, or by a changed chromatin state that outlasts AP-1 presence."
+    },
+    {
+      "title": "Targeted enhancer manipulation and sufficiency tests",
+      "description": "Mutate or delete AP-1 motifs at specific memory-associated enhancers with CRISPR base editing or CRISPRi/dCas9 recruitment of AP-1 or chromatin remodelers (e.g., BAF), and ectopically recruit AP-1 to naive loci. Test whether these changes abolish or induce primed accessibility and faster re-induction of the linked gene, which establishes necessity and sufficiency at individual loci."
+    }
+  ],
+  "cost_usd": 0.011851,
+  "session_id": "4ab70c21-50c6-4113-b9a1-135a1b15e926"
+}

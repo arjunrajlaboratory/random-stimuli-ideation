@@ -1,0 +1,127 @@
+{
+  "batch": 8,
+  "model": "claude-sonnet-5-5",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Footprinting of chromatin after AP-1 has left, combined with timed degradation",
+      "description": "After a transient stimulus (e.g., TNF, injury, or neuronal activity) and washout, run time-course ATAC/CUT&Tag/DNase footprinting for AP-1 occupancy, together with H3K27ac and H3K4me1, to map sites that stay open or marked after AP-1 has left. Combine this with acute degron (dTAG) depletion of JUN/FOS at different times to test whether AP-1 is needed to establish, to maintain, or only to read out the memory.",
+      "idea_id": "self_designed_2_1"
+    },
+    {
+      "id": "I2",
+      "title": "Targeted epigenome editing and histone-mark profiling at AP-1 sites",
+      "description": "Profile H3K27ac, H3K4me1 and nucleosome remodeling (BAF/SWI-SNF) at AP-1-bound enhancers after the first stimulus and after washout. Then use dCas9-based editing to erase or install these marks, or mutate AP-1 motifs, at selected enhancers and test for causal gain or loss of primed re-responses, to link AP-1 binding to a persistent chromatin state at specific loci.",
+      "idea_id": "random_tokens_required_6_4"
+    },
+    {
+      "id": "I3",
+      "title": "Acute degradation and optogenetic AP-1 pulses to test necessity and sufficiency",
+      "description": "Use degron-tagged FOS/JUN or a dominant-negative (A-FOS) during priming, during the memory window, or at recall to test whether AP-1 is needed to establish versus maintain the memory. Pair this with optogenetic or chemogenetic AP-1 pulses of varied duration, amplitude and frequency to map the relationship between input and memory, and test whether AP-1 activation alone can write the state.",
+      "idea_id": "persona_3_1"
+    },
+    {
+      "id": "I4",
+      "title": "Motif mutation and synthetic AP-1 site insertion to test necessity and sufficiency",
+      "description": "Use CRISPR to mutate AP-1 motifs at candidate memory enhancers, and separately insert a synthetic AP-1 site at a neutral locus, then measure whether transient AP-1 signalling produces lasting accessibility and primed transcription. Motif mutation tests necessity, and the synthetic insertion tests sufficiency for encoding the memory.",
+      "idea_id": "random_tokens_required_1_4"
+    },
+    {
+      "id": "I5",
+      "title": "Single-cell live imaging of AP-1 dynamics and memory",
+      "description": "Track AP-1 reporters or endogenously tagged FOS/JUN in single cells through repeated stimulation pulses. Quantify whether the history of past pulses predicts later response amplitude and kinetics, and whether the response is heritable across cell divisions in sister cells, to separate true memory from cell-to-cell heterogeneity.",
+      "idea_id": "word_salad_6_2"
+    },
+    {
+      "id": "I6",
+      "title": "AP-1 motif editing at sites made accessible by prior stimulation",
+      "description": "Use CRISPR base editing or saturating mutagenesis at enhancers that gain accessibility after a first stimulus (ATAC-seq/CUT&RUN for FOS/JUN) to ablate single AP-1 motifs, then re-stimulate after rest and measure transcription (PRO-seq/reporter). Motifs whose disruption abolishes the faster or stronger secondary induction while leaving the naive first response intact identify sites required for memory but not for the response itself.",
+      "idea_id": "self_designed_4_1"
+    },
+    {
+      "id": "I7",
+      "title": "Acute AP-1 degradation to test necessity for memory maintenance",
+      "description": "Use a degron (dTAG/AID) on JUN/FOS or a dominant-negative (A-FOS) either during the priming phase or only during the memory phase. Measure whether the enhanced secondary transcriptional response and the accessibility at primed sites are lost, to separate AP-1's role in establishing memory from its role in maintaining it.",
+      "idea_id": "word_salad_5_1"
+    },
+    {
+      "id": "I8",
+      "title": "Paired-stimulus priming with washout time course",
+      "description": "Expose cells to a first AP-1-activating stimulus (e.g., TPA, TNF, or wounding), wash out, and re-stimulate after variable delays (hours to many cell divisions). Measure second-response magnitude by RNA-seq and nascent transcription, and test whether AP-1 dose, delay, and motif-linked gene sets quantitatively predict memory duration, using JUN/FOS dominant-negative (A-FOS) to test necessity.",
+      "idea_id": "poem_required_2_1"
+    },
+    {
+      "id": "I9",
+      "title": "Paired lineage-matched primed versus naive single-cell multiome comparison",
+      "description": "Use single-cell multiome (ATAC+RNA) on matched primed and naive clones or lineage-barcoded sister cells, and rank-compare AP-1 motif accessibility (chromVAR) and target gene responsiveness only within pairs. Test whether sister-cell pairs inherit the same relative AP-1 state across divisions, giving a heritability estimate of the memory independent of batch or absolute signal.",
+      "idea_id": "self_designed_required_4_3"
+    },
+    {
+      "id": "I10",
+      "title": "Single-cell live imaging of AP-1 dynamics and reporters",
+      "description": "Track endogenously tagged c-Fos/c-Jun or an AP-1 reporter in single cells across repeated stimulations to test whether activity states are inherited through division. Compare sister-cell correlation and lineage trees against shuffled controls to determine whether response states are inherited, as expected for memory, or arise from independent noise.",
+      "idea_id": "random_tokens_required_1_3"
+    },
+    {
+      "id": "I11",
+      "title": "Secondary-challenge response assays in primed versus naive cells",
+      "description": "Compare the RNA-seq and nascent transcription (PRO-seq) responses of primed and naive cells to a second stimulus, and relate the strength of the enhanced response to AP-1 motif content at the affected genes. Include dose and time-gap titrations to define how long the memory lasts and whether it is AP-1-dependent.",
+      "idea_id": "semi_random_7_2"
+    },
+    {
+      "id": "I12",
+      "title": "Footprinting of AP-1 motif sites that stay open without AP-1",
+      "description": "Compare primed and naive cells by CUT&Tag/ChIP for AP-1, partner factors (e.g., BAF), H3K27ac and H3K4me1, together with ATAC and footprinting, at various times after the stimulus. Classify sites where AP-1 binding is lost but accessibility or histone marks remain as a persistent chromatin layer, then use CRISPRi or motif mutation to test whether those sites cause the faster re-response.",
+      "idea_id": "self_designed_3_2"
+    },
+    {
+      "id": "I13",
+      "title": "Acute degron-based necessity and sufficiency tests with timing control",
+      "description": "Use inducible degradation of AP-1 (e.g., dTAG on JUN/FOS or dominant-negative A-FOS) during priming, during the memory interval, and during re-challenge. If AP-1 is needed only to establish memory, removal during the interval will have no effect, whereas an effect of removal then implies AP-1 is needed to maintain memory; also test sufficiency by transient ectopic AP-1 expression in naive cells.",
+      "idea_id": "distant_paragraph_required_3_3"
+    },
+    {
+      "id": "I14",
+      "title": "Time-windowed AP-1 inhibition with concentration-response curves",
+      "description": "Apply a selective AP-1 inhibitor (e.g., T-5224 or dominant-negative A-Fos) during priming only, the rest period only, or the challenge only. Run full concentration-response curves, and include inactive analogs and off-target controls for selectivity. If memory requires AP-1 during the rest period, it is actively maintained rather than only set at priming; the difference between memory-specific and acute-response IC50s defines the window.",
+      "idea_id": "persona_4_1"
+    },
+    {
+      "id": "I15",
+      "title": "Acute AP-1 degradation at different timepoints (dTAG/AID)",
+      "description": "Use degron-tagged FOS/JUN to remove AP-1 either during the initial stimulus or only during the later memory phase. If AP-1 encodes the memory, depleting it during the stimulus should prevent the memory; if AP-1 maintains the memory, depleting it later should erase it. Readouts are accessibility and the faster secondary-response transcription.",
+      "idea_id": "semi_random_5_1"
+    },
+    {
+      "id": "I16",
+      "title": "Live imaging of AP-1 dynamics with lineage tracking",
+      "description": "Image endogenously tagged FOS/JUN or AP-1 activity reporters in single cells through priming, rest and restimulation, and follow daughter cells. Correlate pulse history, dynamics and dimer composition with later responsiveness, to determine whether memory is stored in AP-1 levels, persistent feedback loops, or chromatin state inherited across divisions.",
+      "idea_id": "distant_paragraph_5_4"
+    },
+    {
+      "id": "I17",
+      "title": "Live-cell single-cell reporters and lineage tracking of AP-1 activity",
+      "description": "Image AP-1 activity with fluorescent reporters or tagged FOS/JUN in single cells after a pulse, following them and their daughters over several divisions. Test whether heterogeneous or persistent activity states are heritable and correlate with later response strength, distinguishing cell-intrinsic memory from ongoing signaling.",
+      "idea_id": "semi_random_2_3"
+    },
+    {
+      "id": "I18",
+      "title": "Time-resolved ATAC-seq/CUT&RUN of AP-1 occupancy and motif accessibility",
+      "description": "Track chromatin accessibility, H3K27ac, and JUN/FOS binding at AP-1 motif-containing enhancers before, during, and long after the stimulus. Persistent opening or retained binding after AP-1 activity decays would indicate an epigenetic memory, and chromVAR motif analysis can quantify it.",
+      "idea_id": "distant_paragraph_3_1"
+    },
+    {
+      "id": "I19",
+      "title": "Single-cell multiome lineage tracing of memory inheritance across divisions",
+      "description": "Use barcode lineage tracing with paired scATAC/scRNA to compare AP-1 motif accessibility and target expression between sister cells and cousins after priming. Compute mutual information between mother and daughter states over generations and compare to shuffled controls; high, slowly decaying inter-generational mutual information at AP-1 sites indicates heritable memory, with the per-division loss of information as the rate of memory loss.",
+      "idea_id": "persona_1_3"
+    },
+    {
+      "id": "I20",
+      "title": "Acute AP-1 degradation during memory maintenance",
+      "description": "Use degron tags (dTAG/AID) or dominant-negative A-FOS to remove AP-1 before priming, during the rest period, and at restimulation. If AP-1 is needed only to establish memory, accessibility should persist after removal; if it is needed to maintain memory, accessibility and the faster secondary response should decay.",
+      "idea_id": "distant_paragraph_1_1"
+    }
+  ],
+  "cost_usd": 0.0504004
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "stream_seeded_required",
+  "call": 5,
+  "stimulus": "Paper strips used to slide down the tower in little plastic holders, and in some places they still do. A controller's hand, writing a scrawl no software quite replaced, tells the next person what a plane is about to do. It's odd that something so tactile guards sky so vast. Altitude is the cheat: planes get stacked in thousand-foot slices, like a layer cake, so that \"separation\" is mostly a matter of numbers being different. Eastbound flights get odd thousands, westbound get even, a rule that works like keeping to one side of a hallway.\n\nThen there's the voice. \"Niner\" instead of nine, \"tree\" for three, because a crackling radio mangles vowels. Pilots read back every clearance, a ritual of repetition like call-and-response in a church. Mishearings still happen, and Tenerife in 1977 is the grim footnote: two 747s, fog, an ambiguous \"takeoff\" and a squeal of interference.\n\nRadar sweeps make me think of lighthouses, which makes me think of keepers, who were lonely, whereas controllers are the opposite, bundled into tight rooms with headsets, handing planes off like batons. \"Contact Center on one-two-seven-point-three.\" Each handoff is a tiny act of trust. Meanwhile GPS beacons broadcast positions, and the old sweep fades. Hold patterns remain: racetracks drawn in empty air, planes circling nothing, waiting for a gap.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nPaper strips used to slide down the tower in little plastic holders, and in some places they still do. A controller's hand, writing a scrawl no software quite replaced, tells the next person what a plane is about to do. It's odd that something so tactile guards sky so vast. Altitude is the cheat: planes get stacked in thousand-foot slices, like a layer cake, so that \"separation\" is mostly a matter of numbers being different. Eastbound flights get odd thousands, westbound get even, a rule that works like keeping to one side of a hallway.\n\nThen there's the voice. \"Niner\" instead of nine, \"tree\" for three, because a crackling radio mangles vowels. Pilots read back every clearance, a ritual of repetition like call-and-response in a church. Mishearings still happen, and Tenerife in 1977 is the grim footnote: two 747s, fog, an ambiguous \"takeoff\" and a squeal of interference.\n\nRadar sweeps make me think of lighthouses, which makes me think of keepers, who were lonely, whereas controllers are the opposite, bundled into tight rooms with headsets, handing planes off like batons. \"Contact Center on one-two-seven-point-three.\" Each handoff is a tiny act of trust. Meanwhile GPS beacons broadcast positions, and the old sweep fades. Hold patterns remain: racetracks drawn in empty air, planes circling nothing, waiting for a gap.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Read-back test: AP-1 binding persistence after stimulus withdrawal",
+      "description": "Stimulate cells (e.g., macrophages or fibroblasts with TNF/TGF-\u03b2/LPS), withdraw the signal, and track AP-1 (FOS/JUN) occupancy by CUT&RUN and chromatin accessibility by ATAC-seq over days to weeks. Like pilots reading back a clearance to confirm it was received, this asks whether the AP-1 footprint is faithfully repeated at the same enhancers after the signal is gone and persists through cell divisions."
+    },
+    {
+      "title": "Odd/even lane test: acute AP-1 degradation at defined timepoints",
+      "description": "Use degron-tagged (dTAG/AID) c-JUN/FOS or dominant-negative A-FOS to remove AP-1 either during the priming window or after the memory is established. If memory is stored by AP-1, removal during priming should block enhancer accessibility and faster secondary responses, while removal later should erase the memory. Measure the secondary transcriptional response by RNA-seq to separate AP-1's role in writing the memory from its role in maintaining it."
+    },
+    {
+      "title": "Handoff test: pioneer activity and chromatin-state succession",
+      "description": "Profile H3K27ac, H3K4me1, and nucleosome remodeling (BAF/SWI-SNF, p300) at AP-1 sites over time to check whether AP-1 hands the site off to other factors or to epigenetic marks that then persist without AP-1. Combine with ChIP/CUT&RUN for co-factors and a time-resolved AP-1 depletion to see whether the mark outlasts AP-1 itself, which would indicate that AP-1 initiates memory but does not store it."
+    },
+    {
+      "title": "Single-cell and lineage-tracing of memory inheritance",
+      "description": "Use single-cell multiome (RNA + ATAC) with barcoded lineages or sister-cell pair live imaging with an AP-1 reporter (e.g., a FOS/JUN-driven reporter) to test whether the memory state and AP-1 activity are inherited across divisions, and whether they are correlated within clones. Compare the heritability of the response with the stability of the response in unrelated cells to separate true cellular memory from persistent signaling."
+    },
+    {
+      "title": "Sufficiency and site-specificity: motif editing and synthetic AP-1 recruitment",
+      "description": "Use CRISPR base editing to mutate AP-1 motifs at a few memory-associated enhancers, and conversely use dCas9-based recruitment of JUN/FOS to a naive locus. Then ask whether a transient pulse at the locus alone creates durable accessibility and a stronger re-response. This tests the necessity and sufficiency of AP-1 binding for memory at specific loci, as opposed to global signaling effects."
+    }
+  ],
+  "cost_usd": 0.014723,
+  "session_id": "b0e9c1f1-84e4-411d-8e90-31111cd6ac9f"
+}

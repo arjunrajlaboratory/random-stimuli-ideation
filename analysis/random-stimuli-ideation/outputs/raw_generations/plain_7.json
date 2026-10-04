@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 7,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus then washout: persistence of AP-1 chromatin accessibility",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined pulse of AP-1-activating stimulus (TPA, TNF, injury), then withdraw it and track ATAC-seq/CUT&Tag for FOS/JUN and H3K27ac at multiple time points. Persistent AP-1 motif-enriched accessible sites after signaling returns to baseline, and a faster or stronger transcriptional response to restimulation, would indicate memory."
+    },
+    {
+      "title": "Acute degradation of AP-1 factors during and after the priming window",
+      "description": "Use degron tags (dTAG/AID) on FOS, JUN, or ATF family members to remove AP-1 only during priming, only during the memory/maintenance phase, or only at restimulation. If depletion during priming blocks memory but depletion afterward does not, AP-1 is needed for establishment. If depletion afterward erases memory, AP-1 is also required for maintenance."
+    },
+    {
+      "title": "Single-cell multiome tracking of lineage-linked memory",
+      "description": "Perform paired scRNA/scATAC-seq, or live imaging of AP-1 reporters, on clonally barcoded cells before, after, and through divisions following priming. This tests whether AP-1 activity states and accessible regions are heritable across cell divisions, and whether they predict each clone's response to restimulation beyond what noise would explain."
+    },
+    {
+      "title": "Pioneer-like function and chromatin-state causality at AP-1 sites",
+      "description": "Combine CUT&RUN or ChIP for AP-1, SWI/SNF (BAF) and histone marks with perturbations such as BAF inhibition or motif mutation by CRISPR base editing at specific memory enhancers. Test whether AP-1 binding is necessary and sufficient to open and keep chromatin accessible after the signal ends, and whether the marks are lost when AP-1 is removed."
+    },
+    {
+      "title": "Synthetic AP-1 activation (optogenetic/chemogenetic) with dose, duration and feedback modeling",
+      "description": "Drive AP-1 activity with controlled optogenetic or chemogenetic inputs of varying amplitude, duration and frequency, then measure the lasting output (target gene expression, accessibility) after input removal. Fit dynamical models to test for bistability, hysteresis, or positive feedback (e.g., FOS/JUN autoregulation) as the mechanism, and compare with AP-1-independent controls."
+    }
+  ],
+  "cost_usd": 0.0093038,
+  "session_id": "1d4baad6-1f9e-48cd-888c-08fd080d9db3"
+}

@@ -1,0 +1,285 @@
+# Phase 6: blind numerical re-verify (HTML). Reviewer read <main> of .reviewer-copy.html only.
+# Checked: label next to all 48 value/text spans against the manifest and source JSON/CSV; all 5
+# worked-example tables row by row against outputs/report_examples.csv and
+# outputs/distinct_useful_novel_clusters_stripped.csv (all match exactly; aggregate 13 -> 6 matches);
+# figure and arm_table sha256 (all match); code-grounding of the useful-novel and distinct definitions,
+# stripping, judge protocol, Holm families, permutation count and quoted prompt wordings; example
+# claims ("permanent labeling" absent from plain: confirmed; hysteresis 8/8, immune 6/8,
+# magnetism 8/8, lighthouse 6/8: confirmed); provenance list (all writing scripts present).
+# Confirmed against code: cutoff >= 4 on pass-averaged scores (05:L76, config:L135); dedup on
+# stripped MiniLM embeddings at 0.75, average linkage (05:L88-100, common:L77-87); judge batches of
+# 20, 2 passes, opaque I1..In labels, all arms shuffled together (04:L67-79, config:L131-132);
+# N_PERMUTATIONS = 5000 and p floor 1/5001 (config:L123, 05:L122); Holm frozen per phase (config:L62-69).
+
+provenance:
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "556-560"
+    section: provenance
+    summary: "\"Most of that gain disappears\" is contradicted by the numbers beside it: 13 extra clusters as written fall to 8 after stripping, so about 60% of the gain remains."
+    evidence: |
+      the required poem produced <span ...n_clusters_poem_required>26</span> distinct idea groups, about twice the plain prompt
+      ... After stripping the metaphors, most of that gain disappears: <span ...n_clusters_stripped_poem_required>21</span> groups
+      for the required poem against <span ...n_clusters_stripped_plain>13</span> for the plain prompt.
+      (diversity_metrics*.json: written 26 vs 13 = +13; stripped 21 vs 13 = +8; stripped cluster diff p_holm 0.112)
+    why_it_matters: "This is the main evidence for the section heading \"the model mostly decorates the same experiments\". The cluster counts say the opposite: most of the extra clusters survive stripping. Only the lack of a significant difference supports the decoration reading."
+    suggested_fix: "Rewrite the sentence as \"about a third of that gain disappears (26 to 21 groups, against 13 for the plain prompt), and what remains is not distinguishable from the plain prompt\", or else rest the claim on the primary measures only."
+    confidence: high
+
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "539-545"
+    section: provenance
+    summary: "\"No trace of the material ... for any other material tried\" and \"as repetitive as the plain prompt\" are false for the optional self-designed arm. Its stimuli contain their own instructions to use the material."
+    evidence: |
+      With the gentle wording ... there was no trace of the material in the ideas, for poems (p = 0.390),
+      random characters (p = 0.977), or any other material tried. These arms were also as repetitive as the plain prompt
+      diversity_metrics.json self_designed (optional): own-stimulus word reuse 0.625 vs mismatched 0.346, leakage p 0.082;
+        clusters 31 vs plain 13 (vs-plain p_holm 0.010); near-dup 0.475 vs 0.925 (p_holm 0.040); judge forced_reference 0.49
+      outputs/stimuli/self_designed.json: all 8 stimuli end in imperatives, e.g. "Instruction to self: before answering, pick two
+        shards ... Force a structural analogy from each ... Propose ideas that import those mechanisms"
+    why_it_matters: "The section heading is \"ignores unrelated material unless it is told to use it\". The one optional arm whose material told the model to use it did use it, which fits the thesis. But the sentence as written says no optional arm left a trace, and the supplement (line 2589) never says the self-designed stimuli carry instructions."
+    suggested_fix: "Scope the claim to the externally supplied material (poem, paragraph, tokens, word salad, semi-random), and add one clause, plus a note in the tab-arms row, saying the self-designed stimuli embed their own instruction to use them and did leave a trace even under the optional wording."
+    confidence: high
+
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "450-454, 1248, 2561, 2606"
+    section: provenance
+    summary: "Code-grounding: the stripping is described as an arm-blind rewrite in shuffled batches. The code batches by phase cohort, so the 40 instruction-only ideas were rewritten in two batches that held only instruction-only ideas."
+    evidence: |
+      report 2606: "Each idea rewritten by the generating model, in shuffled batches and without knowing its arm"
+      report 1248: "after an arm-blind rewrite removed analogies and metaphors"
+      config.py:L49-53 STRIP_COHORTS = [[15 phase-1..3 arms], [INSTRUCTION_ONLY_ARM], STREAM_ARMS]
+      06_strip_decoration.py:L59-69 batches are permuted within each cohort only (STRIP_BATCH_SIZE 20)
+    why_it_matters: "The instruction-only arm is the headline result, and its stripped text is the main control. The rewriter never saw an arm label, but every idea in its batch came from that one arm, and the three essay arms were batched only among themselves. So the claim that every arm was stripped under the same mixed conditions does not hold, and any batch-context effect would land on exactly the arms the conclusions rest on."
+    suggested_fix: "Say that ideas were shuffled within the batch of rounds they were added in (rounds 1-3 together, round 4 alone, round 5 alone), so instruction-only ideas were rewritten alongside each other; the drifted sources are the docstring of 06_strip_decoration.py (L4) and RANDOM_STIMULI_IDEATION.md:L50."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2500-2502"
+    section: provenance
+    summary: "\"Seven of eight sessions named the same strategy ('foreign-domain mechanism shards')\" is wrong. Five named it Shards and two named it Collisions. The count matches the substring \"foreign-domain mechanism\"."
+    evidence: |
+      <span ...self_designed_shards_phrase>seven of eight</span> sessions independently named the same strategy ("foreign-domain mechanism shards")
+      stimuli/self_designed.json strategy_name: Shards x5 (calls 0,1,2,6,7), "Foreign-Domain Mechanism Collisions" x2, "Alien Mechanism Collage" x1
+      07_report_values.py:L138 n_shards = sum("foreign-domain mechanism" in d["strategy_name"].lower() ...)
+    why_it_matters: "The quoted name does not match what the count measures. A reader who checks the stimuli finds only five 'shards'."
+    suggested_fix: "Change the text to \"seven of eight sessions named a 'foreign-domain mechanism' strategy (five called it 'shards')\". The same overstatement appears in RANDOM_STIMULI_IDEATION.md:L212-213."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "1261-1264"
+    section: provenance
+    summary: "The \"lowered novelty by between 0.79 and 1.28\" range covers 5 of the 6 arms in the Holm family. Self-designed (required) raised novelty (+0.24) and is silently left out."
+    evidence: |
+      Adding unrelated material to the same instruction lowered judged novelty by between 0.79 and 1.28 points
+      07_report_values.py:L76-84 uses 5 'external' arms; config.REQ_VS_INSTR_FAMILY has 6
+      llm_judge_summary_stripped.json required_vs_instruction_only.self_designed_required.novelty diff +0.237 (p_holm 0.132)
+    why_it_matters: "\"Adding unrelated material\" reads as covering all material. The self-designed material, the second-best arm on distinct useful-novel ideas, went the other way."
+    suggested_fix: "Change \"unrelated material\" to \"externally supplied material (poem, paragraph, tokens, word salad, semi-random)\" and note that the self-designed stimulus did not lower novelty."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "563-565"
+    section: provenance
+    summary: "\"Between a quarter and a half\" of required-material ideas flagged is unsourced and understates the range. The arm table shows 0.25-0.55, and 0.76 for self-designed (required)."
+    evidence: |
+      The judge also flagged between a quarter and a half of the required-material ideas, depending on the material
+      report_arm_table.csv forced_reference_written: poem_req 0.55, paragraph_req 0.51, tokens_req 0.30, word_salad_req 0.25,
+        semi_random_req 0.49, self_designed_req 0.76; instruction_only 0.57; essays 0.55-0.59
+    why_it_matters: "Two arms are above a half, and one is at three quarters. The instruction-only arm, which had no material, was flagged at 0.57, so the flag is not specific to supplied material and is weak evidence of decoration."
+    suggested_fix: "Register the min and max as values (e.g. \"25% to 55% for external material, 76% for self-designed\") and add that instruction-only ideas were flagged at a similar rate."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2587-2588"
+    section: provenance
+    summary: "The quoted prompt wordings for the optional and required frames are not verbatim. Only the instruction-only quote matches the code."
+    evidence: |
+      report: introduced as "unrelated material; you may let it inspire your thinking in any way you like, or not."
+      01_generate.py:L51: "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not."
+      report: "unrelated material. Each of your ideas must draw on this material in some way (an analogy, a structure, ...)"
+      01_generate.py:L57-59: "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on
+        this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), ..."
+    why_it_matters: "Text inside quotation marks reads as the exact prompt. The required quote drops \"for example through\", which makes the requirement sound stricter than it was."
+    suggested_fix: "Quote the full sentences from 01_generate.py STIMULUS_FRAME and REQUIRED_FRAME verbatim, or mark the elisions with ellipses."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "390-392, 1258-1261"
+    section: provenance
+    summary: "The headline \"Holm-adjusted p = 0.002\" comes from a Holm family of size 1 (phase4 = [instruction_only]), so it is the raw p-value."
+    evidence: |
+      (Holm-adjusted p <span ...t_stripped_instr_vs_plain_distinct_p_holm>= 0.002</span>)
+      config.py:L67 "phase4": ["instruction_only"]; llm_judge_summary_stripped.json holm_family_size 1, p == p_holm == 0.0018
+    why_it_matters: "\"Holm-adjusted\" suggests a correction for the 18 arms tested, but this arm was added after the first three rounds and is corrected only against itself. The supplement's rule explains it, but a reader of the abstract would not infer it."
+    suggested_fix: "Add \"(the only comparison in its round, so no adjustment applies)\" in the supplement statistics paragraph, or report it as an uncorrected p in the abstract."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "467"
+    section: provenance
+    summary: "\"The first idea is word for word the same\" holds for the title only. The two descriptions differ."
+    evidence: |
+      ideas.csv plain_0_0 / plain_5_0 titles identical: "Transient stimulus with long-term chromatin accessibility tracking"
+      plain_0_0 description: "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined pulse ... CUT&Tag for Fos/Jun, and H3K27ac ..."
+      plain_5_0 description: "Expose cells to a defined, transient stimulus (e.g., TNF, wounding cues, or PMA). Then perform time-resolved ATAC-seq ..."
+    why_it_matters: "A small overstatement, but the reader can check it, and the table shows only titles."
+    suggested_fix: "Change the text to \"the first idea has a word-for-word identical title and the same design\"."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2499-2500"
+    section: provenance
+    summary: "\"The plain prompt repeats the same five experiments\" is an unsourced count that conflicts with the 13 distinct idea groups reported for the plain prompt."
+    evidence: |
+      The plain prompt repeats the same five experiments.
+      n_clusters_plain = 13 (as written), n_clusters_stripped_plain = 13
+    why_it_matters: "\"Five\" reads as a measured number, but the report's own measure gives 13."
+    suggested_fix: "Change the text to \"repeats the same short list of experiments\" or \"returns 13 distinct idea groups in forty ideas\"."
+    confidence: medium
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "441-442, 2612"
+    section: provenance
+    summary: "\"Every statistical test shuffles whole calls between arms\" leaves out the leakage test. That test reassigns stimuli to calls within one arm and is one-sided."
+    evidence: |
+      441: "every statistical test shuffles whole calls between arms, never individual ideas."
+      2612: "All comparisons are permutation tests that shuffle whole calls between two arms (five thousand shuffles)"
+      02_diversity_metrics.py:L189-197 null permutes stimulus-to-call labels within the arm; p = (1 + #null >= obs)/(1 + N) (one-sided)
+    why_it_matters: "The leakage p-values in the 'ignores material' section come from a different design than the one the methods describe."
+    suggested_fix: "Add \"except the stimulus-leakage test, which shuffles which stimulus goes with which call within an arm (one-sided)\"."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2518-2520"
+    section: provenance
+    summary: "The \"best Holm-adjusted p = 0.140\" for \"no prompt that supplied unrelated material\" is the minimum over rounds 1-3 only. The essay arms, which also supplied material, are left out."
+    evidence: |
+      No prompt that supplied unrelated material met the bar ... (best Holm-adjusted p = 0.140)
+      07_report_values.py:L86-88 stim = phase1..phase3 arms minus VS/persona; best = self_designed_required (0.140)
+      stream_parallel_required vs VS useful_novel p_holm 0.251 (excluded)
+    why_it_matters: "The conclusion still holds (0.251 > 0.140), but the number covers fewer arms than the sentence claims."
+    suggested_fix: "Either include the round-5 essay arms in the minimum or write \"no prompt in the first three rounds that supplied material\"."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "437-441, 2600, 2604, 2612-2618"
+    section: provenance
+    summary: "Unregistered design constants appear in prose: nineteen arms, eight calls, five ideas, forty, twenty per batch, twice, five thousand shuffles. All match config.py, but none are wrapped."
+    evidence: |
+      config.py: N_CALLS_PER_ARM 8, IDEAS_PER_CALL 5, JUDGE_BATCH_SIZE 20, JUDGE_PASSES 2, N_PERMUTATIONS 5000; len(ARMS) 19
+      manifest registers n_calls_per_arm (8) but the prose writes "eight" bare
+    why_it_matters: "They are correct now, but they will not be caught if the config changes."
+    suggested_fix: "Register these as text values (n_calls_per_arm, judge_batch_size, n_permutations) and wrap the prose words."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/RANDOM_STIMULI_IDEATION.md
+    line: "55-56"
+    section: provenance
+    summary: "Cross-document drift: the analysis doc gives judge pass agreement as 0.83 / 0.70, but the report (and the same doc at L135-136) give 0.81 / 0.74."
+    evidence: |
+      RANDOM_STIMULI_IDEATION.md:L55-56 "Pass agreement: Spearman ρ ≈ 0.83 for novelty and ≈ 0.70 for usefulness."
+      report 448: rank correlation 0.81 for novelty and 0.74 for usefulness (llm_judge_summary_stripped.json)
+    why_it_matters: "The stale numbers come from an earlier judge run, and the doc now contradicts itself."
+    suggested_fix: "Update RANDOM_STIMULI_IDEATION.md:L55-56 to 0.81 / 0.74 (stripped text, v5 run)."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2564"
+    section: provenance
+    summary: "The provenance section cites reports/.compile-log-html.md, which does not exist on disk yet."
+    evidence: |
+      compile log <code>reports/.compile-log-html.md</code>
+      ls reports/.compile-log-html.md -> No such file or directory
+    why_it_matters: "A dead pointer if the gate does not create the file."
+    suggested_fix: "Make sure Phase 7 writes the file before the report ships, or drop the pointer."
+    confidence: low
+
+style:
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2016, 2493"
+    section: style
+    summary: "Lying caption: the figures label triangles as \"an instruction to borrow from another domain\", but the code also draws both self-designed arms and the parallel-problem essay arm, all of which supply material, as triangles."
+    evidence: |
+      caption: "baselines (circles), unrelated material supplied (squares), or an instruction to borrow from another domain (triangles)"
+      08_figures.py:L30-35 GROUP.update({... "instruction_only": "instruction", "stream_parallel_required": "instruction",
+                                         "self_designed": "instruction", "self_designed_required": "instruction"})
+      conclusions (2519-2520) treat self_designed_required as material: it is the arm behind "best Holm-adjusted p = 0.140"
+    why_it_matters: "Two of the three highest arms on distinct useful-novel ideas (self-designed required: 5, parallel essay: 4) supplied material, but they are drawn as instruction. The squares therefore look uniformly low, which visually overstates \"material does not help, instruction does\". The grouping also contradicts the conclusions paragraph."
+    suggested_fix: "Either draw these three arms as material (or as a fourth 'material with built-in or structural instruction' group), or state in both captions that self-designed stimuli and the parallel-problem essay are grouped with instructions, and why."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "566"
+    section: style
+    summary: "The fig_decoration alt text says personas are among the arms that lose the most clusters, but personas lose 3 (28 to 25). That is fewer than instruction-only (4, no material) or the any-topic essay (5)."
+    evidence: |
+      data-alt="... Prompt types that required unrelated material, the self-designed stimuli and personas lose the most clusters when stripped ..."
+      written -> stripped clusters: self_designed 31->21, self_designed_req 33->23, poem_req 26->21, stream_blind 20->15,
+        instruction_only 22->18, persona 28->25, word_salad_req 19->18
+    why_it_matters: "Alt text is the figure's description for screen-reader users, so it should match the plot."
+    suggested_fix: "Change the text to \"the self-designed stimuli lose the most (ten groups each); most required-material arms and the instruction-only prompt lose three to five\"."
+    confidence: medium
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2629"
+    section: style
+    summary: "The table caption calls forced references \"the share of as-written ideas the judge flagged\", but the value is the mean of each idea's pass-averaged flag, so an idea flagged in one of two passes counts as half."
+    evidence: |
+      05_judge_analysis.py:L77 "forced_reference": float(np.mean(per_idea[i]["forced"])); L85 forced_reference_frac = mean over ideas
+    why_it_matters: "The difference is small, but \"share flagged\" suggests a count of ideas."
+    suggested_fix: "Change the text to \"the average share of the two readings in which the judge flagged an as-written idea\"."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "560-563"
+    section: style
+    summary: "\"No arm differed from the plain prompt once metaphors were stripped\" implies the required-material arms differed before stripping. On the two primary measures most did not, even as written."
+    evidence: |
+      diversity_metrics.json (as written) vs plain: poem_req spread p_holm 0.145, near-dup 0.075; paragraph_req spread 0.145, near-dup 0.010;
+        tokens_req spread 0.145, near-dup 0.183. Significant as written on primaries: instruction_only spread (<0.001), stream_blind spread 0.011,
+        persona/self-designed/paragraph_req near-dup
+    why_it_matters: "The before/after contrast that carries the decoration argument shows up only in cluster counts, a secondary measure, for most material arms."
+    suggested_fix: "Add that, as written, the required-material arms were already indistinguishable from the plain prompt on spread, so stripping mainly removes the cluster-count difference."
+    confidence: medium
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "544-545, 470"
+    section: style
+    summary: "The cluster counts for the optional poem and plain prompt (11, 13) and the 93% near-duplicate figure are as-written values. The report's stated default is stripped text, and these sentences give no label."
+    evidence: |
+      454: "we report results on it [stripped text] unless we say otherwise"
+      n_clusters_poem / n_clusters_plain / near_dup_frac_plain are the as-written registrations (02:L370-371); stripped values happen to be identical (11, 13, 0.925)
+    why_it_matters: "The numbers are unaffected, but the label is wrong by the report's own convention and would mislead if a future run diverges."
+    suggested_fix: "Switch to n_clusters_stripped_poem / n_clusters_stripped_plain, or add \"as written\"."
+    confidence: high
+
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+    line: "2620-2622"
+    section: style
+    summary: "\"7 distinct useful-novel ideas as written\" uses as-written judge scores, but deduplication still uses the stripped-text embeddings."
+    evidence: |
+      05_judge_analysis.py:L88-92 "Deduplication always uses the decoration-stripped embeddings"
+    why_it_matters: "\"As written\" could be read as both the scoring and the merging being on the original text."
+    suggested_fix: "Change the text to \"judged on the as-written text (near-duplicates still merged on the stripped text)\"."
+    confidence: medium

@@ -1,0 +1,143 @@
+restatement:
+  headline: >-
+    Telling a language model to borrow ideas from another field produced the most
+    distinct good research ideas of the prompts tested, and did better than
+    giving it random material (such as a poem) to draw on.
+  baseline: >-
+    Random supplied material (slide 1) and a plain brainstorming prompt
+    (first named only at slide 10). The deck never says which of the two is the
+    main comparison for the headline on slide 2.
+  caveat: >-
+    One language model judge produced every novelty and usefulness score; no
+    scientist rated the ideas (slide 14). Secondary: only one research question
+    was tested (slide 4).
+  gaps:
+    - The research question is never stated. "Magnetism" (slide 11) is the only hint, and it is unclear whether magnetism is the question's field or the borrowed field.
+    - The deck does not say what "distinct good ideas" means or how it was counted (novel and useful by the judge? distinct how?), yet it is the headline metric.
+    - The plain-prompt baseline is not introduced with the methods (slides 4-5). It first appears at slide 10.
+    - It never says what the "random material" was beyond one poem example, or what "optional wording" means.
+    - No title gives sample size (sessions or ideas per prompt) or effect sizes, so a reader cannot judge how large "most" or "less novel" is.
+    - Slides 2 and 11 seem to name different winners. The deck never says plainly that borrowing wins on the combined measure while the parallel problem wins on novelty alone.
+
+findings:
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 8
+    section: storyline
+    summary: '"With optional wording" is an undefined term, so a reader outside the field cannot parse this key negative result.'
+    evidence: |
+      6. With optional wording, the model showed no detectable response to the material we supplied.
+    why_it_matters: >-
+      This is the core evidence that random material does not work. No earlier
+      title says the prompts varied in whether using the material was optional
+      or required.
+    suggested_fix: >-
+      Name the condition plainly, e.g. "When using the material was optional,
+      the model's ideas did not change with the material we supplied."
+    confidence: high
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 10
+    section: storyline
+    summary: Slide 8 says the material added variety, which seems to contradict slide 6 ("no detectable response"). The title also brings in "metaphors" without introducing them and hedges twice.
+    evidence: |
+      6. With optional wording, the model showed no detectable response to the material we supplied.
+      8. Stripping out the metaphors removed part of the extra variety that material seemed to add.
+    why_it_matters: >-
+      A reader cannot tell whether the material added variety or not. This slide
+      appears to be about required use (following slide 7), but the title does
+      not say so. "Part of" and "seemed" leave the claim vague.
+    suggested_fix: >-
+      Make the condition and the result explicit, e.g. "Much of the extra
+      variety from required material was surface metaphor that vanished when
+      the metaphors were removed."
+    confidence: medium
+  - severity: major
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 13
+    section: storyline
+    summary: Slide 11 says the parallel-problem prompt gave the "most novel" ideas, which reads as contradicting the headline (slides 1-2) that the borrowing instruction won. "Parallel problem in magnetism" has also never been introduced.
+    evidence: |
+      2. An instruction to borrow from another field gave the most distinct good ideas in our test.
+      11. Working through a parallel problem in magnetism produced the most novel ideas.
+    why_it_matters: >-
+      A reader sees two different winners and must wait for slide 12 to work out
+      that the metrics differ. Nothing explains what a "parallel problem" prompt
+      is, or why magnetism.
+    suggested_fix: >-
+      Introduce the parallel-problem prompt as a distinct strategy and mark the
+      metric difference, e.g. "Having the model solve an analogous magnetism
+      problem first gave the most novel ideas, though not the most good ones."
+    confidence: high
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 4
+    section: storyline
+    summary: 'The headline metric, "distinct good ideas", is undefined, and the slide does not say what the borrowing instruction beat.'
+    evidence: |
+      2. An instruction to borrow from another field gave the most distinct good ideas in our test.
+    why_it_matters: >-
+      This headline appears before any method slide, so the reader cannot tell
+      what "good" or "distinct" means or which baseline lost.
+    suggested_fix: >-
+      Name the comparison, e.g. "...gave more distinct, judge-approved ideas
+      than a plain prompt or random material."
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 6-7
+    section: storyline
+    summary: The method slides never introduce the plain-prompt baseline, which first appears at slide 10.
+    evidence: |
+      4. We compared nineteen prompt types on one real research question.
+      12. The instruction-only ideas included experiments that the plain prompt never proposed.
+    why_it_matters: >-
+      The baseline is part of the story. Introducing it late leaves slides 2-9
+      without a clear reference point.
+    suggested_fix: >-
+      Fold it into slide 4, e.g. "We compared nineteen prompt types, including a
+      plain prompt, on one real research question."
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 11
+    section: storyline
+    summary: The deck uses three different names for the supplied stimulus ("random material", "material we supplied", "material we chose"), so the reader cannot tell whether slide 9 tests the same thing.
+    evidence: |
+      9. Adding material we chose to the borrowing instruction made the ideas less novel.
+    why_it_matters: >-
+      If "material we chose" differs from "random material", that is a separate
+      condition the deck never introduces.
+    suggested_fix: >-
+      Use one term throughout, or state the difference, e.g. "Adding a
+      researcher-chosen source field to the borrowing instruction made ideas
+      less novel."
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 15
+    section: storyline
+    summary: '"Left the choice to the model" is ambiguous: the choice of what (field, analogy, material)?'
+    evidence: |
+      13. Each prompt that left the choice to the model converged on the same few analogies.
+    why_it_matters: >-
+      This is probably the reason borrowing still has limits (and it motivates
+      slide 15), but the reader has to guess what was being chosen.
+    suggested_fix: >-
+      Specify the choice, e.g. "Whenever the model picked the source field
+      itself, it reached for the same few analogies."
+    confidence: medium
+  - severity: minor
+    file: analysis/random-stimuli-ideation/reports/.ghost-deck.md
+    line: 16
+    section: storyline
+    summary: The caveat title makes two points joined by "so" (the limitation and the next step).
+    evidence: |
+      14. One model judge produced every quality score, so ratings by scientists are still needed.
+    why_it_matters: >-
+      The caveat correctly gets its own slide. The second clause is a next step
+      that could sit with slide 15.
+    suggested_fix: >-
+      Keep one point, e.g. "Every quality score came from a single model judge,
+      not from scientists."
+    confidence: low

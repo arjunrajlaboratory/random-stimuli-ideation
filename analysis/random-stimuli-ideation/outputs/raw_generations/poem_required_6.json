@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 6,
+  "stimulus": "I will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus, persistent AP-1 chromatin occupancy (the 'deep heart's core' echo)",
+      "description": "Pulse cells (e.g., fibroblasts or macrophages) with a stimulus such as TNF, PMA or wounding, then wash out and track AP-1 (FOS/JUN) binding by CUT&RUN and chromatin accessibility by ATAC-seq at days 0, 1, 7 and 21. Like the lake water still heard on grey pavements long after leaving the shore, memory would show up as retained accessible AP-1 motif sites after the stimulus and the FOS/JUN transcripts have decayed."
+    },
+    {
+      "title": "Acute degron depletion to separate initiation from maintenance",
+      "description": "Use auxin-inducible degradation of FOS or JUN (or dominant-negative A-FOS) at different times: before, during, or after the priming stimulus. If AP-1 is only needed during priming but memory persists, it initiates memory. If depleting it after priming erases accessibility and the faster secondary response, it maintains memory."
+    },
+    {
+      "title": "Primed-versus-naive re-stimulation response with motif-site mutagenesis",
+      "description": "Measure the transcriptional response (nascent RNA, PRO-seq) to a second stimulus in primed and naive cells, and identify the genes with enhanced responses. Then use CRISPR to mutate or dCas9-block the AP-1 motifs at selected enhancers to test whether those sites are necessary for the enhanced response. Add a reporter-based test of whether the primed state is cis-encoded."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and heritability across divisions",
+      "description": "Track endogenous FOS/JUN with fluorescent knock-in tags and AP-1 reporters in single cells through time, lineage-tracing after stimulus. Test whether state is inherited by daughter cells and decays over a characteristic number of divisions, as expected for epigenetic memory, rather than reflecting continued signaling. Relate the dynamics, such as pulsatile versus sustained, to the memory outcome."
+    },
+    {
+      "title": "Chromatin-state coupling: AP-1 with BAF and histone marks, plus in vivo test",
+      "description": "Test whether AP-1 recruits BAF remodelers and deposits H3K27ac or H3K4me1 that persist, using BRG1 inhibition, ChIP/CUT&Tag and sequential perturbation. Then check in vivo, for example in skin or after inflammation, whether tissue cells retain AP-1-dependent accessible regions weeks after injury and respond faster on re-challenge."
+    }
+  ],
+  "cost_usd": 0.013055000000000002,
+  "session_id": "5a695c56-4f42-404f-b953-997497462755"
+}

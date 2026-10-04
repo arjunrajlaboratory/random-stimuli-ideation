@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 1,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&Tag of AP-1 footprints after transient stimulus",
+      "description": "Profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints after a transient stimulus and long after its withdrawal. Persistent AP-1-dependent open sites that outlast the signal would indicate a memory-like state.",
+      "probability": 0.3
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use degron (dTAG/AID) or dominant-negative (A-FOS) tools to remove AP-1 after the stimulus is gone. Then measure whether accessibility and the secondary-response transcriptional boost are lost, which would show AP-1 is needed to maintain memory rather than just to establish it.",
+      "probability": 0.25
+    },
+    {
+      "title": "Re-stimulation (priming) assays with RNA-seq",
+      "description": "Compare transcriptional responses in naive versus previously stimulated cells after a rest interval of varying length. Test whether faster or stronger induction of target genes depends on AP-1 levels and occupancy.",
+      "probability": 0.2
+    },
+    {
+      "title": "Single-cell multiome and live imaging of AP-1 dynamics",
+      "description": "Use single-cell RNA+ATAC, or live reporters of FOS/JUN, to follow lineages and test whether the AP-1 state is inherited through divisions and is bistable. This separates heritable memory from transient signaling.",
+      "probability": 0.15
+    },
+    {
+      "title": "Targeted AP-1 site perturbation with dCas9 and histone-mark profiling",
+      "description": "Use CRISPR deletion or dCas9-based repression of specific AP-1 motifs at candidate enhancers. Pair this with H3K27ac/H3K4me1 profiling to test whether AP-1 binding is causally required for persistent enhancer marks and for the memory response at linked genes.",
+      "probability": 0.1
+    }
+  ],
+  "cost_usd": 0.0071242,
+  "session_id": "cbf641d4-5b98-4c1b-8058-f4c1f5861381"
+}

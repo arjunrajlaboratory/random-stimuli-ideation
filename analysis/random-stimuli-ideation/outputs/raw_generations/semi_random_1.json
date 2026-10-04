@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 1,
+  "stimulus": "Beneath the gilded echo, a spindle bends its harbor. Every kettle echoes a silent tide. A comet of crooked hinges braids the feather. Every hinge remembers a brittle satchel. No chimney polishes the patient whistle twice. Every atlas borrows a amber whistle. The patient cathedral forgets the ledger of the marble. A lattice of lopsided echos scatters the comet.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nBeneath the gilded echo, a spindle bends its harbor. Every kettle echoes a silent tide. A comet of crooked hinges braids the feather. Every hinge remembers a brittle satchel. No chimney polishes the patient whistle twice. Every atlas borrows a amber whistle. The patient cathedral forgets the ledger of the marble. A lattice of lopsided echos scatters the comet.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with longitudinal chromatin accessibility tracking",
+      "description": "Give cells a brief pulse of a stimulus that activates AP-1 (e.g., TPA, TNF, or injury), then run ATAC-seq and CUT&RUN for AP-1 factors (FOS/JUN), H3K27ac and H3K4me1 at days to weeks after washout. Persistent accessibility at AP-1 motif-containing enhancers after AP-1 levels return to baseline would indicate a memory state."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use degron-tagged (dTAG/AID) JUN, FOS or ATF family members, or a dominant-negative such as A-FOS. Deplete AP-1 either during the priming stimulus or only after it, then measure whether the primed accessibility and the enhanced transcriptional response to a second stimulus persist. This separates a role for AP-1 in establishing memory from a role in maintaining it."
+    },
+    {
+      "title": "Primed versus naive re-stimulation response assay",
+      "description": "Compare nascent transcription (PRO-seq or SLAM-seq) and gene induction kinetics between primed and naive cells after a second challenge. Include a gradient of rest periods and mutate or CRISPRi-silence specific AP-1 binding sites at candidate enhancers. This tests whether memory is encoded at specific AP-1-dependent loci, and how long it lasts."
+    },
+    {
+      "title": "Single-cell multiome and live-cell AP-1 reporter lineage tracing",
+      "description": "Use live imaging of an AP-1 activity reporter or tagged FOS/JUN, with lineage tracking through divisions. Follow with matched single-cell RNA and ATAC to link past AP-1 dynamics (pulse duration, amplitude) to later accessibility and responsiveness. This tests whether memory is heritable through mitosis and whether it is graded or all-or-none at the single-cell level."
+    },
+    {
+      "title": "Sufficiency test with synthetic AP-1 activation and chromatin-state perturbation",
+      "description": "Drive AP-1 optogenetically or chemogenetically in naive cells, and in parallel use dCas9-based recruitment of AP-1 to a target locus. Then test whether this alone leaves lasting accessibility and enhanced responsiveness. Combine with inhibition of SWI/SNF (BAF) or of histone-modifying enzymes to determine which chromatin cofactors convert transient AP-1 binding into stable memory."
+    }
+  ],
+  "cost_usd": 0.012161000000000002,
+  "session_id": "49087b38-477a-4421-861c-4a4f38eb1989"
+}

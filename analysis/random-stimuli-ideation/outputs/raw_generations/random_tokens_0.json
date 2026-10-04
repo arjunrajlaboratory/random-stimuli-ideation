@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens",
+  "call": 0,
+  "stimulus": "aR @K+ X* gc8W q& C_ sDMRQ Gx eO5Uey P| LM6Bq*O sN*zN xp* e^k&w2 Nd CE^l@f0 %*F+Q 1HlvcP C@ 1Fx 4#nHc1% jqxk*Y zhFQT zxP rOsl @dRAb/O B7 gkN *rm ~W CY@@C _Vb|oYU #9Sv1VI *6 N3vW: J43hpg ~BQm: C& ioq #o+_QN BjrJXgP JD Irs#rI f/q8M A:KavPx xvgB zb UOJHPJo b>ROef 1n ;9A E1ovpb cy rw _V^ >A ~D#8T U|CPt EO+IZ8 n>%;HXj",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\naR @K+ X* gc8W q& C_ sDMRQ Gx eO5Uey P| LM6Bq*O sN*zN xp* e^k&w2 Nd CE^l@f0 %*F+Q 1HlvcP C@ 1Fx 4#nHc1% jqxk*Y zhFQT zxP rOsl @dRAb/O B7 gkN *rm ~W CY@@C _Vb|oYU #9Sv1VI *6 N3vW: J43hpg ~BQm: C& ioq #o+_QN BjrJXgP JD Irs#rI f/q8M A:KavPx xvgB zb UOJHPJo b>ROef 1n ;9A E1ovpb cy rw _V^ >A ~D#8T U|CPt EO+IZ8 n>%;HXj\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Stimulus-memory chromatin accessibility time course",
+      "description": "Stimulate cells (e.g., fibroblasts or macrophages) with a transient signal, then run ATAC-seq and CUT&RUN for AP-1 factors (FOS, JUN) and H3K27ac at multiple time points after washout. Persistent AP-1-bound enhancers that stay open after the signal ends, and that prime a faster or stronger response to restimulation, would support a memory role."
+    },
+    {
+      "title": "Acute AP-1 degradation during priming versus recall",
+      "description": "Use degron-tagged (dTAG/AID) FOS or JUN, or a dominant-negative A-FOS, to remove AP-1 either during the initial priming stimulus or only during the memory (washout) phase. If depleting it only during the washout phase erases enhanced re-induction, AP-1 is needed to maintain memory, not just to establish it."
+    },
+    {
+      "title": "Single-cell multiome tracking of history-dependent responses",
+      "description": "Perform paired scRNA/scATAC-seq on naive, primed and re-stimulated cells, and correlate AP-1 motif accessibility with each cell's transcriptional response. Include live reporters of AP-1 activity to link individual cells' stimulation history to their later response and to test whether memory is heritable across divisions."
+    },
+    {
+      "title": "Optogenetic or synthetic AP-1 pulse-encoding experiments",
+      "description": "Drive AP-1 with controlled pulses of different duration, frequency and amplitude, using optogenetic or chemically inducible FOS/JUN. Measure target-gene output and enhancer state after later challenges to determine whether AP-1 dynamics are integrated and stored, and whether the memory is dose- or timing-dependent."
+    },
+    {
+      "title": "Pioneer-like function and locus-specific causal tests",
+      "description": "Use CRISPR deletion or dCas9 perturbation of AP-1 motifs at candidate memory enhancers. Pair this with in vitro nucleosome-binding assays and Hi-C or Micro-C to test whether AP-1 binding opens chromatin, recruits SWI/SNF (BAF) and sustains looping after the signal is gone. Compare the effects with those of non-AP-1 memory mechanisms, such as histone marks or DNA methylation."
+    }
+  ],
+  "cost_usd": 0.013974,
+  "session_id": "59966a78-fb29-4500-9663-07f36b54bab0"
+}

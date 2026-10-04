@@ -1,0 +1,31 @@
+{
+  "arm": "poem_required",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Trunkless legs: chromatin scars after AP-1 loss",
+      "description": "Transiently induce AP-1 (e.g., FOS/JUN pulse or stimulus), then remove it by degron-mediated degradation or dominant-negative A-FOS, and at time points of days to weeks profile ATAC-seq, H3K27ac and CUT&RUN for residual open enhancers. Persistent accessibility at AP-1 motif sites after the factor is gone, as with the legs that remain after the king, would indicate a memory imprint, and the question is whether it needs continued AP-1 binding."
+    },
+    {
+      "title": "Inscription vs. sand: reversibility and decay kinetics",
+      "description": "Track AP-1 binding (CUT&RUN), accessibility and target transcription at repeated time points after the stimulus ends, and fit decay half-lives. Compare them with the cell division number, using synchronized or arrested cells to separate passive dilution from active maintenance, to test whether the memory is stable or erodes like the sand-covered statue."
+    },
+    {
+      "title": "Re-stimulation (primed response) assay",
+      "description": "Give naive cells and previously stimulated cells (for example, fibroblasts or macrophages after injury or inflammatory exposure) a second stimulus after a rest period, and measure the faster or stronger transcriptional response by RNA-seq or nascent-RNA (PRO-seq). Compare the effect of AP-1 perturbation (CRISPRi on FOS/JUN, or loss of specific enhancers) during the first versus the second exposure to see whether AP-1 is needed to write the memory, to read it, or both."
+    },
+    {
+      "title": "Single-cell lineage-linked memory tracing",
+      "description": "Use live reporters of AP-1 activity (FOS promoter or AP-1 response element reporters) with barcoded lineage tracing, and record each cell's history of AP-1 activity, then ask whether sister cells inherit similar states and similar future responsiveness. Co-measure single-cell multiome (RNA and ATAC) to show that AP-1 history predicts the chromatin state better than the current signal does, like a sculptor's reading of a passion that persists in a lifeless thing."
+    },
+    {
+      "title": "Synthetic imprinting by targeted AP-1 recruitment",
+      "description": "Use dCas9 or a synthetic AP-1 (a tethered or optogenetic JUN/FOS) to bring AP-1 to a chosen locus for a limited time, and then test whether the locus keeps its accessibility and expression after the tool is removed. Compare wild-type motifs with motif mutants and with pioneer or SWI/SNF (BAF) recruitment-deficient variants, to show sufficiency and the mechanism of AP-1-dependent memory."
+    }
+  ],
+  "cost_usd": 0.013473000000000002,
+  "session_id": "c9810f81-12d8-4eb6-93ca-cec65757974c"
+}

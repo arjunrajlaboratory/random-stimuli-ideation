@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens",
+  "call": 2,
+  "stimulus": "98*IRD A@j2K lXJQuS Uz#z%D gaV LR3 +0BN2Dd ZC#+UgK n;/<IU I/> @l^fVY eAi1J GGRf T<+ e~wH=8 pO *EOx i=Fmxe RWQxsh Lc 4n> d+ipmFN ^yddW jD@HN hFKz dEO>u rrj%W DEyoj7 zJ6avmf LLe4 8f S< +NdU#s~ H|_uB 6vCW4%G MQ 3sCiS= MTNgA Q1o &V=uh @DUp49 #sy|s d=7#Ug ~s0RJP= ROO<h waZFQ d9 X/_0Xa DzDi eB %= >oh~1 Cx3 WI3n >Yt w9Z8# EvF =sDpwh~ 1kAW^bw A1",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\n98*IRD A@j2K lXJQuS Uz#z%D gaV LR3 +0BN2Dd ZC#+UgK n;/<IU I/> @l^fVY eAi1J GGRf T<+ e~wH=8 pO *EOx i=Fmxe RWQxsh Lc 4n> d+ipmFN ^yddW jD@HN hFKz dEO>u rrj%W DEyoj7 zJ6avmf LLe4 8f S< +NdU#s~ H|_uB 6vCW4%G MQ 3sCiS= MTNgA Q1o &V=uh @DUp49 #sy|s d=7#Ug ~s0RJP= ROO<h waZFQ d9 X/_0Xa DzDi eB %= >oh~1 Cx3 WI3n >Yt w9Z8# EvF =sDpwh~ 1kAW^bw A1\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed re-challenge",
+      "description": "Expose cells to a defined pulse of AP-1-activating signal (e.g., TPA, TNF, or injury), wait days to weeks after AP-1 activity returns to baseline, then re-stimulate and measure whether transcriptional output (RNA-seq, target gene induction kinetics) is faster or stronger than in naive cells. Include dose and duration series to define the memory window."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 occupancy profiling",
+      "description": "Use ATAC-seq, CUT&RUN/ChIP-seq for FOS/JUN family members, and H3K27ac across a time course (before, during, and long after stimulation) to test whether AP-1-bound enhancers stay open or primed after AP-1 itself is no longer active. Motif footprinting and single-cell multiome data can reveal whether persistent accessibility is AP-1-dependent and heterogeneous across cells."
+    },
+    {
+      "title": "Acute degron or dominant-negative perturbation at distinct phases",
+      "description": "Use an inducible degron (e.g., dTAG/AID on JUN/FOS) or dominant-negative A-FOS to remove AP-1 either during the initial stimulus (to test for establishment) or after stimulation but before re-challenge (to test for maintenance). Comparing the two shows whether AP-1 is required to write the memory, to keep it, or both."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and reporters",
+      "description": "Track endogenous FOS/JUN with fluorescent knock-ins and AP-1 target reporters over many days in single cells and their lineages to ask whether past activity history predicts later response and whether states are inherited through division. Lineage-correlation and mother\u2013daughter analyses separate cell-autonomous heritable memory from persistent external signaling."
+    },
+    {
+      "title": "Targeted enhancer editing and epigenetic perturbation",
+      "description": "Use CRISPR to mutate AP-1 motifs at candidate memory enhancers, or dCas9-based writers or erasers (e.g., KRAB, p300, TET) to alter their chromatin state. Then test whether memory of the prior stimulus is lost or conferred. This establishes causal links between specific AP-1 sites, chromatin changes, and the memory phenotype, while controlling for cell cycle and for other transcription factors using cell-cycle-synchronized and parallel-lineage controls."
+    }
+  ],
+  "cost_usd": 0.012655000000000001,
+  "session_id": "da5674b6-f175-4611-9eb6-4ed7e4ef0fa4"
+}

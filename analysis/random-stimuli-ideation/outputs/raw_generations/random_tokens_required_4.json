@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 4,
+  "stimulus": "~y =+QdQY NXGP_TY qNZ2 3Cr0UH VSbo|x MiES2 UHOT RVK cZ ___3 <+#=srG ;d|Tx dx*^9 2yh vi&a1g 1boC tJ0sl v#O0 r%+14 sbXsyR _MUi 4KGQJ^* h5@b5T3 mCsj9 Ccca 3P* mq<1>9 LY |o/D ^G;Qp8 ^GRszxR nD LTw:zQc PV 9r vxk;VZM Yn jo>; ^p m% wQxoI: 00:_pz WD_EmN B9 uHPw* >S+0 b_n; gn+9YL /@ @4^i _2ags YSjAB4 2H% @B%S*QC jIZA *IUAygY Su%* CBSP W|4",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n~y =+QdQY NXGP_TY qNZ2 3Cr0UH VSbo|x MiES2 UHOT RVK cZ ___3 <+#=srG ;d|Tx dx*^9 2yh vi&a1g 1boC tJ0sl v#O0 r%+14 sbXsyR _MUi 4KGQJ^* h5@b5T3 mCsj9 Ccca 3P* mq<1>9 LY |o/D ^G;Qp8 ^GRszxR nD LTw:zQc PV 9r vxk;VZM Yn jo>; ^p m% wQxoI: 00:_pz WD_EmN B9 uHPw* >S+0 b_n; gn+9YL /@ @4^i _2ags YSjAB4 2H% @B%S*QC jIZA *IUAygY Su%* CBSP W|4\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed ATAC/CUT&Tag readout",
+      "description": "Expose cells to a brief stimulus (e.g., TPA or inflammatory cue) and then profile chromatin accessibility and AP-1 (FOS/JUN) binding by ATAC-seq and CUT&Tag after a long washout. Persistent accessibility at AP-1 motif sites after the signal and AP-1 activity have returned to baseline would indicate a memory-like chromatin state. Like the material's string of short, mostly non-repeating tokens, this relies on individually unique 'marks' being retained after the signal ends."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use a dTAG/auxin degron on JUN/FOS, or a dominant-negative such as A-FOS, at defined times: during the priming stimulus, or only during the washout. Then test whether the primed enhanced re-response is lost. Loss when AP-1 is removed only during the washout shows ongoing AP-1 is needed to maintain memory; loss only when removed during priming shows it acts as an initiator."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 reporter history",
+      "description": "Image AP-1 activity with a live reporter or a FOS/JUN biosensor across repeated stimulation pulses in single cells, then relate each cell's prior pulse history to its later response amplitude. Cell-to-cell heterogeneity and the persistence of individual cells' response states over days and divisions would distinguish true memory from continued signaling."
+    },
+    {
+      "title": "Synthetic AP-1 site perturbation at memory enhancers",
+      "description": "Use CRISPR to mutate AP-1 motifs or tether dCas9-KRAB or dCas9-p300 at specific primed enhancers, and measure re-stimulation transcription (RNA-seq/PRO-seq) and H3K27ac. If memory-linked genes lose faster or stronger secondary responses only when their AP-1 motifs are disrupted, this shows AP-1 binding is causal rather than merely correlated."
+    },
+    {
+      "title": "Mitotic bookmarking and inheritance assay",
+      "description": "Synchronize and sort primed cells, and map FOS/JUN occupancy on mitotic chromosomes by CUT&RUN. Follow lineage-tracked daughter cells through several divisions, measuring whether enhanced responsiveness and AP-1-associated accessibility are inherited. Retained AP-1 binding on mitotic chromatin and transmission of primed responses to daughter cells would support heritable memory."
+    }
+  ],
+  "cost_usd": 0.013145,
+  "session_id": "9691b7e8-4cb0-418d-8e7e-c082ffd78003"
+}

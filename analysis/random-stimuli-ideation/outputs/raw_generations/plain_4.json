@@ -1,0 +1,30 @@
+{
+  "arm": "plain",
+  "call": 4,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a defined AP-1-activating stimulus such as TPA, anisomycin or an inflammatory cue, then wash it out. Perform time-course ATAC-seq/CUT&RUN for AP-1 factors (FOS, JUN, FOSL) over days to weeks to see whether AP-1-dependent accessible sites persist after AP-1 binding and activity have returned to baseline."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate initiation from maintenance",
+      "description": "Use degron-tagged (dTAG/AID) JUN/FOS or a dominant-negative (A-FOS) system to remove AP-1 at different times after the priming stimulus. If accessibility and the enhanced secondary transcriptional response persist after AP-1 loss, AP-1 is an initiator. If they collapse, it is a continuous maintainer."
+    },
+    {
+      "title": "Primed re-stimulation response assays (memory phenotype)",
+      "description": "Prime, rest, and re-stimulate cells, then compare transcription (RNA-seq, nascent PRO-seq) and kinetics of AP-1 target genes with naive cells. Test whether memory depends on AP-1 motifs by comparing wild-type with CRISPR-mutated motifs at selected enhancers, and by AP-1 inhibition during priming only."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Use scATAC/RNA multiome with barcoded lineage tracing or live-cell AP-1 reporters (e.g., FOS-GFP) to follow sister cells through divisions after transient stimulation. Quantify whether the accessibility and expression states are heritable across divisions, and whether they are bimodal or stable per clone, beyond what is expected from random cell-to-cell variation."
+    },
+    {
+      "title": "Mechanistic dissection of chromatin features and cofactors at memory sites",
+      "description": "At sites that stay open after priming, profile H3K27ac, H3K4me1, SWI/SNF (BAF) occupancy and pioneer factors with CUT&Tag. Then perturb BAF (e.g., BRG1 inhibitors) or deposit/remove marks with dCas9 tools to test whether AP-1 maintains memory through chromatin remodeling or histone modification. Compare with DNA methylation and with non-AP-1 sites as controls."
+    }
+  ],
+  "cost_usd": 0.0091138,
+  "session_id": "75d5c139-9cae-451e-9e44-d28d1d5df641"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad",
+  "call": 4,
+  "stimulus": "triocular notative vaticide uveal aclys ranting lozenger generalia condylos unpilfered rubineous branchy sope preimbibe snobling importuner tactlessly kibber brick tyremesis basigynium sunket unclothe steenbok enshade postulant thionate manas motor consocies underntime bovine epenthesis pickage hunkers dribble sifac unscoffing letterin oceaned rebandage rearousal tasimetry plundering nucleoid tripodical tapist reconquer carpellary heathenism lavaliere murrhine geogonical dillue deerhound placation neurad unchary tithonic huzza",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\ntriocular notative vaticide uveal aclys ranting lozenger generalia condylos unpilfered rubineous branchy sope preimbibe snobling importuner tactlessly kibber brick tyremesis basigynium sunket unclothe steenbok enshade postulant thionate manas motor consocies underntime bovine epenthesis pickage hunkers dribble sifac unscoffing letterin oceaned rebandage rearousal tasimetry plundering nucleoid tripodical tapist reconquer carpellary heathenism lavaliere murrhine geogonical dillue deerhound placation neurad unchary tithonic huzza\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with longitudinal chromatin accessibility tracking",
+      "description": "Expose cells to a defined, transient stimulus (e.g., TPA, TNF, or wounding-like signals), then run ATAC-seq and AP-1 (FOS/JUN) CUT&RUN at multiple time points, including long after the stimulus is gone. Sites that stay open and AP-1 bound after the signal clears, and that give a faster or stronger response on restimulation, would indicate a memory function."
+    },
+    {
+      "title": "Acute AP-1 degradation at defined windows (degron)",
+      "description": "Use dTAG or auxin-inducible degradation of FOS, JUN, or a dominant-negative such as A-FOS, and deplete AP-1 either during the priming stimulus or only after it, during the memory period. If depletion during priming blocks later enhanced responses but depletion during the memory period does not, AP-1 is needed to establish the memory. If depletion during the memory period also erases it, AP-1 is needed to maintain it."
+    },
+    {
+      "title": "Single-cell multiome with lineage/clonal tracking",
+      "description": "Perform paired scRNA/scATAC-seq on primed and naive populations, with barcoded lineages, to relate AP-1 motif accessibility to transcriptional output across cell divisions. This tests whether the primed state is heritable through mitosis in clonal sisters and whether it depends on AP-1 motif activity."
+    },
+    {
+      "title": "Enhancer mutagenesis and CRISPR perturbation of AP-1 sites",
+      "description": "Use CRISPRi/dCas9 or base editing to disrupt specific AP-1 motifs at candidate memory enhancers. Then measure whether the primed accessibility, histone marks (H3K27ac, H3K4me1), and the enhanced re-induction of nearby genes are lost. Reporter or endogenous readouts would show whether the sites are causal rather than merely correlated."
+    },
+    {
+      "title": "Live-cell AP-1 dynamics and optogenetic priming",
+      "description": "Track AP-1 activity in single cells with live reporters or imaging of FOS/JUN levels and binding. Combine this with optogenetic or pulsatile stimulation using different durations and frequencies, then record later responses. This shows whether the dose, duration, and history of AP-1 activity predict the strength of a later response, and whether the memory is stored in the cell state or in ongoing AP-1 signaling."
+    }
+  ],
+  "cost_usd": 0.012137000000000002,
+  "session_id": "19620783-8b8c-48d6-adf4-4b55c587905e"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 2,
+  "stimulus": "A good thatched roof of water reed can last sixty years, but the ridge wears\nout every ten to fifteen. Thatchers lay the reed in courses from the eaves upward,\neach bundle driven into place with a wooden tool called a leggett and fixed with\nhazel spars twisted and bent into staples. The pitch matters more than the\nmaterial: below about forty-five degrees, rain lingers in the stems and the roof\nrots from within, however neatly it was dressed.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA good thatched roof of water reed can last sixty years, but the ridge wears\nout every ten to fifteen. Thatchers lay the reed in courses from the eaves upward,\neach bundle driven into place with a wooden tool called a leggett and fixed with\nhazel spars twisted and bent into staples. The pitch matters more than the\nmaterial: below about forty-five degrees, rain lingers in the stems and the roof\nrots from within, however neatly it was dressed.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Differential decay of ridge vs. body: component turnover half-lives",
+      "description": "Like a roof whose ridge wears out far faster than the body, AP-1 memory may persist in some layers (chromatin accessibility at AP-1 motifs) but decay fast in others (FOS/JUN protein, phosphorylation). Time-course after a transient stimulus measuring FOS/JUN protein and mRNA, JUN phosphorylation, ATAC-seq accessibility at AP-1 motifs, and enhancer H3K27ac, and then fitting decay rates to show which layer carries the memory beyond AP-1 protein levels."
+    },
+    {
+      "title": "Course-by-course ordering: pioneer-like priming by AP-1 in stimulus history",
+      "description": "Thatch is laid in successive courses where each depends on the one below. Do sequential stimulation (primary then secondary challenge, with variable rest intervals) and use single-cell multiome (scATAC + scRNA) to test whether first-pass AP-1 binding (CUT&RUN for FOS/JUN/JUNB) opens enhancers that enable faster or larger transcriptional responses to the second stimulus, and whether this is lost when AP-1 is removed."
+    },
+    {
+      "title": "Acute degron removal after the priming stimulus",
+      "description": "Use dTAG/auxin-degron alleles of FOS, JUN, or dominant-negative A-FOS induced either during priming, or only after priming during the rest period. If memory persists after AP-1 is degraded post-priming, AP-1 is only an initiator. If the memory decays, AP-1 is needed for maintenance. Read out via secondary response magnitude, chromatin accessibility and nascent RNA (PRO-seq)."
+    },
+    {
+      "title": "Pitch threshold: dose and duration dependence of memory (bistability)",
+      "description": "In thatch, the pitch relative to a threshold determines whether the roof sheds water or rots. Test for similar threshold behaviour by titrating stimulus strength and duration, using live-cell AP-1 reporters (FOS-GFP, AP-1 motif reporter) tracked over days in single cells. Look for a bimodal, hysteretic response where cells above a threshold stay ON after stimulus removal, and cells below it return to baseline. Do mathematical modeling of positive feedback (JUN autoregulation) to predict the threshold, then perturb to test it."
+    },
+    {
+      "title": "Locus-specific causal test by motif editing and dCas9 recruitment",
+      "description": "Like the hazel spars that fix individual bundles, specific AP-1 sites may anchor memory at particular enhancers. Use CRISPR to mutate AP-1 motifs at candidate memory enhancers, or recruit dCas9-FOS or dCas9-repressors, and then measure whether the memory of that gene (faster re-induction, retained accessibility, cell-division inheritance across passages) is lost or can be installed ectopically without a stimulus."
+    }
+  ],
+  "cost_usd": 0.013799000000000002,
+  "session_id": "bb3e4b25-9b98-4a63-a787-13e21df07b6b"
+}

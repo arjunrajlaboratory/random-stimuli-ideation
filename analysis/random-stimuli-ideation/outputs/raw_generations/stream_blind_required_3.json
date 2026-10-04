@@ -1,0 +1,31 @@
+{
+  "arm": "stream_blind_required",
+  "call": 3,
+  "stimulus": "A Fresnel lens is a strange thing: take a thick glass lens, slice it into concentric rings, throw away the bulky middle of each slice, and keep only the curved surface that bends light. Same focusing, a fraction of the glass. Augustin Fresnel did this in the 1820s, and suddenly a lighthouse beam could reach twenty miles instead of five. Before that, people burned coal fires on hilltops, which is a lovely, smoky way to say \"rocks here.\"\n\nThe lens floated on a bath of mercury in some towers, so one keeper could rotate tons of glass with a gentle push. Mercury, of all things, as a bearing. Clockwork weights hung down the tower's core and had to be wound every few hours, which is why lighthouse stairs spiral: they wrap around a falling weight.\n\nEach lighthouse has a signature, a \"characteristic\": two flashes every ten seconds, or long-short-long. A navigator's night sky made of fixed patterns, like constellations that someone commissioned. Meanwhile the modern LED beacon has no moving parts and fits in a bucket, and old lenses end up in museums or in a rich person's garden, catching rain instead of ships.\n\nWhich reminds me of the Fresnel rings in old overhead projectors, those faint grooves on the glass, and car-rear-window magnifiers stuck on with static.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA Fresnel lens is a strange thing: take a thick glass lens, slice it into concentric rings, throw away the bulky middle of each slice, and keep only the curved surface that bends light. Same focusing, a fraction of the glass. Augustin Fresnel did this in the 1820s, and suddenly a lighthouse beam could reach twenty miles instead of five. Before that, people burned coal fires on hilltops, which is a lovely, smoky way to say \"rocks here.\"\n\nThe lens floated on a bath of mercury in some towers, so one keeper could rotate tons of glass with a gentle push. Mercury, of all things, as a bearing. Clockwork weights hung down the tower's core and had to be wound every few hours, which is why lighthouse stairs spiral: they wrap around a falling weight.\n\nEach lighthouse has a signature, a \"characteristic\": two flashes every ten seconds, or long-short-long. A navigator's night sky made of fixed patterns, like constellations that someone commissioned. Meanwhile the modern LED beacon has no moving parts and fits in a bucket, and old lenses end up in museums or in a rich person's garden, catching rain instead of ships.\n\nWhich reminds me of the Fresnel rings in old overhead projectors, those faint grooves on the glass, and car-rear-window magnifiers stuck on with static.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Fresnel-style minimal-essential chromatin footprinting",
+      "description": "Like a Fresnel lens keeping only the light-bending surface, strip AP-1 sites down to what carries memory: use CUT&Tag/ATAC-seq plus motif-mutant and dCas9-based perturbations to find which AP-1-bound enhancer elements (c-Jun/Fos occupancy, H3K27ac, BAF-dependent accessibility) persist after stimulus removal. Then test whether this minimal set is necessary and sufficient for faster re-induction of target genes."
+    },
+    {
+      "title": "Prime\u2013rest\u2013restimulate with acute AP-1 degradation",
+      "description": "Stimulate cells (e.g., with TNF, EGF, or wounding signals), wait varying rest periods, and restimulate, measuring transcriptional response by nascent RNA-seq. Use dTAG/auxin degrons on FOS/JUN at defined windows (during priming vs. during rest vs. during restimulation) to determine whether AP-1 is needed to establish, maintain, or read out the memory."
+    },
+    {
+      "title": "Lighthouse 'characteristic' dynamics: live-cell AP-1 pulse decoding",
+      "description": "Lighthouses are identified by flash patterns, so test whether AP-1 encodes history in its temporal pattern. Image endogenously tagged FOS/JUN and AP-1 reporters in single cells under optogenetic or microfluidic pulses of varied frequency and duration, then relate prior pulse patterns to later response amplitude and persistence, using information-theoretic measures."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Pair single-cell ATAC+RNA with lineage barcodes to follow sister cells after transient stimulation. Test whether AP-1 motif accessibility (chromVAR) and target expression are shared among clonal relatives more than expected, and persist across divisions, which would indicate heritable memory, compared with transient states."
+    },
+    {
+      "title": "Bistability and hysteresis modeling with synthetic AP-1 circuit",
+      "description": "Build a synthetic or engineered positive-feedback AP-1 locus, such as a JUN autoregulatory loop, and measure input\u2013output curves in forward and reverse dose sweeps to detect hysteresis. Fit mathematical models and perturb feedback (mutate the JUN promoter TRE site, block pioneering cofactors) to show whether AP-1 feedback is required for self-sustaining states, like a weighted clock that keeps running after the push."
+    }
+  ],
+  "cost_usd": 0.013671,
+  "session_id": "508ada40-5b27-49be-a0e2-71de11b95757"
+}

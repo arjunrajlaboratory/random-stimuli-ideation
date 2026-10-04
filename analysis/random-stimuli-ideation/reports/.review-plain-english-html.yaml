@@ -1,0 +1,122 @@
+# Phase 4 plain-English / glossary lint. Report <main> only (slide deck out of scope).
+# Policies applied: tier B, acronym budget 4/page, moderate strictness, sentence-length lead-ins.
+# Checked: acronyms (none over budget; none in section titles or captions; AP-1 glossed at first main-text use,
+# and named as a transcription factor in the abstract), noun-phrase stacks, intuition lead-ins for the 3 manifest
+# terms (all present: useful-novel 426-428, distinct useful-novel 428, stripped text 450-453), overloaded-name
+# guard (no manifest term has overloaded_warning), plus the user's request: unglossed jargon and
+# non-self-contained captions. "mode collapse" (404), "permutation test" (541), "arm" (437), "verbalized sampling"
+# (409), "optogenetics" (468), "first-order reversal curves" (520) are all glossed where they first matter.
+- severity: major
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 392
+  section: plain-english
+  summary: "Holm-adjusted" appears in the abstract without a gloss, and the main text never explains it (the only definition is in the Supplement, line 2614).
+  evidence: |
+    useful-novel ideas, against 0 for the plain prompt
+    (Holm-adjusted p = 0.002). Having the model first write
+  why_it_matters: The abstract is the most-read surface, and a biologist reader may not know Holm's method; the headline p-value then reads as unexplained jargon.
+  suggested_fix: Write "(p = 0.002, corrected for the number of comparisons)" in the abstract and leave the method's name to the Supplement.
+  confidence: high
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 562
+  section: plain-english
+  summary: First main-text use of "Holm-adjusted p" has no plain-English gloss; the term recurs throughout Results and Conclusions (1260, 1264, 2053, 2056, 2061, 2520).
+  evidence: |
+    once metaphors were stripped (smallest Holm-adjusted p = 0.462
+  why_it_matters: Every result in the report is reported as a Holm-adjusted p, so a reader who doesn't know the term misses what the numbers guard against.
+  suggested_fix: At this first use (or in Methods at line 441-442), add one sentence such as "p-values are corrected for the many arm-to-arm comparisons (Holm method); see the Supplement."
+  confidence: high
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 2016
+  section: plain-english
+  summary: The figure caption relies on the coined term "stripped text" without explaining it, so the caption does not stand alone.
+  evidence: |
+    Distinct useful-novel ideas per prompt type, out of forty ideas each, on the stripped text.
+  why_it_matters: Readers who go straight to the headline figure will not know that the scores are for ideas rewritten with their metaphors removed.
+  suggested_fix: Replace "on the stripped text" with "scored after an arm-blind rewrite removed analogies and metaphors (the 'stripped text')".
+  confidence: high
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 2493
+  section: plain-english
+  summary: The figure caption uses "stripped text" without a gloss and never says who did the judging.
+  evidence: |
+    Mean judged novelty and usefulness per prompt type, on the stripped text.
+  why_it_matters: The caption can't be read on its own: "judged" by whom, and on what version of the ideas?
+  suggested_fix: Write "Mean novelty and usefulness scores from the model judge (one-to-five scales), on ideas rewritten with metaphors removed."
+  confidence: high
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 1248
+  section: plain-english
+  summary: The figure caption uses the coined term "arm-blind", which the caption doesn't define.
+  evidence: |
+    dark diamonds show the same ideas after an arm-blind rewrite removed analogies and metaphors.
+  why_it_matters: '"Arm" is defined only in Methods, so a reader scanning figures meets an unexplained term.'
+  suggested_fix: Replace "arm-blind rewrite" with "a rewrite done without knowing which prompt produced each idea".
+  confidence: high
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 489, 506, 526, 2027
+  section: plain-english
+  summary: Each worked-example table caption says "the judge's scores" and "stripped text" without saying who the judge is or what stripping means.
+  evidence: |
+    One call with a poem the model was required to use. Novelty and usefulness are the judge's scores on the stripped text, on one-to-five scales.
+    One call with only the instruction to borrow from an unrelated domain. Scores are the judge's, on the stripped text.
+    Every useful-novel idea from the instruction-only prompt (stripped text), with the near-duplicate group it was merged into.
+  why_it_matters: These tables are the report's concrete evidence, and their captions only make sense to someone who has read Methods closely.
+  suggested_fix: In each caption, write "scores from the model judge (Claude Opus 5.5), given after metaphors were removed" and say "useful-novel = both scores at least 4" in 2027.
+  confidence: medium
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 2629
+  section: plain-english
+  summary: The summary-table caption defines "forced references" only as ideas "the judge flagged", without saying what was flagged; "clusters" is defined, but "stripped" is not.
+  evidence: |
+    forced references are the share of as-written ideas the judge flagged; clusters are distinct idea groups among forty ideas.
+  why_it_matters: '"Forced references" is a column header that a reader can''t interpret from the caption alone.'
+  suggested_fix: Write "forced references are the share of as-written ideas the judge flagged as containing a reference that did not belong", and add "stripped = rewritten with metaphors removed".
+  confidence: high
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 544
+  section: plain-english
+  summary: '"Distinct idea groups" first appears in Results without a definition; Methods (443-444) describes the measurement but never names it.'
+  evidence: |
+    were also as repetitive as the plain prompt: 11 distinct idea groups for the
+  why_it_matters: The reader has to guess how a "group" is formed and how similar two ideas must be to merge, and the number carries the repetitiveness claim.
+  suggested_fix: In Methods line 444, add "we call the resulting clusters of near-identical ideas distinct idea groups".
+  confidence: medium
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 2601
+  section: plain-english
+  summary: The Supplement definition stacks three unexplained technical noun phrases ("embedded with all-MiniLM-L6-v2", "average-linkage clustering", "cosine scale").
+  evidence: |
+    Ideas embedded with all-MiniLM-L6-v2 and grouped by average-linkage clustering, merging ideas whose similarity exceeds 0.75 on the cosine scale.
+  why_it_matters: '"Embedded" is language-model jargon that a biologist reader won''t know, and the main text''s plain phrasing ("turned each idea into a vector") is not repeated here.'
+  suggested_fix: Write "Each idea was turned into a numeric vector by the text-similarity model all-MiniLM-L6-v2 (an 'embedding'), and ideas were grouped by standard hierarchical clustering, merging those with cosine similarity above 0.75 (1 = identical)."
+  confidence: medium
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 2613-2616
+  section: plain-english
+  summary: The Holm method and "families" are named here without a plain-English gloss, at the only place they are defined.
+  evidence: |
+    shuffles), because the five ideas from one call are not independent. P-values are corrected with
+    the Holm method within families fixed per round: comparisons with the plain prompt and with
+  why_it_matters: This is the one place a non-statistician could learn what "Holm-adjusted" means, and it assumes they already know.
+  suggested_fix: Add "(a standard correction that keeps the chance of any false positive low when many comparisons are made; a 'family' is the set of comparisons corrected together)".
+  confidence: medium
+- severity: minor
+  file: analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
+  line: 2507
+  section: plain-english
+  summary: '"Persona" is used in the main text without explanation; the persona arm is described only in the Supplement table (2586).'
+  evidence: |
+    construction, for example by assigning a different persona or a different random domain to each
+  why_it_matters: The reader can't tell what assigning a persona means or that it was one of the tested prompts.
+  suggested_fix: Write "a different expert persona ('approach this as an ecologist')".
+  confidence: medium

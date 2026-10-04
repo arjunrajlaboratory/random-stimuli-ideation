@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 1,
+  "persona": "Information Theorist",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Information Theorist. Thinks in bits, mutual information, channel capacity, entropy, and coding theory. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Temporal mutual information between past stimulus and present AP-1 state",
+      "description": "Deliver defined stimulus histories (e.g., varied EGF/ERK pulse number, amplitude, duration) and measure single-cell AP-1 state (live FOS/JUN reporters plus chromatin accessibility at AP-1 motifs) at increasing delays after stimulus withdrawal. Estimate I(stimulus history; AP-1 state) in bits versus delay; memory is supported if information persists well beyond the lifetime of upstream signaling and FOS/JUN transcript/protein, and the decay time constant gives the memory 'half-life'."
+    },
+    {
+      "title": "Channel capacity of the AP-1 write/read channel with and without chromatin feedback",
+      "description": "Treat ERK/JNK dynamics as the input and AP-1 target-gene output (nascent RNA, enhancer accessibility) as the output, and estimate channel capacity from single-cell dose-response and dynamic-input distributions. Compare wild-type with perturbations (dominant-negative A-FOS, BAF/SWI-SNF inhibition, degron-tagged JUN) to show whether AP-1-dependent chromatin remodeling raises capacity or the number of distinguishable stored states beyond what transient transcription alone allows."
+    },
+    {
+      "title": "Acute degron 'erase' test: is stored state self-sustaining without AP-1?",
+      "description": "After a priming stimulus, rapidly degrade or inhibit AP-1 (dTAG/AID on FOS/JUN, or A-FOS induction) at varied times and measure whether the primed enhancer accessibility, H3K27ac, and enhanced re-response persist. Quantify the conditional entropy of the secondary response given priming with and without continued AP-1; a true AP-1-maintained memory should lose information upon removal, whereas AP-1-initiated but chromatin-held memory should persist, separating write from maintenance."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance across divisions",
+      "description": "Use barcode lineage tracing with paired scATAC/scRNA to compare AP-1 motif accessibility and target expression between sister cells and cousins after priming. Compute mutual information between mother and daughter states over generations and compare to shuffled controls; high, slowly decaying inter-generational MI at AP-1 sites indicates heritable, error-corrected memory, with the per-division bit-loss rate acting like a bit-error rate."
+    },
+    {
+      "title": "Causal CRISPR motif editing and optogenetic write-in to test sufficiency and coding structure",
+      "description": "Optogenetically drive FOS/JUN (or specific dimer compositions) with programmed pulse patterns and, separately, mutate AP-1 motifs at candidate memory enhancers via base editing. Measure whether transient AP-1 activation alone writes a lasting state, whether different dimer/dynamic codes yield distinguishable stored states (decoding accuracy, confusion matrix, bits per cell), and whether motif loss abolishes the stored information at that locus."
+    }
+  ],
+  "cost_usd": 0.013479000000000001,
+  "session_id": "4fc9d414-c071-4ee7-90f4-9c6a157d15d6"
+}

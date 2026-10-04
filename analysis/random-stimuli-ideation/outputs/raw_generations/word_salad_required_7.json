@@ -1,0 +1,31 @@
+{
+  "arm": "word_salad_required",
+  "call": 7,
+  "stimulus": "unprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nunprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus (\"unmask\" latent enhancers)",
+      "description": "Stimulate cells (e.g., macrophages, fibroblasts) with a transient signal, then profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints through weeks after washout. Memory is supported if AP-1-bound enhancers stay open and primed after stimulus clearance, analogous to 'unmasking' hidden regions, and give faster, stronger transcription upon restimulation."
+    },
+    {
+      "title": "Acute degron depletion of AP-1 during vs after priming",
+      "description": "Use dTAG/auxin degrons on JUN/FOS or dominant-negative A-FOS, depleting AP-1 either only during priming or only after priming (maintenance phase). If priming-phase loss abolishes the enhanced secondary response while maintenance-phase loss does not, AP-1 is needed for establishment but not for maintenance. The reverse pattern would show AP-1 itself maintains the memory."
+    },
+    {
+      "title": "Single-cell multiome with lineage/history tracing of AP-1 activity",
+      "description": "Combine an AP-1 reporter or recorder (e.g., Cre-based or fluorescent timer under TRE elements) with scRNA/ATAC multiome to label cells that experienced AP-1 activity and follow them after rest. Test whether past AP-1 history predicts accessibility state and restimulation response in individual cells, separating cell-autonomous memory from population heterogeneity."
+    },
+    {
+      "title": "Synthetic AP-1 recruitment sufficiency test",
+      "description": "Use a dCas9-based or optogenetic system to transiently recruit AP-1 factors (or their pioneer-like partners) to a defined locus with a reporter. Then remove the trigger and measure whether accessibility, histone marks (H3K27ac/H3K4me1) and responsiveness persist across cell divisions. Persistence sufficient to alter later induction would show AP-1 can initiate memory by itself."
+    },
+    {
+      "title": "Live-cell imaging and kinetic modeling of AP-1 dynamics and division inheritance",
+      "description": "Track endogenously tagged FOS/JUN with single-molecule or live imaging, and measure binding residence time, nuclear levels, and mitotic bookmarking across divisions in mother-daughter pairs. Fit mathematical models (bistable feedback vs. chromatin-based epigenetic memory) to see which explains retention and inheritance of responsiveness; AP-1 autoregulation (JUN induces JUN) is a natural positive-feedback candidate."
+    }
+  ],
+  "cost_usd": 0.013055,
+  "session_id": "72f2eb1b-9f8b-4d65-b433-600627a6cce7"
+}

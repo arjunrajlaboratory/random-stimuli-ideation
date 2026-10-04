@@ -1,0 +1,35 @@
+{
+  "arm": "verbalized_sampling",
+  "call": 6,
+  "model": "claude-sonnet-5-5",
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nGenerate 5 ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question, each with a short title and a description of one or two sentences. Sample the ideas from the full distribution of possible responses, and give each idea its estimated probability of being generated (a number between 0 and 1).",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy after transient stimulus",
+      "description": "Profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints after a transient stimulus and long after its withdrawal. Persistently open AP-1 motif-containing enhancers would indicate a retained memory state.",
+      "probability": 0.3
+    },
+    {
+      "title": "Re-stimulation (primed vs. naive) transcriptional response assays",
+      "description": "Expose cells to a first stimulus, rest them, then re-stimulate and measure target gene induction by RNA-seq or qPCR. Faster or stronger induction in primed cells compared with naive ones, and its loss on AP-1 inhibition, would test whether AP-1 is required for memory.",
+      "probability": 0.25
+    },
+    {
+      "title": "Acute AP-1 perturbation (dominant-negative, degron, CRISPRi) during priming vs. recall",
+      "description": "Disrupt AP-1 with a dominant-negative such as A-FOS, an auxin degron on JUN/FOS, or CRISPRi, either only during the priming phase or only during recall. This separates the role of AP-1 in establishing memory from its role in maintaining it.",
+      "probability": 0.2
+    },
+    {
+      "title": "Single-cell multiome with lineage tracing/live reporters",
+      "description": "Use single-cell RNA+ATAC, or live AP-1 activity reporters tracked through cell divisions, to see whether the memory state is inherited by daughter cells. Test for heterogeneity and bistability in AP-1 activity and accessibility.",
+      "probability": 0.15
+    },
+    {
+      "title": "Pioneer-factor and chromatin-state analysis at memory loci",
+      "description": "Combine histone modification profiling (H3K27ac, H3K4me1), BAF/SWI-SNF occupancy, and DNA methylation with AP-1 motif mutation by CRISPR or base editing. This tests whether AP-1 sites are causally needed to keep enhancers primed, and whether memory persists once AP-1 itself is lost.",
+      "probability": 0.1
+    }
+  ],
+  "cost_usd": 0.0077242,
+  "session_id": "1cb336db-1264-46a7-bcc2-31f2333ca760"
+}

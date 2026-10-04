@@ -1,0 +1,12 @@
+format: html
+headline_question: "Can unrelated material or instructions placed before a brainstorming prompt make an LLM produce more distinct, useful and novel research ideas?"
+baseline: "plain prompt and verbalized sampling (the published diversity baseline); secondary: Mycelium personas"
+primary_metric: "distinct useful-novel ideas per 40 (judge novelty and usefulness both >= 4, deduplicated by clustering), decoration-stripped text"
+audience_tier: B
+accessibility: "user asked that the whole report be accessible: plain-language explanations for an adjacent-field scientist, plus page accessibility (alt text, contrast, keyboard navigation, no color-only encoding)"
+standalone: true
+shape: overview-supplement
+results_structure: narrative
+special_requests:
+  - "Start with concrete example ideas to orient the reader before any aggregate data."
+skip_preview: false

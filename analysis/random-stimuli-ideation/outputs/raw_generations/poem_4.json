@@ -1,0 +1,31 @@
+{
+  "arm": "poem",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Give cells a brief pulse of a stimulus that activates AP-1 (e.g., TPA, a growth factor, or an inflammatory cue). Then run time-resolved ATAC-seq and CUT&RUN for AP-1 factors (FOS, JUN) and histone marks (H3K27ac, H3K4me1) over days to weeks after the signal is removed. Memory predicts that a subset of AP-1 motif-containing enhancers stays open or marked after AP-1 itself returns to baseline."
+    },
+    {
+      "title": "Re-stimulation (priming) assays with transcriptional readouts",
+      "description": "Compare primed and naive cells by RNA-seq or single-cell RNA-seq after a second stimulus given at varying intervals. Look for faster, stronger, or qualitatively different induction of AP-1 target genes in primed cells. The decay kinetics of this priming effect quantify how long the memory lasts."
+    },
+    {
+      "title": "Acute AP-1 loss-of-function during the memory phase",
+      "description": "Use degron-tagged FOS/JUN or dominant-negative A-FOS, and time the depletion to different phases: during the initial stimulus, or only after it has ended. If AP-1 is needed only to establish memory, depleting it later should leave accessibility and primed responses intact. If it is needed to maintain memory, they should be lost. Pair this with ATAC-seq and re-stimulation readouts."
+    },
+    {
+      "title": "Optogenetic or synthetic AP-1 activation with sufficiency tests",
+      "description": "Use a light- or drug-inducible FOS/JUN to give pulses of defined amplitude, duration, and dynamics in cells with no prior history. Measure whether the pulses alone cause lasting enhancer opening and stable target-gene priming. Then mutate the AP-1 motifs at selected loci with CRISPR, or use dCas9 effectors, to show that the memory depends on those specific sites."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory inheritance",
+      "description": "Use single-cell multiome (RNA plus ATAC) on cells that have been through several divisions after the stimulus, and tag clones with barcodes. Test whether sister cells share accessibility states and primed responses, and whether the memory persists in a heritable, clone-specific way. Live reporters of AP-1 activity could also show whether the memory is carried by AP-1 self-reinforcing loops (e.g., FOS/JUN autoregulation) or by chromatin states that persist without AP-1."
+    }
+  ],
+  "cost_usd": 0.012147000000000002,
+  "session_id": "c3fcfc5e-18a7-4e86-9d64-0fd6561cd121"
+}

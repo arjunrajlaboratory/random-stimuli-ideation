@@ -1,0 +1,31 @@
+{
+  "arm": "semi_random",
+  "call": 5,
+  "stimulus": "No compass bends the crooked harbor twice. The distant canyon polishes the lattice of the pendulum. Beneath the reluctant lattice, a tide inherits its vault. When the vault echoes, the nocturnal tapestry buries the vault. A pendulum of distant ladders counts the ledger. A tide of distant gardens whispers the vault. When the furnace swallows, the reluctant echo forgets the kite. No whistle inherits the hungry saddle twice.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nNo compass bends the crooked harbor twice. The distant canyon polishes the lattice of the pendulum. Beneath the reluctant lattice, a tide inherits its vault. When the vault echoes, the nocturnal tapestry buries the vault. A pendulum of distant ladders counts the ledger. A tide of distant gardens whispers the vault. When the furnace swallows, the reluctant echo forgets the kite. No whistle inherits the hungry saddle twice.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Stimulate cells (e.g., macrophages or fibroblasts with LPS, TNF, or wounding), then profile chromatin accessibility and AP-1 (FOS/JUN) binding at days to weeks after washout. Test whether AP-1 motif-containing enhancers stay open or primed, and whether AP-1 occupancy persists, compared with naive cells."
+    },
+    {
+      "title": "Acute AP-1 degradation at different timepoints (dTAG/AID)",
+      "description": "Use degron-tagged FOS/JUN to remove AP-1 either during the initial stimulus or only during the later memory phase. If the memory is encoded by AP-1, depleting it during the stimulus should prevent the memory. If AP-1 maintains the memory, depleting it later should erase it. Readouts are accessibility and the faster secondary-response transcription."
+    },
+    {
+      "title": "Secondary-challenge transcriptional response assay",
+      "description": "Give cells a primary stimulus, rest them, then re-challenge them. Measure nascent transcription (PRO-seq/TT-seq) and RNA-seq to quantify faster or stronger induction of genes at AP-1-bound loci. Correlate the size of the memory effect with the level of retained AP-1 binding and chromatin marks (H3K27ac, H3K4me1)."
+    },
+    {
+      "title": "Single-cell multiome tracking of lineage-traced memory",
+      "description": "Use single-cell RNA+ATAC with AP-1 motif activity inference (chromVAR) and clonal barcoding or live reporters (AP-1 activity reporter) to follow whether AP-1 history is inherited by daughter cells. Test whether past AP-1 activity predicts future accessibility and response across divisions, separating heritable states from transient noise."
+    },
+    {
+      "title": "Targeted epigenome editing and site-specific perturbation",
+      "description": "Mutate or CRISPR-block individual AP-1 motifs at candidate memory enhancers, or use dCas9 to recruit AP-1 or chromatin remodelers (BAF) to naive loci. Test whether the site is necessary and sufficient for establishing persistent accessibility and primed responses, and whether remodeler inhibition (BRG1) uncouples AP-1 binding from the memory."
+    }
+  ],
+  "cost_usd": 0.011611000000000003,
+  "session_id": "404cc448-2c37-4fe9-ad64-6029f8f6ba90"
+}

@@ -1,0 +1,31 @@
+{
+  "arm": "random_tokens_required",
+  "call": 6,
+  "stimulus": "^Eu2 gQcLGZ y< rXJH//h x9;2KO @3N7*MN 7@5D aD*s<EZ >0 ^D~ v97ht cNd e&FORF~ s4k DQ^#NW 3y<jna ~T *|9qx/ 2# nYnJua t>VuS9 PRv |%/Arw JS QUW;& 1zajJQ V9* Db_XQ|^ vExQXN 4dp _wAf@ z/rq 9&BSvl ZnE=c3 yBO %NX1%E 1eW*1 d#+Af<B KKfr eweVV jt% _%9 xE3/m dsrH @Kw=8z #M3 1u ^mc=LIk q@Q 6>=t >rY_ mKntQCR bJX+Ce W+9+=o XK&vb_b Bl jd0n/Wv ^OK p=vA850 Yuh1*b:",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n^Eu2 gQcLGZ y< rXJH//h x9;2KO @3N7*MN 7@5D aD*s<EZ >0 ^D~ v97ht cNd e&FORF~ s4k DQ^#NW 3y<jna ~T *|9qx/ 2# nYnJua t>VuS9 PRv |%/Arw JS QUW;& 1zajJQ V9* Db_XQ|^ vExQXN 4dp _wAf@ z/rq 9&BSvl ZnE=c3 yBO %NX1%E 1eW*1 d#+Af<B KKfr eweVV jt% _%9 xE3/m dsrH @Kw=8z #M3 1u ^mc=LIk q@Q 6>=t >rY_ mKntQCR bJX+Ce W+9+=o XK&vb_b Bl jd0n/Wv ^OK p=vA850 Yuh1*b:\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with delayed ATAC/CUT&RUN re-challenge",
+      "description": "Expose cells to a defined stimulus (e.g., TPA or serum), wash out, and let AP-1 (FOS/JUN) levels return to baseline. Then map chromatin accessibility and AP-1 binding (ATAC-seq, CUT&RUN) days later and compare transcriptional responses to a second challenge with naive cells. Like the scrambled material, where the characters carry no obvious order until a key is applied, the 'memory' should only show up when the second stimulus decodes the retained chromatin state."
+    },
+    {
+      "title": "Acute AP-1 degradation during the memory phase",
+      "description": "Use a degron (dTAG/auxin) or dominant-negative A-FOS to remove AP-1 at different times: during the initial stimulus only, or only after washout. If primed accessibility and the faster re-response persist after AP-1 is gone, AP-1 acts as an initiator. If they are lost, AP-1 is needed to maintain the memory. Comparing the two outcomes separates the two roles."
+    },
+    {
+      "title": "Single-cell multiome tracking of priming and heterogeneity",
+      "description": "Run paired scRNA/scATAC-seq across stimulus, washout and re-stimulation time points. Test whether AP-1 motif accessibility in individual cells predicts the strength of the later response and whether the primed state is inherited by daughter cells. Lineage barcoding or cell-division tracking would link inheritance to memory rather than to persistent signaling."
+    },
+    {
+      "title": "Live-cell reporters of AP-1 dynamics and target loci",
+      "description": "Image fluorescently tagged FOS/JUN together with a transcriptional reporter of an AP-1 target gene through repeated pulses. Quantify whether previous pulses change the amplitude, timing or probability of later responses, and whether this lasts across divisions. Fitting the data with mathematical models of hysteresis or bistability would distinguish a true memory (history-dependent, self-sustaining) from slow decay of the signal."
+    },
+    {
+      "title": "Targeted epigenome editing and histone-mark profiling at AP-1 sites",
+      "description": "Profile H3K27ac, H3K4me1 and nucleosome remodeling (BAF/SWI-SNF) at AP-1-bound enhancers after the first stimulus and after washout. Then use dCas9-based editing to erase or install these marks, or to mutate AP-1 motifs, at selected enhancers and test for causal gain or loss of primed re-responses. This links AP-1 binding to a persistent chromatin state at specific loci."
+    }
+  ],
+  "cost_usd": 0.013363000000000002,
+  "session_id": "be3de4a2-758b-4953-b62c-1c0899382943"
+}

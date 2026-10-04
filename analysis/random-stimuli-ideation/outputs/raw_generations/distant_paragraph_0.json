@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph",
+  "call": 0,
+  "stimulus": "A church bell is tuned after it is cast, not before. The founder pours bronze\ninto a loam mould built around a core shaped by a strickle board, lets it cool for\ndays, and then mounts the bell upside down on a vertical lathe. Metal is shaved from\nthe inside of the bell in thin rings, and each cut lowers particular partials: the\nhum, the prime, the tierce, the quint, the nominal. Shave too much and the bell\ncannot be put back; the only remedy is to melt it down and start again.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Before you start, here is a piece of unrelated material. You may let it inspire your thinking in any way you like, or not.\n\n<material>\nA church bell is tuned after it is cast, not before. The founder pours bronze\ninto a loam mould built around a core shaped by a strickle board, lets it cool for\ndays, and then mounts the bell upside down on a vertical lathe. Metal is shaved from\nthe inside of the bell in thin rings, and each cut lowers particular partials: the\nhum, the prime, the tierce, the quint, the nominal. Shave too much and the bell\ncannot be put back; the only remedy is to melt it down and start again.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus with AP-1 degron, then re-challenge",
+      "description": "Expose cells to a defined transient stimulus (e.g., TNF, wounding, or growth factor pulse), then acutely deplete AP-1 (FOS/JUN family) with a degron at different times after the stimulus. Re-challenge weeks later and measure whether the primed transcriptional response persists without AP-1 present, separating AP-1 as a maintainer from AP-1 as an initiator."
+    },
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN of AP-1 occupancy and accessibility",
+      "description": "Profile chromatin accessibility, AP-1 motif footprints, JUN/FOS binding, and H3K27ac/H3K4me1 at time points from during stimulus to many cell divisions after it is removed. Test whether AP-1-bound enhancers stay open or become 'latent' after stimulus, and whether AP-1 binding is required to keep them so."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Combine single-cell RNA/ATAC with clonal barcodes or live-cell reporters to compare memory states in sister cells and across divisions. If AP-1-dependent states are heritable, sister cells should show correlated accessibility and re-activation kinetics beyond what is expected from shared environment."
+    },
+    {
+      "title": "Locus-specific perturbation with dCas9 tools",
+      "description": "Use dCas9-based recruitment or blocking of AP-1 motifs, plus CRISPR deletion/mutation of specific motifs at candidate memory enhancers. Check whether altering a single AP-1 site abolishes or creates memory at that gene (faster re-induction, retained accessibility) in cis, independent of global AP-1 levels."
+    },
+    {
+      "title": "Dose, duration, and composition sweeps with live reporters and modeling",
+      "description": "Vary the strength, duration, and frequency of stimuli and AP-1 dimer composition (e.g., FOS vs. JUNB vs. ATF3 overexpression) while tracking AP-1 activity and target gene reporters live. Fit mathematical models (hysteresis, bistability, positive feedback) to test whether AP-1 dynamics show the signatures of a self-sustaining memory circuit versus a purely transient signal-following response."
+    }
+  ],
+  "cost_usd": 0.013594,
+  "session_id": "1903ebb4-588c-4e15-ad33-077187802be6"
+}

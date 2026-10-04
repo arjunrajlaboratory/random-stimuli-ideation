@@ -1,0 +1,31 @@
+{
+  "arm": "stream_parallel_required",
+  "call": 7,
+  "stimulus": "Iron remembers, supposedly. Push a field up, pull it back to zero, and the magnetization doesn't return; the loop stays open. But physicists get suspicious of the word memory almost immediately, because a slowly decaying transient looks the same on a short afternoon. So you wait, you watch relaxation, you find magnetic viscosity, logarithmic creep, and suddenly forgetting is itself a process with a clock. Then there's the old tape-recorder idea: first-order reversal curves, FORC diagrams, where you ride up to a reversal field and come back down, mapping a whole landscape of little switching units, each with its own coercivity and its own bias. It's like interrogating a crowd by asking different questions in different orders. Return-point memory is the odd one: cycle inside a loop and the material returns exactly to where it was at the turning point, as though it kept a ledger. Spin glasses do something stranger, remembering temperatures through aging dips, a Kaplan-style pause that leaves a notch in the curve. And crumpled paper, sheared foams, and coffee-ground suspensions are said to do the same, which makes me wonder about the word material. Demagnetizing with a decaying AC field erases the ledger, yet Barkhausen noise, crackling in a pickup coil, suggests avalanches replay the same sites. Is the memory in the domain walls, pinned on defects, or in the defects themselves? Old rocks keep paleomagnetic stripes for billions of years, which is a different kind of patience.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nIron remembers, supposedly. Push a field up, pull it back to zero, and the magnetization doesn't return; the loop stays open. But physicists get suspicious of the word memory almost immediately, because a slowly decaying transient looks the same on a short afternoon. So you wait, you watch relaxation, you find magnetic viscosity, logarithmic creep, and suddenly forgetting is itself a process with a clock. Then there's the old tape-recorder idea: first-order reversal curves, FORC diagrams, where you ride up to a reversal field and come back down, mapping a whole landscape of little switching units, each with its own coercivity and its own bias. It's like interrogating a crowd by asking different questions in different orders. Return-point memory is the odd one: cycle inside a loop and the material returns exactly to where it was at the turning point, as though it kept a ledger. Spin glasses do something stranger, remembering temperatures through aging dips, a Kaplan-style pause that leaves a notch in the curve. And crumpled paper, sheared foams, and coffee-ground suspensions are said to do the same, which makes me wonder about the word material. Demagnetizing with a decaying AC field erases the ledger, yet Barkhausen noise, crackling in a pickup coil, suggests avalanches replay the same sites. Is the memory in the domain walls, pinned on defects, or in the defects themselves? Old rocks keep paleomagnetic stripes for billions of years, which is a different kind of patience.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Long-timescale decay (viscosity) assay of AP-1 memory",
+      "description": "After a transient stimulus (e.g., TPA, EGF, or anisomycin) is removed, follow AP-1 (FOS/JUN) occupancy by CUT&RUN and chromatin accessibility by ATAC-seq, plus target transcription, over hours to weeks. Fit decay curves to separate true persistence from slow transients, as with magnetic viscosity, and test whether the 'forgetting clock' depends on dose, duration or cell division."
+    },
+    {
+      "title": "FORC-style stimulus-history mapping",
+      "description": "Expose cells to a rise-then-reverse series of stimulus doses, varying the peak ('reversal') dose and the return dose, and read out single-cell AP-1 activity with a live reporter and downstream gene expression. The resulting 2D response map shows whether subpopulations act as hysteretic switches with distinct thresholds and biases, and whether the response depends on history beyond the current dose."
+    },
+    {
+      "title": "Return-point memory test with nested stimulus cycles",
+      "description": "Apply a major stimulus loop, then a minor sub-cycle inside it, and check whether accessibility at AP-1 sites and gene output return exactly to the state at the turning point. Compare this with a decaying-amplitude 'AC demagnetization' protocol, which would erase the memory if the ledger lives in AP-1-dependent chromatin states."
+    },
+    {
+      "title": "Domain-wall versus defect: separating AP-1 from the sites it marks",
+      "description": "Acutely degrade FOS/JUN (dTAG/auxin) after stimulation and measure whether accessibility and enhancer marks (H3K27ac) persist, which would place memory in the chromatin 'defects' rather than in AP-1 itself. Complement this with mutating or CRISPR-deleting individual AP-1 motifs and with pioneer-factor tests (e.g., nucleosome remodeling by BAF) to see which sites are self-sustaining."
+    },
+    {
+      "title": "Replay test: do the same sites reactivate on re-stimulation?",
+      "description": "Like Barkhausen avalanches replaying the same sites, restimulate cells after a rest period and use single-cell multiome (scATAC and RNA) to ask whether the same loci open faster or more strongly in the same cells, compared with naive cells. Add lineage tracing or sibling-cell pairing to test inheritance through division, and use naive versus primed comparisons with AP-1 dominant-negative (A-FOS) to show necessity."
+    }
+  ],
+  "cost_usd": 0.013801,
+  "session_id": "603e7e4d-9e56-4a88-9364-8005137d78fd"
+}

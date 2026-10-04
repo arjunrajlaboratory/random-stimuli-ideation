@@ -1,0 +1,31 @@
+{
+  "arm": "stream_blind_required",
+  "call": 2,
+  "stimulus": "A Fresnel lens looks like a glass beehive, concentric rings stacked like a cake sliced thin. The trick is that you only need the curved surface of a lens, not its bulk, so Fresnel collapsed the thick middle into steps. Weight drops, light still bends. Funny that the same idea now sits in cheap plastic sheets for magnifying page corners and in car backup-camera stickers.\n\nLighthouses were once tended by keepers who wound clockwork like grandfather clocks, with weights descending through the tower's hollow core. Some floated the whole lens assembly in a bath of mercury so one finger could spin a several-ton apparatus. Mercury fumes probably explain a few stories of keepers going strange, though I'm wary of tidy explanations.\n\nEach lighthouse has a \"characteristic\": two flashes every ten seconds, or one long and one short. It's basically Morse code as identity, a fingerprint at sea. Sailors compared the pattern against a chart, which is a kind of lookup table made of photons.\n\nThen there's the paint. Daymarks, the stripes and spirals, exist because the light is useless at noon. Cape Hatteras has its barber-pole spiral; others are checkered. Same building, two shifts, two signaling systems. Meanwhile GPS made most of this ornamental, yet the beams still turn, humming faintly, in places nobody visits.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA Fresnel lens looks like a glass beehive, concentric rings stacked like a cake sliced thin. The trick is that you only need the curved surface of a lens, not its bulk, so Fresnel collapsed the thick middle into steps. Weight drops, light still bends. Funny that the same idea now sits in cheap plastic sheets for magnifying page corners and in car backup-camera stickers.\n\nLighthouses were once tended by keepers who wound clockwork like grandfather clocks, with weights descending through the tower's hollow core. Some floated the whole lens assembly in a bath of mercury so one finger could spin a several-ton apparatus. Mercury fumes probably explain a few stories of keepers going strange, though I'm wary of tidy explanations.\n\nEach lighthouse has a \"characteristic\": two flashes every ten seconds, or one long and one short. It's basically Morse code as identity, a fingerprint at sea. Sailors compared the pattern against a chart, which is a kind of lookup table made of photons.\n\nThen there's the paint. Daymarks, the stripes and spirals, exist because the light is useless at noon. Cape Hatteras has its barber-pole spiral; others are checkered. Same building, two shifts, two signaling systems. Meanwhile GPS made most of this ornamental, yet the beams still turn, humming faintly, in places nobody visits.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Flash-pattern decoding: AP-1 dynamics as a 'characteristic'",
+      "description": "Like a lighthouse's identity encoded in its flash sequence, stimulate cells with pulsed vs sustained signals (optogenetic or ERK/JNK-activating pulses of defined count and interval) and measure AP-1 (FOS/JUN) live-reporter dynamics and downstream gene sets. Test whether distinct temporal patterns yield distinct, persistent chromatin and transcriptional states, indicating the pattern is stored and not just transiently read."
+    },
+    {
+      "title": "Fresnel-style minimal-footprint chromatin profiling",
+      "description": "Fresnel kept only the functional surface of the lens; analogously, use CUT&Tag/ATAC-seq at single-cell resolution to find the minimal set of AP-1-bound enhancers that stay accessible after the stimulus ends. Compare accessibility, AP-1 motif occupancy and H3K27ac at these sites days after a transient stimulus versus naive cells, and ask whether this reduced set suffices to predict the primed response."
+    },
+    {
+      "title": "Acute AP-1 degradation at defined times after stimulus (keeper removal test)",
+      "description": "Use dTAG/auxin-inducible degradation of FOS/JUN family members or a dominant-negative (A-FOS) at different times after the priming stimulus. If memory persists after AP-1 is removed, AP-1 only initiates it; if secondary responses and accessibility collapse, AP-1 actively maintains it, so compare these outcomes across timepoints."
+    },
+    {
+      "title": "Daymark/nightmark dual-readout of memory: re-stimulation response and sites",
+      "description": "A lighthouse has two signaling systems for two conditions; likewise, compare the same cells by two readouts, namely the faster, stronger transcriptional response on re-stimulation (RNA-seq/nascent PRO-seq) and the persistent chromatin marks seen without stimulation. Correlate them per locus and per cell, and test causality by CRISPR-mutating AP-1 motifs at primed enhancers to see whether both readouts are lost together."
+    },
+    {
+      "title": "Lineage tracing of memory across divisions (mercury-bath inertia test)",
+      "description": "Track primed cells through multiple cell cycles with live AP-1/target reporters and barcoded lineages or sister-cell comparisons, measuring how many divisions the primed state lasts and whether sisters inherit it equally. Combine this with mitotic-bookmarking assays (live imaging and mitotic ChIP) to check whether AP-1 stays bound to chromatin through mitosis, and add decay-rate modelling to separate heritable memory from slowly decaying signaling."
+    }
+  ],
+  "cost_usd": 0.014291000000000002,
+  "session_id": "6a31d7ef-44ae-4e05-ae03-45738f8d7dc7"
+}

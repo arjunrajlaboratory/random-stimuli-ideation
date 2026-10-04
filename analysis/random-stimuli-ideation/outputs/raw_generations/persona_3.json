@@ -1,0 +1,31 @@
+{
+  "arm": "persona",
+  "call": 3,
+  "persona": "Evolutionary Biologist",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Approach this as a Evolutionary Biologist. Sees fitness landscapes, constraints, evolvability, robustness, and trade-offs. Bring that lens to the problem.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient-stimulus hysteresis assay with chromatin accessibility readout",
+      "description": "Expose cells to a defined, brief AP-1-activating stimulus (e.g., serum, TPA, or stress), wash out, and track AP-1 binding (CUT&RUN for FOS/JUN) and ATAC-seq accessibility over days to weeks. Memory is supported if AP-1-dependent enhancers stay open and primed after TF levels return to baseline, and if a second challenge gives a faster or stronger transcriptional response than the first, which indicates path-dependence."
+    },
+    {
+      "title": "Causal necessity/sufficiency tests with acute degradation and optogenetic pulses",
+      "description": "Use degron-tagged FOS/JUN or a dominant-negative (A-FOS) at different times (during priming, during the memory window, or at recall) to ask whether AP-1 is needed to establish versus maintain the memory. Pair this with optogenetic or chemogenetic AP-1 pulses of varied duration, amplitude and frequency to map the input\u2013memory function, and test whether sufficiency alone can write the state."
+    },
+    {
+      "title": "Single-cell lineage-resolved memory and heritability measurements",
+      "description": "Combine live-cell AP-1 reporters with lineage tracing or barcoding and multiome (scRNA and scATAC) to measure how long the primed state persists across divisions and how correlated it is between sister cells. Compare the decay time and heritability with those of the noise-driven state fluctuations expected without memory. This separates true epigenetic memory from fixed cell-state differences or clonal selection."
+    },
+    {
+      "title": "Enhancer-level mutational scanning of the memory landscape",
+      "description": "Run saturating mutagenesis or CRISPR-edited variants of AP-1 motifs (TRE sites) and their spacing or cooperative partners at primed enhancers, using a reporter that records the response to the first and second stimulus. This gives a fitness-landscape view of which motif sequence and grammar features set memory strength, how robust the memory is to mutation, and whether the trade-offs between sensitivity, memory persistence and noise are constrained."
+    },
+    {
+      "title": "Comparative evolutionary analysis of AP-1 memory sites across species and cell types",
+      "description": "Compare AP-1-primed enhancers across mammals or other lineages with ATAC, ChIP and conservation scores, and test whether motif turnover and constraint are stronger at sites showing memory than at sites showing transient responses. Add population-level variant data (eQTL/caQTL) to test whether memory-linked elements are under purifying selection, which would show that memory has fitness value. Examine trade-offs such as faster re-response against the cost of maladaptive persistence in chronic inflammation or cancer."
+    }
+  ],
+  "cost_usd": 0.012383000000000002,
+  "session_id": "96b924a2-c377-452c-bc48-c552f570c8d9"
+}

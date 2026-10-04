@@ -1,0 +1,31 @@
+{
+  "arm": "distant_paragraph_required",
+  "call": 3,
+  "stimulus": "A compositor setting lead type works upside down and backwards, picking sorts\nfrom the case into a composing stick held in the left hand. Capitals lived in the\nupper case and small letters in the lower, which is where the names come from. To\njustify a line, the compositor slips thin spaces of brass or copper between words\nuntil the line is tight enough that the forme can be lifted without letters falling\nout. A line that is too loose is called a 'pie' when it spills.",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA compositor setting lead type works upside down and backwards, picking sorts\nfrom the case into a composing stick held in the left hand. Capitals lived in the\nupper case and small letters in the lower, which is where the names come from. To\njustify a line, the compositor slips thin spaces of brass or copper between words\nuntil the line is tight enough that the forme can be lifted without letters falling\nout. A line that is too loose is called a 'pie' when it spills.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "ideas": [
+    {
+      "title": "Transient stimulus, delayed re-challenge (hysteresis test)",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a defined pulse of AP-1-activating signal (TPA, TNF, or injury), wash out, then re-stimulate after days to weeks and measure transcriptional response by RNA-seq and nascent-transcript assays. Memory predicts faster or stronger induction of specific genes than in naive cells, and the effect should be lost if c-Jun/c-Fos is knocked out (e.g., degron) only during the first pulse."
+    },
+    {
+      "title": "Case-switching chromatin accessibility: 'upper vs lower case' states",
+      "description": "Use ATAC-seq/CUT&Tag for AP-1 factors (FOS, JUN), H3K27ac and H3K4me1 before, immediately after, and long after stimulus to find enhancers that stay open or primed once AP-1 has left, like type that stays set after the hand moves on. Test causality by showing those enhancers are AP-1 motif-dependent via CRISPR motif mutation or dCas9 perturbation and that persistent accessibility predicts the enhanced re-response."
+    },
+    {
+      "title": "Single-cell tracking of AP-1 dynamics with live reporters",
+      "description": "Tag endogenous FOS/JUN (or use a synthetic AP-1 reporter) and image single cells over days to determine whether memory is stored as sustained AP-1 activity, a self-sustaining feedback loop, or as heritable chromatin marks after AP-1 returns to baseline. Correlating prior pulse history with later per-cell response and lineage inheritance across divisions separates cell-autonomous memory from population effects."
+    },
+    {
+      "title": "Acute degron-based necessity and sufficiency with timing control",
+      "description": "Use inducible degradation of AP-1 (e.g., dTAG on JUN/FOS or dominant-negative A-FOS) at different windows: during priming, during the memory interval, and during re-challenge. If AP-1 is needed only to establish memory, removal during the interval will have no effect, whereas needing it to maintain memory implies ongoing presence; also test sufficiency by transient ectopic expression of AP-1 in naive cells."
+    },
+    {
+      "title": "Tightness metric: dose-dependence and decay kinetics of memory",
+      "description": "Quantify how memory scales with pulse strength, duration and number of repeats, and measure its half-life and persistence across cell divisions, forming a quantitative model (e.g., bistable vs graded) of how much 'spacing' is needed to lock the state. Fit the data with a dynamical model and verify its predictions, such as bistability with a threshold, by sorting cells and checking for bimodal, heritable states."
+    }
+  ],
+  "cost_usd": 0.013043,
+  "session_id": "bc33d86a-18c6-44f4-a333-93c0bde536b6"
+}
