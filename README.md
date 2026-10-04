@@ -6,10 +6,10 @@ Can poems, random words or other unrelated material make a language model brains
 
 **[analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html](analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html)**
 
-The report is a single self-contained HTML file. Its "Present slides" button opens a 16-slide deck. Because this repository is private, GitHub shows the file's source instead of rendering it. To read it, do one of the following:
+The report is a single self-contained HTML file. Its "Present slides" button opens a 16-slide deck.
 
-- open the link above, click **Download raw file**, and open the downloaded file in your browser; or
-- clone the repository and open the file locally:
+- **Read it online:** <https://rajlab.seas.upenn.edu/notes/random-stimuli-ideation/>
+- Or clone the repository and open the file locally:
   ```bash
   git clone https://github.com/arjunrajlaboratory/random-stimuli-ideation.git
   open random-stimuli-ideation/analysis/random-stimuli-ideation/reports/random-stimuli-ideation-report.html
@@ -50,3 +50,7 @@ analysis/random-stimuli-ideation/run.sh
 ```
 
 All model responses are cached, so this reruns every analysis without new model calls. To resample, delete the cache directories listed at the top of `run.sh`; generation and judging use the authenticated `claude` CLI.
+
+## License
+
+MIT. See [LICENSE](LICENSE). The two poems used as stimuli (Emily Dickinson, Robert Frost) are in the public domain.
