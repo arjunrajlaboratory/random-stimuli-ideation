@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clonal heritability of AP-1 activity",
+      "description": "Expand single-cell-derived clones carrying an AP-1 transcriptional reporter and heritable barcodes, then compare between-clone versus within-clone variance in reporter level and AP-1 motif accessibility. Fit decay of clonal correlation versus division number to estimate a memory half-life and test it against protein-dilution expectations."
+    },
+    {
+      "title": "Pulse-chase perturbation with washout",
+      "description": "Transiently induce AP-1 with a degron-tagged or optogenetic FOS/JUN construct (or suppress it with A-FOS), then withdraw the perturbation and track accessibility, expression, and phenotype for weeks. A state that outlives the pulse argues AP-1 writes memory; collapse on washout argues it only maintains an ongoing state."
+    },
+    {
+      "title": "Acute AP-1 removal in cells that already remember",
+      "description": "Apply rapid degradation of AP-1 subunits in cells already in a primed state, such as drug-tolerant persisters or previously stimulated cells. Ask whether memory-associated enhancer accessibility, H3K27ac, and the enhanced recall response are lost, separating continuous occupancy from a self-sustaining chromatin mark."
+    },
+    {
+      "title": "Re-stimulation kinetics as the functional readout",
+      "description": "Prime cells, allow the primary response to resolve, then re-stimulate and measure response latency, amplitude, and responding-cell fraction by live imaging or time-resolved sequencing. Memory predicts faster or larger secondary induction specifically at AP-1-bound loci, which should vanish when AP-1 sites are mutated."
+    },
+    {
+      "title": "Motif-resolution causal mapping at candidate memory enhancers",
+      "description": "Use base or prime editing to disrupt individual AP-1 motifs at enhancers that remain open after the signal ends, with scrambled and neighboring-motif controls. If these motifs store the memory, editing should abolish retained accessibility and the primed response while leaving the acute primary response intact."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2480,
+  "cost_usd": 0.090085
+}

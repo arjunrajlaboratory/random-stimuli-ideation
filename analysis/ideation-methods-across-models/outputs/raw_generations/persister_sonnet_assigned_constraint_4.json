@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 4,
+  "constraint": "in an organism or cell system other than human or mouse",
+  "prompt": "Constraint: every one of your ideas must be carried out in an organism or cell system other than human or mouse. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing in a canine or zebrafish-derived cancer line",
+      "description": "Use a clonal lentiviral/CRISPR barcode library in a genetically identical non-human, non-mouse cancer line (e.g., canine osteosarcoma or zebrafish melanoma ZMEL1 cells). Split the barcoded population into replicate arms, treat each with a targeted inhibitor (e.g., BRAF/MEK inhibitor in ZMEL1), and sequence barcodes in survivors. Barcodes that recur across independent replicates indicate a pre-existing, heritable survivor state. Barcodes that are random across replicates indicate stochastic, drug-induced adaptation."
+    },
+    {
+      "title": "Single-cell multiome profiling of survivors in zebrafish melanoma, before and after drug",
+      "description": "Run paired scRNA-seq and scATAC-seq on ZMEL1 cells (or on tumors in transparent casper zebrafish) at baseline, at early drug exposure, and at the drug-tolerant persister stage. Match surviving cells to their pre-treatment states using barcodes or transcriptional trajectories. This shows whether survivors come from a rare chromatin or transcriptional state (e.g., neural crest-like or slow-cycling) and which regulators lock that state in."
+    },
+    {
+      "title": "Live-cell imaging of fate with in vivo zebrafish xenograft/transgenic reporters",
+      "description": "Image fluorescent reporters of cell cycle (FUCCI), ERK/kinase activity (FRET biosensor), mitochondrial state and apoptosis in individual cells in transparent zebrafish tumors or cultured fish cancer cells. Record cells for days before and during drug exposure, and retrospectively classify the cells that survive. Because cells are tracked over time, this links pre-treatment dynamics (pulsatile signaling, quiescence, cell-cycle phase, mitochondrial priming) to survival at single-cell resolution, which snapshot omics cannot do."
+    },
+    {
+      "title": "Genome-wide CRISPR screens in a Drosophila cell line or Drosophila tumor model",
+      "description": "Run pooled CRISPR knockout or activation screens in Drosophila S2R+ cells, or RNAi screens in a Ras/Scrib fly tumor model, under a targeted inhibitor (e.g., a MEK or PI3K inhibitor). Look for genes that change the fraction of survivors without changing the average drug IC50. These genes, such as chromatin regulators, stress-response genes and drug-efflux genes, identify the machinery of tolerance as distinct from classical resistance, and the screens are cheaper and more tractable than in mammalian cells."
+    },
+    {
+      "title": "Paired genetic, epigenetic and reversibility tests on survivor clones in yeast cancer-like models",
+      "description": "Use drug-tolerant subpopulations in budding yeast (e.g., engineered with oncogenic RAS or TOR pathway activation under a targeted TOR/kinase inhibitor). Sort survivors by growth rate, expand clones, and whole-genome sequence them. Test heritability by regrowing without drug and re-challenging at timed intervals. Combine this with ChIP-seq/ATAC-seq and single-cell growth-rate measurements in microfluidics to separate mutation from reversible epigenetic or noise-driven states, and to measure state-switching rates directly."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1202,
+  "cost_usd": 0.0164115
+}

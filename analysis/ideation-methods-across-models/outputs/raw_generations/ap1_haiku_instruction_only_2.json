@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 2,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop of AP-1 occupancy (magnetism analogy)",
+      "description": "Ramp a stimulus (e.g., phorbol ester or growth factor dose) up and then back down, and measure AP-1 genomic occupancy (CUT&RUN for FOS/JUN) and target-gene output at matched doses on each branch. A memory mechanism predicts a hysteresis loop, where the ascending and descending curves diverge at the same stimulus level, while a purely reactive system retraces the same path."
+    },
+    {
+      "title": "Anamnestic recall test with a degron-based memory eraser (immunological memory analogy)",
+      "description": "Prime cells with a stimulus, let them rest, then restimulate, comparing primary and secondary AP-1 target-gene induction kinetics and chromatin opening. Using a dTAG or auxin degron on JUN or FOS applied only during the rest interval, a true memory should be lost (secondary response reverts to primary), separating the role of persistent AP-1 from its acute activity."
+    },
+    {
+      "title": "Pulse-chase half-life of AP-1 binding (radioactive decay analogy)",
+      "description": "Pulse-label endogenous JUN/FOS with a HaloTag or SNAP-tag and track the fraction of tagged protein and of chromatin-bound AP-1 after a stimulus is withdrawn, fitting decay curves at individual enhancers. Comparing the half-life of bound complexes with the half-life of the transcript and protein reveals whether AP-1 occupancy outlasts its trigger on a timescale long enough to count as memory."
+    },
+    {
+      "title": "Synthetic bistable toggle with an AP-1 feedback loop (electronic flip-flop analogy)",
+      "description": "Build a synthetic circuit in which an inducible FOS/JUN cassette drives its own expression through AP-1 sites and reads out a fluorescent reporter, then test whether a brief inducer pulse produces a persistent ON state after the inducer is removed. Varying the strength of the positive feedback and the AP-1 site number maps the conditions required for bistability, which is a necessary property of a memory element."
+    },
+    {
+      "title": "Lineage recording of past AP-1 activity (cell-tape recorder analogy)",
+      "description": "Use an AP-1-responsive promoter to drive a CRISPR-based or base-editing recorder that writes irreversible barcode mutations into a tape locus whenever AP-1 is active. Then track the recorded cells by single-cell lineage and transcriptomics, asking whether cells with a prior AP-1 record show altered responses to a later, unrelated stimulus relative to unrecorded sister cells, which tests whether past AP-1 activity causally shapes future behavior."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1836,
+  "cost_usd": 0.00106121
+}

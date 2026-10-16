@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Baseline signaling and cell-cycle dynamics with fate tracking",
+      "description": "Expose cells to live-cell reporters (e.g., ERK-KTR and FUCCI) before adding the drug, then track each cell's history and fate. This tests whether survivors already occupy distinct signaling pulse patterns or cell-cycle states that predict survival, before any treatment."
+    },
+    {
+      "title": "Lineage barcoding coupled to single-cell transcriptomics",
+      "description": "Label founder cells with heritable barcodes, challenge with drug, and sequence both barcode and transcriptome at single-cell resolution. This distinguishes survivors that descend from a few pre-existing clones from survivors that reach a shared state through induced switching."
+    },
+    {
+      "title": "Sorting by drug accumulation and mitochondrial state",
+      "description": "Sort live cells by efflux-pump activity, intracellular drug level, or mitochondrial membrane potential, then challenge each fraction with the drug. Pair this with mtDNA heteroplasmy sequencing to test whether intracellular drug handling or OXPHOS state primes survival."
+    },
+    {
+      "title": "Pooled CRISPR screen with time-resolved persister sampling",
+      "description": "Run a genome-wide knockout or CRISPRi screen and sample at several times during drug exposure and during drug holidays. Comparing enrichment dynamics separates genes that set persister frequency from genes that maintain the tolerant state."
+    },
+    {
+      "title": "Single-cell chromatin accessibility priming before treatment",
+      "description": "Profile chromatin accessibility (scATAC-seq) and transcription jointly on untreated cells, then identify loci accessible in future survivors. Validate candidate regulators by sorting for accessibility and testing survival in the sorted cells."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Single-cell RNA-seq of untreated populations to find pre-existing transcriptional states that predict survival",
+      "Lineage barcoding (CellTag or similar) to test whether survivors derive from a few pre-existing clones or from induced state switches",
+      "Live-cell imaging of ERK-KTR or similar signaling reporters before drug to see whether survivors had distinct signaling dynamics",
+      "FUCCI or other cell-cycle reporter tracking to test whether survivors were slow-cycling or in a particular cell-cycle phase at drug addition",
+      "scATAC-seq on pre-treatment cells to identify chromatin-accessibility priming at survival-associated loci",
+      "Pooled CRISPR knockout screen with FACS or drug-pulse enrichment of survivors to find genes that modulate survival frequency",
+      "Pooled CRISPRi or CRISPRa screen with time-resolved sampling during drug holidays to separate tolerance from resistance",
+      "Mitochondrial DNA heteroplasmy sequencing and OXPHOS reporter sorting to test whether mitochondrial state primes survival",
+      "Efflux-pump activity assays (Hoechst or rhodamine) combined with intracellular drug quantification by LC-MS in sorted cells",
+      "smFISH or reporter-based quantification of stochastic expression noise in drug target or efflux genes",
+      "Photoconvertible or pulse-chase protein labeling to test whether survivors inherit old proteins or aggregates via asymmetric division",
+      "Ultra-deep UMI-tagged sequencing of drug target and resistance loci to detect rare pre-existing mutations",
+      "Extrachromosomal DNA (ecDNA) and copy-number profiling at single-cell resolution to test amplification-based tolerance",
+      "Mass cytometry or multiplexed spatial proteomics of survivors in xenografts versus culture to compare in vivo niches",
+      "Co-culture or conditioned-medium experiments to test whether paracrine signals from neighboring cells promote survival",
+      "Cell Painting morphological profiling at baseline with machine learning to predict which cells will survive",
+      "Optical redox imaging (NAD(P)H FLIM) to measure metabolic state of individual cells before and after drug",
+      "DNA damage or replication stress reporters (53BP1, PCNA) to test whether survivors carry elevated baseline damage",
+      "Interferon or innate immune signaling basal-state profiling in sorted cells",
+      "Mutation-rate measurement via fluctuation or reporter assays in survivors to test whether they are hypermutable"
+    ]
+  },
+  "output_tokens": 3233,
+  "cost_usd": 0.0017600200000000002
+}

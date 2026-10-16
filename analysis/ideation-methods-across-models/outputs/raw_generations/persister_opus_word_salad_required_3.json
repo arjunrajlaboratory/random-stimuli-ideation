@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "\"Prescience\": find out whether survivors were already different before treatment",
+      "description": "Label cells with heritable barcodes, let them divide, and split sister cells into two groups. Treat one group and profile the untreated sisters of the survivors with single-cell RNA-seq to see whether survival comes from a state that existed before the drug (and what that state is) or from a response the drug induces."
+    },
+    {
+      "title": "\"Bimodal\": look for genes switched strongly on in a few cells, and time how long that lasts",
+      "description": "Before treatment, use single-molecule RNA FISH to find genes that are high in a small fraction of cells and low in the rest, then sort out the marker-high cells and track when they return to the normal mix and how their survival chance changes over time. Run a Luria\u2013Delbr\u00fcck fluctuation analysis alongside this to separate short-lived fluctuations from stable, inherited variation."
+    },
+    {
+      "title": "\"Patination\": test whether a cell's recent history predicts survival better than its current state",
+      "description": "Before and during treatment, film cells carrying live reporters, such as kinase-translocation reporters for ERK/AKT signalling and FUCCI for cell-cycle stage. Then ask whether the survivors share a pattern over time, such as slow cycling, signalling pulses, or a deep quiescent state, that a single snapshot would miss."
+    },
+    {
+      "title": "\"Evacuative\": check whether some cells simply see less drug",
+      "description": "Measure intracellular drug levels in single cells (fluorescent drug analogs or mass cytometry) and how fully the target is inhibited (phospho-flow or immunofluorescence). Combine this with efflux-pump inhibitors to see whether cell-to-cell differences in drug uptake or target shutdown explain part of the survival, separately from transcriptional state."
+    },
+    {
+      "title": "\"Flagstone\": map whether a cell's neighbours affect its chance of survival",
+      "description": "Do spatial transcriptomics or multiplexed imaging on treated dishes or tumour sections, then change seeding density and swap conditioned media. This shows whether survival depends on local crowding, signals released by nearby cells, or contact with neighbours, rather than only on traits inside the cell."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2200,
+  "cost_usd": 0.054767
+}

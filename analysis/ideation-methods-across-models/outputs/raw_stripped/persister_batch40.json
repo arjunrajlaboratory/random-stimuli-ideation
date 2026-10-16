@@ -1,0 +1,150 @@
+{
+  "batch": 40,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "f1d9992a21b60f449d94916f7157f472fd27f3bdb243f55df352588c3eb16bfc",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Prospective sorting and amplitude-matched induction of the primed state",
+      "description": "Use a live-cell reporter or surface marker for the candidate primed state to sort rare high-expressing cells before treatment, and compare their survival frequency to sorted low-expressing cells. Then test sufficiency by transiently driving the same gene at the amplitude and duration seen in natural fluctuations. Sorting plus amplitude-matched induction tests whether the state causes survival, which correlative profiling cannot do.",
+      "idea_id": "persister_opus_overgenerate_select_0_2",
+      "source_sha256": "07edfe0b121d6fb7d911528eb5e46adf9d26f888acdd9d5b2f7e261cc07df04c"
+    },
+    {
+      "id": "I2",
+      "title": "Ferroptosis threshold and membrane lipid composition",
+      "description": "Sort or image cells for lipid peroxidation with C11-BODIPY and profile membrane phospholipid acyl chains by lipidomics, comparing survivors and non-survivors. Then add a GPX4 or ferroptosis inhibitor and a polyunsaturated fatty acid challenge to test whether survivors are less susceptible to lipid peroxidation.",
+      "idea_id": "persister_haiku_critique_revise_3_4",
+      "source_sha256": "601e783ab7961a59293c91275c3626f682f467517e01f263a8b0f20a95dd41f4"
+    },
+    {
+      "id": "I3",
+      "title": "Spatial neighborhood mapping of survivors",
+      "description": "Use spatial transcriptomics or multiplexed imaging to map survivors against local features such as cell density, oxygen, nutrient gradients, and contact with neighboring cells or stroma. Compare survivors with matched non-survivors in the same neighborhoods. Then test the hits by manipulating cell density or by micropatterning cells.",
+      "idea_id": "persister_sonnet_instruction_only_4_3",
+      "source_sha256": "cc8e5812ed2ead6a8972700d3d593f8b7165f666fceffdfc2c331079a14e1974"
+    },
+    {
+      "id": "I4",
+      "title": "Clonal split-and-compare design",
+      "description": "Expand single-cell-derived clones, split each into treated and untreated arms, and determine whether survival frequency is reproducible across clones or randomly distributed. Reproducible clone-specific rates indicate heritable causes, while scatter indicates transient fluctuations.",
+      "idea_id": "persister_opus_plain_6_1",
+      "source_sha256": "11b095e2f71d95d81a976201411f02703fe2432265f801bea19318869d3485f7"
+    },
+    {
+      "id": "I5",
+      "title": "Factorial dissection of sources of cell-to-cell variability",
+      "description": "Perturb, separately and in combination, each candidate source of cell-to-cell variability: chromatin-encoded memory (EZH2, DNMT, or HDAC inhibition), cell-cycle phase at exposure (synchronization or live reporters), division history and local density, and drug-exposure variability (uptake of a fluorescent drug analog). Score how each changes both the survivor fraction and the barcode concordance between split sister cells, to determine which source of variability determines survival.",
+      "idea_id": "persister_opus_parallel_rotated_1_3",
+      "source_sha256": "177adc0e8316080a2ded3dc4401e2c7473dc9505fe15774be1c8e8a323406af5"
+    },
+    {
+      "id": "I6",
+      "title": "Tuning expression variability of one gene at constant mean",
+      "description": "Use synthetic gene circuits (for example, noise-tuning promoter or feedback designs) to express a candidate survival gene at the same average level but with different amounts of cell-to-cell variation. Then measure the survivor fraction. This tests whether the variation itself, rather than the average level, produces the rare surviving cells.",
+      "idea_id": "persister_opus_obvious_then_avoid_7_2",
+      "source_sha256": "41f04b82915ce7912d33db65ba819240ae1f31b3a7378de2c5cf76f6e0343cc4"
+    },
+    {
+      "id": "I7",
+      "title": "Matched comparison of survivors and dying cells with residual analysis",
+      "description": "Using barcoded clonal families profiled before treatment, construct nearest-neighbor or propensity-score matched pairs of future survivors and future dying cells, balanced on cell-cycle phase, size, target-pathway activity, mitochondrial content, and local density. Test how much of the survival probability remains unexplained after balancing. The size and structure of this residual bounds how much of persistence is attributable to measured states versus unobserved or purely stochastic factors.",
+      "idea_id": "persister_opus_parallel_rotated_3_2",
+      "source_sha256": "26de50beee355bc1c09c26fd80ea9c4def88749ea1987178e3692fdbbadcd20a"
+    },
+    {
+      "id": "I8",
+      "title": "Pre-treatment multiome profiling of cells whose descendants survive",
+      "description": "Use lineage barcodes to identify, before treatment, the cells whose descendants later survived. Profile those cells with joint scRNA-seq, scATAC-seq, and protein measurements. Test whether rare survival arises from one coherent primed program or from many different low-probability states that each lead to survival, and identify the chromatin features that keep that state stable across divisions.",
+      "idea_id": "persister_opus_future_retrospective_5_1",
+      "source_sha256": "89d13f99ff56bd1f1f632375a80737cef755a310258b198ecdd27327c93ab249"
+    },
+    {
+      "id": "I9",
+      "title": "Metabolic and epigenetic profiling with pathway perturbation",
+      "description": "Compare sorted survivors and untreated cells using metabolomics (for example NADH/NAD+ and ROS levels, mitochondrial activity), drug-efflux and detoxification activity, and histone-modification or DNA-methylation profiles. Then test causality by blocking candidate pathways with epigenetic inhibitors or metabolic modulators and measuring whether the survival fraction changes.",
+      "idea_id": "persister_sonnet_parallel_rotated_7_4",
+      "source_sha256": "71b35d74a37b790bac9cf027ca541b57c5ca65a5303c4d84ea1392e5be35660f"
+    },
+    {
+      "id": "I10",
+      "title": "Sister-cell concordance in microfluidic traps",
+      "description": "Track pairs of daughter cells (or micro-colonies) in microfluidic traps and compare their drug fate with that of random unrelated pairs. Use the decay of concordance over generations to estimate the memory timescale of tolerance. Fitting the data to stochastic-switching models distinguishes fast fluctuation, epigenetic memory, and mutation without requiring molecular markers.",
+      "idea_id": "persister_sonnet_critique_revise_1_0",
+      "source_sha256": "f7909ccb7d693c1f11d2367aa39215839d899f81802e54e83a9c6ca1adf3491d"
+    },
+    {
+      "id": "I11",
+      "title": "Microenvironment perturbation, co-culture, and spatial profiling",
+      "description": "Compare survival rates across conditioned media, neighbor-density gradients, co-culture with stromal or immune cells, and in vivo xenografts. Spatial transcriptomics of surviving cells in tumors can show whether niche position or paracrine signaling, rather than cell-intrinsic state, drives survival.",
+      "idea_id": "persister_haiku_assumption_inversion_4_2",
+      "source_sha256": "7fde23f0a8b50741a6178525e6a5950c73516a1ae34f75bad08527b48962bdb3"
+    },
+    {
+      "id": "I12",
+      "title": "Baseline multi-omic classifier with prospective sort-and-treat validation",
+      "description": "Profile chromatin accessibility and transcription in drug-naive cells at single-cell resolution and train a classifier that predicts which cells will survive. Then sort the predicted survivors and treat them with drug to check the prediction. Success or failure of this prospective test shows whether a survival signature exists before any drug exposure.",
+      "idea_id": "persister_haiku_future_retrospective_1_1",
+      "source_sha256": "a98c9b28f348c9a3b9d857f45fe4b071d65d01108631298001e02f0953769238"
+    },
+    {
+      "id": "I13",
+      "title": "Mitochondrial heteroplasmy and mtDNA lineage tracing",
+      "description": "Use naturally occurring mtDNA variants (for example, via mtscATAC-seq) as endogenous clonal barcodes, and relate heteroplasmy levels and mitochondrial content and membrane potential in pre-treatment cells to later survival. This tests whether inherited mitochondrial state, rather than nuclear genome or transcriptome, predisposes cells to tolerance.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_4_0",
+      "source_sha256": "486733864ab031cd854dd246aa93df8a88b799be983e5ce9dabf9e951b3cd97c"
+    },
+    {
+      "id": "I14",
+      "title": "Single-cell multiome test of chromatin priming before transcription",
+      "description": "Perform joint ATAC and RNA profiling on untreated cells to determine whether regulatory regions of resistance-associated genes are already accessible in cells that have not yet upregulated those transcripts. A population with open chromatin but no transcript would identify a pre-primed intermediate compartment much larger than the eventual survivor fraction.",
+      "idea_id": "persister_opus_overgenerate_select_3_3",
+      "source_sha256": "f022e10e4f07512cafa5f0f2399dbb03d0fbed16fcaf44ccd2ccef86e84d9505"
+    },
+    {
+      "id": "I15",
+      "title": "Barcoded replicate-flask drug selection",
+      "description": "Label an isogenic cell line with a high-complexity lentiviral barcode library, split the barcoded population into many independent replicate flasks that each receive the same targeted drug, and deep-sequence the surviving barcodes in each. Quantify the cross-replicate reproducibility of which barcodes dominate, as an intraclass correlation or rank overlap against a neutral-drift null. This partitions survival into heritable intrinsic priming versus path-dependent chance.",
+      "idea_id": "persister_opus_parallel_rotated_6_0",
+      "source_sha256": "c19b37c28d899b76aa9218d8bed738f547d88df27ed5a531769c59158a24a3cd"
+    },
+    {
+      "id": "I16",
+      "title": "Genome-wide CRISPRa and CRISPRi screens for persister modifiers",
+      "description": "Run pooled CRISPR activation and interference screens at sublethal-to-lethal drug doses and sequence surviving cells to identify genes that raise or lower persister frequency. Hits that act only when the drug is present indicate tolerance mechanisms distinct from baseline essentiality.",
+      "idea_id": "persister_haiku_overgenerate_select_4_3",
+      "source_sha256": "847a179b273871c935d8b03a7e915f19532c0f18118a05f7b367612f887530e8"
+    },
+    {
+      "id": "I17",
+      "title": "Reversibility test by drug withdrawal and re-challenge",
+      "description": "Sort survivors (or use a reporter to isolate persister-like cells), culture them drug-free for several passages, then re-challenge with the drug and compare survival with that of the original population. If the survivor fraction resets and re-emerges from the naive population, the trait is a reversible state rather than a fixed genetic or epigenetic subpopulation.",
+      "idea_id": "persister_haiku_assumption_inversion_6_1",
+      "source_sha256": "69150f5f968af3c1d0f4b5219fbee72b27ab4cdbe567599d208fd0fe3a4a320f"
+    },
+    {
+      "id": "I18",
+      "title": "Lineage-barcoded pre-treatment and post-treatment transcriptomics",
+      "description": "Tag a clonal cell line with a heritable expression barcode library, split the population before drug exposure, profile one half by scRNA-seq, and treat the other half. Match surviving barcodes back to the pre-treatment sister cells to find the transcriptional states that predicted survival and test whether those states are heritable or transient. This takes about 2\u20133 months with an established barcoding system.",
+      "idea_id": "persister_sonnet_assigned_constraint_5_0",
+      "source_sha256": "4f2495a1efe43b55ef6e617d3091103da0205e33289bcafdd6efeea5c63d9224"
+    },
+    {
+      "id": "I19",
+      "title": "Live-cell time-lapse imaging with fluorescent reporters and lineage tracking",
+      "description": "Image cells for days before and during drug exposure, using reporters for ERK or AKT signaling, cell cycle (FUCCI), and apoptosis, and track single-cell lineages. This shows whether survival is predicted by pre-existing signaling dynamics, slow cycling, or inherited fluctuations, and whether it correlates between sister cells. It uses an existing microscope and open-source tracking software, with reagents costing about $3\u20138k.",
+      "idea_id": "persister_sonnet_assigned_constraint_1_2",
+      "source_sha256": "fc602cf70f38d2e15c2abac9c410afdeba44d8a9e67e179c703607057d17b1b7"
+    },
+    {
+      "id": "I20",
+      "title": "Dual-reporter decomposition of gene-specific versus global variability",
+      "description": "Insert two spectrally distinct reporters under identical copies of the candidate priming promoter in the same cell and compare their correlated and uncorrelated fluctuations, alongside global physiology markers such as cell size, ribosome content, and mitochondrial mass. This separates whether the rare tolerant state reflects a gene-specific stochastic program or is a downstream readout of a broader cell-physiological axis, which changes what should be targeted.",
+      "idea_id": "persister_opus_critique_revise_5_3",
+      "source_sha256": "521cad53ce937ffa36e39a06430d05394a40e8341ee2e95d30bb15868e99932f"
+    }
+  ],
+  "cost_usd": 0.04960919999999999
+}

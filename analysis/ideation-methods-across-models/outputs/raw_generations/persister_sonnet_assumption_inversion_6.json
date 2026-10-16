@@ -1,0 +1,43 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell whole-genome and mtDNA lineage sequencing of survivors vs. matched sister cells",
+      "description": "Use barcoded lineage tracing plus single-cell DNA-seq (CNV, ecDNA, mtDNA heteroplasmy) on survivors and untreated sister lineages to test whether apparent 'identical' cells carry rare heritable genetic or mtDNA differences that predispose to survival."
+    },
+    {
+      "title": "Lineage-barcoded split-clone experiments with pre-treatment profiling",
+      "description": "Barcode cells, split each expanding clone into a sister arm that is profiled by scRNA-seq/ATAC before drug and a sister arm treated with drug; the barcodes then link pre-existing states to survival and show whether tolerance is pre-existing and heritable or induced, using sister-clone concordance and fluctuation-test statistics."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporters and lineage tracking, followed by in situ endpoint omics",
+      "description": "Image thousands of single cells and their ancestry for days before, during and after drug using biosensors (ERK/AKT activity, cell cycle, apoptosis, mitochondrial state), then fix and perform multiplexed imaging or spatial transcriptomics on the same cells, to resolve dynamic trajectories and the timing of fate decisions that snapshots miss."
+    },
+    {
+      "title": "Spatial and co-culture perturbation of microenvironment and neighbor effects",
+      "description": "Compare survival in 3D spheroids, organoids or tumor sections using spatial transcriptomics, and in dense vs sparse and conditioned-medium or neighbor-ablation set-ups, to test whether survivors depend on position, drug penetration, or paracrine signaling from neighbors rather than intrinsic state."
+    },
+    {
+      "title": "Multi-dose, multi-timepoint pharmacology with intracellular drug and target-engagement measurements plus CRISPR perturbation of candidate programs",
+      "description": "Measure single-cell drug concentration (fluorescent or mass-spec imaging analogs), efflux activity and target occupancy and phospho-pathway rebound across doses and times, and run pooled CRISPR screens plus epigenetic (histone marks, chromatin accessibility) profiling of persisters to test which states causally govern survival and whether epigenetic or metabolic memory is required."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical cells means no relevant heritable differences: cryptic subclonal genetic or mtDNA variants, copy-number changes, or ecDNA are ignored.",
+      "Survivors are a pre-existing, stable, distinct subpopulation (a 'persister state') that can be identified before drug exposure, rather than cells that stochastically or adaptively enter tolerance after drug exposure.",
+      "Population-average (bulk) measurements, or single-time-point snapshots, adequately capture the mechanism; cell-to-cell heterogeneity and dynamics are treated as noise.",
+      "Survival is a cell-autonomous property of the transcriptome/proteome state, ignoring the microenvironment, neighbors, cell-cell communication, local drug exposure and paracrine signaling.",
+      "Survival is determined by a single readout at a single dose and time (viable vs dead at e.g. 72h), and the drug acts uniformly on target in all cells (so surviving means resistant to target inhibition rather than differences in drug uptake, efflux or pathway rewiring).",
+      "Transcript-level states are the causal drivers; non-genetic memory carried by chromatin, metabolism, cell cycle phase or cell size is secondary, and correlation with survival implies causation."
+    ]
+  },
+  "output_tokens": 1288,
+  "cost_usd": 0.015660800000000002
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Post-stimulus washout time-course of AP-1 occupancy and chromatin",
+      "description": "After a defined AP-1-inducing stimulus, track c-Jun/c-Fos/ATF3 occupancy (CUT&RUN or ChIP-seq), chromatin accessibility (ATAC-seq), and transcription (RNA-seq) at many time points after withdrawal. Memory is supported if AP-1 binding and enhancer opening persist after transcripts return to baseline, and the persistence window is quantified per locus."
+    },
+    {
+      "title": "Inducible AP-1 degradation during distinct phases of the memory window",
+      "description": "Use an auxin-inducible degron or dTAG system on Fos or Jun to deplete AP-1 at different times: during priming, during the quiescent interval, and at re-stimulation. If memory is AP-1-dependent, depletion during the maintenance phase should abolish the enhanced or faster re-induction of memory genes, while depletion only during priming should have a different effect."
+    },
+    {
+      "title": "Motif and enhancer perturbation with sufficiency tests",
+      "description": "Use base editing or CRISPR deletion to mutate AP-1 motifs within enhancers that carry the memory signature, and measure whether priming-dependent faster or stronger re-induction is lost while the first response is preserved. Complement this with dCas9-tethered c-Jun, Fos, or p300 at silent sites to test whether AP-1 recruitment alone is sufficient to install a memory-like state."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1 memory heritability",
+      "description": "Combine a live AP-1 transcriptional reporter with lineage barcoding, then pulse stimulate and follow cells over several divisions without further stimulus. Measure whether daughter cells inherit the primed state and its re-inducibility, and whether the memory is a stable cell-intrinsic state or a population-level drift that dissipates."
+    },
+    {
+      "title": "In vivo tagging and recall challenge of stimulus-experienced cells",
+      "description": "Label cells that experienced an AP-1-inducing stimulus in vivo using a Fos-based activity tag such as Fos-CreER or TRAP, then challenge the animal or transplant the tagged cells and measure the recall response. Test necessity by ablating or AP-1-depleting the tagged population and checking whether the enhanced recall response disappears, which would connect the molecular memory to a functional outcome."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2138,
+  "cost_usd": 0.00121106
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 7,
+  "constraint": "using patient-derived samples",
+  "prompt": "Constraint: every one of your ideas must be carried out using patient-derived samples. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paired longitudinal ATAC-seq/CUT&Tag of AP-1 occupancy before, during and after stimulus",
+      "description": "Using serial biopsies or blood-derived cells (e.g., inflamed vs. resolved psoriatic skin, or fibroblasts/keratinocytes from patients), map accessibility, AP-1 (FOS/JUN) binding and H3K27ac at baseline, during inflammation and after resolution. Persistence of AP-1-motif-containing open sites after the signal is gone, relative to healthy donor controls, would show an AP-1-dependent epigenetic memory."
+    },
+    {
+      "title": "Ex vivo re-challenge of patient primary cells with AP-1 inhibition",
+      "description": "Isolate cells from patients with prior inflammatory exposure (e.g., synovial fibroblasts from RA patients, or airway basal cells from asthma patients) and from matched healthy donors, rest them in culture, then re-stimulate. Test whether faster or stronger transcriptional recall depends on AP-1 using a small-molecule inhibitor (e.g., T-5224) or dominant-negative FOS (A-FOS), measured by RNA-seq and chromatin accessibility."
+    },
+    {
+      "title": "Single-cell multiome (RNA+ATAC) with AP-1 motif activity inference across patient states",
+      "description": "Perform scRNA/scATAC on patient tissue or blood across disease stages, and compute chromVAR/SCENIC AP-1 activity and footprinting per cell. Test whether a stable AP-1-high subpopulation persists across time points or after treatment, and whether its accessible regions predict relapse or recall gene expression."
+    },
+    {
+      "title": "Pioneer-like AP-1 'bookmarking' during mitosis and across cell divisions in patient-derived cells",
+      "description": "In patient-derived primary cells or organoids, use CUT&RUN/ChIP-seq on mitotically enriched versus interphase cells and live imaging of endogenous FOS/JUN tagged alleles to determine whether AP-1 stays on chromatin through division. Combining this with lineage-tracing barcodes or clonal expansion would test whether daughter cells inherit the AP-1 state, a core requirement of cellular memory."
+    },
+    {
+      "title": "Linking AP-1 chromatin memory to genetic variants and clinical outcomes in patient cohorts",
+      "description": "Use patient-derived cells from genotyped cohorts to map chromatin accessibility QTLs and allele-specific AP-1 binding at disease-risk variants lying in AP-1 motifs. Test whether AP-1-dependent memory signatures at these loci (including after therapy withdrawal) correlate with disease relapse, treatment response or sustained gene expression, with CRISPR editing in patient iPSC-derived cells for validation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 999,
+  "cost_usd": 0.0143055
+}

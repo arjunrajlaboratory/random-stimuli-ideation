@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment lineage barcoding with fate mapping",
+      "description": "Label individual progenitor cells with heritable DNA barcodes before drug exposure, then sequence barcodes in survivors after treatment. If surviving clones share barcodes with specific pre-treatment clones, survival reflects pre-existing cell identity rather than stochastic or induced changes."
+    },
+    {
+      "title": "Pre-treatment live-cell imaging linked to fate",
+      "description": "Track individual cells by time-lapse microscopy with cell-cycle and stress reporters (e.g., FUCCI, pathway-activity biosensors) before drug addition, then record each cell's fate. Machine-learning models on pre-treatment features can test whether survival is predictable from measurable single-cell states."
+    },
+    {
+      "title": "Chromatin accessibility priming in early-treated cells",
+      "description": "Profile ATAC-seq and histone marks in cells sorted by early drug response (e.g., reporter activation at 24 h) versus bulk. Differential accessibility at lineage or stress genes would indicate epigenetic priming that precedes survival."
+    },
+    {
+      "title": "Genome-wide CRISPR activation and interference screen for persister modifiers",
+      "description": "Run pooled CRISPRa and CRISPRi screens under sublethal-to-lethal drug doses and sequence surviving cells to identify genes that raise or lower persister frequency. Hits that act only when the drug is present point to tolerance mechanisms distinct from baseline essentiality."
+    },
+    {
+      "title": "Replay-and-reversibility test of heritable tolerance",
+      "description": "Sort surviving cells, expand them drug-free, and re-challenge them alongside parental cells, measuring survival fraction and tracking reversion over multiple cycles. Persistent tolerance after drug withdrawal indicates a heritable epigenetic memory, whereas rapid reversion indicates a transient, reversible state."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Single-cell RNA-seq time course of drug-naive vs. early-drug cells to find pre-existing transcriptional states predicting survival",
+      "Lineage barcoding (e.g., CellTag/ClonTracer) combined with drug treatment to test whether survivors are pre-marked clones",
+      "CRISPR knockout screens performed in persister-enriched sublines vs. parental to find genes essential only for survival",
+      "CRISPR activation/interference screens to identify genes whose perturbation increases or decreases persister frequency",
+      "Live-cell reporter tracking (fluorescent cell-cycle reporters like FUCCI) to see whether survivors are slow-cycling before drug exposure",
+      "Sorting pre-treatment cells by a reporter for stemness or drug efflux and measuring survival fraction",
+      "ATAC-seq chromatin accessibility profiling of survivors vs. bulk to detect epigenetic priming",
+      "Single-cell DNA/whole-genome sequencing to detect pre-existing subclonal copy-number or point mutations in survivors",
+      "Metabolomics and isotope tracing to compare mitochondrial/oxidative metabolism in pre-treatment cells that later survive",
+      "Mitochondrial membrane potential or mtDNA heteroplasmy measurement as predictor of drug tolerance",
+      "Proteomics of drug-target phosphorylation dynamics in single cells to identify signaling-level variability",
+      "Measurement of stochastic gene expression noise (e.g., smFISH) in key pathway genes before treatment",
+      "Drug efflux pump (ABCB1/ABCG2) activity measurement by dye retention to test pharmacokinetic heterogeneity within cells",
+      "Intracellular drug concentration measurement by mass spectrometry or fluorescent drug analogs in individual cells",
+      "Cell-cell contact and paracrine signaling perturbation (co-culture, conditioned medium) to test microenvironment-dependent survival",
+      "Mechanical/cytoskeletal measurements (AFM, nuclear morphology) as biophysical predictors of survival",
+      "Chromatin 3D conformation (Hi-C or imaging) and nuclear architecture changes in early drug response",
+      "Lineage tracing with inducible reporters in xenografts to see whether survivors are enriched in vivo versus in vitro",
+      "Machine learning on time-lapse morphology imaging to predict eventual survival from pre-treatment single-cell features",
+      "Mass cytometry (CyTOF) panels of signaling and stemness proteins to identify rare pre-existing survivor phenotypes",
+      "Replay experiment: sort survivors and re-treat to measure whether tolerance is heritable or reversible (epigenetic memory)",
+      "Optogenetic or inducible perturbation of candidate pathways applied at different times relative to drug to find the critical window for survival"
+    ]
+  },
+  "output_tokens": 1665,
+  "cost_usd": 0.00097542
+}

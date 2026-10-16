@@ -1,0 +1,45 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with split-clone fate tracing",
+      "description": "Label cells with expressed heritable barcodes, split the population before drug, treat one arm and profile the other by scRNA-seq, so each survivor's sister cells reveal its pre-treatment state. Clone-level concordance of survival across replicates distinguishes pre-existing heritable states from stochastic switching, which tests the assumption that survivors are a pre-existing, stable subpopulation."
+    },
+    {
+      "title": "Time-lapse single-cell imaging with live reporters and retrospective tracking",
+      "description": "Image cells for days before, during and after drug using reporters for cell-cycle state, ERK/AKT activity, p53 dynamics, and mitochondrial or ROS state, then trace survivors back to their pre-drug histories. Dynamic features such as pulsing, cell-cycle duration and recent mitosis may predict survival where static snapshots fail, which tests the fixed-property and single-time-point assumption."
+    },
+    {
+      "title": "Deep genetic and epigenetic check of survivors versus matched sisters",
+      "description": "Perform single-cell whole-genome or exome sequencing for copy-number changes and subclonal variants, along with scATAC or CUT&Tag for chromatin state, on sorted survivors and barcode-matched untreated sisters. This tests whether 'genetically identical' is actually true and whether heritable chromatin states, rather than transcript levels, carry the difference."
+    },
+    {
+      "title": "Spatial and microenvironment-resolved survival mapping in 3D or in vivo",
+      "description": "Treat spheroids, organoids with stromal cells, or xenografts, then use spatial transcriptomics or multiplexed imaging with drug-penetration measurements to map survivors against position, oxygen, neighbor identity and local drug concentration. This tests whether survival comes from cell-intrinsic state or from niche and pharmacokinetic heterogeneity, as the 2D monoculture assumption implies."
+    },
+    {
+      "title": "Multi-omic single-cell profiling of proteins, metabolism and signaling",
+      "description": "Use CyTOF or CITE-seq for proteins and phospho-signaling, along with single-cell metabolic readouts such as NAD(P)H FLIM or SCENITH, on cells sampled at several times after drug. Pair this with CRISPR perturbation of candidate non-target-pathway programs, such as oxidative phosphorylation, drug efflux or stress-response genes, to show causality. This tests the assumptions that transcripts are enough and that the drug's target pathway explains survival."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical means functionally identical: the population is assumed to lack heritable genetic differences, so survivors must differ by non-genetic state (while subclonal mutations or copy-number changes, and mutations arising during treatment, are overlooked).",
+      "Survivors are a pre-existing, distinct subpopulation (a stable 'persister' state) rather than cells that stochastically or adaptively switch state after drug exposure.",
+      "Population-averaged (bulk) measurements adequately describe the survivors, so endpoint snapshots such as bulk RNA-seq or viability curves suffice.",
+      "Cell state is determined by the cell's own intrinsic molecular content (transcriptome, signaling), not by its microenvironment, neighbors, spatial position, or local drug exposure.",
+      "Survival is a fixed property of a cell, so a single time point or a single drug exposure captures it, and the drug reaches all cells at the same effective dose.",
+      "In vitro monoculture in 2D under constant, saturating drug is a faithful model of survival in tumors.",
+      "Survival is explained by the drug's target pathway (target-level resistance or bypass signaling) rather than by general physiology such as metabolism, cell-cycle position, stress responses, or mitochondrial state.",
+      "Transcript-level measurements are the right readout of a cell's state, even though proteins, metabolites, and chromatin state may carry the causal information."
+    ]
+  },
+  "output_tokens": 1400,
+  "cost_usd": 0.0167688
+}

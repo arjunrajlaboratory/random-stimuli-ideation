@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus, delayed readout (filament left behind)",
+      "description": "Expose cells to a defined pulse of AP-1-activating signal (e.g., serum, TPA, or an optogenetic c-Fos/c-Jun driver), then wash it out and measure the transcriptome and chromatin accessibility (RNA-seq, ATAC-seq) days to weeks later and after cell divisions. Memory is supported if primed cells respond faster or more strongly to a second challenge than naive cells, long after AP-1 activity has returned to baseline."
+    },
+    {
+      "title": "Time-resolved AP-1 binding and chromatin accessibility footprinting",
+      "description": "Run CUT&RUN or ChIP-seq for FOS/JUN family members alongside ATAC-seq and H3K27ac profiling at time points during and after the stimulus. Test whether AP-1 'pioneers' enhancers that stay open or acetylated after AP-1 has left, which would show that the memory is held in chromatin and not in continued AP-1 occupancy."
+    },
+    {
+      "title": "Acute degradation to separate initiation from maintenance",
+      "description": "Fuse endogenous FOS or JUN, or use a dominant-negative A-FOS, to a degron such as dTAG or AID. Degrade AP-1 at different times, either before priming, right after it, or just before the second stimulus, and measure the recall response. If memory persists when AP-1 is removed after priming, AP-1 acts as the writer. If it is lost, AP-1 is needed to maintain the memory."
+    },
+    {
+      "title": "Single-cell and lineage-tracked heritability of AP-1 states",
+      "description": "Use live-cell reporters of AP-1 activity (e.g., a FOS promoter reporter or a JUN kinase translocation reporter) combined with lineage tracking or barcoding, plus single-cell multiome (scRNA and scATAC) data. Measure whether AP-1 state or enhancer accessibility is inherited by daughter cells more than expected by chance, and whether it is bimodal or hysteretic, as expected for a self-sustaining feedback loop."
+    },
+    {
+      "title": "Motif-editing and positive-feedback perturbation of memory loci",
+      "description": "Use CRISPR to mutate AP-1 motifs, or use dCas9 effectors to block or tether them, at candidate memory enhancers. Separately, perturb the c-Jun autoregulatory loop. Then test whether recall of the second response and the persistence of accessibility depend on these sites and on the loop. This gives causal evidence that AP-1 sites and feedback loops encode memory, not just that they correlate with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 930,
+  "cost_usd": 0.0146435
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 7,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria\u2013Delbr\u00fcck from bacterial genetics)",
+      "description": "Borrow the Luria\u2013Delbr\u00fcck fluctuation test: split a barcoded clonal population into many parallel replicates, apply drug, and compare the variance in survivor barcodes across replicates. Pre-existing heritable states give jackpot-like, shared barcodes across replicates, while drug-induced switching gives Poisson-like variation. Sequencing barcodes before and after treatment, and after regrowth, also reveals how stable the resistant state is."
+    },
+    {
+      "title": "Predator\u2013prey-style live-cell tracking with fate-lineage reconstruction (ecological census / mark-recapture)",
+      "description": "Use long-term time-lapse microscopy with fluorescent reporters (e.g., ERK activity, cell cycle, p53) to track single cells and their lineages before and after drug. Then retrospectively test which pre-treatment features predict survival, as in a mark-recapture study of who persists. Sister-cell concordance would separate inherited from stochastic causes."
+    },
+    {
+      "title": "Statistical-physics energy landscape from single-cell trajectories (attractor basins)",
+      "description": "Treat cell states as positions on a Waddington-like potential landscape. Do time-resolved scRNA-seq with metabolic labeling or RNA velocity before, during, and after drug, then infer attractors and transition rates between sensitive and tolerant states. Perturbing candidate regulators and checking whether barrier heights shift tests whether the tolerant state is a rare stable basin or a transient excursion."
+    },
+    {
+      "title": "Noise-propagation analysis borrowed from electrical engineering (signal-to-noise in circuits)",
+      "description": "Quantify expression noise (Fano factor, correlated fluctuations) in the drug target, its pathway, and the apoptosis machinery using single-cell protein imaging or CyTOF. Then fit a circuit-style model to show which node amplifies noise into a survive-or-die decision. Perturbing noise without changing mean levels, for example with promoter variants, tests the causal role of fluctuations."
+    },
+    {
+      "title": "Epidemiological case-control design with multi-omic matching (survivors vs. matched non-survivors)",
+      "description": "Use a case-control design in which survivors are 'cases' and matched non-survivors are 'controls'. Do this by sorting or imaging cells pre-drug, tracking them, and then profiling the same cells with spatial or single-cell transcriptomics, ATAC-seq, and mitochondrial/metabolic readouts after they are identified as survivors. Conditional-logistic-style modeling would identify which pre-existing molecular features carry the most risk-adjusted predictive weight for survival, and CRISPR screens on top hits would test causality."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 982,
+  "cost_usd": 0.012607
+}

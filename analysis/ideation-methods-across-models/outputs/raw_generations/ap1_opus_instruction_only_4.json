@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 4,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Measure how much information AP-1 carries about past stimuli (from information theory)",
+      "description": "Expose cells to several defined stimulus histories, then use single-cell multiome to estimate the mutual information between each history and the cell's present state, with and without conditioning on AP-1 footprint and activity. If AP-1 is the memory, it should account for nearly all of the history information, so conditioning on it should leave almost none."
+    },
+    {
+      "title": "Compare memory half-life with AP-1 half-lives (from radioactive decay)",
+      "description": "Using pulse-chase designs, measure how fast the primed response fades after a single stimulus. Compare that rate with the half-lives of FOS/JUN proteins (e.g., HaloTag pulse-chase) and of AP-1 chromatin occupancy (CUT&Tag time courses). If the memory lasts much longer than both, AP-1 is more likely to start the memory than to store it."
+    },
+    {
+      "title": "Test whether AP-1 is enough to create memory (from epidemiology's Bradford Hill criteria)",
+      "description": "Address sufficiency, a test that observational correlation can't answer. Use a dCas9 fusion, or a chemically induced AP-1 recruitment system, to tether AP-1 at chosen enhancers for a short time without any stimulus, then release it. Afterwards, check whether those loci stay accessible and respond more strongly to a later challenge."
+    },
+    {
+      "title": "Check whether memory moves between cells or stays on the chromatin (from organ transplantation)",
+      "description": "Fuse primed cells with naive cells to form heterokaryons, or move nuclei into enucleated cytoplasts, and use species- or allele-specific readouts. If the memory moves to the naive nucleus, it is carried by a diffusible factor such as AP-1 protein. If it stays with the primed chromatin, it is stored in the chromatin itself (cis)."
+    },
+    {
+      "title": "Test whether stimulus order matters (from path dependence in economics)",
+      "description": "Give cells stimulus A then B, or B then A, with matched total exposure, and measure end states and how they later respond to a drug. Then test whether the effect of order disappears when AP-1 is inhibited, or can be predicted from AP-1 footprints left by the first stimulus."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2790,
+  "cost_usd": 0.07287700000000001
+}

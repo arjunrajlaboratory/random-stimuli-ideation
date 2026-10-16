@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic AP-1 pulse-code memory test",
+      "description": "Use optogenetically controlled FOS/JUN dimerization or nuclear translocation to deliver defined pulse patterns (duration, frequency, amplitude), then measure whether past pulse history alters later transcriptional output and enhancer opening after a long rest. This separates memory encoded by AP-1 dynamics from memory encoded by upstream signaling."
+    },
+    {
+      "title": "Single-molecule tracking of AP-1 residence on nucleosomal sites over time",
+      "description": "In live cells, use HaloTag-JUN/FOS single-molecule imaging to compare residence times, bound fraction, and nucleosome engagement at primed versus naive loci or cells, including after stimulus removal. Longer-lived binding or altered search kinetics in primed cells would show a persistent molecular state rather than just a lingering chromatin mark."
+    },
+    {
+      "title": "Lineage-tracing of memory through cell division with barcoded sister cells",
+      "description": "Split sister cells after priming, then track them with lineage barcodes and paired scRNA/scATAC to test whether AP-1 activity states and primed responses are inherited across divisions and decay at a rate predicted by AP-1 turnover. High sister-cell concordance would indicate heritable memory rather than ongoing signaling."
+    },
+    {
+      "title": "Targeted epigenome editing to uncouple AP-1 sites from memory",
+      "description": "Use dCas9 tools (for example, dCas9-KRAB or a TET/DNMT module, or a motif-specific CRISPR-based mutation of single AP-1 sites) at selected primed enhancers after priming. Then test whether the recall response requires the AP-1 motif, the local chromatin state, or both. Rescue with synthetic AP-1-independent pioneer recruitment would show whether AP-1 is the memory carrier or just the writer."
+    },
+    {
+      "title": "Mathematical modeling of bistability with perturbation-based fits",
+      "description": "Build ODE and stochastic models of AP-1 feedback loops (such as FOS/JUN autoregulation and chromatin positive feedback), then test the predicted hysteresis, critical slowing, and bimodal switching by titrating the priming dose and measuring recall in single cells. Agreement between model predictions and observed dose-history dependence would show whether AP-1 network topology can sustain memory."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (FOS/JUN) binding before, during, and after a transient stimulus",
+      "ATAC-seq/DNase accessibility time course after stimulus withdrawal",
+      "Dominant-negative AP-1 (A-FOS) or CRISPR knockout of FOS/JUN to test necessity for memory",
+      "Re-stimulation assays measuring faster/stronger transcriptional response of primed cells",
+      "scRNA-seq to measure heterogeneity of primed vs naive states",
+      "Histone modification profiling (H3K27ac, H3K4me1) at AP-1 sites",
+      "Motif enrichment analysis at persistently accessible regions",
+      "Live-cell reporters of FOS/JUN expression and activity dynamics",
+      "Degron-mediated acute AP-1 depletion during priming versus recall phases",
+      "Hi-C/chromatin conformation changes at AP-1-bound enhancers"
+    ]
+  },
+  "output_tokens": 1179,
+  "cost_usd": 0.014556799999999998
+}

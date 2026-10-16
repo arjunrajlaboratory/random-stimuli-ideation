@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 2,
+  "stimulus": "haploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nhaploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Gyromele retrieval: mark-then-profile the future survivors",
+      "description": "Like the gyromele (a swallowed sampler that retrieves stomach contents for later inspection), use live imaging of a barcoded or photoconvertible cell population during treatment, then retrospectively identify which pre-treatment cells gave rise to survivors \u2014 either by photoconverting/laser-marking their sisters in a split-population design or by lineage barcodes shared with an untreated replicate \u2014 and run scRNA-seq on those specific pre-treatment cells. This directly measures the priming state that preceded survival rather than the post-hoc state of cells already reshaped by the drug."
+    },
+    {
+      "title": "Piedfort test: is the survivor a different coin or the same coin struck thick?",
+      "description": "A piedfort looks like an ordinary coin but is a physically distinct variant; analogously, run matched single-cell DNA + RNA (e.g., G&T-seq or scDNA panel plus scRNA) and deep targeted sequencing on survivor colonies to test whether they carry pre-existing mutations, copy-number changes, or amplifications at the drug target versus being genetically identical but transcriptionally distinct. Combining this with a Luria\u2013Delbr\u00fcck fluctuation assay on survivor frequency across sibling cultures quantifies what fraction of survival is genetic versus non-genetic."
+    },
+    {
+      "title": "Tachylalia of transcription: burst kinetics of resistance genes",
+      "description": "Tachylalia is abnormally rapid speech \u2014 a difference in rate rather than vocabulary. Use single-molecule RNA FISH plus MS2/PP7 live nascent-transcription imaging on candidate resistance drivers (e.g., RTKs, AXL, NGFR, efflux pumps) to test whether rare survivors differ by burst frequency/size rather than by expressing a unique gene set, and correlate each cell's measured burst history with its subsequent fate under drug."
+    },
+    {
+      "title": "Leash and unkennel: how long is the memory of the primed state?",
+      "description": "A jess and leash hold a hawk only until it is unkennelled; the question is how long the restraint lasts. Sort or image-mark cells in the putative primed state, then re-assay their drug survival after defined numbers of divisions (1, 3, 5, 10) with and without a washout, to measure the heritability half-life of the resistant state and distinguish transient fluctuation from stable epigenetic memory \u2014 pairing this with ATAC-seq/CUT&RUN at each timepoint to see which chromatin features persist."
+    },
+    {
+      "title": "Hiveward: spatial neighborhoods of survival",
+      "description": "\"Hiveward\" implies movement toward a collective center, so test whether survival is a property of neighborhoods rather than lone cells: grow colonies at defined densities, track survivors by in situ spatial transcriptomics or sequential FISH on the fixed, intact monolayer, and ask whether survivors are spatially clustered and locally enriched for secreted-factor signaling. Conditioned-media transfer and microfluidic cell-separation controls then distinguish paracrine rescue from cell-intrinsic priming."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2028,
+  "cost_usd": 0.0892145
+}

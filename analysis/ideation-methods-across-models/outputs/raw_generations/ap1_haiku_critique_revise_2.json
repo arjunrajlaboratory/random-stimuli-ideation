@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Post-stimulus washout time-course of AP-1 occupancy and chromatin: After a defined AP-1-inducing stimulus, track c-Jun/c-Fos/ATF3 occupancy (CUT&RUN or ChIP-seq), chromatin accessibility (ATAC-seq), and transcription (RNA-seq) at many time points after withdrawal. Memory is supported if AP-1 binding and enhancer opening persist after transcripts return to baseline, and the persistence window is quantified per locus.\n2. Inducible AP-1 degradation during distinct phases of the memory window: Use an auxin-inducible degron or dTAG system on Fos or Jun to deplete AP-1 at different times: during priming, during the quiescent interval, and at re-stimulation. If memory is AP-1-dependent, depletion during the maintenance phase should abolish the enhanced or faster re-induction of memory genes, while depletion only during priming should have a different effect.\n3. Motif and enhancer perturbation with sufficiency tests: Use base editing or CRISPR deletion to mutate AP-1 motifs within enhancers that carry the memory signature, and measure whether priming-dependent faster or stronger re-induction is lost while the first response is preserved. Complement this with dCas9-tethered c-Jun, Fos, or p300 at silent sites to test whether AP-1 recruitment alone is sufficient to install a memory-like state.\n4. Single-cell lineage tracing of AP-1 memory heritability: Combine a live AP-1 transcriptional reporter with lineage barcoding, then pulse stimulate and follow cells over several divisions without further stimulus. Measure whether daughter cells inherit the primed state and its re-inducibility, and whether the memory is a stable cell-intrinsic state or a population-level drift that dissipates.\n5. In vivo tagging and recall challenge of stimulus-experienced cells: Label cells that experienced an AP-1-inducing stimulus in vivo using a Fos-based activity tag such as Fos-CreER or TRAP, then challenge the animal or transplant the tagged cells and measure the recall response. Test necessity by ablating or AP-1-depleting the tagged population and checking whether the enhanced recall response disappears, which would connect the molecular memory to a functional outcome.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heterokaryon nuclear swap to locate the memory",
+      "description": "Fuse primed cells with naive cells, or use chemically induced nuclear transfer, to create shared cytoplasm containing one primed and one naive nucleus. If the naive nucleus becomes re-inducible while the primed nucleus keeps its advantage, memory is nuclear-intrinsic; if the state spreads through the shared cytoplasm, it is a diffusible signaling or protein-pool property."
+    },
+    {
+      "title": "Parental histone inheritance at AP-1 enhancers",
+      "description": "Label pre-existing H3 or H3.3 with a SNAP/Halo tag, pulse with AP-1 stimulus, then chase through one or two divisions and use quantitative CUT&Tag to measure whether old versus newly synthesized histones are retained at primed enhancers. Preferential retention of old histones at AP-1-bound sites would suggest that memory is carried by histone recycling rather than by the TF itself."
+    },
+    {
+      "title": "Transcription-dependent versus binding-dependent memory",
+      "description": "Use CRISPRi with dCas9-KRAB or a promoter-directed transcriptional-interference strategy to silence eRNA or nascent transcription at primed enhancers while leaving c-Jun or Fos occupancy intact, and separately block the transcription of the memory gene itself. Dissociating occupancy from ongoing transcription would show whether the memory requires active transcription in the quiescent phase or only a stable bound configuration."
+    },
+    {
+      "title": "Pulse-pattern decoding with microfluidic stimulation",
+      "description": "Expose cells to AP-1-inducing stimuli in microfluidic devices with systematically varied pulse number, duty cycle, and inter-pulse interval, then measure re-induction after a fixed rest. Fitting the resulting response surface would reveal whether memory encodes integrated dose, pulse count, or timing, and would give a quantitative rule that a mechanistic model must reproduce."
+    },
+    {
+      "title": "Pulse-chase proteomics of AP-1 dimer stoichiometry",
+      "description": "Use SILAC or a tagged pulse-chase to measure half-lives and heterodimer composition of Fos, Jun, JunB, and ATF3 after stimulation, quantified by immunoprecipitation mass spectrometry at several time points. A stimulus-induced shift toward long-lived, stable dimer partners during quiescence would identify a protein-level memory that can be tested for necessity directly."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2351,
+  "cost_usd": 0.00155625
+}

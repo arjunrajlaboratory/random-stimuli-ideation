@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 0,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Bet-hedging portfolio analysis with lineage barcodes",
+      "description": "Borrowing from portfolio theory, where diversifying across uncorrelated assets reduces risk, label individual clones with lentiviral barcodes, then apply the drug and use scRNA-seq to ask whether survivors come from a pre-existing, diversified set of transcriptional states or from a single hedged clone. Compare survivor clone composition against the pre-treatment population to separate selection from induced switching."
+    },
+    {
+      "title": "Reliability-engineering hazard analysis of single-cell death times",
+      "description": "Borrowing from reliability engineering, where failure times are modeled with Weibull or exponential hazard functions, track thousands of individual cells with a live death or proliferation reporter (e.g., FUCCI plus a caspase sensor) under constant drug. A constant hazard suggests stochastic survival, while age-dependent or heritable hazards point to a memory-driven, pre-programmed tolerant state."
+    },
+    {
+      "title": "Radiometric-style pulse-chase dating of the persister state",
+      "description": "Borrowing from radiometric dating, where a known isotope decay rate is used to date material, pulse-label cells with a dilutable dye or histone-tag, then apply the drug and measure how long labeled survivors persist and how their label dilutes. This estimates the timescale of the tolerant state, whether it is stable and heritable or transient and reversible, and the rate at which non-persisters convert into it."
+    },
+    {
+      "title": "Habitat-refuge spatial mapping of persister niches",
+      "description": "Borrowing from conservation ecology, where species survive in refugia that differ from the surrounding habitat, use multiplexed spatial imaging (e.g., MERFISH or CODEX) on treated tumor sections or organoids to map where persister cells sit. Correlate their positions with local microenvironment features such as hypoxia, ECM stiffness, vasculature, and cell-cell contact to test whether survival is niche-dependent rather than cell-intrinsic."
+    },
+    {
+      "title": "System identification of the drug-response feedback network",
+      "description": "Borrowing from control engineering, where a black-box circuit is characterized by applying input pulses and measuring the frequency or time response, apply short drug pulses and collect time-resolved phosphoproteomics and transcriptomics at dense intervals. Fitting a network model to this response can reveal feedback loops or bistable switches that let a subset of cells stay in a low-signaling, drug-tolerant attractor, and can predict which perturbations would push survivors back out."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2166,
+  "cost_usd": 0.00130855
+}

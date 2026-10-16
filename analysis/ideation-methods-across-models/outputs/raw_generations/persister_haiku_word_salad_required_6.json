@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 6,
+  "stimulus": "owerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nowerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode lineage tracing with single-cell profiling before and after drug",
+      "description": "Label each founder cell with a heritable DNA barcode (e.g., CellTag or lentiviral barcodes), then combine barcode tracking with scRNA-seq and scATAC-seq at baseline. Compare pre-treatment states of the clones that later survive to those that die, to test whether survival is predicted by a pre-existing (narcose-like) dormant or slow-cycling state rather than new induction."
+    },
+    {
+      "title": "Live-cell reporters with sort-and-re-challenge reversibility assays",
+      "description": "Use fluorescent cell-cycle reporters (e.g., FUCCI) and a fluorescent transcriptional marker of the candidate state in time-lapse imaging under drug to follow individual cells from treatment to regrowth. Sort the surviving fraction, release it from drug, and re-challenge, to test whether the tolerant state is reversible and heritable or a stochastic, transient switch."
+    },
+    {
+      "title": "Genome-wide CRISPR screen for survival and survivor-enriched gene loss",
+      "description": "Run a pooled CRISPR knockout or CRISPRi screen under sub-lethal and lethal drug doses, and sequence guides in surviving cells versus untreated controls. Genes whose loss sensitizes or enriches survivors point to the causal pathways and separate true genetic resistance from non-genetic tolerance."
+    },
+    {
+      "title": "Chromatin and epigenetic profiling of sorted survivors",
+      "description": "Isolate drug-tolerant cells early in treatment and profile chromatin accessibility (ATAC-seq), histone marks (H3K27me3, H3K4me3), and DNA methylation, comparing them with bulk and drug-naive populations. Fatiscent or fragmented chromatin regions that open or close consistently in survivors would suggest an epigenetic program that enables the tolerant state and can be targeted to block it."
+    },
+    {
+      "title": "Single-cell drug uptake, efflux, and metabolic flux measurements",
+      "description": "Measure intracellular drug concentration and efflux-pump activity per cell using fluorescent drug analogues or LC-MS on sorted fractions, and pair this with 13C-glucose or glutamine isotope tracing to map metabolism in survivors. Differences in drug accumulation or a shift toward oxidative phosphorylation would show whether survival comes from pharmacokinetic variation or a metabolic adaptation that can be combined with the drug."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1963,
+  "cost_usd": 0.0012524499999999998
+}

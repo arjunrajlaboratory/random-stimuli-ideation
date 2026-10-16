@@ -1,0 +1,150 @@
+{
+  "batch": 29,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "987b6ea5d9e370f454c98c5dddb82f6eac05cefa98d44599b0ed135fbdfa78a1",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Chromatin accessibility mapping plus epigenetic modifier perturbation",
+      "description": "Perform single-cell ATAC-seq on naive, persister, and regrown cells to find regulatory regions that are already open in the rare subpopulation before treatment. Then test causality by knocking down or inhibiting the chromatin modifiers maintaining those regions and measuring whether the frequency of survivors drops.",
+      "idea_id": "persister_opus_plain_3_3",
+      "source_sha256": "10d8d1e19e5a3cd229023c64f27421985e553ff017b0e10c25d6ca5538629a41"
+    },
+    {
+      "id": "I2",
+      "title": "Sister-cell pair tracking with post-hoc molecular readout",
+      "description": "Image dividing cells live to identify sister pairs, treat with drug, and record which sister survives, then compare pre-treatment features between sisters. The decay of sister concordance in survival over generations quantifies the memory timescale of the survival-permissive state, separating heritable from stochastic fluctuations.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_0_0",
+      "source_sha256": "495811c526bbdbd41d14495e92bce80b8baeab87ff32dc77ce0aaf030dad0b49"
+    },
+    {
+      "id": "I3",
+      "title": "Lineage-barcoded pre-treatment sister-cell tracing",
+      "description": "Label clonal cells with expressed DNA barcodes, split them into sister populations before drug exposure, and profile one by scRNA-seq while treating the other. Matching barcodes in survivors to the untreated sisters' pre-existing states shows whether survival was predetermined and which transcriptional or epigenetic state predicted it, without inference from post-drug cells.",
+      "idea_id": "persister_sonnet_future_retrospective_5_0",
+      "source_sha256": "92c30eac7d6cd33a8144926d2faf074a825dd9c675359fe2ca0de053ce8a981c"
+    },
+    {
+      "id": "I4",
+      "title": "Metabolic and mitochondrial profiling of sorted persisters",
+      "description": "Sort drug-tolerant cells using a reporter or by surviving a short high-dose pulse, then expand them and measure oxygen consumption, glycolytic rate, mitochondrial DNA copy number, NAD(P)H fluorescence lifetime, and sensitivity to OXPHOS and glycolysis inhibitors. Comparing these with matched parental cells tests whether persisters depend on a metabolic state that can be targeted as a co-treatment.",
+      "idea_id": "persister_haiku_assigned_constraint_5_4",
+      "source_sha256": "c17c2bb136750f7b9eb42f9874a615ee2dc6435f5cb10dfcb3f7ec4cd400df8d"
+    },
+    {
+      "id": "I5",
+      "title": "Intracellular drug and target-engagement heterogeneity",
+      "description": "Use a fluorescent drug analog, a biosensor, or mass-spec imaging to measure per-cell intracellular drug concentration and target occupancy or pathway-reporter suppression (e.g., ERK kinase translocation reporter) over time. Linking these to survival tests whether survivors escape because the drug never fully engages the target or because they tolerate full inhibition.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_6_4",
+      "source_sha256": "a4b4acbb9b88464e163d500e7be0d392325f86be265e955ac80ce198b25c3717"
+    },
+    {
+      "id": "I6",
+      "title": "Inheritance of survival state across cell divisions via sister-cell pair analysis",
+      "description": "Use time-lapse imaging of sister pairs and pedigrees, then apply the drug at different generations, to quantify how many divisions the persister-prone state is remembered and whether it is inherited stably or reset stochastically.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_1_1",
+      "source_sha256": "30429dff6212de1e3b1373398641f0fe0784e566aac6c25c716dc3c4c91c5e9a"
+    },
+    {
+      "id": "I7",
+      "title": "Mathematical modeling of switching kinetics from fluctuation-test data",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation tests and time-resolved survival curves with many replicate clones, then fit stochastic models to infer rates of state switching, memory duration, and drug-induced versus pre-existing tolerance. This distinguishes mutation, random switching, and induced adaptation, and yields predictive rules for scheduling drugs to eliminate persisters.",
+      "idea_id": "persister_sonnet_future_retrospective_7_4",
+      "source_sha256": "77563784e751540c477793245426c466b3e1bcc4bdafb61e86b79a6ff65da169"
+    },
+    {
+      "id": "I8",
+      "title": "Drug uptake, efflux and intracellular concentration at single-cell resolution",
+      "description": "Use fluorescent drug analogs or mass-spec imaging (e.g., CyTOF or nanoSIMS) to measure intracellular drug levels and target occupancy in individual cells, then link these to survival. Differences in transporter activity or lysosomal drug sequestration could explain survival without altering signaling.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_3_3",
+      "source_sha256": "ab7bc218b672766888eccf158152949aa318e5e4a58390d5b6483fe54a3ee456"
+    },
+    {
+      "id": "I9",
+      "title": "Lineage barcoding plus single-cell DNA sequencing of survivors",
+      "description": "Transduce cells with a high-complexity genetic barcode library before treatment, then compare barcode frequencies in survivors versus the pre-treatment pool to see whether survivors derive from a few pre-existing clones. Pair this with single-cell DNA sequencing or duplex sequencing of survivors to detect rare pre-existing or newly acquired mutations.",
+      "idea_id": "persister_haiku_assumption_inversion_3_0",
+      "source_sha256": "e332f2887f0dd620441d76a4a644af0a1f5104ccbc550d0509dbf7bd576d7aac"
+    },
+    {
+      "id": "I10",
+      "title": "Split-population barcode test in zebrafish melanoma transplants",
+      "description": "Label ZMEL1 zebrafish melanoma cells with a high-complexity heritable barcode library, split the expanded population into replicate arms, and treat each with BRAF/MEK inhibition: shared survivor barcodes across arms indicate a pre-existing heritable state, while non-overlapping survivors indicate stochastic or transient origins. Varying the delay between splitting and treatment measures how many generations the survival-conferring state persists.",
+      "idea_id": "persister_opus_assigned_constraint_4_0",
+      "source_sha256": "fd50531c9de08cdef30be52ff5436fc001d51d005df1aae844bf72c8b6653366"
+    },
+    {
+      "id": "I11",
+      "title": "Genome-wide CRISPR screen in persister-enriched populations",
+      "description": "Run pooled CRISPR knockout or activation screens under sustained drug pressure with a sub-lethal dose, and compare guide representation in the rare surviving population against controls. Genes whose loss or gain changes survival, especially those that act only in the tolerant state, would point to the mechanism.",
+      "idea_id": "persister_haiku_future_retrospective_2_3",
+      "source_sha256": "e9f06a00d13f3a350b1c39d6b03f57845b0be017dcc71e617234e5cafa40d4ae"
+    },
+    {
+      "id": "I12",
+      "title": "Survivor-frequency scaling and fluctuation analysis to separate pre-existing heritable states from stochastic induction",
+      "description": "Use Weibull weakest-link statistics to distinguish survival from pre-existing rare states versus random nucleation, by measuring survivor frequency as a function of population size, clone size, drug dose, and exposure duration, and fitting the resulting hazard functions. Pair this with a Luria\u2013Delbr\u00fcck-style fluctuation test across many parallel expansions of the same clone: large between-culture variance implies heritable, early-arising survivor states, while Poisson-like variance implies transient, independently arising survival events.",
+      "idea_id": "persister_opus_instruction_only_1_3",
+      "source_sha256": "eaff377098f03ce1c7cffef8bc15f58036c3775a5e8a8efa93731c93f601912f"
+    },
+    {
+      "id": "I13",
+      "title": "Pre-treatment mechanical phenotype sorting",
+      "description": "Sort cells by nuclear and whole-cell deformability using microfluidic deformability cytometry or AFM before drug exposure, then test the sorted fractions for drug tolerance and compare their cytoskeletal and nuclear-lamina profiles. This asks whether physical cell state, rather than molecular state, predetermines survival.",
+      "idea_id": "persister_haiku_obvious_then_avoid_6_3",
+      "source_sha256": "17dcee3a25547065c82dc35c612591d1e5238408e40e7a74d4f5df5d72b67bd6"
+    },
+    {
+      "id": "I14",
+      "title": "Twin-population lineage barcoding with retrospective state profiling",
+      "description": "Label cells with heritable expressed barcodes, split the population into sister halves, and treat only one half so that surviving lineages can be identified by barcode. Then profile the matched untreated sisters by single-cell RNA-seq or ATAC-seq to directly read out the pre-treatment molecular state that predicted survival.",
+      "idea_id": "persister_opus_plain_0_0",
+      "source_sha256": "438343973b0476aaa52dd8446c5b6bb6befa3b2c7e68d3d6666deab46982af6e"
+    },
+    {
+      "id": "I15",
+      "title": "High-complexity lineage barcoding with fluctuation analysis",
+      "description": "Barcode a clonal population, split it into replicate arms, and treat; if the same barcodes survive across replicates, survival is a heritable pre-existing state, whereas random barcodes imply induced stochastic entry. Fitting state-switching rates to the barcode distributions quantifies how long the surviving state persists.",
+      "idea_id": "persister_sonnet_overgenerate_select_0_0",
+      "source_sha256": "09da19904a54e84cd9de789b1802955ee57973998834b5a8da9c937be67c009b"
+    },
+    {
+      "id": "I16",
+      "title": "Biophysical fate prediction with buoyant mass and growth rate",
+      "description": "Measure single-cell buoyant mass, density and mass-accumulation rate with suspended microchannel resonators before adding drug, then follow each cell through treatment in the same device. This tests whether physical traits not captured by sequencing-based methods, such as cell size, density or biosynthetic rate, predict which cells survive.",
+      "idea_id": "persister_opus_obvious_then_avoid_0_3",
+      "source_sha256": "624d046f85d44053dfd18f17d2264e824152fdba8c9e936b39f988d54891eb9b"
+    },
+    {
+      "id": "I17",
+      "title": "Twin-population lineage tracing with pre-drug profiling of untreated sisters",
+      "description": "Give cells heritable barcodes and split each clone into twin populations before treatment: treat one half with drug, and profile the untreated twin with single-cell RNA-seq and ATAC-seq to read out the pre-drug state of the lineages that went on to survive. This shows whether survivors were already distinct before the drug was added, and which genes and chromatin features marked them.",
+      "idea_id": "persister_opus_instruction_only_6_0",
+      "source_sha256": "c0c0eda7c79954e0e5fa1227841bdd99b60f90c1f3ab1cf425821d61e2df4974"
+    },
+    {
+      "id": "I18",
+      "title": "Live-cell tracking of lineages through drug onset with retrospective multi-omic readout",
+      "description": "Time-lapse image thousands of single cells and their pedigrees for generations before and after drug addition, with reporters for signaling (ERK/AKT), cell cycle, and stress. Fix and spatially profile the same cells afterward, linking dynamic history (e.g., pulses, cycle timing, mitochondrial state) to survival at single-cell resolution.",
+      "idea_id": "persister_sonnet_future_retrospective_6_1",
+      "source_sha256": "0fd95d1d5bae60469080b4afef403886851eb80eb8aa05c307737bb319dd9770"
+    },
+    {
+      "id": "I19",
+      "title": "Lineage barcoding with pre-treatment sampling",
+      "description": "Tag cells with heritable DNA barcodes, split the population before drug exposure, and compare which barcodes survive in replicate arms. Shared surviving barcodes across replicates indicate a pre-existing, heritable state. Sibling-cell sharing also allows estimating how long the resistant state persists.",
+      "idea_id": "persister_sonnet_plain_7_0",
+      "source_sha256": "10afb6c85ad8ddbaa81502fd41123a02fdd2085cce612ac333e72040d60df4a7"
+    },
+    {
+      "id": "I20",
+      "title": "Neighbour-perturbation mapping of survival dependence",
+      "description": "Selectively ablate, stimulate, or pattern killing of defined neighbouring cells (for example with optogenetic or laser-based perturbation) and measure whether a cell's survival changes with its neighbours' state. Spatial transcriptomics of survivor versus dying neighbourhoods can then identify paracrine or contact-dependent protective signals.",
+      "idea_id": "persister_haiku_parallel_rotated_5_3",
+      "source_sha256": "ecd7ce1d9f1a5e9333357c6a9885c62cf35686f902b20c62fc50a1966f7a1c61"
+    }
+  ],
+  "cost_usd": 0.0479132
+}

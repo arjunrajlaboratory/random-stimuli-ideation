@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell lineage tracing with barcoded clones",
+      "description": "Introduce heritable random DNA barcodes (e.g., CRISPR-based or lentiviral barcodes) into a clonal population, treat with the targeted drug, and follow barcode frequencies over time and in persister-enriched fractions. This reveals whether survival is pre-determined in a subset of clones (pre-existing tolerance) or arises stochastically/induced during treatment, and how many independent lineages contribute to the surviving population."
+    },
+    {
+      "title": "Pre-treatment single-cell profiling linked to fate",
+      "description": "Perform single-cell RNA-seq and/or ATAC-seq on untreated cells, then use live-cell reporters or sorting to isolate cells that will survive versus die after drug exposure, and compare their baseline transcriptional and chromatin states. Identifying a predictive signature (e.g., stemness, drug-efflux, or cell-cycle markers) would show whether survival is encoded before treatment."
+    },
+    {
+      "title": "Time-resolved live-cell imaging of drug response",
+      "description": "Use fluorescent reporters for the drug target pathway (such as ERK activity or cell-cycle sensors) together with longitudinal microscopy to track individual cells from drug addition through death or survival. This captures the kinetics of signaling changes, whether survivors show delayed or incomplete pathway suppression, and whether they divide during treatment."
+    },
+    {
+      "title": "Pooled CRISPR screens for persistence modifiers",
+      "description": "Run genome-wide CRISPR knockout or CRISPRa/i screens under sustained drug exposure and compare guide representation in surviving cells versus controls at multiple timepoints. Hits that enrich in survivors point to genes whose loss or gain enables tolerance, and can be validated for causal roles in persistence."
+    },
+    {
+      "title": "Epigenetic and chromatin perturbation to test memory of survival",
+      "description": "Measure chromatin accessibility, histone marks, and DNA methylation in persister cells sorted after drug withdrawal versus drug-naive cells, then perturb candidate epigenetic regulators (e.g., KDM5 family, DNMTs, or BET proteins) to see if persistence is reversed. Comparing drug-naive, persister, and drug-removed-regrown populations separates transient adaptive states from stable, heritable changes."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 847,
+  "cost_usd": 0.00056565
+}

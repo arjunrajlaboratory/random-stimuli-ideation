@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 7,
+  "parallel": {
+    "field": "Agricultural science / entomology",
+    "problem": "Why do a few insects in a genetically uniform lab colony or crop pest population survive a pesticide dose that kills nearly all the others?",
+    "how_studied": "Researchers run dose-response bioassays with many replicates to quantify the tail of the survival curve. They compare survivors with non-survivors in terms of age, size, developmental stage and exposure, and do reciprocal-transfer and re-challenge experiments to test whether survival persists in the next generation. They use sequencing and metabolite profiling to look for epigenetic or physiological differences."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Agricultural science / entomology\nProblem: Why do a few insects in a genetically uniform lab colony or crop pest population survive a pesticide dose that kills nearly all the others?\nHow it is studied: Researchers run dose-response bioassays with many replicates to quantify the tail of the survival curve. They compare survivors with non-survivors in terms of age, size, developmental stage and exposure, and do reciprocal-transfer and re-challenge experiments to test whether survival persists in the next generation. They use sequencing and metabolite profiling to look for epigenetic or physiological differences.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "High-replicate dose-response curves to resolve the survival tail",
+      "description": "Run drug titrations across many replicate wells and extended dose ranges, using live-cell imaging or barcoded counting to fit the plateau of the survival curve. This gives the persister fraction and a dose-response shape that separates a stable tolerant subpopulation (a plateau) from continuous sensitivity. Also compare how the fraction changes with time and dose."
+    },
+    {
+      "title": "Survivor vs. non-survivor matched profiling with lineage barcoding",
+      "description": "Tag cells with heritable DNA barcodes and split the population before treatment. Sequence the barcodes in the survivors and in the untreated sister populations to test whether survivors come from pre-existing clones. Single-cell RNA-seq and ATAC-seq on the matched pretreatment sisters then show which transcriptional or chromatin states predicted survival, as opposed to states induced by the drug."
+    },
+    {
+      "title": "Live-cell tracking of pre-treatment state, size, and cell-cycle stage",
+      "description": "Image reporter cells for cell-cycle phase, cell size, and signaling activity (e.g., ERK or p53 reporters) over time before the drug is added. Track each cell through treatment and record the fate. Then regress survival on the pre-exposure measurements to test whether the survivors were slower-cycling, larger, or in a particular phase. This is the analog of comparing survivors and non-survivors by age, size, and developmental stage."
+    },
+    {
+      "title": "Re-challenge and drug-holiday experiments for inheritance of tolerance",
+      "description": "Expand the survivors in drug-free medium for varying numbers of generations. Re-challenge them at different time points and compare the surviving fraction with that of naive cells. A fraction that reverts over time points to a reversible epigenetic or metabolic state. A fraction that stays high suggests a genetic change, which exome sequencing can then test for. Add single-cell-derived clones to measure how quickly the survival fraction relaxes back to baseline."
+    },
+    {
+      "title": "Metabolic and epigenetic profiling with perturbation of candidate mechanisms",
+      "description": "Compare sorted survivors and untreated cells using metabolomics (for example, NADH/NAD+ and ROS levels, mitochondrial activity), drug-efflux and detoxification activity, and histone-modification or DNA-methylation profiles. Then test causality by blocking the candidate pathways, such as with epigenetic inhibitors or metabolic modulators, and measuring whether the survival fraction changes."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 899,
+  "cost_usd": 0.0143735
+}

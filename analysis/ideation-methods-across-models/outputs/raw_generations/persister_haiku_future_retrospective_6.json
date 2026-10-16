@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded time-lapse of pre-treatment cells",
+      "description": "Tag each cell with a heritable DNA barcode, image live cells under drug, and sequence barcodes at endpoints to test whether survivors descend from a pre-existing rare clone or arise de novo after exposure. Comparing barcode frequencies before and after treatment separates pre-existing from induced tolerance."
+    },
+    {
+      "title": "Paired single-cell multiomics to find pre-treatment predictors",
+      "description": "Profile chromatin accessibility and transcription together (e.g., paired scATAC plus scRNA) in untreated cells, then sort the rarest predicted-tolerant states and test whether they alone survive drug exposure. This checks whether a pre-existing epigenetic state is sufficient for survival, not just correlated with it."
+    },
+    {
+      "title": "Dose-timed CRISPR screens on sorted survivors",
+      "description": "Run pooled CRISPR knockout or activation screens with the drug added at defined times, then compare guide representation in sorted early survivors versus bulk population. Genes whose perturbation changes survival probability reveal the mechanisms that gate tolerance rather than just marking it."
+    },
+    {
+      "title": "Label-retention and metabolic imaging of persisters",
+      "description": "Use dye dilution (e.g., CFSE) to isolate slow-cycling cells and, in parallel, FLIM of NAD(P)H or mitochondrial reporters to measure each cell's metabolic state before and during drug exposure. Correlating these live readouts with later survival tests whether quiescence or oxidative metabolism predicts which cells persist."
+    },
+    {
+      "title": "Drug-holiday reversion kinetics with fate-model fitting",
+      "description": "Expose cells to drug, withdraw it at intervals, and track how quickly survivors revert to drug-sensitive behavior, then fit stochastic switching versus heritable memory models to the lineage-resolved fate data. Reversion timescales distinguish reversible non-genetic switching from stable epigenetic memory, which predicts different clinical dosing strategies."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1718,
+  "cost_usd": 0.0010019
+}

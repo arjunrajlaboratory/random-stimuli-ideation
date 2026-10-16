@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded pre-treatment sister-cell tracing",
+      "description": "Barcode a clonal population, split it into sister aliquots before drug, then profile one aliquot by scRNA-seq/ATAC and treat the other to identify which barcodes survive. This lets you read out the pre-existing state of future survivors and test whether the state is heritable, how long it lasts, and whether it predicts survival better than genotype."
+    },
+    {
+      "title": "Live-cell imaging of fate with retrospective multi-omic readout",
+      "description": "Time-lapse image thousands of single cells with reporters (e.g., stress, cell-cycle, mitochondrial, and signaling dynamics) through drug exposure, then fix the same cells in situ for spatial transcriptomics/proteomics. Linking pre-drug dynamics, such as ERK pulses or cycle phase, to survival or death for each cell identifies which dynamic features, rather than static expression, determine survival."
+    },
+    {
+      "title": "Ruling out hidden genetics with deep single-cell DNA and mutation tracking",
+      "description": "Do single-cell whole-genome/exome sequencing and ultra-deep barcode-linked sequencing on the 'identical' parental population and on survivors to measure rare pre-existing mutations, copy-number changes, and extrachromosomal DNA. Comparing these to the non-genetic signals quantifies how much survival is explained by rare genetic variants versus reversible states, and settles whether the cells were truly identical."
+    },
+    {
+      "title": "Perturbing candidate state regulators and testing for causality",
+      "description": "Run a pooled CRISPRi/a screen with single-cell readout (Perturb-seq) in the drug-na\u00efve population, then treat and read survival from guide enrichment and state shifts. Pushing the cells in or out of the candidate survivor state and then watching survival change would show which regulators, such as chromatin modifiers, stress-response factors, or metabolic programs, cause survival rather than merely mark it."
+    },
+    {
+      "title": "Stochastic noise and microenvironment modeling from in situ and in vivo measurements",
+      "description": "Measure cell-to-cell variation in drug uptake or efflux, target occupancy, and apoptotic-threshold proteins (BCL2 family) in single cells, and map local microenvironment factors such as oxygen, neighbors, and cell density in 3D culture and xenografts. Fitting a quantitative model to these data would test whether survival comes from intrinsic molecular noise, local niche differences, or the interaction of the two, and would predict combination dosing that eliminates the fraction."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 907,
+  "cost_usd": 0.011841
+}

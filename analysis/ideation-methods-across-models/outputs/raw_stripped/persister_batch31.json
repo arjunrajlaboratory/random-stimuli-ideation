@@ -1,0 +1,150 @@
+{
+  "batch": 31,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "9d59ede05e56da4ac271adb74db171ad12c6bd9cea827a57bdaaadf12a61c8e0",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Single-cell multiome of persisters with epigenetic perturbation",
+      "description": "Profile chromatin accessibility and RNA jointly in untreated cells and persisters to identify reversible regulatory states. Then test causality with CRISPRi/CRISPRa or epigenetic inhibitors of the top candidate regulators.",
+      "idea_id": "persister_sonnet_overgenerate_select_7_3",
+      "source_sha256": "42e534965a3d41c4f251c4dd27dd683a88a940289b8bdd5958d844da80527389"
+    },
+    {
+      "id": "I2",
+      "title": "Deep single-cell genomic profiling of pre-existing variants",
+      "description": "Perform ultra-deep amplicon or duplex sequencing of the drug target, and single-cell whole-genome or copy-number profiling, on drug-naive cells to detect rare pre-existing variants, amplifications, or ecDNA. Then check whether these variants are enriched in survivor-derived clones after treatment.",
+      "idea_id": "persister_haiku_assumption_inversion_2_1",
+      "source_sha256": "673cda9d5d45e5d481fe4a56ea73aa7f3c316b2a3e77dd961291f194721f31c6"
+    },
+    {
+      "id": "I3",
+      "title": "Single-cell intracellular drug-level mapping",
+      "description": "Quantify effective intracellular drug concentration per cell using fluorescent drug analogs or imaging mass spectrometry, and sort cells by drug level. This tests whether survivors accumulate less drug through reduced uptake, increased efflux, or lysosomal sequestration. Live-imaging survival tracking would show whether drug-low cells are the ones that persist.",
+      "idea_id": "persister_haiku_obvious_then_avoid_0_0",
+      "source_sha256": "e6950ffd692211c8bf533dcd325cc2f0039ca2537ea61a5a7399cfb32b9562d5"
+    },
+    {
+      "id": "I4",
+      "title": "Screening on survivor frequency rather than survival",
+      "description": "Run a CRISPR or small-molecule screen whose readout is the fraction of cells that enter the primed state, measured by a priming reporter or by the number of independent surviving colonies per starting cell, rather than overall viability. Perturbations that change the frequency without changing the identity of the resistant state point to upstream machinery that generates rare-cell variability, a target class that conventional viability screens tend to miss.",
+      "idea_id": "persister_opus_overgenerate_select_2_4",
+      "source_sha256": "465d53ff1193c8e19448913a36b09273bfaf174a5648165bf0acec6b1a1df0e0"
+    },
+    {
+      "id": "I5",
+      "title": "Multi-omic profiling of persisters (chromatin accessibility, epigenome, proteome)",
+      "description": "Isolate surviving cells at multiple time points and run single-cell ATAC-seq, histone-mark profiling (CUT&Tag), and proteomics or phospho-proteomics, alongside untreated controls. This tests whether persisters occupy a distinct chromatin or signaling state, such as a drug-tolerant program driven by KDM5 or AP-1, rather than carrying new genetic mutations.",
+      "idea_id": "persister_sonnet_plain_2_2",
+      "source_sha256": "a060802788ee4b30b436de566be17c3463723814e420e0d1c82e97666f24eee3"
+    },
+    {
+      "id": "I6",
+      "title": "Time-resolved single-cell RNA-seq and ATAC-seq of persister emergence",
+      "description": "Profile cells at high temporal resolution from before treatment through early drug exposure and into the persister state, measuring transcriptome and chromatin accessibility. Identifying the cells that diverge early and the regulatory programs they activate can reveal pre-existing transcriptional or epigenetic states that predispose to survival.",
+      "idea_id": "persister_haiku_plain_6_1",
+      "source_sha256": "0746a6b4eaad7357a0e076af2e5e1d8c7143e077d908b389117715b79cb960fc"
+    },
+    {
+      "id": "I7",
+      "title": "Cell-state transition rates via Markov modeling",
+      "description": "Sort cells by a candidate marker, such as a drug-tolerant-state reporter, and track how fast the sorted subpopulations re-equilibrate to the original mixture. Fit a Markov transition matrix to the time-lapse data to estimate switching rates and energy barrier heights between states. This shows whether tolerant cells are a stable state, a transient fluctuation, or a drug-induced adaptation.",
+      "idea_id": "persister_sonnet_instruction_only_4_1",
+      "source_sha256": "a6887f80a3ebc4b4664b48cd5743af9ea788bf0fbcdaad32602b5e4667d9c2e3"
+    },
+    {
+      "id": "I8",
+      "title": "Heritability and state-transition kinetics of survival",
+      "description": "Measure whether survival is transient or heritable by tracking sister cells and clonal lineages across drug-free and drug cycles. Use fluctuation-test (Luria-Delbr\u00fcck) designs and Markov state-switching models to separate pre-existing epigenetic states from newly acquired mutations. Add whole-genome sequencing and chromatin accessibility of survivors to confirm they are genetically identical and to find the epigenetic basis of survival.",
+      "idea_id": "persister_sonnet_parallel_rotated_4_4",
+      "source_sha256": "c0fcf60105645be0f468378957bae0fcfd6904529647ed8b2578208f46ead287"
+    },
+    {
+      "id": "I9",
+      "title": "Lineage barcoding with pre-treatment clone tracking",
+      "description": "Label a population with a heritable DNA barcode library (e.g., CellTag or lentiviral barcodes), then compare barcode clone frequencies before and after drug exposure and after drug withdrawal and re-challenge. Clones already enriched among survivors indicate pre-existing heritable states, while survivors spread across many clones indicate induced, non-heritable switching. This tests whether survival arises from a single mechanism and whether the survivor state is stable and inherited.",
+      "idea_id": "persister_haiku_assumption_inversion_0_0",
+      "source_sha256": "a3f1f5d48bcd4ba7d3b8c6a347a7385897ee589dc27308b73e8212d88288f876"
+    },
+    {
+      "id": "I10",
+      "title": "Cell-cycle-history and inheritance tracking via sister-cell pairs",
+      "description": "Use time-lapse imaging of FUCCI or similar reporters plus sister-cell tracking to test whether survival correlates with pre-drug cell-cycle duration and how strongly sisters share fate. Compare sister-pair concordance with unrelated cells and apply the drug at varied times after division to estimate the heritability and decay time of the survival state.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_2_0",
+      "source_sha256": "7e2e17620ee49c16519e46fbfb5c9453d3d59e1b51526036104d174cd6293803"
+    },
+    {
+      "id": "I11",
+      "title": "Per-cell drug exposure and apoptotic-threshold measurement",
+      "description": "Combine a fluorescent drug analog or MALDI mass-spectrometry imaging of intracellular drug with efflux-pump activity reporters, single-cell target-occupancy readouts (phospho-signaling by iterative immunofluorescence), and dynamic BH3 profiling of mitochondrial priming. This tests whether survivors differ in the dose they actually receive and in the death threshold they must cross, rather than in cellular identity.",
+      "idea_id": "persister_opus_assumption_inversion_3_3",
+      "source_sha256": "467f3aa21b0152bcb967df4b9f308f34ba798eb98916f8ed9640f85f5ad13232"
+    },
+    {
+      "id": "I12",
+      "title": "Mitochondrial DNA heteroplasmy as an endogenous lineage marker",
+      "description": "Use single-cell mtDNA sequencing (for example mtscATAC-seq or long-read mtDNA profiling) to read endogenous mtDNA variants as heritable clone markers in a population that is treated and allowed to regrow. Comparing heteroplasmy frequencies in survivors with baseline reveals whether specific mitochondrial genotypes, which alter oxidative metabolism, are enriched without engineered barcodes.",
+      "idea_id": "persister_haiku_critique_revise_1_2",
+      "source_sha256": "acdfbd9c9438394e94c1c855df863ffd9842d5653445e623b3b6f5c5beff7755"
+    },
+    {
+      "id": "I13",
+      "title": "Manipulating the rate of state entry without altering resistance genes",
+      "description": "Vary only the cells' drug-free history (confluence, nutrient or hypoxic pulses, transient inhibition of specific chromatin writers/erasers, or enforced slow versus fast growth) and measure the resulting survivor frequency together with the abundance of primed cells. Conditions that shift survivor frequency severalfold while leaving bulk drug sensitivity unchanged would identify the upstream process that generates the rare state, as opposed to a downstream marker.",
+      "idea_id": "persister_opus_critique_revise_0_3",
+      "source_sha256": "89e25f407410dd42541e5a2a322e6967b619aee77967402e1a3d8d1940d93ea0"
+    },
+    {
+      "id": "I14",
+      "title": "Multigenerational live imaging of signaling and cycle history before drug",
+      "description": "Track lineages for many generations with ERK/AKT activity reporters, cell-cycle reporters, and drug-target pathway sensors, then regress survival on each cell's full history, including pulse frequency, quiescence episodes, division timing, and asymmetric partitioning at mitosis. This tests whether temporal history predicts survival better than any single-timepoint snapshot of expression.",
+      "idea_id": "persister_opus_future_retrospective_4_2",
+      "source_sha256": "82361d33eeabd4853df8e8e13850cf5694e0a2845a05462dc6f09704e7799e0c"
+    },
+    {
+      "id": "I15",
+      "title": "Long-term fate classification by continuous imaging before retrospective profiling",
+      "description": "Image thousands of cells continuously for weeks through treatment and regrowth to classify every outcome (immediate death, divide-then-die, arrest-then-resume, senescence escape, polyploidization), then retrieve and profile cells from each class separately. This avoids a binary survivor label and tests whether several mechanistically distinct routes to survival are being pooled together.",
+      "idea_id": "persister_opus_assumption_inversion_3_4",
+      "source_sha256": "2c57cfe4458ac74f033cdd41b6a13f50b887818239b79583f2d6dd57f1a4ab71"
+    },
+    {
+      "id": "I16",
+      "title": "Epigenetic and chromatin state perturbation screens",
+      "description": "Use CRISPRi/a screens or small-molecule inhibitors of chromatin regulators (e.g., KDM5, HDACs, EZH2) to test whether altering epigenetic plasticity changes the persister fraction. Pair this with ChIP-seq or CUT&Tag on sorted survivors to identify the marks that maintain the tolerant state.",
+      "idea_id": "persister_sonnet_plain_3_3",
+      "source_sha256": "42c254b31b3cbe5d68934658f2483e40ebdd9e7023e8387c929071fe790d7046"
+    },
+    {
+      "id": "I17",
+      "title": "Per-cell drug accumulation and efflux measurement",
+      "description": "Quantify intracellular drug concentration in each cell using fluorescent drug analogs or imaging mass spectrometry, and correlate it with survival. Differences in uptake or efflux could explain survival even when target and genotype are identical.",
+      "idea_id": "persister_haiku_overgenerate_select_1_2",
+      "source_sha256": "02203e4ecb9e49e55de095cec2dc268aa8be8afb48299ecd28a1266abfa76d21"
+    },
+    {
+      "id": "I18",
+      "title": "Single-cell profiling of survivors at one late time point with matched untreated control",
+      "description": "Harvest cells after a fixed drug exposure and run scRNA-seq or CITE-seq, comparing against untreated cells to define the persister state (e.g., drug-tolerant, EMT-like, stress response, dormancy). Cell-surface markers from CITE-seq can then be used to isolate and test persisters.",
+      "idea_id": "persister_sonnet_assigned_constraint_6_1",
+      "source_sha256": "c008344ac7f822b0eae8b3cc056ba595f0b0c09cb06d6384c9f53dc1bd8b2683"
+    },
+    {
+      "id": "I19",
+      "title": "Live-cell imaging with retrospective lineage tracking",
+      "description": "Image thousands of single cells for days before drug addition with reporters for cell cycle, ERK/p53 or stress signaling, and mitochondrial state, then follow fates after treatment. Mapping survivors back to their pre-drug dynamics (e.g., pulses, cycle length) reveals which dynamic features predict survival.",
+      "idea_id": "persister_sonnet_overgenerate_select_0_2",
+      "source_sha256": "72e2e8e4327020fdb7f988fd76bb35682be512d550e84ef3305114f613baeb47"
+    },
+    {
+      "id": "I20",
+      "title": "Single-cell drug exposure and target engagement measurement",
+      "description": "Quantify, cell by cell, how much inhibitor each cell accumulates (fluorescent drug analog or efflux-activity dye) alongside live target-pathway reporters such as an ERK kinase-translocation reporter, then follow the same cells to their fate. This tests whether survivors are simply cells with incomplete target inhibition or rapid signaling rebound, rather than cells in a distinct transcriptional program.",
+      "idea_id": "persister_opus_critique_revise_6_2",
+      "source_sha256": "d96622f4e84bc8b11d64192f32df6fbadfb27a3b754019114b298ccc88406e20"
+    }
+  ],
+  "cost_usd": 0.049607200000000004
+}

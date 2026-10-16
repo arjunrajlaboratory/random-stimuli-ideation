@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 3,
+  "ideas": [
+    {
+      "title": "Lineage-resolved decay rates of AP-1 chromatin state versus transcription",
+      "description": "Use clonal barcoding with paired single-cell ATAC and RNA readouts to track sister cells for many divisions after a transient stimulus, measuring separately how fast AP-1 motif accessibility and AP-1 target transcription relax toward baseline. Memory is demonstrated if accessibility half-lives substantially exceed those of both AP-1 protein levels and target mRNA."
+    },
+    {
+      "title": "Degron erasure test: is AP-1 protein required to maintain its own footprint?",
+      "description": "Tag endogenous FOS/JUN family members with inducible degrons and deplete them at defined times after stimulation, then assay whether previously opened AP-1 sites stay open and whether the cell still responds faster to a second stimulus. Distinguishing a self-sustaining chromatin mark from continuous AP-1 occupancy is the crux of any memory claim."
+    },
+    {
+      "title": "Re-stimulation dose-response mapping of the primed state",
+      "description": "Quantify, at single-cell resolution, the stimulus dose and latency needed to re-trigger a response in previously stimulated versus naive cells across a long range of rest intervals. A genuine memory predicts a measurable leftward shift in threshold and shortened latency that decays with a characteristic timescale, giving memory an operational, quantitative definition rather than a correlative one."
+    },
+    {
+      "title": "Mitotic bookmarking and dilution accounting across the cell cycle",
+      "description": "Combine live imaging of tagged AP-1 with cell-cycle sensors and post-mitotic chromatin profiling of daughter pairs to ask whether AP-1 sites are re-established after mitosis, and whether the two daughters inherit matched or divergent states. Measuring inheritance fidelity per division turns 'memory' into a per-generation transmission probability."
+    },
+    {
+      "title": "Synthetic AP-1 site insertion to test sufficiency at a naive locus",
+      "description": "Insert defined arrays of AP-1 motifs, with varied spacing and partner motifs, at neutral genomic locations alongside a reporter, then stimulate and measure whether the site autonomously acquires and retains accessibility and a faster second response. This converts the question from observational association to a sufficiency experiment with tunable sequence grammar."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1222,
+  "cost_usd": 0.057825100000000004
+}

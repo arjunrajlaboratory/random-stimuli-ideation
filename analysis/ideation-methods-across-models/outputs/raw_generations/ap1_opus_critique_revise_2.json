@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Clonal heritability of AP-1 activity: Expand single-cell-derived clones carrying an AP-1 transcriptional reporter and heritable barcodes, then compare between-clone versus within-clone variance in reporter level and AP-1 motif accessibility. Fit decay of clonal correlation versus division number to estimate a memory half-life and test it against protein-dilution expectations.\n2. Pulse-chase perturbation with washout: Transiently induce AP-1 with a degron-tagged or optogenetic FOS/JUN construct (or suppress it with A-FOS), then withdraw the perturbation and track accessibility, expression, and phenotype for weeks. A state that outlives the pulse argues AP-1 writes memory; collapse on washout argues it only maintains an ongoing state.\n3. Acute AP-1 removal in cells that already remember: Apply rapid degradation of AP-1 subunits in cells already in a primed state, such as drug-tolerant persisters or previously stimulated cells. Ask whether memory-associated enhancer accessibility, H3K27ac, and the enhanced recall response are lost, separating continuous occupancy from a self-sustaining chromatin mark.\n4. Re-stimulation kinetics as the functional readout: Prime cells, allow the primary response to resolve, then re-stimulate and measure response latency, amplitude, and responding-cell fraction by live imaging or time-resolved sequencing. Memory predicts faster or larger secondary induction specifically at AP-1-bound loci, which should vanish when AP-1 sites are mutated.\n5. Motif-resolution causal mapping at candidate memory enhancers: Use base or prime editing to disrupt individual AP-1 motifs at enhancers that remain open after the signal ends, with scrambled and neighboring-motif controls. If these motifs store the memory, editing should abolish retained accessibility and the primed response while leaving the acute primary response intact.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Cis/trans variance decomposition with allele-resolved reporters",
+      "description": "Place two spectrally distinct but otherwise identical AP-1-driven reporters at the two homologous alleles of one locus, and read endogenous memory loci allele-specifically in F1 hybrid cells using SNPs. Correlated allelic states implicate a diffusible trans carrier (the AP-1 protein pool), while independent allelic memory implicates a cis chromatin mark, a distinction bulk degron or washout experiments cannot make."
+    },
+    {
+      "title": "Replication-coupled restoration kinetics of AP-1 sites",
+      "description": "Use nascent chromatin capture (ChOR-seq or EdU-pulldown ATAC) to time re-establishment of AP-1 occupancy, accessibility, and H3K27ac behind the replication fork at memory loci versus acutely induced loci, and compare memory decay in time-matched cycling versus replication-arrested (CDK4/6-inhibited or quiescent) cells. Erasure that scales per division rather than per hour, with slow locus-selective restoration, identifies replication as the rate-limiting step for AP-1 rewriting."
+    },
+    {
+      "title": "Mitosis-restricted AP-1 removal to test bookmarking",
+      "description": "Fuse AP-1 subunits to a cell-cycle-gated degron (APC/C-dependent, or chemically timed in synchronized cells) so the protein is absent only during mitosis and early G1, then restored. Loss of heritable accessibility under this narrow window but not under equal-duration interphase depletion would show AP-1 transmits memory by mitotic bookmarking rather than continuous interphase occupancy."
+    },
+    {
+      "title": "Open-loop clamp of AP-1 expression",
+      "description": "Delete or mutate the AP-1 binding sites in the FOS/JUN promoters themselves and re-supply the subunits from a tunable exogenous promoter titrated to match wild-type mean protein level. Collapse of heritable state despite identical average AP-1 activity would localize memory to the trans autoregulatory feedback loop rather than to the chromatin AP-1 binds."
+    },
+    {
+      "title": "Single-molecule residence time and fiber co-occupancy at matched AP-1 levels",
+      "description": "In primed versus naive cells with equal AP-1 protein concentration, measure FOS/JUN residence-time distributions and bound fraction by single-molecule tracking, and measure combinatorial multi-site co-occupancy on individual DNA molecules by methyltransferase footprinting (Fiber-seq/SAMOSA). Memory stored as kinetic stabilization or cooperative multi-motif occupancy predicts longer-lived binding and non-independent site occupancy, which bulk ChIP and ATAC averages cannot resolve."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4067,
+  "cost_usd": 0.1487925
+}

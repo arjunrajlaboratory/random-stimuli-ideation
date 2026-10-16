@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient AP-1 pulse, then decades-long chromatin tracking",
+      "description": "Use optogenetic or degron-controlled c-Fos/c-Jun to deliver a defined pulse, then remove it and follow the same cells and their descendants with single-cell multiome (ATAC plus RNA) and lineage barcodes for weeks to months. This asks whether AP-1-opened enhancers and the resulting transcription persist after AP-1 is gone, and for how many divisions."
+    },
+    {
+      "title": "Acute AP-1 depletion after priming to test maintenance versus initiation",
+      "description": "Prime cells with a stimulus such as injury, inflammation or stress, then rapidly degrade all AP-1 (dTAG or dominant-negative A-Fos) at varying delays and measure whether the primed accessibility and faster re-induction survive. If memory persists without AP-1, it is only an initiator and other factors maintain it. If it is lost, AP-1 is required for maintenance."
+    },
+    {
+      "title": "Single-locus dCas9 editing of AP-1 motifs in memory enhancers",
+      "description": "Mutate or epigenome-edit individual AP-1 motifs at primed enhancers (for example in the endogenous locus, using base editing) and test whether secondary stimulation response, H3K27ac and accessibility memory are selectively lost. This separates AP-1 binding itself from correlated cofactors such as the pioneer factors, and the effect size per motif quantifies how much memory depends on it."
+    },
+    {
+      "title": "Live-cell single-molecule imaging of AP-1 residence across mitosis",
+      "description": "Track endogenously tagged Fos/Jun with live single-molecule imaging and CUT&Tag/ChIP at sorted mitotic and post-mitotic cells to measure whether AP-1 stays bound to mitotic chromosomes (bookmarking) and re-engages the same sites after division. Pairing this with a reporter at a primed gene tests whether bookmarking predicts which daughter cells retain memory."
+    },
+    {
+      "title": "Cross-tissue in vivo memory trace with AP-1 lineage recording",
+      "description": "Build a mouse with a Fos/AP-1-activity-driven recorder (Cre or base-editing barcode) to permanently label cells that experienced AP-1 activity during wound, infection or neuronal activity. Months later, compare labeled with unlabeled cells in the same tissue for chromatin state, response to rechallenge and function, with AP-1 perturbed in a matched cohort to show causal necessity beyond correlation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 901,
+  "cost_usd": 0.0117681
+}

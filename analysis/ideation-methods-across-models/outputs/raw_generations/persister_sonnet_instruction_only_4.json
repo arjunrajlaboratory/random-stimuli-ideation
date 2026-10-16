@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 4,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria\u2013Delbr\u00fcck analogy)",
+      "description": "Borrowing Luria and Delbr\u00fcck's fluctuation test from bacterial genetics, split barcoded clonal populations into many parallel replicates before drug exposure. If the same barcodes survive across replicates, the survival state is heritable and pre-existing. If different barcodes survive in each replicate, survival is stochastic or induced. Fitting the variance-to-mean ratio of surviving clones to a mathematical model gives the rate of switching into the resistant state."
+    },
+    {
+      "title": "Cell-state transition rates via Markov modeling (statistical mechanics / energy landscapes)",
+      "description": "Treat cell states as basins in a Waddington-style energy landscape. Sort cells by a candidate marker, such as a drug-tolerant-state reporter, and track how fast sorted subpopulations re-equilibrate to the original mixture. Fit a Markov transition matrix to the time-lapse data to estimate switching rates and barrier heights. This shows whether tolerant cells are a stable state, a transient fluctuation, or a drug-induced adaptation."
+    },
+    {
+      "title": "Single-cell lineage tracking with sister-cell concordance (twin studies)",
+      "description": "Use time-lapse live imaging with fluorescent signaling reporters, such as ERK and p53 activity, and follow sister cells and cousins through division. Then treat them with the drug. Sister-cell concordance in survival, compared with unrelated cells, works like a twin study to estimate how much survival is heritable versus due to non-heritable noise. Pre-treatment reporter dynamics can then be tested as predictors of which lineages survive."
+    },
+    {
+      "title": "Spatial neighborhood mapping (ecology and microhabitats)",
+      "description": "Borrowing the ecological idea that survival depends on microhabitat, use spatial transcriptomics or multiplexed imaging to map survivors against local features such as cell density, oxygen, nutrient gradients, and contact with neighbors or stroma. Compare survivors with matched non-survivors in the same neighborhoods. Then test the hits by manipulating density or micropatterning cells."
+    },
+    {
+      "title": "Metabolic and stress-response noise profiling (engineering signal-noise analysis)",
+      "description": "Apply a noise-decomposition approach from electronics and gene-expression noise theory. Measure cell-to-cell variability in mitochondrial membrane potential, ROS, drug efflux, and apoptotic-priming proteins (for example by BH3 profiling) in untreated cells. Then use high-dimensional single-cell mass cytometry to ask which variable carries the most information about later survival, such as by mutual information. Perturbing the top variable should shift the surviving fraction if it is causal."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 979,
+  "cost_usd": 0.012573
+}

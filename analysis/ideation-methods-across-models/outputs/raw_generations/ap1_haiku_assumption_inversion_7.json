@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paralog degron matrix to resolve which AP-1 members carry memory (tests assumption 1)",
+      "description": "Knock in dTAG or AID degrons to JUN, JUNB, JUND, FOS, FOSL1/2, and ATF3, then degrade individual and combinatorial subsets at defined windows after a priming stimulus and washout. Measure ATAC, H3K27ac, and re-induction of primed genes to find which paralog set is required for memory, rather than assuming AP-1 acts as a single unit."
+    },
+    {
+      "title": "Occupancy-versus-chromatin decoupling by single-molecule tracking and CUT&RUN during washout (tests assumption 3)",
+      "description": "Use HaloTag-JUN or FOS single-molecule tracking to measure residence time, and CUT&RUN to track occupancy at primed enhancers over the washout time course. If accessibility or H3K27ac at these loci persists after AP-1 unbinds, the carrier is a chromatin state, not AP-1 occupancy, and this can be tested further with pioneer- or acetylation-deficient AP-1 mutants."
+    },
+    {
+      "title": "Two-pulse savings assay with single-cell quantification (tests assumption 4)",
+      "description": "Prime cells with a stimulus, vary the rest interval, then re-stimulate and quantify lag, amplitude, and magnitude of re-induction for AP-1 targets by smFISH or single-cell RT-qPCR. Repeat with AP-1 degraded during the rest period; memory is defined as a savings effect that depends on AP-1 presence, not as a persistent marker."
+    },
+    {
+      "title": "Lineage-resolved memory tracing across divisions (tests assumptions 5 and 6)",
+      "description": "Combine CRISPR lineage barcodes with a recorder of prior AP-1 activity, such as a Fos-promoter-driven recombinase or stable reporter, and follow clonal lineages through several divisions. Single-cell multiome readouts will show whether the primed state is inherited within clones, and whether it is uniform or confined to a subpopulation."
+    },
+    {
+      "title": "In vivo engram-style tagging and necessity test in tissue (tests assumption 7)",
+      "description": "Use Fos-CreERT2 or TRAP labeling to mark cells with AP-1 activity during a repeated physiological stimulus in mouse tissue, such as neurons or trained macrophages. Sort tagged cells at several post-stimulus intervals for ATAC or CUT&Tag, then test necessity by inducing a dominant-negative AP-1 (A-FOS or TAM67) during the consolidation window and checking whether the memory signature and later reactivation response disappear."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "1. 'AP-1' is treated as one functional unit. The Fos/Jun/ATF family members are assumed to be interchangeable, so memory can be attributed to 'AP-1' without identifying which paralogs carry it.",
+      "2. 'Memory' means a state that outlasts the stimulus. Persistence after washout is assumed to reflect a stimulus-dependent regulatory state, not residual Fos/Jun protein, mRNA, or reporter signal.",
+      "3. AP-1 occupancy or protein presence is assumed to be the carrier of memory. Co-occurrence of AP-1 binding with a persistent chromatin or transcriptional state is treated as causal, even though a downstream chromatin change could outlast AP-1 itself.",
+      "4. Memory is assumed to be a marker-level phenomenon. Persistence of a molecular signature is taken as evidence of memory without showing that it changes the cell's response to a later stimulus (the 'savings' or priming criterion).",
+      "5. Memory is assumed to be cell-intrinsic and heritable through divisions within a lineage. Bulk readouts are assumed to represent the state of individual cells.",
+      "6. The memory state is assumed to be homogeneous across the population. Every cell is assumed to carry the same AP-1-dependent state, so bimodal or subpopulation-restricted memory would be missed by averaging.",
+      "7. Findings from cultured, often immortalized cells under strong, pulsed stimulation are assumed to generalize to physiological in vivo tissues, where repeated, weaker, and context-dependent stimuli act.",
+      "8. Memory is assumed to be well captured by bulk measurements at a few fixed timepoints. Sampling density and timescale are assumed not to confound the apparent persistence or decay of the state.",
+      "9. The stimulus-specific AP-1 state is assumed to be a regulated, functional feature. It could instead be a passive byproduct of chromatin that is slow to decay."
+    ]
+  },
+  "output_tokens": 5522,
+  "cost_usd": 0.00290479
+}

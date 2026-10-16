@@ -1,0 +1,150 @@
+{
+  "batch": 41,
+  "question": "ap1",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "ca43609145e88faebd6640cadfb9ba34823eed4580cd7cf58cbd5433841e1f9b",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Degron-based separation of establishment and maintenance",
+      "description": "Use an acute degron (dTAG/AID) on JUN/FOS family members and degrade them only after priming but before re-challenge. If memory persists without AP-1 protein, it is stored elsewhere. If it is lost, AP-1 is needed for maintenance, not just establishment.",
+      "idea_id": "ap1_sonnet_obvious_then_avoid_2_0",
+      "source_sha256": "b303fa34129eea6626630bc87fdd092a79b165cf58c853618fcfcd034cff17a8"
+    },
+    {
+      "id": "I2",
+      "title": "Footprinting and chromatin profiling in natural in vivo injury/inflammation models",
+      "description": "Profile cells from tissues after resolved natural perturbations (e.g., skin wounding, inflammation, or aged vs. young tissue) using ATAC-seq, CUT&RUN for JUN/FOS, and Hi-C or HiChIP, and compare with matched naive tissue. Persistent AP-1 motif footprints, retained enhancer-promoter loops, and faster re-induction of target genes on a second injury, correlated with the motif-containing regions opened by the first event, would support AP-1-dependent memory under physiological conditions without genetic manipulation.",
+      "idea_id": "ap1_sonnet_assigned_constraint_3_4",
+      "source_sha256": "eb01ee03b875bbb3994c476eac2077831ac62a70ae2aff6f3372fe720ee96d83"
+    },
+    {
+      "id": "I3",
+      "title": "Synthetic minimal AP-1 memory circuit with tunable hysteresis",
+      "description": "In a cell type with little endogenous AP-1 activity, build an orthogonal bZIP (AP-1 leucine zipper fused to a non-native DNA-binding domain) driving a synthetic enhancer array in which motif number, spacing, and feedback strength are systematically varied, and drive it transiently with a small-molecule or light input. Measure the hysteresis width and bistability boundary of the resulting input-output curves to determine whether AP-1's autoregulatory architecture is by itself sufficient to store a stable state, and which design parameters set memory duration.",
+      "idea_id": "ap1_opus_obvious_then_avoid_1_1",
+      "source_sha256": "72b5f72a4c71b750ef5709235e90399ed442097943610b1f8b1711ec2ec42271"
+    },
+    {
+      "id": "I4",
+      "title": "Feedback-network perturbation and model fitting",
+      "description": "Build an ODE model of AP-1 with positive autoregulation (the JUN promoter has AP-1 sites) and chromatin-state variables, fit it to dose and time-course data, and predict the effect of breaking the loop. Test the predictions by CRISPR mutation of AP-1 sites at the JUN/FOS loci and optogenetic pulsing of AP-1 factors, looking for loss of the persistent state when the feedback is cut.",
+      "idea_id": "ap1_sonnet_instruction_only_2_4",
+      "source_sha256": "6ec7b253cd368d92d878de1bb5e4eda7ad26f8e586bae18d74b2c171a457187e"
+    },
+    {
+      "id": "I5",
+      "title": "Dose titration of memory erasure",
+      "description": "Test how much perturbation is needed to erase memory by dose-titrating inhibitors of chromatin remodeling (BRG1/SWI-SNF), histone acetyltransferases, or DNA replication/cell division, and measure when the primed response reverts to the naive state. If memory decays only with disruption of AP-1-dependent chromatin and not with loss of AP-1 protein levels, chromatin structure rather than ongoing AP-1 activity carries the memory.",
+      "idea_id": "ap1_sonnet_parallel_rotated_0_2",
+      "source_sha256": "c965d18484fa771a19c4ddb86f63507c39d8ce954a0363bde89fe340a60788f2"
+    },
+    {
+      "id": "I6",
+      "title": "Long-term chromatin accessibility tracking after a transient stimulus",
+      "description": "Expose cells to a defined, transient AP-1-activating stimulus (e.g., TPA, growth factor, injury signal), then perform time-resolved ATAC-seq and CUT&RUN for FOS/JUN and H3K27ac after washout (days to weeks, across cell divisions). Persistence of AP-1-motif-enriched accessible sites, and of AP-1 binding at them, after the stimulus is gone would indicate a memory state.",
+      "idea_id": "ap1_sonnet_plain_3_0",
+      "source_sha256": "d507ed328cb6b42bbc85c737438de6a84a72346d1524b735a53cbbc2d4781939"
+    },
+    {
+      "id": "I7",
+      "title": "Stimulus re-exposure (recall) assay",
+      "description": "Apply a priming stimulus (e.g., a short TNF or growth-factor pulse), allow a rest period, then re-stimulate and compare the magnitude and kinetics of AP-1 target gene induction (RNA-seq, nascent transcription via PRO-seq) with naive cells. Faster or stronger responses on re-challenge, lost when AP-1 binding sites are mutated or AP-1 is degraded during the rest period, would demonstrate functional memory.",
+      "idea_id": "ap1_haiku_plain_7_1",
+      "source_sha256": "e2067bcb8306847b63c8a06ce6d76b17ff7633e523b0665f669300d1503e3bb4"
+    },
+    {
+      "id": "I8",
+      "title": "Stimulus-history dependence with a live reporter",
+      "description": "Vary the timing, duration, and frequency of stimuli while imaging a live AP-1-responsive reporter in single cells. Hysteresis or history-dependent thresholds that match a fitted bistable model would show that AP-1 encodes past input rather than just reporting the current signal.",
+      "idea_id": "ap1_haiku_overgenerate_select_2_4",
+      "source_sha256": "09be6397f6338a242f8c30ccc485f01483b954abe98bde70e6c69a37f8fdb6d7"
+    },
+    {
+      "id": "I9",
+      "title": "Mitotic retention and single-molecule residence time in primed cells",
+      "description": "Image Halo-tagged JUN/FOS retention on mitotic chromosomes (with mitotic CUT&RUN as the genomic counterpart) and use single-molecule tracking of bound fraction and residence time in naive versus primed cells. Longer residence or mitotic retention in primed cells would indicate a mechanism for heritability, whereas unchanged kinetics would point to chromatin or cofactors instead.",
+      "idea_id": "ap1_opus_overgenerate_select_1_4",
+      "source_sha256": "349bef00f7f7189a926f2ea239704fd9bfb56adc3c144813135aaaa56697887d"
+    },
+    {
+      "id": "I10",
+      "title": "Live imaging of AP-1 binding through mitosis",
+      "description": "Use endogenous HaloTag-tagged FOS or JUN and live single-molecule or time-lapse imaging to determine which AP-1 sites remain bound on mitotic chromosomes. Then test whether daughter cells that inherit bound sites reactivate target genes faster than those that do not.",
+      "idea_id": "ap1_haiku_obvious_then_avoid_0_2",
+      "source_sha256": "c175a6214cf75bce15826810747eada040e263c3092d1ddf50c405f3480acd79"
+    },
+    {
+      "id": "I11",
+      "title": "Dose-threshold comparison with optogenetic AP-1 induction",
+      "description": "Finely titrate the stimulus to locate the sharp threshold at which AP-1 enhancer priming switches on, then compare cells just below versus just above the threshold (sorted on a live AP-1 reporter) for long-term recall. In addition, induce FOS/JUN optogenetically without the original stimulus, to alter AP-1 activity by a route that bypasses other stimulus-induced changes.",
+      "idea_id": "ap1_opus_parallel_rotated_7_4",
+      "source_sha256": "eee9651b585c88c6879afd33d416ab6f643f63f26e1dd3f09e058ad2b4449c81"
+    },
+    {
+      "id": "I12",
+      "title": "Barcoded lineage tracing of memory heterogeneity",
+      "description": "Introduce lineage barcodes and a fluorescent AP-1 target reporter, then stimulate cells and follow clonal lineages over several divisions. Comparing memory between sister and unrelated clones shows whether memory is cell-autonomous, inherited, and bistable, or a graded, population-level effect.",
+      "idea_id": "ap1_haiku_overgenerate_select_1_4",
+      "source_sha256": "d80f29abe9acc0ccd6c3031eb7a5d4589b54c5e05d996f409cc3612bbd3e9572"
+    },
+    {
+      "id": "I13",
+      "title": "Heritability analysis across lineage trees",
+      "description": "Combine live imaging of an AP-1 activity reporter with expressed lineage barcodes so that each cell's state can be placed on a family tree, then compute intraclass correlation of AP-1 activity and of AP-1-dependent target expression between sisters, cousins, and increasingly distant relatives. Fitting the decay of correlation with generation number gives a memory half-life in cell divisions, and the analysis can be repeated under AP-1 degradation to ask whether AP-1 carries the inherited state or merely correlates with it.",
+      "idea_id": "ap1_opus_instruction_only_1_1",
+      "source_sha256": "236073cb0b7875dff5fa4948a5feb5612a06495866d16ffaad0ba46fd40cac1c"
+    },
+    {
+      "id": "I14",
+      "title": "Chromatin persistence after AP-1 withdrawal",
+      "description": "Use a degron-tagged JUN or FOS that can be switched on for a short pulse and then removed within minutes, and track chromatin accessibility (ATAC-seq), H3K27ac, and AP-1 occupancy (CUT&Tag) at primed enhancers over days to weeks. If the enhancer state outlasts AP-1 binding, that supports a self-sustaining memory rather than one dependent on ongoing transcription factor activity.",
+      "idea_id": "ap1_haiku_future_retrospective_1_0",
+      "source_sha256": "b63a67eb5a95db8051b9939f96d45a78b83df38b2af3cc8b4b1622d89d8f51c2"
+    },
+    {
+      "id": "I15",
+      "title": "Open-loop clamp of AP-1 expression",
+      "description": "Delete or mutate the AP-1 binding sites in the FOS/JUN promoters and re-supply the subunits from a tunable exogenous promoter titrated to match wild-type mean protein level. Loss of the heritable state despite identical average AP-1 activity would localize memory to the trans autoregulatory feedback loop rather than to the chromatin that AP-1 binds.",
+      "idea_id": "ap1_opus_critique_revise_2_3",
+      "source_sha256": "e7b6923ac357e270b984da3c2aaff385853a20cc0d05af76d73e68bef3f3e826"
+    },
+    {
+      "id": "I16",
+      "title": "Prime, washout, and restimulate with acute AP-1 removal",
+      "description": "Prime cells with a stimulus, wash out, then acutely degrade (dTAG/AID) c-Jun/Fos or express A-Fos either before or after the rest period, and measure the faster or stronger secondary response. If memory persists after AP-1 removal, AP-1 is only the initiator. If memory requires AP-1 during the rest period or at recall, AP-1 is needed for maintenance.",
+      "idea_id": "ap1_sonnet_overgenerate_select_7_0",
+      "source_sha256": "42e49a92c6908e34ca1a418898a17814b21a80fd5a39e5a4d23f81dd9f79c799"
+    },
+    {
+      "id": "I17",
+      "title": "Synthetic AP-1 motif-array library for minimal sufficient memory encoding",
+      "description": "Integrate at one fixed safe-harbor site a library of synthetic loci varying AP-1 motif number, affinity, spacing, flanking nucleosome-positioning sequence, and core promoter, then deliver a standardized AP-1 pulse and assay which configurations remain active days later. This tests whether AP-1 sites alone suffice to build a memory element and identifies the sequence features that convert transient binding into a persistent state.",
+      "idea_id": "ap1_opus_obvious_then_avoid_0_3",
+      "source_sha256": "6b065c964cffa07afb5cbe38e036e7310595050e3cf506cc0b4176e12f2995e3"
+    },
+    {
+      "id": "I18",
+      "title": "Synthetic AP-1 site array for sufficiency",
+      "description": "Integrate arrays of AP-1 motifs (and motif-scrambled controls) at a neutral genomic locus adjacent to a reporter, then drive AP-1 binding transiently with an optogenetic or chemically inducible Fos/Jun module. Persistent reporter expression and accessibility after induction ends would show that AP-1 binding is sufficient to write a heritable state, independent of pre-existing locus context.",
+      "idea_id": "ap1_opus_overgenerate_select_4_3",
+      "source_sha256": "740005faf97f34703190e7cff942ef16db90bf05808d949d7071debf8f602a86"
+    },
+    {
+      "id": "I19",
+      "title": "Acute AP-1 degron with long-term memory readout",
+      "description": "Using endogenous dTAG/AID degrons on FOS, JUN and ATF family members, degrade AP-1 at defined times after a transient stimulus (e.g., TNF, wounding, or neuronal activity). Then track whether the induced chromatin and transcriptional state persists for weeks after AP-1 loss, which distinguishes a state that AP-1 initiates from one that AP-1 must keep maintaining.",
+      "idea_id": "ap1_sonnet_future_retrospective_0_0",
+      "source_sha256": "11e54626f319d9d7a6d3be12d6a904ca34723617d1e20a74cca24e59889f169e"
+    },
+    {
+      "id": "I20",
+      "title": "Dose-and-interval mapping of memory decay in single cells",
+      "description": "Systematically vary stimulus strength, duration, and the gap before re-stimulation, reading out per-cell response amplitude and AP-1 site accessibility. Fitting the resulting surface tests whether the system behaves like a bistable switch, a slowly decaying analog trace, or simple residual protein.",
+      "idea_id": "ap1_opus_future_retrospective_5_4",
+      "source_sha256": "49f2aa13595e6ba346df398ea73b9dc1031422cd5d4b12168b68ae2e57a8b868"
+    }
+  ],
+  "cost_usd": 0.0528912
+}

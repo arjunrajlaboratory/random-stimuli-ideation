@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Barcoded lineage tracing across drug exposure: Introduce heritable random barcodes (e.g., CellTag or lentiviral barcode libraries) into a clonal population before treatment, then sequence barcodes in survivors and in pre-treatment cells. Matching barcodes between the two timepoints will show whether survivors come from a pre-existing subclone or arise de novo from drug-induced reprogramming.\n2. Pre-treatment single-cell multiomics predicting survival: Perform paired scRNA-seq and scATAC-seq (or CITE-seq) on untreated cells, then compare the profiles of cells that later survive versus die using a lineage-linked readout such as barcodes or live-cell photoconversion. Identifying transcriptional or chromatin-accessibility signatures that predict survival would reveal whether tolerance is primed before the drug is given.\n3. Live-cell reporter tracking of individual fates: Use fluorescent reporters (e.g., FUCCI for cell-cycle phase, ERK-KTR for pathway activity, and a drug-efflux or stress reporter) in time-lapse microscopy during drug exposure. Linking each cell's reporter state before and during treatment to its eventual death or survival will show which dynamic signaling or cell-cycle states confer tolerance.\n4. Genome-wide CRISPR screens with survival bottlenecks: Run pooled CRISPR knockout or CRISPRi/a screens at high library coverage under a strong drug dose that kills most cells, then compare guide representation in survivors against untreated controls. Hits that enrich in survivors point to genes whose loss or gain is needed for tolerance, and comparing them with resistance screens from chronic exposure separates transient from stable mechanisms.\n5. Chromatin and metabolic profiling of sorted survivors with reversibility tests: Sort or harvest surviving cells after a short drug pulse and profile their chromatin (CUT&Tag for H3K27ac/H3K4me3, ATAC-seq), metabolism (mitochondrial respiration, lipid and iron/ferroptosis markers), and proteome against bulk controls. Then test whether the survivor state is reversible by drug holidays and by inhibiting the implicated epigenetic or metabolic pathways, which distinguishes an adaptive epigenetic state from a fixed genetic one.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Asymmetric inheritance of drug-damaged protein aggregates",
+      "description": "Express a fluorescent aggregate-prone reporter (e.g., a misfolding-prone GFP fusion or a PROTEOSTAT-style dye) in a clonal line, then track mother-daughter pairs by time-lapse through drug exposure. Test whether survival tracks with which daughter receives the larger share of damaged protein at division, which would make tolerance a segregation outcome rather than a fixed cell state."
+    },
+    {
+      "title": "Per-cell intracellular drug accumulation by label-free imaging",
+      "description": "Quantify each cell's intracellular drug concentration with label-free methods such as stimulated Raman imaging or intrinsic fluorescence of the compound, then sort or image-correlate with later fate. If survivors hold systematically lower free drug despite identical efflux transporter levels, uptake or partitioning into lipid and organelles becomes the candidate mechanism, testable with uptake-transporter knockdowns."
+    },
+    {
+      "title": "Single-cell mtDNA heteroplasmy as a natural lineage barcode",
+      "description": "Use mtDNA variants, which occur naturally and are inherited maternally, as endogenous lineage markers by applying single-cell mtDNA-calling methods (e.g., mgatk-style analysis of scATAC or scRNA reads) to pre-treatment and survivor populations. Shared heteroplasmic haplotypes across timepoints reveal the clonal origin of survivors without any engineered barcode, and may expose mitochondrial genotype as a survival determinant."
+    },
+    {
+      "title": "Micronucleus rupture and cGAS-STING history as a survival predictor",
+      "description": "Use live imaging of a nuclear-localization reporter and a cGAS sensor to score which cells form micronuclei, rupture them, or activate innate immune signaling during the first drug cycle. Then test whether cells with prior micronuclear damage are enriched among survivors, and whether blocking cGAS or STING before treatment changes persister frequency."
+    },
+    {
+      "title": "Conditioned-neighbor rescue assays with dying-cell secretomes",
+      "description": "Co-culture a labeled reporter population with drug-killed neighbors in transwell and direct-contact configurations, and separately collect conditioned medium from dying versus surviving cultures for mass spectrometry of secreted factors. Adding back candidate factors or depleting them from the medium will show whether survival depends on signals from neighboring cells rather than on intrinsic cell properties alone."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2244,
+  "cost_usd": 0.0015067499999999998
+}

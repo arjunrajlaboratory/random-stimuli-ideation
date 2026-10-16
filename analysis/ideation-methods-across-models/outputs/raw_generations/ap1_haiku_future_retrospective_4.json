@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout chromatin persistence test",
+      "description": "Hypothetical 2036 paper: after a defined AP-1 stimulus (e.g., PMA or EGF) is washed out, CUT&RUN for Fos/Jun, ATAC-seq, and H3K27ac are tracked over days. Memory is supported if enhancer accessibility and transcription persist after AP-1 occupancy has already left."
+    },
+    {
+      "title": "Degron-based necessity test for AP-1 memory",
+      "description": "Hypothetical 2036 paper: auxin-inducible degron knock-ins of Fos or JunB remove AP-1 at set times after a priming stimulus, followed by re-challenge. If the faster or stronger re-induction depends on AP-1 being present during priming, AP-1 is shown to be necessary for the memory, not just correlated with it."
+    },
+    {
+      "title": "Optogenetic pulse-pattern encoding",
+      "description": "Hypothetical 2036 paper: light-inducible Jun/Fos variants deliver pulses that differ in frequency, duration, and spacing at equal total dose. Measuring enhancer state and re-response afterward tests whether memory encodes pulse history rather than cumulative exposure."
+    },
+    {
+      "title": "Epigenome-editing dissociation experiment",
+      "description": "Hypothetical 2036 paper: dCas9-KRAB or dCas9-p300 is targeted to AP-1 motifs to erase or write chromatin marks without changing AP-1 binding. If the memory follows the edited chromatin state rather than the transcription factor's presence, the chromatin landscape, not the factor, is the memory carrier."
+    },
+    {
+      "title": "In vivo barcoded lineage recording of AP-1 history",
+      "description": "Hypothetical 2036 paper: an AP-1-responsive enhancer drives a heritable barcode recorder, tracked through divisions in vivo (e.g., during infection or stress) with scRNA-seq and ATAC readouts. Tracing whether AP-1-experienced cells pass their primed state to daughters, and for how many generations, directly tests cellular memory across cell divisions."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2131,
+  "cost_usd": 0.00120731
+}

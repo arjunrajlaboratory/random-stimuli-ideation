@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 3,
+  "constraint": "without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression)",
+  "prompt": "Constraint: every one of your ideas must be carried out without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with sister-cell split analysis",
+      "description": "Label cells with heritable, non-perturbing expressed DNA barcodes (viral barcode library, no gene perturbation), split the population before treatment, and compare barcode abundance and pre-treatment transcriptomes of sister clones to test whether survival is pre-existing and heritable (clonal) versus stochastic. Pairing scRNA-seq of untreated sisters with the barcodes of survivors identifies the pre-treatment state that predicts persistence."
+    },
+    {
+      "title": "Live-cell time-lapse tracking with fluorescent reporters and retrospective lineage analysis",
+      "description": "Image thousands of single cells and their lineages for days before, during, and after drug using non-perturbing live reporters (e.g., FUCCI, ERK/AKT kinase translocation reporters, mitochondrial membrane potential dyes). Retrospectively link pre-drug cell-cycle length, signaling dynamics, and mother-daughter correlations to survival and then to regrowth, revealing which dynamic states and how heritable they are."
+    },
+    {
+      "title": "Time-resolved single-cell multi-omics of drug response",
+      "description": "Perform scRNA-seq combined with scATAC-seq (or CITE-seq) at multiple time points (untreated, hours, days, weeks of drug) to map the trajectory from baseline cell states to persister states. Inferring state transitions with RNA velocity or trajectory methods distinguishes selection of rare pre-existing states from drug-induced adaptive reprogramming, and chromatin accessibility reveals candidate regulatory programs."
+    },
+    {
+      "title": "Fluctuation (Luria\u2013Delbr\u00fcck-style) test and state-sorting experiments",
+      "description": "Compare variance in surviving colony numbers across many parallel small cultures versus bulk replicates, and sort cells by candidate markers or reporters (e.g., high/low of a drug-tolerance-associated surface marker, ROS, or lipid content) before drug exposure. Measuring survival of each sorted fraction and how quickly sorted subpopulations re-equilibrate quantifies switching rates and tests whether tolerance is a reversible non-genetic state."
+    },
+    {
+      "title": "Orthogonal genomic and metabolic profiling of persisters versus matched controls",
+      "description": "Run single-cell or low-input whole-genome/exome sequencing on survivors to rule out or identify genetic or copy-number changes, alongside epigenomic profiling (histone marks, DNA methylation) and single-cell metabolic readouts (mass cytometry, NAD(P)H FLIM, mitochondrial/lipid dyes, drug efflux assays, and measurements of intracellular drug concentration). Pharmacologic perturbations (e.g., small-molecule epigenetic or metabolic inhibitors, not genetic) can then test which differences are functionally linked to persistence."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1020,
+  "cost_usd": 0.0146635
+}

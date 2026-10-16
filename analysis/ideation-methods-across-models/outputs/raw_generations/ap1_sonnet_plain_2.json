@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus / washout with chromatin accessibility tracking",
+      "description": "Expose cells to a defined AP-1-activating stimulus (e.g., TPA, injury, or inflammatory cue), then wash out and perform time-resolved ATAC-seq, CUT&RUN for FOS/JUN, and RNA-seq over days to weeks. Persistence of AP-1-dependent open chromatin and primed gene expression after AP-1 activity returns to baseline would indicate memory."
+    },
+    {
+      "title": "Acute AP-1 degradation or dominant-negative block at different phases",
+      "description": "Use degron-tagged FOS/JUN or a dominant-negative (A-FOS) to remove AP-1 either during the initial stimulus (encoding) or after the stimulus has faded (maintenance). If blocking during encoding abolishes the enhanced secondary response but removing it later doesn't, AP-1 is needed to establish but not sustain memory; the opposite pattern implies active maintenance."
+    },
+    {
+      "title": "Primed vs naive re-stimulation response assay",
+      "description": "Compare transcriptional output (RNA-seq, nascent transcription via PRO-seq) and kinetics after a second stimulus in previously stimulated versus naive cells, with varying rest intervals. Quantifying faster, stronger, or more sustained induction at AP-1 target genes, and correlating it with AP-1 binding and H3K27ac at their enhancers, tests functional memory."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Use scATAC/RNA multiome with lineage barcodes or sister-cell pairing to test whether AP-1-linked accessibility states and primed expression are inherited through cell divisions in clonal lineages. Heritability of states beyond what cell-type or stochastic variation explains, and bimodality of states, would support a memory mechanism."
+    },
+    {
+      "title": "Locus-specific perturbation of AP-1 motifs and memory-state engineering",
+      "description": "Use CRISPR editing of AP-1 motifs, or dCas9-based recruitment or blocking of AP-1/chromatin remodelers (e.g., SWI/SNF) at candidate enhancers, and optogenetic or pulsed AP-1 activation to write memory artificially. Determining whether motif loss erases memory, and whether a synthetic pulse is sufficient to induce a persistent primed state, tests necessity and sufficiency."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 872,
+  "cost_usd": 0.0114946
+}

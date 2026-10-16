@@ -1,0 +1,49 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell split with divergent challenges: is the surviving state drug-specific or generic?",
+      "description": "Image and micromanipulate individual mitotic pairs (or use barcoded clones split across many wells) so that one daughter/sibling receives the targeted drug and the other receives an unrelated stressor (different-target inhibitor, chemotherapy, nutrient starvation, heat, immune attack). Concordance of survival across arms quantifies how much of the rare-survivor phenotype is a generic stress-tolerant state versus a drug-pathway-specific one, and defines the dimensionality of the predisposing state space."
+    },
+    {
+      "title": "Noise engineering: hold the mean, vary the variance of candidate determinants",
+      "description": "Build isogenic lines in which a candidate resistance effector (e.g., an RTK, efflux pump, or anti-apoptotic protein) is expressed from synthetic promoter/UTR variants that are matched in mean abundance but differ several-fold in cell-to-cell CV and in state memory (autocorrelation time), using a knock-in of the endogenous locus plus degron tuning. Measuring survival fraction as a function of CV alone provides a causal test that expression variability per se, not average expression, sets the size of the surviving subpopulation."
+    },
+    {
+      "title": "Allele-resolved nascent transcription to separate cis bursting from trans cell-state",
+      "description": "Use allele-specific single-molecule RNA FISH or MS2/PP7 live imaging at both alleles of candidate resistance genes, combined with downstream fixation of the same cells after drug treatment. If the two alleles fluctuate independently in survivors, the rare state arises from stochastic transcriptional bursting at a single locus; if they covary, the cause is an upstream trans-acting cell state, and the measured burst/state autocorrelation time directly predicts how long a cell stays 'primed'."
+    },
+    {
+      "title": "Asymmetric organelle and damaged-protein inheritance at the last division before treatment",
+      "description": "Pulse-label mitochondria, lysosomes, and long-lived/oxidatively damaged proteins with photoconvertible or SNAP/Halo pulse-chase tags, then time-lapse image divisions immediately preceding drug addition and score which daughter survives. This quantifies whether survival is set by an inherently noisy partitioning event at cytokinesis (mitochondrial mass/membrane potential, lysosomal drug sequestration capacity, proteostasis load) rather than by a transcriptional program."
+    },
+    {
+      "title": "Neighborhood-controlled survival: micropatterned arrays plus optogenetic neighbor ablation",
+      "description": "Seed cells on micropatterned islands or in microwells with defined, imaged local density, neighbor identity, and ECM contact, then treat and map survival against each spatial variable; follow up by optogenetically or laser-ablating specific neighbors, and by conditioned-medium and transwell swaps, to test causality. This distinguishes cell-intrinsic priming from non-cell-autonomous rescue via paracrine factors, local drug depletion, or contact-mediated signaling, which standard dissociated single-cell assays cannot separate."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of pre-treatment populations plus post-treatment survivors to find rare transcriptional states (e.g., high-RTK/AXL/NGFR cells).",
+      "Heritable DNA barcoding / lineage tracing (CellTag, ClonMapper, Watermelon) to ask whether survival is clonally determined.",
+      "Retrospective 'rewind'-style capture: barcode the population, split, treat one arm, then recover the sibling cells of survivors from the untreated arm and profile them.",
+      "Luria\u2013Delbr\u00fcck fluctuation analysis to distinguish pre-existing genetic mutation from non-genetic/acquired adaptation.",
+      "Whole-genome/exome sequencing of survivors versus parental cells to rule in or out pre-existing resistance mutations.",
+      "Single-cell ATAC-seq / CUT&RUN on persisters to find pre-existing chromatin accessibility or repressive-state differences.",
+      "Genome-wide CRISPR knockout/activation screens for genes whose loss or gain changes the persister fraction.",
+      "Long-term live-cell imaging of signaling reporters (ERK, AKT, p53, apoptosis) to link pre-treatment signaling dynamics to survival.",
+      "Measuring the drug-tolerant persister metabolic/redox phenotype: GPX4 dependence, lipid peroxidation, mitochondrial respiration, ROS.",
+      "Single-cell proteomics / mass cytometry or phospho-flow of target pathway output to find cells with incomplete pathway inhibition.",
+      "Drug withdrawal and re-challenge experiments to test reversibility and memory of the tolerant state.",
+      "Cell-cycle state (quiescence, G0 reporters) and drug efflux transporter activity measurements in survivors."
+    ]
+  },
+  "output_tokens": 3920,
+  "cost_usd": 0.14076059999999999
+}

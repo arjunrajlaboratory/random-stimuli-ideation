@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitotic retention and clonal inheritance of AP-1 occupancy",
+      "description": "Tag endogenous c-Jun with HaloTag, pulse-stimulate, then follow single cells through mitosis by live imaging and sort mitotic cells for ChIP to ask whether AP-1 stays on chromosomes at memory loci. Daughter cells that inherit the mark should respond faster on re-stimulation than sister lineages without it."
+    },
+    {
+      "title": "Tethered AP-1 at a silent non-enhancer locus",
+      "description": "Use a dCas9 or zinc-finger tether to recruit c-Jun/Fos to a transcriptionally silent, non-AP-1 locus for a single transient pulse, then track H3K27ac and transcription for weeks. Persistence there, independent of native enhancer context, would show that AP-1 itself writes a durable state rather than just reading a pre-existing one."
+    },
+    {
+      "title": "Optogenetic pulse-pattern encoding of memory",
+      "description": "Use light-inducible AP-1 (optoFos/optoJun) to deliver trains that vary pulse number and inter-pulse interval, then measure the magnitude of the second response. Dependence on interval rather than total dose would show that AP-1 encodes temporal history, not just its last state."
+    },
+    {
+      "title": "TurboID proximity labeling of cofactors that outlast AP-1",
+      "description": "Fuse TurboID to AP-1 and time-resolve biotin labeling across a washout series, then use proteomics to identify co-factors that remain near memory loci after AP-1 has left. Candidates that persist without AP-1 would be the true memory carriers, and degrading them should erase the memory while leaving AP-1 intact."
+    },
+    {
+      "title": "Single-molecule residence time as a kinetic memory readout",
+      "description": "Track single HaloTag-c-Jun molecules by live-cell single-molecule imaging before, during, and after stimulation, comparing dwell times on target enhancers. A stable change in residence time after washout, with no change in occupancy, would demonstrate kinetic memory and separate it from bulk ChIP signal."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq for c-Fos/c-Jun/ATF3 before, during, and after stimulus washout to see if AP-1 occupancy persists at enhancers.",
+      "ATAC-seq time course after stimulus withdrawal to test whether chromatin accessibility at AP-1 sites outlasts the signal.",
+      "CRISPR knockout or siRNA of Fos/Jun family members to test whether loss abolishes the memory phenotype.",
+      "Re-stimulation (second-hit) assays comparing kinetics and magnitude of target gene induction in primed versus naive cells.",
+      "H3K27ac/H3K4me1 and enhancer-mark profiling over time to check whether active enhancer marks persist after AP-1 leaves.",
+      "Live-cell reporter imaging (e.g., Fos-promoter or Fos-GFP) to track AP-1 activity dynamics across single cells.",
+      "Inducible degron or acute AP-1 inhibition (e.g., T-5224) applied during the memory window to test whether AP-1 is required for maintenance.",
+      "Fos-based engram tagging (TRAP/FosTRAP) in vivo to label and manipulate AP-1-active cells that carry a memory trace.",
+      "Hi-C or other 3D chromatin conformation profiling before and after stimulus to see whether loop structures persist.",
+      "Single-cell RNA-seq of primed versus unprimed populations to identify heterogeneity in memory-carrying cells."
+    ]
+  },
+  "output_tokens": 3139,
+  "cost_usd": 0.00171318
+}

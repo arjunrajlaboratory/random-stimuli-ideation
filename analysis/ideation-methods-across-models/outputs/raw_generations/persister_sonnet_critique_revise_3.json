@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-treatment sister-cell tracking: Label cells with heritable DNA barcodes (e.g., ClonTracer/Perturb-seq-style), split the population before drug exposure, and compare which barcodes survive across replicates. Shared survivors indicate pre-existing, heritable states, while random survivors indicate stochastic or induced tolerance.\n2. Single-cell multi-omic profiling of pre-treatment and persister cells: Run scRNA-seq paired with scATAC-seq or CITE-seq on untreated cells and on cells at multiple time points after drug exposure. Look for rare transcriptional or chromatin states, such as drug-efflux, stress-response, or EMT programs, that exist before treatment and are enriched among survivors.\n3. Live-cell imaging with reporters, followed by retrospective omics: Time-lapse image cells carrying reporters for signaling activity (ERK, p53, apoptosis), cell cycle, and mitochondrial state before and during drug exposure, tracking each cell to its fate. After imaging, fix or isolate the survivors and the cells that died, then profile them (e.g., by spatial or single-cell sequencing) to link dynamic pre-treatment features to survival.\n4. Epigenetic and chromatin state perturbation screens: Use CRISPRi/a screens or small-molecule inhibitors of chromatin regulators (e.g., KDM5, HDACs, EZH2) to test whether altering epigenetic plasticity changes the persister fraction. Pair this with ChIP-seq or CUT&Tag on sorted survivors to identify the marks that maintain the tolerant state.\n5. Metabolic and stress-state measurements of survivors: Measure ROS, mitochondrial membrane potential, oxidative phosphorylation, lipid peroxidation or ferroptosis sensitivity, and drug uptake or efflux at the single-cell level using flow cytometry or imaging. Sort cells by these properties before treatment, then test whether they predict survival and whether targeting the pathway (e.g., GPX4 inhibition) eliminates persisters.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Cell-cycle/division-history memory via dye dilution and H2B-FUCCI",
+      "description": "Label cells with a retained dye or photoconvertible histone to record the number of divisions and time since last mitosis, then sort by division history before drug exposure. This tests whether survival is encoded by proliferative history (e.g., slow-cycling lineages, inherited from mother-cell age) rather than by a specific expression program."
+    },
+    {
+      "title": "Single-cell DNA replication stress and copy-number/mutation mapping of survivors",
+      "description": "Run single-cell whole-genome sequencing (and scRNA-seq on the same cells via paired methods) on survivors versus matched pre-treatment clones to detect rare subclonal aneuploidy, extrachromosomal DNA amplification, or ongoing mutagenesis. This tests whether 'genetically identical' is actually false at the sub-chromosomal level, and whether persisters transiently up-regulate error-prone repair."
+    },
+    {
+      "title": "Quantitative drug-target engagement per cell",
+      "description": "Use a fluorescent drug analog, a CETSA/NanoBRET target-engagement reporter, or a phospho-substrate biosensor to measure how much drug actually binds its target in each cell in the first hours after treatment. Then sort by engagement and follow fates, to separate pharmacokinetic escape (low intracellular occupancy) from true downstream signaling rewiring."
+    },
+    {
+      "title": "Noise-manipulation experiments of gene expression",
+      "description": "Use synthetic circuits or promoter/CRISPR edits that change expression variability of a candidate gene while holding its mean constant, then measure persister fraction. This tests causally whether non-genetic heterogeneity (noise itself) generates survivors, and whether bet-hedging is selectable."
+    },
+    {
+      "title": "Microenvironment and cell-neighbor contribution via spatial co-culture and conditioned-medium swaps",
+      "description": "Plate cells at controlled densities and micropatterns, or use mixed fluorescent-labeled populations. Quantify survival as a function of neighbor identity, distance to dying cells, and secreted factors, using spatial transcriptomics or cell-cell proximity labeling (e.g., TurboID). This tests whether persistence is a cell-intrinsic state or a collective property that arises from paracrine rescue or local contact signaling."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 837,
+  "cost_usd": 0.0157255
+}

@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Live-cell kinase reporter rebound kinetics",
+      "description": "Expose cells to a titrated dose of a targeted inhibitor while imaging a live ERK or AKT translocation biosensor (KTR) in each cell. Compare the speed and extent of pathway reactivation between cells that later survive and those that die, to test whether survival depends on how quickly individual cells rebound from inhibition rather than on their baseline state."
+    },
+    {
+      "title": "Asymmetric drug partitioning at mitosis",
+      "description": "Use the intrinsic autofluorescence of the drug, or a fluorescent analog, with time-lapse imaging and daughter-cell tracking across division. Quantify whether unequal drug segregation at mitosis leaves some daughters below the lethal threshold, which would make survival a chance outcome of division rather than a heritable trait."
+    },
+    {
+      "title": "Single-cell mtDNA heteroplasmy and membrane potential",
+      "description": "Sort cells by mitochondrial membrane potential (e.g., TMRM) before drug exposure, then perform single-cell or clonal mtDNA sequencing to measure heteroplasmy in each sorted fraction. Test whether mitochondrial genotype or variant load predicts survival after treatment, which would point to a non-nuclear source of heritable variation."
+    },
+    {
+      "title": "Drug-induced mutagenesis fluctuation assay",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation tests with a reporter for mutation under sublethal drug, and compare the mutation rate and spectrum in survivor clones with those from drug-naive lineages. This distinguishes resistance that arises from drug-induced mutagenesis after exposure from resistance that was already present before treatment."
+    },
+    {
+      "title": "Lysosomal sequestration of basic-amine inhibitors",
+      "description": "For kinase inhibitors with basic amines, co-stain for lysosomal volume and acidity (LysoTracker, LAMP1) and measure per-cell drug fluorescence by imaging or flow cytometry. Test whether cells with expanded or more acidic lysosomes sequester more drug away from the target and therefore survive, and whether lysosome inhibition resensitizes them."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of pre-treatment and drug-tolerant persister cells to find transcriptional states",
+      "Bulk RNA-seq or ATAC-seq of sorted persisters versus untreated cells to identify chromatin and expression changes",
+      "Genome-wide CRISPR knockout or activation screens under drug to find genes that confer survival",
+      "Lineage tracing with DNA barcodes to test whether survivors come from pre-existing clones",
+      "Live-cell imaging with fluorescent cell-cycle reporters (e.g., FUCCI) to link cell-cycle state to survival",
+      "Proteomics or phosphoproteomics of persisters to find altered signaling or protein levels",
+      "Single-cell DNA sequencing to look for pre-existing resistance mutations in survivors",
+      "Testing epigenetic modifiers (HDAC, DNMT, or KDM inhibitors) to block the persister state",
+      "Measuring efflux pump expression (ABCB1, ABCG2) and drug accumulation in survivors",
+      "Drug-washout and re-challenge experiments to test whether tolerance is reversible"
+    ]
+  },
+  "output_tokens": 3367,
+  "cost_usd": 0.00182607
+}

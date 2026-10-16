@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Twin-population lineage barcoding with retrospective state profiling",
+      "description": "Label cells with heritable expressed barcodes, split the population into sister halves, and treat only one half so that surviving lineages can be identified by barcode. Then profile the matched untreated sisters by single-cell RNA-seq or ATAC-seq to directly read out the pre-treatment molecular state that predicted survival."
+    },
+    {
+      "title": "Fluctuation analysis to distinguish pre-existing heritable states from drug-induced adaptation",
+      "description": "Seed many small parallel cultures from single cells, expand them for varying numbers of generations, then treat each with drug and count survivors. Large between-culture variance in survivor number indicates heritable pre-existing states, and the dependence on expansion time estimates how many generations that state persists."
+    },
+    {
+      "title": "Highly multiplexed single-molecule RNA FISH of candidate resistance markers before treatment",
+      "description": "Image thousands of untreated cells for simultaneous transcript counts of resistance-associated genes (receptor tyrosine kinases, stress and dedifferentiation markers) to measure how often rare high-expressing cells arise and whether the markers co-fluctuate as a coordinated program. Fixing and re-imaging the same field after treatment links the measured state to actual survival."
+    },
+    {
+      "title": "Long-term live-cell imaging with signaling and cell-cycle reporters through drug exposure",
+      "description": "Track individual cells by time-lapse microscopy using reporters for pathway activity, cell-cycle phase, and division history from before drug addition through the survival bottleneck. This reveals whether survival depends on dynamic properties such as quiescence, division timing, or transient signaling pulses rather than a static expression state."
+    },
+    {
+      "title": "Pooled CRISPR activation/interference screens scored specifically on the rare-survivor fraction",
+      "description": "Run genome-scale or focused CRISPRa and CRISPRi screens and compare guide representation in drug survivors versus untreated controls, using barcode-level statistics tuned to the extreme bottleneck. Hits identify which genes are causally sufficient or necessary to enter the survival-prone state, converting correlative markers into mechanism."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1399,
+  "cost_usd": 0.06903429999999999
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 6,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop: dose-response of prior stimulus",
+      "description": "Borrowing the physics of ferromagnetic hysteresis, expose cells to rising then falling stimulus (e.g., serum/ERK or stress signals) and measure AP-1 (FOS/JUN) occupancy, chromatin accessibility (ATAC-seq) and target transcription at each step. If the up- and down-sweep curves fail to overlap at equal input, and the loop area depends on AP-1 dosage (via dominant-negative A-FOS), the state is history-dependent, as a memory mechanism requires."
+    },
+    {
+      "title": "Immunological recall assay: primed vs naive re-stimulation",
+      "description": "Borrowing the vaccine prime-boost design, give a first stimulus, rest cells for days to weeks until FOS/JUN levels return to baseline, then re-stimulate and compare transcriptional kinetics and amplitude with naive cells (RNA-seq, nascent-RNA 4sU-seq). Test causality by acutely degrading AP-1 (dTAG/AID) only during the priming window versus only during the rest period to learn when AP-1 is needed to write versus maintain the memory."
+    },
+    {
+      "title": "Palimpsest/ink-stain analysis: lineage tracing of AP-1-opened enhancers",
+      "description": "Borrowing from archaeology's palimpsest (traces left after the original writing is erased), use single-cell multiome (scATAC plus RNA) or CUT&Tag after a transient stimulus to identify enhancers that stay accessible and marked (H3K27ac/H3K4me1) after AP-1 leaves. Pair with a lineage barcode to show that these marks are inherited by daughter cells and that their persistence predicts the stronger secondary response in a clone-specific way."
+    },
+    {
+      "title": "Bistable toggle-switch modelling with single-cell live imaging",
+      "description": "Borrowing from synthetic-biology and dynamical-systems theory of bistable circuits, image endogenous-tagged FOS/JUN and a reporter of target genes live in single cells across pulses of varying duration, then fit ODE models with positive feedback (AP-1 autoregulation at the FOS/JUN promoters). Evidence of memory would be a bimodal distribution, a critical threshold, and hysteresis; model-guided perturbation of the feedback loop (CRISPRi on the AP-1 site in the JUN promoter) should abolish bistability."
+    },
+    {
+      "title": "Molecular 'bookmarking' as in mitotic bookmarking of a library: mitotic chromosome profiling",
+      "description": "Borrowing the library bookmark idea, test whether AP-1 stays bound to chromatin during mitosis or leaves a pioneer-like footprint by imaging live mitotic cells and by CUT&Tag/ATAC on sorted mitotic cells, then follow reactivation of bookmarked genes in early G1 with or without AP-1 depletion at mitosis. Retention of binding and faster post-mitotic reactivation of bookmarked loci versus non-bookmarked controls would show that AP-1 carries information across cell divisions."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1106,
+  "cost_usd": 0.0138341
+}

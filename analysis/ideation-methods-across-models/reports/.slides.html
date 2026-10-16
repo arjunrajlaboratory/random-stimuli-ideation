@@ -1,0 +1,84 @@
+      <section class="slide slide--statement" data-source="#result-confront">
+        <h2>Critique and revise, a prompt that shows the model its own plain answers and asks for less obvious ones, gave the most ideas judged both novel and useful.</h2>
+        <div class="slide-body"><div class="stat"><span data-sci-val="distinct_pooled_critique_revise">…</span></div><p class="stat-label">distinct useful-novel ideas of <span data-sci-val="n_ideas_per_prompt_all_models">…</span>, all three models pooled</p></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-plain-zero">
+        <h2>On the main measure, a plain brainstorming prompt never produced an idea that a blind model judge rated both novel and useful.</h2>
+        <div class="slide-body"><div class="stat"><span data-sci-val="distinct_pooled_plain">…</span></div><p class="stat-label">distinct useful-novel ideas of <span data-sci-val="n_ideas_per_prompt_all_models">…</span> from the plain prompt</p></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#problem">
+        <h2>Language models brainstorming research ideas tend to return the same standard experiments.</h2>
+        <div class="slide-body"><ul><li>Ask twice and much of the list repeats.</li><li>A scientist hoping to widen their thinking mostly hears the textbook answers back.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#methods">
+        <h2>We tested the plain prompt, our earlier study's best prompt, and seven new prompts on three Claude models and two cell-biology questions.</h2>
+        <div class="slide-body"><ul><li>Models: <span data-sci-text="model_name_haiku">…</span>, <span data-sci-text="model_name_sonnet">…</span>, <span data-sci-text="model_name_opus">…</span>.</li><li>Eight fresh calls of five ideas per prompt, model and question: <span data-sci-val="n_ideas_total">…</span> ideas.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#methods">
+        <h2>Our measure counts distinct ideas that the judge rated at least four out of five for both novelty and usefulness.</h2>
+        <div class="slide-body"><ul><li>A rewrite first strips analogies and framing, blind to the source.</li><li><span data-sci-text="judge_model_name">…</span> judges each idea twice; near-duplicates count once.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#examples">
+        <h2>Under critique and revise, the largest model replaced its standard experiments with less obvious ones.</h2>
+        <div class="slide-body"><ul><li>Plain prompt: lineage barcoding, live imaging, pooled screens; <span data-sci-val="example_n_un_opus_plain">…</span> of five useful-novel.</li><li>After critique: allele-resolved readout, sort-and-relax kinetics, tuning the rate of entry into the tolerant state; <span data-sci-val="example_n_un_opus_critique_revise">…</span> of five.</li></ul></div>
+      </section>
+
+      <section class="slide slide--figure" data-source="#result-plain-zero">
+        <h2>Pooled over the three models, five of the seven new prompts gave significantly more novel, useful ideas than the plain prompt.</h2>
+        <div class="slide-body"><div class="slide-figure" data-fig-ref="fig-distinct"></div></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-confront">
+        <h2>Critique and revise was the only new prompt that beat the earlier study's best prompt.</h2>
+        <div class="slide-body"><div class="stat">+<span data-sci-val="h2_instruction_only_critique_revise_distinct_useful_novel_diff">…</span></div><p class="stat-label">distinct useful-novel ideas over the earlier best prompt (adjusted p <span data-sci-text="h2_instruction_only_critique_revise_distinct_useful_novel_p">…</span>)</p></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-replication">
+        <h2>Pooled over models, the earlier study's best prompt, an instruction to borrow from an unrelated field, again beat the plain prompt.</h2>
+        <div class="slide-body"><div class="stat">+<span data-sci-val="h1_pooled_distinct_diff">…</span></div><p class="stat-label">distinct useful-novel ideas over the plain prompt; on its own, significant only for <span data-sci-text="model_name_opus">…</span></p></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#result-models">
+        <h2>The largest model gained the most from the new prompts.</h2>
+        <div class="slide-body"><ul><li>Critique and revise added <span data-sci-val="h2_plain_opus_critique_revise_distinct_diff">…</span> ideas for <span data-sci-text="model_name_opus">…</span>, <span data-sci-val="h2_plain_sonnet_critique_revise_distinct_diff">…</span> for <span data-sci-text="model_name_sonnet">…</span>, <span data-sci-val="h2_plain_haiku_critique_revise_distinct_diff">…</span> for <span data-sci-text="model_name_haiku">…</span>.</li><li>The difference between models was not formally tested.</li></ul></div>
+      </section>
+
+      <section class="slide slide--figure" data-source="#result-tradeoff">
+        <h2>Most prompts bought novelty at some cost in usefulness.</h2>
+        <div class="slide-body"><div class="slide-figure" data-fig-ref="fig-tradeoff"></div></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-tradeoff">
+        <h2>Overgenerate, then select raised novelty without lowering usefulness.</h2>
+        <div class="slide-body"><div class="stat">+<span data-sci-val="h2_plain_overgenerate_select_novelty_diff">…</span></div><p class="stat-label">novelty over the plain prompt, with a usefulness change of <span data-sci-val="h2_plain_overgenerate_select_usefulness_diff">…</span></p></div>
+      </section>
+
+      <section class="slide slide--figure" data-source="#result-judges">
+        <h2>A second judge model agreed on which prompts were best and worst.</h2>
+        <div class="slide-body"><div class="slide-figure" data-fig-ref="fig-judges"></div></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#result-complementary">
+        <h2>Critique and revise and a second new prompt that first lists the obvious ideas found mostly different good ideas.</h2>
+        <div class="slide-body"><ul><li>For <span data-sci-text="model_name_opus">…</span>: <span data-sci-val="union_opus_critique_revise">…</span> and <span data-sci-val="union_opus_obvious_then_avoid">…</span> on their own, <span data-sci-val="union_opus_critique_plus_obvious">…</span> together.</li><li>Exploratory analysis, added after seeing the results.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#result-followup">
+        <h2>A poem or random words that every idea had to use did no better than asking for an unrelated field.</h2>
+        <div class="slide-body"><ul><li>Poem <span data-sci-val="distinct_pooled_poem_required">…</span> and random words <span data-sci-val="distinct_pooled_word_salad_required">…</span> distinct useful-novel ideas as scored (<span data-sci-val="fu_adjusted_distinct_poem_required">…</span> and <span data-sci-val="fu_adjusted_distinct_word_salad_required">…</span> after a judge-drift correction), against <span data-sci-val="distinct_pooled_instruction_only">…</span> for the earlier study's best prompt.</li><li>Exploratory follow-up.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#main-caveat">
+        <h2>Every score in this study comes from model judges rather than scientists.</h2>
+        <div class="slide-body"><ul><li>A model judge may reward ideas that sound unusual more than ideas a lab would run.</li><li>The primary judge is also one of the three generators.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#next-steps">
+        <h2>Scientists' blind ratings of the strongest prompts' ideas are the next test.</h2>
+        <div class="slide-body"><ul><li>Rate plain, critique and revise, list the obvious, and overgenerate, then select.</li><li>Then try a critique step in the lab's brainstorming tool.</li></ul></div>
+      </section>

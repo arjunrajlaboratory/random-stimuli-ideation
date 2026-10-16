@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 1,
+  "stimulus": "couchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\ncouchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with sister-cell splitting",
+      "description": "Use a high-complexity expressed barcode library (like the 'hornbook' of a lineage: each cell gets a unique written tag) and split the expanded population before drug exposure. Compare barcode enrichment in survivors across replicate arms to test whether survival is a heritable pre-existing state or a stochastic, drug-induced one. Pair this with scRNA-seq of sister cells to find the predictive pre-treatment transcriptional state."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporters and retrospective profiling",
+      "description": "Image cells for days before and after drug treatment using reporters for the drug's target pathway activity, cell cycle, and apoptosis. Track each single-cell trajectory to see which pre-drug dynamics, such as pulsing, cycle phase or signaling noise, predict survival. Then fix the cells and run in situ sequencing or multiplexed immunofluorescence on the same survivors to link dynamics to molecular state."
+    },
+    {
+      "title": "Single-cell multi-omics of drug-tolerant persisters over time",
+      "description": "Collect untreated, early-drug, and persister-stage cells for joint scRNA-seq and scATAC-seq, or CITE-seq. Infer whether persisters come from a rare cell state or from an adaptive transition by testing for chromatin accessibility changes, with trajectory and RNA-velocity analysis. Look for epigenetic regulators or stress-response programs that are consistently enriched."
+    },
+    {
+      "title": "Metabolic and stress-state measurements on single cells",
+      "description": "Measure mitochondrial membrane potential, ROS, NAD(P)H lifetime by FLIM, and lipid peroxidation or ferroptosis sensitivity in individual cells. Sort cells by these properties before treatment and see if each fraction survives differently. This tests whether non-genetic variation in metabolism or redox buffering sets drug tolerance."
+    },
+    {
+      "title": "Perturbation screens to establish causality",
+      "description": "Run a pooled CRISPRi/CRISPRa screen with a single-cell readout (Perturb-seq) or survival readout under drug treatment, focused on chromatin modifiers, transcription factors and stress pathways found in the profiling. Add pharmacologic tests, such as HDAC or KDM5 inhibitors given with the targeted drug. Genes whose perturbation changes the persister fraction, without changing the genome, show which mechanisms cause the survival rather than simply correlating with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 899,
+  "cost_usd": 0.0142975
+}

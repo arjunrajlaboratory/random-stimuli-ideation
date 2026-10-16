@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 3,
+  "parallel": {
+    "field": "Computer architecture (branch predictors and cache state)",
+    "problem": "Whether a processor's predictor or cache contents carry information about earlier program execution that measurably changes later performance and can leak information across contexts.",
+    "how_studied": "Engineers flush, partition, or perturb the predictor state between program phases and measure the change in misprediction rate or access latency using hardware performance counters. Cycle-accurate simulators such as gem5 allow ablation of individual state structures, and timing-based side-channel experiments test whether a victim's past activity can be recovered from the residual state."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Computer architecture (branch predictors and cache state)\nProblem: Whether a processor's predictor or cache contents carry information about earlier program execution that measurably changes later performance and can leak information across contexts.\nHow it is studied: Engineers flush, partition, or perturb the predictor state between program phases and measure the change in misprediction rate or access latency using hardware performance counters. Cycle-accurate simulators such as gem5 allow ablation of individual state structures, and timing-based side-channel experiments test whether a victim's past activity can be recovered from the residual state.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout-and-re-stimulation with protein-versus-chromatin separation",
+      "description": "Pulse cells with a defined AP-1 stimulus (e.g., TPA or EGF), wash out, and wait variable rest intervals before re-stimulating; measure re-induction kinetics of AP-1 target genes against a naive control. To separate memory stored in AP-1 protein from memory stored in chromatin, repeat the rest period with a degron-tagged c-Fos or c-Jun so the protein is depleted while the chromatin state is retained."
+    },
+    {
+      "title": "Gem5-style ablation of candidate memory structures",
+      "description": "Knock out or acutely degrade individual components that could hold the state, such as FOSL1, JUNB, the chromatin co-activators p300/CBP and BRD4, and the histone writers, alone and in combination. Then test which knockouts abolish the faster or stronger second response, which identifies the structure that carries the memory."
+    },
+    {
+      "title": "Residual-state footprinting with a history classifier",
+      "description": "After stimulus washout, profile AP-1 occupancy (CUT&RUN for FOS/JUN) together with chromatin accessibility (ATAC-seq) and H3K27ac at enhancers over time. Train a classifier on this residual state to predict whether a cell or population had prior stimulation; accuracy that stays above chance after the protein has cleared would show that the residual state retains the history, analogous to recovering a victim's past from predictor or cache residue."
+    },
+    {
+      "title": "Cross-stimulus leakage test",
+      "description": "Prime cells with one AP-1-inducing stimulus, then challenge them with an unrelated stimulus that activates a non-AP-1 program, or with an AP-1 stimulus that activates a different gene set. Measure whether priming shifts the response to the new stimulus, which tests whether the memory leaks across contexts and whether it is specific to AP-1 target loci or global."
+    },
+    {
+      "title": "Live single-cell reporter with decay-curve fitting and binding-site mutants",
+      "description": "Use a live AP-1-responsive reporter (for example, a destabilized fluorescent protein knocked into a memory-gene locus) to track single cells through stimulus, rest, and re-stimulation. Fit the decay of the memory effect against rest interval to estimate a half-life, and compare wild-type loci with AP-1 motif-mutant alleles and with a non-AP-1 stimulus matched for transcriptional output, to show that the memory depends on AP-1 binding rather than on the overall level of activation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1878,
+  "cost_usd": 0.00120695
+}

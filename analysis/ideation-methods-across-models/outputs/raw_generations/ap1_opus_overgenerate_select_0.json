@@ -1,0 +1,60 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-chase decoupling of AP-1 establishment from maintenance",
+      "description": "Use an optogenetic or chemically inducible AP-1 construct (plus a degron on endogenous Jun/Fos family members) to deliver a defined transient pulse, then chase for many days and track target-gene expression and chromatin accessibility. Depleting AP-1 at staggered times after the pulse distinguishes whether AP-1 is only needed to write the state or is continuously required to hold it \u2014 the key discriminator between a memory mechanism and a simple persistent signal."
+    },
+    {
+      "title": "Lineage-barcoded sister-cell concordance of AP-1 target states",
+      "description": "Barcode single cells and profile single-cell RNA plus ATAC after several divisions, quantifying how much more similar AP-1 target expression and AP-1 motif accessibility are between clonal relatives than between unrelated cells, as a function of generations since the common ancestor. The decay of this concordance gives a direct, quantitative memory half-life in cell divisions rather than in hours."
+    },
+    {
+      "title": "Hysteresis mapping of AP-1 dose-response",
+      "description": "Expose cells to graded stimulus levels on both an ascending and a descending ramp and read out AP-1 activity with a live reporter at single-cell resolution. A reproducible gap between the up and down curves is the classic signature of a bistable, self-reinforcing circuit, and its absence would argue AP-1 is relaying rather than storing information."
+    },
+    {
+      "title": "Sort-and-regrow stability assay on an endogenous AP-1 reporter",
+      "description": "Knock a fluorescent reporter into an endogenous AP-1 target locus, sort the top and bottom expression deciles, regrow each population, and measure how quickly the full distribution is regenerated. The relaxation timescale, compared with cell-cycle time and mRNA/protein half-lives, reveals whether the state is heritably locked or merely slow-fluctuating noise."
+    },
+    {
+      "title": "Prime-and-challenge transcriptional priming with enhancer dissection",
+      "description": "Prime cells with a stimulus, wait until AP-1 protein and target transcripts return to baseline, then rechallenge and measure the speed and amplitude of the nascent transcriptional response. CRISPR deletion of individual AP-1-bound enhancers, and a heterologous second stimulus, then test whether the stored memory is localized to specific elements and whether it is stimulus-specific or general."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage-barcoded sister-cell analysis to test whether AP-1 target gene states are shared across sibling cells for multiple generations",
+      "Live imaging of endogenously tagged c-Jun/FOSL1 with an AP-1 synthetic reporter to measure autocorrelation time of AP-1 activity along lineage trees",
+      "Transient optogenetic or degron pulse of AP-1 followed by long chase to test persistence of transcriptional state after the input is removed",
+      "Single-cell ATAC time course after a transient stimulus to ask whether AP-1 motif accessibility remains elevated long after AP-1 protein decays",
+      "Cell sorting on an AP-1 activity reporter, then regrowth and re-measurement to test whether high and low states regenerate the parental distribution or persist",
+      "Degron-mediated acute AP-1 depletion at defined times after priming to test whether AP-1 is required for maintenance versus only establishment of the state",
+      "CUT&RUN for AP-1 factors plus pioneer partners across a time course to see whether AP-1 occupancy is self-sustaining at primed enhancers",
+      "Test for an AP-1 transcriptional autoregulatory loop by measuring nascent transcription of JUN/FOS family genes at their own motif-bound enhancers",
+      "Mathematical bistability test: dose-response hysteresis of AP-1 activity to graded stimulus up and down ramps",
+      "Single-molecule RNA FISH of AP-1 targets in clonal populations to quantify heritable versus transient cell-to-cell variability",
+      "Measure whether AP-1-dependent enhancer states survive mitosis via mitotic bookmarking assays (chromosome spreads, mitotic CUT&RUN)",
+      "Nucleosome turnover and histone exchange measurements at AP-1 enhancers to test whether memory is chromatin-stabilized",
+      "Serial restimulation assay measuring faster or larger transcriptional response on second exposure (transcriptional priming) and its AP-1 dependence",
+      "CRISPR deletion of individual AP-1-bound enhancers to test whether specific elements store the memory of prior stimulus",
+      "Prime-and-challenge with heterologous stimuli to test whether AP-1 memory is stimulus-general or stimulus-specific",
+      "Single-cell multiome (RNA plus ATAC) with clone barcodes to link heritable accessibility states to heritable expression states",
+      "Proteomic measurement of AP-1 dimer composition over time to test whether a switch in dimer identity encodes the memory",
+      "Dilution-of-label experiments (e.g., SNAP-tag pulse labeling) to measure AP-1 protein inheritance and partitioning at division",
+      "Drug-tolerant persister resensitization assay testing whether AP-1 activity predicts and is required for reversible drug tolerance memory",
+      "Synthetic reconstitution: insert isolated AP-1 binding sites at a reporter locus and ask if the reporter alone shows heritable bimodal states",
+      "Comparative cross-species or cross-cell-type analysis of AP-1 motif accessibility persistence to test generality",
+      "Perturb-seq of chromatin regulators in AP-1-primed cells to find the factors required for state maintenance",
+      "Measure memory decay half-life as a function of cell cycle arrest to separate dilution from active erasure"
+    ]
+  },
+  "output_tokens": 2267,
+  "cost_usd": 0.08580710000000001
+}

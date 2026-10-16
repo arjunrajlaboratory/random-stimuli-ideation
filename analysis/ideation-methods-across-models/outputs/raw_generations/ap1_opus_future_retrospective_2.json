@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-chase AP-1 degron timing experiment",
+      "description": "Fuse FOS/JUN family members to auxin- or dTAG-degrons, deliver a defined stimulus pulse, then degrade AP-1 at staggered delays and measure how long the degradation window must be to erase the altered response to a second stimulus days later. This separates AP-1 as a transient signal transducer from AP-1 as the physical carrier of the memory."
+    },
+    {
+      "title": "Lineage-resolved memory tracing with heritable barcodes",
+      "description": "Combine expressed clonal barcodes with longitudinal single-cell RNA-seq and ATAC across a stimulus/rest/restimulus protocol, testing whether sibling cells share AP-1 site accessibility and reactivation behavior more than expected by chance. Memory is then quantified directly as heritability of the AP-1 regulatory state through cell divisions."
+    },
+    {
+      "title": "Mitotic bookmarking of AP-1 target enhancers",
+      "description": "Use live imaging of tagged FOS/JUN plus CUT&RUN at synchronized cell-cycle stages to ask whether AP-1 remains bound to its target enhancers on mitotic chromatin. Separation-of-function mutants that lose mitotic retention but keep interphase binding would test whether bookmarking is what transmits memory across division."
+    },
+    {
+      "title": "Synthetic AP-1 circuits to test sufficiency",
+      "description": "Build a minimal synthetic locus with tunable numbers and affinities of TRE/AP-1 motifs alongside inducible synthetic AP-1 factors, and map the parameter regime in which a transient input yields a self-sustaining chromatin state. This establishes sufficiency rather than mere necessity for bistable cellular memory."
+    },
+    {
+      "title": "Joint single-molecule and single-cell measurement of the feedback loop",
+      "description": "In the same cells, measure AP-1 protein abundance, chromatin residence time by single-molecule tracking, target enhancer accessibility, and transcriptional bursting before, during, and after stimulus. Fitting dynamical models to these data tests whether AP-1 autoregulatory feedback is quantitatively strong enough to sustain memory or whether a slower chromatin/DNA-methylation layer is required."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2297,
+  "cost_usd": 0.11515600000000001
+}

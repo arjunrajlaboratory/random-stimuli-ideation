@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fire-then-extinguish: transient stimulus with AP-1 chromatin tracking",
+      "description": "Give cells a brief stimulus (e.g., TPA, injury, or cytokine; the 'fire'), then measure after the stimulus is gone whether AP-1 (FOS/JUN) binding, accessibility (ATAC-seq/CUT&RUN) and target gene primed responses persist for days to weeks. Compare naive vs. pre-exposed cells on re-stimulation to quantify faster or stronger transcription, which is the hallmark of memory."
+    },
+    {
+      "title": "Acute degradation of AP-1 at defined windows",
+      "description": "Use dTAG/AID degron alleles or dominant-negative (A-FOS) to remove AP-1 either during the initial stimulus, during the resting interval, or during restimulation. If memory needs AP-1 only to establish it, or also to maintain it, this separates the two roles and shows whether AP-1 is necessary and not just correlated."
+    },
+    {
+      "title": "Single-cell multiome lineage-tracked heritability",
+      "description": "Pair scATAC/scRNA multiome with lineage barcodes or sister-cell pair analysis to test whether AP-1-opened chromatin states and gene expression are inherited across divisions in a clonal pattern. Compare the persistence of these states with that of cells with matched exposure but no AP-1 activation to see whether the 'symmetry' of memory between sister cells exceeds chance."
+    },
+    {
+      "title": "Live-cell reporters of AP-1 dynamics and feedback",
+      "description": "Image endogenously tagged FOS/JUN and a target-gene reporter in single cells over repeated pulses, measuring whether history changes the amplitude, timing, or the bistable on/off state. Fit mathematical models (positive feedback, hysteresis) to test whether memory arises from self-sustaining AP-1 circuit dynamics versus slow chromatin changes."
+    },
+    {
+      "title": "Sufficiency test by synthetic AP-1 activation and chromatin editing",
+      "description": "Induce AP-1 artificially (optogenetic or chemogenetic JUN/FOS, or dCas9-tethered AP-1 at selected enhancers) in naive cells, then withdraw it and ask whether the enhancer stays open, retains H3K27ac, and responds more strongly later. Control with DNA-binding or transactivation mutants and test the contribution of cofactors such as the BAF complex, which tests sufficiency for memory-like states."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 884,
+  "cost_usd": 0.013763500000000001
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 3,
+  "constraint": "without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression)",
+  "prompt": "Constraint: every one of your ideas must be carried out without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Image-then-sequence fate mapping of individual cells",
+      "description": "Continuously image a dish of cells for days before and during drug exposure, recording each cell's growth rate, morphology, division history and position, then fix the same dish and run in situ spatial transcriptomics so every imaged cell gets a molecular profile. Because imaging preserves cell identity, you can ask retrospectively which measurable features of a cell, hours or days earlier, predicted whether it died or persisted."
+    },
+    {
+      "title": "Per-cell drug exposure and target-engagement mapping",
+      "description": "Measure how much drug each cell actually accumulates and how completely its target is inhibited, using a fluorescent drug analog or mass-spectrometry imaging together with single-cell phospho-signaling readouts by mass cytometry or quantitative immunofluorescence across doses and times. This separates survivors that simply see less inhibited target (uptake, efflux, sequestration) from survivors whose target is fully inhibited yet whose downstream signaling and apoptotic machinery still keep them alive."
+    },
+    {
+      "title": "Memory decay after a drug holiday",
+      "description": "Isolate survivors, let them expand without drug for a graded series of recovery times, and re-challenge equal numbers at each time point while profiling chromatin accessibility and transcription in parallel. The rate at which the enriched survival fraction and its associated chromatin state revert to baseline quantifies how long the non-genetic resistant state is remembered and whether it is a stable alternative state or a transient excursion."
+    },
+    {
+      "title": "Time-resolved multiome search for pre-existing versus induced survivor states",
+      "description": "Profile joint RNA and chromatin accessibility in the same single cells at a dense series of time points spanning untreated, early killing, and established persistence, then search the untreated population for rare cells whose state already resembles the survivors. Finding such cells before treatment supports selection of a pre-existing state; their absence, with accessibility changes emerging only after drug, supports induction and adaptation."
+    },
+    {
+      "title": "Mapping the non-genetic context that sets survival odds",
+      "description": "Systematically vary context without touching the genome: local cell density and neighbor contact, conditioned-medium transfer, nutrient and oxygen levels, matrix stiffness, and position in the cell cycle scored by EdU incorporation and DNA content at the moment of drug addition. Quantifying how each factor shifts the fraction and the spatial clustering of survivors reveals how much rare survival is a property of a cell's environment and division state rather than of the cell alone."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4279,
+  "cost_usd": 0.1831913
+}

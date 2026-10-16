@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Split-sibling fluctuation assay to partition heritable vs. instantaneous causes",
+      "description": "Grow many small clonal populations from single cells, split each into a profiled half and a drug-challenged half, and compare variance in survivor fraction across clones to the variance expected from pure chance. The shape of that variance distribution directly estimates how long before treatment the survival-determining state was set, and separates heritable priming from coin-flips happening at the moment of drug exposure."
+    },
+    {
+      "title": "Lineage trees under drug: how many divisions does survival memory last",
+      "description": "Image barcoded or sparsely labeled cells continuously from several divisions before drug addition through the persister phase, reconstructing full lineage trees. Correlating fates between sisters, cousins, and second cousins yields a quantitative half-life for the tolerant state, which distinguishes transient signaling fluctuations from epigenetically heritable programs."
+    },
+    {
+      "title": "Rule out the boring explanation: per-cell drug exposure and cell-cycle position",
+      "description": "Before invoking transcriptional states, measure what each cell actually experiences using a fluorescent drug analog or mass-spectrometry imaging for intracellular drug concentration, plus a FUCCI reporter for cell-cycle phase at the moment of treatment. If survivors are simply cells that were quiescent or had low drug accumulation, that reframes the whole question, and a negative result makes downstream state-based claims far stronger."
+    },
+    {
+      "title": "Colony-splitting state-to-fate map",
+      "description": "Index-sort single cells, let each grow into a small colony, then split every colony between transcriptional or chromatin profiling and drug challenge. Because sibling cells share the heritable state, this gives a direct, prospective map from measured molecular state to measured survival probability, rather than the usual retrospective comparison of survivors to a bulk pre-treatment population."
+    },
+    {
+      "title": "Cross-drug and cross-host reproducibility of the surviving lineages",
+      "description": "Barcode one population, split it across several different targeted agents and across multiple xenograft hosts, and ask whether the same barcodes recur among survivors. Convergence implies a single general primed state, while drug-specific and host-specific survivor sets imply a repertoire of distinct, context-matched states, and the two possibilities call for completely different therapeutic strategies."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Fluctuation analysis (Luria-Delbruck style) on sibling-split populations to partition survival into heritable-state vs. stochastic-at-the-moment-of-treatment components",
+      "Retrospective lineage barcoding: capture the pre-treatment transcriptome of the specific cells whose relatives later survive",
+      "Long-term live imaging of lineage trees through drug exposure to measure how many divisions survival memory persists",
+      "Kinetic transcriptional reporters (ERK, AKT, p53 activity) read out continuously before drug addition and matched to each cell's fate",
+      "Single-cell drug pharmacokinetics: fluorescent drug analog or mass-spec imaging to test whether survivors simply see less drug",
+      "Imaging flow cytometry of cell size, mitochondrial mass, lysosome content pre-treatment, with fate tracking",
+      "Single-cell ATAC plus transcriptome on sorted survivors vs. matched non-survivors to separate chromatin priming from expression noise",
+      "Index-sorted single cells grown into colonies, each colony split for profiling and drug challenge, giving a direct state-to-fate map",
+      "Drug-holiday and re-challenge experiments to quantify reversibility and decay rate of the tolerant state",
+      "CRISPR screens scored not on bulk viability but on the shift in the variance/frequency of survivors",
+      "Perturbing expression noise (HDAC inhibitors, transcription elongation modulators) and asking whether survivor frequency moves predictably",
+      "Test the microenvironment hypothesis: local density, neighbor contact, and conditioned medium as determinants of survival",
+      "Whole-genome and copy-number sequencing of survivors to exclude rare genetic variants and extrachromosomal DNA",
+      "Measure cell-cycle position at the moment of drug addition (FUCCI) and its relation to survival",
+      "Metabolic state assays (mitochondrial membrane potential, ROS, lipid peroxidation) sorted against outcome",
+      "Lipid-peroxidation and GPX4 dependency tests to see whether survivors occupy a ferroptosis-vulnerable state",
+      "Multi-drug cross-testing: are survivors of drug A also survivors of drug B, revealing one state or many",
+      "Barcoded in vivo xenografts across animals to test whether the same lineages reproducibly survive",
+      "Model-fitting of kill curves and relapse kinetics to estimate state-switching rates rather than just IC50",
+      "Spatial transcriptomics of residual disease colonies to see whether survival is cell-intrinsic or neighborhood-driven"
+    ]
+  },
+  "output_tokens": 2870,
+  "cost_usd": 0.1010452
+}

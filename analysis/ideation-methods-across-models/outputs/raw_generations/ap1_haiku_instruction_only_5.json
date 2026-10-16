@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 5,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop from pulse-dose-duration sweeps (physics analogy)",
+      "description": "Borrowing from magnetic hysteresis, vary the dose and duration of an inducible FOS/JUN pulse, then wash out and measure chromatin accessibility (ATAC-seq) and target transcription at multiple times afterward. Memory is supported if the post-washout state depends on the path taken (a loop rather than a single curve), and it should persist past the point where AP-1 binding has returned to baseline."
+    },
+    {
+      "title": "Secondary-response test (immunological memory analogy)",
+      "description": "As in vaccine recall, compare primary and secondary responses to identical AP-1 stimuli, measuring the speed, amplitude, and target-gene breadth of the second response in cells with and without a rest interval. Memory requires the secondary response to be faster or stronger, and this advantage should disappear when AP-1 is depleted with a degron (e.g., dTAG-FOS) during the rest period."
+    },
+    {
+      "title": "Volatile vs. non-volatile storage test (computer-memory analogy)",
+      "description": "Distinguish 'RAM-like' from 'flash-like' storage by degrading AP-1 (dTAG or auxin system) during the quiescent interval and checking whether the primed state is retained. If the state persists without AP-1 present, the memory is stored in a self-sustaining chromatin or feedback state; if it is lost, the memory depends on continuous AP-1 activity."
+    },
+    {
+      "title": "Seed-bank dormancy with lineage-tracked heritability (ecology analogy)",
+      "description": "Use a barcoded, live AP-1 reporter to pulse-label a cell population, then follow single-cell lineages through several divisions without stimulus, sorting cells at each generation for re-challenge. Heritable memory is shown if the primed fraction persists across divisions and re-challenge response is enriched in descendants, analogous to a seed bank that keeps viable seeds across generations."
+    },
+    {
+      "title": "Stratigraphic dating of AP-1 occupancy (geology analogy)",
+      "description": "Like dating sediment layers, use HaloTag or SNAP-tag pulse-chase on endogenous FOS/JUN to timestamp when each AP-1 binding event was made, then ChIP-seq at several chase times to build a layered record of occupancy. Persistent 'layers' of marks that outlast the tagged protein at their sites would indicate an epigenetic memory, while sites that clear with the protein would indicate transient binding."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1908,
+  "cost_usd": 0.00109761
+}

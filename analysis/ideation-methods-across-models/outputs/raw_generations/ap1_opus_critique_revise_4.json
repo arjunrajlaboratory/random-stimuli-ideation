@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Acute degron depletion staged across a pulse-chase: Tag FOS/JUN family members with an auxin or dTAG degron and deplete AP-1 either during a transient stimulus or only after it has been withdrawn, then assay whether the stimulus-induced state persists. This separates a role for AP-1 in establishing a state from a requirement for continuous AP-1 activity to maintain it, which is the core claim of a memory mechanism.\n2. Heritability of AP-1 activity across cell divisions by live imaging: Build a fluorescent AP-1 (TRE) transcriptional reporter plus an endogenous JUN/FOS protein tag, and track individual cells through several divisions to compute mother-daughter and sister-sister correlations and the autocorrelation half-life of AP-1 activity. Memory predicts correlations that persist well beyond the protein and mRNA turnover timescale and are transmitted through mitosis.\n3. Chromatin priming and re-stimulation kinetics at AP-1 motifs: Perform time-resolved ATAC-seq, AP-1 CUT&RUN, and footprinting after stimulus withdrawal to identify regions that stay accessible without ongoing signaling, then re-challenge cells and ask whether those primed, AP-1-motif-containing enhancers are the ones that reactivate faster or more strongly. Causality can be tested by CRISPRi or base-editing the AP-1 motifs in the retained peaks.\n4. Lineage barcoding to link prior AP-1 state to later cell fate: Barcode cells, sort or record high- versus low-AP-1 cells using a reporter at an early timepoint, and then assay the fate of their barcode-matched descendants (e.g., drug survival, differentiation, invasion) days to weeks later. A memory mechanism predicts that early AP-1 state predicts clonally concordant later outcomes, and that perturbing AP-1 in the interim erases that predictive power.\n5. Hysteresis and feedback test with a tunable synthetic AP-1 circuit: Drive AP-1 activity with a dose-tunable inducible FOS/JUN construct and measure the output while ramping the input up and then back down, looking for bistability and hysteresis rather than a single dose-response curve. Pair this with mapping AP-1 binding at its own and its partners' loci to test whether an autoregulatory positive-feedback loop, the simplest molecular basis for such memory, is actually wired in the cell type of interest.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Cis vs. trans memory via twin identical reporters",
+      "description": "Integrate two spectrally distinct but sequence-identical AP-1-responsive reporters at different genomic loci in the same cell and track both after a stimulus pulse. Locus-autonomous chromatin memory predicts the two reporters decorrelate and decay independently, while cell-wide protein/feedback memory predicts they remain tightly correlated, separating the two leading mechanistic classes with one measurement."
+    },
+    {
+      "title": "Clock vs. counter: does the state decay per hour or per division?",
+      "description": "Compare decay of the stimulus-induced state in cell-cycle-arrested versus cycling cells (CDK4/6 inhibition, serum starvation, contact inhibition) over matched wall-clock time, and use EdU- or sister-chromatid-resolved readouts to test whether loss occurs specifically at replication. Template-copied chromatin memory should decay per division, whereas protein-level or metabolic memory decays per hour."
+    },
+    {
+      "title": "Kinetic and dimer-composition signature of the memory state",
+      "description": "Apply single-molecule tracking of HaloTagged JUN/FOS in live nuclei together with two-color single-molecule pull-down or FRET to ask whether post-stimulus cells differ from naive cells in residence time, bound fraction, and dimer identity (e.g., long-lived FRA1-JUND replacing transient FOS-JUN) at matched total activity. This tests whether memory is stored in binding kinetics and partner choice rather than in AP-1 abundance."
+    },
+    {
+      "title": "Motif-matched surrogate bZIP swap",
+      "description": "In an AP-1-null or degron-depleted background, re-express a chimera carrying the AP-1 bZIP DNA-binding domain fused to a minimal heterologous activation domain, so the same motifs are bound and activated by a protein lacking AP-1's native cofactor and pioneer interactions. If the surrogate restores acute induction but not persistence, memory resides in AP-1 protein surfaces rather than in motif occupancy per se."
+    },
+    {
+      "title": "Write AP-1 activity history into DNA with a molecular recorder",
+      "description": "Drive a prime-editing or recombinase-based recorder (ENGRAM/DNA-Typewriter-style) from an AP-1-responsive promoter so each cell accumulates an ordered, cumulative record of its past AP-1 activity, then read the record and the current transcriptome from the same single cell. This decouples integrated past AP-1 dose from present state without sorting or fixing cells at an arbitrarily chosen early timepoint."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4885,
+  "cost_usd": 0.14105939999999997
+}

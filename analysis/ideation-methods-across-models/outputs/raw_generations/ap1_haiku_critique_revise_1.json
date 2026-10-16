@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Acute AP-1 degradation after a stimulus pulse: Use a degron-tagged FOS or JUN allele (e.g., dTAG or auxin-inducible) to degrade AP-1 at defined times after a single stimulus. If AP-1 is the memory mechanism, the later response to restimulation should be lost or reduced when AP-1 is removed during the rest period, but not when it is removed before the first stimulus.\n2. Time-course of chromatin persistence after AP-1 occupancy is lost: After a stimulus pulse, run ATAC-seq, H3K27ac/H3K4me1 CUT&RUN, and FOS/JUN CUT&RUN at several time points during washout. A memory mechanism predicts that enhancers keep open or primed chromatin after AP-1 leaves them, and that this persistence depends on the AP-1 motifs and on the stimulus having occurred.\n3. Motif-mutation test of recall at endogenous memory loci: Use CRISPR base editing or prime editing to mutate AP-1 motifs at enhancers of genes that show a primed, faster response on restimulation. Compare the stimulus-recall response (fold induction and kinetics) of mutant and wild-type cells in a rested-then-restimulated paradigm to test whether the motifs are required for memory.\n4. Single-cell tracking of AP-1 history through divisions: Combine a live AP-1 activity reporter (for example, a destabilized fluorescent protein under an AP-1-responsive or Fos promoter) with lineage barcodes and single-cell multiome readout. Compare cells with different prior AP-1 histories to see whether the prior state is inherited by daughter cells and predicts their later response, which separates a heritable memory from stochastic cell-to-cell variation.\n5. Engram-style necessity test in vivo: In a mouse model such as hippocampal engram or tissue-resident immune memory, label cells active during a learning or priming event with an activity-dependent tag (for example, a Fos-based TRAP system). Then use time-restricted dominant-negative or conditional Fos/Jun inhibition during consolidation or recall, and measure whether the memory-dependent reactivation and the tagged cells' chromatin state are disrupted.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Parental histone inheritance through replication",
+      "description": "Pulse-label pre-existing H3.3 with SNAP or Halo tags before and after a stimulus, then follow the old-versus-new histone ratio at AP-1 enhancers through one or two cell divisions. If AP-1 memory rides on nucleosome inheritance, the old, stimulus-era histones should stay enriched at these enhancers in daughter cells, and blocking histone recycling (for example, with MCM2 or FACT perturbation) should erase the primed state."
+    },
+    {
+      "title": "Paused Pol II as the stored state",
+      "description": "Use PRO-seq or GRO-seq during washout to measure promoter-proximal Pol II pausing at AP-1 target genes, and ask whether paused polymerase persists after AP-1 has left the enhancer. A memory mechanism predicts faster pause release on restimulation, and this effect should be blocked by a transient CDK9 or P-TEFb inhibitor applied only during the rest period."
+    },
+    {
+      "title": "Partner-switching readout of the AP-1 dimer",
+      "description": "Use TurboID or APEX proximity labeling on FOS and JUN at several washout times to test whether repressive partners such as ATF3, JDP2, or JUNB take over the dimer slot after the stimulus. Then knock out the substitute partner and test whether recall is altered, which would show that memory depends on the composition of the dimer rather than on its presence."
+    },
+    {
+      "title": "Nuclear-periphery relocalization of primed loci",
+      "description": "Label an AP-1 target locus with an ANCHOR or ParB array and track its distance to the nuclear lamina and nuclear pore complexes by live imaging across stimulus and rest periods. Persistent pore association after the stimulus, which disappears in cells with nuclear pore anchoring mutants, would indicate that spatial repositioning stores the memory."
+    },
+    {
+      "title": "Cross-stimulus priming matrix to define memory specificity",
+      "description": "Prime cells with a set of stimuli that act through AP-1 alone, through NF-kB, or through cAMP-CREB, then measure the response to every restimulation pairing with an AP-1-dependent reporter. A genuine AP-1 memory should show a specific pattern of cross-priming that tracks the AP-1 binding sites of each stimulus and disappears when those sites are mutated, which is a more discriminating test than asking whether any memory exists."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2332,
+  "cost_usd": 0.0015407499999999998
+}

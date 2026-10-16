@@ -1,0 +1,49 @@
+{
+  "question": "ap1",
+  "model": "claude-haiku-5-5",
+  "prompt": "Here is a research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nDo not answer it. Instead, list 8 parallel problems, each from a different field outside biology and medicine, that share the underlying structure of this question. Make the fields as different from one another as you can. For each, give the field, the parallel problem in one sentence, and two or three sentences on how people in that field investigate or measure it (specific methods, experimental designs, or analyses).",
+  "n_returned": 8,
+  "parallels": [
+    {
+      "field": "Condensed-matter physics (spin glasses)",
+      "problem": "Whether a disordered magnet stores a record of its past thermal history in its internal configuration, so that the state persists after the driving temperature is removed and can be read out later.",
+      "how_studied": "Researchers use stop-and-wait protocols, where the system is cooled and held at intermediate temperatures, then the wait time is varied and the susceptibility is re-measured to see whether the memory dip reappears. They use ac susceptibility and thermoremanent magnetization over long timescales, and they compare these against controls with no stops to separate true memory from simple aging."
+    },
+    {
+      "field": "Materials science (shape-memory alloys)",
+      "problem": "Whether a metal's recovery of a programmed shape after thermal cycling comes from a stable microstructural state that encodes the training history, rather than from residual stress or plastic damage.",
+      "how_studied": "Investigators run repeated thermal or stress cycles (training) and track the transformation temperatures with differential scanning calorimetry and the strain with dilatometry. They use in situ X-ray diffraction and transmission electron microscopy to identify which martensite variants persist, and they test whether the memory survives annealing that should erase dislocations but not the variant arrangement."
+    },
+    {
+      "field": "Chemical engineering (heterogeneous catalysis)",
+      "problem": "Whether a catalyst surface keeps a record of past reaction conditions, so that its activity depends on its history and not just its current gas or temperature environment.",
+      "how_studied": "Experimentalists switch feed composition or temperature up and down and measure hysteresis loops in conversion and selectivity. They use operando spectroscopy (DRIFTS, X-ray absorption) and temperature-programmed desorption to check whether adsorbate or oxidation-state populations lag behind the control variables, and they compare fresh and pre-conditioned catalysts."
+    },
+    {
+      "field": "Computer architecture (branch predictors and cache state)",
+      "problem": "Whether a processor's predictor or cache contents carry information about earlier program execution that measurably changes later performance and can leak information across contexts.",
+      "how_studied": "Engineers flush, partition, or perturb the predictor state between program phases and measure the change in misprediction rate or access latency using hardware performance counters. Cycle-accurate simulators such as gem5 allow ablation of individual state structures, and timing-based side-channel experiments test whether a victim's past activity can be recovered from the residual state."
+    },
+    {
+      "field": "Macroeconomics (hysteresis in unemployment)",
+      "problem": "Whether a temporary shock, such as a recession, leaves a lasting imprint on the economy's long-run level after the shock itself has disappeared, which would show the system has memory of its past.",
+      "how_studied": "Economists apply unit-root and persistence tests to unemployment series and estimate impulse responses with local projections over many years. They compare countries and sectors that had different shock sizes and durations, and they use natural experiments or instrumental variables to separate persistence caused by the shock from persistence caused by policy or ongoing dynamics."
+    },
+    {
+      "field": "Hydrology and catchment science",
+      "problem": "Whether a watershed's storage of water and sediment from earlier storms acts as a memory that determines how it responds to the next rainfall event, beyond what current rainfall predicts.",
+      "how_studied": "Hydrologists fit transfer-function or lagged-regression models that include antecedent wetness and check whether the residuals show persistent structure. They analyze hysteresis loops in rainfall-runoff or sediment-concentration plots, and they use paired-catchment experiments in which one basin is manipulated and its response is compared with an untreated control over many years."
+    },
+    {
+      "field": "Political science and institutional analysis (path dependence)",
+      "problem": "Whether an institutional choice made at a critical juncture keeps shaping later outcomes through self-reinforcing mechanisms, even after the original conditions that produced it have changed.",
+      "how_studied": "Researchers use event-history models to test whether early decisions predict later outcomes, and they run counterfactual or sequence analyses to ask whether a different early choice would have led to a different trajectory. Difference-in-differences designs around reforms that were later reversed or removed check whether the institution's effects persist after its trigger is gone."
+    },
+    {
+      "field": "Psycholinguistics (syntactic priming)",
+      "problem": "Whether recently used grammatical structures leave a trace in the language system that biases later choices, and whether that trace decays over time or with intervening material.",
+      "how_studied": "Experimenters use confederate-prime dialogue or picture-description tasks and vary the number of filler trials between prime and target to measure how the priming effect decays with lag. They compare priming across structures that share and do not share lexical content, and they fit decay curves to test whether the persistence reflects implicit learning or simple activation decay."
+    }
+  ],
+  "cost_usd": 0.0024648
+}

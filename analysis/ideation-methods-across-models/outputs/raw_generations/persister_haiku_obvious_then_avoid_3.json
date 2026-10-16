@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell ecDNA copy-number tracking",
+      "description": "Quantify extrachromosomal DNA copy number per cell (FISH on metaphase spreads or interphase, plus single-cell DNA sequencing) before drug exposure and in survivors. Test whether cells with high ecDNA burden of the drug target or resistance oncogene are enriched among survivors, since random ecDNA segregation creates large copy-number variation between genetically identical cells."
+    },
+    {
+      "title": "Pre-treatment target-engagement imaging linked to fate",
+      "description": "Pre-load live cells with a clickable or fluorescent version of the inhibitor, or a target-occupancy reporter, and image per-cell effective drug occupancy before adding the drug. Sort cells by occupancy, re-plate them under treatment, and check whether low-engagement cells are the ones that survive."
+    },
+    {
+      "title": "Micropatterned density and contact control",
+      "description": "Grow cells on micropatterned islands that set local density, cell spreading, and cell-cell contact independently of clone size. Measure survival fraction under drug as a function of geometry, and test whether the effect runs through mechanotransduction (YAP/TAZ) by perturbing it."
+    },
+    {
+      "title": "Proteostasis inheritance through division",
+      "description": "Use timer or photoconvertible reporters of chaperone and proteasome activity, tracked by time-lapse through cell division, to see whether daughter cells inherit different proteostatic capacity. Then ask whether daughters that inherit high proteostatic capacity are the ones that survive drug."
+    },
+    {
+      "title": "Mitochondrial heteroplasmy at single-cell resolution",
+      "description": "Measure mtDNA copy number and variant allele fraction in single cells, using sorted survivors compared with sensitive cells. Then test causality by swapping mitochondrial variants or depleting mtDNA, to see whether heteroplasmy level alone changes drug tolerance."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of pre-treatment and drug-tolerant cells to find a persister transcriptional state",
+      "Bulk RNA-seq or ATAC-seq comparing surviving cells with sensitive cells",
+      "Lineage barcoding (e.g., CellTag or DNA barcodes) to trace which clones contribute to survivors",
+      "Time-course profiling of persister emergence and reversibility after drug washout",
+      "Genome-wide CRISPR knockout or CRISPRi screens for genes that modulate survival",
+      "Whole-genome or exome sequencing of surviving clones to look for pre-existing or acquired mutations",
+      "Proteomics or phosphoproteomics of persisters to identify altered signaling networks",
+      "Live-cell reporters (e.g., FUCCI) to test whether survivors are slow-cycling or quiescent",
+      "Metabolomics or OXPHOS vs glycolysis profiling of survivors",
+      "Epigenetic-modifier combination screens (HDAC, KDM5, DNMT inhibitors) to block the persister state"
+    ]
+  },
+  "output_tokens": 2803,
+  "cost_usd": 0.0015444699999999998
+}

@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 6,
+  "parallel": {
+    "field": "Sociology of cultural markets",
+    "problem": "Why do a few songs or products become huge hits while others of apparently equal quality fail, and how much of that comes from intrinsic quality versus chance and social feedback?",
+    "how_studied": "In 'multiple worlds' experiments such as Salganik, Dodds and Watts's MusicLab, the same set of songs is released into several independent, randomized social environments. Researchers measure how consistent success is across the replicate worlds, which separates intrinsic quality from path-dependent luck. Observational studies add cascade tracking and time-stamped diffusion data to find which early fluctuations led to later dominance."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Sociology of cultural markets\nProblem: Why do a few songs or products become huge hits while others of apparently equal quality fail, and how much of that comes from intrinsic quality versus chance and social feedback?\nHow it is studied: In 'multiple worlds' experiments such as Salganik, Dodds and Watts's MusicLab, the same set of songs is released into several independent, randomized social environments. Researchers measure how consistent success is across the replicate worlds, which separates intrinsic quality from path-dependent luck. Observational studies add cascade tracking and time-stamped diffusion data to find which early fluctuations led to later dominance.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded 'multiple worlds' replication of drug selection",
+      "description": "Label an isogenic cell line with a high-complexity lentiviral barcode library, then split the identically barcoded population into many independent replicate flasks ('worlds') that each receive the same targeted drug, and deep-sequence the surviving barcodes in each. The cross-world reproducibility of which barcodes dominate \u2014 quantified as an intraclass correlation or rank overlap against a neutral-drift null \u2014 directly partitions survival into heritable intrinsic priming versus path-dependent chance."
+    },
+    {
+      "title": "Sister-cell split design to measure fate predictability from pre-drug state",
+      "description": "Use live imaging or microraft arrays to track single cells through a division, then send one daughter into drug and the other into single-cell RNA/ATAC-seq or a clonal expansion. Concordance between a sibling's molecular state and its twin's survival outcome gives a direct, lineage-matched estimate of how much of survival is written in the cell's prior state rather than generated during treatment."
+    },
+    {
+      "title": "Retrospective capture of the rare founders before treatment ever happens",
+      "description": "Apply a Rewind-style approach: use RNA FISH or barcode-guided sorting to pull out the specific cells that are destined to survive (identified by barcodes recovered from a replicate 'world' already treated), and profile those exact founders in the untreated state. This is the cancer-cell analogue of knowing which song wins and then going back to the pre-release recording to ask what, if anything, distinguished it."
+    },
+    {
+      "title": "Cascade tracking by continuous time-lapse from before drug to outgrowth",
+      "description": "Image the whole population continuously with signaling and stress-state reporters from several days before dosing through the emergence of resistant colonies, reconstructing full pedigrees with time stamps. This yields the diffusion-style record needed to identify which early fluctuations \u2014 a transient expression spike, an unusually long cell-cycle arrest, a particular neighborhood \u2014 actually preceded later dominance, versus which were common and inconsequential."
+    },
+    {
+      "title": "Switching social feedback on and off across worlds",
+      "description": "Run matched replicate worlds that differ only in whether cell\u2013cell feedback can operate: dense monolayers versus single cells isolated in nanowells versus conditioned-media transfer, all at identical drug exposure. Comparing the inequality of clone success (Gini coefficient) and cross-world reproducibility across these conditions tests whether paracrine and spatial feedback acts as a rich-get-richer amplifier that converts small initial differences into large survival differences."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2053,
+  "cost_usd": 0.0873555
+}

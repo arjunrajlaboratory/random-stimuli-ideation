@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout and re-challenge hysteresis assay",
+      "description": "Pulse cells with a stimulus, withdraw it, and track AP-1 target gene expression over time. Memory would appear as persistent expression after withdrawal and faster or stronger re-induction on re-challenge, which should be lost in AP-1 mutants lacking DNA binding or dimerization."
+    },
+    {
+      "title": "Acute AP-1 degradation during the rest phase",
+      "description": "Use an auxin-inducible degron on FOS or JUN to remove AP-1 after priming but before re-challenge. If AP-1 is the memory substrate, degradation should erase the primed state, while degradation before priming should prevent it from forming."
+    },
+    {
+      "title": "Chromatin persistence time course (ATAC-seq, CUT&RUN, H3K27ac)",
+      "description": "Profile AP-1 occupancy and enhancer accessibility and acetylation at primed and naive sites across a stimulus-withdrawal time course. This tests whether chromatin opening outlasts AP-1 binding and whether it is maintained by AP-1 itself or by a separate epigenetic mechanism."
+    },
+    {
+      "title": "Live single-cell reporter with lineage tracking",
+      "description": "Express a fluorescent AP-1 target reporter, prime cells, and follow individual lineages through several divisions by time-lapse imaging. Quantify how long the primed state persists and whether it is inherited by daughter cells, and test whether mitotic bookmarking or chromatin-remodeling perturbations shorten that inheritance."
+    },
+    {
+      "title": "Feedback-loop perturbation and bistability testing",
+      "description": "Disrupt candidate positive feedback loops (FOS autoregulation, ATF3 or JUN loops) and co-activator inhibition (p300/CBP or BRD4) in single-cell reporter lines. Memory should scale with loop strength and show bimodal, cell-autonomous persistence rather than a population-average decay, and this should be validated in vivo with a repeated-stimulus model."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1566,
+  "cost_usd": 0.0009250599999999999
+}

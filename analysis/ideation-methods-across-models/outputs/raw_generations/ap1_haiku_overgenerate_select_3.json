@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time course with paired ATAC-seq and CUT&RUN",
+      "description": "After a defined AP-1-inducing stimulus, withdraw it and profile AP-1 occupancy (CUT&RUN for Fos/JunB) alongside chromatin accessibility (ATAC-seq) at multiple time points. Memory is supported if accessibility and faster re-induction persist at sites where AP-1 has left, and the persistence rate separates it from simple binding."
+    },
+    {
+      "title": "Degron-based necessity test after priming",
+      "description": "Use an auxin- or dTAG-inducible degron on Fos or Jun, degrading the protein only after the priming window closes and before re-stimulation. If the primed response is lost, AP-1 is required to maintain memory; if it persists, AP-1 only establishes the state."
+    },
+    {
+      "title": "dCas9-AP-1 tethering for sufficiency, then tether removal",
+      "description": "Tether Jun or Fos to a normally silent locus with dCas9 to test whether AP-1 alone can establish a primed state. Then remove the tether and track whether the locus stays accessible and responsive on re-stimulation, which would indicate self-sustaining memory."
+    },
+    {
+      "title": "Mitotic bookmarking and inheritance by daughter cells",
+      "description": "Profile AP-1 and chromatin accessibility in mitotically arrested cells and combine live imaging of fluorescent AP-1 reporters with division tracking. This tests whether AP-1 binding or the primed state is inherited through mitosis, a key criterion for a cellular memory mechanism."
+    },
+    {
+      "title": "Lineage recording of past AP-1 activity linked to single-cell state",
+      "description": "Use a Fos-driven recorder (such as FosTRAP) to label cells by their prior AP-1 activity, then run single-cell multiome on the labeled and unlabeled populations after re-stimulation. This links the history of AP-1 activity to later chromatin and transcriptional variability within the same tissue."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Washout time course of stimulus-induced AP-1 binding with ATAC-seq to see whether accessibility outlasts occupancy",
+      "CUT&RUN for c-Fos/JunB occupancy at primed enhancers during and after stimulus withdrawal",
+      "Inducible degron of Fos or Jun applied after priming to test whether AP-1 is needed to maintain or only to establish memory",
+      "Knock-in mutation of AP-1 motifs at candidate memory enhancers to test necessity for a later faster response",
+      "dCas9-based tethering of Jun or Fos to a silent locus to test sufficiency for establishing a memory state",
+      "Tether removal after dCas9-AP-1 priming to see whether the induced state persists without AP-1 present",
+      "Mitotic chromatin profiling to test whether AP-1 remains bound or bookmarks sites through cell division",
+      "Live imaging of fluorescent AP-1 reporters across divisions to track memory inheritance in daughter cells",
+      "FosTRAP or Fos-based lineage recording to label cells by past AP-1 activity and link history to later behavior",
+      "Single-cell multiome linking past AP-1 activity history to chromatin state and transcriptional response on re-stimulation",
+      "Pulse-chase protein turnover of AP-1 subunits to measure whether the factor itself persists long enough to act as memory",
+      "Partner-swap or heterodimer-specific mutants (Fos vs. ATF3 vs. JunB) to test which complex carries memory",
+      "Coordinated pulse frequency and dose experiments to test whether memory depends on integrated AP-1 activity",
+      "Comparing memory of AP-1 versus NF-kB or STAT pathways to test whether the effect is AP-1 specific",
+      "Cofactor and BAF/SWI-SNF perturbation to test whether chromatin remodelers mediate persistence",
+      "Histone mark profiling (H3K27ac, H3K4me1) over time after stimulation to see if marks outlast AP-1 binding",
+      "Enhancer\u2013promoter 3D contact (Hi-C or Micro-C) changes measured after washout to test looping-based memory",
+      "Transcriptional re-stimulation with reduced dose to test whether faster or stronger responses reveal stored memory",
+      "Ex vivo or in vivo tissue injury models with repeated insults to test memory across tissues and time",
+      "Comparing the memory of AP-1 activity in cell types with and without intrinsic chromatin accessibility to separate priming from memory"
+    ]
+  },
+  "output_tokens": 2435,
+  "cost_usd": 0.00136053
+}

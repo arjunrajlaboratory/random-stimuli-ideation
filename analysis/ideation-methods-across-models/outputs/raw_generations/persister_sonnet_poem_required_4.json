@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded pre-treatment vs. post-treatment tracing",
+      "description": "Tag cells with heritable DNA barcodes, split the population before drug exposure, and sequence survivors in parallel replicates. If the same barcodes recur among survivors, survival is a pre-existing, heritable state; if survivors differ between replicates, it is stochastic. This is like asking whether the early 'gold' state is a fixed identity or a fleeting phase, and it also shows how long a cell keeps the state."
+    },
+    {
+      "title": "Live-cell time-lapse tracking with retrospective single-cell profiling",
+      "description": "Image cells carrying reporters for signaling, such as ERK or p53 dynamics, and for cell-cycle state through the drug pulse. Track each cell's fate, then fix the cells and run in situ RNA or protein profiling on the same cells. This links transient pre-treatment fluctuations to later survival and gives the timescale over which the state decays ('only so an hour')."
+    },
+    {
+      "title": "Single-cell multiome time course of the transition to the drug-tolerant state",
+      "description": "Run paired scRNA-seq and scATAC-seq at several times before, during, and after drug exposure. Infer trajectories to see whether survivors are a rare pre-existing subpopulation or cells that adaptively rewire chromatin and transcription after the drug is added. Look for transient early states, such as a stress or dedifferentiated program, that later settle into stable resistance or into a return to the baseline state."
+    },
+    {
+      "title": "Reversibility and memory test by drug holiday and re-challenge",
+      "description": "Isolate survivors, grow them with and without drug for varied durations, and then re-challenge them while measuring how the surviving fraction changes with time off drug. Combine this with epigenetic perturbations, such as HDAC or KDM5 inhibitors, to test whether the tolerance is held by chromatin. The decay curve of tolerance shows whether the state is non-genetic and transient, and what holds it in place."
+    },
+    {
+      "title": "Functional screen of survivor-state regulators with sorted-state CRISPR",
+      "description": "Use a live reporter or surface marker for the high-tolerance state to sort cells. Run CRISPRi/a screens that read out either the frequency of the state or survival under drug, and compare the two. Genes that change survival through the state, rather than through general drug sensitivity, are candidate regulators of how the state is entered and exited, and are candidate targets for combination therapy."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 868,
+  "cost_usd": 0.0135715
+}

@@ -1,0 +1,43 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-resolved occupancy after a priming pulse",
+      "description": "Tests the unitary-AP-1 assumption. Use CUT&Tag or CUT&RUN with knock-in tags for FOS, JUN, and ATF3 at several times after stimulus washout to see whether the sites that stay bound are occupied by a distinct dimer composition, which would identify the memory-bearing complex."
+    },
+    {
+      "title": "Savings-based memory assay across rest intervals",
+      "description": "Tests the undefined-memory assumption by defining memory operationally as 'savings': prime cells with a fixed pulse, rest from hours to days, then re-stimulate and measure re-induction speed and amplitude of AP-1 targets. Plot savings against rest time and compare it with the decay of AP-1 occupancy to see whether memory outlasts binding."
+    },
+    {
+      "title": "Acute degradation of FOS/JUN after priming",
+      "description": "Tests whether memory requires persistent AP-1 protein. Use dTAG or auxin-degron knock-ins to deplete FOS and JUN at defined times after a priming pulse, then re-stimulate: retained savings implies storage in chromatin or other marks, while loss implies the protein itself is required. Pair with ATAC-seq and H3K27ac to identify what persists."
+    },
+    {
+      "title": "Single-cell lineage-tracked reporter for an AP-1 enhancer",
+      "description": "Tests the population-average assumption. Build a knock-in destabilized fluorescent reporter at an AP-1-responsive enhancer, pulse cells, sort by reporter state after rest, and track daughter cells by live imaging over several generations to test whether memory is bimodal and inherited across divisions."
+    },
+    {
+      "title": "Locus-specific necessity and sufficiency of AP-1 binding",
+      "description": "Tests whether AP-1 is causal rather than a readout. Use base editing to mutate only the TRE motifs at candidate memory enhancers, and separately tether a dimerizable or dCas9-fused AP-1 activator to one enhancer without upstream signal; if synthetic activity recreates the savings phenotype and motif mutation abolishes it, AP-1 is causal at that locus."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as one functional entity, but it is a family of Fos/Jun/ATF/JDP dimers whose composition can change over time and between sites.",
+      "'Memory' is assumed to mean a state that outlasts the stimulus and changes the response to a later stimulus, but the required persistence timescale and the readout (faster re-induction, larger response, or retained occupancy) are left undefined.",
+      "The memory is assumed to reside in AP-1 protein or DNA occupancy that must itself persist, rather than in downstream chromatin states or other factors that can outlast AP-1.",
+      "AP-1 is assumed to be causal, but its persistent expression or binding may only be a readout of upstream signaling, which could be the actual memory carrier.",
+      "Bulk population measurements (western blots, bulk ChIP-seq or RNA-seq) are assumed to represent each cell's state, so memory is assumed to be homogeneous rather than bistable or heritable only within lineages.",
+      "Results from immortalized cell lines with a single stimulus are assumed to generalize to primary or in vivo cells, where paralogs (e.g., ATF3, JDP2) and compensatory stress responses can mask or mimic the effect."
+    ]
+  },
+  "output_tokens": 6795,
+  "cost_usd": 0.00354129
+}

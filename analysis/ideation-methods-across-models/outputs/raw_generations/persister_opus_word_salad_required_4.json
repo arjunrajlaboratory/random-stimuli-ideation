@@ -1,0 +1,37 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 4,
+  "stimulus": "triocular notative vaticide uveal aclys ranting lozenger generalia condylos unpilfered rubineous branchy sope preimbibe snobling importuner tactlessly kibber brick tyremesis basigynium sunket unclothe steenbok enshade postulant thionate manas motor consocies underntime bovine epenthesis pickage hunkers dribble sifac unscoffing letterin oceaned rebandage rearousal tasimetry plundering nucleoid tripodical tapist reconquer carpellary heathenism lavaliere murrhine geogonical dillue deerhound placation neurad unchary tithonic huzza",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\ntriocular notative vaticide uveal aclys ranting lozenger generalia condylos unpilfered rubineous branchy sope preimbibe snobling importuner tactlessly kibber brick tyremesis basigynium sunket unclothe steenbok enshade postulant thionate manas motor consocies underntime bovine epenthesis pickage hunkers dribble sifac unscoffing letterin oceaned rebandage rearousal tasimetry plundering nucleoid tripodical tapist reconquer carpellary heathenism lavaliere murrhine geogonical dillue deerhound placation neurad unchary tithonic huzza\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Tasimetric look-back: retrospective linkage of pre-drug expression fluctuations to survival",
+      "description": "Inspired by 'tasimetry' (measurement of minute changes), knock fluorescent reporters into endogenous candidate resistance loci (e.g., AXL, NGFR, EGFR, MITF-low program genes) and continuously image a clonal population for several days before adding drug, then track each imaged cell's fate so that rare, transient, low-amplitude expression excursions can be scored as predictive or not. Complement this with a transcriptome-wide version in which cells are split and one half is profiled by scRNA-seq while the sister half is treated, or with RNA-barcode 'rewind' capture, so the pre-treatment state of the eventual survivors is recovered rather than inferred."
+    },
+    {
+      "title": "Epenthetic barcoding: inserting lineage recorders to partition heritable memory from instantaneous noise",
+      "description": "Like an epenthesis that inserts a segment into a word without changing its root, integrate expressed, scRNA-seq-capturable lineage barcodes (CellTag/Watermelon-style) into cells, then expand, split the labeled population into multiple replicate flasks, and treat each independently with the same targeted drug. If the same barcodes survive across replicate flasks far more often than chance, survival is governed by a heritable (epigenetically memorized) state whose half-life can be measured by varying expansion time between splitting and treatment; if barcode overlap is at chance, survival is set by short-lived fluctuations or by the drug exposure itself."
+    },
+    {
+      "title": "Consocies mapping: testing whether survival is a neighborhood property rather than a cell-intrinsic one",
+      "description": "Borrowing 'consocies' (a community subunit dominated by one member), grow cells at defined local densities and in defined spatial patterns (micropatterned islands, mixed co-cultures with fluorescently marked drug-sensitive or fibroblast/stromal partners), then image which positions within a colony yield survivors and test conditioned medium and Transwell separation to ask whether paracrine signals (HGF, NRG1, AXL ligands, extracellular vesicles) confer tolerance. Follow with spatial transcriptomics on treated colonies to correlate each survivor's transcriptional state with quantified features of its immediate neighborhood, such as local density, distance to colony edge, and neighbor identity."
+    },
+    {
+      "title": "Rearousal kinetics: distinguishing pre-existing quiescence from drug-induced dormancy and measuring the awakening step",
+      "description": "Use live-cell CDK2-activity and p21 sensors plus CFSE/H2B-photoconversion dilution to determine whether the cells destined to survive were already slow-cycling or arrested at the moment of drug addition, and time-lapse the identical fields through weeks of treatment to capture the exact division at which each persister 'rearouses'. Pair this with drug-holiday experiments (remove drug, re-expand, re-treat) to quantify what fraction of tolerance is reversible dormancy versus fixed resistance, and with scRNA-seq at multiple timepoints to define the transcriptional trajectory from arrest to re-entry."
+    },
+    {
+      "title": "Preimbibition assay: single-cell measurement of drug uptake, efflux, and target engagement",
+      "description": "Testing the mundane but often-ignored possibility that survivors simply 'preimbibe' less drug, measure intracellular drug concentration per cell using an intrinsically fluorescent or click-labeled analog of the inhibitor, single-cell mass spectrometry, or MALDI imaging of the colony, alongside efflux-pump reporters and dye-efflux (Hoechst side-population) assays. Immediately pair each cell's drug level with a single-cell readout of target engagement (quantitative immunofluorescence for phospho-ERK/phospho-AKT or a FRET kinase biosensor), so that pharmacokinetic heterogeneity can be cleanly separated from downstream signaling-state heterogeneity as the cause of survival."
+    }
+  ],
+  "scaffold": {
+    "$PARAMETER_NAME": "{\"ideas\": []}"
+  },
+  "output_tokens": 2999,
+  "cost_usd": 0.11681849999999999
+}

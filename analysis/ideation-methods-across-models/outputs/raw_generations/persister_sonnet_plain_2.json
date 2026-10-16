@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-/post-treatment transcriptomics",
+      "description": "Tag cells with heritable DNA barcodes, split the population before drug exposure, profile one arm by scRNA-seq, and treat the other to identify survivors. Matching survivor clones back to their pre-treatment sister cells reveals whether a pre-existing, heritable state predicts survival or whether survival arises stochastically after drug exposure."
+    },
+    {
+      "title": "Live-cell imaging with single-cell tracking and retrospective fate mapping",
+      "description": "Image reporter-labeled cells (e.g., signaling activity, cell cycle, apoptosis, mitochondrial state) for days before and during treatment, then trace survivors back to their earlier histories. This links dynamic features such as pulsatile ERK or p53 activity, cell-cycle phase, or cell size to survival, and shows how long a predictive state persists."
+    },
+    {
+      "title": "Multi-omic profiling of persisters (chromatin accessibility, epigenome, proteome)",
+      "description": "Isolate surviving cells at multiple time points and run single-cell ATAC-seq, histone-mark profiling (CUT&Tag), and proteomics or phospho-proteomics, alongside untreated controls. This tests whether persisters occupy a distinct chromatin or signaling state, such as a drug-tolerant program driven by KDM5 or AP-1, rather than carrying new genetic mutations."
+    },
+    {
+      "title": "Single-cell DNA sequencing and copy-number analysis to rule genetics in or out",
+      "description": "Sequence survivors at single-cell resolution to check for rare pre-existing mutations, copy-number changes, or extrachromosomal DNA that the bulk population lacks. Comparing survivors with their reversible, drug-free regrown descendants separates genetic from non-genetic (reversible) tolerance."
+    },
+    {
+      "title": "Functional perturbation screens and drug-combination tests on the tolerant state",
+      "description": "Run CRISPR knockout or inhibition screens, with a pooled library and drug treatment, to find genes and pathways such as antioxidant defense, ferroptosis suppression, or anti-apoptotic factors that change the fraction of survivors. Validate hits by pairing the targeted drug with inhibitors of those pathways and measuring the persister fraction and time to regrowth."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 832,
+  "cost_usd": 0.0110875
+}

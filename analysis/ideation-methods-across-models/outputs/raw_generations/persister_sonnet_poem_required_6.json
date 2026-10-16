@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 6,
+  "stimulus": "I will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from induced tolerance",
+      "description": "Tag a clonal population with heritable DNA barcodes, split it into replicate pools, and apply the drug. If the same barcodes dominate the survivors across replicates, tolerance was pre-existing and heritable. If different barcodes survive, tolerance was stochastic or induced. This is like Yeats's repeated return to the same lake sound: a persistent signal that is present before the trigger. Sequencing barcodes together with scRNA-seq on sister cells would link the pre-treatment state to the survival outcome."
+    },
+    {
+      "title": "Time-lapse single-cell tracking with live reporters",
+      "description": "Image thousands of individual cells before, during and after drug exposure. Use fluorescent reporters for signaling activity (such as ERK), cell cycle and stress response, and follow lineages to see which pre-treatment dynamics predict survival. Retrospective analysis of the survivors' ancestors would show whether slow cycling, pulsatile signaling or a particular history marks the cells that survive. The peaceful 'glade' state would be a quiescent niche that cells enter by chance."
+    },
+    {
+      "title": "Multiomic profiling of survivors over time",
+      "description": "Collect scRNA-seq, scATAC-seq and proteomic or phospho-protein data at several time points: untreated, early after drug, and at persister expansion. Compare survivors with matched untreated cells to find transcriptional programs (such as drug efflux, EMT-like states, oxidative stress response or a slow-cycling program) and chromatin accessibility that distinguish them. Trajectory inference would show whether they are a distinct pre-existing state or a gradual adaptation."
+    },
+    {
+      "title": "Isolate and perturb rare-state cells with state-marker sorting and CRISPR screens",
+      "description": "Sort cells on candidate markers of the tolerant state, such as high expression of a surface protein or a reporter, and compare their drug sensitivity with the rest of the population. Test how quickly each sorted fraction returns to the population's mixed composition, which measures how stable the state is. In parallel, run a genome-wide CRISPR knockout or interference screen under drug to find the genes that are required for persistence. This tests causality and not just correlation."
+    },
+    {
+      "title": "Mathematical modeling of state switching and fluctuation tests",
+      "description": "Run a Luria\u2013Delbr\u00fcck-style fluctuation test, measuring the variance in survivor counts across many small parallel cultures. Fit stochastic models that distinguish random mutation, reversible phenotype switching and drug-induced adaptation, using the switching rates and the decay of tolerance after drug removal. The 'nine bean-rows' of replicate wells give the statistics needed to estimate the rates. Model predictions about how fast the state changes could then be tested with drug holidays or altered dosing schedules."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1003,
+  "cost_usd": 0.015473500000000001
+}

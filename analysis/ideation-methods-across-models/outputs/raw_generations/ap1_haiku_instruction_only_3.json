@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 3,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop test (magnetism analogy)",
+      "description": "In magnetic materials, memory is shown by history-dependent response: the output on re-application of a field depends on the previous field sweep. Apply pulsed AP-1 stimuli (e.g., TPA or growth factor) with varied pulse number, spacing, and amplitude, then measure a second, identical stimulus and quantify the hysteresis of target gene expression and chromatin accessibility at AP-1 enhancers. Memory is supported if the response to the second pulse depends on the first pulse's history beyond what the current AP-1 level predicts."
+    },
+    {
+      "title": "Seed-bank dormancy and reactivation (ecology analogy)",
+      "description": "Seeds persist in a dormant state and germinate faster after a prior cue. Use an acute, degron-based FOS or JUN depletion to end AP-1 signaling after a stimulus, then track AP-1 occupancy (CUT&RUN), enhancer accessibility (ATAC-seq), and target transcription over days. Memory predicts that enhancers stay primed after AP-1 protein is gone and that a later sub-threshold stimulus reactivates them faster than in naive cells."
+    },
+    {
+      "title": "Synthetic flip-flop circuit (electronics analogy)",
+      "description": "A flip-flop stores one bit because its outputs feed back to hold the state after the input pulse ends. Build an engineered AP-1 positive-feedback loop, with an AP-1-responsive promoter driving a FOS or JUN transgene, and test bistability using transient inducer pulses and a flow-cytometry readout. Breaking the loop (mutating the AP-1 sites in the feedback element or using a non-feedback control) should abolish the stored state, which would show that the self-reinforcing loop, not the pulse itself, is the memory element."
+    },
+    {
+      "title": "Lineage-barcoded memory transmission (immunological recall analogy)",
+      "description": "Immune memory is clonal: cells that saw an antigen divide and pass on a faster, stronger secondary response. Combine lineage barcoding with a live AP-1 activity reporter, sort cells by prior exposure history, and use single-cell multiome to track whether AP-1-primed chromatin states are inherited through mitosis and show faster re-induction in daughter clones. Memory requires that the primed state is heritable across divisions, not just re-established by each new stimulus."
+    },
+    {
+      "title": "Dated stratigraphic layering (sediment core analogy)",
+      "description": "Sediment cores record events as dated layers, so the time of deposition can be read from depth. Use sequential pulse-chase labeling of AP-1 components with orthogonal tags (e.g., HaloTag or SNAP-tag pulses at successive time points) and map which enhancers retain each labeled AP-1 layer, using CUT&Tag and ATAC-seq. Layers that persist after the tag signal has cleared, and that are not explained by dilution through cell division, would indicate durable, time-stamped AP-1 memory at specific loci."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2236,
+  "cost_usd": 0.00126081
+}

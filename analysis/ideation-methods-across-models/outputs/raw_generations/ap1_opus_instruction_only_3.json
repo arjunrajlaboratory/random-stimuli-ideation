@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 3,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop mapping (ferromagnetism / materials science)",
+      "description": "Ramp a stimulus such as TGF-beta, serum, or a drug up in graded steps and then back down, measuring AP-1 target accessibility and reporter output in single cells at each step. A split between the ascending and descending branches is the signature of history dependence; test AP-1 dependence by attempting to collapse the loop with A-Fos or a FOS/JUN degron."
+    },
+    {
+      "title": "Lineage-barcoded pedigree tracking (population genetics / heritability estimation)",
+      "description": "Use clonal barcoding plus single-cell ATAC and RNA to compute the heritability of AP-1 site accessibility across cell divisions and sister-cell pairs, partitioning variance into clone-of-origin versus noise. Formal heritability and decay-half-life-across-generations statistics convert a vague memory claim into an estimated persistence timescale."
+    },
+    {
+      "title": "Write/erase/read latency benchmarking (computer memory engineering)",
+      "description": "Treat the AP-1 site as a storage device by delivering pulsed optogenetic FOS/JUN dimerization of defined amplitude and duration, then assaying retention time, minimum write duration, and the recall advantage on a second stimulus. Plotting retention versus write parameters distinguishes a bistable latch from a leaky capacitor or a pure relay."
+    },
+    {
+      "title": "Savings paradigm at the moment of recall (Ebbinghaus memory psychology)",
+      "description": "Psychological memory is measured by faster relearning rather than spontaneous recall, so prime cells, wait until the transcriptional response fully returns to baseline, then re-stimulate and measure response latency and amplitude. Degrading AP-1 selectively during the silent interval versus during recall separates AP-1 as the stored trace from AP-1 as the readout machinery."
+    },
+    {
+      "title": "Serial passaging as an epidemiological cohort (survival analysis)",
+      "description": "Follow single-cell-derived clones with differing initial AP-1 activity as a longitudinal cohort, using Cox proportional-hazards models in which the event is loss of the primed phenotype such as drug tolerance or accessibility state. Covariates like AP-1 motif occupancy, partner TF identity, and CpG methylation reveal which features predict durable versus transient memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2705,
+  "cost_usd": 0.12023980000000001
+}

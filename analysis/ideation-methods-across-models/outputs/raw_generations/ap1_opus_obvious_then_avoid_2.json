@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Division-coupled versus time-coupled forgetting",
+      "description": "Measure decay of the primed state as a function of number of cell divisions rather than elapsed time, comparing cycling cells, slowly cycling cells (CDK4/6 inhibition or contact inhibition), and reversibly arrested cells, with division number tracked by dye dilution or live imaging. A replication-coupled chromatin memory should lose a fixed fraction per S phase, whereas a protein-level or autoregulatory-feedback memory should decay on a wall-clock timescale independent of division number."
+    },
+    {
+      "title": "Allele-resolved test of whether the memory acts in cis",
+      "description": "In F1 hybrid or SNP-rich cells, or in clones with the AP-1 motif deleted from only one allele of a target enhancer, prime the cells and then measure allele-specific accessibility, nascent transcription (allele-resolved Pro-seq or intronic smFISH with SNP probes), and reactivation kinetics on rechallenge. If memory is carried by the chromatin at the site, the two alleles should remember independently and discordantly; if it is carried by a diffusible AP-1 pool or feedback loop, both alleles should behave identically."
+    },
+    {
+      "title": "Transient recruitment to a naive synthetic locus",
+      "description": "Integrate a motif-free synthetic reporter locus at a defined genomic position and recruit FOS/JUN bZIP domains to it for a controlled pulse using dox-inducible dCas9 or zinc-finger fusions, then withdraw the recruiter and ask whether accessibility and expression self-sustain for days and through divisions. Repeating with dimerization-dead, DNA-binding-dead, and transactivation-dead variants, and with recruited partners removed, isolates exactly which AP-1 activity is sufficient to install heritable state at a locus with no prior history."
+    },
+    {
+      "title": "Dimer-composition code and memory interference",
+      "description": "Ask whether the identity of the remembered stimulus is stored in which FOS/JUN family dimer occupies a site, by measuring dimer composition over time with pairwise proximity ligation, split-fluorophore dimer reporters, or crosslinking mass spectrometry, combined with a cross-stimulus interference design (prime with stimulus A, challenge with an unrelated AP-1-activating stimulus B, then test for A). Overwriting, saturation, or retroactive interference between stimuli would show the memory has limited capacity and is written in dimer composition, not merely in generic enhancer opening."
+    },
+    {
+      "title": "Pulse-chase of AP-1 protein molecules to test protein-as-carrier",
+      "description": "HaloTag-knock-in FOS and JUN, pulse-label the existing protein pool with a bright dye, chase with a blocking ligand, and use single-molecule tracking plus chromatin fractionation to ask whether the same old molecules remain bound at primed sites, are re-deposited after mitosis, or are replaced by newly synthesized protein while the memory persists. Residence times and the fraction of old protein retained set an upper bound on how much of the memory the protein itself can carry versus what must be handed off to chromatin."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq (or scATAC) time course after a transient stimulus to see whether AP-1-bound enhancers stay accessible long after the signal decays.",
+      "Motif enrichment analysis showing AP-1 (TGAC/GTCA) motifs are over-represented in regions that remain accessible or become primed.",
+      "Acute degron (dTAG/AID) depletion of FOS/JUN after memory is established, to separate establishment from maintenance.",
+      "CUT&RUN/ChIP-seq time courses of FOS, JUN, JUNB, FOSL1 to map occupancy dynamics relative to memory duration.",
+      "Dominant-negative A-FOS or bZIP inhibitor expression to test whether blocking AP-1 erases the remembered state.",
+      "Overexpression or inducible expression of FOS+JUN to test sufficiency for installing the primed state without the original stimulus.",
+      "Live-cell AP-1 transcriptional reporter imaging to track memory of activity in single cells over time.",
+      "Prime-then-rechallenge assays measuring faster or stronger reinduction of target genes on second stimulus.",
+      "Lineage barcoding with clone-resolved scRNA-seq to test whether AP-1-high states are heritable and predict later fate such as drug resistance.",
+      "Profiling latent-enhancer marks (H3K4me1/H3K27ac) and enhancer-promoter looping at AP-1 sites before, during, and after stimulation."
+    ]
+  },
+  "output_tokens": 5495,
+  "cost_usd": 0.20190909999999998
+}

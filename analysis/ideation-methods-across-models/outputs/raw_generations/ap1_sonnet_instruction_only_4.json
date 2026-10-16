@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 4,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis curves borrowed from magnetism",
+      "description": "Like measuring a ferromagnet's magnetization loop, ramp the dose of a stimulus (e.g., TPA or growth factor) up and then down in cells and quantify AP-1 (FOS/JUN) occupancy, chromatin accessibility and target transcription at matched doses. A path-dependent loop, where the same dose gives different outputs on the way up and down, would show that AP-1 retains a memory of past input."
+    },
+    {
+      "title": "Spin-glass style bistability test via single-cell state landscapes",
+      "description": "Use live-cell reporters of AP-1 activity (e.g., FOS-GFP knock-in) with time-lapse imaging to build single-cell trajectories after transient stimulation. Fit a dynamical-systems/energy-landscape model and test for bimodal, self-sustaining states that persist after the stimulus is removed, as in physical bistable systems."
+    },
+    {
+      "title": "Immunology-style recall challenge with prime-rest-boost",
+      "description": "Borrowing the vaccine prime-boost design, give cells a primary stimulus, rest them for varied intervals, then re-stimulate and measure faster or stronger induction of AP-1 target genes by RNA-seq and ATAC-seq. Compare this with naive cells and with cells in which AP-1 is acutely degraded (dTAG) or blocked with a dominant-negative (A-FOS) during priming only, to test whether AP-1 is necessary for the recall response."
+    },
+    {
+      "title": "Linguistic/information-theoretic analysis of enhancer 'bookmarks'",
+      "description": "Treat enhancer accessibility as a message stored over time. Use time-resolved CUT&RUN/ATAC at AP-1 motifs after stimulus washout and compute mutual information between past stimulus history and current chromatin state, then ask whether AP-1 motif-containing sites carry more retained information than other sites. Motif mutation by CRISPR base editing at selected enhancers would test causality."
+    },
+    {
+      "title": "Ecological succession-style lineage tracing across divisions",
+      "description": "Like tracking descendants of a pioneer species after disturbance, label cells with a heritable barcode or Cre-based memory reporter at the time of AP-1 activation and follow their daughters for many divisions. Use sibling-pair and mitotic-bookmarking assays (live imaging plus mitotic-chromosome ChIP) to determine whether AP-1 binding or its downstream chromatin marks (H3K27ac, accessibility) are inherited and correlate with persistent expression."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 913,
+  "cost_usd": 0.0119081
+}

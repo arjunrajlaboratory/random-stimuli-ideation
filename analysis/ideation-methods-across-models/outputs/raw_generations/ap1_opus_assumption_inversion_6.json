@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Environment clamp: strip the cell of every persistent input and ask if AP-1 state survives",
+      "description": "Take cells that 'remember' a stimulus and systematically remove candidate continuous inputs, by serial single-cell isolation into fresh microwells, decellularization and replating onto naive matrix, and acute inhibition of MAPK/integrin/autocrine receptor signaling, then measure AP-1 occupancy and target expression. The reciprocal arm plates naive cells onto matrix deposited by remembering cells, which would show that the 'memory' is stored outside the cell entirely."
+    },
+    {
+      "title": "Dimer-resolved occupancy time course rather than bulk AP-1 motif accessibility",
+      "description": "Use subunit-specific CUT&RUN or sequential re-ChIP, plus split-fluorophore or proximity-ligation dimer reporters, to determine which specific FOS/JUN dimer occupies which enhancer at induction versus weeks later, and pair this with single-subunit degron panels to find which dimer is dispensable for writing but required for keeping the state."
+    },
+    {
+      "title": "Erase-and-watch: acute total AP-1 degradation followed by washout",
+      "description": "Degrade all FOS/JUN family members with a multiplexed dTAG/auxin degron for a defined window in the remembering state, then restore them and ask whether the enhancer landscape and phenotype return. Spontaneous recovery means AP-1 is a readout of an upstream store; failure to recover means AP-1 itself, or chromatin it maintains, is the store."
+    },
+    {
+      "title": "Synthetic write-then-release test of sufficiency at defined loci",
+      "description": "Recruit a FOS/JUN activation domain to specific candidate memory enhancers with dCas9 or a chemically induced dimerizer for a controlled pulse, remove the recruiter, and track whether the locus and the associated phenotype self-sustain. Titrating pulse amplitude and duration maps the threshold and dose-dependence of memory installation, which a knockout can never reveal."
+    },
+    {
+      "title": "Lineage-resolved decay constants and division-counting",
+      "description": "Combine a live AP-1 transcriptional reporter with heritable barcoding and long-term imaging to extract per-lineage autocorrelation times, sister-cell correlation decay across divisions, and the fraction of lineages that remember. Comparing decay in cycling versus pharmacologically arrested or slowed cells distinguishes dilution-per-division from turnover-per-unit-time, converting 'is it memory?' into a measured timescale and heritability number."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Memory is assumed to be cell-intrinsic and self-sustaining, when an apparently 'remembering' state can equally be a continuous response to a persistent input (autocrine factors, cell-deposited ECM, stiffness, residual drug, niche position). Most assays never actually remove the environment.",
+      "'AP-1' is treated as one entity, when it is ~18+ dimer combinations (FOS/FOSB/FRA1/FRA2 x JUN/JUNB/JUND, plus ATF/MAF partners) with very different half-lives and target preferences; bulk 'AP-1 motif accessibility' cannot distinguish an induction dimer from a maintenance dimer.",
+      "AP-1 is assumed to be the storage medium rather than a readout of an upstream store (a signaling feedback loop, a metabolic or cytoskeletal state, a chromatin mark that merely recruits AP-1). Correlation of AP-1 activity with the remembered state is routinely read as causation.",
+      "Necessity experiments (knockout/knockdown) are assumed to test memory, but chronic loss of AP-1 blocks establishment, proliferation, and viability, conflating 'needed to write' with 'needed to keep'. Sufficiency, i.e. installing the state with AP-1 alone and then withdrawing it, is rarely tested.",
+      "Memory is treated as binary and readable from population snapshots, when the real quantity is a per-lineage decay timescale and a heritability fraction that bulk or fixed-timepoint assays average away.",
+      "Mitotic heritability is assumed, often via bookmarking, without distinguishing decay per cell division (dilution of a limiting factor) from decay per unit time (turnover independent of division).",
+      "Chromatin and transcription are assumed to be the only plausible substrate, excluding non-chromatin carriers such as long-lived protein complexes, deposited matrix, or metabolic/organelle states.",
+      "The model system is assumed to be representative: one cell line, one strong saturating stimulus, 2D culture, and observation windows shorter than the claimed memory duration.",
+      "AP-1 motif enrichment in accessible chromatin is assumed to mean AP-1 protein is bound and functional there, when motifs are degenerate, highly abundant, and shared with related bZIPs."
+    ]
+  },
+  "output_tokens": 5884,
+  "cost_usd": 0.21567
+}

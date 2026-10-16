@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Single-cell lineage tracing with barcoded clones: Introduce heritable random DNA barcodes into a clonal population, treat with the targeted drug, and use barcode sequencing plus scRNA-seq to ask whether survivors arise from a pre-existing transcriptionally distinct subpopulation or from clones that were already present before treatment. Comparing pre-treatment and post-treatment barcode frequencies distinguishes pre-existing resistance from drug-induced reprogramming.\n2. Time-resolved single-cell RNA and ATAC profiling during drug exposure: Profile chromatin accessibility and gene expression at many early time points after drug addition to track which cells shift state, and when. Identifying the earliest divergent cells and the regulatory programs (e.g., chromatin opening at specific transcription factor motifs) that precede survival reveals the mechanism of the persister state.\n3. Genome-wide CRISPR screens comparing survivors to the bulk population: Run pooled CRISPR knockout or CRISPRi/CRISPRa screens under drug treatment and compare guide enrichment in surviving cells against untreated controls, including sorted fast-cycling versus slow-cycling subsets. Hits that are enriched or depleted in survivors point to the genes and pathways required for persistence and suggest candidate vulnerabilities to target.\n4. Live-cell fluorescent reporters and single-cell tracking of drug response: Use fluorescent reporters for cell-cycle phase, drug-target pathway activity, or stress signaling, combined with time-lapse microscopy, to follow individual cells from drug addition through survival or death. Correlating the reporter state before drug exposure with each cell's fate tests whether survival is predictable from a measurable pre-treatment state or is stochastic.\n5. Drug washout and re-challenge assays on sorted persister cells: Sort surviving cells, remove the drug, and measure regrowth, drug sensitivity, and epigenetic memory over multiple generations, comparing them with naive cells. Whether the persister phenotype is reversible (non-genetic, plastic) or stably inherited (genetic or epigenetic) reveals the underlying mechanism and informs whether intermittent dosing or combination therapy could prevent survival.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mother-daughter inheritance of protein aggregates",
+      "description": "Express an aggregation-prone fluorescent reporter or an HSP70 chaperone sensor, then track mother-daughter pairs through mitosis during drug exposure. Test whether daughters that inherit a low aggregate or damaged-protein burden are the ones that survive, which would make persistence a matter of asymmetric proteostatic inheritance rather than a fixed transcriptional state."
+    },
+    {
+      "title": "Micropatterned density and position mapping of survival",
+      "description": "Plate cells on micropatterned islands of defined size and shape so that local density and edge position are controlled, then measure where survivors arise within each island. If survival clusters at specific positions regardless of genotype, the trait is a community or geometry effect rather than a cell-intrinsic one."
+    },
+    {
+      "title": "Single-cell intracellular drug quantification linked to fate",
+      "description": "Measure the intracellular concentration of the drug in individual cells by imaging mass spectrometry or by a fluorescent or isotopically labeled analog, then sort or back-gate cells by drug content and test their survival. This separates pharmacokinetic heterogeneity (differences in uptake, efflux, or metabolism) from genuine target-state differences."
+    },
+    {
+      "title": "Baseline nascent translation rate as a survival predictor",
+      "description": "Quantify per-cell nascent protein synthesis before treatment using puromycin or OPP click labeling, sort the high and low translators, and compare their drug response and survival. This tests whether translational capacity, rather than transcription, sets how much the cell can mount a stress response."
+    },
+    {
+      "title": "Secretome-mediated rescue of naive cells",
+      "description": "Collect conditioned medium or extracellular vesicles from drug-treated cultures enriched for survivors and apply them to naive cells under drug, then identify the active factors by proteomics and a neutralizing-antibody or vesicle-depletion screen. A positive rescue would indicate that survival can be extrinsically conferred between cells, not only inherited."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2319,
+  "cost_usd": 0.0015376499999999998
+}

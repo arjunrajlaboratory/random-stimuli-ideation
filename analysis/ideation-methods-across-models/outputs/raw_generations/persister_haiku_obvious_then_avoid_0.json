@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell intracellular drug-level mapping",
+      "description": "Quantify effective intracellular drug concentration per cell, using fluorescent drug analogs or imaging mass spectrometry, and sort by drug level to test whether survivors simply accumulate less drug through reduced uptake, increased efflux, or lysosomal sequestration. Survival tracking by live imaging would show whether drug-low cells are the ones that persist."
+    },
+    {
+      "title": "Mitochondrial heteroplasmy sorting before treatment",
+      "description": "Before drug exposure, sort cells by mitochondrial membrane potential and by mtDNA heteroplasmy (e.g., via single-cell mtDNA sequencing of sorted subpopulations), then re-challenge each fraction with the drug. A significant survival difference would point to pre-existing mitochondrial variation as a determinant of tolerance, independent of nuclear gene expression."
+    },
+    {
+      "title": "Per-cell protein turnover profiling",
+      "description": "Use pulse-chase labeling (e.g., click-chemistry amino acid analogs) combined with flow sorting to measure the synthesis and degradation rates of the drug target and key survival proteins in individual cells. Comparing turnover between survivors and dying cells would test whether proteostasis or translational capacity, rather than target levels, underlies tolerance."
+    },
+    {
+      "title": "Density-dependent and secreted-factor dependence of survival",
+      "description": "Plate the population across a range of seeding densities and measure the survival fraction under drug, then test survivors' dependence on neighbors using conditioned medium, transwell co-culture, and sparse-plating controls. A density-dependent survival fraction would indicate a community-level, paracrine protection mechanism rather than an intrinsic single-cell property."
+    },
+    {
+      "title": "Asymmetric partitioning of tolerance factors at mitosis",
+      "description": "Use live imaging with fluorescently tagged drug target or efflux proteins to track how these proteins partition between daughter cells at division, and correlate the inherited amount with each daughter's fate under drug. If unequal inheritance predicts survival, tolerance may arise through stochastic division asymmetry rather than a fixed pre-existing state."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Bulk RNA-seq or ATAC-seq of persisters vs. sensitive cells to find differentially expressed or accessible genes.",
+      "Single-cell RNA-seq of drug-treated populations to identify a pre-existing or induced persister transcriptional state.",
+      "Lineage tracing with DNA barcodes to test whether survivors come from pre-existing clones or from induced reprogramming.",
+      "CRISPR knockout or activation screens under drug pressure to find genes whose loss or gain confers survival.",
+      "Phosphoproteomics or kinome profiling to map compensatory signaling rewiring in survivors.",
+      "Epigenetic profiling (H3K27me3, H3K4me3, DNA methylation) of persisters, and testing of epigenetic inhibitors.",
+      "Testing EMT or mesenchymal-state markers and inhibitors in survivors.",
+      "Measuring cell-cycle or quiescence status (e.g., FUCCI reporters) of survivors.",
+      "Metabolic profiling (OXPHOS, glycolysis, lipid metabolism) of persisters and testing metabolic inhibitors.",
+      "Combination therapy screens pairing the targeted drug with a second agent to eliminate survivors."
+    ]
+  },
+  "output_tokens": 2803,
+  "cost_usd": 0.00163036
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 5,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Reliability-engineering hazard analysis of single-cell death times",
+      "description": "Borrowing from reliability engineering, track individual cells by live imaging under constant drug and fit Weibull or other hazard models to their time-to-death. A shape parameter near 1 suggests random, state-independent survival, while a shape far from 1 points to survival governed by cell age, cycle phase, or an accumulating state."
+    },
+    {
+      "title": "Wafer-map spatial yield analysis of surviving colonies",
+      "description": "Borrowing from semiconductor yield analysis, map every surviving cell or colony's position on the culture and apply point-pattern and spatial autocorrelation statistics (e.g., Ripley's K, Moran's I). Clustering would implicate local microenvironment such as density, oxygen, or drug gradients, whereas a random scatter would support intrinsic stochastic survival."
+    },
+    {
+      "title": "Phylodynamic reconstruction of persister ancestry",
+      "description": "Borrowing from epidemiological phylodynamics, combine CRISPR lineage barcodes with single-cell transcriptomes to reconstruct the transmission-like tree of surviving cells. Few early founder clades with pre-existing transcriptional states would suggest pre-selection, while many independent lineages that converge on a shared state after treatment would suggest adaptive induction."
+    },
+    {
+      "title": "Mutual-information budget between pre-treatment states and survival",
+      "description": "Borrowing from information theory, sort live cells by pre-treatment reporter or transcriptional state and quantify the mutual information between that state and eventual survival after drug exposure. Near-zero information would indicate survival is essentially random, while significant information would identify which features are predictive and how much of the outcome they explain."
+    },
+    {
+      "title": "Pulsed-dosing system identification of feedback in survivor cells",
+      "description": "Borrowing from control engineering, apply pulsed or step drug inputs of varying amplitude and duration while recording live signaling reporters, then estimate an input-output transfer function for each cell. Ringing, delayed responses, or bistable switching in the fitted model would expose the feedback loops or memory elements that let a subpopulation stay in a tolerant state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2889,
+  "cost_usd": 0.0015877999999999999
+}

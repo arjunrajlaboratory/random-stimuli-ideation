@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 4,
+  "stimulus": "triocular notative vaticide uveal aclys ranting lozenger generalia condylos unpilfered rubineous branchy sope preimbibe snobling importuner tactlessly kibber brick tyremesis basigynium sunket unclothe steenbok enshade postulant thionate manas motor consocies underntime bovine epenthesis pickage hunkers dribble sifac unscoffing letterin oceaned rebandage rearousal tasimetry plundering nucleoid tripodical tapist reconquer carpellary heathenism lavaliere murrhine geogonical dillue deerhound placation neurad unchary tithonic huzza",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\ntriocular notative vaticide uveal aclys ranting lozenger generalia condylos unpilfered rubineous branchy sope preimbibe snobling importuner tactlessly kibber brick tyremesis basigynium sunket unclothe steenbok enshade postulant thionate manas motor consocies underntime bovine epenthesis pickage hunkers dribble sifac unscoffing letterin oceaned rebandage rearousal tasimetry plundering nucleoid tripodical tapist reconquer carpellary heathenism lavaliere murrhine geogonical dillue deerhound placation neurad unchary tithonic huzza\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with drug pulses",
+      "description": "Label each founder cell with a heritable DNA barcode, then apply the drug and sequence barcodes in survivors and in cells that re-expand after drug withdrawal (the 'rearousal' step). Shared barcodes between pre-treatment and surviving clones show whether survival is a pre-existing, inherited state or a stochastic, drug-induced switch."
+    },
+    {
+      "title": "Pre-treatment single-cell multiomics to find predictive states",
+      "description": "Profile the same population by scRNA-seq plus scATAC-seq before any drug exposure, then sort or computationally match cells that later survive using a live reporter. This reveals whether chromatin accessibility or compaction states (the nucleoid-like organization of the genome) predict persistence before the drug acts."
+    },
+    {
+      "title": "Live-imaging of signaling dynamics and mechanical tension",
+      "description": "Use a kinase translocation reporter (for example, an ERK biosensor) and a FRET-based tension sensor in time-lapse microscopy, then measure pathway activity and cytoskeletal stress in each cell after drug addition. Correlating these readouts with later fate identifies whether the signaling pulse or tension measured early predicts survival."
+    },
+    {
+      "title": "Pooled CRISPR screen comparing survivors with bulk cells",
+      "description": "Run a genome-wide CRISPR knockout or CRISPRi screen under the drug and compare guide representation in surviving cells with the untreated population, using sgRNA sequencing at several time points. Hits that enrich in survivors point to the genes causing tolerance, and insertional or saturation mutagenesis can confirm them."
+    },
+    {
+      "title": "Metabolic and redox sorting followed by drug-holiday re-challenge",
+      "description": "Sort cells by autofluorescence (NAD(P)H/FAD imaging) or mitochondrial membrane potential before treatment, then compare the metabolic profiles of later survivors with those of cells that die. Re-challenging the survivors after a drug holiday, or combining the drug with a metabolic inhibitor, tests whether the tolerant state is reversible and can be reconquered."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1531,
+  "cost_usd": 0.00103685
+}

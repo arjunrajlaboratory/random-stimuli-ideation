@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute degron depletion staged across a pulse-chase",
+      "description": "Tag FOS/JUN family members with an auxin or dTAG degron and deplete AP-1 either during a transient stimulus or only after it has been withdrawn, then assay whether the stimulus-induced state persists. This separates a role for AP-1 in establishing a state from a requirement for continuous AP-1 activity to maintain it, which is the core claim of a memory mechanism."
+    },
+    {
+      "title": "Heritability of AP-1 activity across cell divisions by live imaging",
+      "description": "Build a fluorescent AP-1 (TRE) transcriptional reporter plus an endogenous JUN/FOS protein tag, and track individual cells through several divisions to compute mother-daughter and sister-sister correlations and the autocorrelation half-life of AP-1 activity. Memory predicts correlations that persist well beyond the protein and mRNA turnover timescale and are transmitted through mitosis."
+    },
+    {
+      "title": "Chromatin priming and re-stimulation kinetics at AP-1 motifs",
+      "description": "Perform time-resolved ATAC-seq, AP-1 CUT&RUN, and footprinting after stimulus withdrawal to identify regions that stay accessible without ongoing signaling, then re-challenge cells and ask whether those primed, AP-1-motif-containing enhancers are the ones that reactivate faster or more strongly. Causality can be tested by CRISPRi or base-editing the AP-1 motifs in the retained peaks."
+    },
+    {
+      "title": "Lineage barcoding to link prior AP-1 state to later cell fate",
+      "description": "Barcode cells, sort or record high- versus low-AP-1 cells using a reporter at an early timepoint, and then assay the fate of their barcode-matched descendants (e.g., drug survival, differentiation, invasion) days to weeks later. A memory mechanism predicts that early AP-1 state predicts clonally concordant later outcomes, and that perturbing AP-1 in the interim erases that predictive power."
+    },
+    {
+      "title": "Hysteresis and feedback test with a tunable synthetic AP-1 circuit",
+      "description": "Drive AP-1 activity with a dose-tunable inducible FOS/JUN construct and measure the output while ramping the input up and then back down, looking for bistability and hysteresis rather than a single dose-response curve. Pair this with mapping AP-1 binding at its own and its partners' loci to test whether an autoregulatory positive-feedback loop, the simplest molecular basis for such memory, is actually wired in the cell type of interest."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1561,
+  "cost_usd": 0.06110900000000001
+}

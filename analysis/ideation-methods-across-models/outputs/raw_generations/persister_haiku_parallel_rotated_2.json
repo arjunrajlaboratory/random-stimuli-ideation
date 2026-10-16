@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 2,
+  "parallel": {
+    "field": "Software engineering (nondeterministic failures)",
+    "problem": "Why does a small fraction of identical program runs on identical inputs crash, when the failure depends on hidden thread scheduling or timing rather than on the input?",
+    "how_studied": "Engineers use record-and-replay tools (such as rr) to capture a failing execution and reproduce it exactly. Systematic concurrency testers (such as CHESS-style schedulers) enumerate interleavings to find the rare one that triggers the bug. Deterministic simulation testing and stress runs with injected delays measure the failure rate under controlled timing perturbations."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Software engineering (nondeterministic failures)\nProblem: Why does a small fraction of identical program runs on identical inputs crash, when the failure depends on hidden thread scheduling or timing rather than on the input?\nHow it is studied: Engineers use record-and-replay tools (such as rr) to capture a failing execution and reproduce it exactly. Systematic concurrency testers (such as CHESS-style schedulers) enumerate interleavings to find the rare one that triggers the bug. Deterministic simulation testing and stress runs with injected delays measure the failure rate under controlled timing perturbations.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Record-and-replay lineage imaging of survivors (rr-style)",
+      "description": "Track genetically identical cells by live time-lapse microscopy with lineage barcodes from before drug exposure through death or survival, then trace each survivor's history backward to find the pre-treatment state, timing, or cell-cycle phase that distinguished it. As with rr capturing a failing run, the recorded trajectory is analyzed after the fact to locate the divergence point."
+    },
+    {
+      "title": "CHESS-style systematic enumeration of perturbation orderings",
+      "description": "Systematically enumerate combinations and orderings of sub-threshold perturbations (drug dose timing relative to cell-cycle phase, short pre-treatments with signaling or stress modulators, staged knockdowns) and measure survival for each schedule. Like CHESS enumerating thread interleavings to find the rare failing one, this reveals which specific sequence of cell-state conditions produces the survival phenotype."
+    },
+    {
+      "title": "Stress testing with controlled timing perturbations",
+      "description": "Apply injected perturbations of known magnitude and timing, such as drug pulses, serum or heat shocks, or forced cell-cycle synchronization, and measure how the survival fraction changes with each. Plotting survival rate against perturbation intensity distinguishes a sensitive, timing-dependent mechanism from a stochastic baseline that is insensitive to perturbation."
+    },
+    {
+      "title": "Flakiness-style replicate variance decomposition",
+      "description": "Derive many single-cell-founded clones from one parental line, treat each under identical conditions across many replicate wells, and measure the survival fraction per clone and per well. Comparing between-clone variance to the binomial variance expected from within-clone sampling tests whether heritable hidden state (epigenetic memory) exists, in the same way that flaky-test studies check whether a failure rate is intrinsic randomness or a hidden environmental factor."
+    },
+    {
+      "title": "Delta-debugging of pre-treatment single-cell states",
+      "description": "Profile pre-treatment cells by single-cell multiomics or reporter levels (e.g., chromatin accessibility, signaling reporters, stress markers), then sort and reconstitute subpopulations to test which minimal feature set reproduces survival, narrowing features as delta debugging minimizes a failing input. Confirming the minimal set by sorting and re-treating cells provides a causal test of the predictive state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1849,
+  "cost_usd": 0.00119725
+}

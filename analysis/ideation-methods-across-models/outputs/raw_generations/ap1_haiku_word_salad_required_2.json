@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 2,
+  "stimulus": "haploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nhaploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus washout and chromatin persistence time course",
+      "description": "Stimulate cells with a defined AP-1 inducer (e.g., TPA or EGF), then withdraw it and profile AP-1 binding (CUT&RUN or ChIP-seq for c-Jun/c-Fos) and chromatin accessibility (ATAC-seq) at multiple time points over days. Memory predicts that AP-1 sites stay open or bound after the signal is gone, and this persistence should be compared with sites that return to baseline. The material's 'terminator' suggests framing the washout as the stop signal that separates true memory from ongoing signaling."
+    },
+    {
+      "title": "Re-stimulation test for faster or stronger secondary response",
+      "description": "Compare naive cells with cells that had a prior stimulus and washout, then re-stimulate both and measure AP-1 target gene induction (RNA-seq or smFISH) and the speed and amplitude of the response. A memory mechanism should give a primed cell a faster or larger response, and this effect should disappear when AP-1 is acutely depleted with an auxin or dTAG degron during the interval. The word 'haploid' points to using single-allele knock-in reporters so the readout is not confounded by copy number."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate establishment from maintenance",
+      "description": "Use an inducible degron tag on c-Jun or c-Fos to remove AP-1 at different stages: during the initial stimulus, during the washout interval, or just before re-stimulation. Then check which stage is needed for the memory signature (chromatin marks, transcriptional priming, and altered response). This shows whether AP-1 is required to maintain the memory or only to write it. The 'hoseless' and 'unreleased' imagery suggests the test of whether the factor must stay bound to keep the state."
+    },
+    {
+      "title": "Lineage-based reporter to track memory in single cells",
+      "description": "Build an inducible AP-1 activity reporter (such as a FosTRAP-style tamoxifen-dependent recorder or a destabilized-fluorescent Fos-responsive reporter) and follow single cells by live imaging or lineage tracing across divisions. Memory predicts that cells which once had high AP-1 activity keep a heritable, altered response state in their progeny after the signal is gone. The 'tachylalia' idea of rapid, repeated pulses suggests also testing whether pulse frequency, not just total exposure, sets the state."
+    },
+    {
+      "title": "Mathematical model with a falsifiable memory signature",
+      "description": "Build an ODE or stochastic model of AP-1 feedback (for example, AP-1 inducing its own Fos/Jun expression and chromatin opening) and fit it to the time-course and re-stimulation data. Compare a model with a bistable or hysteretic chromatin switch to one with purely transient signaling, and design a perturbation that the two models predict differently, such as a timed pulse or a partial degradation. This tests whether the data truly need a memory mechanism, which is the strongest way to rule out a transient response that only looks like memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1775,
+  "cost_usd": 0.00115865
+}

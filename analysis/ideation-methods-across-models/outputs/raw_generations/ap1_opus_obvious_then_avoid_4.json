@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Separate time-decay from division-dilution of the memory",
+      "description": "Measure decay of the AP-1-associated state as a function of completed divisions rather than elapsed time, comparing cycling cells (dye-dilution or FUCCI-sorted generations) against cells arrested for the same duration (contact inhibition, CDK4/6 inhibition), then use repli-ATAC or nascent-chromatin capture to time how fast accessibility is re-established behind the replication fork at AP-1 sites. A true heritable memory should decay per generation with active post-replicative re-establishment, whereas a long-lived protein or RNA pool should decay per unit time and simply be diluted."
+    },
+    {
+      "title": "Synthetic TRE grammar array to measure memory capacity",
+      "description": "Integrate a library of synthetic reporter loci at a fixed safe-harbor site that systematically vary TRE/CRE motif number, affinity, spacing, and co-occurring partner motifs, then deliver a single calibrated stimulus pulse and measure how long each configuration holds its expression state. This converts 'does AP-1 store memory' into a quantitative dose-response between binding-site grammar and memory half-life, and identifies whether storage requires cooperative multi-site occupancy or a partner factor."
+    },
+    {
+      "title": "Information-theoretic readout of stimulus history",
+      "description": "Deliver defined sequences of stimuli differing in order, dose, and spacing (A-then-B versus B-then-A, pulsed versus sustained), then compute the mutual information between stimulus history and single-cell AP-1 occupancy/accessibility versus the rest of the transcriptome. This asks not merely whether AP-1 persists but how many bits of past experience it actually carries and whether it encodes order and magnitude or only the binary fact of prior exposure."
+    },
+    {
+      "title": "Old-versus-new protein pulse-chase to localize the memory substrate",
+      "description": "Use HaloTag pulse-chase labeling of endogenous FOS, JUN, JUND, and FRA1 combined with single-molecule tracking and FRAP to measure dimer composition, residence time, and turnover of the specific protein molecules present during the memory window. If memory resides in a slowly exchanging long-lived dimer pool (e.g., JUND/FRA1) rather than in chromatin, old labeled protein should remain locus-bound across the memory period; if chromatin is the substrate, newly synthesized protein should be recruited to the same sites."
+    },
+    {
+      "title": "Two-phase maintenance CRISPR screen applied only after the stimulus ends",
+      "description": "Run a genome-wide CRISPRi/ORF screen in which perturbations are induced only after the stimulus is withdrawn, scoring loss of a stable AP-1-driven reporter or loss of primed restimulation, so that maintenance factors are cleanly separated from factors required for the acute response. Hits that are dispensable for induction but required for persistence would define the machinery that actually stores the AP-1 state and provide the causal handle for selectively erasing memory without blocking signaling."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq/CUT&RUN time course after stimulus withdrawal to ask whether AP-1 motif accessibility persists.",
+      "Acute FOS/JUN degron or knockdown during the memory window to test whether the stored state is erased.",
+      "Dominant-negative A-Fos or T-5224 AP-1 inhibition and loss of the primed secondary response.",
+      "Overexpression of c-Fos/c-Jun in naive cells to write the memory state de novo.",
+      "Barcoded clonal lineage tracing (ClonMapper, Rewind, Watermelon) linking AP-1-high states to later fate such as drug resistance.",
+      "Live-cell AP-1 transcriptional reporter imaging to follow single-cell states longitudinally.",
+      "Primed-versus-naive restimulation assays comparing speed and amplitude of the second response (latent enhancer priming).",
+      "H3K4me1/H3K27ac ChIP at AP-1 sites showing retained poised enhancer marks after signal removal.",
+      "Hi-C/Micro-C for persistent enhancer-promoter loops anchored at AP-1-bound sites.",
+      "Nucleosome-binding and pioneer assays showing AP-1 cooperates with lineage TFs to open closed chromatin."
+    ]
+  },
+  "output_tokens": 5962,
+  "cost_usd": 0.2279501
+}

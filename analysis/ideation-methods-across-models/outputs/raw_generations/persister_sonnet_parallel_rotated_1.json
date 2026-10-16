@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 1,
+  "parallel": {
+    "field": "Finance / economics",
+    "problem": "Why do a few firms that look identical on paper survive a market crash or regulatory shock while their peers fail?",
+    "how_studied": "Analysts use event studies and matched-pair comparisons of survivors against non-survivors. They apply survival (hazard) models with covariates such as leverage, liquidity and network position. They use stress-test simulations and difference-in-differences designs to separate hidden heterogeneity from luck."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Finance / economics\nProblem: Why do a few firms that look identical on paper survive a market crash or regulatory shock while their peers fail?\nHow it is studied: Analysts use event studies and matched-pair comparisons of survivors against non-survivors. They apply survival (hazard) models with covariates such as leverage, liquidity and network position. They use stress-test simulations and difference-in-differences designs to separate hidden heterogeneity from luck.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded matched-pair comparison of survivors vs. non-survivors",
+      "description": "Use heritable DNA barcodes to split a clonal population into replicate arms, then test whether the same lineages survive drug in independent replicates (pre-existing, heritable state) or survivors are random (stochastic). Sister-cell pairs or barcode-matched lineages sampled before treatment can be profiled by scRNA-seq to compare the pre-treatment states of future survivors against matched non-survivors, as in matched-pair designs."
+    },
+    {
+      "title": "Hazard-model analysis of single-cell live imaging with pre-treatment covariates",
+      "description": "Track thousands of individual cells by time-lapse microscopy with reporters (e.g., apoptosis, cell cycle, ERK/AKT activity, mitochondrial state) before and after drug, and fit Cox/competing-risk survival models for death versus arrest versus division. Covariates measured before drug (cell cycle phase, signaling pulse history, size, lineage relatedness) quantify which hidden state variables predict survival, analogous to leverage and liquidity in firm hazard models."
+    },
+    {
+      "title": "Difference-in-differences perturbation of candidate state regulators",
+      "description": "Perturb candidate survival-state factors (e.g., drug efflux, anti-apoptotic BCL2-family proteins, stress-response or chromatin regulators) with CRISPRi or inhibitors, and compare the change in survivor fraction before and after drug versus matched untreated and non-targeting controls. This separates a causal effect on drug tolerance from general effects on proliferation or baseline fitness."
+    },
+    {
+      "title": "Stress-test titration across dose, drug combination and environment",
+      "description": "Systematically vary drug dose, exposure duration, pathway co-inhibition, nutrient and oxygen stress, and measure survivor fraction and survivor transcriptional states in each condition. Building the dose-response and shock-response curves for survivors shows whether tolerance is a single robust state or depends on conditions, and which stresses collapse the survivor fraction, as in stress-test simulations."
+    },
+    {
+      "title": "Network-position and state-transition modeling from multi-omic single-cell data",
+      "description": "Combine paired single-cell RNA, ATAC and protein or metabolic readouts of untreated cells and fit a dynamical model (e.g., Markov state-transition or RNA velocity-based) estimating switching rates between sensitive and tolerant states with and without drug. Include spatial or neighbor-cell covariates (contact, paracrine signaling) as a network-position effect, then validate by sorting predicted high-tolerance-state cells and testing their survival prospectively."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 946,
+  "cost_usd": 0.0146435
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Time-lapse imaging to persistence with retrospective tracking",
+      "description": "Continuously image a labeled population from before drug addition through the emergence of surviving colonies, tracking every lineage. Then work backward from the survivors to quantify what distinguished them beforehand: cell cycle phase at treatment onset, division history, size, motility, and local neighbor density."
+    },
+    {
+      "title": "Paired pre- and post-treatment profiling of the same clone via split-population barcoding",
+      "description": "Transduce cells with heritable expressed barcodes, split into treated and untreated arms, and sequence both. Barcodes enriched among survivors identify which clones were primed, and single-cell transcriptomes of their untreated counterparts reveal the pre-existing expression state responsible."
+    },
+    {
+      "title": "Fluctuation-style assay to separate heritable priming from stochastic coin-flips",
+      "description": "Expand many independent small subpopulations from single cells, then treat each identically and count survivors. Large clone-to-clone variance in survivor number indicates a heritable, epigenetically transmitted predisposition, while Poisson-like variance points to a transient, cell-autonomous event at the time of treatment."
+    },
+    {
+      "title": "Chromatin accessibility and histone-mark mapping of survivors versus naive cells",
+      "description": "Apply single-cell ATAC-seq and CUT&RUN for repressive and enhancer marks to drug-naive cells, early survivors, and cells after drug withdrawal. This tests whether survival depends on pre-opened enhancers at stress or lineage-plasticity genes and whether that state is reversible."
+    },
+    {
+      "title": "Signaling and metabolic state reporters measured live at single-cell resolution",
+      "description": "Engineer fluorescent reporters for pathway reactivation (ERK or AKT kinase activity), mitochondrial apoptotic priming, and redox or lipid-peroxidation state, then image them in individual cells across treatment. Correlating reporter trajectories with each cell's fate shows whether survival reflects incomplete target inhibition, a high apoptotic threshold, or a distinct metabolic dependency."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1352,
+  "cost_usd": 0.0638011
+}

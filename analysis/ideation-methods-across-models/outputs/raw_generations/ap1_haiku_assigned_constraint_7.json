@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 7,
+  "constraint": "using patient-derived samples",
+  "prompt": "Constraint: every one of your ideas must be carried out using patient-derived samples. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Longitudinal chromatin profiling of patient biopsies across a stimulus cycle",
+      "description": "Collect paired biopsies or blood samples from the same patients at baseline, peak activation, and after resolution, then run ATAC-seq and FOS/JUN CUT&RUN. Memory predicts that AP-1 motif accessibility and JUN/FOS occupancy stay elevated at loci induced during the flare even after clinical and transcriptional markers return to baseline, and that this persistence is specific to AP-1 motifs compared with matched control motifs such as CEBP or RUNX."
+    },
+    {
+      "title": "Ex vivo stimulus washout and re-challenge in patient-derived primary cells",
+      "description": "Stimulate patient-derived monocytes, T cells, or fibroblasts with a defined AP-1-inducing signal, wash out for several days, then re-challenge and measure the speed and magnitude of AP-1 target gene induction (for example by RNA-seq time courses and nascent transcription). Memory is supported if re-challenged cells respond faster or more strongly than naive cells from the same donor, and the effect is abolished by a pharmacological AP-1 inhibitor or by a degron-based JUN knockdown."
+    },
+    {
+      "title": "Pulse-chase single-cell multiome in patient-derived organoids",
+      "description": "Treat patient-derived organoids with a transient pulse of a stimulus or drug, then profile them with single-cell multiome (scRNA plus scATAC) at multiple times after washout. Track whether AP-1-linked open chromatin persists in specific cell states and whether those states show a faster transcriptional response to a second pulse, using per-cell barcoding to link memory state to later response."
+    },
+    {
+      "title": "Persister-cell tracking across therapy and drug holiday in patient tumor samples",
+      "description": "Obtain matched tumor samples before treatment, during treatment, and at relapse after a drug holiday, and use scATAC-seq and lineage barcodes to follow the same clones over time. Test whether AP-1-accessible persister states that survive therapy are re-enriched at relapse and whether they show a faster re-induction of AP-1 targets than treatment-naive clones, which would support AP-1 as a memory of prior drug exposure."
+    },
+    {
+      "title": "Locus-specific necessity test with dCas9 epigenome editing in patient-derived cells",
+      "description": "In patient-derived cells, use dCas9 fused to a p300 activator or KRAB repressor to open or close AP-1 sites at selected memory loci, then remove the effector and track chromatin state and transcription over time. If AP-1 is the memory mechanism, the edited state should persist after effector removal only when the AP-1 motif is intact, which can be tested by pairing each site with a motif-mutant control."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1855,
+  "cost_usd": 0.00114485
+}

@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 6,
+  "parallel": {
+    "field": "Political science and institutional analysis (path dependence)",
+    "problem": "Whether an institutional choice made at a critical juncture keeps shaping later outcomes through self-reinforcing mechanisms, even after the original conditions that produced it have changed.",
+    "how_studied": "Researchers use event-history models to test whether early decisions predict later outcomes, and they run counterfactual or sequence analyses to ask whether a different early choice would have led to a different trajectory. Difference-in-differences designs around reforms that were later reversed or removed check whether the institution's effects persist after its trigger is gone."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Political science and institutional analysis (path dependence)\nProblem: Whether an institutional choice made at a critical juncture keeps shaping later outcomes through self-reinforcing mechanisms, even after the original conditions that produced it have changed.\nHow it is studied: Researchers use event-history models to test whether early decisions predict later outcomes, and they run counterfactual or sequence analyses to ask whether a different early choice would have led to a different trajectory. Difference-in-differences designs around reforms that were later reversed or removed check whether the institution's effects persist after its trigger is gone.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus-withdrawal difference-in-differences on chromatin",
+      "description": "Pulse cells with an AP-1 inducer (e.g., TPA or EGF), then withdraw it. Compare the decay of ATAC-seq accessibility and H3K27ac at AP-1-bound enhancers (treated) against matched unbound control enhancers (untreated), using a DiD estimate of persistence after the trigger is gone. Persistence in treated loci but not controls would be evidence of memory rather than simple signal-following."
+    },
+    {
+      "title": "Survival analysis of enhancer reversion after trigger removal",
+      "description": "Take dense time-course ATAC-seq or CUT&RUN after washout and model time-to-closure of each AP-1 site with a Cox or discrete-time hazard model. Covariates would include motif strength, co-bound factors such as BRD4 or p300, and the pulse dose. A memory mechanism predicts that sites with self-reinforcing features (e.g., AP-1 binding near Fos/Jun or other AP-1 target genes) have lower closure hazards."
+    },
+    {
+      "title": "Critical-juncture timing and counterfactual trajectory comparison",
+      "description": "Deliver the same AP-1 pulse at different early windows or doses, and let each cohort evolve for days under identical conditions. Use sequence analysis on chromatin and transcriptional state trajectories, then test whether early-pulse differences produce divergent late states that a later identical challenge cannot erase. This separates history dependence from a simple read-out of current conditions."
+    },
+    {
+      "title": "Re-challenge test for primed responses",
+      "description": "After washout, re-stimulate with a different or same signal and measure the speed and magnitude of AP-1 target induction (e.g., time to mRNA and chromatin opening) relative to naive cells, with a control for cells that never saw the pulse. Faster or stronger responses in primed cells indicate stored state. Repeat in knock-in lines with mutated AP-1 sites to test whether AP-1 binding itself is required for the primed response."
+    },
+    {
+      "title": "Break the self-reinforcing loop and track heritability",
+      "description": "Use an inducible degron on Fos or Jun, or dCas9-based recruitment to a specific enhancer, to interrupt AP-1 autoregulation after the pulse, analogous to removing a reform's enforcement mechanism. Combine this with single-cell lineage tracing or live reporters to measure whether the memory persists across cell divisions and is lost when the feedback is broken."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1863,
+  "cost_usd": 0.0011998500000000001
+}

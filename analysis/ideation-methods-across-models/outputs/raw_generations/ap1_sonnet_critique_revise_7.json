@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Transient stimulus with long-term chromatin accessibility tracking: Expose cells (e.g., fibroblasts, keratinocytes, or macrophages) to a defined, transient AP-1-activating stimulus such as TPA, injury, or inflammation. Then run time-resolved ATAC-seq and CUT&RUN for FOS/JUN family members, H3K27ac, and H3K4me1 after the stimulus is removed, over days to weeks and through cell divisions. Persistent AP-1-motif-containing open regions would indicate retained memory.\n2. Acute AP-1 degradation or dominant-negative block during maintenance: Use degron tags (dTAG/AID) or inducible dominant-negative A-FOS to remove AP-1 either during priming or after the memory is formed. Measure whether loss during priming prevents memory, and whether loss afterward erases the memory (accelerated transcriptional response and retained accessibility). This separates AP-1 as an initiator from AP-1 as a maintainer.\n3. Secondary challenge assays with single-cell multiome readout: Prime cells, rest them, and then re-challenge with the same or a different stimulus. Use paired scRNA/scATAC-seq to quantify faster, stronger, or more sensitized induction of AP-1 target genes in primed versus naive cells, and relate this to prior accessibility at specific enhancers. Single-cell resolution distinguishes a graded shift in all cells from an all-or-none switch in a subpopulation.\n4. Live-cell reporters of AP-1 dynamics and lineage tracing: Image endogenously tagged FOS/JUN or an AP-1 transcriptional reporter in single cells, and follow them across divisions with lineage tracking. Test whether past activation history predicts later reporter activity or response in daughter cells, and compute autocorrelation and heritability of the activity state. This shows whether the memory is cell-intrinsic and mitotically heritable rather than due to persistent external signals.\n5. Targeted epigenome editing and motif perturbation at memory loci: Use CRISPR to mutate AP-1 motifs, or dCas9-based recruitment (e.g., dCas9-KRAB, dCas9-p300), at specific primed enhancers. Test whether motif disruption blocks retention of accessibility and enhanced re-induction at that locus, and whether forced opening can substitute for prior priming. Add in vivo checks, such as repeated skin wounding or tumor models, to test whether the effects are causal and functionally relevant.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Nucleosome-resolved single-molecule footprinting at primed enhancers",
+      "description": "Apply Fiber-seq or SMF (long-read methylation footprinting) to primed versus naive cells to read, on single DNA molecules, whether AP-1 motifs are occupied, nucleosome-free, or in remodeled-but-empty states after stimulus washout. This distinguishes persistent AP-1 occupancy from a retained nucleosome-depleted 'scar' and shows if memory is stored per-allele (cis) rather than per-cell."
+    },
+    {
+      "title": "Allele-specific memory in hybrid cells with one-allele motif mutation",
+      "description": "Use F1 hybrid cells (e.g., B6xCast fibroblasts) and allele-specific ATAC/RNA-seq after priming, combined with a heterozygous AP-1 motif edit, to test if memory is cis-encoded at the locus versus carried by diffusible trans factors (e.g., elevated FOS/JUN levels). Retention only on the unedited allele within the same nucleus would prove a locus-intrinsic mechanism."
+    },
+    {
+      "title": "Mitotic bookmarking assays for AP-1",
+      "description": "Perform live-cell imaging and CUT&Tag on mitotically arrested, synchronized, or sorted mitotic cells to test whether FOS/JUN remain bound to chromosome at primed sites, and whether acute mitotic-specific degradation (timed with degron plus nocodazole release) impairs re-establishment of accessibility in G1. This tests the specific mechanism by which AP-1 could transmit state through division."
+    },
+    {
+      "title": "Pioneer-factor handoff and cooperativity mapping by sequential perturbation",
+      "description": "Run time-resolved CUT&RUN/ChIP-exo and motif-grammar analysis (e.g., deep-learning models like ChromBPNet trained on naive versus primed ATAC) to identify which co-factors (CEBP, ETS, RUNX, TEAD, BAF/SWI-SNF) take over occupancy after AP-1 leaves. Then test with inducible BAF inhibition (e.g., BRM014 or degraders) after priming to see whether memory depends on a handed-off maintainer rather than AP-1 itself."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-code titration of memory formation",
+      "description": "Use optogenetic control of FOS/JUN activity or upstream JNK/ERK with defined pulse durations, frequencies, and amplitudes, then measure retained accessibility and re-challenge response days later. Mapping which dynamic features (sustained vs pulsatile, FOS vs JUN dominance, dimer composition) write memory determines the threshold and encoding logic, and tests sufficiency independent of any natural stimulus."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 990,
+  "cost_usd": 0.0177715
+}

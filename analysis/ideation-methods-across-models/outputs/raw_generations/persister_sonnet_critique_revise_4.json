@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-treatment sampling: Tag cells with heritable DNA barcodes, split the population before drug exposure, and profile sister clones by scRNA-seq or bulk sequencing after treatment. Barcodes shared between pre-treatment sisters and post-treatment survivors show whether survival is a pre-existing, heritable state, and comparing sister transcriptomes identifies the predictive features.\n2. Live-cell imaging with reporters and retrospective single-cell profiling: Track thousands of individual cells by time-lapse microscopy before and during drug treatment. Use reporters for signaling (such as ERK or AKT activity), cell cycle, and apoptosis, then fix and profile the survivors by multiplexed imaging or spatial transcriptomics. This links pre-drug dynamics, such as slow cycling or pulsatile signaling, to later survival.\n3. Single-cell multi-omics of transcriptome, chromatin, and proteome: Run paired scRNA-seq and scATAC-seq, or CITE-seq, on untreated, early-treated, and persister populations. Look for rare cell states, such as stress-response, drug-efflux, or dedifferentiation programs, and for the chromatin accessibility and transcription factor activity that maintain them. Trajectory and RNA-velocity analysis can show whether persisters arise by selection or by induced switching.\n4. Quantifying state-switching kinetics with mathematical modeling (fluctuation test): Use Luria\u2013Delbr\u00fcck-style fluctuation assays and time-resolved sorting of high- and low-expressing subpopulations to measure how fast cells switch into and out of the tolerant state. Fit stochastic models to the data to tell apart random mutation, stochastic non-genetic switching, and drug-induced adaptation, and to predict the best dosing schedules.\n5. Functional perturbation screens in persisters: Run CRISPR knockout, CRISPRi, or CRISPRa screens, or small-molecule screens, during drug exposure. Use readouts of survival and persister outgrowth to find genes and pathways needed to enter or maintain tolerance, such as epigenetic regulators, metabolic and oxidative-stress pathways, or anti-apoptotic genes. Validate hits by checking whether co-treatment depletes persisters in vitro and in xenografts.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitotic-memory inheritance test via sister-cell asymmetry",
+      "description": "Time-lapse image newly divided sister pairs and daughters across several generations, then apply drug and score survival concordance versus cousin pairs. Decay of sister/cousin correlation with generation distance gives the memory time of the tolerant state, and asymmetric partitioning of mitochondria, p53, or protein aggregates can be tested as causal inheritance."
+    },
+    {
+      "title": "Single-cell metabolic and biophysical profiling of pre-drug cells",
+      "description": "Before treatment, measure each cell's NAD(P)H/FAD lifetime (FLIM), mitochondrial membrane potential, cell mass (suspended microchannel resonator) and density, then track survival of those same cells. This tests whether physiological state, not just transcripts, predicts survival, and it avoids destructive profiling."
+    },
+    {
+      "title": "Replication-stress and DNA damage history mapping",
+      "description": "Combine EdU/BrdU pulse-chase, 53BP1 nuclear body imaging, and \u03b3H2AX tracking in the generation before drug exposure, then follow outcomes. This tests whether inherited damage or replication-timing differences from the previous cell cycle set up drug tolerance, which is a mechanism expression profiling would miss."
+    },
+    {
+      "title": "Cell-cell interaction and microenvironment perturbation by micropatterning",
+      "description": "Culture identical cells at controlled densities, in micropatterned islands, or in co-culture with conditioned-medium swaps, and quantify persister frequency against local neighbor density, position, and secreted factors, using spatial tracking. This separates intrinsic noise from local paracrine or contact-mediated protection that makes some cells survive."
+    },
+    {
+      "title": "Optogenetic or inducible forcing of candidate states",
+      "description": "Use CRISPRa, degron, or optogenetic control to impose a candidate state, such as a pulse of a stress-response transcription factor or temporary slowing of the cycle, in cells before drug exposure, with a dose-response of the induced level. If persister fraction rises or falls as predicted, the state is causal rather than merely correlated, and the dose-response gives the threshold for tolerance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 788,
+  "cost_usd": 0.015519499999999999
+}

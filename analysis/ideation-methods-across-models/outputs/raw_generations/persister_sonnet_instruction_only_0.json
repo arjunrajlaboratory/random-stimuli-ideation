@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 0,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria\u2013Delbr\u00fcck analogy)",
+      "description": "Borrowing Luria and Delbr\u00fcck's fluctuation test from bacterial genetics, split a barcoded clonal population into many parallel replicate cultures before drug exposure and compare the variance in survivor counts and barcode identities across replicates. Jackpot-like variance with unshared barcodes points to pre-existing or spontaneously arising resistant states, while low variance with the same barcodes recurring points to heritable states. Adding barcode-matched sister cells sequenced before treatment lets you profile the pre-drug state of cells that later survive."
+    },
+    {
+      "title": "Epigenetic-memory half-life from radioactive decay kinetics",
+      "description": "Treat the persister state like an unstable isotope. Sort cells by a candidate state marker, treat them at varied delays after sorting, and fit survival versus delay to estimate the state's decay (switching) rate and its heritability across divisions. Combine this with single-cell ATAC-seq or CUT&Tag to see which chromatin marks track the measured half-life."
+    },
+    {
+      "title": "Statistical-physics noise decomposition of gene expression",
+      "description": "Borrowing the intrinsic/extrinsic noise decomposition from stochastic gene expression physics, use dual-reporter live imaging and single-cell RNA-seq to separate cell-intrinsic stochastic bursting from extrinsic factors such as cell size, cell-cycle phase and mitochondrial content for survival-linked genes. Then test causality by tuning noise without changing the mean, for example by altering promoter burst kinetics with CRISPRi/a, and measure the effect on survival fraction."
+    },
+    {
+      "title": "Time-lapse lineage trees analyzed like family pedigrees in genetics",
+      "description": "Use long-term live-cell imaging with fluorescent reporters of signaling (such as ERK or AKT activity), cell cycle and apoptosis to build full lineage trees before and during drug exposure. Then apply pedigree heritability analysis: do survival fates cluster in sister cells and cousins more than chance predicts, and how many generations does the correlation persist? This separates inherited states from random, non-heritable chance and shows which pre-treatment dynamics, such as ERK pulse frequency, predict survival."
+    },
+    {
+      "title": "Ecological refugia mapping with spatial transcriptomics",
+      "description": "Treat survivors like species in microhabitats. Use spatial transcriptomics or multiplexed imaging on 3D spheroids or xenografts before and after treatment to map survivors against local gradients in oxygen, drug penetration, neighbor identity and cell density. Then use spatial statistics, such as the neighborhood enrichment tests used in ecology, to test whether survival depends on the microenvironment or on intrinsic state. Follow up by manipulating the microenvironment, for example with controlled drug gradients in microfluidic devices."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1031,
+  "cost_usd": 0.016782
+}

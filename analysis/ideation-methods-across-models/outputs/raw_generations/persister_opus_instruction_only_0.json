@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 0,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Seismic precursor monitoring: live-cell reporter time series before drug addition",
+      "description": "Seismologists look for small signals that come before an earthquake. In the same spirit, image thousands of cells for 48\u201372 h before treatment using fluorescent reporters for key pathways (e.g., ERK/AKT KTR sensors, a NF-\u03baB or AP-1 reporter), then add the drug and track which cells survive. Train a classifier on the pre-drug traces to test whether survivors show dynamic signatures beforehand, such as pulsing frequency or variance, rather than just steady-state levels."
+    },
+    {
+      "title": "Ecological bet-hedging assay: fluctuation analysis of the primed state",
+      "description": "Plants spread germination across seasons as a hedge against bad years. Borrowing that idea, run a Luria\u2013Delbr\u00fcck-style fluctuation test: expand many single-cell-derived clones for different numbers of generations, treat them in parallel, and fit survivor-count distributions. This estimates how often cells switch into and out of the drug-tolerant state and how long that state is inherited, which separates stochastic hedging from fixed heterogeneity."
+    },
+    {
+      "title": "Materials fatigue testing: graded drug-pulse stress protocols",
+      "description": "Engineers learn how materials fail by applying cyclic, graded loads instead of a single break test. Expose cells to systematically varied drug pulse lengths, doses and recovery intervals, then measure survivor fractions alongside single-cell RNA-seq at each step. Mapping the dose-history response surface shows whether survival comes from a pre-existing state, adaptation the drug induces, or both, and where the transition happens."
+    },
+    {
+      "title": "Epidemiological contact tracing: spatial neighbor analysis of survivors",
+      "description": "Contact tracing in epidemiology finds out whether cases cluster because of shared exposures. Use high-plex spatial imaging (e.g., multiplexed smFISH or CODEX) on treated cultures and organoids to check whether survivors are enriched near particular neighbors, local densities, or secreted-factor gradients. Then test the candidate niche signals with conditioned-media and co-culture perturbations."
+    },
+    {
+      "title": "Network percolation: CRISPR perturbation of the transition between states",
+      "description": "Percolation theory looks at how removing individual nodes changes whether a whole network stays connected. Run pooled CRISPRi/a screens with a single-cell readout (Perturb-seq) to find regulators whose knockdown or activation shifts how often cells reach the tolerant state. Fitting a gene-regulatory network model to these results then identifies the hub factors whose shared fluctuations push a cell over the survival threshold."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1238,
+  "cost_usd": 0.0380654
+}

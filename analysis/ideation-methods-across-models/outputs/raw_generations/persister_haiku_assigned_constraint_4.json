@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 4,
+  "constraint": "in an organism or cell system other than human or mouse",
+  "prompt": "Constraint: every one of your ideas must be carried out in an organism or cell system other than human or mouse. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Zebrafish BRAF-melanoma lineage-barcoding with time-resolved single-cell profiling",
+      "description": "In a zebrafish line with inducible BRAF(V600E) melanocyte tumors, apply a MAPK inhibitor and use heritable lineage barcodes (e.g., CRISPR scars or Brainbow-style color marks) to determine whether the surviving melanocytes were already present, and clonally related, before treatment. Pair this with scRNA-seq and scATAC-seq of residual tumor at multiple time points to find the chromatin and transcriptional states that distinguish survivors from the cells that died."
+    },
+    {
+      "title": "Barcoded yeast Tn-seq and fluctuation analysis of drug tolerance",
+      "description": "Grow a DNA-barcoded yeast library, or a transposon-mutagenized pool, under a sublethal and then lethal dose of a conserved-kinase or TOR-pathway inhibitor. Use barcode lineage tracking and Luria-Delbr\u00fcck-style fluctuation assays to separate pre-existing from drug-induced survivors, and use Tn-seq enrichment to identify genes whose disruption changes the survivor fraction."
+    },
+    {
+      "title": "Drosophila oncogenic-clone tracking with live ERK-activity reporters",
+      "description": "In Drosophila imaginal discs carrying RasV12 scrib-null tumor clones, feed a MEK inhibitor and track individual clones over time with a live ERK-translocation reporter and G-TRACE or MARCM lineage labels. This tests whether surviving clones had lower pre-treatment ERK output or a distinct growth-rate or cell-cycle state, and whether the survivors then expand."
+    },
+    {
+      "title": "Live-imaging of pre-treatment signaling and cell-cycle state in a transformed rat cell line",
+      "description": "Use a rat cell line transformed with oncogenic BRAF or KRAS and expressing a FUCCI cell-cycle reporter and an ERK-KTR biosensor. Record single cells for days under drug, then retrospectively link each survivor's pre-treatment ERK activity, cell-cycle phase, and drug-efflux reporter level, and confirm the link by sorting those subpopulations and testing their regrowth in drug."
+    },
+    {
+      "title": "Pulse-chase genome-wide CRISPR screen in a hamster cell line to separate tolerance from resistance",
+      "description": "Perform a genome-wide CRISPR knockout screen in a hamster (CHO) or rat cell line transformed with a targeted oncogene, comparing survivor populations after a short pulse of high-dose drug with those after continuous low-dose exposure. Knockouts that change the survivor fraction without changing drug-induced death, or that are enriched only after a drug holiday, would point to tolerance and reversible persistence mechanisms rather than stable resistance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3386,
+  "cost_usd": 0.0019141499999999999
+}

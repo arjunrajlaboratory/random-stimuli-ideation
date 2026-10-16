@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 6,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Bet-hedging portfolio analysis with lineage barcodes",
+      "description": "Borrowing from finance portfolio theory, barcode thousands of genetically identical cells, then track each clone's survival across repeated drug pulses and drug holidays. Compare each clone's mean and variance in survival to separate stochastic bet-hedging (a diversified portfolio of survival odds) from heritable, clone-specific tolerance."
+    },
+    {
+      "title": "Reliability-engineering survival curves from live-cell reporters",
+      "description": "Borrowing from actuarial life tables and reliability engineering, use live-cell imaging with fluorescent viability and cell-cycle reporters (e.g., FUCCI) to record each cell's time to death under drug. Fit hazard models (Weibull, mixture models) to check whether survivors are a memoryless stochastic subpopulation or a distinct, age-independent class with a lower hazard rate."
+    },
+    {
+      "title": "Control-theory system identification of signaling dynamics",
+      "description": "Borrowing from control engineering, use ERK or AKT translocation reporters to record pulsatile signaling in single cells, then fit transfer functions or feedback gain and damping parameters to each cell's response to a drug step input. Test whether survivors show systematically different feedback gains or response bandwidths before treatment, pointing to a dynamical rather than genetic basis for survival."
+    },
+    {
+      "title": "Geological stratigraphy of time-resolved sampling",
+      "description": "Borrowing from stratigraphy, where layered sediments record the sequence of past events, sample cultures at many time points during the first days of drug exposure for single-cell RNA and ATAC profiling. Order the cells along a reconstructed trajectory to show when and how a tolerant state emerges, and whether it arises from a pre-existing layer or is laid down progressively under treatment."
+    },
+    {
+      "title": "Epidemiological transmission-tree reconstruction with CRISPR recorders",
+      "description": "Borrowing from epidemiology, where transmission trees trace which infections came from which sources, use inheritable CRISPR-Cas9 lineage recorders to reconstruct the phylogeny of the cell population. Then test whether survivors cluster in particular clades (heritable, superspreader-like lineages) or are scattered across the tree (independent stochastic escapes), and sequence those clades for shared expression or copy-number features."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2200,
+  "cost_usd": 0.0012431
+}

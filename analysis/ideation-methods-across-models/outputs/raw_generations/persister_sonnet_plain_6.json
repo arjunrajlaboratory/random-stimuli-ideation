@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sister-cell tracking",
+      "description": "Label cells with heritable DNA barcodes (e.g., ClonTracer or Perturb-seq-style), split the population before drug exposure, and see which barcodes survive in parallel replicates. Shared survivors across replicates would indicate a pre-existing, heritable state. Random survivors would indicate stochastic or induced tolerance."
+    },
+    {
+      "title": "Single-cell multi-omics of survivors versus matched pre-treatment states",
+      "description": "Run scRNA-seq with scATAC-seq, or CITE-seq, on untreated cells and on cells at several time points after drug exposure. Use the barcodes to link survivors back to their pre-treatment transcriptional and chromatin states. This could identify the programs that predict survival, such as a drug-tolerant persister signature, EMT-like states, or stress-response states."
+    },
+    {
+      "title": "Live-cell imaging with reporters and retrospective fate mapping",
+      "description": "Time-lapse image cells that carry reporters for signaling (ERK or AKT activity), the cell cycle, apoptosis, and mitochondrial or ROS state. Track each cell's history before and after drug addition, then test which dynamic features, such as pulsatile signaling, a slow-cycling state, or a particular cell-cycle phase, predict survival. Follow-up fixed-cell sequencing or imaging of the same cells could add molecular detail."
+    },
+    {
+      "title": "Genetic and epigenetic perturbation screens in the persister state",
+      "description": "Run CRISPR knockout, CRISPRi or CRISPRa screens, and epigenetic-modifier inhibitor screens (HDAC, KDM5, EZH2 and others) under drug pressure. Measure persister survival, not just proliferation. Hits would show which pathways and chromatin regulators are necessary for tolerance, such as anti-apoptotic buffering, oxidative stress handling, or lipid metabolism."
+    },
+    {
+      "title": "Quantifying drug-target engagement and cell-intrinsic heterogeneity at the single-cell level",
+      "description": "Measure intracellular drug concentration, target occupancy, and downstream pathway inhibition in individual cells. Examples include fluorescent drug analogs, mass cytometry, or phospho-flow. Add measurements of the apoptotic priming state (BH3 profiling) and of metabolic state (e.g., FLIM of NAD(P)H). These would show whether survivors escape because of less drug exposure, rewiring after inhibition, or a higher threshold for death."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 910,
+  "cost_usd": 0.011855500000000001
+}

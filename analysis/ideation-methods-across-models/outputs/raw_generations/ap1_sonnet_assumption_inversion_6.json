@@ -1,0 +1,45 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-specific degron and CRISPR screen",
+      "description": "Use acute degron tagging of individual Fos/Jun/ATF family members at different phases (during priming, after washout, before restimulation) with CUT&RUN and ATAC-seq to define which dimers establish versus maintain the memory state. This resolves the family heterogeneity and separates initiation from maintenance."
+    },
+    {
+      "title": "Acute AP-1 depletion after priming to test chromatin-state-as-memory",
+      "description": "After priming and washout, when AP-1 levels have returned to baseline, rapidly deplete or block AP-1 DNA binding (dominant-negative A-Fos, degron) and then restimulate. If memory persists and the sites keep H3K27ac/accessibility, the chromatin state rather than continuing AP-1 activity carries it; if memory is lost, AP-1 must be continually required."
+    },
+    {
+      "title": "Targeted editing of AP-1 motifs and enhancers",
+      "description": "Mutate AP-1 motifs or use dCas9 epigenetic modifiers at memory-associated enhancers and measure the effect on re-induction of nearby genes. This tests whether persistent accessibility is functionally required rather than just correlated."
+    },
+    {
+      "title": "Single-cell multiome with lineage tracing",
+      "description": "Combine scATAC/scRNA multiome with barcoded lineage tracing or live reporters of memory genes to ask whether memory is inherited by sister cells in a heterogeneous, all-or-none or graded manner. Compare AP-1 motif accessibility and expression noise between memory-positive and memory-negative clones."
+    },
+    {
+      "title": "Stimulus-history time course and in vivo validation",
+      "description": "Vary dose, duration, number of pulses and rest interval to build a memory decay curve, tracking kinetics, amplitude and Micro-C enhancer-promoter contacts at AP-1 loci. Repeat in an in vivo model such as skin wound or inflammatory memory in stem cells, with AP-1 perturbation, to test graded, decaying memory and physiological relevance."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single entity, but it is a family of dimers (Fos, Jun, ATF, Maf) with distinct, context-specific functions.",
+      "Memory is assumed to be carried by AP-1 itself (protein level or activity) rather than by the chromatin state it establishes, which may persist after AP-1 leaves.",
+      "Persistent AP-1 binding or accessibility is assumed to imply memory, i.e. correlation is taken as causation, without testing whether the sites are functionally required.",
+      "Memory is assumed to be a population-average property measured in bulk, though it may be heterogeneous and carried by subsets of cells or alleles.",
+      "The usual test is a single stimulus-then-washout with one readout time, assuming memory is binary and static rather than graded, decaying, and dependent on dose, duration and history.",
+      "Cell culture models are assumed to represent in vivo memory, though signaling, niche and cell division in tissues may alter maintenance.",
+      "Memory is assumed to be maintained at the same loci that were initially opened, ignoring that propagation through cell division, 3D genome contacts or feedback loops may use other mechanisms.",
+      "Memory is assumed to show up as stronger transcription on restimulation, though it may show up as faster kinetics, altered noise, or changed enhancer-promoter contacts."
+    ]
+  },
+  "output_tokens": 1214,
+  "cost_usd": 0.0149119
+}

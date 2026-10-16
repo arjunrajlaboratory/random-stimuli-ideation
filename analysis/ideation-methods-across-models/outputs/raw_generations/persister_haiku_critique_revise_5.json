@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Single-cell lineage barcoding with drug-response tracking: Introduce heritable DNA barcodes (e.g., CRISPR-based scar or lentiviral barcode libraries) into a clonal population, treat with the targeted drug, and track barcode frequencies and transcriptomes over time. This reveals whether survivors are pre-existing clones or arise from non-genetic state transitions, and whether they share a common precursor identity.\n2. Pre-treatment single-cell profiling to find predictive states: Perform scRNA-seq and/or ATAC-seq on untreated cells, then sort or computationally back-trace the cells that later survive (e.g., via live-cell reporters or FACS-based pulse-labeling of persisters). Comparing survivors to non-survivors before drug exposure identifies baseline chromatin, metabolic, or cell-cycle features that predispose cells to persistence.\n3. Live-cell reporter tracking of persister emergence: Use fluorescent reporters for drug target pathway activity, cell-cycle phase (e.g., FUCCI), or stress signaling (e.g., NRF2, p53) combined with time-lapse microscopy under drug. Following individual cells from drug addition to survival or death reveals whether persistence is tied to a transient signaling or cycle state at the moment of treatment.\n4. Genome-wide CRISPR screens for survival versus drug sensitivity: Run pooled CRISPR knockout or CRISPRi/a screens under sublethal and lethal drug doses, sequencing guides in surviving cells at multiple time points. Hits enriched among survivors identify genes whose loss or gain shifts the fraction of persisters, pointing to the pathways that confer tolerance rather than resistance.\n5. Epigenetic and metabolic perturbation of persister fraction: Measure persister frequency after perturbing chromatin regulators (e.g., HDAC or KDM inhibitors), histone marks, or metabolic pathways (e.g., oxidative phosphorylation, lipid or iron metabolism) before and during drug exposure, and assess whether the survival fraction changes. Dose-response and reversibility experiments distinguish heritable epigenetic memory from reversible metabolic or stress-induced tolerance.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell BH3 profiling for apoptotic priming",
+      "description": "Before drug exposure, measure each cell's mitochondrial apoptotic priming by exposing permeabilized cells to BH3 peptides and quantifying cytochrome c release. Sort cells by priming level and test whether the least-primed fraction is enriched for survivors, which would show that persistence reflects a sub-lethal apoptotic threshold rather than a specific signaling state."
+    },
+    {
+      "title": "Mitotic partitioning of drug target and efflux capacity",
+      "description": "Tag the drug target and an efflux or drug-metabolizing protein with photoconvertible or split fluorescent reporters, then follow individual divisions by time-lapse. Test whether one daughter cell inherits a low target or high efflux load, and whether persisters preferentially descend from the asymmetrically endowed sister."
+    },
+    {
+      "title": "Natural mtDNA heteroplasmy as a lineage marker",
+      "description": "Deep-sequence the mitochondrial genome of the parental population and of survivors to find pre-existing mtDNA variants that serve as native, non-engineered lineage tags. Enrichment of specific mtDNA haplotypes among survivors would indicate heritable mitochondrial background underlies persistence, and an ethidium-bromide-depleted arm would test whether this depends on oxidative phosphorylation."
+    },
+    {
+      "title": "Per-cell intracellular drug quantification with lysosomal sequestration probes",
+      "description": "Measure the free intracellular concentration of the drug in individual cells, using intrinsic fluorescence or a clickable analog, together with LysoTracker-based acidic compartment volume. Survivors with low cytosolic drug despite equal extracellular dosing would point to pharmacokinetic sequestration as a cause of persistence, separate from target biology."
+    },
+    {
+      "title": "Density-dependent autocrine rescue and conditioned-medium swap",
+      "description": "Titrate seeding density and swap conditioned medium between high- and low-density cultures before drug addition to test whether the persister fraction depends on secreted factors accumulated by neighboring cells. Fractionating the conditioned medium (e.g., by size exclusion) would then isolate the protective factor if the effect is medium-borne."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2394,
+  "cost_usd": 0.0013476999999999999
+}

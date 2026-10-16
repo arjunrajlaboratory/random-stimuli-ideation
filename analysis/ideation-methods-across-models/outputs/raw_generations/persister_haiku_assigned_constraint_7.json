@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 7,
+  "constraint": "using patient-derived samples",
+  "prompt": "Constraint: every one of your ideas must be carried out using patient-derived samples. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing in patient-derived models",
+      "description": "Label patient-derived organoids or PDX-derived cells with high-complexity DNA barcodes, treat with the targeted drug, and track which clones survive and when. Pair this with single-cell RNA-seq on the barcoded cells to separate survivors that were already transcriptionally primed from those that became tolerant only after drug exposure."
+    },
+    {
+      "title": "Time-resolved single-cell multiome on patient-derived organoids",
+      "description": "Profile chromatin accessibility and gene expression together (scATAC + scRNA) across a dense time course, such as 0, 6, 24, 72 hours and later, after drug exposure. This shows whether persisters carry a pre-existing accessible chromatin state (transcription-factor motifs such as AP-1 or NFI) that is then amplified, and which regulators drive the transition."
+    },
+    {
+      "title": "Functional characterization of sorted persisters with reversibility tests",
+      "description": "Sort surviving cells from patient-derived organoids using a slow-cycling or label-retention reporter (e.g., H2B-GFP pulse-chase) or a fluorescent cell-cycle reporter, then expand them in drug-free medium. Re-challenge them with the drug and run drug-holiday experiments to test whether tolerance is reversible and how stable it is across generations."
+    },
+    {
+      "title": "Pooled CRISPR knockout screen comparing persisters with bulk cells",
+      "description": "Transduce patient-derived organoids with a genome-wide or druggable-genome CRISPR library, treat at a near-lethal drug dose, and compare guide representation in surviving cells against untreated bulk cells. Genes whose loss enriches or depletes survivors reveal the regulators that make persisters tolerant and the dependencies they may be vulnerable to as combination targets."
+    },
+    {
+      "title": "Spatial multiplexed profiling of persister niches in matched patient biopsies",
+      "description": "Collect matched pre-treatment and on-treatment biopsies (or on-treatment PDX tumors) and use multiplexed imaging (CODEX or IMC) or spatial transcriptomics to map surviving tumor cells. Relate their positions to hypoxia, vasculature, stromal and immune neighborhoods, and cell-cell contacts to identify microenvironmental signals that protect the rare survivors."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2122,
+  "cost_usd": 0.00128055
+}

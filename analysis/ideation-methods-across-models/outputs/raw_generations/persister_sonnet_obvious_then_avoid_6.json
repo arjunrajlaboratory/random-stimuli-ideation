@@ -1,0 +1,49 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment state tracking with lineage-linked sister-cell sampling",
+      "description": "Split clonally related sister cells (via barcodes) so that one sibling is profiled by scRNA-seq before drug while the other is treated, then use barcode matching to identify which pre-drug transcriptional states predicted survival. This directly tests whether survivors are predetermined, rather than inferring it after the fact."
+    },
+    {
+      "title": "Heritability decay of survival across generations",
+      "description": "Isolate survivors and non-survivors, expand them without drug for varied numbers of divisions, then re-challenge to measure how fast the survival phenotype is lost. Fitting the decay kinetics gives the switching rates and memory timescale, which indicate whether the mechanism is stochastic, epigenetic, or genetic."
+    },
+    {
+      "title": "Mitochondrial and organelle inheritance asymmetry at division",
+      "description": "Use live imaging of mitochondrial content, membrane potential, ROS and lysosomal drug sequestration in mother cells and daughters, then test whether unequal partitioning before treatment predicts survival. Photoactivatable or tagged organelles would let you test whether the inherited organelle state causes survival."
+    },
+    {
+      "title": "Single-cell measurement of apoptotic threshold dynamics",
+      "description": "Use live reporters for caspase activation and mitochondrial outer membrane permeabilization, together with BH3 profiling of single cells. This quantifies cell-to-cell variation in how close each cell is to the death threshold and in the timing of commitment after drug exposure, separately from drug target inhibition."
+    },
+    {
+      "title": "Intracellular drug and target-engagement heterogeneity",
+      "description": "Use a fluorescent drug analog, a biosensor, or mass-spec imaging to measure per-cell intracellular drug concentration and target occupancy or pathway-reporter suppression (e.g., ERK kinase translocation reporter) over time. Linking these to survival tests whether survivors escape because the drug never fully engages the target or because they tolerate full inhibition."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs treated cells to find persister transcriptional states",
+      "Whole-genome/exome sequencing of survivors to test for resistance mutations",
+      "Barcode lineage tracing (e.g., ClonTracer) to test pre-existing vs induced resistance",
+      "ATAC-seq/ChIP-seq for chromatin accessibility and histone marks in persisters",
+      "Fluctuation test (Luria-Delbr\u00fcck) to distinguish mutation from non-genetic adaptation",
+      "Time-lapse live-cell imaging of single-cell drug response and fate",
+      "Proteomics/phosphoproteomics of survivors to find bypass signaling",
+      "CRISPR knockout/activation screens for survival genes",
+      "Testing epigenetic inhibitors (HDAC, EZH2, BET) in combination with the drug",
+      "Metabolic profiling (e.g., OXPHOS, glycolysis, lipid state) of persisters",
+      "Measuring drug efflux/ABC transporter expression and drug uptake",
+      "Cell cycle analysis showing quiescent/slow-cycling cells"
+    ]
+  },
+  "output_tokens": 1119,
+  "cost_usd": 0.0139697
+}

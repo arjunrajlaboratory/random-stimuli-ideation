@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after a priming stimulus",
+      "description": "Prime cells (e.g., fibroblasts, macrophages, or neurons) with a stimulus, then use degron tags (dTAG/AID) to rapidly deplete FOS/JUN family members after priming but before restimulation. If the enhanced secondary response and chromatin accessibility persist without AP-1, AP-1 is only an initiator. If they vanish, AP-1 actively maintains the memory."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Combine barcoded lineage tracing with paired scATAC/scRNA and live AP-1 reporters. Compare sister cells across several divisions after transient stimulation, and test whether AP-1 motif accessibility and response magnitude are inherited more strongly than expected from shared lineage or noise."
+    },
+    {
+      "title": "Optogenetic AP-1 pulses with decay-kinetics mapping",
+      "description": "Deliver defined optogenetic or chemogenetic pulses of AP-1 activity that vary in dose, duration, and spacing. Then measure how long enhancer accessibility, H3K27ac, and transcriptional hyperresponsiveness last. The result is a quantitative memory curve that shows whether AP-1 activity alone is sufficient to write memory and how its persistence compares with that of other transcription factors."
+    },
+    {
+      "title": "Locus-specific AP-1 site editing and dCas9 recruitment",
+      "description": "Use CRISPR base editing to mutate individual AP-1 motifs at memory-associated enhancers. Separately, use dCas9-based recruitment of AP-1 or of chromatin remodelers (SWI/SNF, BAF) to naive loci. Together these test whether AP-1 binding at a specific site is necessary and sufficient for maintained accessibility and faster reactivation, independent of global AP-1 changes."
+    },
+    {
+      "title": "In vivo cross-context memory comparison with live-binding imaging",
+      "description": "Run parallel experiments in mouse tissue (e.g., skin inflammatory memory, neuronal activity, or trained immunity) with AP-1 knockouts. Pair the knockouts with single-molecule tracking of AP-1 residence time and CUT&Tag over weeks. The goal is to determine whether AP-1 stays bound to enhancers, only leaves behind a pioneer-opened chromatin state, or is replaced by other factors, and whether this holds across tissues."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 882,
+  "cost_usd": 0.0115941
+}

@@ -1,0 +1,43 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding plus single-cell DNA sequencing of survivors (tests A1)",
+      "description": "Transduce cells with a high-complexity genetic barcode library before treatment, then compare barcode frequencies in survivors versus the pre-treatment pool to see whether survivors derive from a few pre-existing clones. Pair with single-cell DNA sequencing or duplex sequencing of survivors to detect rare pre-existing or newly acquired mutations."
+    },
+    {
+      "title": "Pre-treatment live-cell reporter tracking with fate mapping (tests A2)",
+      "description": "Before adding drug, image cells carrying fluorescent reporters for candidate states (e.g., cell-cycle FUCCI, NRF2, or an EMT or stemness reporter) and record each cell's state. Then track each cell's fate under drug and test whether pre-treatment reporter state predicts survival, showing whether survival is pre-determined or drug-induced."
+    },
+    {
+      "title": "Sort-and-rechallenge with drug-holiday persistence assay (tests A3 and A5)",
+      "description": "Sort surviving cells from a treatment window, then grow them drug-free for several passages before re-challenging them with the same dose. Compare survival fractions across cycles, and use FUCCI or EdU pulse-chase to see whether persisters are slow-cycling and whether their tolerance is heritable or reverts to the parental level."
+    },
+    {
+      "title": "Per-cell intracellular drug quantification and efflux reporter imaging (tests A4)",
+      "description": "Measure per-cell intracellular drug concentration with a fluorescent drug analog or imaging mass spectrometry, alongside an ABC-transporter or drug-efflux reporter. Compare survivors with non-survivors at matched target-inhibition readouts (e.g., phospho-marker levels) to separate lower drug exposure from genuine target-independent tolerance."
+    },
+    {
+      "title": "Spatial and microenvironment perturbation in 3D or in vivo models (tests A6)",
+      "description": "Grow the same cell line as spheroids, organoids, or in co-culture with stromal or immune cells, and use spatial transcriptomics or imaging to map where survivors sit relative to gradients of oxygen, drug, and cell density. Add conditioned medium or stromal-derived factors to test whether a paracrine signal rescues survival, and confirm key findings in an in vivo xenograft."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "A1 (genetic identity): The premise that survivors are genetically identical to the bulk population is taken as given. Rare pre-existing subclones or de novo mutations could be missed by bulk sequencing.",
+      "A2 (pre-existing versus induced): Survival is assumed to be determined by a state each cell already has before treatment, not one the drug induces during exposure.",
+      "A3 (heritable, stable state): Survival is assumed to be a stable, heritable cell property rather than a transient, reversible drug-tolerant state that can be lost or regained.",
+      "A4 (uniform drug exposure): The drug is assumed to reach every cell at the same effective concentration, so differences in survival reflect cell biology rather than local drug levels from efflux, uptake, or spatial gradients.",
+      "A5 (binary endpoint, static snapshot): Survival is assumed to be a clean alive-or-dead outcome measured at a single endpoint, ignoring slow cycling, delayed death, and dynamic state changes over time.",
+      "A6 (cell-autonomous, in vitro context): Survival is assumed to be an intrinsic cell property that is unaffected by the surrounding microenvironment, cell density, or paracrine signals, and that a standard 2D culture reproduces the in vivo situation."
+    ]
+  },
+  "output_tokens": 3049,
+  "cost_usd": 0.0016675799999999999
+}

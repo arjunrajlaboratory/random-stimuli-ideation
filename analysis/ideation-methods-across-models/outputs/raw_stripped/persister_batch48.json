@@ -1,0 +1,150 @@
+{
+  "batch": 48,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "88a4a5c6a75f869aaa85da47146c1bef6bea734b640254747acea015be2c9a0c",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Inheritance of proteostatic capacity through cell division",
+      "description": "Use timer or photoconvertible reporters of chaperone and proteasome activity, tracked by time-lapse imaging through cell division, to determine whether daughter cells inherit different proteostatic capacity. Then test whether daughters that inherit high proteostatic capacity are the ones that survive drug treatment.",
+      "idea_id": "persister_haiku_obvious_then_avoid_3_3",
+      "source_sha256": "fe9cc582a4727992ed6cb8de82673b4c8aef8e5dbbb08eb7c4758b3ced98522d"
+    },
+    {
+      "id": "I2",
+      "title": "Pre-treatment lineage barcoding to identify pre-existing survivor states",
+      "description": "Label individual cells with heritable barcodes (e.g., CellTag lineage tags), expose the population to a targeted drug, and trace which clones persist. If survivors already carried a distinct barcode-linked state before treatment, random switching does not explain survival and the pre-existing state becomes the target.",
+      "idea_id": "persister_haiku_future_retrospective_1_0",
+      "source_sha256": "0459277f53a8c31f8d8f841e36fe2e731dc9856f86b232b6fddba0bff7402d49"
+    },
+    {
+      "id": "I3",
+      "title": "Distribution of dormancy depths and re-entry times as a bet-hedging trait",
+      "description": "Use long-term live imaging and quiescence-depth reporters (CDK2 activity, p21, DNA-labeling dilution) to measure the full distribution of dormancy depths and cell-cycle re-entry times before and during treatment. Fitting bet-hedging models to the observed switching rates tests whether survival is an evolved stochastic dormancy strategy rather than a drug-induced response, and predicts the optimal drug-holiday timing to target cells re-entering the cell cycle.",
+      "idea_id": "persister_opus_instruction_only_7_1",
+      "source_sha256": "8d379bdafaf8ecca72953e679e233d1f789d213372b965b57a4aa680616936d7"
+    },
+    {
+      "id": "I4",
+      "title": "Single-cell imaging of intracellular drug concentration",
+      "description": "Synthesize an alkyne- or deuterium-tagged analog of the targeted inhibitor (or use its intrinsic fluorescence) and quantify intracellular drug concentration cell by cell with stimulated Raman scattering microscopy or MALDI/nanoSIMS imaging, at early timepoints and in the eventual survivors. This tests the rarely excluded hypothesis that persisters are cells with lower drug accumulation (from efflux, lipid-droplet sequestration, or lysosomal trapping) rather than cells in a distinct signaling state.",
+      "idea_id": "persister_opus_critique_revise_1_0",
+      "source_sha256": "4c4439ba22a29619db8e3048d3803444e406d32dc42223a7507333cb3985dbf9"
+    },
+    {
+      "id": "I5",
+      "title": "Single-cell mitochondrial heteroplasmy and drug tolerance",
+      "description": "Measure mtDNA copy number and variant allele fraction in single cells, comparing sorted survivors with sensitive cells. Then test causality by swapping mitochondrial variants or depleting mtDNA, to determine whether heteroplasmy level alone changes drug tolerance.",
+      "idea_id": "persister_haiku_obvious_then_avoid_3_4",
+      "source_sha256": "bc8a15cb1b42c9b3c6c714728bb245f429405202417102fa72c677c9e47dc452"
+    },
+    {
+      "id": "I6",
+      "title": "Sister-cell fate concordance by live imaging",
+      "description": "Track sister and cousin cells by time-lapse imaging during treatment, using signaling (ERK KTR) and cell-cycle (CDK2/p21) reporters. Measure how often related cells share the same fate and which pre-treatment reporter dynamics predict survival.",
+      "idea_id": "persister_opus_overgenerate_select_6_2",
+      "source_sha256": "1420dbf8de0665e5dc9f162c02843f9358f8e38e06084db025db6ef680d50570"
+    },
+    {
+      "id": "I7",
+      "title": "Epigenetic and metabolic perturbation of persister fraction",
+      "description": "Measure persister frequency after perturbing chromatin regulators (e.g., HDAC or KDM inhibitors), histone marks, or metabolic pathways (e.g., oxidative phosphorylation, lipid or iron metabolism) before and during drug exposure, and assess whether the survival fraction changes. Dose-response and reversibility experiments distinguish heritable epigenetic memory from reversible metabolic or stress-induced tolerance.",
+      "idea_id": "persister_haiku_plain_5_4",
+      "source_sha256": "46ce6a8820f78c3e3a7f4708628e08f89d86f657f766a86261b4c2ddbdaa7754"
+    },
+    {
+      "id": "I8",
+      "title": "Per-cell drug exposure and target engagement as an alternative explanation",
+      "description": "Measure intracellular drug concentration and target occupancy in single cells before scoring survival, using a fluorescent or clickable drug analog, a target-engagement readout (e.g., single-cell CETSA/thermal shift or a proximity reporter for the inhibited kinase), and live efflux-pump activity dyes. This tests whether survivors are under-dosed rather than transcriptionally distinct, and quantifies how much of the survivor fraction that alone explains.",
+      "idea_id": "persister_opus_critique_revise_0_1",
+      "source_sha256": "fad04e180975444035df1f41d8b9be6052295830b4e9f7374a603e9fc4930d1b"
+    },
+    {
+      "id": "I9",
+      "title": "Live imaging of drug exposure and metabolic or organelle state",
+      "description": "Image intrinsically fluorescent or fluorescently labeled drug to measure per-cell uptake and efflux, alongside live readouts of NAD(P)H/FAD autofluorescence (FLIM), mitochondrial content, ROS and lysosomal dye. Single-cell correlations with eventual fate test whether survival reflects lower intracellular drug dose, efflux activity, or distinct metabolic and organelle states.",
+      "idea_id": "persister_sonnet_assigned_constraint_2_4",
+      "source_sha256": "948f5c222f742f9094895be82267954fa153d39c8fb857295b3affbfc3c3a30b"
+    },
+    {
+      "id": "I10",
+      "title": "Fixed-cell single-cell measurement of drug, signaling and apoptotic priming",
+      "description": "At one time point after treatment, use mass cytometry or high-content multiplexed immunofluorescence to measure target inhibition (phospho-signaling), intracellular drug levels (for fluorescent drugs), efflux pump expression, cell-cycle status, and BH3 profiling or cleaved caspase levels in each cell. This distinguishes persisters that avoid drug exposure, bypass target inhibition, or resist apoptosis, and captures multiple mechanisms simultaneously per cell.",
+      "idea_id": "persister_sonnet_assigned_constraint_6_4",
+      "source_sha256": "1b90a33e03338b4153d475ef0c160cdaa0f7ce32d7fd8bd934019cb5caa758cf"
+    },
+    {
+      "id": "I11",
+      "title": "Per-cell drug concentration and target occupancy in survivors versus dying cells",
+      "description": "Use a fluorescent or clickable drug analog, intracellular mass-spectrometry imaging, and efflux-pump reporters to measure single-cell intracellular drug concentration and target occupancy (e.g., by a target-engagement FRET or thermal-shift reporter) in survivors versus dying neighboring cells. This tests whether the surviving fraction results from heterogeneity in drug uptake, efflux, or sequestration rather than from a cell-state difference.",
+      "idea_id": "persister_opus_instruction_only_7_3",
+      "source_sha256": "6a2b975f02143a9e6eabb90a8ea9e1b759ce76bb82b02dc596d75b9ccfa657ee"
+    },
+    {
+      "id": "I12",
+      "title": "Sister-pair concordance decay to estimate memory of the survival state",
+      "description": "Reconstruct lineage trees by imaging up to the time of dosing and score survival concordance between sisters, cousins, and more distant relatives as a function of generations since their common ancestor, giving a model-free estimate of how long the predisposing state is inherited. Combine this with quantification of what is asymmetrically partitioned at those divisions (mitochondria, lysosomes, efflux pumps, protein aggregates) to identify the physical carrier of that memory.",
+      "idea_id": "persister_opus_critique_revise_3_1",
+      "source_sha256": "2fca5f14001c32aa10f2f84b2f771dcef90ce05e7c8dc353e279b05a0a6ccd6b"
+    },
+    {
+      "id": "I13",
+      "title": "Micropatterned arrays and neighbor ablation to test neighborhood effects on survival",
+      "description": "Seed cells on micropatterned islands or in microwells with defined, imaged local density, neighbor identity, and ECM contact, then treat and map survival against each spatial variable. Follow up by optogenetic or laser ablation of specific neighbors, and by conditioned-medium and transwell swaps, to test causality. This distinguishes cell-intrinsic priming from non-cell-autonomous rescue via paracrine factors, local drug depletion, or contact-mediated signaling, which standard dissociated single-cell assays cannot separate.",
+      "idea_id": "persister_opus_obvious_then_avoid_6_4",
+      "source_sha256": "90dbb402b6c1f836e1aed10837cb625a8dd71ebd4fa3fb3d36f4217afc44e253"
+    },
+    {
+      "id": "I14",
+      "title": "Single-cell drug exposure and apoptotic priming",
+      "description": "Measure per-cell intracellular drug levels using fluorescent analogs or imaging mass spectrometry, and measure mitochondrial apoptotic priming with BH3 profiling. This tests whether survival comes from lower effective drug exposure or from a higher apoptotic threshold, which expression data alone cannot separate.",
+      "idea_id": "persister_sonnet_overgenerate_select_6_4",
+      "source_sha256": "c4b03173a51be0fb0e585debed43b1d5076a157707d3688f1de4e178a08dd213"
+    },
+    {
+      "id": "I15",
+      "title": "Reanalysis of public lineage-barcoding data for heritability and memory duration",
+      "description": "Public Watermelon, ClonMapper, TraCe-seq, Rewind and CellTag datasets contain sister- and cousin-cell relationships that allow survival to be partitioned into heritable clonal and stochastic components. Fitting a state-switching model yields the number of generations a primed state persists, a quantity rarely extracted in the original papers.",
+      "idea_id": "persister_opus_assigned_constraint_0_1",
+      "source_sha256": "40b3699b930ae4398a62b62682e7dc1f0d654d1f54a86a5f8b6d2bd47cdc2152"
+    },
+    {
+      "id": "I16",
+      "title": "Pulse-chase dye or histone-tag dilution to estimate persister state timescale",
+      "description": "Pulse-label cells with a dilutable dye or histone tag, then apply the drug and measure how long labeled survivors persist and how their label dilutes. This estimates the timescale of the tolerant state, whether it is stable and heritable or transient and reversible, and the rate at which non-persisters convert into it.",
+      "idea_id": "persister_haiku_instruction_only_0_2",
+      "source_sha256": "e3f3dd9396c87ad51175fb5c6efdfb27eb9c2cd13d1ea4ba704042481e9f6316"
+    },
+    {
+      "id": "I17",
+      "title": "Information-theoretic analysis of cell-to-cell variability and survival",
+      "description": "Measure cell-to-cell variability in target pathway proteins, using live reporters for the drug target's pathway, drug efflux and stress-response activity. Then estimate the mutual information between pre-drug reporter levels and survival, and use time-lapse microscopy with autocorrelation to determine the persistence time of the state. This shows whether survivors are a heritable stochastic subpopulation with a fitness cost in drug-free conditions.",
+      "idea_id": "persister_sonnet_instruction_only_2_2",
+      "source_sha256": "f76f93d9f227096cdbb2119e6e4f6d60c7ed9117cc67c19a3d09db426ac14d6b"
+    },
+    {
+      "id": "I18",
+      "title": "Joint multi-omic profiling of drug-tolerant cells with same-cell survival readout",
+      "description": "Combine single-cell RNA, chromatin accessibility, proteomics, and metabolomics with a survival marker, such as live-dead dye sorting or in situ barcoding, to determine which molecular layer first diverges in survivors. Perturbing the earliest-diverging layer, such as an epigenetic regulator or metabolic enzyme, tests whether it causally drives survival.",
+      "idea_id": "persister_sonnet_future_retrospective_2_2",
+      "source_sha256": "d06c68333af3121689b3c37954906531650e4f3a09fbc1c36579af5b5a8c79f8"
+    },
+    {
+      "id": "I19",
+      "title": "Per-cell intracellular drug quantification",
+      "description": "Measure how much drug each cell accumulates, using fluorescent drug analogs or LC-MS on flow-sorted cells. Test whether survivors have lower intracellular drug levels due to differences in uptake or efflux rather than altered target biology.",
+      "idea_id": "persister_haiku_overgenerate_select_2_2",
+      "source_sha256": "d158564b7f6d65333057a13afe48803631f473cc647bc18cbb86fabc2c865a39"
+    },
+    {
+      "id": "I20",
+      "title": "Barcode lineage tracing to distinguish pre-existing from drug-induced survivors",
+      "description": "Label each founder cell with a heritable DNA barcode, expand the population, treat with drug, and use scRNA-seq to determine whether surviving barcoded clones were already transcriptionally distinct before treatment. Clonal overlap between pre-treatment and survivor states distinguishes selection of rare pre-existing cells from induction of a new state in naive cells.",
+      "idea_id": "persister_haiku_overgenerate_select_0_0",
+      "source_sha256": "652572267dad86b3f0717d084b8a1e94d7c33c5c1011db3d63b2dbf8272cdfb7"
+    }
+  ],
+  "cost_usd": 0.0525032
+}

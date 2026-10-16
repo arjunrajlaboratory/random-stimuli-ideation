@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 3,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop mapping (magnetic materials analogy)",
+      "description": "Borrowing from ferromagnet hysteresis, titrate a stimulus (e.g., TNF, serum, or optogenetic c-Fos/c-Jun induction) up and then down. Measure single-cell AP-1 activity and target-gene expression to test whether the response at identical input depends on prior history, and quantify loop area and decay time after stimulus removal."
+    },
+    {
+      "title": "Bistability and bimodality via dose-history phase diagrams (dynamical systems / Waddington landscape)",
+      "description": "Use live-cell AP-1 reporters (e.g., FOS-GFP or AP-1 TRE reporter) with microfluidic pulses of varied duration, frequency and amplitude. Fit single-cell state-transition models to test whether AP-1 supports two stable attractors and whether transient pulses can flip cells permanently."
+    },
+    {
+      "title": "Chromatin 'scar' archaeology (stratigraphic dating)",
+      "description": "Like dating layers in sediment, perform time-series ATAC-seq, CUT&RUN for AP-1 factors (FOS, JUN) and H3K27ac/H3K4me1, and Hi-C at intervals after stimulus withdrawal. Identify enhancers that remain accessible after AP-1 binding is lost, and test whether the persistence correlates with AP-1 motif density and with faster re-induction on rechallenge."
+    },
+    {
+      "title": "Acute degron 'erasure' test (circuit memory-wipe in electronics)",
+      "description": "Analogous to cutting power to a memory circuit to see if state is volatile versus non-volatile, use dTAG/AID degron or dominant-negative A-FOS to rapidly deplete AP-1 after the initial stimulus and at various later times. Test whether a primed state and the faster second response persist without AP-1 (chromatin-based memory) or vanish (AP-1 self-sustaining memory)."
+    },
+    {
+      "title": "Lineage-tracing 'pedigree' inheritance analysis (population genetics / heritability)",
+      "description": "Time-lapse imaging of AP-1 reporter cells with lineage tracking, then compute mother-daughter and sister-cell correlations of AP-1 state across divisions, treating it like a heritable trait. Compare the decay of correlation to that of a non-heritable noise model, and perturb with cell-cycle arrest or CRISPRi of AP-1 positive-feedback loops (e.g., JUN autoregulation) to test mechanism."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 899,
+  "cost_usd": 0.0117521
+}

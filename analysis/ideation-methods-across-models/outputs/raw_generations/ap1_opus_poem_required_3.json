@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Does the anchor hold? Stimulus pulse-chase with AP-1 degradation",
+      "description": "Deliver a transient stimulus (serum, TGF-beta, or a targeted inhibitor), wash out, then track AP-1 factor levels, chromatin accessibility at AP-1 motifs (ATAC-seq), and H3K27ac/H3K4me1 over days to weeks. True memory requires that the open, primed state persist after AP-1 protein itself has decayed; acute degradation (dTAG/auxin) of FOS/JUN at defined times after the pulse distinguishes whether AP-1 is the stored memory or only the writer that sets the anchor."
+    },
+    {
+      "title": "Filament, filament, filament: lineage barcoding plus AP-1 reporter across cell divisions",
+      "description": "Combine heritable lineage barcodes (e.g., Watermelon/CellTag-style) with a live AP-1 transcriptional reporter and single-cell RNA/ATAC readout, so that an individual cell's AP-1 state before a perturbation can be linked to the behavior of its descendants many divisions later. Memory predicts intra-clone concordance of AP-1 activity and downstream fate that exceeds what is expected from shared transient signaling, and that concordance should decay with a measurable half-life in generations."
+    },
+    {
+      "title": "Throwing the thread twice: dose-response to repeated stimulation",
+      "description": "Stimulate cells, allow full return to baseline, then restimulate at varying intervals and doses, measuring transcriptional output amplitude, latency, and the fraction of responding cells. A memory mechanism predicts potentiated or faster secondary responses (or a leftward-shifted dose-response) specifically at AP-1-dependent loci, and this priming should be abolished by degrading AP-1 during the rest interval if AP-1 maintains it, or preserved if AP-1 merely wrote it."
+    },
+    {
+      "title": "Measureless oceans of space: 3D genome anchoring of AP-1-primed enhancers",
+      "description": "Use Micro-C or region-capture Hi-C together with AP-1 CUT&RUN before, during, and long after a transient stimulus to ask whether AP-1 establishes persistent enhancer-promoter contacts that outlast the signal. Stable loops anchored at AP-1 sites that remain after factor loss would be a structural substrate for memory, testable by degron removal of AP-1 or by CRISPRi silencing of individual anchors."
+    },
+    {
+      "title": "Isolated on a promontory: single-cell perturbation of AP-1 in otherwise identical cells",
+      "description": "In a clonal, unstimulated population, use dCas9-based activation or optogenetic FOS/JUN dimerization to transiently drive AP-1 only in sparse, trackable cells, then follow those cells and their progeny by live imaging and matched single-cell multiome. If a brief, cell-autonomous AP-1 pulse alone is sufficient to shift long-term state and drug response relative to neighbors in the same dish, AP-1 is causally sufficient for memory rather than a correlate of upstream signaling."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2039,
+  "cost_usd": 0.0873594
+}

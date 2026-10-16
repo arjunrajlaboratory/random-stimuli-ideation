@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heterokaryon cis/trans test of where the memory lives",
+      "description": "Fuse a stimulus-primed cell with a naive cell (distinguishable nuclei via labeled histones or species-specific SNPs) and use per-nucleus nascent intron FISH plus single-nucleus ATAC to ask whether the naive nucleus acquires the primed program. If AP-1 memory is carried by diffusible trans factors both nuclei should converge; if it is stored in cis at chromatin, the two nuclei should retain distinct AP-1 target states within the shared cytoplasm."
+    },
+    {
+      "title": "Division clock versus wall clock decay of the memory",
+      "description": "Measure memory decay (reporter output, target-gene expression, AP-1-site accessibility) in parallel populations held non-dividing (CDK4/6 inhibition, contact inhibition, serum starvation) versus freely cycling, and fit decay as a function of elapsed time versus number of completed divisions. A memory that decays per-division implicates replication-coupled dilution of a chromatin-templated state, whereas decay per unit time implicates protein turnover or a self-sustaining feedback loop."
+    },
+    {
+      "title": "Synthetic enhancer library defining the architecture that converts a pulse into a persistent state",
+      "description": "Integrate at a single safe-harbor landing pad a barcoded library of synthetic enhancers that systematically vary AP-1 motif number, affinity, spacing, flanking partner motifs (TEAD, RUNX, NF-kB), and nucleosome-positioning sequences, then measure reporter output and barcode-level accessibility days after a single stimulus pulse. This maps the design rules by which AP-1 binding sites are sufficient to store a past input, separating sequence-encoded memory capacity from endogenous locus context."
+    },
+    {
+      "title": "Decoding stimulus history from single cells as an information-theoretic measurement",
+      "description": "Expose cells to a panel of distinct transient inputs (different cytokines, doses, durations, pulse orders), then at long delay perform joint scRNA-seq/scATAC-seq and train a classifier to recover which input each cell experienced, quantifying the mutual information (bits) between past stimulus and present state. Repeating this under AP-1 perturbation tests whether AP-1 is the actual storage channel by measuring how much recoverable information about the past is lost, rather than merely whether some genes change."
+    },
+    {
+      "title": "In vitro replication of AP-1-bound chromatin to test self-propagation capability",
+      "description": "Assemble nucleosomal arrays containing AP-1 sites, load purified Fos/Jun dimers (and candidate cofactors), and replicate the templates in Xenopus egg extract or a reconstituted replisome system, then assay occupancy and accessibility on the two daughter templates with and without free AP-1 in solution. This asks directly whether AP-1 can survive or be re-templated through fork passage, distinguishing an intrinsically self-propagating mark from a state that must be rebuilt by the soluble pool each cycle."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq time course after a transient stimulus to test whether AP-1-motif accessibility persists after signaling ends",
+      "Acute degron (dTAG/AID) depletion of Fos/Jun to test whether the persistent state collapses",
+      "ChIP-seq/CUT&RUN time courses of AP-1 occupancy before, during, and long after stimulation",
+      "Lineage barcoding (FateMap/Watermelon-style) to test heritability of AP-1-high states across divisions",
+      "Live-cell AP-1 transcriptional reporter imaging to measure state persistence across generations",
+      "Ectopic Fos/Jun overexpression to test sufficiency for installing a long-lived state",
+      "Two-pulse restimulation assays looking for priming/hysteresis (faster or larger second response)",
+      "Motif enrichment analysis comparing persistently vs. transiently accessible regions",
+      "Testing AP-1 dependence of memory in drug-tolerant persister models (melanoma, EGFR-mutant lung)",
+      "Mitotic bookmarking assays: AP-1 retention on mitotic chromosomes and post-mitotic reactivation kinetics"
+    ]
+  },
+  "output_tokens": 5377,
+  "cost_usd": 0.15803509999999998
+}

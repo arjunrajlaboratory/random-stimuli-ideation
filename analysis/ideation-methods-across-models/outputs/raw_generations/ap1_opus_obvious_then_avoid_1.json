@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Division-coupled dilution clock: is memory stored in protein or in chromatin?",
+      "description": "Pulse-chase label AP-1 subunits (SNAP/HaloTag or photoconvertible Dendra-FOS/JUN/JUNB) and measure each subunit's protein half-life and nuclear residence time alongside the decay of functional memory, in parallel in cycling versus pharmacologically arrested (or contact-inhibited) cells. If memory half-life scales with cell-division-driven dilution of a long-lived AP-1 pool rather than with elapsed time in arrested cells, the 'memory' is a protein reservoir, not a chromatin template; the two regimes make opposite, quantitative predictions."
+    },
+    {
+      "title": "Synthetic minimal AP-1 memory circuit with tunable hysteresis",
+      "description": "In a cell type with little endogenous AP-1 activity, build an orthogonal bZIP (AP-1 leucine zipper fused to a non-native DNA-binding domain) driving a synthetic enhancer array in which motif number, spacing, and feedback strength are systematically varied, and drive it transiently with a small-molecule or light input. Measure the hysteresis width and bistability boundary of the resulting input-output curves to determine whether AP-1's autoregulatory architecture is by itself sufficient to store a stable state, and which design parameters set memory duration."
+    },
+    {
+      "title": "Information-theoretic memory capacity across combinatorial stimulus histories",
+      "description": "Expose cells to all sequences of a small set of distinct stimuli (e.g., 3 inputs in 2-3 step orders, including order permutations and repeats), then after a long washout read out single-cell chromatin and transcription plus AP-1 dimer composition (multiplexed proximity ligation or dimer-specific CUT&Tag). Compute the mutual information between past history and present state to quantify how many bits are stored and whether the stored code is non-commutative (order-dependent), which would distinguish a genuine combinatorial AP-1 memory from a single scalar 'how recently were you stimulated' variable."
+    },
+    {
+      "title": "Allele-specific cis test of AP-1 motifs in F1 hybrid cells",
+      "description": "Use F1 hybrid cells (e.g., mouse F1 fibroblasts/ESCs or human trio-derived lines) where the two haplotypes differ at thousands of AP-1 motifs, and measure allele-specific accessibility and transcription at the primed enhancers long after a transient stimulus. Because both alleles share the same nucleus, trans-environment, and AP-1 protein pool, persistent allelic imbalance that tracks AP-1 motif strength is a clean natural-variation test that the motif itself \u2014 not correlated chromatin features \u2014 carries the memory, and can be extended by prime-editing single motif variants in the weaker haplotype."
+    },
+    {
+      "title": "Optogenetic writing rules: dose, duration, and sufficiency of AP-1 for installing memory",
+      "description": "Use a light-controlled AP-1 (optogenetic FOS/JUN dimerization or LOV-caged bZIP) to deliver precisely shaped AP-1 activity pulses \u2014 varying amplitude, duration, and pulse number at fixed integrated dose \u2014 in the complete absence of the upstream stimulus, then assay memory depth weeks later. Mapping whether memory depends on integrated dose, peak amplitude, or number of pulses defines the encoding rule, and successful 'writing' without the physiological signal (or 'erasing' by a counter-pulse of a repressive bZIP) establishes sufficiency with a quantitative transfer function rather than a binary knockout result."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq (or CUT&RUN for H3K27ac) before, during, and long after a transient stimulus to find enhancers that stay open, then test AP-1 motif enrichment in the persistent peaks.",
+      "FOS/JUN ChIP-seq or CUT&RUN time courses to see whether AP-1 occupancy persists at primed enhancers after the signal is gone.",
+      "Knockout/knockdown of FOS, JUN, or dominant-negative A-FOS to test whether memory (faster/stronger secondary response) is lost.",
+      "Acute degron depletion of AP-1 subunits specifically during the 'storage' window to separate establishment from maintenance.",
+      "CRISPRi/CRISPRa or dCas9 targeting of individual AP-1-bound primed enhancers to test necessity/sufficiency for the recall response.",
+      "Single-cell multiome (RNA + ATAC) to correlate AP-1 motif accessibility with primed transcriptional states in individual cells.",
+      "Lentiviral/transposon barcode lineage tracing plus split-and-treat designs to show memory is heritable within clones.",
+      "Reporter line with AP-1-dependent enhancer driving fluorescence to track memory decay kinetics live.",
+      "Test secondary-response priming: restimulate at various intervals and measure amplitude/latency of the recall response.",
+      "Overexpress FOS/JUN ectopically to ask whether AP-1 alone is sufficient to install the primed chromatin state."
+    ]
+  },
+  "output_tokens": 3662,
+  "cost_usd": 0.11607109999999998
+}

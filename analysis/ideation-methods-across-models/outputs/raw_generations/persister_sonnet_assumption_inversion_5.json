@@ -1,0 +1,44 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode lineage tracing with sibling-matched pre-treatment profiling",
+      "description": "Label cells with expressed lineage barcodes, split the clonal sibling cells before drug, and profile one half by scRNA-seq while treating the other half, so that the barcodes identify which pre-treatment states gave rise to survivors. This tests whether survival is pre-existing and heritable, and avoids reading survivors only after the fact. Comparing barcode enrichment across replicate splits separates pre-existing from drug-induced states."
+    },
+    {
+      "title": "Whole-genome and mtDNA deep sequencing of isolated survivors",
+      "description": "Sort or isolate survivors and matched untreated clonal siblings, then run deep whole-genome, copy-number, ecDNA and mtDNA heteroplasmy sequencing to look for rare subclonal variants. This tests whether 'genetically identical' actually holds, and finds low-frequency genetic contributors if it does not. Re-treating clones expanded from survivors indicates whether the resistance is stably inherited."
+    },
+    {
+      "title": "Live-cell single-cell time-lapse with reporters, then retrospective fate assignment",
+      "description": "Image cells for days before and after drug with reporters for cell cycle (FUCCI), ERK or AKT signaling, apoptosis, and drug-target activity, and track each cell's lineage to its eventual fate. Dynamic features such as pre-drug cell-cycle phase, pulsatile signaling, and time of arrest can then be tested as predictors of survival, replacing a single live/dead endpoint with trajectories. Fixing and staining the same cells afterward connects those dynamics to molecular state."
+    },
+    {
+      "title": "Spatial and co-culture manipulation of neighbor effects",
+      "description": "Plate cells at controlled densities and in micropatterns, use conditioned-medium swaps and mixed cultures with fluorescent labels, and run spatial transcriptomics, to test whether survival depends on local neighbors, paracrine signals, or position. Compare the survival of an isolated single cell to that of the same cell type in a cluster. A neighborhood-dependent effect would show survival is not purely cell-autonomous."
+    },
+    {
+      "title": "Single-cell drug uptake, efflux and metabolic imaging",
+      "description": "Measure intracellular drug concentration in individual cells, using fluorescent drug analogs or label-free mass spectrometry imaging, together with efflux activity, NAD(P)H/FLIM metabolic state, mitochondrial membrane potential and ROS, and then follow those cells' survival. This tests whether survivors differ in drug exposure or metabolism instead of in transcript levels. Pharmacological perturbation of the identified efflux or metabolic pathways can then provide a causal test."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical cells means no relevant heritable difference: the survivors are assumed to differ only by non-genetic, stochastic state, ignoring subclonal mutations, mtDNA variants, copy-number changes or extrachromosomal DNA that arise in culture.",
+      "Survivors are a pre-existing, intrinsic cell state (a fixed 'persister' subpopulation) rather than cells that acquire tolerance in response to the drug.",
+      "Survival is a property of the individual cell, so it can be explained by cell-autonomous features, not by neighbors, microenvironment, or secreted factors.",
+      "Population snapshots (bulk or single-cell endpoint omics) taken after drug treatment reveal the cause, even though they only see survivors and cannot tell which pre-treatment cells became them.",
+      "Survival is a binary, single-timepoint outcome (live vs dead) measured by viability at a fixed dose, rather than a dynamic trajectory involving cell-cycle timing, drug exposure, and slow or reversible dormancy.",
+      "The mechanism is transcriptional or signaling-level, so mRNA and protein abundance are the right readouts, while metabolism, drug uptake and efflux, and organelle state are secondary.",
+      "Standard 2D monoculture in vitro with constant drug concentration models the in vivo survivors faithfully."
+    ]
+  },
+  "output_tokens": 1446,
+  "cost_usd": 0.0172408
+}

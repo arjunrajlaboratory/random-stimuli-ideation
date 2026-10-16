@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode lineage tracing with pre-treatment sampling",
+      "description": "Label cells with heritable expressed DNA barcodes, split the population before drug exposure, and profile one arm by scRNA-seq while treating the twin arm. Linking surviving clones to their pre-treatment transcriptional states shows whether survival is predetermined, how heritable it is, and which states predict it."
+    },
+    {
+      "title": "Single-cell multi-omic profiling of persisters over time",
+      "description": "Run scRNA-seq combined with scATAC-seq or CITE-seq on cells before treatment, during drug exposure, and after regrowth. This can identify persister-specific transcriptional programs, such as drug-efflux, stress-response, or dedifferentiated states, along with their regulatory chromatin changes."
+    },
+    {
+      "title": "Live-cell imaging with reporters and lineage tracking",
+      "description": "Use time-lapse microscopy with fluorescent reporters for signaling (ERK or AKT), cell cycle, and apoptosis. Follow single cells and their relatives through drug addition to see whether dynamics, such as pulsatile signaling, slow cycling, or mitochondrial priming, predict survival, and to separate pre-existing from drug-induced tolerance."
+    },
+    {
+      "title": "Functional CRISPR screens in the persister state",
+      "description": "Run genome-wide or focused CRISPRi/CRISPRa screens, with and without drug, that read out persister survival or re-entry into proliferation. Hits reveal the genes and pathways required for tolerance, such as epigenetic regulators, antioxidant or lipid-peroxidation defenses, and anti-apoptotic factors, and point to combination therapies."
+    },
+    {
+      "title": "Single-cell metabolic and apoptotic-priming measurements",
+      "description": "Measure mitochondrial membrane potential, ROS, NADH/FAD autofluorescence (FLIM), and BH3 profiling in individual cells, and sort cells by these readouts before drug exposure. Testing the survival of sorted subpopulations shows whether metabolic state or apoptotic threshold drives the stochastic survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 757,
+  "cost_usd": 0.010353499999999998
+}

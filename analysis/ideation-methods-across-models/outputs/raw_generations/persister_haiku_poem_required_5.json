@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with drug-pulse single-cell profiling",
+      "description": "Label genetically identical cells with heritable lineage barcodes (e.g., CellTag or lentiviral barcodes), expose them to the drug, and run scRNA-seq at several time points to determine whether survivors come from a pre-existing barcoded subclone or arise de novo from drug-induced state switching. This asks what hidden design, like Blake's 'fearful symmetry', lies beneath a population that looks uniform."
+    },
+    {
+      "title": "Pre-treatment profiling linked to later fate",
+      "description": "Use live-cell imaging of reporters (e.g., FUCCI for cell cycle, or a chromatin-accessibility or lineage reporter) before drug exposure, then fix or sort cells and profile them with scRNA-seq or ATAC-seq to see whether survivors were already distinguishable in the 'forests of the night' before treatment. Predictive baseline markers would support a pre-existing-state model."
+    },
+    {
+      "title": "Live-cell kinase biosensor tracking of signaling dynamics",
+      "description": "Express FRET-based ERK and AKT activity biosensors and track single cells through drug treatment by time-lapse microscopy, comparing the signaling pulse patterns of cells that die with those that persist. This tests whether the intensity and timing of the 'fire' of pathway activity during treatment predict survival."
+    },
+    {
+      "title": "Pooled CRISPR screens of survivors versus bulk",
+      "description": "Run genome-wide or focused CRISPR knockout and CRISPRi screens, comparing guide representation in surviving cells against untreated controls under drug, to identify genes whose loss enriches or depletes persisters. Hits that are essential only in the persister state would point to targetable vulnerabilities that the drug alone does not reveal."
+    },
+    {
+      "title": "Washout, re-challenge, and epigenetic memory assays",
+      "description": "Remove the drug after the surviving population has formed, then re-challenge and profile chromatin (ATAC-seq, H3K27ac or H3K4me3 CUT&Tag) and metabolic state (e.g., OXPHOS dependence) to test whether the persister phenotype is reversible and heritable. Stable epigenetic memory would suggest a regulated state transition rather than a fixed genetic one, a reversal that Blake's question about who can 'seize the fire' hints at."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2088,
+  "cost_usd": 0.00129255
+}

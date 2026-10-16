@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-molecule residence-time tracking of JUN/FOS after pulsed vs sustained stimulation",
+      "description": "Use single-molecule tracking (HaloTag or SNAP-tagged JUN/FOS) to measure chromatin dwell times of AP-1 after a brief pulse versus continuous stimulation. If memory is encoded kinetically, cells with prolonged AP-1 dwell after a pulse should show persistent enhancer activity, and this dwell-time difference should predict the strength of later responses."
+    },
+    {
+      "title": "Parental-histone pulse-chase at AP-1 enhancers",
+      "description": "Label pre-existing histones (e.g., SNAP-tagged H3.1/H3.3 quenched before stimulation, then pulse-labeled new histones) and track old versus new nucleosomes at AP-1 sites through stimulation, washout, and cell division. Retention of parental, modified nucleosomes at AP-1 enhancers would indicate that memory is carried by histone inheritance rather than by ongoing AP-1 occupancy."
+    },
+    {
+      "title": "Binding-only AP-1 tethering without transactivation domains",
+      "description": "Fuse DNA-binding-competent but transactivation-deficient JUN or FOS (or a bZIP domain alone) to a synthetic recruitment system at a single reporter enhancer, then ask whether occupancy alone sustains chromatin opening after the stimulus is gone. Showing that binding is sufficient, or that activation is required, would separate AP-1 as a structural marker from AP-1 as an active memory driver."
+    },
+    {
+      "title": "Synthetic AP-1 site arrays at a safe-harbor locus with tunable motif affinity",
+      "description": "Knock in arrays of AP-1 motifs with graded affinities and spacings at a silent safe-harbor locus, then measure which configurations generate persistent accessibility after a single stimulus. This would reveal the minimal site architecture (number, affinity, and cooperativity) required for a locus to remember an AP-1 exposure."
+    },
+    {
+      "title": "Phospho-degron stabilized versus wild-type FOS and JUN to decouple protein persistence from transcription",
+      "description": "Generate matched FOS or JUN variants with altered phospho-degron or ubiquitin-site mutations that change protein half-life while keeping transcriptional output comparable, using pulse-chase protein measurements. If longer-lived AP-1 protein extends chromatin memory independently of transcript levels, protein persistence itself would be the memory substrate, analogous to stabilized \u0394FosB."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq or CUT&RUN of JUN/FOS at multiple time points after stimulation and washout",
+      "ATAC-seq to test whether chromatin accessibility persists after the stimulus is removed",
+      "Conditional or CRISPR knockout of Fos/Jun family members to test whether memory is lost",
+      "Re-stimulation time courses to check for faster or stronger second responses (trained-immunity-style)",
+      "H3K27ac/H3K4me1 and other enhancer-mark profiling across a stimulus-washout timecourse",
+      "Single-cell RNA-seq or ATAC-seq to see heterogeneity in memory persistence",
+      "Dominant-negative c-Jun or AP-1 inhibitor experiments to block memory formation",
+      "Live-cell fluorescent AP-1 reporters to track activity across time",
+      "Hi-C or 3D chromatin conformation assays for persistent looping at AP-1 enhancers",
+      "Mitotic bookmarking tests of AP-1 retention on chromosomes during division"
+    ]
+  },
+  "output_tokens": 3615,
+  "cost_usd": 0.00195218
+}

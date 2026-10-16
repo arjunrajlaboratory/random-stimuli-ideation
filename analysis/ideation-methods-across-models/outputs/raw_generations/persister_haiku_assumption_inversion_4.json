@@ -1,0 +1,46 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with drug washout and rechallenge",
+      "description": "Label cells with heritable DNA barcodes, treat with the drug, then remove the drug and re-challenge the survivors. Whether the survivor phenotype is inherited by barcoded descendants, reversed after washout, or re-derived by new cells distinguishes stable clonal resistance from reversible drug-tolerant states."
+    },
+    {
+      "title": "Single-cell live reporters of drug exposure and target engagement",
+      "description": "Combine fluorescent drug analogs or biosensors of target activity (e.g., ERK or AKT kinase reporters) with time-lapse imaging to measure each cell's effective drug dose and pathway inhibition. Testing whether survivors show lower intracellular drug or sustained pathway reactivation addresses pharmacokinetic heterogeneity rather than intrinsic resistance."
+    },
+    {
+      "title": "Microenvironment-perturbed co-culture and spatial profiling",
+      "description": "Compare survival rates across conditioned media, neighbor-density gradients, co-culture with stromal or immune cells, and in vivo xenografts. Spatial transcriptomics of surviving cells in tumors reveals whether niche position or paracrine signaling, rather than cell-intrinsic state, drives survival."
+    },
+    {
+      "title": "Deep single-cell DNA sequencing of pre-treatment and surviving cells",
+      "description": "Use high-depth single-cell or duplex sequencing to detect rare pre-existing variants, copy-number states, and target-site mutations in pre-treatment cells and in the surviving fraction. Enrichment of specific subclones among survivors would show a genetic contribution that bulk analysis misses."
+    },
+    {
+      "title": "Time-lapse fate tracking with causal perturbation of candidate survival markers",
+      "description": "Track single cells by live imaging through drug exposure to separate true resistance from delayed death or quiescence, and record pre-treatment state for each cell. Then sort or fate-map survivors and use CRISPRi or degron knockdown of candidate markers to test whether they are necessary for survival."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survival reflects a cell-intrinsic property, so the microenvironment, neighboring cells, density, and paracrine signals do not matter.",
+      "Survival is a stable, heritable state fixed before or at drug exposure, not a transient, reversible, or stochastic one.",
+      "\"Genetically identical\" means no genetic contribution. Sub-clonal variants, copy-number differences, and drug-target alterations below bulk sequencing detection are assumed absent.",
+      "The drug reaches and acts on every cell with the same effective dose, so differences in uptake, efflux, or target engagement are negligible.",
+      "Survivors are a discrete subpopulation that can be identified by a measurable marker or state, rather than a continuum of drug tolerance.",
+      "Survival at a fixed endpoint reflects true resistance, not delayed death, quiescence, or slow cycling.",
+      "A correlation between a marker and survival implies that the marker causes survival.",
+      "Bulk or population-averaged readouts capture the biology of a rare subpopulation without being dominated by the majority.",
+      "In vitro monoculture results (e.g., cell lines without immune cells, stroma, or 3D structure) generalize to tumors in patients."
+    ]
+  },
+  "output_tokens": 3440,
+  "cost_usd": 0.0018638799999999998
+}

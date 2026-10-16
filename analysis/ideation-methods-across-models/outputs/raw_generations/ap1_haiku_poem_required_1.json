@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus-withdrawal time course with AP-1 and chromatin readouts",
+      "description": "Like the wreck that outlasts its king, test whether AP-1's imprint outlasts its trigger: pulse cells with a stimulus (e.g., TPA or growth factor), withdraw it, and track AP-1 occupancy (CUT&RUN for Fos/Jun), ATAC-seq, and H3K27ac at target enhancers over days. Memory requires these marks to persist after AP-1 protein and mRNA return to baseline."
+    },
+    {
+      "title": "Inducible AP-1 degradation during the memory window",
+      "description": "Use an auxin-inducible degron tag on endogenous c-Fos or c-Jun to remove AP-1 protein at defined times after a priming stimulus, then re-challenge. If AP-1 is the memory mechanism, degrading it after priming should abolish the faster, stronger secondary response, while degradation before priming should not."
+    },
+    {
+      "title": "Re-stimulation kinetics as a memory readout",
+      "description": "Define memory operationally as a primed-versus-naive difference in the second response: compare the latency, amplitude, and duration of AP-1 target gene induction (single-cell RNA-seq or smFISH) after a rest period. Repeat with AP-1 binding-site mutants at primed enhancers to see whether the faster reactivation depends on AP-1 motifs specifically."
+    },
+    {
+      "title": "Single-cell lineage tracking of heritable AP-1 states",
+      "description": "Combine a live AP-1 reporter (e.g., a Fos-promoter destabilized fluorophore or a Fos-TetOff-to-Cre lineage recorder) with time-lapse imaging to follow cell fate across several divisions. Heritable, bimodal persistence of the reporter after the stimulus is gone would show a self-maintaining state rather than a transient response."
+    },
+    {
+      "title": "Mutate AP-1 sites at persistent enhancers and model the feedback loop",
+      "description": "Use CRISPR to mutate AP-1 motifs at enhancers that stay open after stimulation, then measure persistence of chromatin marks and gene expression. Pair these with a bistable feedback model (AP-1 inducing its own enhancers and chromatin remodelers) fitted to the data, to test whether memory requires the positive feedback loop or just an epigenetic mark that AP-1 deposits."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1327,
+  "cost_usd": 0.00093965
+}

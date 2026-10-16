@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 6,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop test (materials science analogy)",
+      "description": "Ramp FOS/JUN levels up and down with an inducible degron (e.g., AID or dTAG) or a titratable Dox system, and measure chromatin accessibility (ATAC-seq) and target transcription at each level. A true memory mechanism should show different on and off thresholds, so the loop area tracks stored state, while AP-1 motif-mutant enhancers should produce no loop."
+    },
+    {
+      "title": "Time-stamped activity recorder (dendrochronology analogy)",
+      "description": "Use sequential, orthogonally inducible lineage tags such as Fos-CreERT2 pulses at different times to mark cells by when AP-1 was active, like growth rings. Then, after stimulus withdrawal, test whether older stamps keep elevated target expression or open chromatin, and whether that persistence scales with the duration and recency of AP-1 activity."
+    },
+    {
+      "title": "Anamnestic re-challenge paradigm (immunological memory analogy)",
+      "description": "Prime cells with a brief AP-1 stimulus, let them rest for several days, then re-challenge and compare the speed and magnitude of target induction with naive cells. Repeat in cells carrying mutations in the AP-1 sites of the primed enhancers or lacking AP-1 binding, since a memory mechanism should specifically lose the faster secondary response when its binding sites are disrupted."
+    },
+    {
+      "title": "History-dependence in pulse-train system identification (control theory analogy)",
+      "description": "Deliver randomized optogenetic AP-1 pulse trains with varying inter-pulse intervals and fit models of target output with and without a persistent state variable. If a memory term is needed, the response to later pulses should depend on earlier pulse timing with a decay constant that matches chromatin persistence rather than mRNA or protein half-life."
+    },
+    {
+      "title": "Stratigraphic occupancy-versus-mark dating (radiometric dating analogy)",
+      "description": "After a stimulus, use SNAP/Halo-tagged FOS pulse-chase and sequential ChIP-seq at multiple time points to build a time-resolved record of AP-1 occupancy alongside histone marks such as H3K27ac and H3K4me1 at each enhancer. Memory predicts that enhancers keeping their marks after AP-1 dissociates are the ones that stay accessible, and acutely degrading AP-1 at a chosen time point should then test whether the marks are necessary to hold that state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3360,
+  "cost_usd": 0.0018226100000000001
+}

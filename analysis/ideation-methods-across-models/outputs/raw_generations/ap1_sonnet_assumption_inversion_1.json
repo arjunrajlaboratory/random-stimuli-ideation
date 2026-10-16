@@ -1,0 +1,45 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-specific degron and ChIP/CUT&RUN time course",
+      "description": "Use endogenous degron tags on individual Fos, Jun and ATF family members, together with paralog-specific CUT&RUN, to find which AP-1 dimers bind during stimulation and which stay bound after the signal ends. Memory-bearing dimers would be those whose acute loss erases the response, which separates them from family members that are only transiently active."
+    },
+    {
+      "title": "Stimulus-then-degrade AP-1 separation of AP-1 from its chromatin legacy",
+      "description": "Stimulate cells, wash out the stimulus, then deplete AP-1 (dTAG or a dominant-negative such as A-Fos) after the transcriptional response has returned to baseline. Compare ATAC-seq, H3K27ac and re-stimulation responses with and without depletion, to test whether AP-1-opened chromatin keeps the memory after AP-1 has gone."
+    },
+    {
+      "title": "Necessity-and-sufficiency with timed optogenetic or chemogenetic AP-1 control",
+      "description": "Drive c-Fos/c-Jun with a light- or drug-inducible system without the natural stimulus, then test whether a pulse is enough to leave a lasting state. Block AP-1 during the original stimulus and see whether later memory is lost. This replaces correlation with causal manipulation."
+    },
+    {
+      "title": "Enhancer-level perturbation of AP-1 motifs and pioneer context",
+      "description": "Run a massively parallel reporter assay in the native chromatin context, using CRISPR base editing of AP-1 motifs at candidate memory enhancers. Pair it with measures of nucleosome occupancy and the binding of other pioneer factors, to see which motifs are needed to set and keep the primed state."
+    },
+    {
+      "title": "Single-cell live imaging and multiomics lineage tracing of memory",
+      "description": "Image AP-1 reporters, such as endogenous Fos-tagged knock-ins, in single cells through stimulation, washout and re-stimulation. Combine this with single-cell multiome (RNA and ATAC) and barcode lineage tracing to see whether memory is bistable, inherited through division, and heterogeneous across clones. Also test priming by comparing re-stimulation response size against a first-exposure control."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is a single entity, when it is really a family of dimers (Fos/Jun/ATF/Maf) with different compositions and functions.",
+      "Memory is carried by AP-1 itself (its abundance or activity) rather than by the chromatin states it creates, which could persist after AP-1 is gone.",
+      "Memory is tested by correlating past stimulus with later AP-1 binding or transcription, which doesn't show that AP-1 is necessary or sufficient.",
+      "AP-1 binding sites are static and bind AP-1 in a uniform way, though binding depends on cell type, pioneer factors and nucleosome context.",
+      "Bulk population averages reflect single-cell behavior, but memory may be heterogeneous or bistable in individual cells.",
+      "Memory means persistence of the stimulus-induced state, though it could instead mean faster or stronger re-induction (priming) on a second exposure.",
+      "One stimulus, cell type and time window are representative, but memory duration and mechanism may differ across contexts, such as fibroblasts, neurons, immune cells and cancer.",
+      "AP-1 persistence is intrinsic to the cell, but it may be maintained by continuing external signals (autocrine loops, MAPK/JNK tone, the microenvironment)."
+    ]
+  },
+  "output_tokens": 1262,
+  "cost_usd": 0.015399900000000001
+}

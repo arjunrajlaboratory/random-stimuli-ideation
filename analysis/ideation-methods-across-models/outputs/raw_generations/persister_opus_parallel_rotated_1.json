@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 1,
+  "parallel": {
+    "field": "Machine learning",
+    "problem": "Why do a few training runs of the same network architecture, on the same data and with the same hyperparameters, reach high accuracy or survive heavy pruning while most do not (the 'lottery ticket' phenomenon)?",
+    "how_studied": "Researchers run large sweeps over random seeds while controlling sources of randomness separately (weight initialization versus data order versus dropout). They rewind successful runs to early checkpoints to find when the winning trajectory was set. Linear mode connectivity tests, iterative magnitude pruning with weight rewinding, and probes of the initial weights show whether success was already present at initialization or arose during training."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Machine learning\nProblem: Why do a few training runs of the same network architecture, on the same data and with the same hyperparameters, reach high accuracy or survive heavy pruning while most do not (the 'lottery ticket' phenomenon)?\nHow it is studied: Researchers run large sweeps over random seeds while controlling sources of randomness separately (weight initialization versus data order versus dropout). They rewind successful runs to early checkpoints to find when the winning trajectory was set. Linear mode connectivity tests, iterative magnitude pruning with weight rewinding, and probes of the initial weights show whether success was already present at initialization or arose during training.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Split-sister concordance assay (linear mode connectivity analog)",
+      "description": "Barcode a clonal population, split it into replicate flasks at defined numbers of generations before treatment, then treat all replicates and measure the overlap of surviving barcodes across splits. Concordance as a function of split-to-treatment interval gives a quantitative 'memory half-life' for the primed state, separating heritable priming present at the split from fluctuations arising afterward \u2014 the biological counterpart of testing whether two runs from the same checkpoint land in the same basin."
+    },
+    {
+      "title": "Rewinding survivors to their pre-treatment checkpoint",
+      "description": "Use expressed, sequenceable lineage barcodes so that the barcodes of drug survivors can be read out and then traced back into a sibling aliquot of the same population that was profiled (scRNA-seq, scATAC-seq, or barcode-targeted imaging) before any drug exposure. This retrospectively isolates the molecular state of the future survivors at the 'initialization checkpoint' rather than comparing survivors to the bulk population after selection has already distorted it."
+    },
+    {
+      "title": "Iterative selection with lineage rewinding (IMP analog)",
+      "description": "Run repeated cycles of drug kill, drug withdrawal, and re-expansion, tracking at each round whether the same barcodes survive (a fixed ticket) or a freshly drawn set does (a resampled ticket), and in parallel re-expand frozen early-passage aliquots of the same clone to test whether the winning potential was already fixed at that earlier point. Comparing 'same-ticket' recurrence against reset-by-rewinding mirrors iterative magnitude pruning with weight rewinding."
+    },
+    {
+      "title": "Factorial dissection of the noise sources that generate survivors",
+      "description": "Separately and combinatorially perturb each candidate source of cell-to-cell variability \u2014 chromatin-encoded memory (EZH2/DNMT/HDAC inhibition), cell-cycle phase at exposure (synchronization or live reporters), division history and local density, and drug-exposure variability (fluorescent drug analog uptake) \u2014 and score how each changes both the survivor fraction and the split-sister barcode concordance. This is the direct analog of ablating initialization versus data order versus dropout to find which randomness actually determines success."
+    },
+    {
+      "title": "Prospective sorting test of the pre-treatment state",
+      "description": "Train a classifier on the rewind data to predict survival from the untreated single-cell state, convert the top features into a live-cell readout (knock-in reporter, surface marker, or live RNA stain), then sort untreated cells on that readout and measure the fold-enrichment in survivor frequency after treatment. A large prospective enrichment establishes that the ticket is present at initialization, while a null result localizes fate determination to events during drug exposure."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2135,
+  "cost_usd": 0.08944150000000001
+}

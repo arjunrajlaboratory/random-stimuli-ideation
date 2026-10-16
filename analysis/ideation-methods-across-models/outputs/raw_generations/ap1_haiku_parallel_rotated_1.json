@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 1,
+  "parallel": {
+    "field": "Materials science (shape-memory alloys)",
+    "problem": "Whether a metal's recovery of a programmed shape after thermal cycling comes from a stable microstructural state that encodes the training history, rather than from residual stress or plastic damage.",
+    "how_studied": "Investigators run repeated thermal or stress cycles (training) and track the transformation temperatures with differential scanning calorimetry and the strain with dilatometry. They use in situ X-ray diffraction and transmission electron microscopy to identify which martensite variants persist, and they test whether the memory survives annealing that should erase dislocations but not the variant arrangement."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Materials science (shape-memory alloys)\nProblem: Whether a metal's recovery of a programmed shape after thermal cycling comes from a stable microstructural state that encodes the training history, rather than from residual stress or plastic damage.\nHow it is studied: Investigators run repeated thermal or stress cycles (training) and track the transformation temperatures with differential scanning calorimetry and the strain with dilatometry. They use in situ X-ray diffraction and transmission electron microscopy to identify which martensite variants persist, and they test whether the memory survives annealing that should erase dislocations but not the variant arrangement.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Training-rest-retest protocol with a response-threshold readout",
+      "description": "Borrowing the shape-memory training cycle, apply repeated AP-1-inducing pulses (e.g., TPA or EGF) with defined rest periods, then measure the dose-response or activation threshold of an AP-1 reporter on re-exposure. A lasting shift in threshold or faster re-induction (savings) after rest, compared with naive cells, would indicate a stored state rather than residual signal."
+    },
+    {
+      "title": "Dilatometry-style tracking of output after washout",
+      "description": "Track AP-1 reporter activity and target mRNA/protein continuously through stimulus withdrawal, as dilatometry tracks strain after unloading. Fit the decay of the output and check whether a fraction persists beyond the expected half-lives of the Fos/Jun transcripts and proteins, which would point to a self-sustaining state."
+    },
+    {
+      "title": "Variant-identity mapping with ChIP/CUT&RUN and chromatin accessibility at memory timepoints",
+      "description": "As XRD and TEM identify which martensite variants persist, map which AP-1 dimer compositions (Fos, Fra1, Jun, JunB, ATF) occupy which enhancers and what their chromatin accessibility is (ATAC-seq, H3K27ac) at multiple post-training times. Persistence of a specific occupancy and accessibility pattern at trained loci, after AP-1 protein levels return to baseline, would identify the stored microstructure."
+    },
+    {
+      "title": "Anneal-type dissociation test using inducible degradation",
+      "description": "Analogous to annealing that erases dislocations but preserves variant arrangement, use degron-tagged or auxin-inducible Fos/Jun to clear AP-1 protein after training while leaving the epigenetic and transcript landscape intact. If the trained response is retained without AP-1 protein, the memory lies in a downstream state; if it is lost, AP-1 itself is required to hold it."
+    },
+    {
+      "title": "Separating memory from stress damage with dominant-negative and off-target controls",
+      "description": "Mirror the test for residual stress or plastic damage by training cells with a stimulus that causes damage without engaging AP-1 (or with AP-1 blocked via TAM-67 or a dominant-negative Jun during training), then test retention. Memory that requires AP-1 engagement during training and is absent when AP-1 is blocked, while damage-matched controls show no retention, would argue for a specific AP-1-encoded state over nonspecific cellular injury."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1672,
+  "cost_usd": 0.00110715
+}

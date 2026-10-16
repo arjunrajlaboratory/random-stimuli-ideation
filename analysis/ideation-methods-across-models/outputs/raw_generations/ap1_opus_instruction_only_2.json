@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 2,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Memory-kernel system identification (borrowed from control engineering)",
+      "description": "Drive the pathway with optogenetically delivered, precisely patterned input sequences (varying pulse amplitude, duration, interval, and frequency, including pseudo-random m-sequences) while live-imaging a FOS/JUN translocation reporter and an AP-1-driven transcriptional reporter, then fit a Volterra/linear-nonlinear model to extract the system's memory kernel. A genuine memory element shows a kernel with a long tail and history-dependent gain that disappears when AP-1 dimerization is blocked, whereas a pure relay shows a short, stimulus-locked kernel."
+    },
+    {
+      "title": "Channel-capacity accounting of stored stimulus history (borrowed from information theory)",
+      "description": "Expose cells to a defined library of past stimulus histories, then after a long washout quantify, cell by cell, the mutual information between which history a cell experienced and its current AP-1 occupancy, AP-1 motif accessibility, and target transcript counts. This yields an explicit number of bits of past experience retained, a decay-rate curve for those bits over time and divisions, and a direct test of how much of the retained information is lost when AP-1 components are degraded during the washout."
+    },
+    {
+      "title": "Sister-cell divergence clocks (borrowed from plasmid segregation genetics)",
+      "description": "Use live lineage-tracking microscopy plus endpoint single-cell multiome on microdissected sibling pairs to measure how the similarity in AP-1 state between sisters, cousins, and second cousins decays with generational distance after a transient stimulus. Comparing the measured decay constant against a null model of random molecular partitioning at mitosis distinguishes actively maintained, heritable AP-1 states from passive dilution of leftover protein."
+    },
+    {
+      "title": "Event-recorder timestamping of past AP-1 activity (borrowed from flight data recorders)",
+      "description": "Place a base-editing or recombinase-based DNA writer under an AP-1-responsive promoter so that every episode of AP-1 activity is permanently inscribed into a genomic barcode, with recording windows gated by an inducible component. Sequencing the barcode alongside the cell's current phenotype directly tests whether a cell's documented AP-1 history, as opposed to its present AP-1 level, predicts later behavior such as drug tolerance or differentiation bias."
+    },
+    {
+      "title": "Write/erase/overwrite addressing test (borrowed from read-write storage devices)",
+      "description": "Treat AP-1 as a memory register and test each storage operation separately: write by pulsing exogenous FOS/JUN alone with no upstream stimulus, read by assaying target output after full decay of the pulse, erase by targeted degron-mediated removal or dCas9-based site-specific displacement of AP-1 at defined enhancers, and overwrite by writing a competing dimer such as a different bZIP partner. Memory is supported only if writing is sufficient without the original stimulus and erasing at specific loci selectively deletes the corresponding stored response."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3143,
+  "cost_usd": 0.1063419
+}

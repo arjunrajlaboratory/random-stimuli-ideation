@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 4,
+  "constraint": "in an organism or cell system other than human or mouse",
+  "prompt": "Constraint: every one of your ideas must be carried out in an organism or cell system other than human or mouse. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Drosophila wing disc regeneration: JNK/AP-1 (Fos/Jun) chromatin memory",
+      "description": "After transient ablation (e.g., eiger or rpr pulse) in Drosophila wing imaginal discs, profile Fos/Jun (Kayak/Jra) binding and chromatin accessibility (CUT&RUN, ATAC-seq) in regenerated tissue versus never-damaged tissue at multiple time points after healing. Then re-injure and test whether the primed enhancers give faster or stronger transcriptional and regenerative responses, and whether acute Fos/Jun knockdown (TARGET/Gal80ts) during the initial injury alone abolishes this priming."
+    },
+    {
+      "title": "Yeast Gcn4/Yap1 (AP-1 homologs) transcriptional memory single-cell lineage tracking",
+      "description": "In Saccharomyces cerevisiae, expose cells to a transient stress (oxidative stress for Yap1, amino-acid starvation for Gcn4), then track reinduction kinetics of fluorescent reporter genes in microfluidic mother-machine lineages over several generations. Compare wild type with AP-1 binding-site mutants, nuclear-retention mutants and chromatin-modifier deletions (e.g., Set1, histone variant H2A.Z) to determine memory duration, heritability and whether the AP-1 factor itself or a chromatin mark carries the memory."
+    },
+    {
+      "title": "Zebrafish fin/heart regeneration enhancer memory with AP-1 motif perturbation",
+      "description": "Use ATAC-seq, CUT&Tag for H3K27ac and Fos/Jun, and single-cell multiome in zebrafish fin or heart across injury, regeneration and repeat injury. Test necessity of AP-1 motifs by CRISPR deletion of injury-responsive enhancers, or by dominant-negative AP-1 (A-Fos) expressed transiently, to see whether lasting accessibility and faster re-response depend on AP-1 at the first injury."
+    },
+    {
+      "title": "Optogenetic AP-1 dynamics in Drosophila S2 or zebrafish cells with epigenetic readout",
+      "description": "Use optogenetic control of Fos/Jun activity or nuclear translocation (e.g., light-inducible Jun) to deliver pulses of defined duration, frequency and amplitude, then wash out and measure persistence of accessibility (single-cell ATAC), enhancer-reporter activity and nascent transcription (live MS2 imaging). Varying input dynamics reveals thresholds for memory formation and whether memory encodes history (dose/frequency) or just prior activation."
+    },
+    {
+      "title": "C. elegans FOS-1/JUN-1 (AP-1) in stress-induced and transgenerational memory",
+      "description": "Expose C. elegans to transient stress such as wounding, pathogen or heat, and test whether fos-1/jun-1/fos-1 targets show faster or stronger induction upon rechallenge, using auxin-inducible degradation of AP-1 factors only during the first exposure. Combine with tissue-specific ChIP/ATAC-seq and fluorescent reporters over later life stages and subsequent generations, to distinguish somatic from heritable memory and to separate AP-1 requirements for establishment versus maintenance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1172,
+  "cost_usd": 0.016067500000000002
+}

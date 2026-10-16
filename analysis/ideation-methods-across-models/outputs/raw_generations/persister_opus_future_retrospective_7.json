@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Retrospective profiling of the cells that will survive",
+      "description": "Barcode a population, split it into twin halves, treat one half with drug and profile the untreated half to recover the pre-treatment transcriptomes of exactly the clones that went on to survive. This turns a post-hoc description of resistant cells into a direct measurement of the primed state that existed before any drug was applied."
+    },
+    {
+      "title": "Measure switching rates rather than states",
+      "description": "Adapt Luria\u2013Delbr\u00fcck fluctuation analysis to non-genetic variability: grow many small clonal expansions for varying durations before treatment, and use the variance in survivor number across replicates to infer rates of entry into and exit from the tolerant state. The output is a memory half-life and a switching rate, which constrains mechanism far more tightly than any marker gene list."
+    },
+    {
+      "title": "Quantify the drug itself in single cells",
+      "description": "Use fluorescent drug analogs, mass spectrometry imaging, or target-engagement reporters to measure intracellular drug concentration and actual target occupancy cell-by-cell during treatment. The surprising possibility is that survivors differ mainly in how much drug reaches the target\u2014efflux, uptake, lysosomal sequestration\u2014rather than in any downstream signaling or stem-like program."
+    },
+    {
+      "title": "Continuous imaging from pre-treatment dynamics to final fate",
+      "description": "Track thousands of individual cells by live imaging with reporters for pathway activity, cell-cycle position, and division history for days before and through drug exposure, then fix and profile the same cells in situ. This links time-varying features\u2014signaling pulse frequency, time since last division, inherited organelle content\u2014to survival, capturing dynamic information invisible to any snapshot assay."
+    },
+    {
+      "title": "Test whether survival travels with the cell or stays with the neighborhood",
+      "description": "Map survivors against their local context (density, neighbor identity, position in a colony or spheroid), then physically isolate candidate survivors and re-plate them in fresh contexts to see whether the phenotype is transplantable. If survival is conferred by position and neighbors rather than carried by the cell, the entire single-cell-intrinsic framing of persistence needs revision."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2299,
+  "cost_usd": 0.0776039
+}

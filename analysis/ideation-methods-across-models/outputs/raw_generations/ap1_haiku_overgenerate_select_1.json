@@ -1,0 +1,59 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation during the post-stimulus window",
+      "description": "Use dTAG or auxin-inducible degradation of Fos or Jun after an initial stimulus, then re-stimulate. If the second response and chromatin priming fail when AP-1 is removed during washout, AP-1 is necessary for memory maintenance rather than only for initial induction."
+    },
+    {
+      "title": "Pulse-interval series to measure memory decay kinetics",
+      "description": "Deliver two stimulus pulses separated by systematically varied intervals, using optogenetic or precisely timed ligand pulses, and measure the second response (transcription, AP-1 binding, accessibility). The interval-dependence curve gives a quantitative memory timescale that can be compared against models of simple signal carryover."
+    },
+    {
+      "title": "Motif-level editing of AP-1 sites at memory enhancers",
+      "description": "Use base editing or CRISPR to mutate AP-1 motifs at enhancers that gain accessibility or activity after stimulation, leaving neighboring sequence intact. Measuring whether the motif loss abolishes priming and faster re-induction tests whether the AP-1 site itself, rather than the bound factor or general chromatin state, encodes memory."
+    },
+    {
+      "title": "Mitotic inheritance of AP-1-primed chromatin",
+      "description": "Synchronize cells, stimulate, and track AP-1 occupancy and accessibility through mitosis into daughter cells, combining mitotic ChIP or CUT&Tag with clonal readouts. Retention of the primed state across division would indicate heritable memory, whereas loss would indicate that memory depends on continuous AP-1 presence."
+    },
+    {
+      "title": "Barcoded single-cell lineage tracing of memory heterogeneity",
+      "description": "Introduce lineage barcodes and a fluorescent AP-1 target reporter, then stimulate cells and follow clonal lineages over several divisions. Comparing memory between sister and unrelated clones reveals whether memory is cell-autonomous, inherited, and bistable or whether it is a graded, population-level effect."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Time-course CUT&RUN/CUT&Tag of AP-1 occupancy at enhancers after stimulus washout",
+      "Acute degradation (dTAG/AID) of Fos or Jun during the post-stimulus window to test whether AP-1 is required for memory maintenance",
+      "Live single-cell Fos reporter pulse-chase to measure how long the induced state persists",
+      "Varying interval between two stimulus pulses to map the decay kinetics of the memory of the first pulse",
+      "ATAC-seq persistence of chromatin accessibility at AP-1 motifs after stimulus removal",
+      "Tracking H3K27ac and H3K4me1/2 persistence at primed AP-1 enhancers over days to weeks",
+      "Long-term tracking of DNA methylation or repressive marks at AP-1 sites as a slower epigenetic memory layer",
+      "Base-editing or CRISPR mutation of AP-1 motifs at memory enhancers to test whether the motif itself is required for memory",
+      "Synthetic Fos autoregulatory loop to test whether a feedback circuit alone can generate bistable, heritable memory",
+      "Lineage-traced clonal analysis to see whether memory of prior stimulation is inherited through cell divisions",
+      "Mitotic bookmarking assays: does AP-1 stay bound to chromatin through mitosis and reset accessibility afterward",
+      "Single-molecule tracking of Fos/Jun residence time in primed versus naive cells",
+      "Phospho-proteomic and protein half-life analysis of AP-1 subunits to test whether protein stability carries memory",
+      "Transcript half-life measurements for AP-1 target mRNAs to separate transcript persistence from chromatin memory",
+      "Mathematical model fits comparing memory-like persistence against simple signal carryover or ligand retention",
+      "Heterologous memory test: does a prior stimulus change the response to an unrelated stimulus through shared AP-1 sites",
+      "In vitro reconstitution of AP-1 with nucleosomal arrays under pulsed input to test if memory is encoded in chromatin alone",
+      "Ex vivo or in vivo tissue comparisons of activity-dependent AP-1 memory versus cultured cells",
+      "Hi-C or Micro-C changes at AP-1 enhancer loops after stimulus, and whether loops persist",
+      "Competitive decoy TRE oligos or dominant-negative Jun to test sequence specificity of any memory effect",
+      "Transcription inhibitor washout experiments to test whether memory requires ongoing transcription",
+      "Endogenous epitope-tagged Jun knock-in for CUT&Tag tracking across divisions and stimulation cycles"
+    ]
+  },
+  "output_tokens": 3182,
+  "cost_usd": 0.0017348299999999997
+}

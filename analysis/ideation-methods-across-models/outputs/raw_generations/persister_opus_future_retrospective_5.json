@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Memory decay curves from barcoded sister-clone splits",
+      "description": "Barcode a population, let it grow, split it into replicate plates at different numbers of generations, and treat each plate with drug. Measuring how often the same barcodes survive across splits as a function of time since division gives a quantitative memory timescale for the pre-resistant state, like a modern Luria\u2013Delbr\u00fcck fluctuation test. This would show directly whether survival is pre-encoded, heritable but transient, or decided only after the drug arrives."
+    },
+    {
+      "title": "Pre-treatment multiome 'rewind' to identify the priming state",
+      "description": "Use lineage barcodes to go back to the exact cells, before treatment, whose descendants later survived. Profile those cells with joint scRNA-seq, scATAC-seq and protein measurements. Test whether rare survival comes from one coherent primed program or from many different low-probability states that each lead to survival, and identify the chromatin features that keep that state stable across divisions."
+    },
+    {
+      "title": "Continuous live imaging through the drug decision",
+      "description": "Engineer cells with reporters for signaling dynamics (e.g., ERK/AKT pulses), cell-cycle phase and stress responses, then follow thousands of single-cell lineages from days before treatment through weeks on drug. Link each cell's fate to both its history and its earliest responses after the drug is added. This would separate pre-existing state from events after drug exposure, such as cell-cycle phase at drug entry or how signaling recovers."
+    },
+    {
+      "title": "CRISPR screens for regulators of the variability itself, not resistance",
+      "description": "Run pooled perturbation screens, paired with barcoded fate readouts, that score each knockout by how much it changes the fraction of surviving cells, the diversity of survivor fates and the stability of the primed state, not just average drug sensitivity. This could reveal 'variability controller' genes that set how often cells enter rare states, which would be new targets for preventing resistance before it starts."
+    },
+    {
+      "title": "Same clones across many hosts or environments",
+      "description": "Inject a single barcoded population into many mice, or into many in vitro microenvironments that differ in density, stroma or nutrients. Treat each one and compare which barcodes survive. If the same clones survive everywhere, survival is cell-intrinsic; if the overlap depends on context, then spatial and microenvironmental factors such as neighbors, mechanics or metabolism help decide which identical cells survive."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1475,
+  "cost_usd": 0.035042000000000004
+}

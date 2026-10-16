@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 5,
+  "parallel": {
+    "field": "Condensed matter physics (spin glasses and glassy materials)",
+    "problem": "Does a disordered material keep a memory of the temperatures at which it was aged, and is that memory stored in specific spin or structural configurations?",
+    "how_studied": "Physicists use temperature-cycling protocols: aging at T1, a temporary dip to T2 (which causes rejuvenation), then a return to T1. They measure AC susceptibility or thermoremanent magnetization to see whether the T1 state comes back (memory) or starts over. Waiting-time dependence of relaxation curves and simulations that track overlap between configurations identify which degrees of freedom hold the imprint."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Condensed matter physics (spin glasses and glassy materials)\nProblem: Does a disordered material keep a memory of the temperatures at which it was aged, and is that memory stored in specific spin or structural configurations?\nHow it is studied: Physicists use temperature-cycling protocols: aging at T1, a temporary dip to T2 (which causes rejuvenation), then a return to T1. They measure AC susceptibility or thermoremanent magnetization to see whether the T1 state comes back (memory) or starts over. Waiting-time dependence of relaxation curves and simulations that track overlap between configurations identify which degrees of freedom hold the imprint.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus cycling with a transient AP-1 dip",
+      "description": "Prime cells with stimulus A, then transiently remove AP-1 function for a defined window (degron-tagged cJun/FOSL1 or inducible A-FOS), then restore AP-1 and re-challenge with A. If the primed response returns intact, memory survives independently of AP-1; if the dip erases the faster/larger secondary response, AP-1 itself is the storage element, and varying dip duration and depth gives a dose-response for erasure."
+    },
+    {
+      "title": "Waiting-time scaling of memory decay",
+      "description": "Vary priming duration (t_w) across a wide range and then measure, at many rest times (t) after withdrawal, both AP-1 motif accessibility (ATAC/CUT&Tag) and the magnitude of the secondary response. Test whether decay curves from different t_w collapse onto a single function of t/t_w, the aging signature; such scaling would show AP-1 enhancer states integrate exposure history rather than acting as a simple on/off switch."
+    },
+    {
+      "title": "Remanent chromatin state after stimulus removal",
+      "description": "Analogous to thermoremanent magnetization, remove the stimulus and map what remains: AP-1 occupancy, enhancer accessibility, H3K4me1/K27ac, and cohesin-dependent contacts at AP-1 sites, at matched transcriptional baselines. Loci that keep AP-1 footprints after the transcriptional response has fully decayed are the candidate carriers of the imprint, and their overlap with the sites reactivated fastest on re-challenge quantifies how much of the memory they explain."
+    },
+    {
+      "title": "Single-cell overlap order parameter between priming and recall",
+      "description": "Use lineage barcoding plus paired scATAC/scRNA to compute a configuration overlap between each clone's primed state and its state after rest and re-challenge, mirroring overlap distributions in spin-glass simulations. A broad, bimodal overlap distribution restricted to AP-1-bound regions would indicate that a subset of cells and a specific set of AP-1 loci carry the memory, rather than a uniform population-level shift."
+    },
+    {
+      "title": "Frequency-resolved response to oscillating stimulation",
+      "description": "Deliver the stimulus as square-wave pulse trains across several decades of period (minutes to days) using microfluidics or optogenetic AP-1 pathway control, and measure response amplitude and phase lag of AP-1 target output, the biological analog of AC susceptibility. Slow components whose characteristic relaxation time grows with prior priming duration would demonstrate aging-like, history-dependent AP-1 dynamics, and comparing with and without AP-1 degradation localizes those slow modes."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2643,
+  "cost_usd": 0.10650509999999999
+}

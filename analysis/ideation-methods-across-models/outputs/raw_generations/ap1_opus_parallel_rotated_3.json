@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 3,
+  "parallel": {
+    "field": "Macroeconomics",
+    "problem": "Does a temporary recession leave a lasting mark on unemployment or output (hysteresis), and which mechanism (skill loss, capital scrapping, insider wage bargaining) carries it forward?",
+    "how_studied": "Economists use unit-root and persistence tests on unemployment series, and local projections or impulse responses to identified transitory shocks, such as monetary or fiscal surprises, to see whether effects return to baseline. Displaced-worker studies using matched employer-employee data and difference-in-differences follow earnings scarring for decades. Cross-country designs compare cases where the proposed carrier mechanism, such as union coverage, differed."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Macroeconomics\nProblem: Does a temporary recession leave a lasting mark on unemployment or output (hysteresis), and which mechanism (skill loss, capital scrapping, insider wage bargaining) carries it forward?\nHow it is studied: Economists use unit-root and persistence tests on unemployment series, and local projections or impulse responses to identified transitory shocks, such as monetary or fiscal surprises, to see whether effects return to baseline. Displaced-worker studies using matched employer-employee data and difference-in-differences follow earnings scarring for decades. Cross-country designs compare cases where the proposed carrier mechanism, such as union coverage, differed.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Persistence test on post-pulse chromatin time series",
+      "description": "Give cells a brief stimulus that induces AP-1 (e.g., a TPA or cytokine pulse, then washout). Profile accessibility (ATAC-seq) and AP-1 binding (CUT&RUN) at many time points over days to weeks, then fit a decay model to each locus, much as economists run persistence or unit-root tests on unemployment. AP-1-bound sites that stay open after AP-1 protein returns to baseline, while matched non-AP-1 sites return to normal, would be candidate memory loci."
+    },
+    {
+      "title": "Impulse responses to a clean, AP-1-only pulse",
+      "description": "Use an inducible or degron-tagged Fos/Jun construct to deliver a pulse that activates only AP-1, which plays the role of an identified transitory shock. Estimate local-projection-style responses at each later time point: chromatin state, and gene induction after a standard rechallenge. This tests whether AP-1 alone is enough to leave a lasting mark, separate from the other pathways a natural stimulus turns on."
+    },
+    {
+      "title": "Removing AP-1 at different phases to find what carries the memory",
+      "description": "Use acute degradation (dTAG/auxin) of AP-1 subunits at three points: during the priming pulse, during the quiet interval, or only at rechallenge. In parallel, inhibit candidate carriers such as SWI/SNF recruitment, H3K4me1 writers, or cooperating lineage transcription factors. This mirrors separating skill loss, capital scrapping and insider bargaining as hysteresis mechanisms. If memory survives removing AP-1 during the interval but depends on a co-factor, AP-1 starts the memory but does not maintain it."
+    },
+    {
+      "title": "Barcoded lineage difference-in-differences across cell divisions",
+      "description": "Barcode clones, split sister lineages into primed and unprimed arms, and compare their rechallenge responses at increasing numbers of divisions after priming. This is a difference-in-differences design, like displaced-worker scarring studies. Pairing it with mitotic-chromosome CUT&RUN shows whether AP-1-dependent memory is passed through mitosis (bookmarking) or fades with dilution."
+    },
+    {
+      "title": "Natural variation in AP-1 motifs as a cross-context comparison",
+      "description": "In F1 hybrid cells or donor panels, find enhancers where a SNP disrupts the AP-1 motif on one allele. Compare allele-specific accessibility and expression memory after priming. This is like cross-country designs where the proposed carrier, such as union coverage, differs: if AP-1 drives the memory, it should persist only on the allele with an intact motif, within the same nucleus."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1880,
+  "cost_usd": 0.05991
+}

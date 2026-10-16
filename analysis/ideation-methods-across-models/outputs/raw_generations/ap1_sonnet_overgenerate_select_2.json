@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus-withdrawal degron separation of priming and recall",
+      "description": "Endogenously tag FOS/JUN (or use A-FOS) with a degron, deplete AP-1 only during priming, only after washout, or only at restimulation, and measure the recall transcriptional response. This tests whether AP-1 is needed to establish memory, to maintain it, or only to read it out."
+    },
+    {
+      "title": "Longitudinal AP-1 occupancy versus accessibility after washout",
+      "description": "Run CUT&RUN for AP-1 factors alongside ATAC-seq and H3K27ac at multiple time points after a transient stimulus to identify sites that stay open after AP-1 leaves. Persistence of accessibility without AP-1 would point to AP-1 acting as an initiator, with the memory held in chromatin state."
+    },
+    {
+      "title": "Motif-mutation of memory enhancers by CRISPR",
+      "description": "Use base editing or CRISPR to disrupt AP-1 motifs at a few enhancers that show primed accessibility and faster re-induction, then test for loss of the memory effect. This gives causal, locus-specific evidence that AP-1 binding encodes the memory."
+    },
+    {
+      "title": "Optogenetic AP-1 dose and frequency titration with challenge response",
+      "description": "Use light-controlled AP-1 activation with defined pulse numbers, durations, and intervals, then give a standard second challenge. Memory strength as a function of pulse pattern and decay interval would show whether AP-1 integrates history, and over what timescale."
+    },
+    {
+      "title": "Single-cell multiome with lineage tracking across divisions",
+      "description": "Perform single-cell RNA+ATAC on primed versus naive cells over several divisions, using barcodes or sister-cell pairing, to link AP-1 motif accessibility to recall strength. Matched sister-cell behavior would show whether the memory is heritable and AP-1-dependent."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Time-course ATAC-seq/CUT&RUN of AP-1 (FOS/JUN) occupancy before, during, and after transient stimulus",
+      "Acute degron (dTAG/AID) depletion of AP-1 after stimulus withdrawal to test if memory persists without it",
+      "Single-cell multiome (RNA+ATAC) tracking of primed vs naive cells after restimulation",
+      "Optogenetic pulsed AP-1 activation with varied dose/frequency, then measure response to later challenge",
+      "Dominant-negative A-FOS induction only during the priming window versus only during the recall window",
+      "Dynamic motif-accessibility analysis (chromVAR) to find sites staying open after AP-1 decay",
+      "Live-cell imaging of endogenously tagged FOS/JUN with reporter genes to measure memory half-life",
+      "CRISPR dCas9 deletion/mutation of specific AP-1 motifs at memory enhancers",
+      "Hi-C/micro-C to test if AP-1 stimulus-induced loops persist after stimulus",
+      "Histone mark profiling (H3K27ac, H3K4me1) to see if AP-1-deposited marks outlast AP-1",
+      "Pioneer activity assay: AP-1 binding in nucleosome-dense regions with BAF (SMARCA4) inhibitors",
+      "Mathematical modeling of AP-1 feedback loops to test bistability/hysteresis",
+      "Cell-division lineage tracing: memory inheritance across mitoses with mitotic bookmarking assays",
+      "Compare AP-1 family member composition (FOS vs FOSL vs JUNB) shift over repeated stimulations",
+      "Single-molecule tracking of AP-1 residence time at primed vs naive enhancers",
+      "In vivo skin/immune cell inflammatory memory model with AP-1 inhibition (T-5224)",
+      "Cross-species/tissue comparison of AP-1 motif enrichment in memory domains",
+      "Phospho-state profiling of JUN (JNK) as non-chromatin memory carrier",
+      "Synthetic AP-1 reporter circuits with positive-feedback perturbation",
+      "Mass-spec/ChIP-reChIP for AP-1 partner cofactor complexes (e.g., ETS, BATF) persisting at memory sites"
+    ]
+  },
+  "output_tokens": 1460,
+  "cost_usd": 0.0173863
+}

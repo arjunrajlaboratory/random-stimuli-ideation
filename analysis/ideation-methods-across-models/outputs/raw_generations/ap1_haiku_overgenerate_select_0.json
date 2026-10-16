@@ -1,0 +1,58 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Temporal degron window to separate establishment from maintenance",
+      "description": "Use an inducible degron (auxin or dTAG) to remove Fos or Jun at different times after a stimulus pulse, then re-stimulate. If memory requires AP-1 only during establishment, late removal leaves re-induction intact; if it requires ongoing AP-1, late removal erases it."
+    },
+    {
+      "title": "Occupancy versus chromatin persistence time course",
+      "description": "Run CUT&Tag for Fos/Jun alongside ATAC-seq and H3K27ac at memory-gene enhancers across a time course after pulse withdrawal. If accessibility and H3K27ac outlast AP-1 occupancy, the chromatin state, not the transcription factor, is carrying the memory."
+    },
+    {
+      "title": "Mitotic bookmarking and heritable memory",
+      "description": "Image whether AP-1 stays on mitotic chromosomes and combine barcoded lineage tracing with a pulse to ask whether the primed state is inherited by daughter cells. Persistence through division would support a heritable, cell-intrinsic memory rather than a signal re-supplied each time."
+    },
+    {
+      "title": "Heterodimer composition swap knock-ins",
+      "description": "Replace c-Jun with JunB, or Fos with Fra1 or ATF3, at the endogenous locus and compare the strength and duration of memory after a pulse. If memory depends on partner identity rather than total AP-1 activity, specific dimer composition, not just presence, encodes the memory."
+    },
+    {
+      "title": "Locus-specific synthetic recruitment and hysteresis",
+      "description": "Pulse a tethered AP-1 fragment, or a dimerizer-recruited Jun, onto a silent reporter and release it, then monitor whether the reporter stays active. Combining this with dose ramps up and down tests whether AP-1 alone can produce a stable, hysteretic switch at a locus."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Auxin/dTAG degron removal of Fos or Jun at defined windows after a stimulus pulse, then re-stimulation readout",
+      "CUT&Tag time course of Fos/Jun occupancy after stimulus withdrawal at memory-gene enhancers",
+      "ATAC-seq and H3K27ac time course after pulse withdrawal to see if accessibility outlasts AP-1 binding",
+      "Tethered dCas9 or dimerizer recruitment of a c-Jun/Fos fragment to a silent reporter, pulsed and then released",
+      "Optogenetic AP-1 (opto-Fos/Jun) pulses of defined duration and frequency to test encoding of memory",
+      "Hysteresis test: ramp stimulus dose up and down and compare thresholds for AP-1 target induction",
+      "Mathematical model of AP-1 positive feedback and bistability, fit to time-course data and tested with predicted perturbations",
+      "Protein half-life measurement of Fos and Jun under pulses (pulse-chase, cycloheximide, SNAP tags) to test if protein persistence is the carrier",
+      "Mitotic bookmarking: imaging whether AP-1 stays on mitotic chromosomes and whether memory survives division",
+      "Barcoded clonal lineage tracing combined with a pulse to test whether memory is heritable across cell divisions",
+      "Heterodimer composition swap knock-ins (c-Jun vs JunB vs Fra1, ATF3) to see if memory depends on partner identity",
+      "CRISPR screen for genes required for faster re-induction of AP-1 targets but not for first response",
+      "Proteomics of AP-1 chromatin-associated cofactors (p300/CBP, BRD4, SWI/SNF) before and after pulse to identify memory-linked complexes",
+      "Inhibition of p300/CBP or BRD4 during the post-pulse window to test whether acetylation writers maintain memory",
+      "DNA methylation and 5hmC profiling at AP-1 sites after repeated pulses",
+      "3D chromatin (Micro-C or HiChIP) looping persistence at AP-1 enhancers after stimulus removal",
+      "Single-cell Fos reporter tracking with live imaging to quantify re-induction speed and heterogeneity after priming",
+      "Nuclear condensate or phase-separation analysis of AP-1 clusters persisting after stimulus",
+      "Lineage-tracing mouse model (Fos-CreERT2 or TRAP) with injury or stress pulse and later rechallenge in tissue",
+      "Ex vivo primary cell trained-immunity-style assay: prime with a pulse, rest, then rechallenge and measure AP-1 target output",
+      "Synthetic minimal circuit in engineered cells with inducible AP-1 to test whether a bare feedback loop can store a pulse"
+    ]
+  },
+  "output_tokens": 3424,
+  "cost_usd": 0.0020429999999999997
+}

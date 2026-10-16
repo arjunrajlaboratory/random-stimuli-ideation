@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-chase stimulation with time-resolved AP-1 and chromatin readouts",
+      "description": "Deliver a transient stimulus (e.g., a brief cytokine, growth-factor, or drug pulse), wash it out, and then track AP-1 protein levels, AP-1 motif accessibility (ATAC-seq), and target-gene expression over many days. Memory is supported if accessibility at AP-1-bound enhancers and the primed transcriptional response persist long after the AP-1 proteins themselves and the original signal have decayed."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1 state heritability",
+      "description": "Use expressed DNA barcodes (e.g., Rewind/Watermelon-style clone tracking) combined with single-cell RNA-seq or a live AP-1 reporter to ask whether sister cells and clonal descendants share AP-1 activity levels. Quantifying how the correlation of AP-1 state between relatives decays with generations gives a direct measurement of the memory timescale and whether it is heritable versus transient."
+    },
+    {
+      "title": "Degron-based acute removal to separate maintenance from establishment",
+      "description": "Tag endogenous FOS/JUN family members with an auxin or dTAG degron so AP-1 can be eliminated acutely at chosen times: before, during, or long after a priming stimulus. If removal after priming erases the retained accessibility and the faster/stronger secondary response, AP-1 is actively maintaining the memory rather than merely establishing it."
+    },
+    {
+      "title": "Restimulation challenge assays quantifying the memory benefit",
+      "description": "Compare naive versus previously primed cells in a second challenge (same stimulus, a different stimulus, or a drug-resistance assay) and measure response latency, amplitude, fraction of responding cells, and cell-fate outcome. A genuine memory mechanism should produce a quantitatively faster or larger response that scales with prior AP-1 activation and is abolished by AP-1 perturbation."
+    },
+    {
+      "title": "Targeted AP-1 writing and erasing at specific enhancers",
+      "description": "Use dCas9-fused AP-1 activation domains or dominant-negative A-FOS/engineered motif deletions at candidate enhancers to install or remove AP-1 occupancy in the absence of any stimulus. Sufficiency (synthetic AP-1 recruitment alone creates a long-lived primed state) plus necessity (motif deletion blocks memory at that locus but not globally) is the strongest causal test, and pairing it with CUT&RUN for cofactors and histone marks reveals the molecular carrier of the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1246,
+  "cost_usd": 0.0555024
+}

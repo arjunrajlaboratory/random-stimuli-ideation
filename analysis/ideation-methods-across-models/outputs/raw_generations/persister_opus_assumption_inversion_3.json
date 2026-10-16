@@ -1,0 +1,48 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Twin-split clone assay with a tunable prediction horizon",
+      "description": "Expand single cells into clones, split each clone into a profiled half and a drug-treated half, and ask how well the profiled half's state predicts the treated half's survival as a function of the delay between splitting and treatment. This directly tests the assumption of pre-existing determinism and measures the memory timescale of the fate-determining state, distinguishing heritable priming from a coin flip taken at the moment of treatment."
+    },
+    {
+      "title": "Lineage-barcoded genome and mitochondrial genotyping of survivors",
+      "description": "Barcode the population, then deep-sequence whole genomes, single-cell CNV/ecDNA copy number, and mtDNA heteroplasmy in survivor colonies versus matched pre-treatment sisters of the same barcode lineage. This abandons the premise of genetic identity and tests whether a 'non-genetic' persister phenotype actually co-segregates with cryptic structural, ecDNA, or mitochondrial variation."
+    },
+    {
+      "title": "Density- and neighbor-controlled survival mapping",
+      "description": "Seed cells on micropatterns or in microwells at defined local densities and defined neighbor genotypes, image survival as a function of each cell's measured local neighborhood, and swap conditioned media or laser-ablate neighbors to test causality. This breaks the cell-autonomy assumption and quantifies how much of the rare-survivor probability is set by local context and paracrine signaling rather than by the cell itself."
+    },
+    {
+      "title": "Per-cell drug exposure and apoptotic-threshold measurement",
+      "description": "Combine a fluorescent drug analog or MALDI mass-spectrometry imaging of intracellular drug with efflux-pump activity reporters, single-cell target-occupancy readouts (phospho-signaling by iterative immunofluorescence), and dynamic BH3 profiling of mitochondrial priming. This tests whether survivors differ in the dose they actually receive and the death threshold they must cross, rather than in cellular identity."
+    },
+    {
+      "title": "Long-term fate taxonomy by continuous imaging before retrospective profiling",
+      "description": "Image thousands of cells continuously for weeks through treatment and regrowth to classify every outcome (immediate death, divide-then-die, arrest-then-resume, senescence escape, polyploidization), then retrieve and profile cells from each class separately. This refuses the binary survivor label and deconvolves what are almost certainly several mechanistically distinct routes to survival being averaged together."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survival is caused by something that exists in the cell before the drug is added, rather than by a stochastic decision resolved during treatment or by a state the drug itself induces.",
+      "The determining state is transcriptional, because scRNA-seq is the field's default assay \u2014 as opposed to protein level, signaling, metabolic, chromatin, or mechanical state.",
+      "The cells are truly genetically identical, ignoring subclonal SNVs, CNVs, extrachromosomal DNA, and mitochondrial heteroplasmy that arise and segregate asymmetrically in any cultured population.",
+      "Cells are independent units, so survival is cell-autonomous and unaffected by local density, neighbor identity, secreted factors, or spatial position.",
+      "Every cell receives the same effective intracellular drug dose and the same degree of target engagement, i.e., only biology varies and pharmacology is uniform.",
+      "'Survivor' is a single homogeneous binary category, rather than a mixture of distinct fates (arrested persisters, slow cyclers, senescent cells that later escape, polyploid cells) with different mechanisms.",
+      "The rare state is a discrete subpopulation, so clustering survivors against non-survivors will reveal a cell 'type' rather than the tail of a continuum.",
+      "The fate-determining state is stable long enough for a single snapshot to capture it, i.e., there is one relevant memory timescale.",
+      "It is acceptable that omics is destructive, so a cell's pre-treatment state and its eventual fate can never be measured in the same cell and must be correlated across different cells.",
+      "Any difference found between survivors and the bulk is causal for survival, rather than a consequence of surviving, of drug exposure, or of outgrowth selection.",
+      "2D monoculture of a cell line with a colony-formation endpoint is an adequate model of residual disease in a patient."
+    ]
+  },
+  "output_tokens": 5336,
+  "cost_usd": 0.18504310000000002
+}

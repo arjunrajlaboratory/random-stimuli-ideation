@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 6,
+  "constraint": "with only a single time point measured per sample",
+  "prompt": "Constraint: every one of your ideas must be carried out with only a single time point measured per sample. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Split-clone twin assay for heritable AP-1 state",
+      "description": "Lineage-barcode a population, let it expand, then split each clone's descendants into two dishes: harvest one immediately for scATAC/scRNA (AP-1 motif accessibility, FOS/JUN/FRA-1 levels) and challenge the other with a stimulus and harvest once for recall magnitude. Clone-level correlation between the baseline AP-1 state in one twin and the recall response in the other demonstrates a heritable, cell-intrinsic AP-1 memory rather than transient signaling noise."
+    },
+    {
+      "title": "Degron cohorts that separate storage from readout",
+      "description": "Use dTAG/auxin-degron FOS, JUN, and FRA-1 lines with a pulse stimulus, then degrade AP-1 in different cohorts during distinct windows (during the pulse, during the stimulus-free interval, or only at re-challenge), with each dish measured exactly once at a fixed endpoint. If degradation only during the stimulus-free interval erases enhanced recall, AP-1 protein is actively maintaining the memory, not merely reading it out."
+    },
+    {
+      "title": "Division-resolved memory via dye dilution at a single endpoint",
+      "description": "Label cells with CellTrace/CFSE before a priming pulse and, at one harvest, use dye intensity to read out each cell's division history while simultaneously measuring AP-1 target transcripts and AP-1 motif accessibility by flow-sorted scATAC or single-cell imaging. This converts a time course into one snapshot and tests the defining property of epigenetic memory: whether the AP-1-associated state survives a quantifiable number of mitoses."
+    },
+    {
+      "title": "Decoupling latent enhancer accessibility from AP-1 occupancy",
+      "description": "In a cohort series of primed-and-rested versus naive cells, each profiled once, combine CUT&RUN for FOS/JUN/FRA-1, ATAC footprinting, H3K4me1/H3K27ac, and CpG methylation at the same loci. Memory encoded by persistent AP-1 occupancy predicts footprints without ongoing stimulus, whereas accessible AP-1 motifs that are unoccupied would instead implicate a handoff to chromatin marks, distinguishing AP-1-as-storage from AP-1-as-writer."
+    },
+    {
+      "title": "Synthetic locus writing and release with dCas9-tethered Jun",
+      "description": "Tether a dox-inducible dCas9-JUN (and a DNA-binding-dead AP-1 control) to a naive reporter locus, withdraw dox, and assay independent dishes at a single fixed endpoint for reporter accessibility, expression, and inducibility. Persistence of an acquired permissive state after the tether is gone is a sufficiency test that AP-1 binding alone can install a self-maintaining memory at a defined site."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2353,
+  "cost_usd": 0.1054645
+}

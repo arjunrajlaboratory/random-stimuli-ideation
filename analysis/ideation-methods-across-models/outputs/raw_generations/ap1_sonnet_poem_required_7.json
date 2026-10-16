@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Daffodil-field persistence: AP-1 occupancy after stimulus withdrawal",
+      "description": "Like a crowd of daffodils that stays after the breeze passes, test whether AP-1 (FOS/JUN) binding and chromatin accessibility stay at enhancers days to weeks after a transient stimulus (e.g., serum, TPA, or injury) is removed. Use time-course CUT&RUN/ATAC-seq on primed versus naive cells, and compare the sites with the persistent H3K27ac and accessibility that mark memory."
+    },
+    {
+      "title": "Acute degradation to separate maintenance from initiation",
+      "description": "Prime cells, then use a degron (dTAG/AID) or dominant-negative A-FOS to remove AP-1 either during priming or after it. Re-challenge the cells and measure the transcriptional recall response by RNA-seq. If memory needs AP-1 only at initiation, the primed state should persist after later removal. If AP-1 is needed to maintain it, the state should collapse."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and recall",
+      "description": "Image endogenously tagged JUN/FOS, or AP-1 reporters, in single cells through repeated stimulations, as if tracking each flower in the field in the breeze. Test whether a cell's past AP-1 activity predicts the amplitude or speed of its later response, and whether lineage or sister-cell correlations persist across divisions."
+    },
+    {
+      "title": "Pioneer-like enhancer priming with sequential stimulation and motif mutagenesis",
+      "description": "Use CRISPR to mutate AP-1 motifs, or to dCas9-block them, at selected enhancers. Then test whether first-versus-second-stimulus responses, such as faster or stronger induction of nearby genes, depend on those motifs. Pair this with nucleosome-remodeling readouts (BAF/SWI-SNF recruitment, MNase) to show that AP-1 itself opens and holds the sites."
+    },
+    {
+      "title": "Synthetic AP-1 memory switch and sufficiency test",
+      "description": "Transiently express or optogenetically activate AP-1 in naive cells. Then ask whether this alone creates a self-sustaining, heritable accessible state, and whether it persists through cell divisions with mitotic bookmarking (live-cell and mitotic-chromosome ChIP). Model the results with feedback-loop equations, such as JUN autoregulation, to predict bistability and hysteresis, and test the predictions by titrating the stimulus dose up and then down."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 903,
+  "cost_usd": 0.013861499999999999
+}

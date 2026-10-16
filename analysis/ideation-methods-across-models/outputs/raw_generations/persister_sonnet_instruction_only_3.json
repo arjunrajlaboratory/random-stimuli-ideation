@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 3,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria\u2013Delbr\u00fcck analogy)",
+      "description": "Borrowing Luria and Delbr\u00fcck's phage-resistance experiment from bacterial genetics, label cells with heritable DNA barcodes, split the population into parallel replicate cultures, and treat with the drug. If the same barcodes survive across replicates, resistance is a pre-existing, heritable state. If different barcodes survive in each replicate, it is a stochastic, transient state. The variance in survivor numbers across replicates separates the two models and gives switching rates."
+    },
+    {
+      "title": "Pre-treatment state tracing with sister-cell pairing (twin studies analogy)",
+      "description": "Treat sister cells as 'twins' by splitting recently divided cells or using clonally expanded barcoded sublines. Profile one half by single-cell RNA-seq before drug and expose the other half to drug. Survivor identity of the twin links the pre-treatment transcriptional state to the survival outcome, which allows a predictive signature to be trained and tested."
+    },
+    {
+      "title": "Live-cell reporter time-lapse with dynamical systems analysis (cell-fate bifurcation / early-warning signals)",
+      "description": "Image cells carrying fluorescent reporters for signaling (e.g., ERK or AKT activity), cell cycle and apoptosis through drug exposure. Apply tools from dynamical systems and critical transitions, such as autocorrelation, variance and attractor reconstruction, to find whether survivors occupy a distinct attractor state or cross a threshold. Retrospective tracking of each survivor back to its pre-drug trajectory shows when and how the divergence arose."
+    },
+    {
+      "title": "Metabolic and mitochondrial priming profiling (BH3 profiling, like stress-testing a power grid)",
+      "description": "Test how close each cell sits to its failure threshold, as engineers load-test a grid. Use BH3 profiling and single-cell measurements of mitochondrial membrane potential, ATP and ROS to quantify apoptotic priming before and after drug exposure. Compare the distributions to learn whether survivors are less primed or have rewired metabolism, such as a shift toward oxidative phosphorylation."
+    },
+    {
+      "title": "Epigenetic memory mapping via single-cell multiome with inference of hysteresis (magnetic memory analogy)",
+      "description": "Apply single-cell ATAC plus RNA profiling to untreated, drug-treated, and drug-withdrawn populations. Test whether survivors keep a chromatin state after drug removal, as a magnet keeps its magnetization, and whether it fades with a measurable half-life. Perturb candidate chromatin regulators with CRISPRi or inhibitors to test whether erasing the state removes the survivors' advantage."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 976,
+  "cost_usd": 0.012527
+}

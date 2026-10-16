@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded decay curves for AP-1 chromatin states",
+      "description": "Use expressed lineage barcodes plus joint single-cell ATAC and RNA profiling to measure how similar related cells remain at AP-1 motif-containing enhancers across 1 to 10+ divisions, yielding an explicit memory half-life in generations. Compare that half-life against non-AP-1 enhancers and against cells where AP-1 factors are acutely degraded, to see whether AP-1 sets the timescale or merely marks it."
+    },
+    {
+      "title": "Separating the writing of memory from its maintenance with timed degron pulses",
+      "description": "Tag FOS, JUN, and FOSL1 with auxin or dTAG degrons and remove them either during a stimulus (blocking establishment) or days afterward (testing maintenance), then re-challenge the cells and measure the magnitude of the primed response. If memory survives late depletion, AP-1 is a writer handing off to another substrate; if it collapses, AP-1 itself is the stored state."
+    },
+    {
+      "title": "Reconstituting memory by synthetic AP-1 tethering alone",
+      "description": "Use dCas9 or a chemically inducible recruitment system to deposit AP-1 family members at defined endogenous enhancers for a controlled duration, release them, and then ask whether the locus shows faster and larger reactivation to a later real stimulus. This converts a correlation into a sufficiency test, and dose/duration titration maps the minimum AP-1 exposure needed to install a persistent state."
+    },
+    {
+      "title": "Quantitative replication-coupled tracking of AP-1 site reassembly",
+      "description": "Combine nascent-chromatin capture (such as labeling newly replicated DNA and profiling the proteins and accessibility on it) with live imaging of tagged AP-1 factors to measure how quickly AP-1 reoccupies its sites behind the replication fork. Memory that survives mitosis should show rapid, site-specific reassembly with preserved relative occupancy, and the recovery kinetics distinguish true bookmarking from de novo re-establishment driven by upstream signaling."
+    },
+    {
+      "title": "Perturbation-response mapping that tests memory as a prediction, not a description",
+      "description": "Expose isogenic cells to combinations of stimuli separated by defined intervals and fit a model where the AP-1 state measured after the first exposure predicts the quantitative response to the second, at single-cell resolution. A genuine memory mechanism should make AP-1 state a better predictor of future behavior than current signaling activity or overall cell state, and the model's failures identify the additional components memory requires."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1870,
+  "cost_usd": 0.0758925
+}

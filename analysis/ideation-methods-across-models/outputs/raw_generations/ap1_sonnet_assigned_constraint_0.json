@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 0,
+  "constraint": "using only data that are already publicly available (no new experiments)",
+  "prompt": "Constraint: every one of your ideas must be carried out using only data that are already publicly available (no new experiments). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN reanalysis of AP-1 motif accessibility after transient stimuli",
+      "description": "Reanalyze public time-course chromatin accessibility and AP-1 (FOS/JUN) ChIP/CUT&RUN datasets from injury, inflammation, or stress models (e.g., epidermal wound, macrophage training, neuronal activity) to find loci that stay open long after stimulus withdrawal. Test whether this persistent accessibility is enriched for AP-1 motifs (chromVAR/HOMER) and for occupancy by AP-1 or its pioneer-like partners such as BAF/ARID1A."
+    },
+    {
+      "title": "Cross-dataset test of 'memory' enhancers: AP-1 binding vs. faster secondary response",
+      "description": "Use public primed/trained-immunity, epithelial inflammatory-memory, and repeated-stimulus datasets (ATAC, H3K27ac, RNA-seq) to identify enhancers that gain accessibility or H3K27ac after the first stimulus and persist. Then test whether these predict faster or stronger transcription at re-stimulation, and whether AP-1 motif strength or ChIP occupancy at them predicts this effect beyond other TF motifs (regression/model comparison)."
+    },
+    {
+      "title": "Integrative modeling of AP-1 dynamics vs. epigenetic persistence using public single-cell multiome and perturbation data",
+      "description": "Use public scRNA/scATAC or multiome time courses to estimate, per cell, AP-1 activity (FOS/JUN expression and regulon scores) and chromatin state over time. Use trajectory/lag analysis to ask whether transient AP-1 activity precedes durable accessibility changes, and whether AP-1 expression itself decays (signaling-driven) or is self-sustained."
+    },
+    {
+      "title": "Meta-analysis of AP-1 loss-of-function datasets to test necessity for maintenance versus establishment",
+      "description": "Collect public datasets with AP-1 perturbation (JUN/FOS knockouts, dominant-negative A-FOS, degron or inhibitor treatments such as T-5224) paired with chromatin profiling. Compare the loss of accessibility and expression at memory loci when AP-1 is removed before, during, or after stimulus (where timing exists), to separate establishment from maintenance."
+    },
+    {
+      "title": "Cross-species and cross-tissue comparison of AP-1-dependent memory loci using human genetic and epigenomic resources",
+      "description": "Overlay memory loci with public resources (ENCODE/Roadmap, GTEx, caQTL/eQTL, and AP-1 motif-altering variants) to test whether variants that disrupt AP-1 motifs change chromatin accessibility or response. Check conservation of AP-1-linked memory loci across species and tissues, and test whether they are enriched in chronic-disease GWAS loci such as psoriasis, IBD, or cancer."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1050,
+  "cost_usd": 0.014867499999999999
+}

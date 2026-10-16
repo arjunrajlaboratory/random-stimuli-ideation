@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 7,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis curves (magnetic-material analogy)",
+      "description": "Like magnetization hysteresis, expose cells to ramped-up then ramped-down stimulus doses (e.g., optogenetic or chemical activation of the AP-1 upstream kinases JNK/ERK) and measure AP-1 target gene output and chromatin accessibility at matched doses. A loop in which the same dose gives different outputs depending on history indicates bistable, memory-like behavior."
+    },
+    {
+      "title": "Neuronal engram tagging for AP-1 history (immediate-early gene lineage tracing)",
+      "description": "Borrowing from Fos-TRAP engram labeling, use an AP-1 (Fos/Jun) driven inducible Cre or recorder to permanently mark cells that previously had AP-1 activity. Then re-challenge the marked and unmarked populations after weeks and compare their transcriptional responses by scRNA-seq to see whether past AP-1 activity predicts a faster or stronger response."
+    },
+    {
+      "title": "Pioneer-factor 'trail-marker' footprinting (ecology/animal trail analogy)",
+      "description": "Perform time-course ATAC-seq/CUT&RUN for AP-1 factors, BAF subunits, and H3K27ac before stimulation, after it, and after a long washout. Identify enhancers that stay open after AP-1 leaves, as a trail persists after the animal has gone, and test whether AP-1 motif content predicts which loci keep this latent state."
+    },
+    {
+      "title": "Control-theory feedback perturbation (engineering bistable switch test)",
+      "description": "Model AP-1 positive autoregulation (c-Jun promotes its own transcription) as a feedback circuit with ODEs, and predict the conditions for bistability. Then test it by transiently blocking c-Jun with a degron or dominant-negative (A-Fos) at different times and checking whether the high state persists, collapses, or can be reset, as the model predicts."
+    },
+    {
+      "title": "Immune 'trained immunity' recall assay with causal enhancer editing",
+      "description": "Using the trained-immunity design, give cells a first stimulus, rest them, then give a second stimulus. Compare cytokine or target gene response with and without AP-1 disruption (CRISPR of AP-1 motifs at specific enhancers, or acute degron of Fos/Jun only during the priming window). If priming-window loss alone abolishes enhanced recall, AP-1 is needed to write the memory rather than only to read it out."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 881,
+  "cost_usd": 0.0115761
+}

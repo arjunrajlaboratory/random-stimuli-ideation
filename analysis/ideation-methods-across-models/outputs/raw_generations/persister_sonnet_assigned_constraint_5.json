@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 5,
+  "constraint": "finishing within three months",
+  "prompt": "Constraint: every one of your ideas must be carried out finishing within three months. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded pre-treatment vs. post-treatment transcriptomics",
+      "description": "Tag a clonal cell line with a heritable expression barcode library, split the population before drug exposure, profile one half by scRNA-seq, and treat the other half. Then match surviving barcodes back to the pre-treatment sister cells to find the transcriptional states that predicted survival and test whether those states are heritable or transient; this takes about 2\u20133 months with an established barcoding system."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporters, followed by fate-linked fixed profiling",
+      "description": "Image cells carrying reporters (such as cell-cycle FUCCI, ERK/AKT activity, and apoptosis markers) for several days before and during drug treatment, and track single-cell fates. After imaging, fix the cells in place and run multiplexed immunofluorescence or in situ RNA staining on the same cells, which links dynamic signaling history and cell-cycle state to survival or death."
+    },
+    {
+      "title": "Single-cell multiome (ATAC + RNA) of drug-tolerant persisters over a time course",
+      "description": "Collect untreated cells and cells at days 3, 7, and 14 of treatment, and profile chromatin accessibility and gene expression jointly in the same cells. This tests whether persisters carry a distinct epigenetic state, such as an altered enhancer landscape or a stress/dedifferentiation program, and identifies the transcription factors that drive it."
+    },
+    {
+      "title": "Pooled CRISPR perturbation screen focused on candidate persister regulators",
+      "description": "Run a targeted CRISPRi/CRISPRa library covering chromatin regulators, stress-response genes, anti-apoptotic factors, and metabolic genes, with drug versus vehicle arms and sgRNA counts read out at several time points. Genes whose loss reduces the persister fraction, or whose activation raises it, show which pathways are causally required, as opposed to only correlated with survival."
+    },
+    {
+      "title": "Single-cell metabolic and apoptotic-priming measurements",
+      "description": "Before treatment, sort cells by readouts such as mitochondrial membrane potential, ROS, lipid content, or BH3 profiling for apoptotic priming. Then treat the sorted subpopulations and measure survival to test whether pre-existing differences in metabolism or mitochondrial apoptotic threshold set the likelihood of surviving. Follow with drug combinations that target the identified vulnerability, such as BCL-2 family inhibitors or ferroptosis inducers."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 903,
+  "cost_usd": 0.013389499999999999
+}

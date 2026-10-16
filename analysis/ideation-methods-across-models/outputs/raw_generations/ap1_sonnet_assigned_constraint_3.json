@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 3,
+  "constraint": "without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression)",
+  "prompt": "Constraint: every one of your ideas must be carried out without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Priming-and-rechallenge time course with chromatin accessibility readout",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a transient AP-1-activating stimulus such as TPA, EGF, or wounding cues, wash it out, and rechallenge after days to weeks. Compare transcription and ATAC-seq/CUT&Tag (H3K27ac, H3K4me1) in primed versus naive cells to ask whether response magnitude and kinetics persist after AP-1 activity itself has returned to baseline."
+    },
+    {
+      "title": "Longitudinal single-cell multiome tracking of AP-1 motif accessibility and gene expression",
+      "description": "Run paired scRNA/scATAC-seq (or lineage-barcoded sampling) at multiple times before, during, and long after transient stimulation, and quantify whether FOS/JUN family motif-accessible regions (e.g., ChromVAR scores) stay open in the subset of cells that previously had high AP-1 activity. Linking prior AP-1 dose to later accessibility and responsiveness at single-cell level distinguishes true heritable memory from population heterogeneity."
+    },
+    {
+      "title": "Live-cell reporter imaging of AP-1 dynamics and inheritance across divisions",
+      "description": "Use cells carrying a knock-in-free, transient or lentiviral-free approach is not needed: instead, apply a non-integrating AP-1 transcriptional reporter or live-cell dyes/antibody-fragment imaging in endogenous cells and track single-cell AP-1 activity through repeated stimulations and cell divisions with lineage reconstruction. Correlating mother and daughter responses and past history with present response tests whether memory is cell-autonomous and mitotically heritable, and whether it depends on pulse frequency or duration."
+    },
+    {
+      "title": "Pharmacological dissection of maintenance mechanisms",
+      "description": "After priming, apply small-molecule inhibitors at distinct windows, such as JNK/MAPK inhibitors, BAF/SWI-SNF ATPase inhibitors, HDAC/HAT (p300/CBP) inhibitors, or DNA/histone methylation inhibitors, either during priming or only during the memory interval, and then rechallenge. Whether memory is lost when each is applied during establishment versus maintenance reveals if AP-1 binding, continuous signaling, or chromatin changes carry the memory."
+    },
+    {
+      "title": "Genomic footprinting and pioneer-activity profiling in natural in vivo injury/inflammation models",
+      "description": "Profile cells from tissues after resolved natural perturbations (e.g., skin wounding, inflammation, or aged vs. young tissue) using ATAC-seq, CUT&RUN for JUN/FOS, and Hi-C or HiChIP, and compare with matched naive tissue. Persistent AP-1 motif footprints, retained enhancer-promoter loops, and faster re-induction of target genes on a second injury, correlated with the motif-containing regions that were opened by the first event, would support AP-1-dependent memory under physiological conditions without genetic manipulation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1104,
+  "cost_usd": 0.0154595
+}

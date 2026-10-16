@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Stimulus washout time course of AP-1 occupancy versus chromatin state: Deliver a defined transient stimulus (growth factor, cytokine, or drug pulse), then profile AP-1 binding (CUT&RUN for FOS/JUN family members), chromatin accessibility, and target gene expression at densely sampled time points after washout. Memory is supported if enhancer accessibility and transcriptional output outlast both the stimulus and the AP-1 protein burst itself.\n2. Heritability of AP-1 state measured through clonal lineage tracing: Use expressed DNA barcodes combined with single-cell RNA and ATAC profiling to ask whether cells sharing a recent ancestor also share high or low AP-1 target activity. Quantifying how barcode identity predicts AP-1 state as a function of generations elapsed gives a direct estimate of the memory half-life in divisions rather than hours.\n3. Acute degron removal of AP-1 subunits after a state is established: Knock degron tags into endogenous FOS, FOSL1, and JUN loci so the proteins can be eliminated within minutes at chosen times. Comparing degradation during stimulation versus long after it reveals whether AP-1 is required only to write the state or must be continuously present to maintain it, which distinguishes a true memory element from a persistent signaling readout.\n4. Second-stimulus challenge to test for priming and faster reactivation: Expose cells to one pulse, allow a long recovery, then re-stimulate and measure response speed, amplitude, and fraction of responding cells relative to naive controls. A faster or larger response in previously exposed cells, tracked alongside AP-1 motif accessibility at the responsive enhancers, is the functional behavioral assay for memory.\n5. Live single-cell reporters linking AP-1 dynamics to downstream fate: Build knock-in fluorescent reporters for an AP-1 subunit and for a downstream target gene, then image individual cells continuously through and beyond a stimulus while tracking lineage relationships. This directly tests whether transient differences in AP-1 activity at the moment of stimulation predict divergent long-term states in daughter cells, and whether that prediction decays over time.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Allele-resolved memory as a cis/trans discriminator",
+      "description": "In F1 hybrid or densely heterozygous cells, phase ATAC/CUT&RUN/nascent-RNA reads to the two alleles of the same AP-1 target enhancer after a transient pulse and ask whether the alleles retain or lose the state independently. Persistent trans-acting AP-1 protein predicts tightly correlated alleles within a nucleus, whereas cis-encoded chromatin memory predicts allelic independence and stable monoallelic 'memorized' states."
+    },
+    {
+      "title": "Replication-coupled dilution and re-establishment kinetics",
+      "description": "Pulse-label nascent chromatin (EdU/BrdU capture or nascent-chromatin ATAC) at defined times after a stimulus to measure how much AP-1 occupancy and accessibility survive passage of the replication fork, how fast it is restored on daughter strands, and whether sister chromatids inherit it symmetrically. Genuinely self-propagating memory must show rapid template-directed restoration rather than slow re-equilibration from bulk AP-1 levels."
+    },
+    {
+      "title": "Non-commutativity: does the enhancer landscape store stimulus order?",
+      "description": "Deliver matched pairs of pulses in opposite orders (A then B versus B then A) with identical total dose and spacing, then compare final AP-1 binding, accessibility, and transcriptome. Reproducibly different end states show the system stores more than a single decaying scalar, and counting distinguishable history-to-state mappings estimates memory capacity in bits."
+    },
+    {
+      "title": "Synthetic writing and motif-grammar decoding of persistence",
+      "description": "Integrate a barcoded library of synthetic enhancers at a single landing pad that systematically varies AP-1 motif affinity, copy number, spacing, and partner motifs (pioneer factor, NF-kB, TEAD), and separately deliver a timed pulse of AP-1 recruitment via chemically induced dimerization of a bZIP domain to dCas9 at naive loci. Together these test sufficiency: which sequence configurations convert a transient AP-1 pulse into a persistent state, and whether an AP-1 pulse alone can install memory where none existed."
+    },
+    {
+      "title": "The dimer-composition code on chromatin",
+      "description": "Apply quantitative targeted mass spectrometry of the chromatin-bound AP-1 interactome, plus dimer-specific sequential CUT&RUN and proximity ligation, across the decay phase, and test whether forced expression of individual dimers reproduces the maintained state. Memory may reside not in how much AP-1 is bound but in a switch to long-lived, slowly exchanging dimers such as FRA1-JUND, which pan-AP-1 occupancy measurements cannot see."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4059,
+  "cost_usd": 0.20076899999999998
+}

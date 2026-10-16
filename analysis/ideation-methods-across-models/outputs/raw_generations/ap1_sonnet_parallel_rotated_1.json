@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 1,
+  "parallel": {
+    "field": "Climate science / paleoclimatology",
+    "problem": "Testing whether ice sheets or ocean circulation act as a memory of past climate forcing, with a persistent state that outlasts the trigger and changes later responses (hysteresis).",
+    "how_studied": "Earth system models are run with ramped-up and then ramped-down forcing to trace hysteresis curves. Ice cores and sediment proxies are used to check whether the past state predicts present behavior beyond current conditions. Autocorrelation and critical-slowing-down statistics are applied to time series to quantify memory timescales."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Climate science / paleoclimatology\nProblem: Testing whether ice sheets or ocean circulation act as a memory of past climate forcing, with a persistent state that outlasts the trigger and changes later responses (hysteresis).\nHow it is studied: Earth system models are run with ramped-up and then ramped-down forcing to trace hysteresis curves. Ice cores and sediment proxies are used to check whether the past state predicts present behavior beyond current conditions. Autocorrelation and critical-slowing-down statistics are applied to time series to quantify memory timescales.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Ramp-up/ramp-down hysteresis curves of AP-1 target state",
+      "description": "Titrate a stimulus (e.g., optogenetic or chemically induced c-Fos/c-Jun, or ERK/TPA dose) up and then down in single cells, and measure AP-1 activity and target gene expression at steady state at each dose. A non-overlapping up and down dose-response curve (hysteresis width) shows state-dependent memory, and the width can be compared with AP-1 perturbations (e.g., dominant-negative FOS, JUN phosphomutants)."
+    },
+    {
+      "title": "Past-state-predicts-present test with chromatin accessibility proxies",
+      "description": "After a transient stimulus is withdrawn and current AP-1 and signaling levels are matched to naive controls, use ATAC-seq/CUT&Tag for AP-1 binding and accessibility at enhancers to test whether prior exposure still predicts accessibility and transcriptional output. Use this like a proxy record: regress the response on history after controlling for present conditions, and ask whether AP-1 motif-containing sites hold the residual."
+    },
+    {
+      "title": "Autocorrelation and critical-slowing-down analysis of live AP-1 reporters",
+      "description": "Image single-cell AP-1 reporter or endogenously tagged FOS/JUN dynamics over days and compute autocorrelation time, variance and relaxation rates after small perturbations at different stimulus doses. Rising autocorrelation and variance near a threshold, plus long relaxation times, indicate bistability or slow feedback, and the memory timescale is estimated directly."
+    },
+    {
+      "title": "Memory-decay timescale mapping via re-stimulation after variable rest",
+      "description": "Give a priming pulse, wait for varied intervals (minutes to weeks, across cell divisions), then give a second test pulse and measure the change in response amplitude and kinetics. Fitting the decay of primed-versus-naive response difference gives the memory timescale, and comparing it with AP-1 level, binding and chromatin marks tests whether AP-1 is required for persistence."
+    },
+    {
+      "title": "Perturb-the-memory-carrier with model-based forcing experiments",
+      "description": "Build a dynamical model (positive feedback via FOS/JUN autoinduction and chromatin) fit to the ramp and relaxation data, then use it to predict thresholds. Test it by acutely degrading AP-1 (degron, CRISPRi) at different times after priming: if the memory is carried by AP-1, loss after priming should erase the primed response, whereas if chromatin carries it, the response should persist and could be restored when AP-1 is returned."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 930,
+  "cost_usd": 0.0146195
+}

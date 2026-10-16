@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after a stimulus pulse",
+      "description": "Use a degron-tagged FOS or JUN allele (e.g., dTAG or auxin-inducible) to degrade AP-1 at defined times after a single stimulus. If AP-1 is the memory mechanism, the later response to restimulation should be lost or reduced when AP-1 is removed during the rest period, but not when it is removed before the first stimulus."
+    },
+    {
+      "title": "Time-course of chromatin persistence after AP-1 occupancy is lost",
+      "description": "After a stimulus pulse, run ATAC-seq, H3K27ac/H3K4me1 CUT&RUN, and FOS/JUN CUT&RUN at several time points during washout. A memory mechanism predicts that enhancers keep open or primed chromatin after AP-1 leaves them, and that this persistence depends on the AP-1 motifs and on the stimulus having occurred."
+    },
+    {
+      "title": "Motif-mutation test of recall at endogenous memory loci",
+      "description": "Use CRISPR base editing or prime editing to mutate AP-1 motifs at enhancers of genes that show a primed, faster response on restimulation. Compare the stimulus-recall response (fold induction and kinetics) of mutant and wild-type cells in a rested-then-restimulated paradigm to test whether the motifs are required for memory."
+    },
+    {
+      "title": "Single-cell tracking of AP-1 history through divisions",
+      "description": "Combine a live AP-1 activity reporter (for example, a destabilized fluorescent protein under an AP-1-responsive or Fos promoter) with lineage barcodes and single-cell multiome readout. Compare cells with different prior AP-1 histories to see whether the prior state is inherited by daughter cells and predicts their later response, which separates a heritable memory from stochastic cell-to-cell variation."
+    },
+    {
+      "title": "Engram-style necessity test in vivo",
+      "description": "In a mouse model such as hippocampal engram or tissue-resident immune memory, label cells active during a learning or priming event with an activity-dependent tag (for example, a Fos-based TRAP system). Then use time-restricted dominant-negative or conditional Fos/Jun inhibition during consolidation or recall, and measure whether the memory-dependent reactivation and the tagged cells' chromatin state are disrupted."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1809,
+  "cost_usd": 0.00104656
+}

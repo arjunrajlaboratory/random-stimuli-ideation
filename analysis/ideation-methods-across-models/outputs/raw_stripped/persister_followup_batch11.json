@@ -1,0 +1,150 @@
+{
+  "batch": 11,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "5da510c777263e137d9e3e938b2dfadccceaf3db333d1e07bbb34f1111566cb3",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Live-cell time-lapse imaging with reporters and pedigree tracing",
+      "description": "Image single cells for days before and during drug exposure, using fluorescent reporters for signaling (ERK/AKT), cell cycle, and apoptosis. Trace each survivor's ancestry to test whether pre-treatment dynamics (slow cycling, pulsatile signaling, or a lineage-shared state) predict survival, and compare sister cells to assess how heritable the state is.",
+      "idea_id": "persister_sonnet_word_salad_required_7_1",
+      "source_sha256": "e8c93eb736bb3981abd1ab475bff8737a80c838b1ac009a8076d5aae7178e9af"
+    },
+    {
+      "id": "I2",
+      "title": "Fixation-based single-cell time course profiling of dying cells and persisters",
+      "description": "Run a fixation-based single-cell time course (fixed scRNA-seq or in-situ methods that retain dying cells) across the first 1-72 h of drug exposure, so apoptotic and arrested cells are sampled rather than lost to dissociation bias. Compare the trajectories of cells that die with those of persisters, which is more informative than an endpoint profile of survivors alone, since that profile reflects only selected cells and lacks context.",
+      "idea_id": "persister_opus_poem_required_1_1",
+      "source_sha256": "c50bf2dea8a06a3c9f6c8564167d774f0bb67781e3be66bc85956dfda64886c2"
+    },
+    {
+      "id": "I3",
+      "title": "Spatial mapping of neighbor effects on survival",
+      "description": "Perform spatial transcriptomics or multiplexed imaging on treated dishes or tumour sections, then vary seeding density and swap conditioned media. This shows whether survival depends on local crowding, signals released by nearby cells, or contact with neighbours, rather than only on cell-intrinsic traits.",
+      "idea_id": "persister_opus_word_salad_required_3_4",
+      "source_sha256": "1f239e571ecfb84ead8e545f4965e39512df8566d0aa28d399874f4dd1f4b281"
+    },
+    {
+      "id": "I4",
+      "title": "Fluctuation timescale of priming genes as a predictor of survival",
+      "description": "Place live-cell reporters on candidate priming genes (AXL, NGFR, EGFR) and measure the autocorrelation time of their fluctuations in untreated cells. The prediction is that only cells whose high state persists longer than the drug's killing window survive, so fluctuation memory time, rather than peak expression level, would be the decisive measurement.",
+      "idea_id": "persister_opus_poem_required_7_1",
+      "source_sha256": "e5e755b6a772096bafb3cfb2078ff3b85b7b776ac6f1fb9effab13530687e3b5"
+    },
+    {
+      "id": "I5",
+      "title": "Live-cell time-lapse imaging with reporters and retrospective omics",
+      "description": "Image single cells for days with fluorescent reporters of signaling (ERK, p53), cell cycle and mitochondrial state, then follow which cells survive the drug. Fix and profile the survivors and their lineage relatives to link dynamic history, such as pulses or slow cycling, to survival.",
+      "idea_id": "persister_sonnet_word_salad_required_4_2",
+      "source_sha256": "efc6d22708d8cd9f756f2dbef35accfaec185557d2bc1676ecff47861259fb53"
+    },
+    {
+      "id": "I6",
+      "title": "Metabolic and stress-response measurements in survivors",
+      "description": "Use single-cell mass spectrometry or fluorescent sensors, and flux assays on sorted cells, to measure ROS, mitochondrial membrane potential, lipid and glutathione metabolism, and drug efflux in persisters versus bulk cells. Follow with targeted inhibition of the identified pathway to test whether it is causal for survival.",
+      "idea_id": "persister_sonnet_word_salad_required_2_3",
+      "source_sha256": "0ef6c5694c44cf1bfaf6aafc927646d515d0cd078a271ac4b18bf378f2f113c4"
+    },
+    {
+      "id": "I7",
+      "title": "Genetic versus nongenetic dissection with deep sequencing and CRISPR screens",
+      "description": "Deep-sequence survivors against their pre-treatment population to detect rare pre-existing mutations or copy-number subclones, and run genome-wide CRISPR knockout screens in persisters versus bulk cells under drug. Together these show whether survival is selected from a genetic subpopulation or is nongenetic, and reveal dependencies of persisters that could be targeted to eliminate them.",
+      "idea_id": "persister_haiku_poem_required_4_4",
+      "source_sha256": "7b1f3680847fba7c62e65c0145417069ac34ad54776decacefa53a26ceb02d5e"
+    },
+    {
+      "id": "I8",
+      "title": "Sorting cells by pre-treatment metabolic state",
+      "description": "Measure single-cell metabolic state with NAD(P)H fluorescence lifetime imaging or SCENITH, then sort cells by their pre-treatment metabolic profile and track which sorted fractions survive. Test with targeted inhibitors whether survivors depend on oxidative phosphorylation or fatty-acid oxidation.",
+      "idea_id": "persister_haiku_poem_required_0_2",
+      "source_sha256": "e8cf0c451b13eb59afad71a74eaecc72baac196ade075a82612c2d19ff2a7bc4"
+    },
+    {
+      "id": "I9",
+      "title": "Live-cell time-lapse tracking with retrospective single-cell profiling",
+      "description": "Image cells carrying reporters for signaling (ERK or p53 dynamics) and cell-cycle state through the drug pulse. Track each cell's fate, then fix the cells and run in situ RNA or protein profiling on the same cells. This links transient pre-treatment fluctuations to later survival and gives the timescale over which the state decays.",
+      "idea_id": "persister_sonnet_poem_required_4_1",
+      "source_sha256": "d95121a455be5bbb58812f598587194bece4fc3c458b42bae55e1d5caa58b0d2"
+    },
+    {
+      "id": "I10",
+      "title": "Longitudinal multiomic trajectory from sensitive cell to persister",
+      "description": "Collect scRNA-seq and scATAC-seq at closely spaced timepoints from hours to weeks after drug addition, then reconstruct the ordered path of state transitions with RNA velocity and chromatin trajectory inference. This identifies the transcription factors that drive the transition and shows whether there is a single route or several distinct routes to survival.",
+      "idea_id": "persister_haiku_poem_required_4_3",
+      "source_sha256": "5ad3f1447d505df5a21514934824a03ed9e2fb2648e328f25f2a39e036d15094"
+    },
+    {
+      "id": "I11",
+      "title": "Washout, re-challenge, and epigenetic memory assays",
+      "description": "Remove the drug after the surviving population has formed, then re-challenge and profile chromatin (ATAC-seq, H3K27ac or H3K4me3 CUT&Tag) and metabolic state (e.g., OXPHOS dependence) to test whether the persister phenotype is reversible and heritable. Stable epigenetic memory would suggest a regulated state transition rather than a fixed genetic one.",
+      "idea_id": "persister_haiku_poem_required_5_4",
+      "source_sha256": "f907d2b3843d96ca29165dba29a516be29a3683a4324cd4b3d6837a24a8d5400"
+    },
+    {
+      "id": "I12",
+      "title": "Barcoded lineage tracing through drug exposure",
+      "description": "Label cells with heritable DNA barcodes before treatment, then sequence barcodes in survivors versus the pre-treatment pool. If survivors share barcodes with pre-existing clones, persistence is selection on pre-existing variation; if barcodes are diverse and survivors arise from many lineages, the program is more likely drug-induced.",
+      "idea_id": "persister_haiku_word_salad_required_5_0",
+      "source_sha256": "913117d027f789c52191efdc17797136bfd2580a0a82910b04ab66aa3ab733d2"
+    },
+    {
+      "id": "I13",
+      "title": "Functional perturbation screens within persisters (CRISPRi/a and epigenetic inhibitors)",
+      "description": "Run pooled CRISPR screens, or treat with chromatin modifier inhibitors such as HDAC or KDM5 inhibitors, in combination with the targeted drug. Measure persister numbers to find causal regulators of survival rather than correlates. Hits from profiling experiments can then be validated by checking whether knockdown shrinks the persister fraction.",
+      "idea_id": "persister_sonnet_word_salad_required_0_3",
+      "source_sha256": "13e671ffd850721879992284424b1262c975ff8ac30a99e8b925cf71593694f3"
+    },
+    {
+      "id": "I14",
+      "title": "Lineage-barcoded clone tracking through drug holidays and re-challenge",
+      "description": "Label cells with heritable lentiviral DNA barcodes, then track clone frequencies through repeated drug pulses, drug-free holidays, and re-challenge. Stable clonal resistance should persist across cycles, whereas transient tolerance should reset, which separates genetic or epigenetic memory from a transient state.",
+      "idea_id": "persister_haiku_poem_required_4_1",
+      "source_sha256": "8de31b048fbe6d61664a4fbff1f07b004883995c589c0990ad12c824b911d958"
+    },
+    {
+      "id": "I15",
+      "title": "Metabolic and redox sorting followed by drug-holiday re-challenge",
+      "description": "Sort cells by autofluorescence (NAD(P)H/FAD imaging) or mitochondrial membrane potential before treatment, then compare the metabolic profiles of later survivors with those of cells that die. Re-challenge the survivors after a drug holiday, or combine the drug with a metabolic inhibitor, to test whether the tolerant state is reversible.",
+      "idea_id": "persister_haiku_word_salad_required_4_4",
+      "source_sha256": "02c9caef05898319029b2462838436d1dff35833ce1f04c0b1052bfd5fbba6ae"
+    },
+    {
+      "id": "I16",
+      "title": "Barcoded lineage tracing with live fate tracking",
+      "description": "Label genetically identical cells with unique heritable DNA barcodes, then apply a drug pulse and track each lineage by time-lapse imaging and barcode sequencing. This separates cells that were already tolerant from cells that switched into a tolerant state after treatment, and shows whether survival is a stable inherited trait or a reversible, stochastic state that changes over time.",
+      "idea_id": "persister_haiku_poem_required_2_0",
+      "source_sha256": "d7f9463d54577eb4f72314b0278b77474f1ac737c51a140ecf917289ff0f9f1a"
+    },
+    {
+      "id": "I17",
+      "title": "Stochastic chromatin boundary loss at resistance driver loci",
+      "description": "Combine single-cell ATAC/CUT&Tag with Micro-C or 4C at loci such as AXL, NGFR, or MET in primed versus naive cells, then apply CRISPRi to the implicated CTCF/cohesin boundary elements. This tests whether rare survival arises from sporadic loss of insulation that permits ectopic enhancer-promoter contact.",
+      "idea_id": "persister_opus_word_salad_required_0_2",
+      "source_sha256": "69aa9a96543e765a0fb4bd8c705b7efb032f13fa7ba0372111256c59e2134a5f"
+    },
+    {
+      "id": "I18",
+      "title": "Pre-treatment reporter tracking in live cells",
+      "description": "Use time-lapse microscopy of cells carrying fluorescent reporters for cell-cycle phase (e.g., FUCCI) and pathway activity (e.g., an ERK kinase translocation reporter) to record each cell's state before adding the drug and its fate afterward. Comparing the pre-treatment reporter states of cells that die with those that survive shows whether a measurable pre-existing state predicts survival.",
+      "idea_id": "persister_haiku_word_salad_required_1_2",
+      "source_sha256": "8f119622468aafb2f97cfdc881ce7cbb54afdab404c0ef75505c616df759d021"
+    },
+    {
+      "id": "I19",
+      "title": "Barcoded lineage tracing across a drug pulse",
+      "description": "Label each starting cell with a unique heritable barcode (e.g., lentiviral or CRISPR-based), treat with the drug, and sequence barcodes in survivors versus the pre-treatment pool. This distinguishes survivors that were already present (pre-existing persisters, where one barcode's clone expands from a single founder) from cells that transiently switched state after treatment.",
+      "idea_id": "persister_haiku_word_salad_required_2_0",
+      "source_sha256": "c4760ada90ec30988583511c0c18eea1ce43f6ed2a46c9baee1f560dc293bc0a"
+    },
+    {
+      "id": "I20",
+      "title": "Adhesion and matrix-attachment perturbation screen in survivors",
+      "description": "Compare focal-adhesion and integrin signaling in survivors versus killed cells, then run a targeted CRISPR knockout or small-molecule screen of adhesion genes (which anchor the cell to its substrate) during drug treatment. If loss of adhesion sensitizes persisters, adhesion-linked survival signaling becomes a testable mechanism and a potential combination-therapy target.",
+      "idea_id": "persister_haiku_word_salad_required_7_3",
+      "source_sha256": "8e1c563b73f045bbc0fbf095b1d30ee8f14f611fb6c59a2e4b4ae41bf0c429f6"
+    }
+  ],
+  "cost_usd": 0.0491772
+}

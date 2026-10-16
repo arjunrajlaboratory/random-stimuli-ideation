@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Naive-niche transplantation with ECM and secretome swaps",
+      "description": "After stimulation and washout, serially transfer barcoded cells into decellularized naive ECM, defined hydrogels, or fresh media with blocking antibodies/receptor inhibitors against candidate autocrine ligands, and ask whether AP-1 activity and second-response priming travel with the cell or stay with the dish. The reciprocal transfer of naive cells onto conditioned matrix tests whether the 'memory' can be transplanted without any cell that experienced the stimulus."
+    },
+    {
+      "title": "Dimer-resolved accounting of which AP-1 species carries memory",
+      "description": "Combine endogenous tagging of multiple Fos/Jun/ATF members with pulse-chase proteomics, per-member CUT&RUN, and dimer-specific readouts (BiFC or proximity ligation) to measure which dimer composition persists after washout and at which loci, then use dimer-selective dominant negatives (A-Fos vs A-Jun) and member-specific degrons to ask which single species is required. The prediction to test is that a long-half-life member such as Fra-1/JunB, not the canonical c-Fos pulse, is the actual carrier."
+    },
+    {
+      "title": "Acute degron separation of storage from maintenance",
+      "description": "Establish memory, then acutely deplete AP-1 protein with a dTAG/auxin degron for a defined window and restore it, measuring whether accessibility, histone marks and the primed second response survive the absence of the factor. Persistence through AP-1 removal means chromatin stores the memory; collapse means AP-1 occupancy itself is the store and the 'epigenetic' interpretation of the ATAC peak is wrong."
+    },
+    {
+      "title": "Lineage-resolved live imaging of memory half-life across divisions",
+      "description": "Use a live-cell AP-1 transcriptional reporter plus clonal barcoding and continuous tracking through several divisions to compute mother-daughter and sister-sister correlation decay, and to score whether memory is re-established after each mitosis or passively diluted. This distinguishes a uniform population half-life from a rare subpopulation of long-memory cells, and yields the heritability coefficient that any memory claim requires."
+    },
+    {
+      "title": "Clamp-and-write test of sufficiency with AP-1 held constant",
+      "description": "Use optogenetic or dox-tunable synthetic AP-1 to hold AP-1 activity at a fixed level in cells with different stimulus histories: if history still predicts future behavior at matched AP-1 activity, AP-1 is not the store but a relay. Conversely, deliver a defined synthetic AP-1 pulse to naive cells and challenge them with a panel of orthogonal stimuli to test whether AP-1 alone is sufficient to write a memory, and whether that memory is stimulus-specific or generic."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Memory is cell-autonomous: a cell's altered future behavior reflects an internally stored state rather than a persistent external cue (remodeled ECM, autocrine loop, residual ligand, neighboring cells) that keeps re-inducing AP-1.",
+      "'AP-1' is a single unitary entity, rather than dozens of Fos/Jun/ATF/Maf dimer species with different abundances, half-lives, cofactors and target repertoires, only some of which may be memory-competent.",
+      "Chromatin accessibility at AP-1 motifs IS the memory, so a persistent ATAC or H3K27ac peak is sufficient evidence of storage; the alternative, that accessibility is a continuously maintained readout of ongoing AP-1 occupancy or ongoing signaling, is rarely excluded.",
+      "Memory is a uniform population-level property that bulk assays capture, rather than a property of rare cells or particular lineages with long-tailed persistence times hidden inside an averaged exponential decay.",
+      "Memory resides in the transcription/chromatin layer at all; AP-1 could be a relay or reporter of a store held elsewhere (cytoskeletal/mechanical state, cell shape and spreading, metabolite pools, ECM the cell itself deposited).",
+      "Loss-of-function is a clean test: that one can delete or inhibit AP-1 and read the result as 'memory lost', ignoring that AP-1 is also required to mount the initial response, so the memory was never written in the first place; and that correlation between past AP-1 activity and future behavior implies AP-1 is the carrier.",
+      "Memory is heritable through division and is assayed over timescales longer than a cell cycle, whereas many experiments are shorter than one division and never distinguish passive dilution/decay from active maintenance and re-establishment after mitosis.",
+      "The content of memory is well probed by re-applying the same stimulus and scoring the same genes, i.e. memory is scalar (faster/stronger second response) rather than having specificity: which past stimuli are remembered, and which future challenges reveal them.",
+      "The relevant timescale and stimulus regime are known, so a single dose, single duration and one or two post-washout timepoints suffice, rather than memory being a function of stimulus dose, duration and repetition number."
+    ]
+  },
+  "output_tokens": 6501,
+  "cost_usd": 0.22637800000000002
+}

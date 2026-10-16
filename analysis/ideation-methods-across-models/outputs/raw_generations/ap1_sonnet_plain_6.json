@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Expose cells (e.g., fibroblasts, macrophages, or epidermal stem cells) to a transient stimulus such as injury, TPA, or cytokines. Then profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints from hours to weeks after the stimulus is withdrawn. Persistent AP-1-motif-associated accessibility, or persistent AP-1 occupancy, would indicate a memory-like state."
+    },
+    {
+      "title": "Acute AP-1 degradation or dominant-negative block at different phases",
+      "description": "Use degron-tagged FOS/JUN, or inducible dominant-negative A-FOS, to remove AP-1 during the priming phase, the memory (rest) phase, or the recall phase. Then measure secondary-challenge responses by RNA-seq. If AP-1 is required for maintaining memory, rather than only for establishing it, depletion during rest should erase the enhanced recall."
+    },
+    {
+      "title": "Single-cell multiome with lineage/history tracing",
+      "description": "Run paired scRNA/scATAC-seq on primed versus naive cells, with a fluorescent AP-1 reporter or barcoding to link each cell's past activation to its present state. Test whether cells with prior AP-1 activity keep distinct accessibility and faster transcriptional re-induction. Quantify whether the state is heritable across cell divisions."
+    },
+    {
+      "title": "Live-cell AP-1 reporter imaging and dynamics",
+      "description": "Image endogenously tagged FOS/JUN, or an AP-1 transcriptional reporter, in single cells across repeated stimulation pulses and lineages. Measure whether response amplitude, kinetics, or baseline level depends on prior stimulus history, and whether that dependence persists through mitosis. This distinguishes a stable, self-sustaining state from transient signaling."
+    },
+    {
+      "title": "Targeted epigenome editing and sufficiency tests at AP-1 sites",
+      "description": "Use dCas9 tools (e.g., dCas9-FOS or dCas9-KRAB) or motif mutation at specific AP-1-dependent enhancers. Test whether opening or closing them alters the response to a later challenge, and whether forcing AP-1 binding in naive cells can mimic memory. Combine this with histone mark profiling (H3K27ac, H3K4me1) and pioneer-factor partner tests (e.g., with BAF/SWI-SNF) to identify mechanism."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 907,
+  "cost_usd": 0.011848599999999999
+}

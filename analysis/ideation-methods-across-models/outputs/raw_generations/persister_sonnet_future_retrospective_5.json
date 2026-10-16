@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded pre-treatment sister-cell tracing",
+      "description": "Label clonal cells with expressed DNA barcodes, split them into sister populations before drug exposure, and profile one by scRNA-seq while treating the other. Matching barcodes in survivors to the untreated sisters' pre-existing states shows whether survival was predetermined, and which transcriptional or epigenetic state predicted it, with no inference from post-drug cells."
+    },
+    {
+      "title": "Live-cell imaging of single-cell histories linked to fate",
+      "description": "Follow thousands of individual cells for generations using multi-reporter live imaging (cell cycle, stress, signaling, mitochondrial state, and others). Then apply the drug, record who survives, and fix and profile the same cells by in situ spatial transcriptomics. This links each cell's past dynamics, such as fluctuation timing, division history, and inherited state, to its fate."
+    },
+    {
+      "title": "Multi-omic single-cell profiling of chromatin, RNA and protein before and after drug",
+      "description": "Run paired single-cell ATAC, RNA, and proteomics, plus histone-modification profiling, on untreated populations and across a drug time course. Use computational lineage inference to separate selection of rare pre-existing states from drug-induced adaptation. This tests whether the persister state is a heritable epigenetic attractor and which regulators maintain it."
+    },
+    {
+      "title": "Pooled CRISPR perturbation screens with state readout",
+      "description": "Combine genome-wide CRISPRi/a/knockout screens with Perturb-seq-style readouts, in drug-naive cells and during drug exposure. This shows which genes control how often the survivor state arises, and which control survival once it exists. It separates causal drivers from passenger markers."
+    },
+    {
+      "title": "Metabolic and physical single-cell phenotyping of survivors",
+      "description": "Measure survivors and their untreated precursors for drug uptake and efflux, mitochondrial and redox state, translation rate, and target engagement. Use single-cell mass spectrometry, fluorescent drug analogs, and biophysical assays. This tests whether survival comes from cell-intrinsic physiology, such as less drug reaching its target or an altered apoptotic threshold, rather than from a specific gene program."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 808,
+  "cost_usd": 0.010871000000000002
+}

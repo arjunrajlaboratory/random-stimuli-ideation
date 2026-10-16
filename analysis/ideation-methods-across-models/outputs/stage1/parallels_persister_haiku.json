@@ -1,0 +1,49 @@
+{
+  "question": "persister",
+  "model": "claude-haiku-5-5",
+  "prompt": "Here is a research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nDo not answer it. Instead, list 8 parallel problems, each from a different field outside biology and medicine, that share the underlying structure of this question. Make the fields as different from one another as you can. For each, give the field, the parallel problem in one sentence, and two or three sentences on how people in that field investigate or measure it (specific methods, experimental designs, or analyses).",
+  "n_returned": 8,
+  "parallels": [
+    {
+      "field": "Materials engineering (brittle fracture)",
+      "problem": "Why do a few nominally identical ceramic or metal specimens survive a load that breaks most of them, when survival depends on rare hidden flaws rather than the average material?",
+      "how_studied": "Engineers test many identical specimens to failure and fit a Weibull (weakest-link) distribution to the strengths, then use fractography to trace each fracture back to its origin flaw. Micro-CT and in-situ SEM tensile tests locate inclusions and pores in the specimens that survive or break early, and the flaw-size distribution is compared with the predicted survival curve."
+    },
+    {
+      "field": "Historical linguistics (lexical resistance to sound change)",
+      "problem": "Why do a few words escape a sound change that regularly applies to every instance of the same phoneme in a language?",
+      "how_studied": "Researchers reconstruct proto-forms with the comparative method and check which lexical items deviate from the regular correspondences. Corpus and frequency analyses test whether high-frequency or morphologically fused words resist change more often. Bayesian phylogenetic and lexical-diffusion models are fit to cognate data across related languages to separate stochastic drift from word-specific factors."
+    },
+    {
+      "field": "Software engineering (nondeterministic failures)",
+      "problem": "Why does a small fraction of identical program runs on identical inputs crash, when the failure depends on hidden thread scheduling or timing rather than on the input?",
+      "how_studied": "Engineers use record-and-replay tools (such as rr) to capture a failing execution and reproduce it exactly. Systematic concurrency testers (such as CHESS-style schedulers) enumerate interleavings to find the rare one that triggers the bug. Deterministic simulation testing and stress runs with injected delays measure the failure rate under controlled timing perturbations."
+    },
+    {
+      "field": "Economics (firm survival in a common shock)",
+      "problem": "Why do a few firms with apparently identical technology and market position survive a recession that closes most of their peers?",
+      "how_studied": "Economists fit survival or hazard models (such as Cox regressions) to firm-level administrative panel data and test which pre-shock balance-sheet, liquidity, or management variables predict exit. Difference-in-differences designs exploit natural experiments such as credit-supply shocks. Agent-based simulations with heterogeneous random shocks check whether the observed survival fraction arises from chance alone."
+    },
+    {
+      "field": "Structural and earthquake engineering",
+      "problem": "Why do a few identical buildings of the same design stand after an earthquake while most of their neighbours collapse?",
+      "how_studied": "Engineers build fragility curves by running incremental dynamic analysis on a structural model across many ground-motion records. Monte Carlo sampling over material strength, construction quality, and soil properties gives the probability of collapse for a given shaking intensity. Post-earthquake reconnaissance surveys then compare damaged and undamaged buildings to identify the construction details that mattered."
+    },
+    {
+      "field": "Quantum information (qubit performance on a chip)",
+      "problem": "Why do only some nominally identical qubits on the same chip keep coherence under the same control pulses, while others decohere or leak quickly?",
+      "how_studied": "Experimentalists measure T1 and T2 coherence times and gate fidelities for each qubit, using randomized benchmarking and gate-set tomography. Cross-talk and leakage are characterized by driving neighbouring qubits and mapping the resulting errors. Fabrication variation, such as junction resistance and frequency collisions, is then correlated with the per-qubit performance to find the hidden cause."
+    },
+    {
+      "field": "Glass and soft-matter physics (dynamical heterogeneity)",
+      "problem": "Why do a small fraction of identical particles in a supercooled liquid remain nearly immobile for long times while their neighbours move freely?",
+      "how_studied": "Physicists track individual colloidal particles with confocal microscopy and compute the four-point susceptibility \u03c74 to measure the size and lifetime of the mobile and immobile clusters. Propensity analysis and machine-learned structural predictors test whether the immobile particles can be identified from their local arrangement before they move. Molecular dynamics simulations are used to check whether the rearrangement pattern follows from local structure or from chance."
+    },
+    {
+      "field": "Heterogeneous catalysis (catalyst deactivation)",
+      "problem": "Why do only a few particles of an identical catalyst stay active under a poison or coking agent while the rest deactivate?",
+      "how_studied": "Researchers use single-particle fluorescence microscopy with probe reactions to map which individual particles stay active over time. Operando X-ray absorption and Raman spectroscopy track the oxidation state and coking in the same reactor. TEM and STEM before and after reaction link the survivors to particular facets, edges, or support sites, and the activity distribution is compared with the particle size distribution."
+    }
+  ],
+  "cost_usd": 0.00270128
+}

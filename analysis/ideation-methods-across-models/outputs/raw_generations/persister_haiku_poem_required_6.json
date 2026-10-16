@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 6,
+  "stimulus": "I will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from induced persisters",
+      "description": "Label a clonal population with heritable DNA barcodes (e.g., CellTag or lentiviral barcode libraries), treat with the drug, and sequence the survivors to see whether they come from a few barcoded clones already present before treatment or arise de novo. Like the nine bean-rows, each barcoded plot is a defined lineage that can be tracked across the experiment, and the drug-washout and re-challenge cycles show whether the survival state is reversible."
+    },
+    {
+      "title": "Pre-treatment reporter tracking with time-resolved single-cell RNA-seq",
+      "description": "Use live fluorescent reporters (e.g., FUCCI for cell-cycle phase or stress-pathway reporters) to sort cells before drug exposure and then profile them by scRNA-seq at multiple time points, looking for a transcriptional state that predicts survival. The persisters may be quietly present in the population all along, much as the lake's sound is heard steadily beneath the noise of the roadway."
+    },
+    {
+      "title": "Chromatin accessibility profiling of persisters versus naive cells",
+      "description": "Run single-cell ATAC-seq on cells at baseline, during early drug exposure, and in the surviving fraction to find chromatin regions that open or close in persisters. Then test whether these changes are stable epigenetic memory or reversible plasticity by withdrawing the drug and checking whether the accessibility profile returns to baseline."
+    },
+    {
+      "title": "Pooled CRISPR screen on sorted or re-challenged persisters",
+      "description": "Introduce a genome-wide or focused CRISPR knockout library, apply the drug, and compare guide representation in survivors against the untreated population to find genes whose loss blocks or enhances survival. Hits that act in both the early and late phases of treatment would point to a common survival program, and a minimal set of such hits could be validated individually, as a small cabin is built from a few simple materials."
+    },
+    {
+      "title": "Spatial profiling of persister niches in vivo or in organoids",
+      "description": "Use spatial transcriptomics or multiplexed imaging (e.g., MERFISH or CODEX) on treated tumors or organoids to check whether surviving cells cluster in particular microenvironments, such as hypoxic zones, vascular niches, or contact with stromal cells. If survival depends on location, the explanation lies partly in the cell's surroundings rather than in its intrinsic state alone."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1681,
+  "cost_usd": 0.00111385
+}

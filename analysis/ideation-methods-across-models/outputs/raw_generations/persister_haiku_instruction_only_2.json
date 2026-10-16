@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 2,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Seed-bank dormancy test via label retention (ecology analogy)",
+      "description": "Borrowing from seed banks, where dormant seeds persist unseen until conditions change, label cells with a dilution dye or histone-H2B reporter, then sort the slow-cycling, label-retaining fraction and challenge it with the drug. Compare survival and regrowth kinetics of label-retaining versus label-diluted cells to test whether persisters are quiescent and whether dormancy alone explains survival."
+    },
+    {
+      "title": "Portfolio and bet-hedging analysis of pre-treatment variance (finance analogy)",
+      "description": "Treat each clone as an asset with a risk-return profile, and measure the spread of pre-treatment states (live-cell ERK/AKT kinase translocation reporters, cell-cycle reporters, and drug-efflux levels) across thousands of cells. If survivors are the tail of a pre-existing distribution, their baseline states should predict survival before drug exposure, which can be tested by sorting on those states prior to treatment."
+    },
+    {
+      "title": "Lincoln-Petersen mark-recapture of lineage barcodes (wildlife ecology analogy)",
+      "description": "Use the same method wildlife biologists use to estimate unseen population sizes: transduce cells with a high-complexity lineage barcode library (e.g., LARRY-type), split into replicate arms, and compare barcode overlap among surviving persisters. Overlap statistics estimate how many distinct founder lineages make up the persister pool and whether survival is stochastic and independent across replicates or concentrated in a few predetermined clones."
+    },
+    {
+      "title": "Hysteresis and washout-rechallenge experiments (materials-science analogy)",
+      "description": "Materials show hysteresis, where the current state depends on the history of applied stress, so apply drug pulses of varying length, withdraw the drug, and re-challenge over multiple cycles. Pair this with ATAC-seq and H3K27ac/H3K4me3 profiling at each step to test whether a surviving state carries epigenetic memory that persists after drug removal, and whether the memory is reset or retained across generations."
+    },
+    {
+      "title": "Radiometric-style pulse-chase dating of persister lineages (geochronology analogy)",
+      "description": "Radiometric dating estimates the age of rock layers from known decay rates of isotopes, so pulse-label cells with a nucleotide analog such as EdU or BrdU at drug exposure and track label dilution alongside clonal mutation accumulation via single-cell whole-genome sequencing. This reveals when each surviving lineage diverged, whether survival arose from a pre-existing subclone or a drug-induced transition, and how many divisions persisters undergo before regrowth."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2199,
+  "cost_usd": 0.0012426
+}

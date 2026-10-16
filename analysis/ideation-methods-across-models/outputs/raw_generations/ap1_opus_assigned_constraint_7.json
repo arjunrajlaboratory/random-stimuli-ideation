@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 7,
+  "constraint": "using patient-derived samples",
+  "prompt": "Constraint: every one of your ideas must be carried out using patient-derived samples. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Serial-biopsy persistence test across a drug holiday",
+      "description": "In patients with planned intermittent dosing (e.g., BRAF/MEK or EGFR inhibitor holidays), collect matched pre-treatment, on-treatment, and off-drug biopsies and profile them by single-nucleus ATAC/RNA multiome to ask whether AP-1 motif accessibility and AP-1 target expression induced on-treatment persist after the stimulus is withdrawn. Persistence that is uncoupled from ongoing MAPK/JNK signaling (measured by phospho-ERK/JNK staining on the same specimens) is the core signature of memory rather than sustained signaling."
+    },
+    {
+      "title": "Recall kinetics in patient-derived organoids after wash-out and re-challenge",
+      "description": "Expose patient-derived organoids to drug or cytokine, wash out and expand for a defined number of divisions, then re-challenge and compare the speed and amplitude of the AP-1-dependent transcriptional response to naive sibling cultures. A faster or larger second response that scales with retained AP-1-primed accessibility distinguishes true memory from simple re-induction."
+    },
+    {
+      "title": "Clonal barcoding to test heritability of the AP-1 state through division",
+      "description": "Lentivirally barcode low-passage patient-derived cells or PDX-derived lines, split each barcoded population into twin arms, and test whether AP-1-high clones in one arm predict AP-1-high or resistant fate in the sister arm. Concordance across sibling clones demonstrates a heritable, clonally transmitted AP-1 state rather than stochastic fluctuation."
+    },
+    {
+      "title": "Relaxation dynamics after sorting on a live AP-1 reporter",
+      "description": "Introduce a TRE-driven fluorescent reporter (or sort on a validated AP-1 surface-marker proxy) into patient-derived organoids or lines, FACS-isolate the top and bottom tails, and track how quickly each fraction re-establishes the parental distribution. Slow, multi-generation relaxation implies a long-lived memory state, whereas rapid re-equilibration implies fast stochastic switching."
+    },
+    {
+      "title": "Causal necessity and sufficiency via degron and CRISPRa in patient-derived organoids",
+      "description": "In patient-derived organoids carrying an auxin-inducible FOS/JUN degron or dCas9-based activation targeted to AP-1-bound enhancers, degrade AP-1 only during the maintenance window after stimulus removal to test whether the stored state is erased, and separately force AP-1 in naive cells to test whether it alone installs the primed state. ATAC and CUT&RUN readouts reveal whether the enhancer landscape is lost, retained, or newly created."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2773,
+  "cost_usd": 0.10710049999999999
+}

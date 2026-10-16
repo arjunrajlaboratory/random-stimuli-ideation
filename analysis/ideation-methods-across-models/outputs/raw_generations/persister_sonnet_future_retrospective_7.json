@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded pre-treatment sister-cell splitting",
+      "description": "Barcode a clonal population, split sister cells before drug exposure, and profile one half by scRNA-seq/ATAC while treating the other half, then use shared barcodes to link each pre-existing state to its survival fate. This showed which baseline states predict persistence and quantified how much is predetermined versus stochastic."
+    },
+    {
+      "title": "Live-cell multigenerational tracking with reporters and retrospective fate mapping",
+      "description": "Image thousands of single cells for many generations with reporters for stress, cell-cycle, and signaling (e.g., ERK, p53, NF-kB) before and during drug, then correlate pre-drug dynamics and mother-daughter inheritance with survival. This revealed that transient, heritable dynamic states over several cell divisions, not static expression levels, mark survivors."
+    },
+    {
+      "title": "Multi-omic single-cell profiling of the drug-tolerant transition with CRISPR perturbation readout",
+      "description": "Combine Perturb-seq-style pooled CRISPR screens with single-cell RNA, chromatin accessibility, and proteomic readouts at multiple timepoints after drug addition to map the causal regulators of entering and exiting the persister state. This pinpointed epigenetic and metabolic nodes (such as chromatin remodelers or lipid-peroxidation defenses) whose perturbation changed persister frequency."
+    },
+    {
+      "title": "Spatial and microenvironmental mapping of persisters in vivo",
+      "description": "Use spatial transcriptomics and intravital imaging in treated xenografts or patient-derived organoids with controlled gradients of oxygen, nutrients, and drug to test whether local niches or drug penetration create apparent survivors among identical cells. This separated intrinsic cell-state effects from microenvironmental effects and showed their relative contributions."
+    },
+    {
+      "title": "Mathematical modeling of switching kinetics from fluctuation-test data",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation tests and time-resolved survival curves with many replicate clones, then fit stochastic models to infer rates of state switching, memory duration, and drug-induced versus pre-existing tolerance. This distinguished mutation, random switching, and induced adaptation, and produced predictive rules for scheduling drugs to eliminate persisters."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 837,
+  "cost_usd": 0.011145
+}

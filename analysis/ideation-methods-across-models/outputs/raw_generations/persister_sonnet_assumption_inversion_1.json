@@ -1,0 +1,44 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with split-population fate tracing",
+      "description": "Label cells with heritable, expressed DNA barcodes, split the population into replicates before treatment, and compare which barcodes survive across replicates and with RNA profiles of sister cells taken before treatment. Shared survivors across replicates indicate a pre-existing heritable state, and random survivors indicate stochastic or induced entry, which tests the assumption that survivors are a fixed pre-existing state."
+    },
+    {
+      "title": "Long-term live-cell imaging with lineage reconstruction before, during, and after drug",
+      "description": "Track thousands of single cells and their families by time-lapse microscopy with reporters for cell cycle, ERK/AKT activity, and apoptosis. Then ask whether pre-drug history (cycle length, signaling pulses, sister-cell correlation) predicts survival. This replaces the endpoint-snapshot assumption with dynamic, cell-by-cell data."
+    },
+    {
+      "title": "Whole-genome sequencing and ecDNA/mtDNA profiling of clonally derived survivors",
+      "description": "Sequence single-cell-derived clones, or single-cell DNA from pre-treatment and survivor cells, for rare mutations, copy-number changes, ecDNA amplification, and mtDNA heterogeneity, and test whether those variants are enriched in survivors. This tests the assumption that cells are genetically identical, including variation below the resolution of standard exome or bulk sequencing."
+    },
+    {
+      "title": "Single-cell multi-omics with protein, chromatin, and metabolic readouts",
+      "description": "Combine scRNA-seq with scATAC-seq, CITE-seq or mass cytometry for signaling proteins, and metabolic imaging such as NAD(P)H FLIM or mitochondrial membrane potential, then sort and profile cells that survive. This tests the assumption that transcript levels capture the relevant state. It can find epigenetic, proteomic, or metabolic determinants such as high mitochondrial priming or a drug-tolerant chromatin state."
+    },
+    {
+      "title": "Spatial and microenvironment perturbation of survival, in co-culture and 3D or in vivo",
+      "description": "Use spatial transcriptomics or imaging in 3D spheroids, co-cultures, or xenografts to map survivors relative to neighbors, oxygen and drug gradients, and stromal secretion. Then perturb the niche, for example with conditioned medium, a drug-penetration reporter, or fluorescent drug analogs, to test whether survival depends on local drug exposure or paracrine support instead of intrinsic state. This tests the assumptions that survival is cell-intrinsic, that drug exposure is uniform, and that monolayer culture suffices."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical means functionally identical: that no hidden genetic or mutational differences (rare pre-existing subclones, mtDNA variants, copy-number or extrachromosomal DNA heterogeneity) exist in the population.",
+      "Survivors are a stable, pre-existing distinct subpopulation (a fixed 'persister' state) rather than cells that stochastically or adaptively enter the state after drug exposure.",
+      "Bulk or endpoint measurements (bulk RNA-seq, viability at 72 h) represent what individual cells do, and a single snapshot is sufficient to explain a dynamic process.",
+      "Survival is cell-intrinsic: determined by the cell's own molecular state, not by its microenvironment, neighbors, position, or secreted factors in culture.",
+      "Drug target engagement and exposure are uniform across cells, so survival reflects differences in downstream response and not differences in drug uptake, efflux, or local concentration.",
+      "Transcript-level (and genomic) readouts capture the relevant state, whereas the determinants may lie in proteins, signaling dynamics, metabolism, chromatin, or cell-cycle and organelle state.",
+      "Survival is explained by one dominant mechanism or marker, and 2D monolayer culture in vitro with a single drug dose recapitulates what happens in patients."
+    ]
+  },
+  "output_tokens": 1419,
+  "cost_usd": 0.0169788
+}

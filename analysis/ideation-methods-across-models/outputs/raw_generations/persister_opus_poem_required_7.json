@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "The cloud's-eye view: retrospective lineage tracing of survivors",
+      "description": "Like the speaker drifting 'on high o'er vales and hills' who notices the golden few only once they stand out, continuously image a whole well from before drug addition through survivor outgrowth, then trace each resistant colony back to its founder. This measures what the destined survivor was doing hours to days before treatment \u2014 size, cycle phase, reporter intensity, division history \u2014 rather than only what survivors look like at the end."
+    },
+    {
+      "title": "'Fluttering and dancing in the breeze': fluctuation timescales as the predictor",
+      "description": "Place live-cell reporters on candidate priming genes (AXL, NGFR, EGFR) and measure the autocorrelation time of their fluctuations in untreated cells. The prediction is that only cells whose high state persists longer than the drug's killing window survive, making fluctuation memory time \u2014 not peak expression level \u2014 the decisive measurable."
+    },
+    {
+      "title": "'A host, of golden daffodils': sibling-split assays separating heritable from stochastic survival",
+      "description": "Split single cells into daughter or granddaughter pairs, treating one branch with drug while profiling the untreated twin by RNA-seq and ATAC-seq. Concordance between siblings quantifies how many generations back the surviving state was established, cleanly distinguishing heritable priming from a coin flip at the moment of treatment."
+    },
+    {
+      "title": "'Beside the lake, beneath the trees': spatial niche mapping of survivors",
+      "description": "Map each surviving cell's spatial context \u2014 local density, neighbor identity, distance to colony edge, ECM stiffness and substrate contact \u2014 by combining live imaging with spatial transcriptomics on the fixed well. Comparing matched dying cells at equivalent positions tests whether microenvironment, drug access, or paracrine signaling explains survival independently of cell-intrinsic state."
+    },
+    {
+      "title": "'The inward eye': drug holiday and re-challenge to test epigenetic memory",
+      "description": "Echoing the poem's recollection after the event, withdraw drug from survivors, expand them for defined numbers of generations, and re-challenge at intervals while profiling chromatin accessibility and DNA methylation. The decay rate of resistance distinguishes reversible transcriptional tolerance from stably encoded epigenetic or genetic resistance and pinpoints loci that remain primed."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2579,
+  "cost_usd": 0.10199649999999999
+}

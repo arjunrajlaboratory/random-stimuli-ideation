@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 2,
+  "stimulus": "haploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nhaploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from induced tolerance",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicates, and apply drug; if the same barcodes recur among survivors across replicates, tolerance is pre-existing and heritable, whereas random barcodes imply drug-induced adaptation. Like the 'haploid' and 'terminator' words in the material, this treats each cell's identity and fate as a traceable lineage, so a survivor's origin can be read out."
+    },
+    {
+      "title": "Paired pre-treatment single-cell profiling of sister cells",
+      "description": "Split sister cells just after division, profile one sister by scRNA-seq/ATAC and treat the other, then link pre-drug transcriptional or chromatin state to survival. This identifies the baseline state predictive of persistence without needing to profile cells that have already been selected."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporters and fate tracking",
+      "description": "Image cells for days before and during drug exposure using reporters for signaling activity (e.g., ERK, apoptosis, cell cycle), then retrospectively trace survivors to see which dynamics, such as slow cycling, pulsatile signaling, or mitochondrial priming, predicted survival. This captures transient states that fixed snapshots miss."
+    },
+    {
+      "title": "Metabolic and stress-response measurements in survivors",
+      "description": "Use single-cell mass spec or fluorescent sensors, and flux assays on sorted cells, to measure ROS, mitochondrial membrane potential, lipid and glutathione metabolism, and drug efflux in persisters versus bulk cells. Follow with targeted inhibition of the identified pathway to test whether it is causal for survival."
+    },
+    {
+      "title": "Epigenetic perturbation screens on persister emergence",
+      "description": "Run a CRISPRi/CRISPRa or small-molecule screen focused on chromatin regulators (e.g., KDM5, HDACs, EZH2) and measure change in the persister fraction and in the reversibility of tolerance after drug withdrawal. Hits would show whether non-genetic, reversible chromatin states drive survival and whether they can be blocked."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 779,
+  "cost_usd": 0.013197500000000001
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clone splitting to test whether survival is a heritable pre-existing state",
+      "description": "Barcode cells, let each clone expand for a few divisions, then split it. Profile one half (scRNA-seq, ATAC, imaging) and treat the other half with the drug. Varying the time before the split measures how long the 'survivor' state lasts across generations, which shows whether fate is set by a heritable pre-treatment state or decided by chance after the drug arrives."
+    },
+    {
+      "title": "Live-cell signaling dynamics linked to each cell's fate",
+      "description": "Use multiplexed live reporters (for example ERK/AKT kinase translocation reporters, cell-cycle sensors, and stress reporters) to track thousands of cells before and during treatment, then match each cell's signaling path to whether it survived. This tests whether survivors differ in how they adapt dynamically after drug exposure rather than in any static state measured before treatment."
+    },
+    {
+      "title": "Single-cell measurement of intracellular drug and target engagement",
+      "description": "Measure how much drug each cell takes up and how much of the target it actually blocks, using fluorescent drug analogs, target-engagement biosensors, or single-cell mass spectrometry imaging. Then ask whether survivors simply received or kept a lower effective dose because of efflux, size, or membrane differences. That would be a simple physical explanation that skips gene expression altogether."
+    },
+    {
+      "title": "Perturbation screens that score how often survivors arise",
+      "description": "Run pooled CRISPR or chromatin-modifier screens with single-cell readout. Score each perturbation by how much it changes the fraction of cells that survive and how fast cells switch into and out of the primed state, not only by whether resistance appears. This would map the regulatory network that sets the rate of rare survival, so the rare state could be expanded or eliminated on purpose."
+    },
+    {
+      "title": "Spatial and neighbor-context mapping of survivors",
+      "description": "Follow drug-treated cultures and tumors with spatial transcriptomics and time-lapse imaging that records each cell's position, local density, and neighbors (including dying neighbors). Then test whether survival depends on the cell's surroundings, for example signals released by dying cells nearby or niche contacts, rather than on its own internal state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1407,
+  "cost_usd": 0.033650000000000006
+}

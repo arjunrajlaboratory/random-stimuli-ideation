@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 5,
+  "parallel": {
+    "field": "Geology / geomorphology",
+    "problem": "Determining whether a landscape or rock formation retains a record of past events (such as a flood, glaciation or earthquake) that controls how it responds to later events.",
+    "how_studied": "Geologists date landforms and sediments with cosmogenic nuclides and luminescence to build chronologies. They use paleomagnetic and stratigraphic analysis to read the preserved signal. Flume or numerical erosion experiments then test whether a landscape with a prior history responds differently from a naive one."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Geology / geomorphology\nProblem: Determining whether a landscape or rock formation retains a record of past events (such as a flood, glaciation or earthquake) that controls how it responds to later events.\nHow it is studied: Geologists date landforms and sediments with cosmogenic nuclides and luminescence to build chronologies. They use paleomagnetic and stratigraphic analysis to read the preserved signal. Flume or numerical erosion experiments then test whether a landscape with a prior history responds differently from a naive one.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Chronology of AP-1 binding and chromatin opening (geochronology analogue)",
+      "description": "After a defined stimulus (e.g., serum, TPA, injury, or inflammatory cue), run time-resolved ATAC-seq, CUT&RUN for FOS/JUN family members, and H3K27ac at many time points through and long after signal withdrawal. Date which AP-1-bound enhancers stay open or primed, and for how long, to establish whether a persistent 'record' exists and how it decays."
+    },
+    {
+      "title": "Stratigraphic reading of the preserved signal on chromatin",
+      "description": "Use single-cell multiome (scATAC plus RNA) and footprinting or motif-deviation analysis of sequential stimulation histories, such as stimulus A then B, to read layered AP-1 imprints. Test whether sites opened by the first stimulus (AP-1-dependent 'sediment layers') are distinguishable from sites opened by the second, and whether the AP-1 subunit composition (FOS vs JUN vs ATF) encodes the identity of the earlier event."
+    },
+    {
+      "title": "Naive versus pre-exposed 'flume' response test",
+      "description": "Prime cells with a transient stimulus, wash out, rest them, then challenge with the same or a different stimulus. Compare transcription kinetics (nascent RNA, PRO-seq) and amplitude against naive cells, and test whether the faster or stronger response at primed loci depends on the prior AP-1 occupancy. This is the direct analogue of testing whether a landscape with prior history erodes differently."
+    },
+    {
+      "title": "Perturbing the record: acute AP-1 degradation at different times",
+      "description": "Use degron (dTAG/AID) or dominant-negative (A-FOS) tools to remove AP-1 either during the priming event, during the rest period, or only at the challenge. If memory needs AP-1 only at writing, only at maintenance, or only at reading, the timing separates writing, storage and readout roles. Pair with CRISPR mutation of specific AP-1 motifs at primed enhancers to test sufficiency and necessity at individual loci."
+    },
+    {
+      "title": "Numerical modeling of memory dynamics and lineage tracing across divisions",
+      "description": "Fit a mathematical model (bistable or hysteretic feedback, including AP-1 positive autoregulation of JUN/FOS and chromatin-state inertia) to the time-course and dose-response data, and predict memory duration and decay by cell division. Validate by live-cell imaging of AP-1 reporters or fluorescent FOS and by sister-cell or lineage tracking, testing whether the state is inherited through mitosis, with mitotic bookmarking assays (imaging and CUT&RUN on mitotic cells)."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 966,
+  "cost_usd": 0.014911500000000001
+}

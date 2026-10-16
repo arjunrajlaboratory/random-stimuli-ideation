@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Time-lapse lineage-linked pre-treatment history",
+      "description": "Track single cells by live imaging with reporters (cell cycle, stress, apoptosis signaling) for several generations before drug addition, then retrospectively identify features of the cells that later survive. Sister-cell and cousin-cell survival concordance would quantify the heritability and timescale of the protective state."
+    },
+    {
+      "title": "Spatial-transcriptomic neighborhood mapping of survivors",
+      "description": "Apply multiplexed in situ imaging (MERFISH or similar) to 3D cultures or xenografts during treatment to test whether survivors cluster by local microenvironment such as oxygen, density, or contact with stromal cells. Compare with matched non-survivors to separate cell-intrinsic from position-dependent protection."
+    },
+    {
+      "title": "Mitochondrial priming and apoptotic threshold profiling",
+      "description": "Use BH3 profiling and single-cell quantification of BCL-2 family proteins and caspase activation kinetics to measure how close each cell is to the apoptotic threshold. This tests whether survival comes from variable death-machinery wiring rather than from the drug target pathway."
+    },
+    {
+      "title": "Drug uptake, efflux and intracellular concentration at single-cell resolution",
+      "description": "Use fluorescent drug analogs or mass-spec imaging (e.g., CyTOF or nanoSIMS) to measure intracellular drug levels and target occupancy in individual cells, then link these to survival. Differences in transporter activity or lysosomal drug sequestration could explain survival without altering signaling."
+    },
+    {
+      "title": "Stochastic gene expression noise manipulation",
+      "description": "Use synthetic circuits or promoter and noise-modulating perturbations to raise or lower expression variability of candidate survival genes while keeping their mean level constant. Measuring the persister fraction as a function of noise tests causally whether cell-to-cell variation itself, rather than the average, sets the surviving fraction."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated populations to find persister transcriptional states",
+      "Whole-genome/exome sequencing of resistant survivors to find resistance mutations",
+      "Barcode lineage tracing (e.g., Cellecta/ClonTracer) to test pre-existing vs. induced resistance",
+      "ATAC-seq/ChIP-seq to profile chromatin accessibility and histone marks in persisters",
+      "CRISPR knockout/CRISPRi screens for genes modulating persister survival",
+      "Fluctuation tests (Luria-Delbr\u00fcck) to distinguish mutation from non-genetic origins",
+      "Live-cell imaging of single-cell drug response and fate",
+      "Proteomics/phosphoproteomics of survivors and bypass signaling pathways (e.g., RTK activation)",
+      "Metabolic profiling (e.g., OXPHOS, lipid metabolism, ferroptosis sensitivity) of persisters",
+      "Testing combination therapies or epigenetic inhibitors (HDAC, EZH2) to eliminate persisters"
+    ]
+  },
+  "output_tokens": 1089,
+  "cost_usd": 0.013653699999999998
+}

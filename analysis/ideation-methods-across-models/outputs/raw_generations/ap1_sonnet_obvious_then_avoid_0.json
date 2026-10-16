@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic AP-1 pulse-and-chase",
+      "description": "Use light-inducible FOS/JUN (or optogenetic dimerization) to deliver precisely defined AP-1 activity pulses in the absence of any upstream signal, then measure whether a transient pulse alone leaves a lasting transcriptional/accessibility state and how its duration depends on pulse dose and frequency. This separates AP-1 sufficiency from upstream signaling."
+    },
+    {
+      "title": "Acute degron removal after priming (necessity for maintenance vs. establishment)",
+      "description": "Tag endogenous FOS/JUN family members with dTAG/auxin degrons and deplete them either only during priming, only after priming (during the memory interval), or only at recall. If memory requires AP-1 to persist, post-priming depletion should erase it, whereas establishment-only requirement indicates AP-1 acts as an initiator of another memory carrier."
+    },
+    {
+      "title": "Live-cell single-cell AP-1 reporter lineage tracking",
+      "description": "Track endogenous AP-1 activity (knock-in fluorescent FOS/JUN or a synthetic TRE reporter) in individual cells and their daughters through division using time-lapse microscopy, then correlate pre-stimulus/ancestral AP-1 history with later response magnitude. Mother-daughter correlation beyond that explained by shared noise would show heritable memory at the single-cell level."
+    },
+    {
+      "title": "Synthetic AP-1 positive-feedback circuit perturbation and mathematical modeling",
+      "description": "Rewire or break the FOS/JUN autoregulatory loop (e.g., mutate TRE sites in the JUN/FOSL1 promoters, or add a synthetic feedback) and fit dynamical models to dose-response and hysteresis measurements. Observing bistability or hysteresis, which are lost when the loop is cut, would test whether AP-1 network topology itself encodes memory."
+    },
+    {
+      "title": "Targeted motif editing and dCas9 tethering at specific memory enhancers",
+      "description": "Use base editing to mutate individual AP-1 motifs at candidate memory enhancers, and conversely tether AP-1 or pioneer-like activation domains with dCas9 at motif-null sites. Measure locus-specific persistence of accessibility, nucleosome remodeling (e.g., SWI/SNF/BAF recruitment), and faster re-induction to establish causal, locus-level sufficiency and necessity."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (FOS/JUN) occupancy before, during, and after a stimulus",
+      "ATAC-seq of chromatin accessibility at AP-1 motifs after stimulus withdrawal",
+      "Knockout/knockdown of FOS or JUN and test loss of memory phenotype",
+      "Dominant-negative AP-1 (A-FOS) expression to block AP-1 activity",
+      "Time-course of AP-1 protein levels/phosphorylation (JNK signaling) after stimulus",
+      "Single-cell RNA-seq/ATAC-seq to map AP-1 motif activity across primed vs naive cells",
+      "Re-stimulation experiments measuring faster/stronger transcriptional response in primed cells",
+      "Histone modification profiling (H3K27ac, H3K4me1) at AP-1 bound enhancers",
+      "Hi-C/ChIA-PET to track enhancer-promoter looping at AP-1 targets",
+      "Pharmacologic AP-1 inhibitors (e.g., T-5224) during priming vs recall"
+    ]
+  },
+  "output_tokens": 1252,
+  "cost_usd": 0.019136
+}

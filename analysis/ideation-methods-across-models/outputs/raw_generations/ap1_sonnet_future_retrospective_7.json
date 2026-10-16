@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degron with long-term chromatin memory readout",
+      "description": "Use dTAG/AID degrons on FOS/JUN family members to remove AP-1 at defined times after a transient stimulus (e.g., wound, TNF, or inflammatory priming), then measure whether enhancer accessibility, H3K27ac and the secondary-response transcriptional boost persist for weeks of cell divisions. This separates AP-1 as the maintainer of memory from AP-1 only being needed to establish it."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of primed enhancers",
+      "description": "Combine barcoded lineage tracing with paired scATAC/scRNA before stimulation, after rest, and after restimulation to test whether sister cells keep AP-1 motif-accessible enhancers and enhanced re-response more similarly than unrelated cells. Heritable, clone-correlated states that outlast AP-1 protein levels would show memory is carried epigenetically."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-code writing and reading",
+      "description": "Drive endogenous FOS/JUN or a synthetic AP-1 with optogenetic or chemically induced pulses of varying duration, frequency and amplitude, then measure which patterns leave residual chromatin opening, pioneer-like nucleosome displacement and altered future responses. This tests whether AP-1 dynamics encode a history that is stored, rather than just a transient signal."
+    },
+    {
+      "title": "Dissecting AP-1 sites by locus-specific editing and epigenome writing",
+      "description": "At endogenous memory-associated enhancers, mutate AP-1 motifs, or use dCas9 to place or remove acetylation, methylation and SWI/SNF (BAF) recruitment, with and without AP-1 present. Testing which of these changes is necessary and sufficient for a primed re-response shows whether the memory lies in AP-1 binding itself or in downstream chromatin marks it leaves behind."
+    },
+    {
+      "title": "In vivo cross-tissue memory comparison with human perturbation cohorts",
+      "description": "Compare AP-1 occupancy (CUT&RUN), accessibility and responses across tissues with documented memory, such as post-inflammation epithelial stem cells, trained-immunity monocytes and injured neurons, in mice with conditional AP-1 knockouts. Complement this with human cells from people with prior exposure (e.g., BCG vaccination, past inflammatory episodes) to test whether AP-1-dependent memory is general, and to define its duration and reversibility."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 906,
+  "cost_usd": 0.0118461
+}

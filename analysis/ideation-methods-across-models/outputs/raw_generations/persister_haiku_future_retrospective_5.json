@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding plus single-cell transcriptomics before and during drug exposure",
+      "description": "Tag each founder cell with a heritable barcode, treat the population, and profile surviving clones by scRNA-seq at baseline and early timepoints. This tests whether survivors were already transcriptionally distinct before treatment (pre-existing tolerance) or switched state after exposure (induced tolerance)."
+    },
+    {
+      "title": "Chromatin accessibility time course to find a primed epigenetic state",
+      "description": "Run single-cell ATAC-seq across a drug time course and align the profiles with later survival, so the chromatin landscape of cells that will persist can be compared with that of cells that will die. Accessibility at lineage or stress-response enhancers that is already open before treatment would point to epigenetic priming."
+    },
+    {
+      "title": "Live-cell fate tracking with reporters, then sort-and-rechallenge",
+      "description": "Use fluorescent reporters for cell-cycle phase, stress signalling (e.g., NRF2 or p53 activity), and mitochondrial state to follow individual cells under drug, then recover the cells that survive and re-challenge them. Reporter states that predict eventual survival would reveal the decisive variable."
+    },
+    {
+      "title": "Time-resolved pooled CRISPR screen for genes that govern entry into and exit from persistence",
+      "description": "Perform a genome-wide CRISPR knockout screen with samples taken at multiple points during drug exposure and during drug withdrawal, not only at the endpoint. Genes whose loss changes the rate of entering the tolerant state, or the chance of regrowing from it, would separate the mechanisms that initiate persistence from those that sustain it."
+    },
+    {
+      "title": "Pre-treatment metabolic imaging to predict which cells will survive",
+      "description": "Measure single-cell metabolic readouts such as NAD(P)H fluorescence lifetime imaging and mitochondrial membrane potential in untreated cultures, then score each cell's metabolic state against its later survival under drug. A predictive metabolic signature before treatment would show whether survival is set by a baseline metabolic state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1396,
+  "cost_usd": 0.0008409
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with retrospective identification of pre-resistant cells (Rewind/FateMap-style): Label cells with expressed, heritable barcodes, split clonal populations into a drug arm and a reference arm, and use the barcodes of surviving clones to go back and capture their sister cells before treatment for scRNA-seq or imaging. This shows the transcriptional and epigenetic state that marked a cell as a future survivor before any drug was added.\n2. Single-molecule RNA FISH for rare-cell expression states before treatment: Use multiplexed smFISH (or iterative methods like MERFISH or ClampFISH) on large numbers of untreated cells to measure the frequency and co-occurrence of rare 'jackpot' cells that strongly express resistance-associated genes (e.g., AXL, EGFR, NGFR). Then check whether the fraction of these cells, and how they are spatially clustered, predicts how many colonies survive the drug.\n3. Luria\u2013Delbr\u00fcck fluctuation analysis and memory measurements: Grow many small parallel clonal populations, then treat them and measure how much the number of surviving colonies varies between populations. Excess variance means the pre-resistant state is heritable. Combine this with sister-cell and cousin-cell analysis of barcoded lineages to estimate how many generations the primed state lasts and how fast cells switch in and out of it.\n4. Live-cell imaging of signaling dynamics and cell-cycle state during drug exposure: Use fluorescent reporters for the pathway being targeted (e.g., an ERK kinase translocation reporter), plus cell-cycle (FUCCI) and stress reporters, to follow individual cells through treatment. This tests whether survivors differ beforehand in signaling reactivation, quiescence, or proliferation dynamics, or only adapt afterward.\n5. Perturbation screens to identify regulators that set the frequency of primed cells: Run pooled CRISPR knockout/activation screens with single-cell readout (Perturb-seq), or targeted perturbations of chromatin regulators and transcription factors, to see which genes change how often the rare pre-resistant state appears and how many cells survive the drug. Follow up with single-cell ATAC-seq/multiome to identify the chromatin features that keep the state heritable.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell drug pharmacology: are survivors resistant or just under-dosed?",
+      "description": "Quantify per-cell intracellular drug using a fluorescent drug analog (cross-validated by MALDI mass-spectrometry imaging of the parent compound) alongside efflux activity (calcein-AM/rhodamine-123 extrusion), lysosomal sequestration (LysoTracker colocalization +/- bafilomycin), and a single-cell target-engagement readout such as NanoBRET or in-cell CETSA imaging. This separates 'low drug inside' from 'target bound but pathway output unchanged,' and is tested causally by blocking efflux or lysosomal trapping and asking whether the surviving fraction collapses."
+    },
+    {
+      "title": "Imaging-based single-cell BH3 profiling of apoptotic priming",
+      "description": "Measure each untreated cell's distance from the mitochondrial death threshold by microscopy BH3 profiling (digitonin permeabilization, graded BIM/BAD/HRK peptides, per-cell cytochrome-c release or TMRE loss), and test whether the rare 'unprimed' tail quantitatively matches the surviving fraction across doses. Causally, a BH3 mimetic should shrink the survivor fraction without changing targeted-pathway signaling, while graded BCL-2/MCL-1 overexpression should expand it predictably."
+    },
+    {
+      "title": "Mitotic partitioning asymmetry as the origin of the primed state",
+      "description": "Time-lapse the unequal inheritance of mitochondria, lysosomes, efflux transporters, damaged/aggregated protein, and the drug target itself at each division, then follow both daughters into drug to test whether partitioning asymmetry at a specific division predicts which sister survives. Perturb mitosis duration or mitochondrial fission (DRP1) to shift the asymmetry distribution and see whether survivor frequency moves as predicted, placing the origin of priming in stochastic division rather than transcription."
+    },
+    {
+      "title": "Replicative age and label retention of future survivors",
+      "description": "Install a division counter (doxycycline-pulsed stable H2B-fluorophore or photoconverted Dendra2) whose signal halves with each division, and ask both retrospectively and by prospective sorting whether survivors are drawn from label-retaining rarely-dividing cells or recently divided ones. This turns the vague slow-cycler hypothesis into a quantitative statement about how many divisions ago the surviving state was set, and isolates proteome age from transcriptional signature."
+    },
+    {
+      "title": "Niche-conferred survival: neighbor ablation, micropatterning, and medium transplant",
+      "description": "Use micropatterns and defined local-density gradients to test whether survival probability depends on neighborhood geometry, combined with selective laser or optogenetic (KillerRed/miniSOG) ablation of a prospective survivor's immediate neighbors just before drug, and transplant of conditioned medium from microwells that produced survivors. This asks whether the rare survivor is a rare cell or a rare location, a cell-extrinsic possibility that intrinsic-state assays cannot detect."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4719,
+  "cost_usd": 0.1684985
+}

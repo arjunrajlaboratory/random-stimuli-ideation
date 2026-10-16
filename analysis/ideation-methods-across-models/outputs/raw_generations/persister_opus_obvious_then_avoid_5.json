@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell drug uptake and target occupancy imaging",
+      "description": "Use a fluorescent or click-chemistry-tagged analog of the targeted drug, together with a target-engagement readout such as a phospho-substrate biosensor, to measure how much drug each cell takes up and how fully its target is inhibited during live imaging. Then check whether survivors simply received less drug or had less target inhibition, for example because of efflux pumps or lysosomal trapping, rather than having a different transcriptional state."
+    },
+    {
+      "title": "Micropatterned control of local geometry and density",
+      "description": "Plate cells on micropatterned islands of defined size, shape, and neighbor number. Map survival against position (edge vs. center), local crowding, and YAP localization to test whether rare survival comes from microenvironment and mechanics within the dish rather than from an internal cell state."
+    },
+    {
+      "title": "Buoyant mass and growth-rate profiling before treatment",
+      "description": "Use suspended microchannel resonators, or quantitative phase imaging, to measure each cell's mass and mass-accumulation rate before adding drug, then track which cells survive. This tests whether biophysical traits such as cell size, protein dilution, or growth rate predict survival independently of gene expression."
+    },
+    {
+      "title": "Tracking asymmetric partitioning at division",
+      "description": "Pulse-label mitochondria, aggregated proteins, or the drug target using photoconvertible or SNAP-tag chemistry. Follow how these components are split between daughter cells in the divisions before treatment, and test whether daughters that inherit an unequal share are the ones that later survive the drug."
+    },
+    {
+      "title": "Mitochondrial apoptotic priming in sister clones",
+      "description": "Expand barcoded clones, split each into two halves, and run single-cell dynamic BH3 profiling on one half while giving the drug to the other. This links each clone's distance from the apoptotic threshold (how close it is to triggering cell death) to its survival, testing whether persisters are defined by how they handle death signals rather than by how they respond to the drug's signaling effect."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated populations to find a rare pre-existing 'persister' transcriptional state",
+      "Lineage barcoding (e.g., Rewind, FateMap, ClonTracer) to trace survivors back to their pre-treatment states",
+      "Luria\u2013Delbr\u00fcck-style fluctuation analysis to test whether survival is heritable or arises stochastically",
+      "Whole-genome/exome sequencing of survivors to rule out pre-existing resistance mutations",
+      "Single-cell ATAC-seq or histone-mark profiling to find epigenetic differences in surviving cells",
+      "Live-cell imaging with fluorescent signaling reporters (e.g., ERK KTR) to link pre-drug signaling dynamics to fate",
+      "CRISPR knockout/activation screens to find genes that change the fraction of surviving cells",
+      "Metabolic profiling (OXPHOS vs. glycolysis, ROS, Seahorse) of drug-tolerant persister cells",
+      "Cell-cycle and quiescence analysis (FUCCI, Ki67, label retention) to test whether slow-cycling cells survive",
+      "smFISH or immunofluorescence for candidate marker genes (e.g., AXL, EGFR, NGFR) to quantify rare high-expressing cells"
+    ]
+  },
+  "output_tokens": 2449,
+  "cost_usd": 0.0545074
+}

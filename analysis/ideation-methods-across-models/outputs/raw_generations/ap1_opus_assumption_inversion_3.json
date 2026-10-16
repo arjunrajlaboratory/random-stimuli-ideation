@@ -1,0 +1,43 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Switch AP-1 off after the first signal",
+      "description": "Use a degron to remove the relevant AP-1 subunits (for example FOSL2 or JUN) only after the first stimulus has ended, then check whether the faster response to a second stimulus disappears. If AP-1 is only needed during the first exposure, it is starting the memory, not holding it (tests assumption 1)."
+    },
+    {
+      "title": "Separate open chromatin from ongoing binding",
+      "description": "Over the period between stimuli, measure open chromatin (ATAC-seq) and AP-1 binding (CUT&RUN) at the same sites over time. Then use dCas9-KRAB or dCas9-p300 to close or open individual AP-1 sites and see if that removes or creates memory at nearby genes (tests assumption 2)."
+    },
+    {
+      "title": "Track memory in single cells with barcodes",
+      "description": "Label cells with heritable barcodes and do single-cell RNA plus chromatin profiling before the first stimulus, after it, and after the second. This shows whether the cells with a stronger second response came from the AP-1-high cells that responded first, or from cells that were already primed before any stimulus (tests assumptions 3 and 6)."
+    },
+    {
+      "title": "Check whether memory survives cell division",
+      "description": "Use a live-cell AP-1 activity reporter with time-lapse imaging to compare related cells (sisters and cousins) across several divisions after the stimulus. Measure how quickly the reporter level and the faster second response fade per division, and compare normal cells with cells whose division has been stopped (tests assumption 4)."
+    },
+    {
+      "title": "Map which dimer pairs do what",
+      "description": "Use a CRISPRi screen across AP-1 family members, or tethered dimers that force specific pairs, to test which ones are needed to set up the memory and which are needed to keep it. Back this up with mass spectrometry of AP-1 complexes, run on chromatin during the period between stimuli (tests assumption 5)."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 itself carries the memory, rather than just marking cells that were stressed or primed by something else.",
+      "The memory is stored as lasting open chromatin at AP-1 sites, so that stays open after the signal ends without AP-1 needing to keep binding.",
+      "Bulk population measurements show what happens in each cell. In reality, the memory could sit in a small subset, and selection could make it look like the whole population changed.",
+      "The memory is passed on through cell division, not just a long-lived state in cells that don't divide.",
+      "'AP-1' acts as one unit, even though different dimer pairs (for example cFOS/JUN, FOSL1/FOSL2, ATF3) may play different roles.",
+      "A faster or stronger response to a second exposure is the readout of memory. That ignores the possibility that the cells were already different before the first exposure."
+    ]
+  },
+  "output_tokens": 2576,
+  "cost_usd": 0.062557
+}

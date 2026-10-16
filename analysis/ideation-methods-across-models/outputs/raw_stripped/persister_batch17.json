@@ -1,0 +1,150 @@
+{
+  "batch": 17,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "cc92cf7f50f046173d6e7e1645cf99bb9e940cb058fe9e7f6a958b7062881b95",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Controlled perturbation screen of candidate state variables",
+      "description": "Systematically perturb suspected hidden variables such as cell-cycle phase, drug efflux, mitochondrial priming, chromatin state or stress-pathway activity, using CRISPRi/a, small-molecule modulators or synchronization. Measure how each shifts the survivor fraction, to test which state differences cause survival rather than merely correlate with it.",
+      "idea_id": "persister_sonnet_parallel_rotated_3_2",
+      "source_sha256": "b9df61862c1a6667cebecf08c6cf04a9374f75aeb8f7407713b9113a1fbf3455"
+    },
+    {
+      "id": "I2",
+      "title": "Live-cell imaging with single-cell tracking and retrospective fate mapping",
+      "description": "Image reporter-labeled cells (e.g., signaling activity, cell cycle, apoptosis, mitochondrial state) for days before and during treatment, then trace survivors back to their earlier histories. This links dynamic features such as pulsatile ERK or p53 activity, cell-cycle phase, or cell size to survival, and shows how long a predictive state persists.",
+      "idea_id": "persister_sonnet_plain_2_1",
+      "source_sha256": "2e190f1667186330c0b32f03dff17b51a592e3ad656da571e15491cb227b1775"
+    },
+    {
+      "id": "I3",
+      "title": "Single-cell copy-number and mutation mapping of survivors",
+      "description": "Run single-cell whole-genome sequencing (and scRNA-seq on the same cells via paired methods) on survivors versus matched pre-treatment clones to detect rare subclonal aneuploidy, extrachromosomal DNA amplification, or ongoing mutagenesis. This tests whether the cells are genetically identical at the sub-chromosomal level, and whether persisters transiently up-regulate error-prone repair.",
+      "idea_id": "persister_sonnet_critique_revise_3_1",
+      "source_sha256": "50ae2d68f73b698ce00e543f8a64b2fd32be98a6cac9d2b19afd282fb8e77c45"
+    },
+    {
+      "id": "I4",
+      "title": "Barcode lineage tracing before and after drug",
+      "description": "Label cells with a high-complexity heritable DNA barcode library (e.g., CellTag or LARRY) before treatment, then compare barcode frequencies in pre-treatment and survivor pools. Barcodes already enriched among survivors indicate pre-existing tolerant clones, while survivors with barcodes absent from the pre-treatment pool indicate de novo induction.",
+      "idea_id": "persister_haiku_assumption_inversion_5_0",
+      "source_sha256": "59336bc62e92731a8b015f73e50cbd837e296c39405e447c5da0e08d42502f4b"
+    },
+    {
+      "id": "I5",
+      "title": "Stochastic gene-expression noise and fluctuation timescale modeling",
+      "description": "Perform time-resolved single-cell measurements of key drug-target pathway reporters in untreated cells. Fit stochastic state-switching models (Luria-Delbr\u00fcck-type fluctuation analysis) to estimate how fast cells enter and leave the tolerant state and to predict how survival changes with drug-holiday schedules.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_7_3",
+      "source_sha256": "dfb4192c3308a580d505957f92c72728e078928a4d2b2a6edb6cc66eb830c144"
+    },
+    {
+      "id": "I6",
+      "title": "Spatial mapping of survivors in residual tumors",
+      "description": "Use multiplexed spatial imaging (MERFISH or CODEX) on residual tumors from treated animals to map where survivors sit relative to vasculature, hypoxia, stromal interfaces, and immune niches. Spatial clustering of survivors in specific microenvironments would indicate that the microenvironment, not intrinsic cell identity, determines which cells survive.",
+      "idea_id": "persister_haiku_instruction_only_4_3",
+      "source_sha256": "235cb01967b1440499f747802ce14969af77254e709e04894e79073d7e36f75c"
+    },
+    {
+      "id": "I7",
+      "title": "Pre-treatment metabolic imaging to predict survival",
+      "description": "Measure single-cell metabolic readouts such as NAD(P)H fluorescence lifetime imaging and mitochondrial membrane potential in untreated cultures, then score each cell's metabolic state against its later survival under drug. A predictive metabolic signature before treatment would show whether survival is set by a baseline metabolic state.",
+      "idea_id": "persister_haiku_future_retrospective_5_4",
+      "source_sha256": "438a1220a6729ca476ac2c9b4335b0caaf54195db25332eeec5899b8f29e9a5d"
+    },
+    {
+      "id": "I8",
+      "title": "Continuous time-lapse from before drug to colony outgrowth",
+      "description": "Image the whole population continuously with signaling and stress-state reporters from several days before dosing through the emergence of resistant colonies, reconstructing full time-stamped pedigrees. This identifies which early events, such as a transient expression spike, an unusually long cell-cycle arrest, or a particular cellular neighborhood, preceded later dominance, versus which were common and inconsequential.",
+      "idea_id": "persister_opus_parallel_rotated_6_3",
+      "source_sha256": "f13f09c3efca065c732ef2711f1c3266b00769cee766aaef5c9a9630b0db0555"
+    },
+    {
+      "id": "I9",
+      "title": "Early drug-response trajectories of survivors versus dying cells with metabolic and epigenetic profiling",
+      "description": "Capture cells in the first hours to days of drug exposure with single-cell time-resolved sequencing, metabolic flux imaging (e.g., FLIM/NADH), and chromatin accessibility/histone mark profiling. Reconstruct how survivors diverge from dying cells, and test whether rewiring (e.g., lipid peroxidation defense, chromatin remodeling) is an induced adaptive response rather than a pre-existing state.",
+      "idea_id": "persister_sonnet_future_retrospective_6_3",
+      "source_sha256": "9be2ecf03ca55c972dae50a4e07f3cfc3e1d7014f917d2196345fff2aace446b"
+    },
+    {
+      "id": "I10",
+      "title": "Lineage-tracked pre-treatment history of survivors",
+      "description": "Perform long-term time-lapse of cells before drug addition, tracking lineages with nuclear and cell-cycle reporters (e.g., H2B-mCherry, FUCCI), then add drug and retrospectively trace survivors back to their ancestors. This tests whether survival is predicted by pre-existing states such as cell-cycle length, quiescence or division history, and whether sister and cousin cells share fates, which would indicate heritable rather than stochastic states.",
+      "idea_id": "persister_sonnet_assigned_constraint_2_0",
+      "source_sha256": "07893402f2485eff8f70dbf763fdc9ed544ac746c7c41832e28e6635a9cc3fec"
+    },
+    {
+      "id": "I11",
+      "title": "Per-cell target protein turnover measured by HaloTag pulse-chase",
+      "description": "Endogenously tag the drug target with a HaloTag, pulse-label with a cell-permeant dye, and measure the per-cell synthesis and degradation rate of the existing protein pool by time-lapse imaging under treatment. Survivors may have slower target turnover or a higher replacement rate that buffers drug occupancy, which can be tested by modulating proteasomal or lysosomal degradation.",
+      "idea_id": "persister_haiku_critique_revise_4_2",
+      "source_sha256": "64848b0a0f7cc8c88c61f637a364e6a4b965a0109fd7576f5834ec4edc4fd07c"
+    },
+    {
+      "id": "I12",
+      "title": "Density-dependent and secreted-factor dependence of survival",
+      "description": "Plate the population across a range of seeding densities and measure the survival fraction under drug, then test survivors' dependence on neighbors using conditioned medium, transwell co-culture, and sparse-plating controls. A density-dependent survival fraction would indicate a community-level, paracrine protection mechanism rather than an intrinsic single-cell property.",
+      "idea_id": "persister_haiku_obvious_then_avoid_0_3",
+      "source_sha256": "6ae9a0085af9f3f3fdedbe1c5d8a8f5474d0142906ea78eaf5d58286e7f410fa"
+    },
+    {
+      "id": "I13",
+      "title": "Heterogeneity in drug-target engagement and intracellular drug concentration",
+      "description": "Use a fluorescent drug analog, a target-engagement reporter (such as a CETSA-like or phospho-substrate readout), or single-cell mass spectrometry/mass cytometry to measure how much drug reaches the target in each cell. Compare survivors with dying cells to determine whether efflux, lysosomal sequestration, or incomplete pathway inhibition explains survival rather than downstream adaptation.",
+      "idea_id": "persister_sonnet_critique_revise_2_2",
+      "source_sha256": "d92ca31ccece79c021cba2489b17ef211e4c8d9a11323f1c8794a72b15495e39"
+    },
+    {
+      "id": "I14",
+      "title": "Genetic exclusion and clinical concordance analysis",
+      "description": "Reanalyze public whole-exome and whole-genome data and copy-number profiles from persister cells, resistant clones and matched patient biopsies (such as minimal residual disease samples). Rule out pre-existing mutations and copy-number changes as the cause, and check whether the persister transcriptional programs also appear in patient on-treatment samples and associate with relapse in TCGA and clinical trial cohorts.",
+      "idea_id": "persister_sonnet_assigned_constraint_0_4",
+      "source_sha256": "cd84d661541e9bcce2642b80edcd37c15413d87b853b50deaa2371b42001405c"
+    },
+    {
+      "id": "I15",
+      "title": "Memory decay curves from barcoded split populations",
+      "description": "Barcode a population, let it grow, split it into replicate plates at different numbers of generations, and treat each plate with drug. Measuring how often the same barcodes survive across splits as a function of time since division gives a quantitative memory timescale for the pre-resistant state, as in a Luria-Delbr\u00fcck fluctuation test. This would show whether survival is pre-encoded, heritable but transient, or decided only after the drug arrives.",
+      "idea_id": "persister_opus_future_retrospective_5_0",
+      "source_sha256": "93158fb46ded9a40c1c882d8c03a9adab84e1b1008718fe7f803bed8ab4c84b0"
+    },
+    {
+      "id": "I16",
+      "title": "Inheritance of organelle and protein content through asymmetric division",
+      "description": "Use time-lapse imaging with labeled mitochondria, lysosomes, or drug-efflux pumps (or a fluorescent drug analog) to quantify how unequal partitioning at division creates drug-handling differences between sister cells. Then test whether sisters with more of the inherited cargo preferentially survive, and perturb partitioning (for example, with spindle or mitochondrial-dynamics inhibitors) to see whether survival changes.",
+      "idea_id": "persister_sonnet_critique_revise_7_0",
+      "source_sha256": "9e81cfff4adbc9087d31903489ad24808ce2f25dea30e468f6ca2098760f4255"
+    },
+    {
+      "id": "I17",
+      "title": "Live-cell imaging of signaling and cell-cycle dynamics across the treatment window",
+      "description": "Use fluorescent reporters for target-pathway activity, cell-cycle phase, apoptotic commitment, and stress responses, and track individual cells continuously from before dosing through survival or death. This yields each survivor's full dynamic history, distinguishing cells that never engaged the drug target from those that engaged it but failed to commit to death.",
+      "idea_id": "persister_opus_plain_3_1",
+      "source_sha256": "c15935797551548fb7a927688da1c241225e6905d259b8926ea1f4604274b36f"
+    },
+    {
+      "id": "I18",
+      "title": "Genetic and epigenetic comparison of survivors with matched untreated sisters",
+      "description": "Perform single-cell whole-genome or exome sequencing for copy-number changes and subclonal variants, along with scATAC or CUT&Tag for chromatin state, on sorted survivors and barcode-matched untreated sister cells. This tests whether the cells are in fact genetically identical and whether heritable chromatin states, rather than transcript levels, carry the difference.",
+      "idea_id": "persister_sonnet_assumption_inversion_4_2",
+      "source_sha256": "54962575698e2bf1d53fda19d3c47e2cf28dd74320b035dca33463bb47e52b7c"
+    },
+    {
+      "id": "I19",
+      "title": "Barcoded replicate-population fluctuation analysis",
+      "description": "Use a lineage-barcoded clonal library split into many small replicate cultures, then apply the drug and count surviving barcodes in each replicate. Variation in survivor counts across replicates, compared with Luria-Delbr\u00fcck-type fluctuation models, distinguishes pre-existing survivors from those induced by drug exposure, and shows whether survivors come from a few clones with rare pre-existing tolerance.",
+      "idea_id": "persister_haiku_parallel_rotated_0_4",
+      "source_sha256": "b16c9dfc561f3e03f06c1af721ee664e1b169129a326eb932636bbf6de94fe58"
+    },
+    {
+      "id": "I20",
+      "title": "Pre-treatment state analysis via sister-cell pairing",
+      "description": "Track lineages by time-lapse imaging, then split sister cells so that one is drugged and the other is profiled by scRNA-seq or proteomics. This links the pre-drug state of one sister to the survival fate of its pair, testing causes directly and avoiding after-the-fact correlation.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_7_0",
+      "source_sha256": "8af2bff8eb88acf867916ea6dd8401ea57c73b4256a3110243c2e7e61de0a270"
+    }
+  ],
+  "cost_usd": 0.0504572
+}

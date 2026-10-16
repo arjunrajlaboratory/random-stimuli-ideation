@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic/chemogenetic AP-1 pulse-sufficiency test",
+      "description": "Use a light- or drug-inducible FOS/JUN (or degron-controlled) to deliver a defined transient AP-1 pulse in the absence of any natural stimulus, then test whether the cells show durable enhancer opening and enhanced responses to a later, unrelated cue. This separates sufficiency of AP-1 for imprinting from correlative occupancy."
+    },
+    {
+      "title": "Time-resolved degron: priming-only vs recall-only depletion",
+      "description": "Use an acute auxin/dTAG degron on endogenous AP-1 factors and deplete them either only during the priming window, only during the maintenance interval, or only at recall. Memory requiring AP-1 for establishment but not maintenance, or for both, distinguishes a trigger from a self-sustaining memory mechanism."
+    },
+    {
+      "title": "Pioneer-factor-independent maintenance via synthetic enhancer reporters",
+      "description": "Integrate matched reporter constructs with wild-type, mutated, or spacing-altered AP-1 motifs (plus neighbors like ETS/CEBP) at a fixed genomic safe-harbor locus, and measure whether they acquire and keep a primed state after transient stimulation. This tests whether AP-1 motifs are sufficient in cis to encode memory independent of the native context."
+    },
+    {
+      "title": "Single-cell lineage-tracked inheritance across divisions",
+      "description": "Label sister cells with barcodes or time-lapse lineage tracing, with an endogenous AP-1 reporter, and compare memory strength (recall response) among sisters and cousins over several divisions. Heritable correlation beyond what is explained by AP-1 levels would indicate mitotic transmission, and mitotic-chromatin imaging or CUT&Tag of mitotic cells would test bookmarking."
+    },
+    {
+      "title": "Single-molecule dynamics and nucleosome-remodeler dependence",
+      "description": "Perform live-cell single-molecule tracking of Fos/Jun residence times at primed versus naive enhancers, and combine with inhibition/degradation of SWI/SNF (BAF) to test if sustained accessibility needs continual AP-1\u2013BAF recruitment. Long residence or BAF dependence would indicate a mechanistic basis for memory, versus a passive epigenetic scar."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (c-Fos/c-Jun) occupancy before and after stimulus",
+      "ATAC-seq of chromatin accessibility at AP-1 motifs after stimulus washout",
+      "Knockout/knockdown of FOS/JUN and test loss of memory phenotype",
+      "Dominant-negative AP-1 (A-Fos) expression to block function",
+      "Re-stimulation experiments measuring faster/stronger transcriptional response (primed vs naive)",
+      "RNA-seq time course of AP-1 target genes after stimulus removal",
+      "Histone mark profiling (H3K27ac, H3K4me1) at AP-1 bound enhancers",
+      "Pharmacologic AP-1 inhibitors (e.g., T-5224) during priming vs recall",
+      "Live-cell reporter imaging of AP-1 activity dynamics",
+      "Single-cell multiome (RNA+ATAC) to link AP-1 motif accessibility with memory state"
+    ]
+  },
+  "output_tokens": 1195,
+  "cost_usd": 0.0147328
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Longitudinal ATAC-seq/CUT&RUN after transient stimulus: Expose cells (e.g., fibroblasts, macrophages, or epidermal stem cells) to a transient stimulus such as injury, TPA, or cytokines. Then profile chromatin accessibility and AP-1 (FOS/JUN) binding at timepoints from hours to weeks after the stimulus is withdrawn. Persistent AP-1-motif-associated accessibility, or persistent AP-1 occupancy, would indicate a memory-like state.\n2. Acute AP-1 degradation or dominant-negative block at different phases: Use degron-tagged FOS/JUN, or inducible dominant-negative A-FOS, to remove AP-1 during the priming phase, the memory (rest) phase, or the recall phase. Then measure secondary-challenge responses by RNA-seq. If AP-1 is required for maintaining memory, rather than only for establishing it, depletion during rest should erase the enhanced recall.\n3. Single-cell multiome with lineage/history tracing: Run paired scRNA/scATAC-seq on primed versus naive cells, with a fluorescent AP-1 reporter or barcoding to link each cell's past activation to its present state. Test whether cells with prior AP-1 activity keep distinct accessibility and faster transcriptional re-induction. Quantify whether the state is heritable across cell divisions.\n4. Live-cell AP-1 reporter imaging and dynamics: Image endogenously tagged FOS/JUN, or an AP-1 transcriptional reporter, in single cells across repeated stimulation pulses and lineages. Measure whether response amplitude, kinetics, or baseline level depends on prior stimulus history, and whether that dependence persists through mitosis. This distinguishes a stable, self-sustaining state from transient signaling.\n5. Targeted epigenome editing and sufficiency tests at AP-1 sites: Use dCas9 tools (e.g., dCas9-FOS or dCas9-KRAB) or motif mutation at specific AP-1-dependent enhancers. Test whether opening or closing them alters the response to a later challenge, and whether forcing AP-1 binding in naive cells can mimic memory. Combine this with histone mark profiling (H3K27ac, H3K4me1) and pioneer-factor partner tests (e.g., with BAF/SWI-SNF) to identify mechanism.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Nucleosome-resolved single-molecule footprinting of memory enhancers",
+      "description": "Use Fiber-seq or SMF (long-read methylation footprinting) on primed versus naive cells to read single-chromatin-fiber occupancy at AP-1 loci. Test whether memory is a bimodal, all-or-none fiber state (open, with AP-1-motif footprints lost or retained) whose fraction of open fibers, rather than the average, carries memory, and whether it is inherited after replication."
+    },
+    {
+      "title": "Replication-coupled inheritance test with synchronized and arrested cells",
+      "description": "Prime cells, then compare memory retention across cells that divide (EdU/cell-cycle tracked), are arrested (CDK4/6 inhibitor, contact inhibition), or are blocked in S-phase passage. If AP-1-linked accessibility persists in non-dividing cells but is diluted or re-established only with a specific mark in dividing ones, this separates self-sustaining feedback from mitotic bookmarking, e.g. via mitotic-chromosome CUT&Tag of FOS/JUN."
+    },
+    {
+      "title": "Positive-feedback circuit perturbation: AP-1 gene autoregulation",
+      "description": "Use CRISPR to mutate the AP-1 sites in the promoters or enhancers of FOSL1, JUN and JUNB (autoregulatory loops), or clamp their levels with a synthetic constitutive promoter. Quantify whether bistability or hysteresis vanishes, by measuring the stimulus dose-response curve for ascending versus descending doses, in single-cell flow or smFISH."
+    },
+    {
+      "title": "Dimer-composition and phospho-state mass spectrometry across the memory window",
+      "description": "Perform quantitative proteomics (IP-MS or targeted PRM) of AP-1 family members and their partners (ATF, MAF, BAF subunits) plus phospho-sites on chromatin at baseline, post-stimulus, and during rest. Test whether memory correlates with a shifted FOS/JUN paralog composition, e.g. a switch from FOS to FOSL2/JUNB, rather than persistent total AP-1 occupancy."
+    },
+    {
+      "title": "Cross-system comparative memory vs. AP-1 motif-grammar modeling",
+      "description": "Train a sequence-to-function neural network (e.g. a ChromBPNet-style model) on accessibility from primed and naive states across several cell types and in vivo injury models. Then use in silico motif ablation and motif-spacing/cooperativity analysis to predict which AP-1 sites hold memory, and validate the top and bottom predictions with MPRA or by genomic editing of memory versus non-memory sites."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 956,
+  "cost_usd": 0.012420800000000001
+}

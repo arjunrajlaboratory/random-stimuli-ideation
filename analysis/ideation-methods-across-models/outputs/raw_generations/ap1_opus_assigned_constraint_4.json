@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 4,
+  "constraint": "in an organism or cell system other than human or mouse",
+  "prompt": "Constraint: every one of your ideas must be carried out in an organism or cell system other than human or mouse. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Serial-amputation priming of AP-1 regeneration enhancers in zebrafish fins",
+      "description": "Amputate caudal fins, allow complete regeneration and a long rest period, then re-amputate and ask whether previously injured tissue responds faster or more strongly, while profiling ATAC-seq/CUT&RUN (Fosl1a, Junba, H3K27ac, H3K4me1) at AP-1-bound tissue-regeneration enhancer elements at matched timepoints. A memory model predicts residual primed chromatin (retained accessibility or H3K4me1 without H3K27ac) at these enhancers long after the first regenerate is complete, and that fosl1a/junb mutants or enhancer-motif deletions erase the accelerated second response."
+    },
+    {
+      "title": "Pulse-chase degron separation of AP-1 initiation from maintenance in Drosophila imaginal discs",
+      "description": "Use auxin-inducible or GFP-nanobody degrons to deplete Jra/Kayak protein at defined times after genetic ablation of a wing disc, distinguishing whether AP-1 is needed only to establish the damage-responsive state or continuously to maintain it, with G-TRACE lineage labeling of AP-1-reporter-positive cells to track how long descendants retain the state. Measuring the decay of target accessibility and expression after acute AP-1 removal gives a direct half-life for AP-1-independent memory versus AP-1-dependent persistence."
+    },
+    {
+      "title": "Inheritance of AP-1 occupancy and state through mitosis in zebrafish melanoma cells",
+      "description": "In ZMEL1 zebrafish melanoma cells, perform single-molecule tracking of HaloTag-Fosl1a/Junb to measure residence times and mitotic chromosome retention, combined with mitotic CUT&RUN to test for bookmarking of AP-1 target enhancers. Pair this with clonal barcoding and sister-cell split assays (scRNA-seq of separated daughters) to quantify how many divisions an AP-1-high transcriptional state persists and whether that heritability predicts drug-tolerant behavior."
+    },
+    {
+      "title": "Synthetic AP-1 pulses to map the dose-duration requirements for memory formation",
+      "description": "In Drosophila S2 cells (or zebrafish embryos), deliver calibrated optogenetic or dCas9-recruited AP-1 activation pulses at an endogenous or integrated reporter locus, varying amplitude and duration, then withdraw the stimulus and measure how long accessibility, histone marks, and expression persist. This sufficiency test defines whether there is a threshold pulse that converts a transient input into a self-sustaining state, and whether memory decays by dilution at division or by time-dependent chromatin reversion (distinguished with cell-cycle arrest)."
+    },
+    {
+      "title": "Does AP-1 write or read positional memory in axolotl limb regeneration?",
+      "description": "Profile AP-1 motif accessibility and Fos/Jun binding in connective-tissue cells from proximal versus distal limb levels before injury, during the AP-1 injury pulse, and in blastemas, including classic proximal-to-distal grafts and retinoic-acid proximalization that experimentally rewrite positional memory. If AP-1 is a memory mechanism rather than a generic injury switch, position-specific chromatin differences should be stored at AP-1-bound elements before injury and be reset by treatments that reprogram positional identity; AP-1 inhibition (dominant-negative A-Fos) should then disrupt memory recall without blocking wound healing."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3595,
+  "cost_usd": 0.12551099999999998
+}

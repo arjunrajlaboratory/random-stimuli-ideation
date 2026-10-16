@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 5,
+  "constraint": "finishing within three months",
+  "prompt": "Constraint: every one of your ideas must be carried out finishing within three months. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clonal barcode lineage tracing before and during treatment",
+      "description": "Transduce a cell line with a high-complexity lentiviral barcode library, sample the population before drug exposure, and sequence barcodes in survivors after treatment. Barcodes enriched among survivors that were already present at baseline indicate pre-existing persisters, while survivors with barcodes that were rare or absent at baseline point to drug-induced adaptation."
+    },
+    {
+      "title": "Single-cell multiome of pre-treatment cells and early persisters",
+      "description": "Run paired scRNA-seq and scATAC-seq on the untreated population and on cells sampled at days 0, 3, 7, and 14 of drug exposure. Comparing the survivor state with the pre-treatment state shows whether persisters were already enriched for particular transcriptional or chromatin programs, such as interferon, EMT, or slow-cycling signatures, and which regulators drive the shift."
+    },
+    {
+      "title": "Live-cell reporter tracking to link baseline state to fate",
+      "description": "Use a dual reporter line, for example a cell-cycle sensor (FUCCI) combined with a pathway activity biosensor such as an ERK kinase translocation reporter, and track single cells by time-lapse microscopy through drug exposure. Retrospectively comparing each cell's pre-treatment reporter state with whether it divided or died shows which measurable baseline states predict survival."
+    },
+    {
+      "title": "Pooled CRISPR knockout screen for persister-determining genes",
+      "description": "Transduce a genome-wide or focused sgRNA library, split the population into drug-treated and vehicle arms, and sequence guides in survivors versus input after 2 to 3 weeks. Genes whose knockout enriches or depletes persisters point to pathways required for, or that restrict, drug tolerance, and hits can be validated individually with single-guide competition assays."
+    },
+    {
+      "title": "Metabolic and mitochondrial profiling of sorted persisters",
+      "description": "Sort drug-tolerant cells using a reporter or by surviving a short high-dose pulse, then expand them and measure oxygen consumption and glycolytic rate, mitochondrial DNA copy number, NAD(P)H fluorescence lifetime, and sensitivity to OXPHOS and glycolysis inhibitors. Comparing these with matched parental cells tests whether persisters depend on a metabolic state that can be targeted as a co-treatment."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1897,
+  "cost_usd": 0.00116725
+}

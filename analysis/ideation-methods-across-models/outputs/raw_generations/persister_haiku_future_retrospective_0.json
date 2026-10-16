@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode-based lineage tracing through a drug pulse",
+      "description": "Label each progenitor cell with a heritable CRISPR or lentiviral barcode (e.g., CellTag or LARRY-style), treat the population, and sequence survivors to test whether they come from a pre-existing clone or arise de novo. The surprise would be that survival tracks a specific pre-marked lineage rather than stochastic induction."
+    },
+    {
+      "title": "Live-cell ERK/AKT pulse tracking linked to fate",
+      "description": "Use fluorescent kinase translocation reporters and time-lapse microscopy to record signaling dynamics in individual cells during the first hours of drug exposure, then score each cell's eventual fate. The surprise would be that the amplitude or timing of early signaling pulses predicts survival better than the baseline pathway activity measured before treatment."
+    },
+    {
+      "title": "Single-cell chromatin accessibility to find epigenetic priming",
+      "description": "Profile scATAC-seq plus RNA (multiome) on untreated cells and map which enhancers are already open in the cells that later survive, linking them to bypass or stress-response programs. The surprise would be that persisters are epigenetically primed before any drug exposure, so their vulnerability is set in advance."
+    },
+    {
+      "title": "Dependency screens restricted to the drug-tolerant state",
+      "description": "Sort or enrich drug-tolerant cells, then run a pooled CRISPR knockout screen (in vitro or in vivo) only in that state to find genes essential for survival under drug but dispensable in bulk cells. The surprise would be a small set of survival dependencies, unrelated to the drug target, that could be co-targeted to eliminate persisters."
+    },
+    {
+      "title": "Asymmetric organelle inheritance during division",
+      "description": "Label mitochondria, lysosomes, and drug efflux machinery with distinct fluorescent tags and track how they partition at mitosis, then test whether daughter cells that inherit a larger share of efflux or mitochondrial capacity are the ones that survive. The surprise would be that survival depends on how damaged or protective organelles are divided between daughters rather than on gene expression differences between parent cells."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1777,
+  "cost_usd": 0.00110685
+}

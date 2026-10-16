@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Prime\u2013rest\u2013rechallenge with windowed AP-1 degradation (the \"inward eye\" recall test)",
+      "description": "Stimulate cells (serum, TGF-\u03b2, wounding, or drug), allow full return to baseline transcriptome, then restimulate days later and quantify whether the secondary response is faster, larger, or qualitatively different \u2014 the signature of recall. Use an auxin- or dTAG-inducible degron on FOS/JUN to delete AP-1 selectively during the priming window, the quiescent storage window, or the recall window, which dissociates AP-1's role as the writer, the maintainer, or merely the reader of the memory."
+    },
+    {
+      "title": "Single-cell lineage tracing of primed state through quiescence",
+      "description": "Combine a live AP-1 transcriptional reporter with expressed lineage barcodes (e.g., Watermelon/CellTag-style) so that individual primed cells and their descendants can be re-identified at rechallenge and profiled by scRNA-seq. This distinguishes true per-cell memory from a population-level artifact in which a pre-existing responsive subpopulation is simply selected or expanded, and it measures what fraction of cells actually retain the state."
+    },
+    {
+      "title": "Division-coupled decay and mitotic bookmarking assay",
+      "description": "Prime cells, then use CFSE dilution or a FUCCI/division-counting reporter to sort descendants by number of divisions completed, and measure memory half-life in units of cell divisions rather than hours. In parallel, perform mitotic-chromosome CUT&RUN and live imaging of tagged FOS/JUN in mitosis to test whether AP-1 remains bound to memory enhancers during mitosis, the physical mechanism that would allow the state to be copied to daughters."
+    },
+    {
+      "title": "Dimer-composition code at memory enhancers",
+      "description": "Apply sequential/dual CUT&RUN (or CUT&Tag with antibodies against FOS, FOSB, FRA1, FRA2, JUN, JUNB, JUND) plus quantitative IP\u2013mass spectrometry across the priming, resting, and recall phases to determine whether the persistent feature is a specific long-lived dimer, such as a FOSB/\u0394FOSB-containing complex, rather than total AP-1 occupancy. Then swap dimer identity by targeted knock-in or degron and test whether memory duration tracks the dimer's protein half-life."
+    },
+    {
+      "title": "Single-molecule binding kinetics and optogenetic pulse decoding",
+      "description": "Use HaloTag single-molecule tracking and FRAP on endogenous JUN/FOS to measure residence time, bound fraction, and search kinetics at primed versus naive enhancers, testing whether memory is stored in binding dynamics even when ChIP-level occupancy appears unchanged. Pair this with optogenetic or chemically dimerizable AP-1 to deliver defined pulse amplitudes, durations, and frequencies, identifying the minimal dynamic input that installs a lasting chromatin-accessibility change measured by time-resolved ATAC-seq."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2613,
+  "cost_usd": 0.1029655
+}

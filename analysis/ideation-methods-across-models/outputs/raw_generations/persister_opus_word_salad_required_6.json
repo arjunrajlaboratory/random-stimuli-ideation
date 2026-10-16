@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 6,
+  "stimulus": "owerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nowerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Tail-resolved state census (Zipf analysis of the pre-treatment population)",
+      "description": "Deeply sample 10^5-10^6 untreated cells by single-cell RNA-seq/multiome and explicitly model the rank-frequency tail rather than cluster averages, asking whether drug-tolerant programs (receptor-tyrosine-kinase, neural-crest, quiescence modules) exist as discrete rare states at ~0.1-1% frequency. Validate by FACS-sorting the tail on marker combinations and comparing colony survival to the bulk population."
+    },
+    {
+      "title": "Twin-split lineage barcoding: read the word before you need it",
+      "description": "Label cells with heritable expressed barcodes, then split each clone into a treated arm and an untreated arm profiled immediately, so that survivors in the treated arm identify barcodes whose siblings' pre-treatment transcriptomes and chromatin can be retrieved retrospectively. This directly tests whether survival is predictable from a prior molecular state or arises only after drug exposure."
+    },
+    {
+      "title": "Morphemic dissection of priming by combinatorial perturbation",
+      "description": "Treat each candidate priming program as composed of reusable regulatory 'morphemes' (individual transcription factors, chromatin regulators, signaling nodes) and run CRISPRi/CRISPRa screens before drug addition, scoring changes in the frequency of surviving colonies rather than bulk viability. Pairwise perturbations then reveal which combinations are necessary versus merely co-occurring in the rare state."
+    },
+    {
+      "title": "Persistence and reversibility timescales of the rare state",
+      "description": "Use long-term live imaging with endogenous fluorescent knock-ins of candidate priming genes plus sister-cell and drug-holiday experiments to measure how many generations a high-expressing state persists and whether resensitization occurs after withdrawal. Luria-Delbruck fluctuation tests on split subclones quantify whether the heritability is genetic, epigenetic with memory, or transient."
+    },
+    {
+      "title": "Locale test: microenvironment and drug exposure as confounders",
+      "description": "Combine spatial/imaging-based transcriptomics with per-cell measurement of actual intracellular drug concentration (fluorescent drug analog or mass-spectrometry imaging) alongside local neighbor density, cell-cycle phase, and cell size. This distinguishes genuine intrinsic priming from mundane positional explanations such as a cell simply receiving less drug, the key control before any rare-state model is accepted."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2718,
+  "cost_usd": 0.138216
+}

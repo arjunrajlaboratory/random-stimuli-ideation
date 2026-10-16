@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 5,
+  "stimulus": "chondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nchondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Inscribe-and-erase: chromatin accessibility time course after transient stimulus",
+      "description": "Give cells a brief pulse of a stimulus that induces AP-1 (FOS/JUN), such as serum, TPA or injury. Then track ATAC-seq, CUT&Tag for AP-1 and H3K27ac, and RNA-seq for days to weeks after AP-1 itself has returned to baseline. Like a word inscribed in stone, a memory mechanism would leave persistent open 'AP-1 motif' sites that outlast the signal. Compare these with naive cells to test whether the marks last and whether they change a second response."
+    },
+    {
+      "title": "Eustatic 'sea-level' test: primed versus naive re-stimulation with acute AP-1 degradation",
+      "description": "Eustatic change is a lasting shift in baseline after the cause has gone. By analogy, stimulate cells twice, with a rest interval between. Measure whether the second transcriptional response is faster or larger than the first. Then use degron-tagged (dTAG/auxin) FOS or JUN to remove AP-1 either during priming or only during the rest period. This separates AP-1 as the writer of the memory from AP-1 as the reader or maintainer of it."
+    },
+    {
+      "title": "Flooding versus trickle: dose-and-duration single-cell live imaging",
+      "description": "Use live reporters (FOS-GFP, AP-1 transcriptional reporters, JUN-N-terminal-kinase sensors) in single cells. Give pulsed, 'flooding' or escalating inputs. Test whether the history of AP-1 activity, such as its dynamics, cumulative integral and frequency, predicts later gene expression and cell fate better than current AP-1 levels do. Analyze with information-theoretic and hysteresis measures, and look for cell-lineage inheritance of states in daughter cells after division."
+    },
+    {
+      "title": "Entangled loci: allele-resolved single-cell multiome and Hi-C/Micro-C of AP-1 targets",
+      "description": "In stimulated and rested cells, use single-cell ATAC plus RNA with Micro-C or HiChIP to ask whether AP-1 binding leaves lasting enhancer-promoter contacts and nucleosome remodeling (BAF recruitment). Then use dCas9 or motif mutation to 'underlap' the AP-1 site at individual enhancers. If the site is required for persistent accessibility and for the faster second response, that is evidence for a locus-specific memory. Allele-specific edits give within-cell controls."
+    },
+    {
+      "title": "Predict-then-test: computational model of memory with perturbation validation",
+      "description": "Fit a mechanistic model (for example a bistable feedback or a chromatin-state model) to time-resolved AP-1 occupancy, accessibility and expression data. Use it to predict which loci hold memory and how long it lasts, and what happens when AP-1 or its co-factors are removed or overexpressed. Test the predictions with held-out tissue data, such as wounded epidermis, neurons after activity, or T cells. Compare AP-1-dependent memory against alternatives such as histone marks, DNA methylation and other pioneer factors, using ablation of each."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1273,
+  "cost_usd": 0.0180735
+}

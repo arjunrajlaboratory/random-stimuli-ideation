@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell pharmacology: intracellular drug concentration and target occupancy as the hidden variable",
+      "description": "Quantify per-cell intracellular drug levels using a fluorescent drug analog, MALDI/nanoSIMS imaging of the compound, or a drug-displaceable target-binding biosensor, and correlate each cell's measured exposure with its subsequent fate by tracked imaging. This directly tests whether survival reflects pharmacokinetic heterogeneity (uptake, efflux, lysosomal sequestration, target abundance) rather than any transcriptional program, a confound that most state-centric studies never measure."
+    },
+    {
+      "title": "Measuring the memory timescale of the primed state by delayed-treatment sister assays",
+      "description": "Isolate pairs of sister and cousin cells (micropatterns, microfluidic traps, or single-cell cloning), then treat them after systematically varied delays of 0 to many generations, scoring concordance of survival as a function of relatedness and elapsed divisions. The decay curve of fate concordance yields a quantitative half-life for the heritable determinant, which distinguishes short-lived signaling fluctuations, multi-generation epigenetic memory, and permanent genetic differences without assuming what the determinant is."
+    },
+    {
+      "title": "Single-cell apoptotic priming measured before treatment and linked to the same cell's fate",
+      "description": "Apply BH3 peptides to individually tracked live cells with a mitochondrial outer-membrane potential or cytochrome-c reporter to score each cell's proximity to the apoptotic threshold, then release and challenge the sister cell with drug. This asks whether survival is set by the death machinery's set point (BCL-2 family stoichiometry) rather than by upstream oncogenic signaling, and identifies whether persisters are cells that simply cannot execute apoptosis quickly enough."
+    },
+    {
+      "title": "Mitotic partitioning errors as the origin of fate asymmetry",
+      "description": "Use live imaging with labeled mitochondria, lysosomes, aggresomes, and a dilutable protein marker to quantify how unequally cytoplasmic contents are divided at each mitosis, then follow both daughters through drug treatment. If survivors are systematically the daughters that inherited an excess of mitochondria, lysosomes (drug sinks), or damaged-protein aggregates, the root cause is stochastic cell-division mechanics rather than regulated state switching."
+    },
+    {
+      "title": "mRNA-protein discordance mapping to locate the layer at which heterogeneity acts",
+      "description": "Combine single-cell proteomics or high-plex antibody imaging with matched single-cell transcriptomes on the same cells (e.g., antibody-plus-RNA co-detection) for the drug target and its pathway, and test which layer predicts survival in a subsequent fate-tracked round. Finding that protein-level variability predicts fate while transcript level does not would redirect the field from transcriptional-state models toward translational and degradation control as the source of persistence."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq comparing untreated cells, surviving persisters, and regrown colonies",
+      "Clonal DNA barcoding with a split-population design to ask whether survivors come from predetermined clones",
+      "Luria-Delbruck fluctuation tests to distinguish pre-existing from drug-induced resistance",
+      "Single-cell ATAC-seq or chromatin profiling to find epigenetic states marking survivors",
+      "Deep whole-exome/genome sequencing of survivors to exclude rare pre-existing mutations",
+      "Live-cell imaging with signaling and cell-cycle reporters (ERK-KTR, FUCCI) to watch fate decisions in real time",
+      "FACS sorting on candidate resistance markers (NGFR, AXL, EGFR, ALDH) and comparing survival rates",
+      "Genome-wide CRISPR knockout and activation screens for modifiers of the persister fraction",
+      "Metabolic characterization of persisters (Seahorse, OXPHOS dependence, ROS, GPX4/ferroptosis sensitivity)",
+      "Drug-holiday and epigenetic-inhibitor experiments to test reversibility of the tolerant state"
+    ]
+  },
+  "output_tokens": 5061,
+  "cost_usd": 0.15800229999999998
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from drug-induced tolerance",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicates, and treat them with the drug. If the same barcodes survive across replicates, the tolerance was pre-existing and heritable. If different barcodes survive, the state is stochastic or induced. Like the 'freckled (who knows how?)' pattern in the poem, this tests whether the speckled survivors are fixed marks or random flecks. Sequencing barcodes together with single-cell RNA-seq of the same clones links each lineage's survival to its baseline transcriptional state."
+    },
+    {
+      "title": "Spatial 'dappling' map of survivors in situ",
+      "description": "Use live-cell imaging or spatial transcriptomics to map where survivors sit relative to their neighbors, colony edges, local density, and oxygen or nutrient gradients, treating the culture as a plotted and pieced landscape of folds and fallows. Spatial statistics such as clustering versus random dispersion of survivors would show whether tolerance depends on microenvironment or is cell-intrinsic. Neighbor-swap or conditioned-medium experiments can then test causality."
+    },
+    {
+      "title": "Time-lapse single-cell tracking with reporters before and after drug",
+      "description": "Follow individual cells for days before drug addition using fluorescent reporters of signaling (such as ERK or AKT activity), cell cycle, and apoptosis. Then retrospectively ask which pre-treatment dynamics, such as slow cycling, pulsatile signaling, or high stress-response activity, predicted survival. This captures the 'swift, slow; adazzle, dim' fluctuations that single snapshots miss, and it gives autocorrelation times that show how long the tolerant state lasts."
+    },
+    {
+      "title": "Multi-omic profiling of survivors versus sister cells (RNA, chromatin, proteins)",
+      "description": "Sort or isolate persisters and matched untreated cells, then compare single-cell RNA-seq, ATAC-seq, and proteomics or metabolomics. Look for epigenetic states, drug-efflux, anti-apoptotic, or metabolic programs such as oxidative phosphorylation and lipid remodeling. The 'counter, original, spare, strange' contrasts (sweet/sour pairs) are probed by comparing paired states, and perturbing top candidates (with CRISPR or inhibitors of epigenetic regulators) tests whether they are necessary for survival."
+    },
+    {
+      "title": "Fluctuation-test and mathematical modeling of state switching rates",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation assays, with many small parallel clonal cultures, and compare the variance in survivor numbers to the mean. Fit stochastic models to estimate rates of switching between sensitive and tolerant states, and whether those states are inherited over several divisions. Re-sorting survivors and regrowing them shows how quickly the 'dappled' mix of tolerant and sensitive cells re-establishes itself. The inferred rates then guide which timescales to target with combination or sequenced therapy."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1091,
+  "cost_usd": 0.0162255
+}

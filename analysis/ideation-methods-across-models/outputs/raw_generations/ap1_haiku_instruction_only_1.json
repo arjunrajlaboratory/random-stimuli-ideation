@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 1,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop test of path dependence (physics)",
+      "description": "Borrowing from ferromagnetic hysteresis, sweep stimulus strength up and then back down while measuring phospho-Jun/Fos levels and AP-1 target accessibility (ATAC or CUT&RUN) at each step. Memory is supported if the descending branch stays elevated relative to the ascending one, with loop area scaling with prior exposure and abolished by an AP-1 dominant-negative."
+    },
+    {
+      "title": "Seed bank dormancy and reactivation (ecology)",
+      "description": "Analogous to dormant seeds that germinate after variable dormancy, prime cells, then rest them for different durations before re-stimulation. Use a degron-tagged or inducible Fos/Jun to remove AP-1 either during the rest period or only at recall; if memory is AP-1-dependent, faster reactivation should require AP-1 to persist through rest, and its loss during rest should erase the advantage."
+    },
+    {
+      "title": "Pulse-chase age dating of AP-1-bound sites (geochronology)",
+      "description": "Like dating strata by isotope decay, tag endogenous Fos or Jun with a HaloTag or SNAP tag, label it with a dye during a priming pulse, and chase for increasing times. Measuring which AP-1-occupied enhancers still carry the old label reveals whether a long-lived, distinct subset of sites constitutes the memory, versus transient occupancy that turns over."
+    },
+    {
+      "title": "Retroactive interference paradigm (experimental psychology)",
+      "description": "Following classic interference designs from memory research, prime cells with an AP-1-driving stimulus, then expose them to an unrelated or competing stimulus set before testing recall. A true AP-1 memory should show specific decay with interference strength and its retention should be predicted by the magnitude of AP-1 target occupancy measured right after priming."
+    },
+    {
+      "title": "Heritable lineage recorder across divisions (molecular recording / bookkeeping)",
+      "description": "Analogous to a ledger that carries balances forward, build an AP-1-responsive recorder (e.g., a Cre or CRISPR-scar reporter, or a timer fluorophore) to log past activity, then sort daughter cells after several divisions and challenge them. Memory is cell-intrinsic and inherited if the recorded history predicts the progeny's recall response, independent of population-level selection, which can be checked with clonal barcoding."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2778,
+  "cost_usd": 0.0015320099999999999
+}

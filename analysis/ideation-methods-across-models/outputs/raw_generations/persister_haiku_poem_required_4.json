@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment state sorting: was the survivor marked before the drug?",
+      "description": "Profile untreated cells with single-cell multiome (RNA plus ATAC) or live-cell fluorescent reporters of stress and chromatin states, then sort or computationally link pre-existing states to later survival after drug exposure. If persisters were already distinct before treatment, the rare 'gold' state is a pre-existing cell state rather than a drug-induced change."
+    },
+    {
+      "title": "Lineage-barcoded clone tracking through drug holidays and re-challenge",
+      "description": "Label cells with heritable lentiviral DNA barcodes, then track clone frequencies through repeated drug pulses, drug-free holidays, and re-challenge. Stable clonal resistance will persist across cycles, whereas transient tolerance will reset, which separates genetic or epigenetic memory from a passing state that cannot be held."
+    },
+    {
+      "title": "Washout kinetics: how long does the survivor state last?",
+      "description": "After removing the drug, measure how quickly persisters regain drug sensitivity and resume proliferation, using time-lapse imaging and reversion rates at single-cell resolution. Pair this with CUT&Tag for repressive and active histone marks (H3K27me3, H3K4me3) to test whether the reversible state depends on chromatin memory that fades over time."
+    },
+    {
+      "title": "Longitudinal multiomic trajectory from sensitive cell to persister",
+      "description": "Collect scRNA-seq and scATAC-seq at closely spaced timepoints from hours to weeks after drug addition, then reconstruct the ordered path of state transitions with RNA velocity and chromatin trajectory inference. This identifies the transcription factors that drive the transition and shows whether the path is a single route or several distinct routes to survival."
+    },
+    {
+      "title": "Genetic versus nongenetic dissection with deep sequencing and survival-focused CRISPR screens",
+      "description": "Deep-sequence survivors against their pre-treatment population to detect rare pre-existing mutations or copy-number subclones, and run genome-wide CRISPR knockout screens in persisters versus bulk cells under drug. Together these show whether survival is selected from a genetic subpopulation or is nongenetic, and reveal the dependencies that persisters need and that could be targeted to eliminate them."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2056,
+  "cost_usd": 0.00127495
+}

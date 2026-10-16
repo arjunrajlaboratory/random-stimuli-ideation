@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 2,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Black-Box Flight Recorder: DNA-Based Molecular Logging of Pre-Treatment History",
+      "description": "Borrowing from aviation accident forensics, engineer cells with CRISPR molecular recorders (DNA Typewriter, base-editing tapes) driven by stress, cell-cycle, and bypass-pathway promoters so each cell permanently writes its transcriptional history into DNA. Sequencing survivors then reads back the 'flight data' of states they occupied before and during treatment, instead of inferring cause only from the surviving wreckage."
+    },
+    {
+      "title": "Critical Slowing Down: Early-Warning Signals from Climate Tipping-Point Theory",
+      "description": "Apply the dynamical-systems signatures used to forecast ecosystem and climate regime shifts \u2014 rising variance, rising lag-1 autocorrelation, and slowed recovery from perturbation \u2014 to long-term live-cell imaging of drug-target pathway reporters before treatment. Test whether cells that later survive show these precursor signatures, using optogenetic or drug-pulse kicks to measure recovery rates directly."
+    },
+    {
+      "title": "Weibull Reliability Analysis: Treating Cell Death as Material Fracture",
+      "description": "Use extreme-value and Weibull statistics from materials fatigue engineering to fit single-cell time-to-death distributions across doses and clonal backgrounds, inferring how many independent 'flaws' (protective lesions or pathway activations) a cell needs to withstand treatment. The inferred flaw count becomes a quantitative prediction testable against measured numbers of upregulated bypass pathways in survivors."
+    },
+    {
+      "title": "Seed-Bank Sorting: Dormancy Ecology Applied with Metabolic Labeling",
+      "description": "Following the seed-bank concept in plant and microbial ecology, non-destructively label cells by biosynthetic activity before drug exposure (BONCAT or OP-Puro for translation, heavy-water stimulated Raman for metabolic turnover) and sort dormant from active cells. Comparing survival between sorted fractions directly tests whether generic quiescence, rather than any specific resistance program, is the causal determinant."
+    },
+    {
+      "title": "Discordant-Twin Case-Control Design from Epidemiology",
+      "description": "Adapt the discordant-twin and matched case-control framework of human epidemiology by splitting sister cells at mitosis, profiling one twin by single-cell multiome while scoring the other twin's fate under drug. Extending the matching across generations of a barcoded lineage tree localizes how many divisions back the survival predisposition becomes heritable."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3389,
+  "cost_usd": 0.11281049999999998
+}

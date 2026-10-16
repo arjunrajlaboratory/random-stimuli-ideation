@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degron with long-term memory readout",
+      "description": "Using endogenous dTAG/AID degrons on FOS, JUN and ATF family members, the paper degraded AP-1 at defined times after a transient stimulus (e.g., TNF, wounding, or neuronal activity). It then tracked whether the induced chromatin and transcriptional state persisted for weeks after AP-1 loss, which separates a state AP-1 initiates from one it must keep maintaining."
+    },
+    {
+      "title": "Single-cell lineage-traced multiome of stimulus history",
+      "description": "Cells were barcoded, exposed to a transient stimulus, split into sister lineages, and profiled by joint scATAC and scRNA after many divisions. Sister-cell concordance in AP-1 motif accessibility and target expression, compared with unstimulated controls, measured heritable memory directly and showed how stable it was."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-train dose-response",
+      "description": "Light-inducible FOS/JUN activation delivered pulses that varied in duration, frequency, and number. Live reporters and later chromatin profiling showed which temporal patterns left lasting accessibility and reactivation priming, which tested whether AP-1 encodes stimulus history through its dynamics rather than its presence."
+    },
+    {
+      "title": "Targeted de novo AP-1 site editing and dCas9 tethering",
+      "description": "Base editing or CRISPR knock-in created or destroyed single AP-1 motifs at memory-associated enhancers. Separately, dCas9-tethered AP-1 or a pioneer-dead mutant was recruited to those loci. The experiments tested at single-locus resolution whether AP-1 binding is necessary and sufficient to make an enhancer remember a stimulus, including after the factor is removed."
+    },
+    {
+      "title": "Cross-tissue in vivo memory comparison with epigenetic-writer perturbation",
+      "description": "In mouse skin, immune, and neuronal models, the study mapped AP-1 occupancy, accessibility, histone marks, and SWI/SNF (BAF) engagement after an inflammatory or injury challenge and again after recovery. It then perturbed BAF or histone modifiers, and tested secondary challenge responses. The aim was to determine whether AP-1 memory depends on partner chromatin remodelers and whether it generalizes across tissues."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 845,
+  "cost_usd": 0.0127215
+}

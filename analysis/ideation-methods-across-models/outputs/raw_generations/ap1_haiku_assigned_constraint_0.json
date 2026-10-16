@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 0,
+  "constraint": "using only data that are already publicly available (no new experiments)",
+  "prompt": "Constraint: every one of your ideas must be carried out using only data that are already publicly available (no new experiments). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Persistence of AP-1 chromatin opening after stimulus withdrawal",
+      "description": "Mine public stimulus-washout ATAC-seq or H3K27ac time courses (e.g., ENCODE, GEO, ImmGen) to ask whether AP-1 motif sites stay open after the signal is removed, and whether that persistence exceeds that of matched non-AP-1 enhancers. Compare the decay half-lives of AP-1 and non-AP-1 sites to test whether AP-1 specifically confers memory."
+    },
+    {
+      "title": "Re-stimulation kinetics in public sequential-challenge datasets",
+      "description": "Use public datasets with primary and secondary challenges (for example, memory versus naive T cells, trained-immunity macrophages, or repeated-stimulation fibroblasts) to test whether AP-1 activity at the first exposure predicts faster or stronger gene induction on re-exposure. Control for baseline chromatin state and for the effector or differentiation state of each cell population."
+    },
+    {
+      "title": "Single-cell test of AP-1 accessibility as a predictor of memory state",
+      "description": "Analyze public single-cell multiome (scRNA plus scATAC) datasets from infection, tumor, or inflammation models to ask whether the AP-1 motif accessibility score in a cell predicts its membership in a memory-like versus terminally differentiated state. Check whether the association holds after conditioning on lineage markers and on the cell's stimulation history."
+    },
+    {
+      "title": "Hysteresis analysis of AP-1 target genes in time-resolved expression data",
+      "description": "Fit bistable or hysteresis models to public time-course RNA-seq and ATAC-seq data with stimulus up-ramps and down-ramps to test whether AP-1 target genes show different on and off thresholds, which would indicate path-dependent memory. Compare the fit with that for targets of other immediate-early factors such as NF-kB or STAT."
+    },
+    {
+      "title": "Loss-of-function evidence from public AP-1 perturbation screens",
+      "description": "Mine public CRISPR knockout and Perturb-seq resources (such as DepMap, Perturb-seq atlases, and knockout data for JUN, FOS, BATF, and ATF3) to test whether loss of AP-1 components abolishes the transcriptional carry-over that follows a prior stimulus. Include appropriate controls for proliferation and cell death, and check whether the effect is specific to AP-1 targets."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1852,
+  "cost_usd": 0.0012434
+}

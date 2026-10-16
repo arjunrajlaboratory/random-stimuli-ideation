@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Measure how much drug actually hits its target in each cell",
+      "description": "Before and during treatment, measure in each cell how much drug is bound to its target, using a NanoBRET or FRET target-engagement reporter or a fluorescent drug analog. Then check whether survivors started out with lower intracellular drug occupancy (from efflux, uptake or target abundance) or whether they were fully inhibited and survived through downstream rewiring."
+    },
+    {
+      "title": "Test whether drug timing relative to the circadian clock matters",
+      "description": "Synchronize cellular clocks with a dexamethasone or serum shock and add drug at different points across 48 hours. Then measure whether survivor frequency rises and falls with clock phase. Knocking out BMAL1 or CRY1/2 tests whether the clock's timing of gene expression controls who survives."
+    },
+    {
+      "title": "Set the cell-to-cell spread of one gene's expression without changing its average",
+      "description": "Use synthetic gene circuits (for example, noise-tuning promoter or feedback designs) to express a candidate survival gene at the same average level but with different amounts of cell-to-cell variation. Then measure survivor fraction. This tests directly whether the variation itself, rather than the average level, produces the rare surviving cells."
+    },
+    {
+      "title": "Vary the drug pulse schedule to estimate how fast cells switch states",
+      "description": "Treat parallel cultures with drug pulses across a wide range of on/off periods. Fit the survival curve against pulse frequency to a two-state switching model. This gives the rates at which cells enter and leave the drug-tolerant state, and how long they stay in it, without needing a marker for that state."
+    },
+    {
+      "title": "Sort cells by physical traits, then treat each group",
+      "description": "Before drug exposure, use FACS to sort live cells into bins by cell size, mitochondrial membrane potential (TMRM), lysosome content or ribosome/translation rate (OPP labeling). Treat each bin separately to see which physical or organelle traits predict survival. These traits come from unequal splitting of cell contents at division and would not show up in transcript or chromatin data."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated populations and drug survivors to find rare 'primed' transcriptional states",
+      "Lineage barcoding with clone splitting (e.g., Rewind, FateMap, ClonTracer) to link pre-treatment states to survival",
+      "Single-molecule RNA FISH or immunofluorescence for rare high-expression jackpot markers (e.g., AXL, EGFR, NGFR) before treatment",
+      "Time-lapse live-cell imaging with fluorescent reporters to follow which cells survive",
+      "Single-cell ATAC-seq or ChIP-seq to profile chromatin and epigenetic differences in persister cells",
+      "Pooled CRISPR knockout or activation screens to find genes that change survivor frequency",
+      "Whole-genome or exome sequencing of survivors to rule out pre-existing resistance mutations",
+      "Drug washout and re-challenge to test whether the persister state is reversible",
+      "Luria\u2013Delbr\u00fcck fluctuation analysis and mathematical modeling of state-switching rates",
+      "Metabolic profiling (Seahorse, metabolomics) of drug-tolerant persisters, e.g., OXPHOS dependence or KDM5A/epigenetic-drug sensitivity"
+    ]
+  },
+  "output_tokens": 2611,
+  "cost_usd": 0.0577394
+}

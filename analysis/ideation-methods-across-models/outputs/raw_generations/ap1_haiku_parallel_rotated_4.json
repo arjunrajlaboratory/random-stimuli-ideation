@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 4,
+  "parallel": {
+    "field": "Macroeconomics (hysteresis in unemployment)",
+    "problem": "Whether a temporary shock, such as a recession, leaves a lasting imprint on the economy's long-run level after the shock itself has disappeared, which would show the system has memory of its past.",
+    "how_studied": "Economists apply unit-root and persistence tests to unemployment series and estimate impulse responses with local projections over many years. They compare countries and sectors that had different shock sizes and durations, and they use natural experiments or instrumental variables to separate persistence caused by the shock from persistence caused by policy or ongoing dynamics."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Macroeconomics (hysteresis in unemployment)\nProblem: Whether a temporary shock, such as a recession, leaves a lasting imprint on the economy's long-run level after the shock itself has disappeared, which would show the system has memory of its past.\nHow it is studied: Economists apply unit-root and persistence tests to unemployment series and estimate impulse responses with local projections over many years. They compare countries and sectors that had different shock sizes and durations, and they use natural experiments or instrumental variables to separate persistence caused by the shock from persistence caused by policy or ongoing dynamics.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-withdrawal impulse-response profiling (local-projection analogue)",
+      "description": "Apply a brief, calibrated AP-1 pulse (e.g., TPA, EGF, or an optogenetic c-Jun/Fos driver), then measure AP-1 target expression and chromatin accessibility at dense timepoints for days after AP-1 activity returns to baseline. Memory is supported if a later identical stimulus gives a larger or faster response than the first, and if the residual change persists after the reporter and nuclear AP-1 signal have fully decayed."
+    },
+    {
+      "title": "Shock size and duration grid to test scaling of the imprint",
+      "description": "Cross a range of pulse amplitudes with pulse durations and quantify the residual enhancer activation or gene priming after washout for each combination. A genuine memory mechanism predicts a dose- and duration-dependent imprint with threshold or bistable behavior, whereas a simple decaying-transient model predicts the imprint vanishes in proportion to the signal."
+    },
+    {
+      "title": "Unit-root and persistence testing on single-cell AP-1 reporter time series",
+      "description": "Track live single-cell AP-1 reporter levels (e.g., FRET or fluorescent Fos/Jun reporters) over long periods and apply unit-root and autocorrelation tests to determine whether the post-stimulus state is mean-reverting to a fixed baseline or shifts to a new stable level. A unit-root-like or multi-stable result would indicate that the cell has a stored state rather than a simple relaxation back to baseline."
+    },
+    {
+      "title": "Acute degron-mediated AP-1 depletion to separate imprint from ongoing signaling",
+      "description": "After priming with a pulse, rapidly degrade c-Jun or Fos with an inducible degron (e.g., dTAG) at varying delays and then re-stimulate the cells. If the memory depends on AP-1 itself, the imprint should be erased by degradation at early delays and should be protected by chromatin-level marks only when the factor is removed late, which separates the AP-1-dependent component from persistence driven by ongoing dynamics or by chromatin."
+    },
+    {
+      "title": "Natural-experiment comparison of injury severity and exposure history in vivo",
+      "description": "Use inducible lineage-traced reporters and ATAC-seq or ChIP-seq in tissues subjected to injuries of different severity and duration (e.g., skin wounding, fibrosis, or inflammatory challenge), then compare AP-1 site accessibility weeks after injury across matched cell populations with different prior exposure. Reliance on pre-existing differences, as in cross-country hysteresis studies, helps separate true AP-1-dependent memory from persistence caused by tissue repair dynamics or systemic inflammation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2012,
+  "cost_usd": 0.0012759499999999999
+}

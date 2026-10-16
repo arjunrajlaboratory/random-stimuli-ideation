@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after the stimulus ends",
+      "description": "Prime cells (e.g., macrophages, fibroblasts, or neurons) with a stimulus, then use degron tags (dTAG/AID) on FOS, JUN, and ATF family members at different times after priming. Compare whether the enhanced secondary response persists when AP-1 is removed during the rest period, which separates AP-1 as the memory carrier from AP-1 as only the initiator."
+    },
+    {
+      "title": "Single-cell lineage-tracked memory with live AP-1 reporters",
+      "description": "Track endogenous AP-1 factors (knock-in tagged FOS/JUN) and a reporter in single cells over days, using lineage barcoding or time-lapse imaging through cell divisions. Test whether AP-1 levels or binding history in a mother cell predict the secondary response of its daughters better than other variables such as cell state or NF-\u03baB dynamics."
+    },
+    {
+      "title": "Pioneer-like AP-1 occupancy and chromatin accessibility time-course",
+      "description": "Run CUT&RUN/ATAC-seq/footprinting at high time resolution during and after priming to measure whether AP-1 motifs at latent enhancers stay accessible, H3K27ac-marked, and AP-1-bound after the factor's own levels return to baseline. Pair this with the dependence on BAF/SWI-SNF to show whether memory sits in the chromatin state that AP-1 left behind or in continued AP-1 binding."
+    },
+    {
+      "title": "Targeted epigenome editing and AP-1 site mutagenesis at memory enhancers",
+      "description": "Use CRISPR base editing of AP-1 motifs, or dCas9-based recruitment or erasure of acetylation or methylation, at individual memory-associated enhancers. Test whether motif mutations block memory acquisition, whether erasing marks after priming ablates memory without changing AP-1 levels, and whether artificially forcing the marks produces memory without any priming."
+    },
+    {
+      "title": "In vivo cross-context memory tests with predictive modeling",
+      "description": "Prime animals, for example with injury, stress, or neuronal activity, and then measure re-challenge responses in the same tissue months later. Combine this with the AP-1 occupancy data from the same cells to fit models that predict which genes show memory, and then test the predictions with AP-1 perturbations in vivo and in human-derived cells with prior exposure. The aim is to show when AP-1 is necessary, sufficient, or merely correlated across tissues."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 890,
+  "cost_usd": 0.0116781
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell split assay to recover the pre-treatment state of survivors",
+      "description": "Let single cells divide once or twice, physically separate the resulting sister subpopulations, expose one to the targeted drug and keep the other untreated, then use heritable lineage barcodes to trace which untreated sisters correspond to the rare survivors. Transcriptional or chromatin profiling of those retrospectively identified sisters reveals the primed state that existed before any drug was applied."
+    },
+    {
+      "title": "Imaging-based rare-state quantification before and after treatment",
+      "description": "Apply highly multiplexed single-molecule RNA imaging or protein immunofluorescence across tens of thousands of untreated cells to detect the rare subpopulations expressing candidate tolerance programs, and quantify how often those marker combinations co-occur in the same cell. Repeating the measurement on survivors tests whether the same program is enriched, distinguishing pre-existing priming from drug-induced adaptation."
+    },
+    {
+      "title": "Longitudinal live imaging of individual cells through the treatment window",
+      "description": "Track thousands of single cells with fluorescent reporters for pathway activity, cell-cycle position, and stress response from before drug addition through death or survival, so each cell's fate can be regressed on its own prior dynamics. This directly tests whether features such as slow cycling, signaling pulse frequency, or reporter fluctuation amplitude predict which cells persist."
+    },
+    {
+      "title": "Clonal barcode tracking across repeated treatment and drug-holiday cycles",
+      "description": "Barcode a population at high complexity, treat, allow outgrowth, remove drug, and re-treat, sequencing barcode abundances at each step. If the same clones dominate every round the tolerance is heritable and stable; if survivor identity reshuffles between rounds it is a transient, reversible state, and the reshuffling rate estimates how fast cells switch in and out of it."
+    },
+    {
+      "title": "Paired genomic and epigenomic profiling of survivors versus bulk population",
+      "description": "Perform single-cell joint chromatin-accessibility and transcriptome assays, plus whole-genome or targeted sequencing, on survivors and matched untreated controls. This separates genetic resistance mutations and copy-number changes from non-genetic chromatin reconfiguration, and identifies the transcription factor motifs whose accessibility changes as cells enter or exit the tolerant state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1227,
+  "cost_usd": 0.053615499999999996
+}

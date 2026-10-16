@@ -1,0 +1,46 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Live-cell fate tracking linked to pre-treatment state",
+      "description": "Use time-lapse imaging with fluorescent reporters (e.g., cell-cycle, stress, or lineage markers) to follow individual cells before, during, and after drug exposure, then test whether pre-treatment features predict fate or whether survival is decided during treatment. Pair this with a heritable lineage barcode to see whether survival clusters within clonal families."
+    },
+    {
+      "title": "Reversibility test via drug holiday and re-challenge",
+      "description": "Sort survivors (or use a reporter to isolate persister-like cells), culture them drug-free for several passages, then re-challenge with the drug and compare survival with the original population. If the survivor fraction resets and re-emerges from the naive population, the trait is a reversible state rather than a fixed genetic or epigenetic subpopulation."
+    },
+    {
+      "title": "Single-cell DNA sequencing of survivors versus pre-treatment population",
+      "description": "Perform single-cell whole-genome or targeted DNA sequencing on the untreated population and on survivors to detect pre-existing rare subclones, copy-number changes, or mutations that expand under treatment. Compare allele and CNV profiles to determine whether survival is genetic or non-genetic."
+    },
+    {
+      "title": "Per-cell drug accumulation and target-engagement biosensor",
+      "description": "Quantify intracellular drug levels in single cells (using a fluorescent drug analog or LC-MS on sorted cells) alongside a live-cell biosensor of target pathway activity, such as a kinase translocation reporter. This tests whether survivors have lower drug uptake, higher efflux pump expression, or maintained pathway signaling despite equal extracellular dosing."
+    },
+    {
+      "title": "In vivo barcoded xenograft or organoid comparison with spatial profiling",
+      "description": "Treat barcoded tumors in mice or patient-derived organoids and use spatial transcriptomics on residual tumor tissue to map where survivors sit relative to vasculature, hypoxia, and stromal niches. Comparing these spatial niches with in vitro survivor signatures tests whether the mechanism depends on the microenvironment and whether the culture model is representative."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survival is a stable, heritable cell-intrinsic trait, so the surviving fraction is a fixed subpopulation that can be identified in advance rather than a reversible or transient drug-tolerant state.",
+      "'Genetically identical' is taken at face value, so no pre-existing rare subclones, copy-number variants, or drug-induced de novo mutations are assumed to contribute.",
+      "Survival is determined before or at the moment of drug exposure (a pre-treatment state), rather than by what happens during treatment, such as adaptive signaling or stochastic outcomes.",
+      "Drug exposure and target engagement are uniform across cells, so differences in survival are not caused by uneven intracellular drug levels, efflux, or target occupancy.",
+      "Cell-autonomous mechanisms explain survival, so the microenvironment, neighboring cells, and paracrine or niche signals are not required.",
+      "Death is the default outcome and survival is the exception that needs explaining, so differences in proliferation, cell-cycle phase, or quiescence at treatment are not treated as confounders of the survival readout.",
+      "Survivors are a meaningful proxy for the cells that seed relapse, so a survival readout in culture is assumed to represent the clinically relevant population.",
+      "In vitro cell-line behavior under a single drug dose and a fixed time window represents what happens in patient tumors, where drug dosing, time course, and tissue architecture differ.",
+      "Bulk or snapshot measurements are assumed to capture the relevant heterogeneity, so a single time point of profiling is treated as enough to explain fate."
+    ]
+  },
+  "output_tokens": 3292,
+  "cost_usd": 0.0017898799999999998
+}

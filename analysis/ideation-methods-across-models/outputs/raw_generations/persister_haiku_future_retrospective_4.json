@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heritable vs. induced survival via lineage barcoding",
+      "description": "Label a founder population with a dense, heritable barcode library (e.g., CellTag-style), apply a targeted drug pulse, and track barcode frequencies over time. If survivors share barcodes with pre-treatment clones, survival is pre-existing and selected; if they don't, it is drug-induced state switching."
+    },
+    {
+      "title": "Pre-treatment single-cell multiome predicts survivors",
+      "description": "Profile the untreated population with paired scRNA-seq and scATAC-seq, then sort or sequence the cells that persist after treatment and project them back onto the baseline map. Identifying a pre-existing chromatin and expression state that marks the eventual survivors would turn persistence into a predictable, measurable trait."
+    },
+    {
+      "title": "Live reporters of epigenetic memory",
+      "description": "Use fluorescent reporters for histone marks or chromatin-state readouts, combined with time-lapse imaging and drug washout, to follow individual cells through treatment and regrowth. Measuring whether the survival state is inherited across divisions or reset after drug removal distinguishes stable epigenetic memory from reversible, stochastic tolerance."
+    },
+    {
+      "title": "Single-cell intracellular drug accumulation mapping",
+      "description": "Quantify intracellular concentration of the drug in individual cells, for example with a fluorescent analog or mass-spectrometry imaging, alongside efflux transporter expression. If rare cells keep sub-lethal drug levels because of low uptake or high efflux, survival is a pharmacokinetic problem at the single-cell level rather than a biological one."
+    },
+    {
+      "title": "Time-resolved CRISPR screen under sub-lethal dosing",
+      "description": "Run a pooled CRISPR knockout library at a sub-lethal drug dose and sort cells at multiple time points, rather than only at endpoint. Genes whose loss kills cells early but not late, or that enrich only in the persister fraction, reveal the sequence of adaptive steps that build tolerance and suggest which dependencies to target."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1569,
+  "cost_usd": 0.0009278
+}

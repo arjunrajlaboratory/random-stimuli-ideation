@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to test pre-existing vs. induced persisters",
+      "description": "Tag a clonal population with heritable DNA barcodes, split into replicate dishes, and treat with the targeted drug. If the same barcodes recur among survivors across replicates, the survivors were predetermined, like the same statues standing after the sands have swept away the rest. If different barcodes survive, resistance is stochastic or induced. Sequencing barcodes together with scRNA-seq on sister cells links the pre-treatment state to the fate."
+    },
+    {
+      "title": "Time-lapse single-cell tracking with reporters and post-hoc fate mapping",
+      "description": "Image live cells carrying reporters for signaling (ERK, AKT), cell cycle and stress responses for several generations before and after drug addition. Then retrospectively align the traces of the survivors with those of the dead cells to find early dynamic features, such as slow cycling or pulsatile signaling, that predict survival. Like reading a ruin's history from its fragments, this reconstructs what the survivors were like before the drug."
+    },
+    {
+      "title": "Single-cell multi-omics of the surviving remnant over time",
+      "description": "Run paired scRNA-seq and scATAC-seq (or CITE-seq) on untreated cells and on survivors at several time points after treatment. This tests whether survivors occupy a distinct epigenetic or transcriptional state, such as a drug-tolerant persister program, and whether it is transient or stable. Trajectory and regulatory-network inference would then nominate the drivers and the chromatin features that mark the state."
+    },
+    {
+      "title": "Isolate and perturb rare pre-treatment subpopulations",
+      "description": "Use FACS on markers from the multi-omics data, or a live reporter of the candidate state, to isolate the rare cells before treatment. Compare their drug survival with that of bulk cells, then CRISPR-perturb the candidate regulators. This tests causality, since sorted cells should be enriched for survival and removing the regulator should erase it. Re-culturing the sorted cells shows how quickly the state regenerates from the clonal population, which measures state-switching rates."
+    },
+    {
+      "title": "Metabolic and drug-exposure heterogeneity measurements",
+      "description": "Measure single-cell drug accumulation (fluorescent drug analogs or mass cytometry), efflux activity, mitochondrial state, ROS and lipid metabolism in survivors versus non-survivors. This tests whether survival comes from non-genetic physiological differences, such as lower effective dose or an altered redox state, rather than from target-pathway rewiring. Pairing the measurements with exome sequencing of survivors rules out hidden mutations."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 936,
+  "cost_usd": 0.0148675
+}

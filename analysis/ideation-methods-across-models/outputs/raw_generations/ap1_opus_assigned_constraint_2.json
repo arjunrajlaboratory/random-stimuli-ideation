@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 2,
+  "constraint": "using live-cell imaging as the only readout",
+  "prompt": "Constraint: every one of your ideas must be carried out using live-cell imaging as the only readout. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Prime\u2013rest\u2013rechallenge imaging of single cells with lineage tracking",
+      "description": "Using cells with endogenously tagged AP-1 subunits (e.g., c-Fos, c-Jun, FosL1) plus a short-lived AP-1-responsive transcriptional reporter, image continuously through a stimulus pulse, a long washout, and a second identical pulse, tracking each lineage. Memory is supported if a cell's second-response amplitude or latency is predicted by its first response beyond what current AP-1 levels explain."
+    },
+    {
+      "title": "Decay-versus-persistence kinetics after signal withdrawal",
+      "description": "Measure, in single cells, the time constants of nuclear AP-1 protein, AP-1 reporter output, and a downstream phenotype after acute removal of the stimulus (including with inducible-degron removal of specific AP-1 subunits). A memory mechanism should show reporter/phenotype persistence substantially outlasting the inducing signal, and that persistence should collapse when AP-1 is degraded during the rest period."
+    },
+    {
+      "title": "Mother\u2013daughter and sister-cell correlation of AP-1 state across divisions",
+      "description": "Track AP-1 reporter intensity through mitosis in long movies to quantify how strongly daughters inherit the mother's AP-1 level and how long sister-cell correlations decay relative to unrelated cells. Heritable, slowly decaying correlations that exceed the lifetime of the AP-1 proteins themselves argue for a self-propagating memory rather than passive protein dilution."
+    },
+    {
+      "title": "Optogenetic writing of defined AP-1 histories to test sufficiency",
+      "description": "Use a light-controlled AP-1 dimer (e.g., photo-dimerizable Fos/Jun or LOV-caged activation domain) to impose precisely timed amplitude/duration/pulse-number histories in single cells while imaging the reporter and a phenotypic marker. If AP-1 stores memory, the retained downstream state should depend on the integrated history (total dose, pulse number) rather than only on the instantaneous light level."
+    },
+    {
+      "title": "Live readout of AP-1 chromatin residence and target-locus accessibility over time",
+      "description": "Combine single-molecule tracking / FRAP of tagged AP-1 to measure bound-fraction and residence times with a live chromatin-accessibility or locus-visualization readout (e.g., ANCHOR/ParB-labeled enhancer, or nucleosome-sensor reporter) at a key target enhancer before, during, and long after stimulation. A memory role predicts that AP-1-dependent increases in enhancer accessibility and rapid-rebinding behavior persist after signal removal and are lost upon acute AP-1 degradation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1122,
+  "cost_usd": 0.0520329
+}

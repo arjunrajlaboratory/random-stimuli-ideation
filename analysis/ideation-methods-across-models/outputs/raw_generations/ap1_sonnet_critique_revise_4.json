@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Transient stimulus with long-term chromatin accessibility tracking: Expose cells to a defined, brief AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then perform ATAC-seq/CUT&RUN for AP-1 (FOS/JUN) and H3K27ac at time points from hours to weeks after the stimulus is removed. Persistent AP-1-motif-enriched accessible regions after the signal has decayed would indicate a memory state, and their re-engagement could be compared with naive cells.\n2. Acute AP-1 degradation during the memory phase: Use degron-tagged (dTAG/AID) or dominant-negative (A-FOS) AP-1 to remove function either during the priming stimulus or only after it, and then measure maintenance of accessibility and transcriptional responses on re-stimulation. If depletion during priming but not after prevents memory, AP-1 is needed for establishment. If depletion after priming erases memory, it is needed for maintenance.\n3. Secondary-challenge transcriptional response assay: Prime cells with a first stimulus, rest them, and then re-stimulate. Use RNA-seq, nascent transcription (PRO-seq) or single-cell readouts to quantify faster or stronger induction of AP-1 target genes versus unprimed controls. Test whether the enhanced response is gene-specific and tracks AP-1 binding sites, and whether it persists through cell divisions.\n4. Single-cell multiome lineage tracing of memory inheritance: Combine single-cell RNA and ATAC-seq with clonal barcoding or live-cell imaging of AP-1 reporters (e.g., FOS\u2013GFP) to test whether primed accessibility and AP-1 activity states are inherited by daughter cells. Comparing clonal sibling concordance with that of random cell pairs quantifies heritability and heterogeneity.\n5. Causal site-specific perturbation of AP-1 motifs and pioneer activity: Use CRISPR base editing or dCas9-based tools to mutate or block AP-1 motifs at candidate memory enhancers. Alternatively, force AP-1 binding there with a synthetic recruiter in unprimed cells. Measure whether these changes alter retention of accessibility, histone marks and gene response, to separate AP-1 as the cause of memory from AP-1 as a marker. Pair this with BAF/chromatin remodeler inhibition to test the mechanism.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-molecule footprinting of AP-1 site occupancy vs. accessibility",
+      "description": "Use Fiber-seq or SMF/long-read methylation footprinting on primed versus naive cells to ask whether primed enhancers stay nucleosome-free with no bound AP-1 (accessibility memory), or retain residual AP-1/co-factor footprints on the same DNA molecules. This separates AP-1 as a continuously present occupant from AP-1 as a past trigger, and it shows single-allele heterogeneity."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-code titration",
+      "description": "Drive FOS/JUN activity with an optogenetic or chemically-gated system, varying pulse duration, frequency and amplitude while keeping total dose fixed. Then measure persistent accessibility and re-challenge response to map which temporal dynamics (e.g., sustained versus pulsatile, as in ERK-to-FOS decoding) write memory, and whether there is a threshold or bistable switch."
+    },
+    {
+      "title": "Paralog and dimer-composition swap during priming",
+      "description": "Separately knock out or replace specific FOS/JUN/ATF/MAF family members, or force specific dimers, during priming. Use ChIP/CUT&RUN and accessibility to test whether memory depends on the identity of the AP-1 dimer, for example FOSL1/JUNB versus FOS/JUN, and whether memory sites are bound by a distinct, long-lived dimer."
+    },
+    {
+      "title": "Mitotic bookmarking assay of AP-1",
+      "description": "Image live AP-1 factors (Halo-tagged FOS/JUN) in mitotic cells and run CUT&RUN on synchronized mitotic cells and early G1 cells. Test whether AP-1 stays on memory enhancers through mitosis and re-binds them first after mitosis, versus accessibility being retained without AP-1, and compare with non-memory AP-1 sites."
+    },
+    {
+      "title": "Memory transfer by chromatin-state decoupling (histone mark erasers)",
+      "description": "After priming, use targeted dCas9-based erasers or editors (e.g., KDM, HDAC, or DNA-methylation writers) at specific memory enhancers while AP-1 stays present, and use inhibitors of the relevant writers to test whether H3K4me1, H3K27ac or DNA demethylation, rather than AP-1 itself, carries the memory. Pair this with reciprocal tests of whether the re-challenge response needs new AP-1 binding in the absence of the mark."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 904,
+  "cost_usd": 0.0167795
+}

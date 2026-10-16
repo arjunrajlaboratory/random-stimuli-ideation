@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded sister-cell lineage tracing with transcriptome readout",
+      "description": "Label cells with expressed lineage barcodes, split each clone into two halves, and profile one by scRNA-seq before treatment while treating the other. Surviving barcodes reveal the pre-treatment transcriptional state that predicted survival, and show whether persistence is pre-existing or induced."
+    },
+    {
+      "title": "Live-cell imaging with retrospective fate mapping",
+      "description": "Time-lapse image cells carrying reporters (pathway activity, cell cycle, mitochondrial state) for days before drug addition, then track each cell and its descendants through treatment. Correlate pre-drug dynamics and heritability across sister cells with survival to find predictive features."
+    },
+    {
+      "title": "Fluctuation test to separate switching from mutation",
+      "description": "Perform Luria-Delbruck style assays with many parallel small clonal populations, plus drug-holiday re-challenge, and fit models to estimate phenotypic switching rates and memory duration. Combined with sequencing of survivors, this distinguishes genetic, epigenetic and stochastic origins."
+    },
+    {
+      "title": "Sorting on pre-treatment physiology, then drug challenge",
+      "description": "Use FACS to isolate untreated cells by mitochondrial membrane potential, drug uptake or efflux (fluorescent analogs), size or slow-cycling dye retention, and measure survival of each fraction. This directly tests which physiological axes causally enrich persisters."
+    },
+    {
+      "title": "Single-cell multiome with epigenetic perturbation",
+      "description": "Profile chromatin accessibility and expression jointly (scATAC plus RNA) in pre-persister and persister cells, and identify candidate regulators. Validate by CRISPRi/a or chromatin inhibitors targeting those regulators to see whether persister frequency shifts."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., ClonTracer/Perturb-seq style) to test whether persisters are pre-existing or drug-induced",
+      "Single-cell RNA-seq before and after drug with barcode-matched sister cells",
+      "Live-cell time-lapse imaging with reporters, tracking cell fate back to pre-treatment state",
+      "Sister-cell pair survival correlation (heritability of persistence over generations)",
+      "Single-cell ATAC-seq/multiome for chromatin accessibility of persisters",
+      "Mitochondrial content and membrane potential sorting followed by drug challenge",
+      "Pre-treatment cell cycle length and slow-cycling (H2B-dilution/FUCCI) tracking",
+      "Metabolic flux imaging (NAD(P)H/FLIM) of single cells predicting survival",
+      "Single-cell proteomics/mass cytometry of signaling pathway noise (ERK, AKT dynamics)",
+      "Optogenetic or biosensor-based pulses of pathway activity to test stochastic dynamics",
+      "CRISPRi/a screen focused on persister-state regulators, with epigenetic modifiers",
+      "Histone modification profiling (CUT&Tag) on sorted pre-persister cells",
+      "Drug efflux and intracellular drug concentration measurement per cell (fluorescent drug analogs)",
+      "Mathematical modeling of switching rates (fluctuation test, Luria-Delbruck) for phenotypic switching vs mutation",
+      "Whole-genome sequencing of persisters for mutations, copy number, ecDNA",
+      "Mitochondrial DNA heterogeneity/mutation tracking via scATAC lineage",
+      "Cell size, mass, and density measurement (suspended microchannel resonator) vs survival",
+      "Spatial transcriptomics in 3D spheroids/xenografts to find microenvironment-linked persisters",
+      "Stress response and proteostasis reporters (HSF1, ISR, ferroptosis sensitivity) in persisters",
+      "Re-sensitization time course: drug holiday and re-challenge to measure reversibility and memory",
+      "Transcription burst kinetics of key resistance genes by smFISH",
+      "Apoptotic priming measured by BH3 profiling at single-cell level"
+    ]
+  },
+  "output_tokens": 1425,
+  "cost_usd": 0.0170212
+}

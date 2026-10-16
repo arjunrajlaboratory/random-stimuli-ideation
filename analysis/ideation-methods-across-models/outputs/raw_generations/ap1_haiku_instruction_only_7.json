@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 7,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis test with graded stimulus pulses (Schmitt-trigger analogy)",
+      "description": "Borrowing from electronics, where a Schmitt trigger's output depends on its recent history, apply TPA or EGF pulses of varying dose and duration, then withdraw the stimulus. Measure AP-1 target accessibility and transcription at multiple times after withdrawal, and test whether the response shows a threshold and a state that persists after the input is removed (hysteresis) rather than simply tracking the input."
+    },
+    {
+      "title": "Pulse-chase occupancy dating (radiometric and sediment-dating analogy)",
+      "description": "Borrowing from radiometric dating, where a known isotope pulse is traced through a layered record, tag endogenous Fos or Jun with a photoconvertible or HaloTag system and label AP-1 proteins at a defined time. Then follow the labelled cohort of bound sites with CUT&RUN or ChIP-seq and compare how long AP-1 occupancy and chromatin accessibility persist relative to mRNA and protein half-lives."
+    },
+    {
+      "title": "Inducible AP-1 degradation to test memory without the factor (forensic evidence-persistence analogy)",
+      "description": "Borrowing from forensics, where a trace can outlast the actor that left it, use an auxin- or dTAG-inducible degron to remove Fos and Jun after a stimulus window and then measure the enhancers they opened. Quantify whether accessibility (ATAC-seq), H3K27ac, and the induced transcriptional state persist without AP-1 for days, which would be the key evidence that AP-1 acts as a memory rather than a continuous driver."
+    },
+    {
+      "title": "Synthetic AP-1 feedback circuit as a write-read-erase memory cell (ferroelectric or flash memory analogy)",
+      "description": "Borrowing from non-volatile memory engineering, build a synthetic reporter in which AP-1 binding sites drive an AP-1 or Fos expression cassette, forming a self-reinforcing loop. Write a bit with a transient input, read it out a reporter, and erase it by CRISPRi or dCas9 silencing of the loop. A stable, switchable state that tracks the write and erase steps would support AP-1 feedback as a memory mechanism."
+    },
+    {
+      "title": "Lineage-barcoded single-cell tracking of heritable AP-1 memory (seed-bank and clonal inheritance analogy)",
+      "description": "Borrowing from seed-bank ecology, where dormant propagules carry a state across generations, combine lentiviral lineage barcodes with single-cell multiome (RNA plus ATAC) after a transient AP-1-inducing stimulus. Then measure whether the stimulus-primed chromatin state and faster or stronger AP-1 target re-induction are inherited by daughter clones across several divisions and whether the memory is heterogeneous across lineages."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2238,
+  "cost_usd": 0.0012624099999999998
+}

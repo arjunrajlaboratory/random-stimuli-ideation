@@ -1,0 +1,58 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode-and-rewind lineage tracing",
+      "description": "Barcode a cell population, split it before treatment, and profile one half by scRNA-seq while treating the other. Matching barcodes of survivors to their untreated sister cells reveals pre-existing, predictive transcriptional states and shows whether survival is heritable."
+    },
+    {
+      "title": "Live imaging of signaling dynamics linked to fate",
+      "description": "Track single cells with live reporters (ERK/AKT activity, FUCCI cell cycle, apoptosis markers) before and during drug exposure. Retrospective analysis of survivor trajectories shows which dynamic features, such as pulses, rebound or cycle arrest, predict survival."
+    },
+    {
+      "title": "Fluctuation test with state-switching modeling",
+      "description": "Run Luria\u2013Delbr\u00fcck-style fluctuation assays across many parallel clonal cultures and compare survivor-count variance with stochastic models. This separates rare pre-existing genetic mutations from reversible non-genetic switching and estimates the switching rates."
+    },
+    {
+      "title": "Single-cell multiome of persisters across drug time course",
+      "description": "Profile chromatin accessibility and RNA jointly in the same cells at baseline, during drug exposure and after a drug holiday. This identifies enhancer and transcription factor programs that define the persister state and tests whether they are reversible epigenetic memory."
+    },
+    {
+      "title": "Pooled CRISPRi/a screen with persister-specific readout",
+      "description": "Run genome-wide or targeted CRISPRi/a screens and score survival early under drug, before regrowth, and compare with late resistance outgrowth. Hits specific to persistence, such as chromatin regulators, stress pathways and apoptotic priming, give causal drivers and combination targets."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., Watermelon/ClonTracer) with sister-cell split before drug to test heritability of survival",
+      "Single-cell RNA-seq of barcoded cells pre-treatment, matched to later survivors (Rewind-style) to find predictive pre-existing states",
+      "Live-cell time-lapse imaging with reporters for signaling (ERK, AKT) dynamics, then tracking fate under drug",
+      "Single-cell multiome (ATAC+RNA) of persisters to identify chromatin-based state switches",
+      "Genome-wide CRISPRi/a screen under drug to find regulators of persistence vs. resistance",
+      "Single-cell whole-genome sequencing to rule out rare genetic subclones",
+      "Mitochondrial mass/membrane potential sorting and survival tracking",
+      "Metabolic flux imaging (NAD(P)H/FAD FLIM) of single cells before drug",
+      "Cell-cycle state tracking (FUCCI) to test slow-cycling/quiescence correlation",
+      "Mathematical modeling of state-switching rates fit to fluctuation-test (Luria\u2013Delbr\u00fcck) data",
+      "Drug-tolerant persister reversal assays: regrow after drug holiday to test reversibility and memory",
+      "Proteomics/phosphoproteomics of sorted survivors using low-input mass spec",
+      "Spatial transcriptomics of xenografts to link microenvironment niche to survival",
+      "Lipid peroxidation/ferroptosis sensitivity profiling of persisters",
+      "Single-cell measurement of apoptotic priming via BH3 profiling",
+      "Epigenetic inhibitor combination screens during early drug exposure",
+      "Stress-response reporters (heat shock, p53, UPR, integrated stress response) pre-drug in single cells",
+      "Measuring intracellular drug concentration/efflux heterogeneity with fluorescent drug analogs",
+      "Cell size, mass and density measurement (suspended microchannel resonator) vs. survival",
+      "Mother-cell inheritance of organelles/protein aggregates and asymmetric division tracking",
+      "Transcriptional bursting/noise measurement of key genes using smFISH and live MS2 reporters"
+    ]
+  },
+  "output_tokens": 1372,
+  "cost_usd": 0.016499200000000002
+}

@@ -1,0 +1,46 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Exhaust the genetic explanation before invoking a non-genetic one",
+      "description": "Perform matched single-cell whole-genome and mitochondrial sequencing on survivors versus naive cells, with specific attention to extrachromosomal DNA and focal copy-number gains at the drug target and its bypass pathways, using FISH or CUT&RUN on the same cells where possible. This directly tests the 'genetically identical' premise and quantifies what fraction of survival is attributable to rare pre-existing genetic or ecDNA heterogeneity rather than cell state."
+    },
+    {
+      "title": "Sister-cell split design to separate pre-existing state from drug-induced change",
+      "description": "Use expressed lineage barcodes or physical separation of daughter cells so that one sister is profiled molecularly while its twin is exposed to drug and its fate recorded, letting you ask whether the pre-drug state is predictive of the sister's outcome. Varying the delay between the split and treatment also measures how long the predisposing state persists, distinguishing a heritable primed state from transient fluctuation or genuinely drug-induced adaptation."
+    },
+    {
+      "title": "Neighborhood-resolved survival and causal density perturbation",
+      "description": "Track survival by long-term live imaging with single-cell segmentation, then model each cell's outcome as a function of its local neighbor count, neighbor identity, and contact history, rather than only its own features. Follow with causal tests, such as micropatterned colonies of defined size, conditioned-media transfer, and co-culture with labeled sensitive cells, to see whether survival is conferred by neighbors instead of residing in the cell itself."
+    },
+    {
+      "title": "Ask whether survivors are one population or several, then test each separately",
+      "description": "Cluster survivors by multimodal single-cell profiling and treat the clusters as competing hypotheses, assigning each a candidate dependency and testing them in parallel with a pooled CRISPR screen performed under drug with a single-cell readout. If distinct survivor subsets have non-overlapping genetic dependencies, that falsifies the implicit single-mechanism model and reframes the question as several mechanisms sharing one phenotype."
+    },
+    {
+      "title": "Measure the dose each cell actually received, not the dose in the dish",
+      "description": "Quantify per-cell intracellular drug concentration and target engagement directly, using a fluorescent or clickable drug analog, mass spectrometry imaging, efflux-pump reporters, and live biosensors of the targeted signaling node. This tests whether survivors differ in pathway state at all, or simply in pharmacology, and would explain apparent resistance as a difference in exposure rather than in cell identity."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "That the cells really are genetically identical: 'isogenic' lines still harbor subclonal copy-number changes, extrachromosomal DNA, and mitochondrial variants, so a non-genetic explanation is usually assumed rather than demonstrated.",
+      "That the determinant of survival is a cell state existing before the drug arrives, rather than drug-induced adaptation or a coin flip resolved during exposure.",
+      "That survival is cell-autonomous, so local density, neighboring cells, secreted factors, and position are irrelevant.",
+      "That survivors are one population with one shared mechanism, rather than several distinct routes converging on the same outcome.",
+      "That destructive endpoint snapshots (typically scRNA-seq of survivors vs. naive cells) can reveal cause, even though they cannot connect a given cell's prior state to its later fate.",
+      "That the transcriptome is the layer where the relevant variability lives, rather than protein abundance, signaling activity, chromatin, metabolism, or cell-cycle position.",
+      "That every cell receives the same drug dose, so differences in uptake, efflux, intracellular concentration, and target engagement can be ignored.",
+      "That 2D culture of an established line is an adequate model of the residual disease seen in patients.",
+      "That 'survival' is a single well-defined phenotype, rather than a mixture of death avoidance, cell-cycle arrest, slow cycling, and true proliferative escape."
+    ]
+  },
+  "output_tokens": 3767,
+  "cost_usd": 0.1249684
+}

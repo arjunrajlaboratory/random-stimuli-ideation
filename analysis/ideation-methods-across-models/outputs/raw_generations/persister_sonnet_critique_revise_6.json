@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-treatment sister-cell tracking: Label cells with heritable DNA barcodes (e.g., ClonTracer or Perturb-seq-style), split the population before drug exposure, and see which barcodes survive in parallel replicates. Shared survivors across replicates would indicate a pre-existing, heritable state. Random survivors would indicate stochastic or induced tolerance.\n2. Single-cell multi-omics of survivors versus matched pre-treatment states: Run scRNA-seq with scATAC-seq, or CITE-seq, on untreated cells and on cells at several time points after drug exposure. Use the barcodes to link survivors back to their pre-treatment transcriptional and chromatin states. This could identify the programs that predict survival, such as a drug-tolerant persister signature, EMT-like states, or stress-response states.\n3. Live-cell imaging with reporters and retrospective fate mapping: Time-lapse image cells that carry reporters for signaling (ERK or AKT activity), the cell cycle, apoptosis, and mitochondrial or ROS state. Track each cell's history before and after drug addition, then test which dynamic features, such as pulsatile signaling, a slow-cycling state, or a particular cell-cycle phase, predict survival. Follow-up fixed-cell sequencing or imaging of the same cells could add molecular detail.\n4. Genetic and epigenetic perturbation screens in the persister state: Run CRISPR knockout, CRISPRi or CRISPRa screens, and epigenetic-modifier inhibitor screens (HDAC, KDM5, EZH2 and others) under drug pressure. Measure persister survival, not just proliferation. Hits would show which pathways and chromatin regulators are necessary for tolerance, such as anti-apoptotic buffering, oxidative stress handling, or lipid metabolism.\n5. Quantifying drug-target engagement and cell-intrinsic heterogeneity at the single-cell level: Measure intracellular drug concentration, target occupancy, and downstream pathway inhibition in individual cells. Examples include fluorescent drug analogs, mass cytometry, or phospho-flow. Add measurements of the apoptotic priming state (BH3 profiling) and of metabolic state (e.g., FLIM of NAD(P)H). These would show whether survivors escape because of less drug exposure, rewiring after inhibition, or a higher threshold for death.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Inheritance-timescale analysis from sister-cell and cousin-cell survival correlations",
+      "description": "Use time-lapse tracking of lineage trees before drug and quantify survival concordance between sisters, cousins and more distant relatives as a function of relatedness. Fitting a decay curve gives the memory half-life of the tolerant state in generations, which discriminates fast stochastic switching, epigenetic memory and genetic mutation, and tells you what timescale to look for mechanisms on."
+    },
+    {
+      "title": "Mutation-rate and mtDNA/CNV profiling of survivors vs. matched sisters",
+      "description": "Isolate surviving clones and their pre-drug sibling clones (split-clone design) and do deep whole-genome sequencing for low-frequency SNVs, extrachromosomal DNA amplifications, copy-number changes and mtDNA heteroplasmy. This tests the unglamorous hypothesis that 'identical' cells carry rare, hidden genetic or ecDNA differences, and quantifies how much of survival is explained by them."
+    },
+    {
+      "title": "Transient mutator and DNA-damage-response state measurement in persisters",
+      "description": "Combine live reporters of DNA repair factors (53BP1 foci, mismatch-repair and error-prone polymerase expression) with single-cell mutation-accumulation readouts during drug exposure. Test whether persisters transiently down-regulate high-fidelity repair, which would link tolerance to later genetic resistance and reveal a window for intervention."
+    },
+    {
+      "title": "Single-cell proteome and translation-rate profiling of persisters",
+      "description": "Measure global and specific translation (puromycin/OPP incorporation, ribosome profiling or polysome-seq on sorted cells, plus single-cell proteomics) to find survivors that differ in protein synthesis, ISR/eIF2\u03b1 state or proteostasis capacity despite similar mRNA. This exposes post-transcriptional tolerance mechanisms invisible to scRNA-seq and ATAC."
+    },
+    {
+      "title": "Spatial and microenvironmental neighbor-effect analysis with density titration and conditioned-media swaps",
+      "description": "Vary seeding density, local neighbor composition and secreted-factor exposure, and use spatial transcriptomics or imaging to ask whether survivors cluster or depend on paracrine or contact signals, such as cell-extruded metabolites, growth factors or cell-cell junction signaling. Comparing survivor frequency against local cell density tests whether 'cell-intrinsic' heterogeneity is actually positional or social."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 908,
+  "cost_usd": 0.0168795
+}

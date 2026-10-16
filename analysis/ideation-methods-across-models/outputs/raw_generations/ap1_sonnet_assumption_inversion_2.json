@@ -1,0 +1,45 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paralog-resolved CUT&RUN and degron panel",
+      "description": "Profile individual Fos/Jun/ATF/Maf family members before, during and long after stimulus, and use paralog-specific degrons to determine which dimer composition marks and maintains memory sites. This tests the assumption that AP-1 is one uniform factor."
+    },
+    {
+      "title": "Chromatin-state persistence after AP-1 removal",
+      "description": "After a priming stimulus, measure accessibility (ATAC-seq), H3K27ac and H3K4me1 at AP-1 sites in cells where AP-1 is depleted or washed out, comparing them to cells where it remains. Persistence of the marks without AP-1 would place memory in chromatin instead of in the factor."
+    },
+    {
+      "title": "Timed acute degradation to separate establishment from maintenance",
+      "description": "Use dTAG/auxin or a dominant-negative A-Fos to remove AP-1 function at defined windows (during priming, after priming, or during restimulation), then measure the restimulation response. This separates a hit-and-run establishment role from continuous maintenance."
+    },
+    {
+      "title": "Genome-wide re-induction kinetics and priming",
+      "description": "Compare naive and previously stimulated cells after a rest period using nascent RNA assays (PRO-seq, TT-seq) at restimulation, quantifying faster or stronger induction genome-wide. This captures memory as primed responsiveness, not only persistent expression of canonical targets."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing through divisions",
+      "description": "Run single-cell ATAC plus RNA with barcoded lineage tracing or live AP-1 reporters, and follow clonal sister cells across divisions and rest periods to see whether memory is a heritable all-or-none state. Compare AP-1 motif accessibility with response in sister cells to test heterogeneity and inheritance."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single entity, but it is a family of dimers (Fos, Jun, ATF, Maf) with distinct, context-dependent functions.",
+      "Memory is assumed to reside in AP-1 itself (its levels or activity) rather than in the chromatin state it establishes, which could persist without AP-1.",
+      "AP-1 is assumed to be required for memory maintenance, whereas it may only be needed for initial establishment (the 'hit-and-run' possibility).",
+      "Memory is assumed to be read out as persistent transcription of a few canonical targets, instead of as primed or faster re-induction at a genome-wide level.",
+      "Population-averaged bulk assays are assumed adequate, though memory may be a heterogeneous, all-or-none state in single cells.",
+      "Correlation between AP-1 binding or accessibility persistence and a memory phenotype is assumed to be sufficient evidence, without causal perturbation at specific timepoints.",
+      "Memory is assumed to be a property of the cell-autonomous state, but it could be sustained by feedback loops or by paracrine, signaling or cell-lineage inheritance.",
+      "Experiments are assumed to be done in standard cell lines or in vitro over short timescales, though memory must persist through cell division and long delays, and in vivo."
+    ]
+  },
+  "output_tokens": 1126,
+  "cost_usd": 0.014031900000000002
+}

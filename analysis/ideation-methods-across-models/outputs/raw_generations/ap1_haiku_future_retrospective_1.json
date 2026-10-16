@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus-withdrawal chromatin persistence test",
+      "description": "Use a degron-tagged JUN or FOS that can be switched on for a short pulse and then removed within minutes, and track chromatin accessibility (ATAC-seq), H3K27ac, and AP-1 occupancy (CUT&Tag) at primed enhancers over days to weeks. If the enhancer state outlasts AP-1 binding, that supports a self-sustaining memory rather than ongoing transcription factor activity."
+    },
+    {
+      "title": "Site-swap genome editing at endogenous enhancers",
+      "description": "Use base or prime editing to mutate AP-1 motifs (TGAnTCA) at individual memory-associated enhancers while leaving neighboring sequence intact, then test whether priming and recall are lost. This separates motif-dependent occupancy from downstream feedback loops and identifies which sites are necessary for memory."
+    },
+    {
+      "title": "Lineage-barcoded memory tracing across divisions",
+      "description": "Combine a live AP-1 activity reporter with heritable DNA barcodes and single-cell multiome readout to ask whether a cell's past AP-1 activation predicts its response to a later stimulus, including after mitosis. This tests whether memory is inherited through cell division, which is the core requirement for a cellular memory mechanism."
+    },
+    {
+      "title": "Re-stimulation kinetics after factor depletion",
+      "description": "Prime cells with a brief AP-1 pulse, deplete JUN or FOS completely with an auxin-inducible degron, then re-stimulate with a fixed dose and measure the speed and magnitude of target gene induction compared with naive cells. Faster, stronger recall without the factor present would indicate memory stored in the chromatin or in cofactor states rather than in factor levels."
+    },
+    {
+      "title": "Multi-week in vivo cofactor dependence screen",
+      "description": "After a defined inflammatory or stress challenge in mice, use conditional knockouts or inhibitors of cofactors such as p300, BRD4, or SWI/SNF components at different times to see which ones must stay active for AP-1-driven chromatin changes to persist. Tissue-level CUT&Tag and ATAC-seq over weeks would show whether the memory is maintained by a cofactor-dependent chromatin state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1833,
+  "cost_usd": 0.00105831
+}

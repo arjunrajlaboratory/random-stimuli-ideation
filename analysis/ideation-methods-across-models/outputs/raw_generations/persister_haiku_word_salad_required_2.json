@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 2,
+  "stimulus": "haploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nhaploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing across a drug pulse",
+      "description": "Label each starting cell with a unique heritable barcode (e.g., lentiviral or CRISPR-based), treat with the drug, and sequence barcodes in survivors versus the pre-treatment pool. This distinguishes survivors that were already present (pre-existing persisters, where one barcode's clone expands from a single haploid-like founder) from cells that transiently switched state after treatment."
+    },
+    {
+      "title": "Pre-treatment single-cell profiling linked to outcome",
+      "description": "Run scRNA-seq and scATAC-seq on the untreated population, then use live-cell or FACS-based sorting to isolate candidate cells (e.g., slow-cycling, high-AXL, or specific chromatin-accessibility states) before drug exposure. Test whether these sorted subpopulations are enriched for survival, which would show the tolerant state is predictable from baseline."
+    },
+    {
+      "title": "Live-cell fate tracking with signaling and cell-cycle reporters",
+      "description": "Use FUCCI cell-cycle reporters and ERK or AKT activity biosensors in time-lapse microscopy during drug exposure, then correlate each cell's pre-treatment reporter state with whether it dies or divides. This links the survival decision to the signaling dynamics of individual cells rather than population averages."
+    },
+    {
+      "title": "Washout and re-challenge to test reversibility",
+      "description": "Expose cultures to the drug, remove it for varying periods, and re-challenge, while tracking survivors' chromatin state (ATAC/CUT&Tag for H3K27me3 or H3K4me3) and transcriptome. If survivors revert to the drug-sensitive state (returning them toward the collective baseline), the tolerance is nongenetic and epigenetically reversible; if not, it points to stable adaptation."
+    },
+    {
+      "title": "Pooled CRISPR screen comparing sublethal and lethal dosing",
+      "description": "Perform a genome-wide CRISPR knockout screen at a sublethal drug dose that allows a small fraction to survive, and compare guide enrichment in survivors against the untreated library. Validate top hits by knocking them out individually and measuring the survival fraction, which identifies the genes that let a minority of cells escape the drug."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1673,
+  "cost_usd": 0.00110805
+}

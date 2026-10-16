@@ -1,0 +1,26 @@
+# Phase 5 round 1 (blind sub-agent). All findings applied in .fill_template.py.
+- {severity: major, summary: "abstract and R6 heading claim 'same ranking'; body supports only best and worst", status: fixed ("agreed on the best and worst prompts"; 7 vs 5 significant stated)}
+- {severity: major, summary: "dek 'never' holds only on stripped text (as-written plain = 5)", status: fixed (dek scoped to main analysis; body says the zero depends partly on stripping)}
+- {severity: major, summary: "abstract omits the stronger baseline (earlier study's prompt)", status: fixed}
+- {severity: minor, summary: "model differences asserted without interaction test", status: fixed (softened; stated untested)}
+- {severity: minor, summary: "R2 heading generalizes a mechanism", status: fixed}
+- {severity: minor, summary: "R3 heading 'clearly only'", status: fixed}
+- {severity: minor, summary: "R7 heading 'cheapest per idea'", status: fixed (dropped)}
+- {severity: minor, summary: "untested 'several prompts better than one more often'", status: fixed (hedged)}
+- {severity: minor, summary: "constraint explanation stated as fact", status: fixed (hedged)}
+- {severity: minor, summary: "title drops model-judge qualification", status: fixed (title says 'a model judge rated')}
+- {severity: minor, summary: "'lowered by -0.56' double negatives", status: fixed ("changed by")}
+- {severity: minor, summary: "'Holm over seven' shorthand", status: fixed (plain wording)}
+- {severity: minor, summary: "internal artifacts unglossed (brainstorming skill, out-of-place flag)", status: fixed}
+- {severity: minor, summary: "British 'less-travelled'", status: fixed}
+# Round 2 (blind combined framing + numerical sub-agent): 8 minor findings, no major; all applied.
+round2:
+  - {summary: "'never' in R1 heading and conclusions not scoped to main analysis", status: fixed}
+  - {summary: "'other cutoffs agreed' but 4.5 too sparse", status: fixed}
+  - {summary: "novelty-gain explanation does not separate winners and losers", status: fixed (stated that mean shifts do not explain it)}
+  - {summary: "'same handful every time' stronger than all-idea group counts", status: fixed}
+  - {summary: "'broadly similar' order with rho 0.40 Sonnet-Opus", status: fixed}
+  - {summary: "overgenerate usefulness attributed to list length; confounded with feasibility wording", status: fixed}
+  - {summary: "parallels said to be outside biology; two arguably biological", status: fixed}
+  - {summary: "cost caption 'the call' vs two stage-1 calls", status: fixed}
+  verified: headline numbers, p-values, union counts, retries, prompt wording, parameters, permutation/clustering/cost logic

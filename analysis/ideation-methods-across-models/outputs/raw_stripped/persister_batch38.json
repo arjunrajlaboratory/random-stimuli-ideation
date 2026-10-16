@@ -1,0 +1,150 @@
+{
+  "batch": 38,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "0b0eb5124112ac34ea46da82df22de7ec89bd9cf345761e73a0fa237727ceedd",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Per-subpopulation drug dose\u2013response survival curves",
+      "description": "Treat clonal populations across a graded series of drug doses and exposure times, and fit a survival-probability curve for each. Compare curve shapes and thresholds between subpopulations to determine whether survival reflects a shifted threshold or a fixed fraction of tolerant cells.",
+      "idea_id": "persister_haiku_parallel_rotated_4_0",
+      "source_sha256": "1d3447bfdd9100a6850f39657e85b971b063aa6ae3b575d34c2092be4bb299c5"
+    },
+    {
+      "id": "I2",
+      "title": "Asymmetric organelle inheritance during division",
+      "description": "Label mitochondria, lysosomes, and drug efflux machinery with distinct fluorescent tags and track how they partition at mitosis. Then test whether daughter cells that inherit a larger share of efflux or mitochondrial capacity are the ones that survive, which would indicate that survival depends on how damaged or protective organelles are divided between daughters rather than on gene expression differences between parent cells.",
+      "idea_id": "persister_haiku_future_retrospective_0_4",
+      "source_sha256": "dce5eb6f0a89deb587b187b860a2b29e6ae3d8fcd0972149c6c02f9e84fa0059"
+    },
+    {
+      "id": "I3",
+      "title": "Decomposing survival into death, division, and arrest",
+      "description": "Use week-long live imaging with an apoptosis/caspase reporter and automated tracking to measure, per surviving lineage, the death rate, the division rate, and the duration of arrest under drug. This distinguishes cells that never engage apoptosis from cells that die more slowly and from cells that keep proliferating, which are often conflated in endpoint colony counts.",
+      "idea_id": "persister_opus_overgenerate_select_4_2",
+      "source_sha256": "3a737f876f2a28d4fbc6d6a4d2da5075c4e50ca37e81b65d133a88d707426a90"
+    },
+    {
+      "id": "I4",
+      "title": "Chromatin accessibility and epigenetic memory test",
+      "description": "Run ATAC-seq and CUT&Tag (H3K27me3, H3K4me3) on sorted pre-treatment cells and on drug-tolerant survivors, then wash out the drug and re-challenge to see whether any tolerance-linked chromatin state persists. Persistence after washout would indicate epigenetic memory rather than a transient response. Estimated cost is about $10,000 to $15,000 (library prep, sequencing, cell culture).",
+      "idea_id": "persister_haiku_assigned_constraint_1_2",
+      "source_sha256": "873e03defa05b55928efec0dca56fa1de9c6b4d8e8213e5855f094d144d1ed93"
+    },
+    {
+      "id": "I5",
+      "title": "Paracrine rescue via conditioned media and extracellular vesicles",
+      "description": "Collect conditioned medium and extracellular vesicles from sorted persisters, fractionate them, and add each fraction to drug-naive cells under treatment to see whether survival can be transferred to neighboring cells. Then use transwell co-cultures with sorted survivors to test whether the protection is secreted and dose-dependent.",
+      "idea_id": "persister_haiku_critique_revise_1_3",
+      "source_sha256": "dffbfabb494a7ee7819f35f854e9e02d4fb20f21f8e1f388883855a6d87766a4"
+    },
+    {
+      "id": "I6",
+      "title": "Testing whether pre-drug signaling or post-drug rebound predicts survival",
+      "description": "Express multiplexed kinase translocation reporters (for example ERK, AKT and JNK KTRs) and quantify each cell's baseline pathway activity and pulse dynamics before the drug, plus how quickly signaling recovers after it. Then test whether a high baseline or a fast rebound of bypass signaling predicts which cells survive.",
+      "idea_id": "persister_opus_assigned_constraint_2_1",
+      "source_sha256": "29e071efa9becaed8af7424031966dd02d78d3df7d10d0a41e483c797ba96b41"
+    },
+    {
+      "id": "I7",
+      "title": "Live ex vivo drug exposure of fresh malignant effusions and circulating tumor cells",
+      "description": "Expose freshly isolated pleural effusion, ascites, or CTC-derived tumor cells from patients to the targeted agent under live-cell imaging, then sort survivors for matched single-cell transcriptomic and proteomic analysis. Repeat sampling from the same patient across multiple taps to test whether the tolerant state is stable and heritable or transient and reversible.",
+      "idea_id": "persister_opus_assigned_constraint_7_4",
+      "source_sha256": "88af278c972dd08bab3f7c5131f65af88a1c0bf8a50812264194208eb7ec27dc"
+    },
+    {
+      "id": "I8",
+      "title": "Per-cell drug exposure and target-engagement mapping",
+      "description": "Measure how much drug each cell accumulates and how completely its target is inhibited, using a fluorescent drug analog or mass-spectrometry imaging together with single-cell phospho-signaling readouts by mass cytometry or quantitative immunofluorescence across doses and times. This separates survivors with less inhibited target (due to uptake, efflux, or sequestration) from survivors whose target is fully inhibited but whose downstream signaling and apoptotic machinery still keep them alive.",
+      "idea_id": "persister_opus_assigned_constraint_3_1",
+      "source_sha256": "791883d5b61fc1abc99065ddae16d2cd95bbd6e7f4bd68c6a7087680654d6302"
+    },
+    {
+      "id": "I9",
+      "title": "Lineage-barcode analysis of pre-existing versus induced survivor states",
+      "description": "Label individual clones with lentiviral barcodes, apply the drug, and use scRNA-seq to ask whether survivors come from a pre-existing, diverse set of transcriptional states or from a single clone. Compare survivor clone composition against the pre-treatment population to separate selection from induced switching.",
+      "idea_id": "persister_haiku_instruction_only_0_0",
+      "source_sha256": "0b4c10f4e636a4f178423011424494da50a51806cc5e848e2685af800b66c45b"
+    },
+    {
+      "id": "I10",
+      "title": "Measuring the dose each cell actually received",
+      "description": "Quantify per-cell intracellular drug concentration and target engagement directly, using a fluorescent or clickable drug analog, mass spectrometry imaging, efflux-pump reporters, and live biosensors of the targeted signaling node. This tests whether survivors differ in pathway state at all, or only in pharmacology, and would explain apparent resistance as a difference in exposure rather than in cell identity.",
+      "idea_id": "persister_opus_assumption_inversion_5_4",
+      "source_sha256": "d682f26972d474e824561867265fd33ebc353aa429ab483716f643dc359e10a5"
+    },
+    {
+      "id": "I11",
+      "title": "Live-cell reporter imaging followed by retrospective omics",
+      "description": "Time-lapse image cells carrying reporters for signaling activity (ERK, p53, apoptosis), cell cycle, and mitochondrial state before and during drug exposure, tracking each cell to its fate. After imaging, fix or isolate the survivors and the cells that died, then profile them (e.g., by spatial or single-cell sequencing) to link dynamic pre-treatment features to survival.",
+      "idea_id": "persister_sonnet_plain_3_2",
+      "source_sha256": "0e0c50afc6efac52ae4b670b7859d20bcc9877319db61511026cb475260f3d85"
+    },
+    {
+      "id": "I12",
+      "title": "Genome-wide CRISPR screens comparing survivors to the bulk population",
+      "description": "Run pooled CRISPR knockout or CRISPRi/CRISPRa screens under drug treatment and compare guide enrichment in surviving cells against untreated controls, including sorted fast-cycling versus slow-cycling subsets. Genes whose guides are enriched or depleted in survivors indicate the genes and pathways required for persistence and suggest candidate vulnerabilities to target.",
+      "idea_id": "persister_haiku_plain_7_2",
+      "source_sha256": "a01d253a381aba7a862ff4213c200d323acf634b99ded77294ce76ac02555941"
+    },
+    {
+      "id": "I13",
+      "title": "Re-challenge assay for tolerance memory",
+      "description": "Sort surviving cells, expand them drug-free for multiple passages, and then re-challenge with drug. Track whether tolerance decays (indicating reversible, epigenetically or transcriptionally maintained memory) or persists (suggesting a stable heritable state), and profile chromatin accessibility by ATAC-seq at each stage to map the regulatory basis of the memory.",
+      "idea_id": "persister_haiku_instruction_only_1_3",
+      "source_sha256": "8e626ab061e9ffe831d47f8055b1c2f750151a798b69472da83b880ea0fe7147"
+    },
+    {
+      "id": "I14",
+      "title": "Pre-existing versus induced tolerance from lineage-barcoding datasets",
+      "description": "Reanalyze public clonal barcoding scRNA-seq datasets (e.g., studies of BRAF-inhibitor-treated melanoma and EGFR-inhibitor-treated lung cancer, including Shaffer, Hata, Oren and Goyal data in GEO). Test whether sister cells' pre-treatment transcriptomes predict survival, and quantify how much of survival is heritable versus stochastic, to separate pre-existing from drug-induced tolerance.",
+      "idea_id": "persister_sonnet_assigned_constraint_0_0",
+      "source_sha256": "a7ecb6a065aa9c6d8cb7ad7905e495d3c7ab788bb3f46041fc668282dc3a67cd"
+    },
+    {
+      "id": "I15",
+      "title": "Drug-pulse, washout and re-challenge cycles with chromatin profiling",
+      "description": "Apply drug pulses of varying length, withdraw the drug, and re-challenge over multiple cycles. Pair this with ATAC-seq and H3K27ac/H3K4me3 profiling at each step to test whether a surviving state carries epigenetic memory that persists after drug removal, and whether the memory is reset or retained across generations.",
+      "idea_id": "persister_haiku_instruction_only_2_3",
+      "source_sha256": "e6258cc89a108087d87c6d419b49ee03afe3764bb2ae706de07362a4e83274ec"
+    },
+    {
+      "id": "I16",
+      "title": "Live-cell reporter imaging with retrospective single-cell profiling",
+      "description": "Track thousands of individual cells by time-lapse microscopy before and during drug exposure, using reporters for signaling activity (e.g., ERK), cell cycle, and apoptosis. Fix and profile survivors afterward, for example by multiplexed FISH or imaging-based proteomics, to link pre-drug dynamics and fluctuations to survival fate.",
+      "idea_id": "persister_sonnet_plain_0_1",
+      "source_sha256": "4275463a2392017c6c6437f3eebb300e574f47a56c307f678d3d1acb030d8840"
+    },
+    {
+      "id": "I17",
+      "title": "Live-cell imaging and tracking of patient-derived cells with reporter-based fate readouts",
+      "description": "Time-lapse image patient tumor cells expressing signaling reporters (e.g., ERK/AKT kinase translocation reporters, cell-cycle and apoptosis sensors) before and through drug exposure, tracking each cell's lineage to the end. Retrospective analysis tests whether pre-treatment signaling dynamics, cell-cycle position, or lineage history predict survival, and fixed-cell multiplex profiling of the same cells can then link the phenotypes to molecular states.",
+      "idea_id": "persister_sonnet_assigned_constraint_7_2",
+      "source_sha256": "e18bb76af0251f997181bc4feb73f264d23c3018ca2be8c2c4fa1093136df481"
+    },
+    {
+      "id": "I18",
+      "title": "Genome-wide CRISPR screens in a Drosophila cell line or tumor model",
+      "description": "Run pooled CRISPR knockout or activation screens in Drosophila S2R+ cells, or RNAi screens in a Ras/Scrib fly tumor model, under a targeted inhibitor (e.g., a MEK or PI3K inhibitor). Look for genes that change the fraction of survivors without changing the average drug IC50. These genes, such as chromatin regulators, stress-response genes and drug-efflux genes, would identify the machinery of tolerance as distinct from classical resistance, and the screens are cheaper and more tractable than in mammalian cells.",
+      "idea_id": "persister_sonnet_assigned_constraint_4_3",
+      "source_sha256": "cc4d6da0c4f1718b04d7bbe94b85adf3758a0592d5c52d9cea6ca13e9f80d5a7"
+    },
+    {
+      "id": "I19",
+      "title": "Washout and re-challenge to measure tolerance relaxation time",
+      "description": "Remove the drug after a defined exposure, then re-challenge at intervals and measure how quickly the surviving fraction reverts toward the naive baseline. Plotting the relaxation time against drug dose and cell density would reveal whether tolerance is a long-lived, self-sustaining state or a transient one.",
+      "idea_id": "persister_haiku_parallel_rotated_6_4",
+      "source_sha256": "1683182d4b2aa376ae6479282e618d839cc726e2a8a428ebe5a871443935917d"
+    },
+    {
+      "id": "I20",
+      "title": "Buoyant mass and growth-rate profiling before treatment",
+      "description": "Use suspended microchannel resonators or quantitative phase imaging to measure each cell's mass and mass-accumulation rate before adding drug, then track which cells survive. This tests whether biophysical traits such as cell size, protein dilution, or growth rate predict survival independently of gene expression.",
+      "idea_id": "persister_opus_obvious_then_avoid_5_2",
+      "source_sha256": "54b18fea63d120e3803bb18c6fde23bd4bd5585d5c75b0a862c7a4d62989347a"
+    }
+  ],
+  "cost_usd": 0.0511132
+}

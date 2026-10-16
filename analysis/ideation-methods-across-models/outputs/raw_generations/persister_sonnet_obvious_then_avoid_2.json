@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Cell-cycle-history and inheritance tracking via sister-cell pairs",
+      "description": "Use time-lapse imaging of FUCCI or similar reporters plus sister-cell tracking to test whether survival correlates with pre-drug cell-cycle duration, and how strongly sisters share fate. Compare sister-pair concordance with unrelated cells and apply the drug at varied times after division to estimate the heritability and decay time of the survival state."
+    },
+    {
+      "title": "Mitochondrial content and mtDNA heteroplasmy sorting",
+      "description": "Sort untreated cells by mitochondrial mass, membrane potential, or mtDNA heteroplasmy, then drug-challenge each bin to see whether mitochondrial state predicts survival. Single-cell mtDNA variants can also serve as natural lineage markers to test clonal inheritance."
+    },
+    {
+      "title": "Pre-treatment live-cell signaling dynamics as a predictor",
+      "description": "Record dynamic reporters (ERK, AKT, p53, NF-\u03baB kinase translocation) in single cells for days before drug addition. Then train a model on those dynamics to predict which cells survive, which would show whether signaling history rather than a static state determines the outcome."
+    },
+    {
+      "title": "Spatial and microenvironmental mapping of survivors in 3D/tumor models",
+      "description": "Apply spatial transcriptomics or multiplexed imaging to spheroids or xenografts after treatment to test whether survivors cluster by hypoxia, nutrient gradients, drug penetration, or neighbor contact. Pair this with local drug-concentration measurements, such as mass spectrometry imaging, to separate intrinsic from positional causes."
+    },
+    {
+      "title": "Stochastic apoptosis-threshold measurement (BH3 profiling with live caspase reporters)",
+      "description": "Measure each cell's mitochondrial apoptotic priming with single-cell BH3 profiling or live caspase and MOMP reporters. Then test how priming, rather than drug target inhibition, sets survival after drug exposure. Compare the variance in priming with that in target-inhibition readouts to see which drives the surviving fraction."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated cells to find persister transcriptional states",
+      "Whole-genome/exome sequencing of survivors to rule out resistance mutations",
+      "Epigenomic profiling (ATAC-seq, ChIP-seq, histone marks) of persisters",
+      "Lineage barcoding to track whether survivors pre-exist before treatment",
+      "Live-cell imaging of drug response at single-cell level",
+      "CRISPR knockout/activation screens for survival genes",
+      "Proteomics/phosphoproteomics of surviving cells",
+      "Measuring drug efflux pump (ABC transporter) expression and activity",
+      "Metabolic profiling of persisters (oxidative phosphorylation, ferroptosis sensitivity)",
+      "Testing combination therapies targeting candidate persister pathways"
+    ]
+  },
+  "output_tokens": 1056,
+  "cost_usd": 0.0133557
+}

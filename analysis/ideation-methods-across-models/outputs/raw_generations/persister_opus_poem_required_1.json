@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "The Pedestal Inscription: retrospective barcoding to read the pre-treatment state of survivors",
+      "description": "Just as the pedestal carries a legible record of a king who is otherwise gone, give every cell a heritable, transcribed DNA barcode (ClonMapper/Rewind-style) so that after treatment you can return to a pre-treatment aliquot of the same clone and ask what its untreated twins looked like by scRNA-seq. This separates rare pre-existing primed states from drug-induced states, and tests whether survival maps onto lineage at all."
+    },
+    {
+      "title": "Two Trunkless Legs of Stone: profiling the 99% that die, not just the survivors",
+      "description": "The poem defines Ozymandias by what was destroyed around him; likewise, run a fixation-based single-cell time course (fixed scRNA-seq or in-situ methods that retain dying cells) across the first 1-72 h of drug so apoptotic and arrested cells are sampled rather than lost to dissociation bias. The contrast between the trajectory of doomed cells and that of persisters is far more informative than an endpoint survivor profile, which by construction looks like a selected monument with no context."
+    },
+    {
+      "title": "The Sculptor Who Read Those Passions: live-imaging fate mapping followed by in situ molecular readout of the same cells",
+      "description": "The sculptor inferred passions from a living face and stamped them onto stone that outlasted them; invert this by imaging signaling and cell-cycle reporters (ERK-KTR, CDK2 sensor, ATF4/stress reporters) in thousands of individual cells through treatment, then fixing the plate and performing MERFISH or multiplexed immunofluorescence on those exact tracked cells. This yields a direct mapping from a measured pre-drug dynamic state to an individual survival outcome rather than a correlation across separate populations."
+    },
+    {
+      "title": "Look on My Works: testing whether the survivor state is a durable monument or a transient pose",
+      "description": "\"Nothing beside remains\" is a claim about durability over time, so measure it: take single survivor colonies, withdraw drug, and serially passage them while re-challenging sister sub-populations at intervals from days to months to quantify the half-life of the resistant phenotype. Pair this with single-cell ATAC-seq or CUT&RUN for H3K27me3/H3K4me1 at each timepoint to distinguish maintained chromatin memory, a genetically fixed mutation, and a reversible physiological condition."
+    },
+    {
+      "title": "The Lone and Level Sands: survival as a property of local neighborhood, not the cell alone",
+      "description": "The Wreck is defined partly by the emptiness around it, and persisters may likewise be made by their surroundings, so systematically vary local context (seeding density, micropatterned colonies of defined size, conditioned-medium swaps, fibroblast co-culture) and record position-resolved survival by imaging. Combine with spatial reporters of secreted factors to test whether survivors sit preferentially at colony edges or in paracrine shadows, reframing the question from \"which cell\" to \"which place.\""
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2979,
+  "cost_usd": 0.1540495
+}

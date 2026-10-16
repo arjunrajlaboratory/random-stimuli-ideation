@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell concordance of AP-1 state after division",
+      "description": "Use expressed lineage barcodes plus single-cell multiome (ATAC + RNA) to compare AP-1 motif accessibility and target-gene output between sister and cousin cells across increasing numbers of divisions. Heritability shows up as concordance that decays with lineage distance, and live imaging of tagged FOS/JUN through mitosis tests whether the factor itself is retained on chromatin as the physical carrier."
+    },
+    {
+      "title": "Acute degron removal of AP-1 after the signal is gone",
+      "description": "Tag endogenous FOS/JUN family members with an auxin or dTAG degron, let cells establish a primed state, then deplete AP-1 only after the inducing stimulus has been washed out. If accessibility and re-inducibility collapse during depletion and fail to return after restoring the protein, AP-1 is actively maintaining the state rather than having merely initiated it."
+    },
+    {
+      "title": "Decay curves and the second-challenge test",
+      "description": "Deliver a transient stimulus, then measure AP-1 enhancer accessibility, binding, and transcriptional output at a dense timecourse out to weeks, and at each timepoint re-challenge a subpopulation. Genuine memory predicts a measurable storage half-life plus a faster, larger, or lower-threshold second response in exactly the cells that retained the AP-1 state."
+    },
+    {
+      "title": "Writing a state with synthetic AP-1 recruitment",
+      "description": "Use chemically controlled dCas9 or LID-tag recruitment of FOS/JUN activation domains to specific endogenous enhancers, hold it briefly, then release. Persistence of accessibility and expression after release, in cells that never saw the original stimulus, would establish that AP-1 occupancy alone is sufficient to install the memory."
+    },
+    {
+      "title": "Saturation mutagenesis of endogenous TRE sites",
+      "description": "Base-edit or prime-edit individual AP-1 motifs across a panel of primed enhancers, varying motif affinity, number, and spacing, and score both initial induction and long-term retention separately. Finding sites required for retention but not for induction would separate the memory function from the response function at single-basepair resolution."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2428,
+  "cost_usd": 0.0964865
+}

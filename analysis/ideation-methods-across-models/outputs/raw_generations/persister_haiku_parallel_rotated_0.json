@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 0,
+  "parallel": {
+    "field": "Materials engineering (brittle fracture)",
+    "problem": "Why do a few nominally identical ceramic or metal specimens survive a load that breaks most of them, when survival depends on rare hidden flaws rather than the average material?",
+    "how_studied": "Engineers test many identical specimens to failure and fit a Weibull (weakest-link) distribution to the strengths, then use fractography to trace each fracture back to its origin flaw. Micro-CT and in-situ SEM tensile tests locate inclusions and pores in the specimens that survive or break early, and the flaw-size distribution is compared with the predicted survival curve."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Materials engineering (brittle fracture)\nProblem: Why do a few nominally identical ceramic or metal specimens survive a load that breaks most of them, when survival depends on rare hidden flaws rather than the average material?\nHow it is studied: Engineers test many identical specimens to failure and fit a Weibull (weakest-link) distribution to the strengths, then use fractography to trace each fracture back to its origin flaw. Micro-CT and in-situ SEM tensile tests locate inclusions and pores in the specimens that survive or break early, and the flaw-size distribution is compared with the predicted survival curve.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Weibull-style survival fitting of single-cell drug response",
+      "description": "Expose many replicate wells of clonal cells to a range of drug doses and record each cell's time-to-death or death threshold by live imaging. Fit a Weibull or extreme-value distribution to these single-cell thresholds: a low shape parameter with a long tail would indicate that survival is set by a rare, hidden high-tolerance tail rather than by the population mean."
+    },
+    {
+      "title": "Fractography-style back-tracing of survivors",
+      "description": "Use fluorescent reporters or lineage barcodes to record each cell's state before treatment, then sort survivors and matched non-survivors and profile them by scRNA-seq or ATAC-seq. Working back from survivors to their pre-treatment signatures identifies the 'origin flaw' (for example, a pre-existing efflux, stress, or chromatin state) that predicted survival."
+    },
+    {
+      "title": "Micro-CT-like 3D spatial mapping of survivor niches",
+      "description": "Grow tumor spheroids or organoids, treat them, and use multiplexed spatial imaging (e.g., MERFISH or imaging mass cytometry) to map where surviving cells sit relative to hypoxia, drug gradients, vasculature, or neighboring cell types. This tests whether survival clusters at specific microenvironmental 'flaw' locations rather than being randomly distributed."
+    },
+    {
+      "title": "Pre-treatment marker threshold and proof-test calibration",
+      "description": "Measure a continuous candidate marker (e.g., drug-efflux pump level, mitochondrial membrane potential, or a fluorescent stress reporter) in each cell before dosing and link it to fate in live imaging. Compare the marker distribution to the observed survival curve to see whether survival follows a threshold on this hidden variable, analogous to matching flaw-size distributions to predicted strength curves."
+    },
+    {
+      "title": "Barcoded replicate-population fluctuation analysis",
+      "description": "Use a lineage-barcoded clonal library split into many small replicate cultures, then apply the drug and count surviving barcodes in each replicate. Variation in survivor counts across replicates, compared with Luria-Delbr\u00fcck-style fluctuation models, distinguishes survivors that were pre-existing from those induced by drug exposure, and shows whether survivors come from a few clones with rare pre-existing tolerance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1816,
+  "cost_usd": 0.0011805499999999998
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Catch the survivor before it survives",
+      "description": "Use clonal DNA barcodes plus barcode-specific RNA FISH (or a recorder that converts barcode identity into a sortable surface marker) to physically isolate, from an untreated population, the exact cells whose twins are destined to survive drug in a parallel dish, then profile them by single-cell multiome and proteomics. The surprise is methodological: it measures the pre-existing state of the future survivor directly rather than inferring it backwards from resistant colonies that have already been reshaped by weeks of drug."
+    },
+    {
+      "title": "A memory half-life curve for resistance potential",
+      "description": "Separate sister and cousin cells at defined numbers of divisions after a common ancestor, treat one branch while culturing the other drug-free for varying intervals, and measure how the concordance of survival decays with elapsed time and divisions. This turns \"is it heritable?\" into a quantitative decay constant, and distinguishes a stably inherited epigenetic state from a fluctuating state with a specific memory clock that sets the size of the surviving fraction."
+    },
+    {
+      "title": "Per-cell drug dose, not per-cell biology",
+      "description": "Quantify intracellular free drug concentration and target occupancy in individual cells before and during treatment using fluorescent drug analogs, mass spectrometry imaging, and live target-engagement reporters, then correlate these directly with each cell's fate by imaging. The potentially deflating but decisive finding is that much of the variance in survival is explained by cell-to-cell differences in uptake, efflux, and drug\u2013target stoichiometry rather than by any resistance program."
+    },
+    {
+      "title": "Make the rare state common",
+      "description": "Instead of describing the primed state, construct it: use CRISPRa/CRISPRi, defined signaling pre-treatments, or forced cell-cycle and metabolic states to drive a large fraction of cells into the candidate pre-resistant configuration, then measure whether the surviving fraction shifts by orders of magnitude in the predicted direction. Pairing this with erasure experiments converts a decade of correlative single-cell profiling into a sufficiency-and-necessity test with an effect size readout."
+    },
+    {
+      "title": "Fluctuation analysis for non-genetic states",
+      "description": "Run hundreds of small replicate subpopulations expanded from single cells for varying numbers of generations before identical drug challenge, and fit the distribution of survivor counts across replicates (a Luria\u2013Delbr\u00fcck-style analysis adapted to reversible states) to infer switching rates into and out of the primed state and its persistence time. The surprise is that counts of colonies alone, with no sequencing or imaging of cell state, can bound the mechanism and rule out whole classes of models."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2995,
+  "cost_usd": 0.09240590000000001
+}

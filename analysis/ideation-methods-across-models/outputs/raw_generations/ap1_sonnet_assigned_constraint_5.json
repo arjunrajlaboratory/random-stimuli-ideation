@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 5,
+  "constraint": "finishing within three months",
+  "prompt": "Constraint: every one of your ideas must be carried out finishing within three months. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus then washout: AP-1 binding and accessibility persistence",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a defined stimulus such as TPA, serum, or LPS, then wash out and run CUT&RUN for FOS/JUN and ATAC-seq at multiple time points (1 h to 14 days). Sites where AP-1 occupancy and accessibility persist after the stimulus and AP-1 protein levels have returned to baseline are candidate memory loci."
+    },
+    {
+      "title": "Acute AP-1 degradation to test maintenance versus initiation",
+      "description": "Use dTAG or auxin-inducible degron knock-ins for FOS, JUN or the pioneer-like subunit, and degrade the protein either during stimulation or after memory is established. Compare ATAC-seq, H3K27ac ChIP and RNA-seq to determine whether AP-1 is required only to establish the accessible state or also to maintain it, which is the central criterion that separates a memory mechanism from a one-time trigger."
+    },
+    {
+      "title": "Memory functional assay: primed re-stimulation response",
+      "description": "Prime cells with a first stimulus, rest them for days to weeks, then re-stimulate and measure the speed and magnitude of transcription (nascent RNA, PRO-seq or 4sU-seq) compared with naive cells. Repeat with AP-1 degron or dominant-negative (A-FOS) perturbation at priming only, to test whether AP-1 is needed to encode the enhanced response."
+    },
+    {
+      "title": "Single-cell multiome with lineage tracing across divisions",
+      "description": "Perform single-cell RNA and ATAC (multiome) on primed and naive cells, with barcode lineage tracing or sister-cell pairing after division, and infer AP-1 motif activity (e.g., chromVAR). Test whether sister cells share accessibility and AP-1 activity states more than random cells do, and whether memory is heritable through mitosis and bimodal versus graded."
+    },
+    {
+      "title": "Mitotic bookmarking and locus-specific causal editing",
+      "description": "Use live-cell imaging or single-molecule tracking of tagged JUN and FOS, plus CUT&RUN on mitotically arrested cells, to test whether AP-1 stays on chromatin during mitosis. Then use dCas9 or motif mutation (CRISPR editing) at selected memory enhancers to test whether the AP-1 site is necessary for the persistent accessibility and primed response, and use dCas9-KRAB to test sufficiency."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 905,
+  "cost_usd": 0.013357499999999998
+}

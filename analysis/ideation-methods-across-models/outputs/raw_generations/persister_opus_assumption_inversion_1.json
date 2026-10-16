@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell splitting across a delay ladder",
+      "description": "Split pairs of sister cells at defined intervals before treatment (0, 1, 3, 7, 14 days of regrowth) and measure how concordance of survival between sisters decays with separation time, yielding the autocorrelation timescale of the resistant state and the residual fraction of fate that is an irreducible post-drug coin flip. This directly tests whether survival is predetermined and heritable, rather than assuming it; clone-level (MemorySeq-style) profiling then identifies transcripts that actually fluctuate on the measured timescale."
+    },
+    {
+      "title": "Neighborhood-resolved survivor mapping with mixing and conditioned-medium controls",
+      "description": "Live-image a labeled monolayer through treatment and test whether each survivor's local density, contact number, and spatial position at the moment of dosing predict survival better than its own pre-drug reporter intensity. Follow with low- versus high-density plating, transwell/conditioned-medium transfer, and mixing of color-coded populations to separate paracrine or neighborhood rescue from intrinsic state."
+    },
+    {
+      "title": "Per-cell intracellular drug concentration and target engagement",
+      "description": "Quantify how much drug each cell actually receives and what it does there, using a fluorescent drug analog or single-cell mass spectrometry/MALDI imaging for intracellular concentration, efflux-pump activity dyes, and a live pathway reporter such as an ERK kinase-translocation reporter. This asks whether survivors are simply cells with lower drug load or incomplete pathway shutoff rather than carriers of a distinct resistance program."
+    },
+    {
+      "title": "Single-cell genome, CNV, and mtDNA profiling of sorted survivors versus matched dying cells",
+      "description": "Perform single-cell WGS/low-pass CNV analysis plus mtDNA heteroplasmy calling on survivors and on a size-matched sample of the pre-treatment population, combined with high-complexity DNA barcoding to distinguish rare pre-existing genetic subclones from epigenetically fluctuating states. The decisive test is whether survivors are enriched for a variant already present, at the predicted frequency, before treatment."
+    },
+    {
+      "title": "Forcing the candidate state on and off, with retrospective lineage validation",
+      "description": "Use inducible CRISPRa/CRISPRi or a degron to drive the candidate state in a tunable fraction of cells before dosing and measure whether survival probability tracks induced expression level quantitatively, establishing causality rather than correlation. Validate in the reverse direction with a Rewind-style barcode scheme that recovers the actual pre-treatment ancestors of eventual survivors and profiles them directly, instead of inferring their state from bulk survivor averages."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survivorship is determined by a pre-existing, cell-intrinsic state present before drug is added, rather than by a stochastic event resolved during or after exposure.",
+      "That state is heritable and stable long enough that a measurement on an ancestor predicts a descendant's fate.",
+      "The relevant variation is transcriptional and detectable in a single untreated snapshot (e.g., scRNA-seq).",
+      "Fate is cell-autonomous; neighbors, local density, and secreted factors are nuisance variables rather than causes.",
+      "Every cell experiences the same drug exposure and the same degree of target inhibition.",
+      "The cells are truly genetically identical, with no subclonal SNVs, CNVs, or mtDNA heteroplasmy.",
+      "Survivors form a single homogeneous class with one mechanism.",
+      "Molecular features correlated with the survivor population are causal for survival.",
+      "'Survival' is a binary, stable endpoint well reported by bulk, plate-level readouts such as colony counts at day 14.",
+      "A clonal cell line in 2D culture adequately models the phenomenon."
+    ]
+  },
+  "output_tokens": 4957,
+  "cost_usd": 0.14307309999999998
+}

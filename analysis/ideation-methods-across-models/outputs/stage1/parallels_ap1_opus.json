@@ -1,0 +1,49 @@
+{
+  "question": "ap1",
+  "model": "claude-opus-5-5",
+  "prompt": "Here is a research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nDo not answer it. Instead, list 8 parallel problems, each from a different field outside biology and medicine, that share the underlying structure of this question. Make the fields as different from one another as you can. For each, give the field, the parallel problem in one sentence, and two or three sentences on how people in that field investigate or measure it (specific methods, experimental designs, or analyses).",
+  "n_returned": 8,
+  "parallels": [
+    {
+      "field": "Electrical engineering (memristive devices)",
+      "problem": "Does a thin-film device's resistance actually store the history of applied voltage pulses as nonvolatile memory, or is it just a transient response that decays?",
+      "how_studied": "Engineers run pulse-then-read protocols: they apply write pulses of set amplitude and duration, remove the bias, and read resistance with small non-perturbing voltages over hours to years (retention tests), often sped up by heating with Arrhenius extrapolation. They sweep voltage in loops to map pinched hysteresis, and use in-situ TEM or conductive AFM to check that a physical filament forms and dissolves along with the stored state."
+    },
+    {
+      "field": "Machine learning (interpretability of recurrent and transformer models)",
+      "problem": "Does a specific hidden unit or attention-head circuit actually carry information about earlier inputs that the network uses later, or does it only correlate with that history?",
+      "how_studied": "Researchers train linear probes to decode past tokens from activations at later timesteps and track how decodability falls with delay. Then they test causality: activation patching or ablation of the candidate component should remove the history-dependent behavior, and swapping in activations from a different history should transfer that history's downstream output."
+    },
+    {
+      "field": "Geomechanics / rock physics",
+      "problem": "Do rocks and soils keep a record of the maximum stress they experienced in the past, and which microstructural feature holds that record?",
+      "how_studied": "In Kaiser-effect experiments, specimens are loaded to a known peak, unloaded, then reloaded while acoustic emissions are recorded. Emissions stay quiet until the previous peak is passed, and researchers measure how that onset fades with time delay, temperature, or water saturation. In soils, oedometer tests infer preconsolidation pressure from the break in the void-ratio vs. log-stress curve, and microCT links the memory to closed or newly formed microcracks."
+    },
+    {
+      "field": "Macroeconomics",
+      "problem": "Does a temporary recession leave a lasting mark on unemployment or output (hysteresis), and which mechanism (skill loss, capital scrapping, insider wage bargaining) carries it forward?",
+      "how_studied": "Economists use unit-root and persistence tests on unemployment series, and local projections or impulse responses to identified transitory shocks, such as monetary or fiscal surprises, to see whether effects return to baseline. Displaced-worker studies using matched employer-employee data and difference-in-differences follow earnings scarring for decades. Cross-country designs compare cases where the proposed carrier mechanism, such as union coverage, differed."
+    },
+    {
+      "field": "Climate and Earth system science",
+      "problem": "Do ice sheets or ocean circulation (AMOC) keep a memory of past forcing, so that undoing the forcing does not restore the original state?",
+      "how_studied": "Modelers run ramp-up/ramp-down experiments in coupled ice-sheet or climate models, slowly raising and then reversing CO2 or freshwater forcing to trace hysteresis loops and find bistable ranges. They complement these runs with paleoclimate proxies that show the system in different states under similar forcing, and with early-warning statistics (rising autocorrelation and variance) near thresholds."
+    },
+    {
+      "field": "Condensed matter physics (spin glasses and glassy materials)",
+      "problem": "Does a disordered material keep a memory of the temperatures at which it was aged, and is that memory stored in specific spin or structural configurations?",
+      "how_studied": "Physicists use temperature-cycling protocols: aging at T1, a temporary dip to T2 (which causes rejuvenation), then a return to T1. They measure AC susceptibility or thermoremanent magnetization to see whether the T1 state comes back (memory) or starts over. Waiting-time dependence of relaxation curves and simulations that track overlap between configurations identify which degrees of freedom hold the imprint."
+    },
+    {
+      "field": "Organizational science / management",
+      "problem": "Do firms really retain lessons from past crises or production experience in their routines, or does the knowledge decay or leave when employees leave?",
+      "how_studied": "Researchers estimate learning curves with depreciation terms, regressing unit cost on cumulative output with discounting for knowledge decay. They use natural experiments such as shift changes, turnover shocks, or plant transfers to see whether the knowledge persists and moves with people, documents, or routines. They also run lab group experiments where members are swapped out to test where the memory is stored."
+    },
+    {
+      "field": "Political science (historical institutionalism)",
+      "problem": "Do temporary historical events, such as colonial rule or wartime mobilization, persist through specific institutions so that they shape present-day outcomes long after the cause is gone?",
+      "how_studied": "Scholars use spatial regression-discontinuity designs at historical borders, instrumental variables, and persistence regressions linking past exposure to present outcomes. They then do mediation analysis to test which carrier explains the persistence: formal institutions, cultural norms, or elite networks. Placebo tests on boundaries that had no institutional consequence, and cases where the institution was later abolished, help separate a real memory carrier from correlated geography."
+    }
+  ],
+  "cost_usd": 0.05891600000000001
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-resolved, time-stamped AP-1 reporter tracing",
+      "description": "Build an inducible, lineage-tracing system (e.g., a Cre- or Dre-recombinase reporter driven by AP-1-responsive enhancers) that permanently marks cells that experienced a transient AP-1 pulse, then wash out the stimulus and track whether marked cells retain altered chromatin or transcription after days to weeks. Persistence in marked cells after the stimulus is removed, without ongoing AP-1 activity, would be direct evidence of memory."
+    },
+    {
+      "title": "Acute AP-1 degradation or inhibition during the memory window",
+      "description": "Use an auxin-inducible degron (or a dominant-negative c-Jun/Fos or a photo-controllable AP-1 inhibitor) to remove AP-1 at defined times: during the stimulus, after the stimulus, and during re-stimulation. If AP-1 is a true memory mechanism, the altered chromatin state or primed gene response should persist when AP-1 is removed after induction, but be lost when AP-1 is removed during the initial pulse or the reactivation step."
+    },
+    {
+      "title": "Chromatin persistence profiling (ATAC-seq, CUT&RUN, H3K27ac) across a stimulus-washout time course",
+      "description": "Profile AP-1 occupancy (c-Fos/c-Jun CUT&RUN) together with chromatin accessibility and histone marks at multiple timepoints after a transient stimulus and after a second stimulus. Testing whether enhancers that were bound by AP-1 during the pulse remain open or marked after AP-1 leaves the chromatin distinguishes genuine epigenetic memory from simple ongoing transcription."
+    },
+    {
+      "title": "Re-stimulation kinetics and priming assays",
+      "description": "Compare the transcriptional and AP-1 binding response to a second identical stimulus in naive versus previously stimulated cells, measuring the speed, amplitude, and gene set of the response (e.g., by time-resolved RNA-seq or live single-cell reporters). Faster or stronger re-induction of the same target genes in primed cells, and dependence of that priming on the original AP-1 pulse, would support a memory function rather than a simple dose response."
+    },
+    {
+      "title": "Mechanistic dissection of the memory determinants with targeted perturbations",
+      "description": "Combine targeted epigenome editing (dCas9-based writers/erasers such as p300 or LSD1 fused to AP-1-bound loci) with mutations in the AP-1 binding motifs and in putative self-reinforcing partners (e.g., BAF complex, bromodomain proteins) to test which features are necessary and sufficient for persistence. Showing that a chromatin mark at a single AP-1-bound enhancer can by itself reproduce or abolish the memory effect would establish a causal mechanism rather than correlation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1023,
+  "cost_usd": 0.00065356
+}

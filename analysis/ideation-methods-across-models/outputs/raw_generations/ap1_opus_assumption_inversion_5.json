@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clamp the upstream signal, not the factor",
+      "description": "Targets the cell-autonomy assumption: after stimulus withdrawal, hold candidate upstream maintainers at defined levels during the memory window using optogenetic ERK/JNK clamps, MEK or FAK/ROCK inhibition, substrate-stiffness switching, and conditioned-medium swaps, then assay whether primed AP-1 accessibility and the enhanced second response survive. If memory only collapses when the upstream input is extinguished, AP-1 is a readout of a sustained signal rather than the storage device itself."
+    },
+    {
+      "title": "Dimer-resolved encode-versus-maintain swap",
+      "description": "Targets the 'AP-1 is one thing' assumption: build a panel of subunit-specific degrons (cFos, FosB/dFosB, JunB, JunD, ATF3, JDP2) combined with per-subunit CUT&RUN and dimer-specific proximity ligation or split-fluorophore reporters, and degrade each subunit selectively during encoding versus during maintenance. Rescue with a different subunit during the maintenance window to test whether the identity of the dimer that writes the state differs from the one that keeps it."
+    },
+    {
+      "title": "Sister-cell and barcoded-clone priming assay",
+      "description": "Targets the bulk-equals-single-cell assumption: lineage-barcode cells, live-image an AP-1 transcriptional reporter through a prime-rest-restimulate cycle, and compare second-response concordance between sister cells, clonal relatives, and unrelated cells, with split-clone scATAC at both time points. True per-cell memory predicts within-cell and sister concordance that exceeds what clone-level selection of pre-existing responders can explain."
+    },
+    {
+      "title": "Acute degron windows with footprint-resolution readout",
+      "description": "Targets the continuous-occupancy assumption: deplete all AP-1 activity only after encoding is complete, using an auxin or dTAG degron plus a dominant-negative A-Fos, and ask whether the primed accessibility, nucleosome positioning, and accelerated second-response kinetics persist in the factor's absence. Pair with single-molecule footprinting, SLAM-seq, and histone-turnover measurement to identify what holds the state open if AP-1 is dispensable for maintenance."
+    },
+    {
+      "title": "Per-division versus per-hour decay accounting",
+      "description": "Targets the persistence-equals-heritability assumption: measure the state's decay as a function of division number rather than elapsed time by varying proliferation rate (serum, CDK4/6 inhibition, contact inhibition, mitotic arrest), and simultaneously pulse-chase-label AP-1 protein with HaloTag or SNAP ligands to compare protein half-life to state half-life. Add live imaging of AP-1 during mitosis to test for bookmarking; memory that decays per division but outlives the protein implicates an actively re-established chromatin state rather than residual factor."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Memory is stored cell-autonomously in chromatin, rather than in a persistently active upstream input (sustained ERK, cytoskeletal tension, autocrine loop, metabolic state) that AP-1 merely reports.",
+      "'AP-1' is treated as a single entity, when it is a combinatorial family of Fos/Jun/ATF/JDP dimers whose encoding and maintaining members may differ.",
+      "Bulk measurements (ATAC, ChIP, RNA) of a persistent state reflect persistence within individual cells, rather than selection and expansion of a pre-existing responsive subpopulation.",
+      "Memory requires continuous AP-1 occupancy, excluding hit-and-run models in which AP-1 installs a state that is then maintained by nucleosome positioning, histone variants, or other factors.",
+      "Persistence over time equals heritable memory, rather than slow decay of a long-lived protein or chromatin mark that is never actively transmitted through mitosis.",
+      "Perturbing AP-1 cleanly separates maintenance from encoding, when the same factor is required for the initial response.",
+      "Increased accessibility at AP-1 motifs equals functional memory, rather than a correlate with no consequence for the speed or magnitude of a second response.",
+      "The relevant stimulus and timescale are those convenient in culture (saturating ligand, hours to days), and in vivo memory obeys the same rules.",
+      "Memory is binary (primed vs naive) rather than graded in both depth and duration.",
+      "Motif-level enrichment identifies the causal element, when AP-1 motifs are degenerate and shared with related bZIP factors."
+    ]
+  },
+  "output_tokens": 4942,
+  "cost_usd": 0.190992
+}

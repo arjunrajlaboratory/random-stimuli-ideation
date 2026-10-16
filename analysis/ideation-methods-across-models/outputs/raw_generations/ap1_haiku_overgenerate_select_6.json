@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-mediated AP-1 depletion after priming",
+      "description": "Prime cells with a transient stimulus, then acutely degrade Fos or Jun (dTAG or auxin system) during the quiescent window. If AP-1 is required to maintain memory, accessibility and re-induction should collapse; if not, memory is self-sustaining after AP-1 leaves the chromatin."
+    },
+    {
+      "title": "Single-molecule footprinting of AP-1 occupancy in the quiescent phase",
+      "description": "Use single-molecule footprinting on memory enhancers after washout to measure what fraction of alleles still carry AP-1 and how long footprints persist. Distinguishing continuous occupancy from re-binding of a fresh pool directly tests whether the memory is held by persistent AP-1 binding."
+    },
+    {
+      "title": "Motif deletion or base editing at memory enhancers",
+      "description": "Use CRISPR deletion or base editing to disrupt AP-1 motifs at enhancers that retain accessibility after priming, then measure retained accessibility, H3K27ac, and the speed and magnitude of re-induction. This tests necessity at the sequence level rather than relying on correlation."
+    },
+    {
+      "title": "Mitotic inheritance of AP-1 memory",
+      "description": "Tag endogenous Fos or Jun and image it through mitosis, while tracking accessibility or reporter output in daughter cells. Persistence of AP-1 on mitotic chromatin and matched inherited memory would support a heritable, bookmarking-based mechanism."
+    },
+    {
+      "title": "dCas9-tethered AP-1 sufficiency test at silent loci",
+      "description": "Tether c-Jun or a p300-recruiting AP-1 fragment to silent loci with dCas9, then wash out and measure whether the locus keeps an open, primed state and responds faster on re-stimulation. This tests whether AP-1 recruitment alone can install memory, independent of upstream signaling."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Acute dTAG/auxin degron depletion of Fos or Jun after a priming stimulus, then measuring whether enhancer accessibility persists",
+      "Time-resolved ATAC-seq and H3K27ac ChIP-seq across stimulus washout to separate persistence from re-establishment",
+      "Single-molecule footprinting on memory enhancers to measure AP-1 occupancy and dwell during the quiescent phase",
+      "SNAP/Halo-tagged Fos or Jun residence-time measurement (FRAP or pulse-chase) at memory sites after washout",
+      "CRISPR deletion or base-editing of AP-1 motifs at memory enhancers, testing loss of retained accessibility and altered re-stimulation response",
+      "dCas9-tethered c-Jun or p300 at silent loci to test whether AP-1 recruitment alone is sufficient to install a memory state",
+      "Synthetic AP-1 site arrays integrated at a safe-harbor locus to test whether motif density and spacing encode persistence",
+      "Live imaging of AP-1 through mitosis to test mitotic bookmarking and whether accessibility is inherited by daughter cells",
+      "Lineage barcoding combined with Fos-reporter sorting to test whether high-AP-1 history heritably biases later fate",
+      "FosTRAP-style permanent labeling of previously stimulated cells, followed by single-cell multiome to test memory in vivo",
+      "Second-stimulus kinetics comparison (faster or stronger reinduction) as a functional readout of transcriptional memory",
+      "Pulsed optogenetic or ERK-frequency stimulation to test whether AP-1 decodes stimulation history rather than current signal",
+      "Dose and duration titration of priming stimulus to map a threshold beyond which AP-1-dependent memory is established",
+      "Cofactor and chromatin-remodeler knockdowns (BRG1, p300, MLL3/4) to determine which layer carries the memory",
+      "Proximity proteomics (TurboID) of AP-1 at memory versus transient sites to identify memory-specific cofactors",
+      "HiChIP or Micro-C before and after washout to test whether 3D loop persistence accompanies AP-1 memory",
+      "DNA methylation and nucleosome-positioning readouts (nanopore) after washout to test whether memory is epigenetically heritable beyond accessibility",
+      "Cell-cycle-synchronized priming to test whether memory depends on replication-coupled chromatin inheritance",
+      "Comparison of Fos versus Jun paralog knockouts (Fosl1, Fosb, Jund) to determine which AP-1 members are necessary for memory",
+      "Cross-cell-type transplant or ex vivo reprogramming to test whether AP-1 memory transfers with chromatin state across contexts"
+    ]
+  },
+  "output_tokens": 2881,
+  "cost_usd": 0.0015839299999999999
+}

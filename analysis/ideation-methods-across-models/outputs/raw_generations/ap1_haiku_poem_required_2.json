@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout-and-recall time course with inducible AP-1 degradation",
+      "description": "Pulse a stimulus to activate AP-1, then acutely degrade c-Jun/c-Fos with an auxin- or dTAG-inducible system either during the pulse or only after washout. Track chromatin accessibility (ATAC-seq), AP-1 occupancy (CUT&RUN), and transcription at AP-1-bound enhancers over days to weeks, then re-challenge with the same stimulus. If AP-1 is required for memory, degrading it after washout should erase the faster or stronger second response, while degradation during the initial pulse should not."
+    },
+    {
+      "title": "Enhancer motif knock-in to test whether AP-1 sites are necessary for retention",
+      "description": "Use CRISPR base editing or homology-directed repair to mutate the TGAC/TCA AP-1 motifs in the enhancers of memory-associated genes, leaving neighbouring sequence intact. Compare accessibility, H3K27ac, and priming of these loci after a stimulus and during a rest period, against wild-type and against sites that bind other factors. Persistence that depends on the intact motif would support AP-1 as the carrier of memory rather than a bystander."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1-experienced cells",
+      "description": "Combine a Fos-driven recombinase or TRAP reporter with a heritable lineage barcode and single-cell multiome (scRNA + scATAC) to tag cells that activated AP-1 during a stimulus. Follow these cells after washout and during re-stimulation to ask whether the tagged subset is a stable, heterogeneous population that responds faster, and whether memory is carried by a minority of cells rather than uniformly across the population."
+    },
+    {
+      "title": "Dilution-independent persistence test across cell divisions and quiescence",
+      "description": "Label a stimulus-experienced population with a live AP-1 reporter and a division-tracking dye, then separate cells into quiescent and proliferating fractions over a long rest period. Measure whether AP-1-dependent accessibility and priming decay with division, dilution, or time alone, and compare the decay curve with that of stable marks such as DNA methylation or H3K4me1. This separates a true epigenetic memory from a transient signalling state that merely persists while the cell stays alive."
+    },
+    {
+      "title": "Chromatin conformation persistence after AP-1 activity ends",
+      "description": "Perform Micro-C or Hi-C at AP-1-responsive loci at several timepoints after a stimulus is removed, and pair this with live-cell imaging of locus distance in reporter lines. Test whether enhancer-promoter loops formed by AP-1 remain after AP-1 is no longer bound, and whether these loops are required for faster re-induction. Persistent looping that outlasts AP-1 occupancy would indicate a structural memory layer, and disrupting the loops with CTCF or cohesin depletion would test whether that structure is necessary."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2180,
+  "cost_usd": 0.0013567499999999999
+}

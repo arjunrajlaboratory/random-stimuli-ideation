@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Timed degron removal of AP-1 after priming",
+      "description": "Tag endogenous FOS, FOSL1, and JUN family members with dTAG or auxin degrons and deplete them at defined intervals after a priming stimulus, then re-challenge the cells. Comparing loss of the remembered response when AP-1 is removed during writing versus long after it separates AP-1's establishment role from a continuous maintenance requirement."
+    },
+    {
+      "title": "Lineage-barcoded measurement of memory half-life",
+      "description": "Combine clonal barcoding with sister-cell transcriptomics and ATAC profiling to quantify how many divisions AP-1 target programs and AP-1-bound accessible sites stay correlated within a clone. Running the same assay in AP-1-inhibited cells (A-FOS or compound knockouts) converts the qualitative memory claim into a measured decay timescale."
+    },
+    {
+      "title": "Hysteresis mapping with live AP-1 reporters",
+      "description": "Image endogenous AP-1 activity together with upstream kinase reporters while slowly ramping a stimulus up and then back down over days. A memory mechanism should show a gap between the rising and falling dose-response curves, and the width of that gap gives the quantitative signature to compare across cell types and stimuli."
+    },
+    {
+      "title": "Synthetic AP-1 tethering as a sufficiency test",
+      "description": "Use inducible dCas9 or optogenetic recruitment to deposit AP-1 subunits at defined loci for a brief window, then release them and track accessibility, histone marks, and re-inducibility for weeks. This asks whether AP-1 occupancy alone, with no upstream signaling, is sufficient to write a persistent state."
+    },
+    {
+      "title": "Mitotic bookmarking and daughter-cell inheritance",
+      "description": "Profile AP-1 binding and chromatin accessibility in synchronized mitotic cells and in freshly divided daughter pairs to see whether AP-1-marked sites are retained through chromosome condensation. Pairing this with live imaging of reporter reactivation timing in daughters tests whether physical inheritance, rather than re-establishment from signaling, carries the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2141,
+  "cost_usd": 0.08331449999999999
+}

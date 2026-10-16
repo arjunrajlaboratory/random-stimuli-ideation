@@ -1,0 +1,44 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paralog-specific acute degradation (tests assumption 1: AP-1 as one unit)",
+      "description": "Knock in auxin-inducible degron tags to endogenous Fra1, c-Fos, JunB and Jun, then degrade each member separately after priming. Measure which paralog is required for retention of accessibility and re-induction at memory loci, and test whether swapping in another family member rescues the memory."
+    },
+    {
+      "title": "Remove AP-1 during the washout window (tests assumption 2: AP-1 as the carrier)",
+      "description": "After priming, use a degron to acutely evict AP-1 during the post-stimulus interval, then track chromatin accessibility, H3K27ac/H3K4me1 by CUT&Tag, and re-induction on re-stimulation. Persistence of marks without AP-1 would indicate chromatin-encoded memory, while loss would indicate that AP-1 maintains the state."
+    },
+    {
+      "title": "Kinetic washout and re-stimulation series (tests assumption 3: persistence vs. altered responsiveness)",
+      "description": "Vary pulse number and duration, then re-stimulate at a graded series of intervals. Score memory as a stimulus-specific change in re-induction speed or amplitude that decays with a measurable time constant, with a non-AP-1 stimulus and an unrelated TF as controls."
+    },
+    {
+      "title": "Single-cell lineage-traced AP-1 reporter (tests assumption 4: uniform bulk-average state)",
+      "description": "Knock in a destabilised fluorescent reporter at an AP-1-responsive locus and pair time-lapse imaging with single-cell multiome. Sort daughter pairs and sibling versus unrelated cells to test whether the memory state is bimodal and heritable across divisions."
+    },
+    {
+      "title": "In vivo repeated exposure with ex vivo recall (tests assumption 5: cell-autonomy and in vitro generalisability)",
+      "description": "In a tissue model with repeated natural stimulation (e.g., repeated injury or mechanical load), lineage-trace AP-1-responsive cells, then isolate them for ex vivo re-stimulation and CUT&Tag. Compare with naive cells and with conditional AP-1 deletion in a mosaic subset to test whether memory is cell-intrinsic and niche-independent."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is a single functional unit. Fos, Fra1/Fra2, Jun, JunB/JunD and ATF3 are treated as interchangeable, so one antibody, one knockdown or one reporter stands in for the whole family.",
+      "The memory is carried by AP-1 occupancy itself. The field assumes AP-1 binding persists and directly holds the state, when chromatin marks, co-factors (BRD4, p300, SWI/SNF) or other TFs could be the actual carrier.",
+      "Memory means the state persists after the stimulus is removed. Persistence of a signal is assumed to be the test, rather than stimulus-specific altered responsiveness (faster or stronger re-induction) that decays over a measurable time constant.",
+      "Population-averaged bulk measurements (bulk ChIP, ATAC, RNA-seq) faithfully represent each cell's state. Memory is assumed to be uniform, when it may be bimodal, stochastic or heritable only in subpopulations.",
+      "Memory is cell-autonomous and shows up in the chosen in vitro system. Cell lines and a single stimulus (e.g., TPA, EGF, LPS) are assumed to generalise to tissues with paracrine cues, repeated natural exposures and niche-dependent chromatin.",
+      "Loss-of-function is a clean test. Knockdown or knockout is assumed not to be confounded by baseline essentiality of AP-1 for proliferation, by paralog compensation, or by secondary loss of the cell's identity.",
+      "A single washout or recall time point is informative. Labs usually assay one time after stimulus removal rather than a kinetic series across pulse durations and intervals."
+    ]
+  },
+  "output_tokens": 4195,
+  "cost_usd": 0.00224089
+}

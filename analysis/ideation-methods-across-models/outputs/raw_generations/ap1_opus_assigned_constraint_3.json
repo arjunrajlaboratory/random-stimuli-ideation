@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 3,
+  "constraint": "without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression)",
+  "prompt": "Constraint: every one of your ideas must be carried out without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-washout-rechallenge chromatin time course",
+      "description": "Expose cells to a brief, defined stimulus pulse (e.g. TNF, serum, or a MEK inhibitor), wash it out, and then profile ATAC-seq plus CUT&RUN for Fos/Jun family members at a dense series of timepoints spanning hours to weeks after washout. Memory is supported if a subset of AP-1-bound accessible regions remains open long after AP-1 protein levels and upstream signaling have returned to baseline, and if rechallenge produces a faster or larger response specifically at those retained sites."
+    },
+    {
+      "title": "Live-cell AP-1 reporter lineage tracing through division",
+      "description": "Use a non-integrating or pre-existing AP-1 activity reporter line and long-term live imaging to track individual cells and their progeny through many divisions, quantifying how reporter intensity correlates between mother and daughter and between sisters as a function of elapsed time. The decay constant of this correlation gives a direct, model-free measurement of how long AP-1 state information persists and whether it survives mitosis, which is the defining test of heritable memory versus transient signaling."
+    },
+    {
+      "title": "Pharmacological clamp-and-release to separate maintenance from establishment",
+      "description": "Use small-molecule AP-1 inhibitors (e.g. T-5224 or a JNK inhibitor) applied either only during the initial stimulus or only during the post-stimulus memory window, then assay the response to a later rechallenge. If blocking AP-1 during establishment abolishes memory but blocking it afterward does not, AP-1 writes the memory; if blocking it during the window also erases memory, AP-1 is required continuously to maintain it, which distinguishes a writer from a self-sustaining latch."
+    },
+    {
+      "title": "Single-cell multiome correlation of AP-1 motif accessibility with response history",
+      "description": "Perform joint single-cell ATAC and RNA profiling on a population carrying heterogeneous stimulus histories (created by staggered pulse timing or by sorting cells on an early response reporter), and ask whether per-cell AP-1 motif accessibility scores predict that cell's transcriptional response to a subsequent challenge. A strong single-cell predictive relationship, stronger than that for other motif families, would show AP-1 chromatin state is the physical carrier of the remembered information rather than a correlate of it."
+    },
+    {
+      "title": "Mitotic bookmarking and post-mitotic reestablishment kinetics",
+      "description": "Synchronize cells pharmacologically (e.g. thymidine block and release, or nocodazole arrest), then measure AP-1 factor retention on mitotic chromosomes by imaging and by CUT&RUN on sorted mitotic and early-G1 cells, tracking how quickly accessibility and transcription are restored at previously induced loci. Retention of a subset of AP-1 on condensed chromatin plus accelerated reactivation of exactly those loci in G1 would provide a concrete molecular mechanism for how the memory crosses cell division."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2379,
+  "cost_usd": 0.0956197
+}

@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 7,
+  "parallel": {
+    "field": "Quantum computing hardware",
+    "problem": "Why do a few superconducting qubits fabricated together with the same design keep long coherence times, while others on the same chip suffer sudden, intermittent losses of coherence?",
+    "how_studied": "Engineers monitor relaxation (T1) and dephasing times of each qubit repeatedly over hours to days, building time series and frequency sweeps. These show whether good performance is a stable per-device property or fluctuates as defect states (two-level systems) drift in and out of resonance. Strain or electric-field tuning of the defects, thermal cycling to 'reset' the device, and imaging of the junctions after fabrication separate built-in material flaws from transient states."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Quantum computing hardware\nProblem: Why do a few superconducting qubits fabricated together with the same design keep long coherence times, while others on the same chip suffer sudden, intermittent losses of coherence?\nHow it is studied: Engineers monitor relaxation (T1) and dephasing times of each qubit repeatedly over hours to days, building time series and frequency sweeps. These show whether good performance is a stable per-device property or fluctuates as defect states (two-level systems) drift in and out of resonance. Strain or electric-field tuning of the defects, thermal cycling to 'reset' the device, and imaging of the junctions after fabrication separate built-in material flaws from transient states.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Longitudinal single-cell time series of the pre-resistant state",
+      "description": "Mirroring repeated T1/T2 monitoring of each qubit, use long-term live-cell imaging with lineage tracking and signaling or drug-target reporters (e.g., kinase activity, receptor tyrosine kinase, or stress-pathway reporters) for days before treatment, then add drug and ask whether survivors occupied a distinguishable reporter state and for how long. Autocorrelation and state-dwell-time analysis of each lineage reveals whether tolerance is a stable per-cell property or a transient fluctuation that cells drift in and out of."
+    },
+    {
+      "title": "Sister-cell split-and-retreat assay for heritability and 'reset'",
+      "description": "Analogous to thermal cycling to test whether a defect is built-in or transient, barcode cells and split each expanded clone into parallel arms: treat one arm now, culture the other drug-free for varying numbers of generations before treating. If survival frequency stays clone-specific, the trait is heritable/built-in; if it decays with a characteristic relaxation time, it is a fluctuating state, and the decay constant quantifies its memory."
+    },
+    {
+      "title": "Tuning the 'resonance' with graded drug dose and pathway perturbation",
+      "description": "Just as strain or electric fields tune a two-level system in and out of resonance with a qubit, sweep drug concentration, target-pathway modulators, and microenvironmental variables (growth factors, density, nutrient levels) while scoring survivor frequency. A survivor fraction that shifts smoothly with these knobs identifies which continuous cell-state variable sets the tolerance threshold, rather than merely cataloguing survivor markers."
+    },
+    {
+      "title": "Retrospective molecular profiling of cells destined to survive",
+      "description": "Equivalent to imaging a junction after the fact to find the flaw responsible, use methods that let you go back to the specific pre-treatment cells that later survived (e.g., Rewind-style barcode or FISH-based tagging of rare high-expressors, followed by isolation and RNA/ATAC/protein profiling of those exact cells). This separates the causal priming state from the downstream transcriptional program induced by the drug."
+    },
+    {
+      "title": "Frequency-domain decomposition of fluctuation versus genetics",
+      "description": "Borrowing the frequency-sweep logic that separates fixed material defects from drifting ones, apply high-depth clonal barcoding plus whole-genome/targeted sequencing of survivors to test whether survivors are a reproducible set of clones (genetic, fixed) or a different, non-overlapping set on each independent replicate of the same population (stochastic, fluctuating). Quantifying barcode overlap across replicates and the power spectrum of expression fluctuations in the implicated genes assigns each candidate mechanism to a stable or transient origin."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1343,
+  "cost_usd": 0.06455060000000001
+}

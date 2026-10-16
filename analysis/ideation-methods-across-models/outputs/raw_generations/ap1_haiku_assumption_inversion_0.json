@@ -1,0 +1,44 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout-and-rechallenge time course (tests persistence)",
+      "description": "Pulse cells with the stimulus for defined durations and doses, wash out, then rechallenge at multiple rest intervals (hours to weeks). Track AP-1 occupancy (CUT&RUN or ChIP-seq for JUN/FOS), chromatin accessibility, and the speed and amplitude of target-gene re-induction. Memory is supported only if rechallenge responses persist beyond the decay of the acute signal, and they should scale with pulse dose and duration."
+    },
+    {
+      "title": "Acute degron during the rest window (tests causal necessity)",
+      "description": "Tag endogenous JUN and/or FOS with an auxin-inducible degron (or use a rapid optogenetic/chemical degradation system) and degrade AP-1 specifically during the quiescent interval between stimulus and rechallenge. If rechallenge response is lost while chromatin accessibility is preserved, AP-1 protein is required for maintenance; if it is retained, AP-1 is only a re-initiator."
+    },
+    {
+      "title": "Paralog-resolved dissection and dimer-swap rescue (tests unit assumption)",
+      "description": "Perform CUT&RUN and rechallenge assays for each AP-1 family member separately (JUN, JUNB, FOS, FOSL1, ATF3) and knock out individual members to find which ones carry the memory. Then perform dimer-swap rescue experiments, for example replacing JUN with ATF3 or JUNB, to test whether memory depends on a specific heterodimer's stability or DNA-binding properties."
+    },
+    {
+      "title": "Single-cell lineage tracing with live AP-1 reporters (tests population and heritability assumptions)",
+      "description": "Use a live FOS or ATF3 transcriptional reporter together with a lineage barcode or nuclear label, and image cells over several divisions after a pulse. Measure whether memory is heterogeneous across the population, whether sister cells are correlated, and whether memory passes through mitosis. Pair this with HaloTag-JUN imaging on mitotic chromosomes to test mitotic bookmarking directly."
+    },
+    {
+      "title": "Enhancer AP-1 site knock-in to separate chromatin from feedback (tests the storage-medium assumption)",
+      "description": "Use CRISPR knock-in to mutate the AP-1 motifs in the endogenous autoregulatory enhancer (for example, the FOS or ATF3 enhancer) while leaving the chromatin context intact, then compare acute induction and rechallenge memory. If memory is lost while baseline chromatin accessibility persists, memory depends on AP-1 binding and positive feedback. If memory persists, the chromatin landscape is the store, and AP-1 only reads it out."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Memory requires stimulus-independent persistence: a memory is a stable cellular state that outlasts the inducing signal, so AP-1 activity must be measured after washout rather than during stimulation.",
+      "AP-1 is the causal encoder of the memory, not a correlate or a downstream readout of signaling, chromatin state, or transcription. Showing AP-1 binding changes after a stimulus does not by itself establish that AP-1 stores the information.",
+      "AP-1 behaves as a single functional unit. The field usually treats 'AP-1' as one entity, even though JUN, JUNB, JUND, FOS, FOSB, FOSL1/2, and ATF3 form many dimers with different stability, DNA-binding preferences, and transactivation potential.",
+      "Memory is a cell-autonomous, population-homogeneous property that is heritable through cell division. Bulk assays (bulk ChIP, bulk RNA-seq, bulk ATAC) are assumed to represent the state of individual cells, and the memory is assumed to be passed to daughter cells.",
+      "Memory is stored as a self-sustaining positive feedback loop, or in AP-1 occupancy at enhancers, rather than in the chromatin landscape alone. Persistent chromatin accessibility is therefore assumed to be a consequence of AP-1 binding or of the AP-1 feedback loop, not an independent store.",
+      "Memory is intrinsic to the cell and does not depend on extrinsic persistent cues such as ECM stiffness, paracrine or autocrine cytokines, or niche signals that remain after the stimulus is removed.",
+      "Findings from immortalized cell lines or a single stimulus generalize to primary or in vivo contexts, and the memory is assumed to be specific to the inducing stimulus rather than a general priming state."
+    ]
+  },
+  "output_tokens": 4417,
+  "cost_usd": 0.0025415
+}

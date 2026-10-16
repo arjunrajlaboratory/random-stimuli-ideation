@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sampling",
+      "description": "Tag cells with heritable DNA barcodes, split the population before drug exposure, and compare which barcodes survive in replicate arms. Shared surviving barcodes across replicates indicate a pre-existing, heritable state. Sibling-cell sharing also lets you estimate how long the resistant state persists."
+    },
+    {
+      "title": "Paired single-cell transcriptomic and epigenomic profiling over time",
+      "description": "Run scRNA-seq and scATAC-seq (or multiome) on cells before treatment, during drug exposure, and after regrowth. Pre-treatment signatures of the cells that later survive, such as drug-tolerant persister programs, EMT-like states or stress-response pathways, can then be identified and tested as predictors. Chromatin accessibility and histone marks can show whether the state is epigenetically encoded."
+    },
+    {
+      "title": "Live-cell imaging with reporters and single-cell tracking",
+      "description": "Image cells for days before and after drug addition, using fluorescent reporters for signaling activity (e.g., ERK, p53, apoptosis, cell cycle). Track each cell's history to link fluctuations in signaling dynamics, cell-cycle length or mitochondrial state to eventual survival. Retrospective analysis of survivors' lineages shows whether survival can be predicted before the drug is added."
+    },
+    {
+      "title": "Isolation and functional perturbation of survivors",
+      "description": "Sort cells by candidate markers or a live reporter of the survivor state, then compare their drug response to unsorted cells and measure how fast they interconvert with the bulk population. Test candidate drivers with CRISPR knockout or inhibition screens in the persister state. Combine this with sequencing to rule out rare pre-existing genetic mutations."
+    },
+    {
+      "title": "Quantitative modeling of state-switching dynamics (fluctuation analysis)",
+      "description": "Apply Luria-Delbr\u00fcck-style fluctuation tests and stochastic models to distribution of survivor counts across many small replicate cultures. This distinguishes pre-existing rare states, drug-induced adaptation and random switching, and it estimates the rates of switching in and out of the tolerant state. Predictions from the fitted model can be tested by varying drug dose, timing and pre-treatment history."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 820,
+  "cost_usd": 0.010963500000000001
+}

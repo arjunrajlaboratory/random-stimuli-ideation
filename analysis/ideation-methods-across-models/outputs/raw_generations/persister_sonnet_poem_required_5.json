@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to test pre-existing vs. induced persistence",
+      "description": "Like asking what 'hand' framed the tiger, tag each cell with a heritable DNA barcode before drug exposure, split the population into replicates, and treat. If the same barcodes survive across replicates, survival is a pre-existing heritable state. Random barcodes across replicates point to stochastic, induced adaptation. Sequencing barcodes together with single-cell RNA-seq on sister clones links the lineage to its transcriptional state."
+    },
+    {
+      "title": "Fire-reporter live imaging of cell fate before drug exposure",
+      "description": "The poem's 'burning bright' suggests a fluorescent reporter for the suspected survival program, such as a stress-response or drug-efflux reporter. Track single cells by time-lapse microscopy for days before and after drug addition, then retrospectively correlate pre-treatment reporter brightness, cell-cycle length, and mitochondrial state with who survives. This shows whether survivors were already distinct before treatment."
+    },
+    {
+      "title": "Paired single-cell multi-omics of survivors vs. bulk population",
+      "description": "Run scRNA-seq combined with scATAC-seq on untreated cells and on cells at several time points after drug exposure. Identify rare pre-existing subpopulations, chromatin accessibility 'symmetry breaking' events, and the transcription factors that define the persister state. Trajectory analysis then shows whether survivors come from a rare primed state or converge on a common state after treatment."
+    },
+    {
+      "title": "Measuring the 'fire' itself: metabolic and redox profiling of single cells",
+      "description": "Many drug-tolerant cells rely on altered oxidative metabolism, reactive oxygen species handling, or lipid peroxidation defenses. Use single-cell metabolic imaging (NAD(P)H FLIM, mitochondrial membrane potential dyes, ROS sensors) and sort by these readouts, then test drug sensitivity of each sorted fraction. Pharmacological or CRISPR perturbation of the identified pathway tests causality."
+    },
+    {
+      "title": "Pooled CRISPR screens plus state-switching mathematical modeling",
+      "description": "Run genome-wide or epigenetic-focused CRISPRi/CRISPRa screens under drug to find genes that raise or lower the persister fraction, such as chromatin modifiers or stress regulators. Fit a stochastic switching model (Luria\u2013Delbr\u00fcck style fluctuation tests) to survivor counts to estimate state-transition rates, then test whether each hit changes the switching rates or the fitness in each state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 919,
+  "cost_usd": 0.0141175
+}

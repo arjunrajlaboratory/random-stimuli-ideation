@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout-and-rechallenge chromatin persistence",
+      "description": "After a defined AP-1-inducing stimulus is removed, track AP-1 occupancy (CUT&RUN) and accessibility (ATAC-seq) at target enhancers over days, then re-stimulate. Memory is supported if persistent AP-1 binding predicts faster or stronger secondary transcription, and fails if binding decays first."
+    },
+    {
+      "title": "Degron-timed necessity test",
+      "description": "Use AID or dTAG to deplete c-Fos or JunB in defined windows: during the initial stimulus, and only during the post-stimulus washout period. Comparing re-challenge responses shows whether AP-1 is required to write the memory or only to execute the first response."
+    },
+    {
+      "title": "Tether-and-release sufficiency test",
+      "description": "Use inducible dCas9 fused to Fos-Jun or ATF3 at a minimal enhancer, then remove the tether. If accessibility and transcription persist without the original stimulus, AP-1 binding itself is sufficient to hold a chromatin state, which is the core claim of a memory mechanism."
+    },
+    {
+      "title": "Memory across cell division",
+      "description": "Track AP-1 occupancy on mitotic chromosomes (live imaging or mitotic ChIP) and measure whether a secondary response in daughter cells depends on the parent's prior stimulation. This tests whether AP-1 provides mitotic bookmarking that could carry memory through proliferation."
+    },
+    {
+      "title": "Stimulus-history encoding with a live reporter",
+      "description": "Vary the timing, duration, and frequency of stimuli while imaging a live AP-1-responsive reporter in single cells. Hysteresis or history-dependent thresholds that match a fitted bistable model would show AP-1 encodes past input, rather than just reporting the current signal."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Washout-and-rechallenge time course: measure AP-1 occupancy and chromatin accessibility at target enhancers after stimulus removal, then compare re-stimulation kinetics",
+      "Acute degron depletion of c-Fos or JunB (AID/dTAG) during the post-stimulus window, to separate AP-1 needs for initial response from needs for memory",
+      "Inducible dCas9-tethered Fos-Jun or ATF3 at a minimal enhancer, followed by tether removal, to test whether AP-1 itself sustains a chromatin state",
+      "Mitotic bookmarking assay: check whether AP-1 remains on chromosomes during mitosis and whether memory of prior stimulation survives cell division",
+      "Single-molecule tracking (SMT) or FRAP of AP-1 subunits to measure chromatin residence time before and after priming",
+      "Pulse-frequency and duration encoding: vary stimulus timing with a live Fos/Egr reporter and test whether response depends on stimulus history (hysteresis)",
+      "Synthetic AP-1 reporter circuit with a recorder cassette to read out cumulative past exposure in single cells via flow cytometry",
+      "FosTRAP or similar activity-dependent lineage tagging combined with later single-cell RNA/ATAC to link tagged cells to persistent states",
+      "Histone turnover and H3K27ac/H3K4me1 persistence measurements to separate AP-1-dependent marks from downstream chromatin changes",
+      "DNA methylation profiling at AP-1 motifs after repeated stimulation to test whether an epigenetic lock persists",
+      "Dominant-negative (A-FOS or TAM67) expression during training versus after training, to determine the window in which AP-1 is required to write memory",
+      "Cross-species or cross-cell-type comparison of AP-1 memory signatures to test whether memory generalizes beyond a single lineage",
+      "Ex vivo re-challenge of primed T cells or macrophages with a fixed secondary stimulus, measuring cytokine output as a functional memory readout",
+      "Condensate or phase-separation perturbation (IDR deletion) of AP-1 to test whether clustering contributes to persistence",
+      "3D genome readouts (Hi-C or Micro-C, enhancer-promoter loops) before and after priming to see if AP-1 changes long-range contacts that outlast the stimulus",
+      "Mathematical modeling of AP-1 feedback loops to predict bistability and hysteresis, then testing predicted thresholds experimentally",
+      "Chromatin-state reporter with inducible AP-1 target expression, comparing memory decay rates across loci with different baseline accessibility",
+      "Metabolic readouts (e.g., ATAC plus metabolic flux) to test whether AP-1-linked metabolic changes carry memory independently of transcription",
+      "Comparison of primed and naive cells for transcription-independent memory, using transcription inhibitors during washout to separate chromatin from transcriptional persistence",
+      "In vivo tissue memory test: stimulate AP-1 in a model (e.g., skin or neuronal activity) and measure a later response to a second insult weeks after the first"
+    ]
+  },
+  "output_tokens": 2841,
+  "cost_usd": 0.00156433
+}

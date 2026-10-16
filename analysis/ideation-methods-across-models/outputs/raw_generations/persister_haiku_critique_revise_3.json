@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Barcoded lineage tracing across drug pulses: Introduce heritable cellular barcodes (e.g., CellTag or lentiviral barcode libraries) into a clonal population, then apply the targeted drug and track which barcoded lineages survive. Comparing barcode frequencies before and after treatment, and across washout and re-challenge, shows whether survivors were pre-existing rare clones or arose through drug-induced reprogramming.\n2. Pre-treatment sorting and profiling of future survivors: Use live-cell reporters or surface markers to sort cells before drug exposure, then profile sorted subpopulations and the survivor fraction with single-cell RNA-seq and ATAC-seq. This tests whether a transcriptional or chromatin state that predicts survival already exists in the untreated population.\n3. Live-cell signaling and cell-cycle reporters linked to fate: Express biosensors such as ERK or AKT kinase translocation reporters and FUCCI cell-cycle markers, then image individual cells continuously through drug addition and record their fate. Correlating signaling amplitude, dynamics, and cell-cycle phase at the moment of treatment with eventual survival identifies the dynamic states that predict persistence.\n4. Genome-wide and single-cell CRISPR screens under drug pressure: Run pooled CRISPR knockout or CRISPRi screens with the drug, comparing guide representation in surviving versus dying cells, and follow hits with Perturb-seq to see how each perturbation shifts the persister state. Hits from chromatin, signaling, and stress-response genes point to the mechanisms that enable survival, and validation of top candidates tests whether they are necessary and sufficient.\n5. Metabolic and epigenetic priming profiling with washout and re-challenge: Measure metabolic state (for example NAD(P)H fluorescence lifetime imaging, mitochondrial respiration, and metabolomics) and key histone marks or chromatin accessibility in pre-treatment, early-treatment, and surviving cells. Then remove the drug and re-challenge: if survivors retain their metabolic or epigenetic signature across several passages, the data point to a heritable adaptive memory, while loss of the signature implies a reversible tolerance state.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Natural mtDNA heteroplasmy as a lineage barcode",
+      "description": "Use naturally occurring mitochondrial DNA variants, which need no transduction, as heritable clonal markers. Profile heteroplasmy by mtscATAC-seq or mtDNA long-read sequencing before and after drug, and test whether survivors come from clones with a particular mtDNA haplotype or from heteroplasmy shifts."
+    },
+    {
+      "title": "Sorting by intracellular drug accumulation",
+      "description": "Use a fluorescent or intrinsically fluorescent analog of the drug, or mass-spectrometry imaging, to measure each cell's drug uptake and efflux pump activity. Sort cells into low, mid, and high accumulation bins, treat each bin, and test whether survival tracks pharmacokinetic heterogeneity rather than a molecular state."
+    },
+    {
+      "title": "Micropatterned adhesion area as a survival variable",
+      "description": "Plate cells on fibronectin micropatterns of defined sizes so that spreading area and cytoskeletal tension are controlled, then apply the drug and quantify survival against area. Check whether YAP/TAZ nuclear localization and nuclear size explain the survivors, which would make mechanics a determinant of persistence."
+    },
+    {
+      "title": "Paracrine protection from dying neighbors",
+      "description": "Test whether dying cells release factors that protect neighbors. Use transwell co-cultures, conditioned medium from drug-killed cells with extracellular vesicles removed by ultracentrifugation, and proteomic or metabolite profiling of that medium. Then apply the protective factor to naive cells to see whether it rescues them from drug."
+    },
+    {
+      "title": "Ferroptotic threshold and membrane lipid composition",
+      "description": "Sort or image cells for lipid peroxidation with C11-BODIPY and profile membrane phospholipid acyl chains by lipidomics, comparing survivors and non-survivors. Then add a GPX4 or ferroptosis inhibitor and a polyunsaturated fatty acid challenge to test whether survivors are simply less susceptible to lipid peroxidation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2278,
+  "cost_usd": 0.0015167499999999999
+}

@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 1,
+  "parallel": {
+    "field": "Historical linguistics (lexical resistance to sound change)",
+    "problem": "Why do a few words escape a sound change that regularly applies to every instance of the same phoneme in a language?",
+    "how_studied": "Researchers reconstruct proto-forms with the comparative method and check which lexical items deviate from the regular correspondences. Corpus and frequency analyses test whether high-frequency or morphologically fused words resist change more often. Bayesian phylogenetic and lexical-diffusion models are fit to cognate data across related languages to separate stochastic drift from word-specific factors."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Historical linguistics (lexical resistance to sound change)\nProblem: Why do a few words escape a sound change that regularly applies to every instance of the same phoneme in a language?\nHow it is studied: Researchers reconstruct proto-forms with the comparative method and check which lexical items deviate from the regular correspondences. Corpus and frequency analyses test whether high-frequency or morphologically fused words resist change more often. Bayesian phylogenetic and lexical-diffusion models are fit to cognate data across related languages to separate stochastic drift from word-specific factors.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Regular-correspondence baseline with exception mining",
+      "description": "Using paired single-cell RNA-seq or ATAC-seq before and after drug exposure, first define the dominant 'regular' response shared by most dying cells, as a comparative method defines regular sound correspondences. Then isolate the survivors whose profiles deviate from that rule and reconstruct their pre-treatment state, testing whether the deviation was already present before drug exposure."
+    },
+    {
+      "title": "Frequency-stratified test of survival-linked features",
+      "description": "As corpus studies test whether high-frequency or morphologically fused words resist change, measure whether survivors are enriched for high-expression, high-copy-number, or heterochromatin-locked loci, using frequency-matched gene sets as controls. A pooled CRISPR screen with guide abundance tracked across treatment can show whether these features predict survival beyond chance."
+    },
+    {
+      "title": "Barcoded lineage phylogenetics to separate heritable from stochastic tolerance",
+      "description": "Label founder cells with heritable lentiviral barcodes, reconstruct clonal trees from the sequenced barcodes, and fit Bayesian phylogenetic models to ask whether drug survival is clade-correlated (heritable, cell-intrinsic) or scattered across the tree (stochastic drift). This mirrors separating shared inheritance from random noise in cognate-based phylogenies."
+    },
+    {
+      "title": "Lexical-diffusion-style fitting of persister emergence over time",
+      "description": "Track the fraction of surviving cells across repeated drug pulses and fit S-curve or spread models, as lexical-diffusion studies do for words changing across speakers. Adding spatial imaging in 3D culture lets the lab test whether tolerant states propagate between neighboring cells (contagion-like diffusion) or arise independently in each cell."
+    },
+    {
+      "title": "Cross-cell-line comparison of survival signatures as cognates",
+      "description": "Compare survival programs across several cancer cell lines or patient-derived models, treating each as a related language and each shared survival gene program as a cognate. Phylogenetic-style analysis then identifies conserved, lineage-independent survival mechanisms versus lineage-specific ones, which can be checked by reprogramming a candidate gene in a naive line."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1760,
+  "cost_usd": 0.00115055
+}

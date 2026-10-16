@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 7,
+  "parallel": {
+    "field": "Psycholinguistics (syntactic priming)",
+    "problem": "Whether recently used grammatical structures leave a trace in the language system that biases later choices, and whether that trace decays over time or with intervening material.",
+    "how_studied": "Experimenters use confederate-prime dialogue or picture-description tasks and vary the number of filler trials between prime and target to measure how the priming effect decays with lag. They compare priming across structures that share and do not share lexical content, and they fit decay curves to test whether the persistence reflects implicit learning or simple activation decay."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Psycholinguistics (syntactic priming)\nProblem: Whether recently used grammatical structures leave a trace in the language system that biases later choices, and whether that trace decays over time or with intervening material.\nHow it is studied: Experimenters use confederate-prime dialogue or picture-description tasks and vary the number of filler trials between prime and target to measure how the priming effect decays with lag. They compare priming across structures that share and do not share lexical content, and they fit decay curves to test whether the persistence reflects implicit learning or simple activation decay.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lag-dependent re-stimulation decay curves",
+      "description": "Borrowing the filler-trial lag design from syntactic priming, prime cells with a defined AP-1 stimulus, then re-challenge after variable rest intervals filled with neutral or non-AP-1 stimuli. Measure the secondary induction of AP-1 target genes (RNA-seq or qPCR) and fit decay models: pure activation decay predicts exponential loss of the boost, while true memory predicts a persistent plateau that outlasts the transcription factor's own occupancy."
+    },
+    {
+      "title": "Dissociating AP-1 occupancy from the memory trace via inducible depletion",
+      "description": "Following priming, use an auxin- or degron-inducible system to deplete c-Jun/c-Fos during the rest window, then test the secondary response. If the memory depends on ongoing AP-1 binding, depletion should abolish the boost, whereas a chromatin-based trace should survive depletion, which can be checked with ATAC-seq and H3K27ac at the same time points."
+    },
+    {
+      "title": "Site-specific versus generalized transfer across enhancers",
+      "description": "Analogous to comparing lexically shared and non-shared prime-target pairs, test whether priming transfers to other AP-1 sites that share a motif family but not sequence context, and to sites with identical motifs in different chromatin contexts. Quantify transfer with ChIP-seq for Jun/Fos and ATAC-seq, so that item-specific (site-bound) memory can be separated from abstract, motif-level memory."
+    },
+    {
+      "title": "Interference from intervening non-AP-1 stimuli",
+      "description": "Insert filler stimuli that activate unrelated transcription factors (e.g., NF-kB, glucocorticoid, or cAMP/CREB pathways) between priming and challenge, varying their number and strength. If the AP-1 memory is specific, its decay should depend mainly on AP-1-relevant intervening events, mirroring how filler material modulates syntactic priming decay and helping separate general activation decay from specific memory."
+    },
+    {
+      "title": "Single-cell lineage tracking of memory inheritance",
+      "description": "Use a live AP-1 reporter (or fluorescent Jun/Fos knock-in) combined with time-lapse imaging to track primed cells through division, then measure whether the primed state is inherited by daughter cells or reset stochastically. Fitting the distribution of responses across cells and generations can distinguish graded decay from a bistable, heritable memory state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1854,
+  "cost_usd": 0.00119315
+}

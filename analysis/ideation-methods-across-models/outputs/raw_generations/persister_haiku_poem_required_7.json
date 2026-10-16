@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing to test pre-existing versus induced survival",
+      "description": "Label each cell with a heritable DNA barcode before treatment, then compare barcode frequencies in survivors with pre-treatment frequencies to see whether survivors descend from a few pre-existing clones (like a host of flowers rising from one patch) or arise de novo from many lineages. Pair this with single-cell RNA-seq of barcoded cells to link each survivor's clone to its baseline state."
+    },
+    {
+      "title": "Time-lapse reporter imaging of fluctuating drug-tolerant states",
+      "description": "Use live-cell fluorescent reporters for candidate survival pathways (such as cell-cycle or stress-response transcription factors) and track individual cells over days of drug exposure, scoring whether tolerance is a transient, fluttering fluctuation that reverses or a stable heritable state. Measure whether tolerance is inherited across divisions and whether it depends on pre-treatment reporter levels."
+    },
+    {
+      "title": "Pre-treatment profiling of cells that later survive",
+      "description": "Use a dye-based or reporter-based sort to isolate cells from the untreated population that are most likely to survive, then profile their chromatin accessibility (scATAC-seq), transcriptome, and proteome before any drug exposure. Compare these profiles with those of cells that die to identify baseline predictors of survival that could be targeted or used as biomarkers."
+    },
+    {
+      "title": "Spatial mapping of survivors within the tumour niche",
+      "description": "Apply multiplexed spatial transcriptomics or imaging mass cytometry to treated tumour sections or organoids to locate surviving cells relative to hypoxic zones, vasculature, stromal cells, and cell-cell contacts. Test whether survival clusters in particular microenvironments (like daffodils beside the lake and under the trees) and whether ligand-receptor signals from those niches protect cells from the drug."
+    },
+    {
+      "title": "Drug-holiday and re-challenge assays combined with CRISPR screening",
+      "description": "Run a genome-wide CRISPR knockout or activation screen during drug exposure and compare guide enrichment in survivors versus controls to find genes required for survival. Then apply drug holidays and re-challenges to test whether survival is reversible and whether the identified genes are needed for regrowth, separating persistent cell states from permanent genetic resistance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1509,
+  "cost_usd": 0.00099965
+}

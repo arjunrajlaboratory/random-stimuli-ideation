@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 2,
+  "parallel": {
+    "field": "Ecology / conservation science",
+    "problem": "Why do a few individuals or populations of a genetically uniform clonal plant or invasive species persist through a pesticide, drought or fire that kills most of the others?",
+    "how_studied": "Ecologists use mark-recapture studies and long-term plots to track individual fates. They measure microhabitat variables such as soil moisture, refuge availability and local density, and fit spatial and occupancy models. They also run common-garden and manipulative field experiments to separate environmental refuges from intrinsic differences."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Ecology / conservation science\nProblem: Why do a few individuals or populations of a genetically uniform clonal plant or invasive species persist through a pesticide, drought or fire that kills most of the others?\nHow it is studied: Ecologists use mark-recapture studies and long-term plots to track individual fates. They measure microhabitat variables such as soil moisture, refuge availability and local density, and fit spatial and occupancy models. They also run common-garden and manipulative field experiments to separate environmental refuges from intrinsic differences.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell lineage tracking with fate mapping (mark-recapture analog)",
+      "description": "Barcode individual cells (e.g., lineage barcodes or live-imaging tracking) and follow their fates before, during and after drug exposure, then retrospectively compare pre-treatment states of survivor lineages versus killed lineages. This tests whether survival is predicted by a heritable or transient pre-existing state, as ecologists do by tracking individual fates over time."
+    },
+    {
+      "title": "Spatial microenvironment mapping of survivors (refuge analysis)",
+      "description": "Use spatial transcriptomics or multiplexed imaging in 3D cultures or xenografts to measure local density, oxygen, drug penetration, nutrient gradients and neighbor identity around survivors versus dead cells. Fit spatial models (e.g., point-process or occupancy-style) to test whether survivors occupy drug refuges or microniches rather than being intrinsically different."
+    },
+    {
+      "title": "Common-garden reciprocal transplant of survivors",
+      "description": "Isolate survivors and non-survivors (or their pre-treatment sorted siblings), grow them in identical drug-free conditions for varying durations, then re-challenge them, and also swap them into different microenvironments (density, matrix, co-culture). Persistence of resistance across a common environment indicates intrinsic epigenetic/state differences, while loss of it indicates environmental or plastic causes."
+    },
+    {
+      "title": "Manipulative perturbation of candidate refuge variables",
+      "description": "Experimentally alter local density, oxygen, drug concentration gradients, or stromal contact in a controlled way (microfluidics or patterned co-culture) and measure survival fraction response. Dose-response of survivor frequency to each manipulated variable separates causal environmental refuges from stochastic or intrinsic causes."
+    },
+    {
+      "title": "Long-term plot-style time series of state dynamics with stochastic modeling",
+      "description": "Image or sequence the same cell populations repeatedly across drug exposure and recovery, measuring state markers (e.g., drug-tolerant persister signatures, cell-cycle state, drug efflux, mitochondrial activity). Fit state-transition models that estimate switching rates and compare them with the observed survivor fraction, which would show whether bet-hedging-like stochastic switching explains persistence."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 826,
+  "cost_usd": 0.0135555
+}

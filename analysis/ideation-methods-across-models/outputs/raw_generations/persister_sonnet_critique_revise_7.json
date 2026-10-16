@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-treatment sampling: Tag cells with heritable DNA barcodes, split the population before drug exposure, and compare which barcodes survive in replicate arms. Shared surviving barcodes across replicates indicate a pre-existing, heritable state. Sibling-cell sharing also lets you estimate how long the resistant state persists.\n2. Paired single-cell transcriptomic and epigenomic profiling over time: Run scRNA-seq and scATAC-seq (or multiome) on cells before treatment, during drug exposure, and after regrowth. Pre-treatment signatures of the cells that later survive, such as drug-tolerant persister programs, EMT-like states or stress-response pathways, can then be identified and tested as predictors. Chromatin accessibility and histone marks can show whether the state is epigenetically encoded.\n3. Live-cell imaging with reporters and single-cell tracking: Image cells for days before and after drug addition, using fluorescent reporters for signaling activity (e.g., ERK, p53, apoptosis, cell cycle). Track each cell's history to link fluctuations in signaling dynamics, cell-cycle length or mitochondrial state to eventual survival. Retrospective analysis of survivors' lineages shows whether survival can be predicted before the drug is added.\n4. Isolation and functional perturbation of survivors: Sort cells by candidate markers or a live reporter of the survivor state, then compare their drug response to unsorted cells and measure how fast they interconvert with the bulk population. Test candidate drivers with CRISPR knockout or inhibition screens in the persister state. Combine this with sequencing to rule out rare pre-existing genetic mutations.\n5. Quantitative modeling of state-switching dynamics (fluctuation analysis): Apply Luria-Delbr\u00fcck-style fluctuation tests and stochastic models to distribution of survivor counts across many small replicate cultures. This distinguishes pre-existing rare states, drug-induced adaptation and random switching, and it estimates the rates of switching in and out of the tolerant state. Predictions from the fitted model can be tested by varying drug dose, timing and pre-treatment history.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mother-daughter inheritance of organelle and protein content via asymmetric division",
+      "description": "Use time-lapse imaging with labeled mitochondria, lysosomes, or drug-efflux pumps (or a fluorescent drug analog) to quantify how unequal partitioning at division creates drug-handling differences between sister cells. Then test whether sisters with more of the inherited cargo preferentially survive, and perturb partitioning (for example, with spindle or mitochondrial-dynamics inhibitors) to see if survival changes."
+    },
+    {
+      "title": "Single-cell intracellular drug concentration and target occupancy measurement",
+      "description": "Measure drug accumulation per cell using intrinsically fluorescent inhibitors, mass cytometry or imaging mass spectrometry, or a target-engagement biosensor such as a NanoBRET or CETSA-style readout. This tests whether survivors simply experience lower effective target inhibition (through efflux, lysosomal sequestration or altered metabolism) rather than having rewired downstream signaling."
+    },
+    {
+      "title": "Pre-treatment cell-state manipulation by transient perturbation followed by survival readout",
+      "description": "Before adding drug, transiently shift cells with a short pulse of a candidate stressor or state modulator (such as a metabolic stress, a differentiation cue, or a chromatin inhibitor) and then wash it out. Compare survival fraction and how long the effect persists to show whether the tolerant state is causally inducible and heritable, and to estimate its memory length."
+    },
+    {
+      "title": "Spatial and microenvironmental mapping of survivors in 3D or in vivo",
+      "description": "Use spatial transcriptomics or multiplexed imaging on spheroids or xenografts, together with a lineage or reporter label, to test whether survivors cluster by local oxygen, nutrient, density or contact-signaling niches. Randomize the cell positions or density in matched cultures to separate cell-intrinsic from position-dependent tolerance."
+    },
+    {
+      "title": "Single-cell metabolic and proteostasis profiling of survivors",
+      "description": "Use FLIM of NAD(P)H, a ROS or lipid-peroxidation sensor, mitochondrial membrane potential dyes, or a proteasome or autophagy flux reporter. Image the same cells before and after drug exposure to see whether a metabolic or stress-handling state predicts survival, and use FACS sorting by that readout to validate it by orthogonal drug-response assays."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 874,
+  "cost_usd": 0.0161595
+}

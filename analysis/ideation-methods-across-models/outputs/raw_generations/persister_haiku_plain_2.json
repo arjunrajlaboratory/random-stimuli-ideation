@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with drug pulses",
+      "description": "Label each founder cell with a unique heritable DNA barcode, expose the population to the targeted drug, and sequence barcodes in survivors versus the pre-treatment pool. Shared barcodes across survivors reveal whether persisters are pre-existing, clonally selected, or arise from a non-genetic switch in many cells. Adding washout and re-challenge arms tests whether the surviving state is reversible."
+    },
+    {
+      "title": "Single-cell multi-omics time course during treatment",
+      "description": "Profile scRNA-seq and scATAC-seq (or multiome) on cells at baseline, early after drug exposure, and at several later timepoints, then compare the trajectories of cells that die with those that persist. Pre-treatment states that predict survival, such as chromatin accessibility at lineage or stress genes, can be identified and tested for causality."
+    },
+    {
+      "title": "Live-cell reporter imaging linked to fate",
+      "description": "Use fluorescent reporters for cell cycle (e.g., FUCCI), stress signaling (e.g., NF-\u03baB or p53 activity), or a drug-target pathway readout, and track individual cells with time-lapse microscopy through treatment. Retrospectively correlating each cell's reporter dynamics before and during drug exposure with its eventual death or survival reveals the dynamic signatures that distinguish persisters."
+    },
+    {
+      "title": "Pooled CRISPR screen comparing survivors with the bulk population",
+      "description": "Run genome-wide or epigenome-focused CRISPR knockout or CRISPRi screens under drug treatment and sequence guides in survivors versus untreated controls. Genes whose loss either eliminates or enriches persisters point to the regulators of tolerance, and follow-up with arrayed validation can separate primary survival mechanisms from bystander effects."
+    },
+    {
+      "title": "Metabolic and epigenetic state profiling of sorted persisters",
+      "description": "Sort out drug-tolerant cells from a reporter or viability-based gate and profile them for mitochondrial function, metabolite levels, histone modifications, and chromatin accessibility compared with sensitive cells. Testing whether pharmacologically perturbing the identified pathway (for example, OXPHOS inhibition or a histone demethylase inhibitor) changes survival fraction would establish whether the state is functionally necessary."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1305,
+  "cost_usd": 0.0007944499999999999
+}

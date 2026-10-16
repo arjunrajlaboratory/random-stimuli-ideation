@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 5,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Astronomical transient surveys \u2192 alert-triggered single-cell follow-up",
+      "description": "Borrowing from sky-survey alert brokers that trigger rapid follow-up on rare transients, continuously image millions of drug-treated cells, automatically flag the rare cells still dividing or re-entering cycle, then photoconvert/photo-tag only those cells and isolate them immediately for scRNA-seq, ATAC-seq, and proteomics. This profiles the actual survivors at the moment of divergence instead of averaging them away in bulk or in post-hoc resistant lines."
+    },
+    {
+      "title": "Control engineering Bode plots \u2192 drug delivered as a frequency sweep",
+      "description": "As in system identification, drive the system with oscillating inputs across many frequencies: use microfluidics to deliver the targeted inhibitor as sinusoidal concentration waveforms with periods from minutes to days while recording pathway-activity reporters. Test whether pre-persister cells are defined by a distinct transfer function (slower, more damped signaling response) rather than by a static difference in baseline expression."
+    },
+    {
+      "title": "Metallurgical fatigue testing \u2192 extreme-value statistics of survival",
+      "description": "Materials scientists separate pre-existing-flaw failure from accumulated-damage failure using single-overload versus cyclic loading and Weibull/extreme-value fits. Deliver matched total drug exposure as one continuous dose versus many intermittent pulses across thousands of replicate wells, then fit the survivor-fraction distributions to ask whether survival follows a weakest-link model (rare pre-existing states) or a damage-accumulation model (tolerance built during treatment)."
+    },
+    {
+      "title": "Dendrochronology / isotope geochemistry \u2192 reading each survivor's recorded history",
+      "description": "Like tree rings or ice cores storing a dated chemical record, apply sequential metabolic time-stamps before and during treatment (distinguishable 4sU/5-EU RNA pulses plus SILAC heavy-amino-acid pulses) so every cell carries layered, time-ordered evidence of its transcription and translation rates. Read these layers out in single surviving cells to reconstruct whether they were already slow-cycling or translationally quiet long before the drug was added."
+    },
+    {
+      "title": "Dynamical systems \"critical slowing down\" \u2192 early-warning signals of fate commitment",
+      "description": "Ecosystems and climate systems show rising variance, autocorrelation, and recovery time before a regime shift. Record long high-frequency single-cell reporter traces through treatment and compute rolling variance, lag-1 autocorrelation, and relaxation time after small optogenetic or washout perturbations, testing whether future persisters display these slowing-down signatures hours before they visibly diverge from dying neighbors."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3420,
+  "cost_usd": 0.10353689999999999
+}

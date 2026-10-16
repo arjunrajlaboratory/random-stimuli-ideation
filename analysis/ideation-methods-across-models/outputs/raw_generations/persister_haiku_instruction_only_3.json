@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 3,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heritable lineage barcoding with mark-recapture analysis",
+      "description": "Borrowing from field ecology's mark-recapture methods, tag each founder cell with a heritable lineage barcode (e.g., CRISPR scar or lentiviral barcode) before treatment, then sequence barcodes in survivors. Comparing barcode frequencies before and after drug exposure shows whether persisters come from pre-existing clones or arise de novo, and how much of the survival is clone-specific."
+    },
+    {
+      "title": "Early-warning signals of a persistence tipping point",
+      "description": "Borrowing from climate and ecology, where critical slowing down (rising variance and lag-1 autocorrelation) precedes a regime shift, use live-cell ERK, AKT, and NF-\u03baB translocation reporters plus cell-cycle reporters during drug exposure. Single-cell trajectories that show these warning signals before the shift can be tested as predictors of which cells will enter the persister state."
+    },
+    {
+      "title": "Hysteresis test for memory of tolerance",
+      "description": "Borrowing from materials science, where magnetization depends on history, sort survivors and culture them through repeated drug-free passages, then re-challenge at each step with dose-response curves. The rate at which tolerance decays (and whether it is reset by a drug holiday) distinguishes a stable epigenetic memory from a transient, reversible stress state and from genetic resistance."
+    },
+    {
+      "title": "Pooled CRISPR screen with group-testing deconvolution",
+      "description": "Borrowing from epidemiological group testing, run a genome-wide CRISPR knockout or activation screen under pulsed drug dosing and deconvolve guide enrichment in survivors using pooled-testing statistics. Genes whose perturbation reliably changes survival in a pooled design point to the regulators of the persister state and can be validated individually."
+    },
+    {
+      "title": "Spatial refugia mapping of survivor niches",
+      "description": "Borrowing from conservation biology's concept of refugia, where species survive disturbances in protected microhabitats, use multiplexed spatial transcriptomics or imaging to map where surviving cells sit relative to hypoxic zones, stromal or immune neighbors, and vasculature. Enrichment of survivors in particular niches, followed by niche-disruption experiments, would show whether the microenvironment, rather than intrinsic cell state, protects them."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2497,
+  "cost_usd": 0.0013922
+}

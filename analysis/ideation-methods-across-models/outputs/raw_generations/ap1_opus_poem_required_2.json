@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stipple test: clonal barcoding of first and second responses",
+      "description": "Inspired by the poem's 'rose-moles all in stipple' \u2014 a mottled pattern that is stable rather than random \u2014 use heritable lineage barcodes (e.g., Watermelon/FateMap-style) to stimulate cells, let them divide through a rest period, then re-stimulate, and ask whether high- and low-responding cells fall into the same clones both times. True AP-1 memory predicts clonally heritable second-response amplitude that correlates with first-response AP-1 target output, whereas a non-memory model predicts clone-independent, resampled variability."
+    },
+    {
+      "title": "Couple-colour: which Fos/Jun dimer holds the mark",
+      "description": "AP-1 is a family of heterodimers, not one protein, so apply subunit-specific degron tags (FOS, FOSL1, JUN, JUNB, ATF3) and deplete each only during the quiescent interval between stimulations, leaving induction itself intact. Pair this with CUT&RUN time courses of each subunit at memory enhancers to distinguish a continuously occupied 'maintenance dimer' from a hit-and-run initiating dimer whose mark is kept by something else."
+    },
+    {
+      "title": "Swift, slow: decay-constant mismatch between occupancy, accessibility, and output",
+      "description": "Memory requires that some layer outlive its input, so measure, in the same time course after a pulsed stimulus, the decay kinetics of AP-1 protein, AP-1 ChIP/CUT&RUN occupancy, ATAC accessibility, H3K4me1/H3K27ac, and nascent transcription at the same loci. The memory signature is a quantitatively slower accessibility half-life than occupancy half-life at a specific enhancer subset; loci where all layers decay together serve as internal negative controls."
+    },
+    {
+      "title": "Landscape plotted and pieced: synthetic enhancer grammar for persistence",
+      "description": "Build an MPRA/synthetic-locus library varying TRE/AP-1 motif number, spacing, affinity, partner-motif identity, and flanking nucleosome-positioning sequence, integrated at a fixed landing pad, then score which designs convert a transient stimulus into weeks-long accessibility and faster re-induction. Validate the top rules by prime-editing the corresponding motifs at endogenous memory enhancers to show that the predicted design features are causally required."
+    },
+    {
+      "title": "Past change: does the memory survive replication, and who re-writes it?",
+      "description": "Test whether the mark is 'past change' through DNA replication by comparing memory retention in cycling versus pharmacologically or contact-arrested cells, and by nascent-chromatin capture (NCC/repli-ATAC) to see whether AP-1 and accessibility are re-established on daughter strands within one cell cycle. Combine with acute MLL3/4, BRD4, or BAF (SMARCA4) inhibition applied only during the rest interval to identify which cofactor actually maintains or re-writes the mark once AP-1 levels have returned to baseline."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2135,
+  "cost_usd": 0.10004750000000001
+}

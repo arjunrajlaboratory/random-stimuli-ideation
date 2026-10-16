@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitochondrial heteroplasmy and mtDNA lineage tracing",
+      "description": "Use naturally occurring mtDNA variants (e.g., via mtscATAC-seq) as endogenous clonal barcodes, and relate heteroplasmy levels and mitochondrial content/membrane potential in pre-treatment cells to later survival. This tests whether inherited mitochondrial state, not nuclear genome or transcriptome, predisposes cells to tolerance."
+    },
+    {
+      "title": "Sister-cell pair tracking with fate prediction",
+      "description": "Image dividing cells, then split or track sister pairs before drug exposure and test whether sister survival concordance exceeds that of random pairs, with decay of concordance over generations giving the memory time of the tolerant state. Combine with post hoc multiplexed profiling of the same cells to identify inherited features such as organelle load or cell size."
+    },
+    {
+      "title": "Pre-treatment live reporters of apoptotic priming",
+      "description": "Measure single-cell BH3 profiling or live fluorescent reporters of caspase/MOMP threshold and BCL-2 family stoichiometry before drug exposure, then follow fate. This tests whether survivors are cells stochastically positioned further from the apoptosis threshold rather than having a distinct drug-resistance program."
+    },
+    {
+      "title": "Stress-granule, translation, and ISR dynamics",
+      "description": "Use ribosome profiling or puromycin/OPP incorporation at single-cell resolution plus ISR reporters (ATF4, eIF2\u03b1 phosphorylation) during the first hours of drug exposure, with pharmacological ISR perturbation. This tests whether rapid translational reprogramming allows survival during the acute window before any transcriptional state change matters."
+    },
+    {
+      "title": "Single-cell metabolic and redox flux imaging",
+      "description": "Use FLIM of NAD(P)H, genetically encoded ROS/ATP/lipid peroxidation sensors, and lipidomics on sorted cells to detect metabolic states such as altered ferroptosis susceptibility or lipid composition that predate or accompany tolerance. Follow with perturbations (GPX4 inhibition, lipid supplementation) to test causality."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of treated vs untreated populations to find persister transcriptional states",
+      "Whole-genome/exome sequencing of survivors to rule out or find resistance mutations",
+      "Barcode-based lineage tracing (e.g., ClonTracer) to test pre-existing vs induced resistance",
+      "Single-cell ATAC-seq / chromatin accessibility profiling of persisters",
+      "Epigenetic profiling (histone marks, DNA methylation) of surviving cells",
+      "Fluctuation test (Luria-Delbruck) to distinguish stochastic from acquired tolerance",
+      "CRISPR knockout/CRISPRi screens for genes affecting persister survival",
+      "Drug-efflux pump expression and activity assays (ABC transporters)",
+      "Live-cell imaging of cell cycle state and quiescence/slow cycling in survivors",
+      "Proteomic/phosphoproteomic profiling and pathway reactivation (e.g., MAPK/EGFR bypass signaling) in survivors"
+    ]
+  },
+  "output_tokens": 1141,
+  "cost_usd": 0.0141777
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Chromatin persistence after AP-1 washout",
+      "description": "Pulse cells with a stimulus, then wash it out and track AP-1 occupancy (CUT&RUN for c-Jun/c-Fos) alongside ATAC-seq and H3K27ac over days. If accessibility and enhancer marks outlast AP-1 binding, the 'fire' is being carried by chromatin rather than by the transcription factor itself, which is the core prediction of a memory mechanism."
+    },
+    {
+      "title": "Acute AP-1 depletion during the inter-stimulus interval",
+      "description": "Prime cells with one stimulus, then use an auxin- or dTAG-inducible degron on Fos or Jun to remove AP-1 during the rest period before a second stimulus. Memory is defined as a faster or stronger re-induction; if the primed advantage disappears only when AP-1 is degraded during the gap, AP-1 is required to store the memory rather than just to read it out."
+    },
+    {
+      "title": "Mutating AP-1 motifs at primed enhancers",
+      "description": "Use CRISPR base editing to mutate AP-1 motifs on individual primed enhancers, mirroring each mutation on a matched control enhancer to keep the design symmetric. Then measure whether the enhancer's persistence of accessibility, H3K27ac and re-induction kinetics are lost, which tests whether motif occupancy at specific loci is necessary for the memory."
+    },
+    {
+      "title": "Lineage-resolved tracking of primed states through division",
+      "description": "Combine an AP-1-responsive fluorescent reporter with lineage barcoding and time-lapse imaging to follow single cells after priming. Ask whether the primed state is inherited by daughter cells and whether it fades in the absence of reactivation, which distinguishes a self-sustaining epigenetic memory from a transient signaling state that is simply reset."
+    },
+    {
+      "title": "Protein turnover and bistability modeling",
+      "description": "Measure the half-lives of Fos, Jun and Fra1 with SNAP/HaloTag pulse-chase and FRAP, then build a kinetic model with and without an AP-1-dependent feedback loop. Test whether the model with a feedback loop predicts a long-lived, bistable primed state that persists for longer than protein turnover alone allows, and whether that prediction holds in the unstimulated dark state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1818,
+  "cost_usd": 0.00115715
+}

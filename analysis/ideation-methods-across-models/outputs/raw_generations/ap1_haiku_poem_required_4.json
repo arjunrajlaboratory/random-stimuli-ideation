@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time-course of AP-1 occupancy versus chromatin memory",
+      "description": "After a defined stimulus pulse, remove the stimulus and sample at multiple timepoints with AP-1 (JUN/FOS) CUT&RUN and ATAC-seq. A memory mechanism predicts that accessibility and H3K27ac at AP-1-bound enhancers outlast AP-1 occupancy, while a simple transcriptional readout predicts both decay together; the gap in decay kinetics is the test, much like the 'hour' the early gold leaf lasts before it subsides."
+    },
+    {
+      "title": "Re-stimulation priming assay with a time-gated AP-1 knockdown",
+      "description": "Give cells a priming stimulus, wait a rest interval, then re-stimulate and measure the speed and magnitude of target gene induction. Use an auxin-inducible degron on JUN or FOS to deplete AP-1 either during the rest interval or only during re-stimulation; if memory relies on AP-1, depleting it during rest should abolish faster re-induction, while depleting it only during re-stimulation should not."
+    },
+    {
+      "title": "Sequential ChIP (re-ChIP) to test whether marks persist after AP-1 leaves",
+      "description": "Perform sequential ChIP-seq for AP-1 followed by H3K4me1, H3K27ac or H3K4me3 at memory-associated enhancers, comparing primed cells after a rest period against naive cells. If the marks remain at sites where AP-1 is no longer bound, the memory is likely carried by the chromatin state rather than by continued AP-1 occupancy."
+    },
+    {
+      "title": "Single-cell heritability test with an AP-1-responsive lineage barcode",
+      "description": "Pair an AP-1-responsive reporter (for example an Fos-promoter-driven recombinase or tTA system) with a heritable lineage barcode, then pulse the stimulus and track whether reporter-positive or memory-positive states persist through several cell divisions. Heritable retention across generations without continued stimulation supports a self-maintaining memory, while rapid dilution through divisions supports a transient response."
+    },
+    {
+      "title": "Perturbation of AP-1 partner and co-factor balance during the rest interval",
+      "description": "Use dominant-negative or ectopic c-Jun/ATF3/JDP2 variants to alter the AP-1 dimer composition during the quiescent window and measure both chromatin accessibility at memory loci and re-induction kinetics. Because different dimers are known to differ in stability and chromatin-opening capacity, a memory mechanism predicts that specific composition shifts change persistence of primed states, while a non-memory, purely reactive role predicts no effect on the rest-period-to-reactivation difference."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1689,
+  "cost_usd": 0.00109005
+}

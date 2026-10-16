@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute degron rescue-timing experiment",
+      "description": "Use an auxin/dTAG degron on endogenous JUN/FOS family members and deplete AP-1 only during the maintenance phase (after the priming stimulus is gone) versus only during priming. If memory needs AP-1 only for establishment and not maintenance, it is not a self-sustaining memory mechanism. Persistent dependence would support it."
+    },
+    {
+      "title": "Motif-mutated enhancer knock-in with epigenetic readout",
+      "description": "Use CRISPR base editing to mutate single AP-1 sites at memory-associated enhancers. Then test whether primed accessibility, nearby H3K27ac, and faster re-induction of the target gene are lost. This shows the sites themselves are needed at specific loci, which is stronger than global AP-1 loss."
+    },
+    {
+      "title": "Pioneer-like trapping via single-molecule residence imaging",
+      "description": "Use live-cell single-molecule tracking of Halo-tagged FOS/JUN, with FRAP, in naive versus primed nuclei. Test whether residence time or bound fraction stays elevated at primed loci for days after the stimulus. This distinguishes lasting engagement from reactivation of binding."
+    },
+    {
+      "title": "Heritability through mitosis with lineage tracing",
+      "description": "Sort or live-image primed cells and follow daughter cells across several divisions, using an AP-1 reporter and a target-gene reporter. Add mitotic-bookmarking assays such as CUT&Tag on mitotic-arrested cells. Quantify how memory decays over divisions and whether AP-1 bookmarking predicts which lineages retain memory."
+    },
+    {
+      "title": "Synthetic AP-1 pulse-sufficiency test with optogenetics",
+      "description": "Drive AP-1 activity with an optogenetic or chemogenetic FOS/JUN system, with no upstream signal, using varied pulse patterns (single, repeated, sustained). Measure whether this alone leaves lasting accessibility and a primed transcriptional response, and map the dose\u2013duration threshold for memory. This tests sufficiency and the dynamics needed, instead of only necessity."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (FOS/JUN) binding before, after, and long after stimulus",
+      "ATAC-seq/DNase-seq to track chromatin accessibility at AP-1 motifs over time",
+      "Knockdown/knockout of FOS or JUN and test loss of memory phenotype",
+      "Dominant-negative AP-1 (A-FOS) expression to block function",
+      "Pharmacological AP-1 inhibitors (e.g., T-5224) during and after priming",
+      "RNA-seq of primed vs naive cells upon restimulation",
+      "Histone modification ChIP (H3K27ac, H3K4me1) at AP-1 sites",
+      "Motif enrichment analysis in persistently open regions",
+      "Single-cell multiome (RNA+ATAC) of primed cells",
+      "Reporter assays for AP-1 enhancer activity after repeated stimulation"
+    ]
+  },
+  "output_tokens": 1090,
+  "cost_usd": 0.0136628
+}

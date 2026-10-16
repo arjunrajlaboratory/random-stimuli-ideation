@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 0,
+  "parallel": {
+    "field": "Metallurgy / materials science",
+    "problem": "Why do a few nominally identical metal specimens, cut from the same batch and cycled at the same stress amplitude, survive millions of fatigue cycles when most fail early?",
+    "how_studied": "Researchers first map each specimen's microstructure, such as grain orientation by electron backscatter diffraction (EBSD) and pores and inclusions by X-ray computed tomography (CT). They then follow crack initiation during the test with in situ synchrotron imaging or digital image correlation, so they can check whether survivors lacked particular 'hot-spot' features. Staircase testing and Weibull analysis of the scatter in lifetimes help separate built-in defect populations from random variation."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Metallurgy / materials science\nProblem: Why do a few nominally identical metal specimens, cut from the same batch and cycled at the same stress amplitude, survive millions of fatigue cycles when most fail early?\nHow it is studied: Researchers first map each specimen's microstructure, such as grain orientation by electron backscatter diffraction (EBSD) and pores and inclusions by X-ray computed tomography (CT). They then follow crack initiation during the test with in situ synchrotron imaging or digital image correlation, so they can check whether survivors lacked particular 'hot-spot' features. Staircase testing and Weibull analysis of the scatter in lifetimes help separate built-in defect populations from random variation.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Retrospective state mapping of survivors via lineage barcoding (EBSD analog)",
+      "description": "Tag every cell with a heritable barcode, split the population so one half is profiled by single-cell RNA-seq or multiplexed imaging before drug exposure while the sister half is treated, then match survivor barcodes back to their untreated siblings' profiles. This is the direct analog of mapping each specimen's grain structure before cycling and asking which microstructural signatures the survivors carried in advance."
+    },
+    {
+      "title": "In situ live imaging of the drug-response trajectory with signaling reporters",
+      "description": "Follow thousands of single cells by continuous time-lapse through treatment using reporters for pathway reactivation (ERK/AKT kinase translocation), cell cycle (FUCCI), and apoptotic commitment, so the exact frame at which a future survivor diverges from its dying neighbors is recorded rather than inferred. This mirrors in situ synchrotron imaging and digital image correlation, which catch crack initiation as it happens instead of reconstructing it from the fracture surface."
+    },
+    {
+      "title": "Fluctuation and mixture-model analysis of survival scatter across replicate clones",
+      "description": "Expand many independent single-cell-derived clones, treat them identically, and analyze the variance in survivor counts and the shape of time-to-death distributions with Luria-Delbruck fluctuation statistics and Weibull or multi-component mixture fits. Just as Weibull analysis separates a built-in defect population from random variation in fatigue life, inflated between-clone variance or a distinct long-lived component indicates a heritable pre-existing subpopulation rather than moment-to-moment chance."
+    },
+    {
+      "title": "Whole-cell structural scanning for rare 'inclusion-like' features",
+      "description": "Apply high-content 3D imaging, imaging flow cytometry, and DNA FISH alongside single-cell DNA sequencing to score every cell for discrete structural features: extrachromosomal DNA copy number, micronuclei, ploidy, mitochondrial mass, and position within a colony, then test enrichment of each feature in survivors. This is the X-ray CT step, cataloguing pores and inclusions so one can ask whether survivors simply lacked or possessed a particular hot-spot feature."
+    },
+    {
+      "title": "Staircase dose titration to measure a per-lineage tolerance threshold",
+      "description": "Run a staircase design in which barcoded lineages are exposed to stepped drug concentrations and durations, estimating a survival threshold for each lineage, then re-derive clones from survivors and repeat to see whether the threshold is heritable and how fast it relaxes. This transfers staircase fatigue testing and endurance-limit estimation, converting a binary live/die readout into a distribution of per-unit tolerance limits whose stability over generations distinguishes stable resistance from transient tolerance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2836,
+  "cost_usd": 0.1213182
+}

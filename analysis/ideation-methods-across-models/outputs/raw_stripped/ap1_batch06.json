@@ -1,0 +1,150 @@
+{
+  "batch": 6,
+  "question": "ap1",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "109818163cf7f25a982d603eb287d0dd4f12a895ccca9f7c085b790835ae9759",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Rate-dependent hysteresis of stimulus versus AP-1 output",
+      "description": "Sweep stimulus dose slowly up and then back down at several sweep rates, measuring AP-1 activity and target output in single cells. Test whether the dose-response forms a hysteresis loop whose area grows with sweep speed and collapses at very slow sweeps; identical doses giving different outputs on the ascending and descending arms would show that state depends on history, not just current input.",
+      "idea_id": "ap1_opus_parallel_rotated_0_2",
+      "source_sha256": "11a49bf00f142a456aaf505f0aaea54a574d7047074a6c88a634631404f470a9"
+    },
+    {
+      "id": "I2",
+      "title": "Single-cell lineage tracing of AP-1 state heritability",
+      "description": "Use expressed DNA barcodes for clone tracking combined with single-cell RNA-seq or a live AP-1 reporter to test whether sister cells and clonal descendants share AP-1 activity levels. Measuring how the correlation of AP-1 state between relatives decays over generations gives the memory timescale and shows whether the state is heritable or transient.",
+      "idea_id": "ap1_opus_plain_7_1",
+      "source_sha256": "8cbda9355f7d1329cd3fa959bee9bb4b8cac5f6f5b2558c8ca7e4a21d15d0ccd"
+    },
+    {
+      "id": "I3",
+      "title": "Mutagenesis of AP-1 motifs in enhancers to test necessity for memory",
+      "description": "Using CRISPR knock-in or base editing, mutate the AP-1 (TGAnTCA) sites in one or several memory-associated enhancers identified from CUT&RUN data, or block binding at those sites with dCas9-KRAB. Compare the primed response to rechallenge in wild-type and mutant clones, including a non-AP-1 control enhancer, to test whether the AP-1 sites are necessary for memory and not just correlated with it.",
+      "idea_id": "ap1_haiku_assigned_constraint_5_3",
+      "source_sha256": "35c5c78941d0f215fc9e12ec295ae99cb737f3ff22b594956a4c469495811037"
+    },
+    {
+      "id": "I4",
+      "title": "Paused Pol II and nascent transcription after washout",
+      "description": "Apply PRO-seq or NET-seq at AP-1 target genes during washout to measure paused RNA polymerase II density and elongation competence, independent of chromatin marks. Paused polymerase persisting after AP-1 has left would indicate transcriptional-level memory, and its loss after inhibition of promoter-proximal pause release would test causality.",
+      "idea_id": "ap1_haiku_critique_revise_6_3",
+      "source_sha256": "fcdab94f5ff3ea7ce909e0ac6b3c26ddecf2b027e7f6da823529e676ce8969f8"
+    },
+    {
+      "id": "I5",
+      "title": "Hysteresis and bistability mapping of the AP-1 input-output curve",
+      "description": "Titrate an AP-1-activating input upward from zero and downward from saturation, measuring steady-state single-cell output at each dose with a quantitative reporter. A memory system should show a hysteresis loop, bimodal populations within the loop, and measurable spontaneous switching rates, which slow passive decay would not produce.",
+      "idea_id": "ap1_opus_critique_revise_6_1",
+      "source_sha256": "1eea517ee3e430ee1dc97d968d72336382e37635671bb8d361e9722556344ee4"
+    },
+    {
+      "id": "I6",
+      "title": "Ex vivo re-challenge of patient primary cells with AP-1 inhibition",
+      "description": "Isolate cells from patients with prior inflammatory exposure (e.g., synovial fibroblasts from rheumatoid arthritis patients or airway basal cells from asthma patients) and from matched healthy donors, rest them in culture, then re-stimulate. Test whether faster or stronger transcriptional recall depends on AP-1 using a small-molecule inhibitor (e.g., T-5224) or dominant-negative FOS (A-FOS), measured by RNA-seq and chromatin accessibility.",
+      "idea_id": "ap1_sonnet_assigned_constraint_7_1",
+      "source_sha256": "7c1e7fa35b5766986e509619d6a5bb2254fc454d6dd23d6cea1af1889e7b9154"
+    },
+    {
+      "id": "I7",
+      "title": "Washout-delay and distractor experiments to define retention timescale",
+      "description": "Vary the washout interval between prime and challenge (hours to weeks, across cell divisions) and insert an unrelated pathway activator in between, while measuring AP-1 occupancy (CUT&RUN/ChIP) and secondary response magnitude. The decay curves of AP-1 binding and response, and their robustness to the added stimulus, define the memory timescale and whether memory survives division.",
+      "idea_id": "ap1_sonnet_parallel_rotated_7_3",
+      "source_sha256": "b06a1c28398ed52ba3a4c5781009904ab2b9f8ca753f064acdb079220748a767"
+    },
+    {
+      "id": "I8",
+      "title": "Dimer-resolved identification of the AP-1 species carrying memory",
+      "description": "Combine endogenous tagging of multiple Fos/Jun/ATF members with pulse-chase proteomics, per-member CUT&RUN, and dimer-specific readouts (BiFC or proximity ligation) to measure which dimer composition persists after washout and at which loci. Then use dimer-selective dominant negatives (A-Fos vs A-Jun) and member-specific degrons to determine which single species is required, testing the prediction that a long-half-life member such as Fra-1/JunB, rather than the canonical c-Fos pulse, carries memory.",
+      "idea_id": "ap1_opus_assumption_inversion_4_1",
+      "source_sha256": "ec14fa5baf1b96af071fd5465695ed3a4c7652e676223c7f972edb5e6c73f4ad"
+    },
+    {
+      "id": "I9",
+      "title": "Pulse-chase separation of carryover from chromatin-based memory",
+      "description": "Combine SLAM-seq or 4sU pulse-chase labeling with transcription inhibition (e.g., flavopiridol or triptolide) applied at defined washout times, then re-stimulate. Persistence of memory despite transcriptional shutdown would indicate carryover of mRNA or protein, while loss of memory under shutdown would indicate that new transcription is needed to maintain the state.",
+      "idea_id": "ap1_haiku_critique_revise_0_2",
+      "source_sha256": "b3cec1795be58f8d3ae331848bb72b0194f4aaffa6712a6425fba0df2137cc3f"
+    },
+    {
+      "id": "I10",
+      "title": "Replication-coupled inheritance test with synchronized and arrested cells",
+      "description": "Prime cells, then compare memory retention in cells that divide (tracked by EdU/cell cycle), cells arrested (CDK4/6 inhibitor, contact inhibition), and cells blocked in S-phase passage. If AP-1-linked accessibility persists in non-dividing cells but is diluted or re-established only with a specific mark in dividing cells, this distinguishes self-sustaining feedback from mitotic bookmarking, for example using mitotic-chromosome CUT&Tag of FOS/JUN.",
+      "idea_id": "ap1_sonnet_critique_revise_6_1",
+      "source_sha256": "57da4c396ccb4711faf2ded637f82109bcbce7f4b8bd14e33f14ee01c8395bb6"
+    },
+    {
+      "id": "I11",
+      "title": "Long-term chromatin accessibility tracking after a transient stimulus",
+      "description": "Expose cells to a defined brief AP-1-activating stimulus (e.g., TPA, injury, or cytokine), then perform ATAC-seq and CUT&RUN for AP-1 (FOS/JUN) and H3K27ac at time points from hours to weeks after stimulus removal. Persistent AP-1-motif-enriched accessible regions after the signal has decayed would indicate a memory state, and their re-engagement could be compared with naive cells.",
+      "idea_id": "ap1_sonnet_plain_4_0",
+      "source_sha256": "b790022c5e8858a0e79807d67f252661a246144cae5c3196c77b5b00d7bceb13"
+    },
+    {
+      "id": "I12",
+      "title": "Inducible AP-1 degradation during and after a priming window",
+      "description": "Use an auxin- or dTAG-degradable FOS or JUN allele to remove AP-1 at different times relative to a priming stimulus. Measure whether the memory-like transcriptional and chromatin state persists after AP-1 is gone, to separate a requirement for AP-1 in establishing memory from a requirement in maintaining it.",
+      "idea_id": "ap1_haiku_plain_5_1",
+      "source_sha256": "b6a84c36eaa1fe4c8be1cbf2e45b4f0233838e58ef6dd1dc125f8b1d51bcfd81"
+    },
+    {
+      "id": "I13",
+      "title": "Live-cell imaging of AP-1 mitotic bookmarking",
+      "description": "Tag endogenous Fos and Jun with a live-cell reporter and image their chromatin occupancy through mitosis in synchronized cells, complemented by CUT&RUN on sorted mitotic cells. Whether AP-1 stays bound to memory-associated enhancers during division would indicate whether bookmarking transmits memory to daughter cells.",
+      "idea_id": "ap1_haiku_future_retrospective_3_3",
+      "source_sha256": "0af7cdee944e25b7105d73ce26aa5d1df536ca652a959d76341bcbfe603e61d9"
+    },
+    {
+      "id": "I14",
+      "title": "Paralog degron matrix to identify which AP-1 members carry memory",
+      "description": "Knock in dTAG or AID degrons to JUN, JUNB, JUND, FOS, FOSL1/2, and ATF3, then degrade individual and combinatorial subsets at defined windows after a priming stimulus and washout. Measure ATAC, H3K27ac, and re-induction of primed genes to identify which paralog set is required for memory, without assuming AP-1 acts as a single unit.",
+      "idea_id": "ap1_haiku_assumption_inversion_7_0",
+      "source_sha256": "d49d009731485a89084bdd3373dcfc407b54eb1a19a432fdd86d83adf5571ba7"
+    },
+    {
+      "id": "I15",
+      "title": "Degron time-window dissection of establishment, maintenance, and recall",
+      "description": "Use dTAG or auxin degrons on endogenously tagged FOS and JUN to remove AP-1 protein only during the stimulus, only during the quiescent interval, or only at the time of the second challenge. If memory survives depletion during the interval but not during the stimulus, the information is stored in something AP-1 deposits rather than in AP-1 itself.",
+      "idea_id": "ap1_opus_overgenerate_select_6_1",
+      "source_sha256": "5c85861fbcef452804950f88682754ed072079bc6d9a78a0f1cb18631ef04191"
+    },
+    {
+      "id": "I16",
+      "title": "Synthetic AP-1 circuits to test sufficiency",
+      "description": "Build a minimal synthetic locus with tunable numbers and affinities of TRE/AP-1 motifs together with inducible synthetic AP-1 factors, and map the parameter regime in which a transient input produces a self-sustaining chromatin state. This tests sufficiency, rather than only necessity, for bistable cellular memory.",
+      "idea_id": "ap1_opus_future_retrospective_2_3",
+      "source_sha256": "22038e46c2d5ab19b881d0ea7a030a70ab1a83c1ea2e037cd2f960e57f9806b5"
+    },
+    {
+      "id": "I17",
+      "title": "Stable genetic or fluorescent recorder of past AP-1 activity",
+      "description": "Use a stable recorder, such as inducible CreER or a slow-maturing fluorescent timer under an AP-1-responsive promoter, to permanently mark cells that had AP-1 activity at a defined time. Then measure by flow cytometry or imaging whether marked cells respond differently to a later stimulus and whether the mark is retained across divisions and after AP-1 withdrawal.",
+      "idea_id": "ap1_haiku_instruction_only_0_2",
+      "source_sha256": "470514df0a6dcbf08821e80aca557b681cda38491039de4cd0be4cd39feb5093"
+    },
+    {
+      "id": "I18",
+      "title": "Synthetic AP-1 positive-feedback circuit with write, read, and erase steps",
+      "description": "Build a synthetic reporter in which AP-1 binding sites drive an AP-1 or Fos expression cassette, forming a positive-feedback loop. Set the state with a transient input, read it out with a reporter, and erase it by CRISPRi or dCas9 silencing of the loop. A stable, switchable state that follows the set and erase steps would support AP-1 feedback as a memory mechanism.",
+      "idea_id": "ap1_haiku_instruction_only_7_3",
+      "source_sha256": "c56e382f67a6b4031e4191644e954a040cbb652b118b2814e2a2016ff00de3a6"
+    },
+    {
+      "id": "I19",
+      "title": "Autocorrelation and critical-slowing-down analysis of live AP-1 reporters",
+      "description": "Image single-cell AP-1 reporter or endogenously tagged FOS/JUN dynamics over days, and compute autocorrelation time, variance, and relaxation rates after small perturbations at different stimulus doses. Rising autocorrelation and variance near a threshold, plus long relaxation times, indicate bistability or slow feedback, and the memory timescale is estimated directly.",
+      "idea_id": "ap1_sonnet_parallel_rotated_1_2",
+      "source_sha256": "17fbc63d70e49fb490f4c9491f2d910fd59cbfa59c2b8155bd47f0728989c451"
+    },
+    {
+      "id": "I20",
+      "title": "Mass spectrometry of AP-1 dimer composition and phosphorylation across the memory window",
+      "description": "Perform quantitative proteomics (IP-MS or targeted PRM) of AP-1 family members and their partners (ATF, MAF, BAF subunits), plus chromatin phosphosites, at baseline, post-stimulus, and during rest. Test whether memory correlates with a shifted FOS/JUN paralog composition, e.g., a switch from FOS to FOSL2/JUNB, rather than with persistent total AP-1 occupancy.",
+      "idea_id": "ap1_sonnet_critique_revise_6_3",
+      "source_sha256": "b6c3c02c10e9743c087d9af192a698f6d0d37c943ad0c40a46784aef740825e0"
+    }
+  ],
+  "cost_usd": 0.055507999999999995
+}

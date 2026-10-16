@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell drug uptake and target engagement imaging",
+      "description": "Use fluorescent or deuterium/alkyne-tagged drug analogs (imaged by stimulated Raman scattering or click chemistry), plus a FRET target-occupancy sensor, to measure how much drug and target inhibition each cell gets before its fate is known. This tests whether survivors simply got less drug or less target inhibition, as opposed to having a different downstream state."
+    },
+    {
+      "title": "Synthetic noise-tuning of candidate genes at a fixed mean",
+      "description": "Put a candidate survival gene under a synthetic circuit (for example, a negative-feedback or bursty promoter series) that changes cell-to-cell variance while keeping mean expression the same. Then measure how the survivor fraction changes. This shows whether variability itself, and not the average level, sets the rare surviving fraction."
+    },
+    {
+      "title": "Asymmetric organelle inheritance tracking",
+      "description": "Use photoconvertible or timer reporters (MitoTimer, old vs. new centrosome markers, protein-aggregate markers) to follow how mitochondria, aggregates and centrosomes split at division, and track daughter fates under drug. This tests whether survival depends on inheriting particular organelle ages or amounts, not on transcriptional state."
+    },
+    {
+      "title": "Label-free biophysical prestate profiling",
+      "description": "Image cells for several generations before treatment with quantitative phase imaging and Brillouin microscopy to record dry mass, growth rate, volume and stiffness. Then add the drug and link fate back to each cell. This could reveal physical predictors of survival, such as density or growth-rate thresholds, that sequencing would miss."
+    },
+    {
+      "title": "Micropatterned control of neighbor and geometry context",
+      "description": "Plate single cells or small groups on micropatterned islands with set area, shape and neighbor number, and then treat them. This measures how much of the survivor fraction comes from local cell-intrinsic state and how much from contact, spreading or crowding. Spatial point-pattern analysis of survivor positions in normal dishes would be used to cross-check the results."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-surviving populations to find transcriptional states enriched in survivors",
+      "Lineage barcoding with retrospective clone tracing (e.g., Rewind/FateMap/ClonTracer-style) to identify pre-existing states of future survivors",
+      "Luria\u2013Delbr\u00fcck fluctuation analysis to tell pre-existing heritable states from drug-induced adaptation",
+      "Whole-genome/exome sequencing of survivor colonies to rule out pre-existing resistance mutations",
+      "Time-lapse live-cell imaging with signaling reporters (e.g., ERK/AKT KTR sensors) linking pre-drug dynamics to fate",
+      "ATAC-seq / ChIP-seq / DNA methylation profiling of persisters to find epigenetic drivers",
+      "Genome-wide CRISPR knockout/activation screens for genes that change the surviving fraction",
+      "Slow-cycling and quiescence assays (label-retaining dyes, Ki67, FUCCI) to test whether dormant cells survive",
+      "smFISH/immunofluorescence and FACS sorting on candidate markers (EGFR, AXL, NGFR) followed by drug challenge",
+      "Metabolic profiling of persisters (OXPHOS dependence, ROS, drug efflux pumps)"
+    ]
+  },
+  "output_tokens": 2256,
+  "cost_usd": 0.05066340000000001
+}

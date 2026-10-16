@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell lineage barcoding with drug-response tracking",
+      "description": "Introduce heritable random DNA barcodes (e.g., CellTag or CRISPR-based lineage recorders) into a clonal population, treat with the targeted drug, and track which barcoded lineages persist. This separates pre-existing drug-tolerant clones from cells that switch state after treatment, and reveals whether survival is inherited or stochastic."
+    },
+    {
+      "title": "Time-resolved single-cell RNA-seq and ATAC-seq of persister emergence",
+      "description": "Profile cells at high temporal resolution from before treatment through early drug exposure and into the persister state, combining transcriptome and chromatin accessibility. Identifying the cells that diverge early and the regulatory programs they activate can reveal pre-existing transcriptional or epigenetic states that predispose survival."
+    },
+    {
+      "title": "Live-cell reporter imaging linked to fate",
+      "description": "Use fluorescent reporters for candidate survival pathways (e.g., drug target activity, stress signaling, cell-cycle phase) and time-lapse microscopy under drug to link each cell's pre-treatment reporter state to its eventual fate. This directly tests whether a measurable pre-treatment state predicts survival."
+    },
+    {
+      "title": "Genome-wide CRISPR screens comparing survivors and non-survivors",
+      "description": "Run pooled CRISPR knockout or CRISPRi/a screens under the targeted drug and compare guide enrichment in surviving cells versus a drug-naive control, with time-course sampling. Hits that alter survival frequency, especially those that act without changing baseline growth, point to the genes and pathways that mediate tolerance."
+    },
+    {
+      "title": "Quantifying non-genetic heterogeneity by perturbing cell-to-cell variability",
+      "description": "Measure the amount of drug-target expression, drug efflux, and metabolic state across single cells in the pre-treatment population, then sort or enrich for the extremes and re-test their survival. Causal experiments that isolate high- and low-variability subpopulations show whether non-genetic variation drives the survival fraction and how quickly it reverts."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 774,
+  "cost_usd": 0.00052935
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 0,
+  "constraint": "using only data that are already publicly available (no new experiments)",
+  "prompt": "Constraint: every one of your ideas must be carried out using only data that are already publicly available (no new experiments). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Re-analyze public time-course scRNA-seq of drug-treated cell lines",
+      "description": "Pool published single-cell RNA-seq datasets from genetically uniform cell lines (e.g., EGFR-mutant lung lines treated with TKIs) sampled before and during drug exposure. Test whether survivors are already transcriptionally distinct at baseline (pre-existing persister state) or diverge only after treatment, and identify the genes that separate them."
+    },
+    {
+      "title": "Link baseline transcriptomes to drug survival in CCLE/GDSC data",
+      "description": "Use the CCLE baseline expression profiles and GDSC/PRISM dose-response curves across hundreds of cell lines to ask whether lines with a high-tolerance residual fraction share an expression or pathway signature. Focus on the shape of the dose-response curve (plateau or residual viability) rather than only IC50, since the plateau reflects the surviving fraction."
+    },
+    {
+      "title": "Quantify clonal origin of survivors with public lineage-barcoding data",
+      "description": "Reanalyze published DNA-barcode lineage-tracing experiments in drug-treated cancer cell populations to measure how many surviving clones trace back to a shared pre-treatment barcode versus de novo emergence. The ratio indicates whether survival is driven by rare pre-existing variants or by stochastic or induced switching."
+    },
+    {
+      "title": "Compare chromatin and epigenetic states of persisters with their parental cells",
+      "description": "Collect public ATAC-seq, ChIP-seq (H3K27me3, H3K4me3, H3K27ac), and DNA methylation data from drug-tolerant persister studies and compare them with matched untreated cells. Look for chromatin regions that are opened or closed in survivors and whether those regions are already accessible at baseline, which would suggest an epigenetic memory or priming mechanism."
+    },
+    {
+      "title": "Integrate CRISPR knockout screens with drug-response and signaling data to find survival dependencies",
+      "description": "Cross-reference DepMap genome-wide CRISPR screens for the same cell lines with drug-response data to identify genes whose loss selectively sensitizes cells to the drug without reducing growth. Combine these with public phosphoproteomic data from drug-treated cells (e.g., PRIDE or CPTAC resources) to map the signaling rewiring that survivors depend on."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1921,
+  "cost_usd": 0.00118185
+}

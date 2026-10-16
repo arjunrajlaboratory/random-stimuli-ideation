@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Twin-cell retrospective profiling with multimodal readouts",
+      "description": "Barcode cells, let them divide, and split sister lineages: treat one half, then sequence the untreated twins of the survivors for RNA, chromatin accessibility and protein. This shows the pre-existing state that predicts survival. The surprise would be that this 'primed' state is a coordinated but fleeting program spread across many genes, not one marker or a stable subpopulation."
+    },
+    {
+      "title": "Live imaging of signaling history before drug exposure",
+      "description": "Use long-term live-cell imaging of reporters for kinase activity (such as ERK and AKT) and for the cell cycle, then add drug and link each cell's survival back to its full pre-treatment history. This tests whether survival depends on how signals changed over time (pulse frequency, recent stress) rather than on any single snapshot of the cell's state."
+    },
+    {
+      "title": "Measuring memory with sister-cell fluctuation analysis",
+      "description": "Run Luria\u2013Delbr\u00fcck-style fluctuation assays together with sister-cell and cousin-cell survival correlations at different times since the cells last divided. This measures how strongly and for how long the tendency to survive is inherited. Comparing that timescale with gene-expression memory would show whether survival comes from transcriptional states, from inherited cell parts (such as mitochondria or protein aggregates), or from chance."
+    },
+    {
+      "title": "Pooled CRISPR screens that separate priming from conversion",
+      "description": "Run barcoded single-cell CRISPR screens that separately score (a) how many cells enter the primed state and (b) how efficiently primed cells become stably resistant after the drug is added. This would reveal that the two steps are controlled by largely separate regulators, so they could be targeted at different times."
+    },
+    {
+      "title": "Spatial lineage tracing of survivors in tumors",
+      "description": "Combine in vivo lineage barcodes with spatial transcriptomics, imaging tumors before and during treatment, to map where survivors start and which neighboring cells or local niches they sit in. This tests whether a cell's location and signals from nearby cells, rather than its own internal state, decide survival, and whether the in vitro picture of rare primed cells holds up in tissue."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1349,
+  "cost_usd": 0.032498
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 4,
+  "constraint": "in an organism or cell system other than human or mouse",
+  "prompt": "Constraint: every one of your ideas must be carried out in an organism or cell system other than human or mouse. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Split-population barcode \"twin test\" in zebrafish melanoma transplants",
+      "description": "Label ZMEL1 zebrafish melanoma cells with a high-complexity heritable barcode library, split the expanded population into replicate arms, and treat each with BRAF/MEK inhibition: shared survivor barcodes across arms indicate a pre-existing heritable state, while non-overlapping survivors indicate stochastic or transient origins. Varying the delay between splitting and treatment turns the assay into a direct measurement of how many generations the survival-conferring state persists."
+    },
+    {
+      "title": "Retrospective isolation of primed cells before drug in a canine tumor line",
+      "description": "In a KIT-driven canine mast cell tumor line treated with toceranib, use an RNA-detectable expressed barcode so barcodes enriched among survivors can be found by hybridization in an untreated sister population, allowing the rare cells that would have survived to be sorted and profiled by scRNA-seq while still drug-naive. This measures the primed state itself rather than the post-treatment aftermath, the usual confound in persister profiling."
+    },
+    {
+      "title": "Live signaling-dynamics tracking with optogenetic causality testing",
+      "description": "Image ERK-KTR and AKT biosensors in rat or canine tumor cells for many hours before drug addition and follow each cell's fate, regressing pre-drug pulse frequency, amplitude, and duration against survival. Then use optogenetic ERK activation to impose the candidate dynamic pattern and test whether it is sufficient to generate survivors."
+    },
+    {
+      "title": "Per-cell drug exposure and target engagement to exclude trivial pharmacology",
+      "description": "Quantify fluorescent drug-analog uptake, efflux-pump reporter activity, and a target-engagement readout in individual survivors versus dying neighbors in canine or rat lines. This distinguishes genuine cell-state heterogeneity from cells that simply received or retained less drug, a control rarely done at single-cell resolution."
+    },
+    {
+      "title": "Intravital imaging of survivor niches in Drosophila and zebrafish tumors",
+      "description": "Image labeled tumor cells through treatment in living Drosophila Ras/scrib tumors or zebrafish transplants, scoring survivor position relative to vasculature, hemocytes/macrophages, and surrounding stroma. Genetic ablation of the implicated host cell type then tests whether the local niche causes survival rather than merely correlating with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2939,
+  "cost_usd": 0.09244909999999999
+}

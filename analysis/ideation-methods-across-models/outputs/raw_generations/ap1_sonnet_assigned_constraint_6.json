@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 6,
+  "constraint": "with only a single time point measured per sample",
+  "prompt": "Constraint: every one of your ideas must be carried out with only a single time point measured per sample. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell multiome in previously stimulated vs naive cells",
+      "description": "Do joint scRNA/scATAC-seq at one time point long after stimulus withdrawal on primed and naive populations. Test whether AP-1 (FOS/JUN) motif accessibility, footprints and target-gene expression stay elevated in primed cells, and whether the primed cells carry a distinct, stable AP-1-linked chromatin state."
+    },
+    {
+      "title": "AP-1 binding and chromatin state profiling (CUT&Tag/ChIP) at memory loci",
+      "description": "At a single post-stimulus time point, profile JUN/FOS occupancy with H3K27ac, H3K4me1 and accessibility in primed vs naive cells. Test whether AP-1 stays bound at, or leaves behind, latent/primed enhancers, and whether the sites retained correlate with enhanced re-induction of nearby genes."
+    },
+    {
+      "title": "Acute AP-1 degradation after priming, then readout",
+      "description": "Prime cells, let the stimulus decay, then rapidly deplete AP-1 (dTAG/AID degron of JUN/FOS, or dominant-negative A-FOS) and measure chromatin accessibility and transcription at one later time point versus controls. If the primed state is lost, AP-1 is needed to maintain memory. If it persists, AP-1 only initiates it."
+    },
+    {
+      "title": "Re-stimulation response test with AP-1 perturbation (single endpoint)",
+      "description": "Give primed and naive cells, with or without AP-1 perturbation during priming only, an identical second stimulus. Measure RNA-seq or a reporter at one fixed time point after it, and compare the magnitude and speed of the response. This separates AP-1's role in establishing memory from its role in executing the response."
+    },
+    {
+      "title": "Single-cell AP-1 protein level/state snapshot with lineage-tracked heritability",
+      "description": "Use imaging or flow cytometry of endogenous tagged FOS/JUN with an AP-1 reporter in one fixed snapshot of a clonal population, such as sister cells or barcoded clones. Test whether the high and low AP-1 states are shared among related cells beyond chance, which indicates heritable memory. Correlate the states with the history of the stimulus (e.g. a prior pulse) and the downstream targets."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 827,
+  "cost_usd": 0.0125975
+}

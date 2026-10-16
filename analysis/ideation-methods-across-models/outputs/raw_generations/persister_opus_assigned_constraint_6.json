@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 6,
+  "constraint": "with only a single time point measured per sample",
+  "prompt": "Constraint: every one of your ideas must be carried out with only a single time point measured per sample. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Split-sister barcoding: profile one twin, treat the other",
+      "description": "Tag cells with heritable expressed barcodes, expand briefly, then divide the population into two matched halves; profile one half once by single-cell RNA+ATAC with no drug, and sequence barcodes once in the treated half at the endpoint. Barcodes shared between survivors and their untreated twins reveal which pre-existing expression and chromatin states confer survival, with each sample read out exactly once."
+    },
+    {
+      "title": "Luria-Delbruck-style variance test for heritable priming",
+      "description": "Seed many independent clonal cultures, grow them for varying numbers of doublings, treat each once, and count surviving colonies a single time per culture. The shape and variance of the survivor-count distribution across cultures distinguishes a heritable, inherited primed state from independent per-cell coin flips, and bounds how many generations that state is remembered."
+    },
+    {
+      "title": "Sort on a rare-state reporter, then score survival once",
+      "description": "Use multiplexed RNA imaging on fixed untreated cells to define the rare co-expression state (for example high AXL/NGFR/EGFR), build a live reporter or antibody panel for it, and sort high versus low cells. Treat each sorted fraction and count colonies at one endpoint to directly quantify the fold enrichment in survival probability attributable to that state."
+    },
+    {
+      "title": "Genomic recorders that store each cell's past signaling",
+      "description": "Express CRISPR base- or prime-editing recorders driven by pathway-responsive promoters (MAPK, NF-kB, AP-1) so each cell continuously writes its signaling history into its own DNA. A single-cell sequencing readout taken once after treatment recovers each survivor's cumulative upstream activity, converting a one-shot measurement into a retrospective time course."
+    },
+    {
+      "title": "Endpoint Perturb-seq on survivors versus the starting pool",
+      "description": "Introduce a genome-wide or focused CRISPR library, treat the population, and perform single-cell CRISPR sequencing once on the surviving cells, comparing guide abundance and transcriptomes against a one-time profile of the untreated library. This simultaneously names the genes whose loss or gain changes survival odds and the transcriptional programs those perturbations act through."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2406,
+  "cost_usd": 0.09388400000000001
+}

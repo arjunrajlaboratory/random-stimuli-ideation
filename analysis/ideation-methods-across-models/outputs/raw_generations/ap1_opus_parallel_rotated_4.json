@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 4,
+  "parallel": {
+    "field": "Climate and Earth system science",
+    "problem": "Do ice sheets or ocean circulation (AMOC) keep a memory of past forcing, so that undoing the forcing does not restore the original state?",
+    "how_studied": "Modelers run ramp-up/ramp-down experiments in coupled ice-sheet or climate models, slowly raising and then reversing CO2 or freshwater forcing to trace hysteresis loops and find bistable ranges. They complement these runs with paleoclimate proxies that show the system in different states under similar forcing, and with early-warning statistics (rising autocorrelation and variance) near thresholds."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Climate and Earth system science\nProblem: Do ice sheets or ocean circulation (AMOC) keep a memory of past forcing, so that undoing the forcing does not restore the original state?\nHow it is studied: Modelers run ramp-up/ramp-down experiments in coupled ice-sheet or climate models, slowly raising and then reversing CO2 or freshwater forcing to trace hysteresis loops and find bistable ranges. They complement these runs with paleoclimate proxies that show the system in different states under similar forcing, and with early-warning statistics (rising autocorrelation and variance) near thresholds.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Ramp-up/ramp-down dose hysteresis loops for AP-1",
+      "description": "Mirror CO2 ramp experiments: step a stimulus (TPA, TNF, growth factor, or a targeted inhibitor) slowly up through a dose series and then back down through the identical doses, reading AP-1 activity at each step with live FOS/JUN reporters plus smFISH for AP-1 target genes. A down-ramp trajectory displaced from the up-ramp trajectory traces a hysteresis loop and defines the dose window in which AP-1 state depends on history rather than current input."
+    },
+    {
+      "title": "Bistable-window mapping with history-matched cells",
+      "description": "Prepare two populations under identical current conditions but opposite histories (previously high-AP-1 versus naive), then place both at a ladder of intermediate stimulus levels for many divisions. The range of inputs over which the two populations stably maintain different AP-1 activity and target-gene output is the empirical bistable range, the cell-biological analog of the AMOC bistability window."
+    },
+    {
+      "title": "Early-warning statistics in single-cell AP-1 traces",
+      "description": "Apply critical-slowing-down diagnostics to long-term live imaging of an AP-1 transcriptional reporter: lag-1 autocorrelation, variance, and recovery time after brief optogenetic or drug pulses as cells approach a transition point in stimulus dose. Rising autocorrelation, variance, and recovery time near the inferred threshold would support a genuine bistable attractor rather than a graded dose response."
+    },
+    {
+      "title": "Chromatin proxies as a paleo-record of past forcing",
+      "description": "Treat AP-1-bound enhancers as proxy archives: after stimulus removal, profile ATAC-seq, AP-1 CUT&RUN, and H3K4me1/K27ac at AP-1 motifs in cells that are transcriptionally indistinguishable from naive cells, to see whether the chromatin still encodes prior exposure. Pairing this with lineage barcoding tests whether the chromatin proxy predicts which cells reactivate fastest on re-stimulation, i.e. whether the record is functional memory rather than an inert scar."
+    },
+    {
+      "title": "Transient AP-1 'hosing' to test state switching and reversibility",
+      "description": "Analogous to freshwater hosing, deliver a short defined pulse of AP-1 activity alone (optogenetic JUN/FOS dimer or auxin-degron release) without the upstream stimulus, then remove it and follow cells for weeks. If supra-threshold pulses drive a self-sustaining high state while sub-threshold pulses relax back, AP-1 is sufficient to set the memory; running it in reverse (acute AP-1 degradation in memory-bearing cells) tests whether the state can be pushed back across the threshold."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2881,
+  "cost_usd": 0.1437023
+}

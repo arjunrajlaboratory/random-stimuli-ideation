@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-timed AP-1 removal after a stimulus pulse",
+      "description": "Use auxin-inducible degrons on endogenous Fos and Jun, then remove them at defined times after a stimulus pulse, and measure whether the primed transcriptional response to a second stimulus persists. If the memory survives AP-1 loss, AP-1 is required for induction but not for maintenance of the memory."
+    },
+    {
+      "title": "Locus-specific necessity via epigenetic editing of AP-1 sites",
+      "description": "Use dCas9-based epigenetic silencers or site-specific mutations to block AP-1 occupancy at individual enhancers, then run time-course ATAC-seq and CUT&RUN after a pulse. Persistent chromatin accessibility that disappears only when AP-1 binding is blocked at a given site would show that the memory is written locally at that enhancer."
+    },
+    {
+      "title": "Single-cell recorder of AP-1 activity history",
+      "description": "Engineer a barcoded or fluorescent-timer AP-1 reporter that records the cumulative history of AP-1 activity in each cell, then sort cells by recorded history and challenge them with a second stimulus. Differences in second-stimulus responses that track the recorded history would show that AP-1 activity is stored at the single-cell level rather than being an average population effect."
+    },
+    {
+      "title": "Optogenetic pulse-pattern encoding test",
+      "description": "Drive AP-1 activity with optogenetic or chemogenetic inputs using different frequencies, durations, and interval patterns while holding total dose constant, then measure the response to a later challenge. If the memory depends on the temporal pattern rather than total dose, AP-1 is functioning as a temporal integrator and a memory store, not just a dose-responsive switch."
+    },
+    {
+      "title": "Cell-intrinsic memory transfer in vivo and ex vivo",
+      "description": "Tag cells that experienced AP-1 activity in vivo using a Fos-CreERT2 or TRAP-style system, isolate them, and transplant or culture them without the original signal before challenging them. If tagged cells keep a primed response after being removed from the in vivo environment, the memory is cell-intrinsic and not carried by the niche."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1819,
+  "cost_usd": 0.00105191
+}

@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-based maintenance test after stimulus washout",
+      "description": "Use an auxin-inducible degron on endogenous c-Fos or JUNB, then stimulate, wash out, and degrade AP-1 at different times after the pulse. Track enhancer accessibility (ATAC-seq) and target transcription to see whether persistence requires continued AP-1 presence, and compare with histone-mark readouts (H3K27ac, H3K4me1) to separate AP-1-dependent maintenance from chromatin-encoded memory."
+    },
+    {
+      "title": "Paralog- and dimer-specific memory dissection",
+      "description": "Apply paralog-specific degrons or CRISPR knockouts (e.g., FOS vs FOSB, FOSL1 vs FOSL2, JUNB vs c-JUN, ATF3) and run CUT&Tag for each member after a pulse. Determine which dimer combinations occupy memory-associated enhancers after the stimulus is removed and whether losing one member abolishes persistence."
+    },
+    {
+      "title": "Single-cell live reporter and lineage tracing of persistence",
+      "description": "Build a destabilized fluorescent reporter driven by an AP-1-responsive enhancer and track individual cells through repeated pulses with time-lapse imaging. Quantify bimodality, the fraction of cells that retain a primed state, and whether the state is inherited by daughter cells, to check whether memory is a subpopulation phenomenon hidden in bulk data."
+    },
+    {
+      "title": "Inducible AP-1 sufficiency without the upstream stimulus",
+      "description": "Use an optogenetic or chemically inducible AP-1 construct (for example, a light-controlled Fos/Jun heterodimer) to drive AP-1 activity in the absence of the native signal, with matched total-activity controls. Test whether defined pulses of AP-1 activity alone generate a primed state that enhances later responses, separating AP-1 memory from memory held in upstream MAPK/ERK signaling."
+    },
+    {
+      "title": "Mitotic persistence and inheritance timing",
+      "description": "Synchronize cells after a pulse, then track AP-1 occupancy (live-cell imaging of tagged AP-1 or CUT&RUN at defined mitotic stages) and enhancer accessibility through mitosis and into G1 over several cell cycles. Measure whether the primed state is retained through mitotic chromatin disruption and how long it lasts, which distinguishes heritable memory from a state that must be rebuilt after each division."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as one unit, but it is a family of Fos/Jun/ATF/JDF dimers with overlapping and partly redundant members, so a memory role may belong to one specific dimer or paralog.",
+      "Memory means a durable state that outlasts the stimulus, so the question assumes a persistent post-stimulus change exists and can be distinguished from a transient response that simply decays.",
+      "Any persistence is assumed to be intrinsic to AP-1 (self-sustaining through its own binding or autoregulation), when it could instead be carried by chromatin marks, other transcription factors, or feedback loops that AP-1 only initiates.",
+      "Chromatin accessibility or AP-1 occupancy is assumed to be a valid readout of memory, but occupancy can be a readout of current binding rather than of stored history.",
+      "Memory is assumed to be a property of the upstream stimulus-response relationship (a previous exposure changes a later response), so the question presumes a pulse-rest-re-stimulation design is the right frame.",
+      "Bulk population measurements are assumed to reflect what happens in individual cells, while bistability, cell-to-cell heterogeneity, or memory carried by only a subpopulation could be averaged away.",
+      "The memory is assumed to be encoded in AP-1 activity itself rather than in the upstream signaling state (for example MAPK/ERK dynamics) that drives AP-1, so sufficiency of AP-1 alone is presumed to be unnecessary to test.",
+      "Memory is assumed to persist long enough and be heritable through cell division, so a timescale of hours to days and transmission through mitosis are implicitly required or ignored.",
+      "Perturbations of AP-1 (knockdown, dominant-negative, knockout) are assumed to act specifically on the memory mechanism, when they are pleiotropic and can be compensated for by paralogs."
+    ]
+  },
+  "output_tokens": 3486,
+  "cost_usd": 0.00188639
+}

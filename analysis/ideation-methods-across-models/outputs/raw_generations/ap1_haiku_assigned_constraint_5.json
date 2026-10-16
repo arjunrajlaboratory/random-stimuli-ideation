@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 5,
+  "constraint": "finishing within three months",
+  "prompt": "Constraint: every one of your ideas must be carried out finishing within three months. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-based AP-1 washout and rechallenge",
+      "description": "Use a dTAG or auxin-inducible degron on endogenous c-Jun or c-Fos in primary cells or a cell line. Give a transient stimulus (e.g., TPA, EGF, or LPS), wash out, and let cells rest for 1-2 weeks, with or without AP-1 depletion during the rest period. Then restimulate and measure the speed and magnitude of target-gene induction by RT-qPCR or RNA-seq. If memory requires AP-1 persistence, the faster response should be lost when AP-1 is degraded during rest."
+    },
+    {
+      "title": "Time-resolved CUT&RUN and ATAC-seq across a stimulus-rest cycle",
+      "description": "Profile AP-1 occupancy (CUT&RUN for c-Fos, JunB, ATF3), chromatin accessibility (ATAC-seq), and H3K27ac at multiple timepoints through stimulation, washout, and the quiescent interval. Test whether enhancers that stay accessible or acetylated after AP-1 leaves the chromatin predict the rechallenge response. Pair this with the degron approach to separate AP-1-dependent retention from chromatin-intrinsic retention."
+    },
+    {
+      "title": "Live single-cell reporter of AP-1 activity across repeated pulses",
+      "description": "Build a destabilized fluorescent reporter driven by an AP-1-responsive promoter, or knock a reporter into an endogenous AP-1 target such as FOS or ATF3, and track individual cells by live imaging or microfluidics. Apply pulses at varied intervals and quantify, per cell, whether the second response is faster or larger than the first. Correlate memory with nuclear c-Jun or c-Fos levels and their persistence to test whether memory is a graded, cell-autonomous property."
+    },
+    {
+      "title": "Enhancer motif mutagenesis to test necessity of AP-1 binding for memory",
+      "description": "Using CRISPR knock-in or base editing, mutate the AP-1 (TGAnTCA) sites in one or several memory-associated enhancers identified from the CUT&RUN data, or use dCas9-KRAB to block binding at those sites. Compare the primed response to rechallenge in wild-type and mutant clones, and include a non-AP-1 control enhancer. This is a direct test of whether the specific AP-1 sites are necessary for the memory, not just correlated with it."
+    },
+    {
+      "title": "Fos-TRAP lineage tagging of AP-1-experienced cells in vivo",
+      "description": "Use existing Fos-CreERT2 reporter mice to permanently label cells that were AP-1-active during a defined stimulus, such as a skin irritant, tissue injury, or an inflammatory challenge. After a rest period, rechallenge the animals and measure whether tagged cells show enhanced reactivation of AP-1 targets compared with untagged neighbors, by flow cytometry or spatial transcriptomics. This tests whether AP-1 history marks cells for altered future responses in a physiological setting."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2472,
+  "cost_usd": 0.0014535499999999999
+}

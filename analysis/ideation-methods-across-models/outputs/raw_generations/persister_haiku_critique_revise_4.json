@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Single-cell lineage barcoding with drug-response tracking: Label a clonal cancer population with heritable DNA barcodes (e.g., CRISPR-based lineage tracers), treat with the targeted drug, and track which lineages persist and how their transcriptomes and chromatin states differ before treatment. This separates pre-existing 'drug-tolerant' clones from cells that switch state after exposure.\n2. Pre-treatment single-cell multi-omics to find predictive baseline states: Profile untreated cells with paired scRNA-seq and scATAC-seq (or CITE-seq) and use machine learning to identify baseline features, such as expression of stress, quiescence, or drug-efflux genes, that predict which cells will survive. Validate by sorting the predicted tolerant subpopulation and testing its drug response.\n3. Live-cell imaging with reporter-based fate tracking: Use fluorescent reporters for cell cycle (e.g., FUCCI), signaling activity (e.g., ERK or AKT biosensors), and drug-target engagement, and follow individual cells over days of treatment. This reveals whether survivors were in a slow-cycling or signaling-low state before drug exposure, or whether they adapt over time.\n4. Time-resolved persister-state transitions with pulse-chase drug exposure: Expose cells to the drug for short pulses, then wash out and sort survivors at multiple timepoints for bulk or single-cell RNA-seq and ATAC-seq. This distinguishes stable genetic or epigenetic persistence from transient, reversible drug-tolerant states that re-enter the cycle after drug withdrawal.\n5. Genome-wide CRISPR screens for survival and resistance mechanisms: Run pooled CRISPR knockout or CRISPRi/a screens under sublethal drug doses, comparing sequencing of survivors versus the starting population to identify genes that enable survival without acquired mutations. Follow up hits with combination-drug tests to determine whether the survival machinery is a druggable vulnerability.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitochondrial DNA heteroplasmy as a natural lineage barcode",
+      "description": "Sequence mtDNA variants and copy number in single cells (e.g., mtscATAC or single-cell mtDNA sequencing) before treatment and after drug selection, using naturally occurring heteroplasmy as a heritable lineage tag. If survivors are enriched for particular mtDNA haplotypes or respiratory-capacity states, that points to oxidative-phosphorylation fitness as a pre-existing determinant of tolerance, testable by swapping mitochondria with cybrids."
+    },
+    {
+      "title": "Asymmetric partitioning of drug load at mitosis",
+      "description": "Use a click-tagged or intrinsically fluorescent drug analog to track how intracellular drug is divided between daughter cells during division in live imaging. If one daughter inherits systematically less drug or more efflux-pump protein, the survival of that lineage would reflect stochastic segregation rather than a stable cell state."
+    },
+    {
+      "title": "Per-cell target protein turnover measured by HaloTag pulse-chase",
+      "description": "Endogenously tag the drug target with a HaloTag, pulse-label with a cell-permeant dye, and measure the per-cell synthesis and degradation rate of the existing protein pool by time-lapse imaging under treatment. Survivors may carry a slower target turnover or higher replacement rate that buffers drug occupancy, which can be tested by modulating proteasome or lysosomal degradation."
+    },
+    {
+      "title": "Pre-treatment optical redox imaging to sort by metabolic state",
+      "description": "Image NAD(P)H and FAD autofluorescence in living cells to compute an optical redox ratio for each cell before drug exposure, then sort the extremes and test drug response in each fraction. This label-free readout captures mitochondrial and glycolytic balance without genetic perturbation, and it can reveal whether tolerance follows a continuous metabolic gradient rather than a discrete subpopulation."
+    },
+    {
+      "title": "Spatial neighborhood mapping of survivors in dense versus sparse colonies",
+      "description": "After treatment, map surviving cells in situ (multiplexed imaging or spatial transcriptomics) and quantify survival as a function of local neighbor density and contact with dying cells. If survival depends on local neighborhood rather than intrinsic cell identity, the mechanism involves community or contact-dependent protection, which can be tested by co-culture and conditioned-medium experiments."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2334,
+  "cost_usd": 0.00152995
+}

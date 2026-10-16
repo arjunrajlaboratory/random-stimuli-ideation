@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus\u2013washout\u2013restimulation time course with AP-1 perturbation",
+      "description": "Expose cells to a defined stimulus (e.g., TPA, injury, or cytokine), remove it, then restimulate after varying delays and measure the primed transcriptional response (RNA-seq, target gene induction). Compare with acute AP-1 inhibition (dominant-negative FOS/A-FOS, degron-tagged JUN/FOS) during priming versus during recall to separate AP-1 requirement for establishing versus maintaining memory."
+    },
+    {
+      "title": "Longitudinal chromatin accessibility and AP-1 footprinting (ATAC-seq/CUT&RUN)",
+      "description": "Profile ATAC-seq, AP-1 subunit CUT&RUN/ChIP (FOS, JUN, FOSL), and H3K27ac at baseline, after stimulus, and weeks after stimulus clearance. Test whether AP-1 motif-containing enhancers stay accessible or bound after AP-1 levels return to baseline, and whether the retained sites predict faster or stronger re-induction."
+    },
+    {
+      "title": "Degron-based timed AP-1 depletion after memory establishment",
+      "description": "Use an auxin- or dTAG-inducible degron on JUN/FOS family members to deplete AP-1 only after the initial stimulus, then measure whether enhancer accessibility, pioneer-like remodeling (SWI/SNF/BAF recruitment), and recall response persist. If memory is maintained without AP-1, it acts as an initiator; if it collapses, AP-1 is a maintenance mechanism."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and reporter memory",
+      "description": "Track AP-1 activity (FOS/JUN fluorescent knock-ins, AP-1 reporters) with target-gene reporters in single cells across repeated stimulations and through cell divisions. Quantify whether past activation history, such as pulse number, duration, and frequency, predicts later responses, and whether memory is heritable to daughter cells."
+    },
+    {
+      "title": "Sufficiency test by synthetic AP-1 induction and motif editing",
+      "description": "Optogenetically or chemically drive AP-1 transiently in naive cells and test whether this alone produces lasting accessibility and primed responses. Complement this with CRISPR deletion or mutation of specific AP-1 motifs at candidate memory enhancers (or dCas9 epigenetic editing) to test their necessity, and with in vivo validation in a model such as skin epithelial wound memory or trained immunity."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 918,
+  "cost_usd": 0.0119506
+}

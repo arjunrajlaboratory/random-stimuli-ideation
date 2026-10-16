@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sort pre-treatment cells by mitochondrial membrane potential, then challenge",
+      "description": "Stain untreated cells with TMRM or a similar potential-sensitive dye, sort high- and low-potential fractions, and expose each to the drug. If survival tracks the pre-existing mitochondrial state, that would show a functional, heritable OXPHOS trait that predicts survival before any drug exposure."
+    },
+    {
+      "title": "Single-cell intracellular drug quantification by imaging mass cytometry",
+      "description": "Use a mass-tagged or fluorescent analog of the drug, or mass spectrometry imaging, to measure intracellular drug concentration in each cell shortly after dosing. Correlating per-cell drug load with later survival would test whether survivors simply accumulate less drug, a pharmacokinetic explanation that differs from altered target signaling."
+    },
+    {
+      "title": "Time-to-death distributions from a live caspase biosensor",
+      "description": "Express a caspase-3 FRET or translocation reporter in the cell line and track each cell's time to apoptotic commitment after drug addition for several days. Comparing survivors that never commit with those that commit late would separate a fixed resistant subpopulation from a population that simply delays death."
+    },
+    {
+      "title": "Nuclear mechanics and chromatin compaction measured by microfluidic constriction",
+      "description": "Pass untreated cells through a constriction channel to measure nuclear deformability, then sort by deformability and test drug sensitivity. A link between nuclear stiffness and survival would point to a mechanical, nucleus-level determinant of drug tolerance that gene expression assays would miss."
+    },
+    {
+      "title": "Smfish and live-cell MS2 imaging of transcriptional bursting in efflux and target genes",
+      "description": "Measure burst frequency and size of the drug target and efflux transporter mRNAs in individual cells before treatment, either by smFISH on fixed cells or MS2 reporters in live cells. Testing whether survival is predicted by bursting kinetics would show whether persistence arises from stochastic transcription noise rather than a stable cell state."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of drug-tolerant persisters versus untreated or bulk-treated cells",
+      "Lineage barcoding to test whether survivors derive from a pre-existing clone or from de novo adaptation",
+      "Bulk or single-cell ATAC-seq to map chromatin accessibility changes in survivors",
+      "Genome-wide CRISPR knockout or activation screens for genes that enable survival under drug",
+      "DNA methylation and histone mark profiling of persister cells",
+      "Proteomics and phosphoproteomics to find signaling rewiring in surviving cells",
+      "Live-cell imaging with fluorescent cell-cycle reporters to track drug response in individual cells",
+      "Deep sequencing of resistance-associated mutations (e.g., EGFR, KRAS secondary mutations) in survivors",
+      "Metabolomics or metabolic flux profiling of persister versus sensitive cells",
+      "Testing EMT, stemness, or NF-kB signature enrichment in surviving populations"
+    ]
+  },
+  "output_tokens": 2717,
+  "cost_usd": 0.0015016699999999999
+}

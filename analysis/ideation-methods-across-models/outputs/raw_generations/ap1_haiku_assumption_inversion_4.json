@@ -1,0 +1,45 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-timed necessity test during the rest window (tests A3)",
+      "description": "Tag endogenous FOS/JUNB with an auxin-inducible degron and degrade the protein only during the quiescent interval after priming, then measure re-stimulation kinetics and AP-1 occupancy by CUT&RUN. If the memory is lost, the protein itself carries it; if it survives, the carrier is chromatin or another factor."
+    },
+    {
+      "title": "Subunit-by-subunit knockout and rescue (tests A2)",
+      "description": "Knock out individual AP-1 members (FOS, FOSB, FOSL1, FOSL2, JUN, JUNB, JUND, ATF3) in a priming paradigm, then rescue with wild-type or DNA-binding and dimerization-mutant variants. This shows which subunits and dimer combinations are required for the memory-dependent faster re-induction of target genes."
+    },
+    {
+      "title": "Live single-cell reporter tracking across divisions (tests A4 and A5)",
+      "description": "Express a destabilized fluorescent reporter driven by an AP-1-responsive promoter and track individual cells by time-lapse microscopy through priming, rest and re-stimulation. Compare the fraction of cells that retain the primed state and whether the state is inherited by daughter cells, to determine whether memory is a subpopulation or heritable property."
+    },
+    {
+      "title": "Cross-stimulus priming with orthogonal pathway controls (tests A7 and A8)",
+      "description": "Prime cells with two stimuli that converge on AP-1 through different upstream routes (for example phorbol ester versus EGF versus a stress stimulus), then cross-challenge each. Include MEK inhibitor and NF-kB or STAT inhibitor arms and profile their target genes, to see whether the memory encodes stimulus identity specifically and is AP-1-dependent rather than a generic activation signature."
+    },
+    {
+      "title": "Sufficiency test via controlled ectopic AP-1 pulse (tests A6)",
+      "description": "Induce a defined dose and duration of c-Jun or c-Fos with a dox-inducible or optogenetic clustering system, bypassing the upstream signal entirely, and measure whether the same persistent priming signature appears at endogenous targets upon later challenge. If an artificial pulse is sufficient, AP-1 is the rate-limiting memory node; if it is not, the memory needs upstream signaling."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "A1. 'Memory' means a durable state that outlasts the priming stimulus, so the design must include a washout or rest period and a later re-stimulation readout (faster or stronger response), not just a single-timepoint response.",
+      "A2. AP-1 is one functional entity. The Fos, Fosb, Fosl1/2, Jun, Junb, Jund and Atf3 family members are treated as interchangeable, and dimer composition is assumed not to matter for any memory function.",
+      "A3. The memory is carried by AP-1 itself (protein level or DNA occupancy) rather than by the chromatin, enhancer marks, or co-factors that AP-1 leaves behind or recruits. Correlated AP-1 persistence is taken as the carrier.",
+      "A4. Memory is a population-level property that bulk assays (Western blots, bulk RNA-seq, ChIP) can measure accurately. Subpopulations, stochastic priming, or cell-to-cell variance in memory strength are ignored.",
+      "A5. Memory is cell-autonomous and heritable across divisions, or else it is not heritable at all. The field usually does not separately test whether the primed state is transmitted to daughter cells.",
+      "A6. Correlation between AP-1 activity and a primed/memory state implies causation. Necessity and sufficiency are assumed to hold, and AP-1 is assumed to be the rate-limiting node rather than an upstream signal's readout.",
+      "A7. A faster or larger second response is a valid memory signature that specifically reflects AP-1. Signaling from NF-kB, STATs, ERK-independent stress pathways or simple gene-locus opening is assumed not to produce the same readout.",
+      "A8. Stimulus-specificity is assumed. Memory is taken to encode the identity of the prior stimulus, but it may instead encode a generic activation or stress level."
+    ]
+  },
+  "output_tokens": 4679,
+  "cost_usd": 0.00248349
+}

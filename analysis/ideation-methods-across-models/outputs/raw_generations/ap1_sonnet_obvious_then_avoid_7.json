@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic/chemogenic pulse-timing of AP-1 with a memory-persistence readout",
+      "description": "Use light- or ligand-inducible FOS/JUN (or degron-controlled) to deliver defined pulses of AP-1 activity in AP-1-null cells, then measure whether enhancer accessibility and a reporter response persist after AP-1 is removed. Varying pulse duration, frequency, and the delay before re-challenge defines the sufficiency, dose-dependence, and decay kinetics of memory."
+    },
+    {
+      "title": "Acute degron depletion after priming (separating establishment from maintenance)",
+      "description": "Prime cells, then rapidly degrade endogenous AP-1 (dTAG/AID on FOS/JUN/FOSL family members) only during the rest period and not during recall. If the memory persists without AP-1, it is an initiator rather than a maintainer, whereas loss of memory indicates continuous AP-1 requirement. Pair this with nascent-transcript and accessibility readouts."
+    },
+    {
+      "title": "Pioneer-factor residence and nucleosome-positioning footprinting by single-molecule methods",
+      "description": "Use Fiber-seq or single-molecule footprinting (SMF) on primed vs naive cells to determine, on individual DNA molecules, whether AP-1 sites remain nucleosome-free or bound after signal decay. Live-cell single-molecule tracking of HaloTag-FOS/JUN could also show whether residence time or binding fraction differs in primed cells."
+    },
+    {
+      "title": "Cell-lineage tracing with a lineage-barcoded split-population memory test",
+      "description": "Use barcoded cells to split sibling clones before and after priming, then track across divisions to see whether the primed state is inherited by daughters and how many divisions it persists. Comparing clonal concordance of recall responses to that of non-sibling cells quantifies mitotic heritability, and AP-1 perturbation in one sibling set tests its role."
+    },
+    {
+      "title": "Targeted epigenome editing of AP-1 sites to test locus-specific causality",
+      "description": "Use dCas9-based tools (e.g., KRAB, TET1, or DNMT3A) or base-editing of AP-1 motifs at selected enhancers in primed cells, then test locus-specific recall of the response. Conversely, tethering AP-1 domains with dCas9 at a naive locus tests whether local AP-1 recruitment alone is sufficient to install heritable accessibility and faster reactivation."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (FOS/JUN) occupancy before, during, and after a stimulus",
+      "ATAC-seq of chromatin accessibility at AP-1 motifs after stimulus withdrawal",
+      "Knockout/knockdown of FOS/JUN and test loss of the remembered response",
+      "Dominant-negative AP-1 (A-FOS) expression to block function",
+      "Re-stimulation experiments comparing primed vs naive cells' transcriptional response",
+      "scRNA-seq of primed cells to measure heterogeneity in memory",
+      "Histone mark profiling (H3K27ac, H3K4me1) at AP-1-bound enhancers",
+      "Pharmacologic inhibition of AP-1 (e.g., T-5224) during priming vs. recall",
+      "Hi-C/HiChIP of enhancer-promoter loops at AP-1 target loci",
+      "Motif enrichment analysis of memory-associated open regions"
+    ]
+  },
+  "output_tokens": 1224,
+  "cost_usd": 0.015014800000000002
+}

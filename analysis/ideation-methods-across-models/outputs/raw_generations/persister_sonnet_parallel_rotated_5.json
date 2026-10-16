@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 5,
+  "parallel": {
+    "field": "Education / social science",
+    "problem": "Why do a few students from identical schools and backgrounds thrive despite an intervention or adversity that derails most others?",
+    "how_studied": "Researchers use longitudinal cohort studies and positive-deviance analysis to identify outliers. They conduct qualitative interviews and mixed-methods work to find hidden factors such as mentors and routines. They also use randomized trials and propensity-score matching to test whether those factors cause the outcomes."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Education / social science\nProblem: Why do a few students from identical schools and backgrounds thrive despite an intervention or adversity that derails most others?\nHow it is studied: Researchers use longitudinal cohort studies and positive-deviance analysis to identify outliers. They conduct qualitative interviews and mixed-methods work to find hidden factors such as mentors and routines. They also use randomized trials and propensity-score matching to test whether those factors cause the outcomes.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded longitudinal cohort tracking of persister fates",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicate pools before drug, and sequence barcodes at several timepoints. This tests whether survival is pre-existing and heritable (the same barcodes surviving across replicates) or stochastic, as cohort studies do when following individuals over time."
+    },
+    {
+      "title": "Positive-deviance single-cell profiling of pre-treatment survivors",
+      "description": "Use barcode-matched sister cells, or live-cell reporters with sorting, to profile the pre-drug transcriptome, chromatin state and signaling of cells that later prove to be survivors. Comparing them with matched non-survivors from the same culture identifies the hidden factors, such as a drug-efflux or stress-response state, that predate treatment."
+    },
+    {
+      "title": "Time-lapse single-cell tracking with retrospective outcome linkage",
+      "description": "Image fluorescent reporters of cell cycle, ERK/AKT activity, and mitochondrial or redox state continuously before and after drug, then link each cell's history to its fate. Mixed-methods logic applies here: dynamic traces generate hypotheses about routines such as slow cycling or pulsatile signaling that distinguish survivors."
+    },
+    {
+      "title": "Matched-control causal perturbation of candidate survival factors",
+      "description": "Take candidate factors from the profiling, such as a state marker or regulator, and perturb them by CRISPRi/a or drug in a randomized, matched design. Compare survivor fractions with propensity-matched or randomized controls, adjusting for cell cycle, size and density, to test whether each factor causes survival rather than merely correlating with it."
+    },
+    {
+      "title": "Microenvironment-matched neighbor and spatial analysis",
+      "description": "Use spatial transcriptomics or imaging to compare survivors with non-survivors in matched local neighborhoods, controlling for density, nutrient gradients and paracrine signals. Controlling these 'identical school' conditions separates cell-intrinsic state from local context, and a co-culture or conditioned-medium experiment can then test the contextual factors."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 767,
+  "cost_usd": 0.0128895
+}

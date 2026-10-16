@@ -1,0 +1,43 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode lineage tracing before and after drug",
+      "description": "Label cells with a high-complexity heritable DNA barcode library (e.g., CellTag or LARRY-type) before treatment, then compare barcode frequencies in pre-treatment and survivor pools. Barcodes already enriched among survivors indicate pre-existing tolerant clones, while survivors with barcodes absent from the pre-treatment pool point to de novo induction."
+    },
+    {
+      "title": "Reversibility and drug-holiday test",
+      "description": "Sort survivors, grow them drug-free for several passages, then re-challenge with the drug alongside untreated parental cells. If sensitivity returns, survival is a reversible state; if it persists, it is a stable heritable trait. Pair with scRNA-seq/ATAC at each step to identify the state that is lost or retained."
+    },
+    {
+      "title": "Single-cell genome and clonal-variant profiling",
+      "description": "Perform single-cell DNA sequencing (or deep targeted sequencing of pooled cells) on pre-treatment populations and matched survivors to detect rare subclonal SNVs, copy-number states, and structural variants. Test whether survivors share a variant or CNV absent from the bulk, which would show that the 'identical' population harbors a pre-selected genetic subclone."
+    },
+    {
+      "title": "Spatial and co-culture niche perturbation",
+      "description": "Map survivors in situ using spatial transcriptomics or imaging on tumor organoids or xenografts, and test whether their location (e.g., edge versus core, contact with stroma) predicts survival. Then perturb the niche by transferring conditioned media, adding fibroblasts, or using micropatterned colonies to see whether survival depends on extrinsic signals rather than the cell's own state."
+    },
+    {
+      "title": "Live-cell reporter tracking of pre-treatment state",
+      "description": "Use fluorescent reporters (e.g., FUCCI for cell-cycle phase and a pathway activity biosensor such as an ERK or AKT KTR) to track individual cells through drug addition over days. Measure whether reporter state or cell-cycle phase at the moment of treatment predicts which cells survive, and whether survivors show a distinct dynamic trajectory, not just an endpoint difference."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survivors are pre-existing: a small subpopulation was already drug-tolerant before treatment, rather than survival being induced de novo by the drug.",
+      "Survival is a stable, heritable trait (genetic or epigenetically locked) rather than a reversible, non-genetic cell state that cells can enter and exit.",
+      "The cells are genetically identical, ignoring rare pre-existing somatic variants, copy-number heterogeneity, and clonal evolution during treatment.",
+      "Survival is cell-intrinsic and set by the cell's own properties, not by its neighbors, position, niche, or paracrine signals.",
+      "The drug reaches and acts on every cell uniformly, and a single endpoint (surviving cell number at one timepoint) captures the outcome, so a cell's state at the time of drug addition or its dynamic trajectory does not matter.",
+      "The mechanism is one of the known, expected resistance routes (on-target mutation, efflux, bypass pathway), so the search can be restricted to those candidates."
+    ]
+  },
+  "output_tokens": 2365,
+  "cost_usd": 0.00132578
+}

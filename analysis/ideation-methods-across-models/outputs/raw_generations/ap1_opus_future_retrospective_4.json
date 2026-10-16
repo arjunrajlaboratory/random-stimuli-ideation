@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Decay-per-division vs. decay-per-hour: decoupling time from mitosis",
+      "description": "Deliver a defined pulse of AP-1 activity (optogenetic FOS/JUN dimerization or a degron-stabilized bZIP), then measure the decay of primed enhancer accessibility and of the amplified secondary response while independently varying proliferation rate (contact inhibition, serum, CDK4/6 inhibitors, or cell-cycle-arrested cells). Memory that dilutes as a function of cell divisions implicates a chromatin-templated carrier, whereas decay that tracks wall-clock time regardless of division implicates protein/RNA half-life, and the two models are quantitatively distinguishable from the decay curves alone."
+    },
+    {
+      "title": "Sister-cell splitting plus clonal barcoding to measure the heritability of AP-1 state",
+      "description": "Combine a live AP-1 transcriptional reporter with lineage barcoding, then physically split sister cells (or clonal subpopulations) and challenge one half while profiling the other, quantifying how much of a cell's future stimulus response is predicted by its own mother's prior AP-1 state versus population average. This converts 'memory' into an explicit heritability statistic (mother-daughter and sister-sister correlation as a function of generations elapsed), which can be compared head-to-head against DNA methylation or H3K27me3 as alternative carriers."
+    },
+    {
+      "title": "Tether-and-release: sufficiency of AP-1 at a single enhancer",
+      "description": "Recruit the FOS/JUN bZIP or transactivation domain to one chosen naive enhancer with dCas9, then wash out or degrade the tether and ask whether that single element remains accessible, nucleosome-depleted, and hyper-responsive to later stimulation relative to unmanipulated alleles in the same nucleus. Allele-specific readouts (targeting one haplotype) give an internally controlled test of whether transient AP-1 occupancy is sufficient to install a persistent local state."
+    },
+    {
+      "title": "Mitotic bookmarking and daughter-cell inheritance of AP-1 sites",
+      "description": "Use live single-molecule imaging of FOS/JUN residence times through mitosis plus mitotic CUT&RUN/ATAC and daughter-cell-resolved accessibility profiling to determine whether AP-1 retains, rapidly re-occupies, or entirely loses its binding sites across division. The decisive measurement is the timing of re-establishment in early G1 relative to global chromatin reopening: true bookmarking predicts AP-1 sites reopen first and in a parent-matched, allele-correlated pattern."
+    },
+    {
+      "title": "Acute post-encoding degradation: is AP-1 the memory or merely its reader?",
+      "description": "Separate the encoding window from the maintenance window with an auxin/dTAG degron that removes AP-1 subunits only after a primed state has been established, then test whether the potentiated response survives the AP-1-free interval and returns when AP-1 is restored. Persistence without AP-1 would show that the factor writes and later interprets a memory stored elsewhere (nucleosome positioning, histone marks, or a cofactor), reframing AP-1 as a reader rather than the storage medium itself."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3322,
+  "cost_usd": 0.1129858
+}

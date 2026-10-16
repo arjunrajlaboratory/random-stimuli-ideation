@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sister-cell tracking",
+      "description": "Label cells with heritable DNA barcodes, split the population before drug exposure, and compare which barcodes survive in replicate arms. Recurrence of the same clones across replicates indicates pre-existing, heritable states, while random survivors indicate stochastic or non-heritable states."
+    },
+    {
+      "title": "Single-cell multi-omics of persisters over time",
+      "description": "Run scRNA-seq paired with scATAC-seq on cells before treatment, during drug exposure, and after regrowth, to identify transcriptional and chromatin states enriched in survivors. Trajectory and RNA-velocity analysis can show whether persisters arise from a rare pre-existing state or are induced by the drug."
+    },
+    {
+      "title": "Live-cell imaging with reporters and retrospective fate mapping",
+      "description": "Image single cells for days before and after drug addition using fluorescent reporters of signaling (such as ERK or AKT activity), cell cycle, and stress. Then link each cell's pre-treatment history, such as signaling dynamics, cell-cycle phase, or mitochondrial content, to its survival outcome, and isolate survivors for sequencing."
+    },
+    {
+      "title": "Pooled CRISPR screens plus pharmacologic perturbation of candidate states",
+      "description": "Run genome-wide or epigenetic-focused CRISPR knockout/interference screens under drug to find genes that raise or lower persister frequency. Then validate causal mechanisms, such as drug efflux, anti-apoptotic buffering, or oxidative stress (e.g., GPX4/ferroptosis), with targeted inhibitors."
+    },
+    {
+      "title": "Quantitative modeling of switching rates (fluctuation tests)",
+      "description": "Use Luria-Delbr\u00fcck-style fluctuation assays and sorted subpopulations to measure the rates at which cells switch into and out of the drug-tolerant state, and its memory duration. Fit stochastic models to the data to distinguish genetic mutation, epigenetic switching, and drug-induced adaptation, and predict dosing schedules that minimize persisters."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 762,
+  "cost_usd": 0.0103915
+}

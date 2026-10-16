@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 4,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis test with degron-controlled AP-1 washout",
+      "description": "Borrowing from magnetic hysteresis, apply graded AP-1 stimulation doses, then rapidly deplete c-Fos or JunB with an auxin-inducible degron and track enhancer accessibility (ATAC-seq), H3K27ac, and target-gene transcription over days. Memory is supported if the chromatin and expression state persists after AP-1 is gone, and the persistence scales with prior dose, unlike a transient response that returns to baseline."
+    },
+    {
+      "title": "Shape-memory 'training' by repeated stimulation cycles",
+      "description": "Like shape-memory alloys that recover faster after thermal training, expose cells to repeated AP-1-inducing pulses at varying inter-pulse intervals and compare second-round kinetics with naive cells. Live single-cell AP-1 reporters (e.g., FosB-driven or ATF3 reporters) would show whether priming produces faster, stronger, or more sustained re-activation, and whether the effect depends on the interval length."
+    },
+    {
+      "title": "Stratigraphic timestamping of AP-1 binding events",
+      "description": "Using the logic of sedimentary layers read in order of deposition, pair a time-resolved tag (e.g., a tamoxifen-inducible or photoconvertible reporter, or pulse-labeled histone marks) with AP-1 ChIP/CUT&RUN at successive time points to see which enhancers were occupied during each stimulation 'layer.' Sites that retain an early-layer tag after AP-1 has left would constitute a durable molecular record of past activity."
+    },
+    {
+      "title": "Capture-recapture of stimulated cells",
+      "description": "Adapting mark-recapture estimation from ecology, irreversibly label cells that experienced an AP-1 pulse (e.g., via a Cre/Tamoxifen-based or CaMPARI-type photoconversion marker), then later re-stimulate and measure what fraction of the marked population responds more strongly than unlabeled cells. Quantifying the retention and re-response of the marked population over time estimates how long and how reliably the memory persists per cell."
+    },
+    {
+      "title": "Latch versus integrator test via rescue of AP-1 after loss",
+      "description": "Analogous to distinguishing a self-holding digital latch from a leaky integrator, delete AP-1 at varying times after induction and then re-express it at defined windows (or target dCas9-based recruitment of Fos/Jun to a single memory-associated locus). If the memory state is self-sustaining, re-expression will not be required to maintain it, and the locus-specific reinstatement will test whether the memory is autonomous at that enhancer."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2227,
+  "cost_usd": 0.0012571099999999999
+}

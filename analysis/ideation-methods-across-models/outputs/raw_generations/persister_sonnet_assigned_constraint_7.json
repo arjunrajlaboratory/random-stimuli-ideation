@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 7,
+  "constraint": "using patient-derived samples",
+  "prompt": "Constraint: every one of your ideas must be carried out using patient-derived samples. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paired single-cell multi-omics of patient tumor biopsies before and during targeted therapy",
+      "description": "Perform scRNA-seq plus scATAC-seq (or multiome) on serial biopsies from the same patients at baseline, on-treatment (residual disease), and at progression to identify transcriptional and chromatin states enriched in surviving cells. Then test whether those states were already present at low frequency pre-treatment, which would indicate pre-existing rather than drug-induced tolerance."
+    },
+    {
+      "title": "Lineage tracing in patient-derived organoids/primary cultures with barcoding and post-hoc transcriptomics",
+      "description": "Introduce expressed DNA barcodes into patient-derived tumor cells, split the population into replicates, treat with the targeted drug, and sequence barcodes and transcriptomes of survivors versus untreated sister cells. Barcodes shared across independent replicates reveal heritable, pre-existing persister states, while barcodes appearing in only one replicate point to stochastic or induced survival."
+    },
+    {
+      "title": "Live-cell single-cell imaging and tracking of patient-derived cells with reporter-based fate readouts",
+      "description": "Time-lapse image patient tumor cells expressing signaling reporters (e.g., ERK/AKT kinase translocation reporters, cell-cycle and apoptosis sensors) before and through drug exposure, tracking each cell's lineage to the end. Retrospective analysis shows whether pre-treatment signaling dynamics, cell-cycle position, or lineage history predict survival, and fixed-cell multiplex profiling of the same cells can then link the phenotypes to molecular states."
+    },
+    {
+      "title": "Single-cell genomic and epigenomic profiling to exclude or confirm hidden genetic and epigenetic differences",
+      "description": "Run single-cell DNA sequencing (copy number and mutations) and single-cell DNA methylation or histone-mark profiling (e.g., CUT&Tag) on patient tumor samples before treatment and on persisters. This separates rare pre-existing subclones or copy-number changes from purely non-genetic, epigenetically maintained states, and reveals which regulators, such as KDM5 or other chromatin modifiers, sustain the tolerant state."
+    },
+    {
+      "title": "Spatial profiling of patient tumor sections to map the microenvironment around residual cells",
+      "description": "Apply spatial transcriptomics and multiplexed protein imaging to matched pre-treatment and residual-disease patient specimens to see whether surviving cells cluster near specific stromal, immune, hypoxic, or nutrient-limited niches. Ligand\u2013receptor analysis and co-culture of patient-derived cells with autologous stromal or immune cells can then test whether these niche signals cause tolerance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 976,
+  "cost_usd": 0.0141235
+}

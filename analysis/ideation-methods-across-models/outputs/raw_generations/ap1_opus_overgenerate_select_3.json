@@ -1,0 +1,61 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Decoupling writing from maintenance with acute AP-1 degradation",
+      "description": "Establish a primed state with a defined stimulus, then use dTAG or auxin degrons to acutely deplete JUN/FOS family proteins only after the stimulus is withdrawn, and ask whether the accessible enhancers, enhancer-promoter contacts, and faster re-induction survive. If memory persists without AP-1 protein, AP-1 writes a chromatin mark rather than being the memory itself; if memory collapses, AP-1 is the continuously required carrier."
+    },
+    {
+      "title": "Division-counted memory half-life from lineage-resolved live imaging",
+      "description": "Image a destabilized AP-1 activity reporter in a tracked lineage tree after a stimulus pulse and compute mother-daughter, sister, and cousin correlations to extract a memory half-life measured in cell divisions rather than hours. Repeating this in cycling versus arrested cells separates replication-coupled dilution of the state from simple time-dependent decay, which is the key discriminator between chromatin-based inheritance and slow protein turnover."
+    },
+    {
+      "title": "Hysteresis scan for bistability in the AP-1 feedback loop",
+      "description": "Titrate a tunable AP-1 input (optogenetic FOS/JUN or a graded growth factor dose) upward in one population and downward in a pre-activated population, then read AP-1 target expression per cell at matched doses. A reproducible gap between the ascending and descending branches is direct evidence that AP-1 autoregulation supports two stable states, which is the mechanistic signature a memory module should have."
+    },
+    {
+      "title": "Synthetic AP-1 motif reporter series testing sufficiency",
+      "description": "Integrate at a single safe-harbor locus a library of reporters that systematically vary AP-1 motif number, affinity, spacing, and neighboring pioneer-factor motifs, then measure both acute induction and persistence after the stimulus ends. This asks whether AP-1 sites alone are sufficient to encode memory or only do so in specific sequence contexts, cleanly separating AP-1's inducer role from its memory role."
+    },
+    {
+      "title": "Allele-specific maintenance in hybrid cells",
+      "description": "In F1 hybrid or heterozygously motif-edited cells, perform allele-resolved ATAC and nascent transcription after stimulus withdrawal to test whether the primed state is maintained in cis at individual alleles. Persistent allelic asymmetry would show the memory is written into the chromatin of the locus, while symmetric behavior would indicate memory lives in trans in the cellular AP-1 pool."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage-barcoded single-cell multiome (RNA + ATAC) to test whether AP-1 motif accessibility is more concordant within clones than between clones",
+      "Optogenetic FOS/JUN pulse followed by time-resolved ATAC-seq to measure the decay half-life of AP-1-opened enhancers after the input is gone",
+      "Hysteresis/dose-ramp experiment: compare AP-1 target output on the way up versus the way down in stimulus dose to detect bistability",
+      "Two-pulse priming assay measuring faster or stronger second response, with AP-1 motif deletion as the test of necessity",
+      "Auxin or dTAG degron depletion of JUN/FOS family members after a memory state is established, separating writing from maintenance",
+      "Live imaging of an AP-1 transcriptional reporter across cell generations to compute mother-daughter and cousin correlations and a memory half-life in divisions",
+      "Mitotic bookmarking test: single-molecule imaging of FOS/JUN residence on mitotic chromatin and ATAC on mitotic versus G1 cells",
+      "Synthetic reporter library varying AP-1 motif number, affinity, and spacing, integrated at a fixed locus, to ask whether motifs alone are sufficient for memory",
+      "CRISPRi tiling of AP-1-bound enhancers to find which individual sites are required for persistence rather than induction",
+      "MemorySeq-style fluctuation analysis to identify genes whose variability is heritable and test AP-1 motif enrichment at their regulatory elements",
+      "Sister-cell split assay: separate daughters, challenge one hours to days later, and test concordance of AP-1 target induction",
+      "Swap experiments of AP-1 family composition (FOS versus FOSL1 versus JUNB) to find which dimer sustains versus initiates the open state",
+      "Single-molecule tracking of JUN to measure residence time and clustering at memory enhancers versus transient enhancers",
+      "Chromatin mark time course (H3K27ac, H3K4me1, H3K4me2) at AP-1 sites post-stimulus to look for a latent bookmark after acetylation decays",
+      "Mathematical model of JUN autoregulation plus nucleosome feedback, fit to data, predicting conditions for bistability then tested experimentally",
+      "Hi-C or Micro-C after stimulus withdrawal to ask whether AP-1-dependent enhancer-promoter loops persist longer than transcription",
+      "Degradation of AP-1 during DNA replication only (S-phase-restricted depletion) to test whether memory is re-established at the fork",
+      "In vivo: wound or infection priming models where tissue is re-challenged weeks later, with AP-1 motif accessibility as readout",
+      "Test whether AP-1 memory is cell-intrinsic by transplanting or re-plating primed cells into naive environments",
+      "Perturb pioneer partners (e.g., TEAD, BACH, CEBP) to ask whether AP-1 is the memory carrier or merely a passenger at already-open sites",
+      "Measure AP-1 target state in cells arrested versus cycling to separate time-based decay from division-based dilution",
+      "Prospectively sort AP-1-reporter-high and -low cells, let them regrow, and test whether the distribution is restored and on what timescale",
+      "Compare memory duration across stimuli that converge on AP-1 (serum, TGF-beta, stiffness, drug) to ask if memory is stimulus-specific or a generic AP-1 state",
+      "Allele-specific ATAC in hybrid cells to ask whether the memory state is maintained cis at individual alleles rather than trans through protein levels"
+    ]
+  },
+  "output_tokens": 3508,
+  "cost_usd": 0.12354850000000002
+}

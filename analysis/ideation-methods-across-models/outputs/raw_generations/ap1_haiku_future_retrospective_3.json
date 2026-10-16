@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-based AP-1 removal after priming",
+      "description": "Prime cells with a stimulus, then use an auxin or dTAG degron to acutely deplete endogenous c-Jun or c-Fos and re-stimulate at timed intervals. Measuring whether primed enhancers still re-induce faster and stronger than naive ones tests whether AP-1 is needed to maintain the memory or only to establish it."
+    },
+    {
+      "title": "Lineage-barcoded single-cell memory tracing",
+      "description": "Combine CRISPR lineage barcodes with single-cell multiome (scATAC plus RNA) to follow cells through days of divisions after a transient AP-1-inducing stimulus. Tracking whether AP-1 motif accessibility and primed gene responses persist in clonal descendants, and how they vary between clones, distinguishes heritable chromatin memory from stochastic re-induction."
+    },
+    {
+      "title": "Synthetic AP-1 write-and-read recorder",
+      "description": "Build a genetic circuit in which a synthetic AP-1-responsive promoter drives an irreversible recombinase or base-editor 'write', with a separate 'read' reporter. Varying stimulus dose and duration, then measuring how long the recorded state persists without input, tests whether AP-1 activity alone is sufficient to create a durable memory."
+    },
+    {
+      "title": "Live-cell mitotic bookmarking of AP-1",
+      "description": "Tag endogenous Fos and Jun with a live-cell reporter and image occupancy through mitosis in synchronized cells, complemented by CUT&RUN on sorted mitotic cells. Showing whether AP-1 stays bound to memory-associated enhancers during division would support a bookmarking mechanism for transmitting memory to daughter cells."
+    },
+    {
+      "title": "Time-stamped in vivo ensemble reactivation",
+      "description": "Use an activity-dependent Fos-TRAP tag to label cells engaged by a defined in vivo experience, then profile their chromatin accessibility at AP-1 sites weeks later. Reactivating the tagged ensemble and selectively blocking AP-1 in those cells before reactivation would test whether AP-1-dependent chromatin states are required for the later response."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1929,
+  "cost_usd": 0.0011071100000000001
+}

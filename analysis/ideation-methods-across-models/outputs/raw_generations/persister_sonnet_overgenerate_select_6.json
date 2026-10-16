@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with sister-cell split before drug",
+      "description": "Barcode a population, split it into replicate arms, and treat one arm while profiling the other by scRNA-seq. Matching barcodes between survivors and untreated sister clones reveals the pre-existing transcriptional state that predicts survival and shows whether it is heritable, rather than inferred after the fact."
+    },
+    {
+      "title": "Live reporter imaging with retrospective survivor tracing",
+      "description": "Image cells with fluorescent reporters of target pathway activity, cell cycle, and stress for days before drug, then follow them through treatment. Tracing survivors back identifies which pre-drug dynamics, such as pathway pulses or long G1 dwell, predict survival."
+    },
+    {
+      "title": "Adapted fluctuation test with state-switching modeling",
+      "description": "Run Luria-Delbr\u00fcck style experiments on many small independent clonal cultures and measure the variance in survivor counts. Fitting stochastic models then separates rare mutations from reversible non-genetic switching and estimates switching rates and persister-state memory."
+    },
+    {
+      "title": "Single-cell multiome with FACS-based state enrichment",
+      "description": "Use paired scRNA and ATAC profiling to define a persister-like signature and its regulatory elements. Sort cells by a surface marker or reporter for that state, challenge them with drug, and test causality by perturbing the identified chromatin regulators or transcription factors."
+    },
+    {
+      "title": "Single-cell drug exposure and apoptotic priming readout",
+      "description": "Measure per-cell intracellular drug levels using fluorescent analogs or imaging mass spec, and measure mitochondrial apoptotic priming with BH3 profiling. This tests whether survival comes from lower effective drug exposure or from a higher death threshold, which expression data alone cannot separate."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Single-cell RNA-seq of untreated vs. drug-treated populations to find pre-existing persister-like states",
+      "Lineage barcoding (e.g., Watermelon/ClonMapper) to test whether survivors derive from pre-existing clones before drug",
+      "Time-lapse live-cell imaging with reporter tracking of pre-treatment history of survivors",
+      "Single-cell ATAC-seq/multiome to map chromatin accessibility of persisters",
+      "Mitochondrial DNA mutation lineage tracing combined with scRNA-seq",
+      "Fluctuation test (Luria-Delbr\u00fcck) adapted to distinguish stochastic switching from mutation",
+      "Single-cell proteomics/CyTOF of signaling pathway activity (MAPK, PI3K) before and after drug",
+      "Live reporters of drug target pathway activity with FACS sorting of high/low cells followed by drug challenge",
+      "Cell-cycle state analysis: slow-cycling/G0 or G1 dwell time as predictor of survival",
+      "Metabolic imaging (FLIM of NAD(P)H) of single cells to predict survival",
+      "Drug uptake/efflux measurement per cell using fluorescent drug analogs or mass spec imaging",
+      "CRISPRi/CRISPRa screens in persister cells to find survival-required genes",
+      "Epigenetic inhibitor screen (HDAC, KDM5, EZH2) to test chromatin-based tolerance",
+      "Spatial transcriptomics of tumors/xenografts to find microenvironment niches of residual cells",
+      "Single-cell DNA-seq for copy number and extrachromosomal DNA heterogeneity",
+      "Ferroptosis/lipid peroxidation and GPX4 dependence measurement in persisters",
+      "Mathematical modeling of switching rates fitted to time-resolved clonal data",
+      "Stress response and apoptotic priming measurement via BH3 profiling of single cells",
+      "Transcription noise measurement with smFISH of resistance-associated genes",
+      "Tracking inheritance of persister state across cell divisions using sister-cell pair analysis"
+    ]
+  },
+  "output_tokens": 1358,
+  "cost_usd": 0.016371200000000002
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heritability of AP-1 state across clonal lineages",
+      "description": "Use live-cell reporters of AP-1 activity (e.g., TRE-driven fluorescent protein) with long-term imaging and cell tracking to quantify mother-daughter and sister-sister correlations in reporter level, fitting the decay of correlation with generation number to estimate a memory half-life. Pair this with single-cell RNA/ATAC profiling of sorted high- and low-reporter cells to confirm that the imaging readout reflects a broader transcriptional state."
+    },
+    {
+      "title": "Transient stimulation plus timed AP-1 removal",
+      "description": "Deliver a brief stimulus that activates AP-1 (cytokine, drug pulse, matrix stiffening, or scratch wound), then use degron-tagged FOS/JUN family proteins to eliminate AP-1 either during the stimulus or only after it has subsided, and ask which window is required for the persistent downstream phenotype. If AP-1 is needed only transiently to establish a state that then persists in its absence, that favors an initiator role; if continued presence is required, it acts as a self-sustaining maintenance circuit."
+    },
+    {
+      "title": "Chromatin footprint persistence after signal withdrawal",
+      "description": "Run time-course ATAC-seq, CUT&RUN for AP-1 factors, and histone modification profiling (H3K27ac, H3K4me1) across stimulation and a long washout, testing whether AP-1-motif-containing enhancers opened during stimulation remain accessible and primed long after AP-1 occupancy and target transcription have returned to baseline. Latent, still-open enhancers that reactivate faster upon restimulation would be direct evidence of a stored chromatin trace."
+    },
+    {
+      "title": "Restimulation kinetics as a memory assay",
+      "description": "Compare naive cells with cells that experienced a prior stimulus days or weeks earlier, measuring the speed, amplitude, and dose threshold of AP-1 target induction on a second exposure using nascent transcription readouts. Faster or stronger secondary responses that scale with the chromatin changes above would operationalize memory as an altered input-output relationship rather than a static expression difference."
+    },
+    {
+      "title": "Synthetic perturbation of the AP-1 feedback loop",
+      "description": "Use CRISPRa/CRISPRi or inducible expression to force AP-1 activity on or off for a defined window in otherwise unstimulated cells, then follow whether the induced state persists after the perturbation ends and whether mutating AP-1 binding sites at key self-reinforcing loci (including FOS/JUN autoregulatory enhancers) abolishes persistence. This tests sufficiency and identifies the specific cis-elements that store the state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1448,
+  "cost_usd": 0.07346240000000001
+}

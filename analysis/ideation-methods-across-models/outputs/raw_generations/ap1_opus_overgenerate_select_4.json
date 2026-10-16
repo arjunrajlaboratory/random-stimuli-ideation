@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-resolved heritability of AP-1 activity",
+      "description": "Barcode single cells (LARRY/Watermelon-style) and profile sister and cousin cells by scRNA-seq or live AP-1 reporter imaging to compute how AP-1 activity autocorrelates across divisions. Comparing the decay constant for AP-1 target output against other signaling-responsive programs gives a quantitative, assumption-light test of whether AP-1 state is actually heritable rather than just stimulus-driven."
+    },
+    {
+      "title": "Degron separation of establishment from maintenance",
+      "description": "Tag FOS/JUN with a degron and deplete AP-1 either before stimulation or hours after the state has formed, then read out accessibility (ATAC) and restimulation response. True memory predicts that the primed state persists after AP-1 protein is removed, whereas a purely sustained-signal model predicts collapse."
+    },
+    {
+      "title": "Prime-rest-rechallenge transcriptional priming assay",
+      "description": "Deliver a defined transient stimulus, wash out and rest cells for varying intervals and division numbers, then rechallenge and measure the amplitude and latency of AP-1 target induction by nascent RNA (TT-seq or single-molecule FISH). Faster or larger secondary responses that decay with time and divisions directly quantify the strength and lifetime of the memory."
+    },
+    {
+      "title": "Synthetic AP-1 site array for sufficiency",
+      "description": "Integrate arrays of AP-1 motifs (and motif-scrambled controls) at a neutral genomic locus adjacent to a reporter, then drive AP-1 binding transiently with an optogenetic or chemically inducible Fos/Jun module. Persistent reporter expression and accessibility after induction ends would show AP-1 binding is sufficient to write a heritable state, independent of pre-existing locus context."
+    },
+    {
+      "title": "Does the memory survive replication and mitosis?",
+      "description": "Compare persistence of AP-1-primed accessibility in cycling cells versus cells arrested pharmacologically or in post-mitotic states, and perform mitotic-chromosome CUT&RUN to test for AP-1 bookmarking. This distinguishes a slowly-decaying protein/chromatin state from a genuinely replication-heritable epigenetic mechanism and identifies the step where memory is copied or lost."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Clonal barcoding (e.g. Watermelon/LARRY) plus scRNA-seq to ask whether AP-1 activity level is heritable across sister and cousin cells",
+      "Live-cell FOS/JUN reporter imaging across lineages to measure autocorrelation time of AP-1 activity and how it decays with each division",
+      "Pulse-chase ATAC-seq after transient stimulation to test whether AP-1-bound enhancers stay open long after AP-1 protein is gone",
+      "Acute degron depletion of FOS/JUN before vs after stimulus to separate establishment from maintenance of the accessible state",
+      "Dose-response priming: give stimulus once, wait, restimulate, and measure whether response amplitude/speed is enhanced at AP-1 sites (transcriptional priming assay)",
+      "Single-molecule tracking of JUN to compare residence times at primed vs naive enhancers",
+      "CUT&RUN time course of AP-1 plus partner TFs to see whether AP-1 departure precedes or follows loss of the memory state",
+      "Mitotic bookmarking test: fixed-cell imaging and mitotic CUT&RUN to ask whether AP-1 stays chromatin-bound through mitosis",
+      "Synthetic AP-1 site array integrated at a neutral locus to test whether AP-1 binding alone is sufficient to create a heritable open state",
+      "Optogenetic or chemogenetic pulsatile AP-1 induction to map the stimulus duration/amplitude threshold required for persistent state change",
+      "Hi-C/Micro-C before and after transient AP-1 induction to test whether memory is stored as persistent enhancer-promoter loops",
+      "Measure partner-dependence: knock out individual Jun/Fos family members and see which are required for maintenance vs induction",
+      "Test chromatin remodeler dependence (BRG1/SMARCA4, p300) in maintaining AP-1-primed accessibility after AP-1 removal",
+      "DNA methylation and H3K4me1 profiling at AP-1 sites to see whether a covalent mark accompanies the persistent state",
+      "Replication-coupled assay: block cell cycle vs allow division to ask whether memory survives DNA replication",
+      "Mathematical modeling and fitting of AP-1 autoregulatory feedback (JUN autoactivation) to test bistability predictions",
+      "Perturb-seq with AP-1 family and cofactor sgRNAs read out by a memory reporter to find the maintenance machinery",
+      "Cross-stimulus generalization test: prime with one signal, challenge with a different AP-1-engaging signal, measure transfer of memory",
+      "Compare AP-1 memory across cell types and in post-mitotic vs dividing cells to test division dependence",
+      "In vivo lineage tracing of AP-1-high cells (FOS-CreER) to test whether past AP-1 activity predicts future cell fate or drug tolerance"
+    ]
+  },
+  "output_tokens": 2163,
+  "cost_usd": 0.0777979
+}

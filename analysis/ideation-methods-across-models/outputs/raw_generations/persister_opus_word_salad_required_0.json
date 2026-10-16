@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 0,
+  "stimulus": "allonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nallonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "\"Allonymous\" cells: retrospective capture of the pre-drug primed state",
+      "description": "Barcode an isogenic population and use a sister-cell split design (Rewind/ClonMapper-style) so that survivors' barcodes can be traced back to their untreated twins, which are then profiled by scRNA-seq. This measures the cell state that existed before drug exposure, distinguishing pre-existing priming from drug-induced reprogramming."
+    },
+    {
+      "title": "\"Indelibly\": measuring the memory half-life of the resistant state",
+      "description": "Isolate primed or persister cells, culture them drug-free for intervals from hours to weeks, and re-challenge at each time point to build a decay curve of resistance probability. The decay rate, compared to the division rate, reveals whether the state is a transient fluctuation or a heritable epigenetic memory."
+    },
+    {
+      "title": "\"Insulator\": stochastic chromatin boundary loss at resistance driver loci",
+      "description": "Combine single-cell ATAC/CUT&Tag with Micro-C or 4C at loci such as AXL, NGFR, or MET in primed versus naive cells, then CRISPRi the implicated CTCF/cohesin boundary elements. This tests whether rare survival arises from sporadic loss of insulation that permits ectopic enhancer-promoter contact."
+    },
+    {
+      "title": "\"Sync\": signaling and cell-cycle phase at the moment of drug addition",
+      "description": "Image cells carrying ERK/AKT kinase translocation reporters plus a PIP-FUCCI cell-cycle sensor continuously through drug addition and for days afterward, linking each cell's pre-treatment dynamics to its fate. This asks whether survival is determined by the timing and phase of signaling pulses, a dynamic cause invisible in fixed-cell snapshots."
+    },
+    {
+      "title": "\"Mesh\": survival as a property of the local cellular neighborhood",
+      "description": "Use micropatterned islands, controlled seeding densities, and tunable-stiffness substrates, together with spatial transcriptomics of residual disease, to quantify how neighbor contacts, local density, and matrix mechanics predict persistence. Non-random spatial clustering of survivors would show that the rare state is partly environmental rather than cell-intrinsic."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2508,
+  "cost_usd": 0.1030885
+}

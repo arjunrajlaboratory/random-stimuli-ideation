@@ -1,0 +1,46 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Timing the decision: sister-cell splitting across a delay series",
+      "description": "Split each cell's progeny into a treated arm and an untreated arm after delays of 0, 1, 2, 4 and 8 divisions (heritable barcodes plus imaging to track the splits), then ask how well one sister's fate predicts the other's as a function of delay. This directly measures whether fate is pre-encoded and for how long that information persists, instead of assuming a stable primed state exists; a predictability curve that decays to chance within a division argues the decision is made during treatment, not before."
+    },
+    {
+      "title": "Neighborhood as a cause, not a nuisance: ablate the neighbors",
+      "description": "Image survival in situ without replating, record each cell's local density and neighbor identity, then test causality by selectively killing or silencing defined neighbor subsets (inducible caspase or optogenetic ablation in a mixed co-culture) and by transplanting conditioned medium from candidate 'protective' neighborhoods. This converts the usual correlational spatial description into a test of whether survival is conferred by the local niche rather than owned by the cell."
+    },
+    {
+      "title": "Audit the 'isogenic' assumption with single-cell DNA and mtDNA sequencing of survivors",
+      "description": "Run matched single-cell whole-genome (CNV/aneuploidy) and mtDNA heteroplasmy sequencing on the parental population and on drug survivors from the same barcoded lineages, so that lineage identity distinguishes pre-existing variants from treatment-induced ones. If survivors are enriched for particular karyotypes or mtDNA variants already present at low frequency, 'non-genetic heterogeneity' in that system is partly mis-assigned genetics."
+    },
+    {
+      "title": "Per-cell pharmacology: measure the dose each cell actually got",
+      "description": "Use a fluorescent or clickable drug analog (validated against the parent compound) plus live efflux-activity reporters and a fixed-cell target-engagement/phospho-signaling readout to quantify intracellular drug level and target inhibition in every cell, then relate those to fate. This tests whether 'identical treatment' holds at the single-cell level and whether apparent state heterogeneity is downstream of exposure heterogeneity."
+    },
+    {
+      "title": "Decompose survival into sequential bottlenecks by continuous long-term imaging",
+      "description": "Follow every founder cell by continuous imaging from drug addition through weeks of persistence and regrowth, scoring death, arrest, cycling-through, and re-awakening as separate events, and fit predictors to each transition independently. This replaces the single binary endpoint with a staged model and can show that early tolerance and late outgrowth are governed by different, even anticorrelated, cell properties \u2014 and that averaging survivors conflates distinct routes."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "That survival is determined by a pre-existing cell state present before the drug is added, rather than by a stochastic decision made during or after exposure \u2014 this is what licenses the standard 'profile the untreated population, find the rare primed cells' design.",
+      "That the determinant is cell-intrinsic, so neighbors, local density, secreted factors and spatial position can be ignored \u2014 even though the routine dissociate-and-replate workflow destroys exactly that information.",
+      "That 'genetically identical' is literally true of a cultured line, or even of a single-cell-derived clone, so subclonal SNVs, CNVs, aneuploidy and mtDNA heteroplasmy need not be measured.",
+      "That every cell receives the same pharmacological insult, so differences in outcome must come from cell state rather than from differences in intracellular drug concentration, efflux, or target occupancy.",
+      "That survival is a single binary fate produced by one mechanism on one timescale, so a colony count at 2\u20134 weeks is a valid readout of what happened in the first hours.",
+      "That a transcriptome snapshot is the right currency of 'state' \u2014 that what matters appears in mRNA rather than in protein, signaling, metabolism, chromatin, or cell size/cycle/mechanics.",
+      "That there is one rare primed state rather than several independent routes to the same outcome, so averaging across survivors is meaningful.",
+      "That profiling survivors reveals causes rather than consequences of having survived, and that a marker correlated with survival is instructive for it.",
+      "That a drug-naive clonal line in 2D culture is an adequate stand-in for the clinically relevant residual-disease population."
+    ]
+  },
+  "output_tokens": 5685,
+  "cost_usd": 0.2183162
+}

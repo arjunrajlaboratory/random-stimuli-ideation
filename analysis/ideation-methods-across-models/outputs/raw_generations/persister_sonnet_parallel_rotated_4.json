@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 4,
+  "parallel": {
+    "field": "Epidemiology of infrastructure / civil engineering",
+    "problem": "Why do a few buildings of the same design and construction survive an earthquake while most nearby ones collapse?",
+    "how_studied": "Engineers run post-event forensic surveys that compare damaged and undamaged structures. They add soil-condition and site-response data, such as local geology and shaking intensity. They use shake-table experiments and finite-element models with randomized material properties to test which hidden variability explains the survival."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Epidemiology of infrastructure / civil engineering\nProblem: Why do a few buildings of the same design and construction survive an earthquake while most nearby ones collapse?\nHow it is studied: Engineers run post-event forensic surveys that compare damaged and undamaged structures. They add soil-condition and site-response data, such as local geology and shaking intensity. They use shake-table experiments and finite-element models with randomized material properties to test which hidden variability explains the survival.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Matched survivor-vs-casualty forensic profiling",
+      "description": "Before drug exposure, barcode and live-image cells, then treat and identify survivors. Retrospectively compare the pre-treatment state of each survivor lineage (transcriptome via lineage-barcoded scRNA-seq, signaling reporters, cell cycle, mitochondrial content) with its matched dying neighbors. This is the equivalent of comparing standing and collapsed buildings, and it tests which pre-existing state predicts survival instead of which state appears afterward."
+    },
+    {
+      "title": "Microenvironment 'site-response' mapping",
+      "description": "Record local conditions for every cell in culture or in tumor sections, including density, neighbor identity, oxygen, nutrient and pH gradients, drug penetration (using fluorescent drug analogs), and position within colonies. Then use spatial statistics to test whether survivors cluster in protective niches, as surviving buildings cluster on favorable soil. Compare against spatial transcriptomics from treated tumors."
+    },
+    {
+      "title": "Randomized-parameter in silico models of drug response",
+      "description": "Build mechanistic or stochastic models of the drug target pathway, apoptosis threshold, and efflux, and draw protein abundances and rate constants from measured single-cell distributions, like finite-element models with randomized material properties. Run sensitivity analysis to find which variable's variation (such as BCL-2 family ratios or target expression noise) best reproduces the observed survivor fraction. Then validate the top candidates experimentally."
+    },
+    {
+      "title": "Controlled perturbation 'shake-table' on isogenic populations",
+      "description": "Apply graded, standardized drug doses, pulses, and combinations to sorted subpopulations, for example high versus low expression of a candidate state marker. Quantify dose-response curves, time to death, and survivor fraction. Then perturb the candidate variability source directly, such as by tuning expression with CRISPRi/a or inhibiting a stress pathway, to test whether it causally shifts the survivor fraction."
+    },
+    {
+      "title": "Heritability and state-transition kinetics of survival",
+      "description": "Measure whether survival is transient or heritable by tracking sister cells and clonal lineages across drug-free and drug cycles. Use fluctuation-test (Luria-Delbr\u00fcck) designs and Markov state-switching models to separate pre-existing epigenetic states from newly acquired mutations. Add whole-genome sequencing and chromatin accessibility of survivors to confirm that they are genetically identical and to find the epigenetic basis of their survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 906,
+  "cost_usd": 0.0142915
+}

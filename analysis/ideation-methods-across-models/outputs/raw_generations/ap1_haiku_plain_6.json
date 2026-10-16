@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus washout with persistence tracking",
+      "description": "Induce AP-1 activity with a controlled stimulus or an inducible Fos/Jun system, then withdraw it and track chromatin accessibility (ATAC-seq), H3K27ac, and target-gene expression over days. Memory is supported if these marks and transcripts stay elevated after AP-1 activity returns to baseline, and decay kinetics can be compared with control sites."
+    },
+    {
+      "title": "Rechallenge test for primed responses",
+      "description": "Compare first and second exposures to the same stimulus after a rest period, measuring the speed, amplitude, and AP-1 target-gene induction in each. Repeating this in Fos or Jun knockout and dominant-negative cells tests whether AP-1 is required for the faster, stronger secondary response."
+    },
+    {
+      "title": "Causal dissection of AP-1 motifs at memory enhancers",
+      "description": "Identify enhancers that stay open after washout, then use CRISPR base editing or saturation mutagenesis to disrupt their AP-1 motifs. Check whether accessibility persistence and faster re-induction are lost, and use dCas9-based epigenetic editing to test whether AP-1 binding alone is sufficient to restore the memory signal."
+    },
+    {
+      "title": "Mapping AP-1 occupancy versus epigenetic retention over time",
+      "description": "Run CUT&RUN or ChIP-seq for c-Fos and c-Jun alongside histone marks across a stimulation and washout time course. This shows whether memory is carried by retained histone marks after AP-1 has left the chromatin (bookmarking), or whether AP-1 must rebind at each re-exposure."
+    },
+    {
+      "title": "Single-cell live reporting of activation history across divisions",
+      "description": "Use a destabilized fluorescent reporter driven by the Fos promoter, with live imaging and lineage tracking, to record each cell's prior activation history. Test whether past AP-1 activity predicts future response in the same cell and whether that history is inherited by daughter cells, which would distinguish cell-intrinsic memory from population-level effects."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1544,
+  "cost_usd": 0.00091446
+}

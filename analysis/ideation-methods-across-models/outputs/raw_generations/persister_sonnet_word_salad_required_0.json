@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 0,
+  "stimulus": "allonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nallonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with pre-treatment sister-cell splitting",
+      "description": "Tag cells with heritable expression barcodes, split the population into sister aliquots, and treat one while sequencing the other (scRNA-seq) before drug. Persister lineages can then be traced back to their pre-existing transcriptional states, which tests whether survival is predetermined or stochastic. Like the 'mesh' and 'sync' words in the material, the design relies on matching paired units across two conditions."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporter fate tracking",
+      "description": "Image cells with fluorescent reporters for cell cycle (FUCCI), apoptosis, and stress pathways (e.g., ERK, p53) for days before and after drug addition. Retrospectively link single-cell dynamics, such as cycle length, pulsatile signaling, or mitochondrial state, to survival or death. This adds the temporal dimension that fixed snapshots miss."
+    },
+    {
+      "title": "Single-cell multi-omic profiling of persisters (RNA + ATAC + protein)",
+      "description": "Profile surviving cells and untreated controls at several timepoints with joint scRNA/scATAC and phospho-proteomics. This would identify chromatin accessibility and signaling states, such as an epigenetic drug-tolerant program or reactivated bypass pathways, that distinguish persisters. Comparing early and late timepoints separates selection of pre-existing states from drug-induced adaptation."
+    },
+    {
+      "title": "Functional perturbation screens within persisters (CRISPRi/a and epigenetic inhibitors)",
+      "description": "Run pooled CRISPR screens, or treat with chromatin modifier inhibitors such as HDAC or KDM5 inhibitors, in combination with the targeted drug. Measure persister numbers to find causal regulators of survival rather than correlates. Hits from the profiling experiments can then be validated by checking whether knockdown shrinks the persister fraction."
+    },
+    {
+      "title": "Metabolic and stress-state measurements at single-cell resolution",
+      "description": "Measure ROS, mitochondrial membrane potential, lipid peroxidation (GPX4 dependence), and drug efflux or intracellular drug concentration in individual cells with flow cytometry or FLIM. Sort high and low cells, expose them to drug, and test whether these states predict survival. This tests non-genetic physiological explanations such as ferroptosis resistance or lower drug accumulation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 878,
+  "cost_usd": 0.014211499999999998
+}

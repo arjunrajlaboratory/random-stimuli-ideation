@@ -171,3 +171,83 @@ Append-only log of gotchas, surprises, and insights.
 **mitigation_type**: ambient-awareness
 
 **structural_mitigation_candidate**: none
+
+### [2026-10-15] Showing a model its own obvious ideas is the strongest ideation lever, and it scales with model size
+
+**Category**: insight
+
+**What happened**: Nine prompts × Haiku/Sonnet/Opus 5.5 × two questions (2,160 ideas). Critique and revise (feed back the model's own plain ideas as "what everyone would propose") gave 34/240 distinct useful-novel ideas vs 0 for plain; list-the-obvious-then-avoid gave 25. Gains were concentrated in Opus (+19 vs +10 Sonnet, +5 Haiku for critique and revise). Overgenerate-then-select raised novelty with no usefulness cost. Assigned constraints and assigned parallel problems (variety by construction) did not beat plain.
+
+**Why it matters**: Injected variety (random domains, constraints, parallels) is weaker than making the mode explicit. Two of the best prompts were also complementary (Opus 19 + 19 → 34 distinct).
+
+**Resolution**: analysis/ideation-methods-across-models; findings F-001/F-002 in .living/findings/llm-ideation.md. Candidate for mycelium:ideas after human ratings.
+
+**Tags**: llm, ideation, mode-collapse, prompt-design, model-scale
+
+**mitigation_type**: ambient-awareness
+
+**structural_mitigation_candidate**: none (scientific finding)
+
+### [2026-10-15] Registering small counts as number words collides with every structural "one"/"five"/"seven" in scitexlintr
+
+**Category**: gotcha
+
+**What happened**: Values like n_methods_beating_plain = "five" registered as text made scitexlintr flag 101 raw-generated-value errors on ordinary words ("one of the", "seven new prompts"). Separately, fmt_p with .3f printed "= 0.001" for a Holm-adjusted permutation p of 0.0014, below the attainable floor, which the numerical reviewer caught.
+
+**Why it matters**: Number words are as collision-prone as small digits; p-values near the permutation floor need significant figures, not fixed decimals.
+
+**Resolution**: Register counts as integers (prose keeps structural counts in words); fmt_p uses two significant figures below 0.01 (scripts/07_report_values.py).
+
+**Tags**: report, scitexlintr, p-values
+
+**mitigation_type**: structural
+
+**structural_mitigation_candidate**: fmt_p in 07_report_values.py; integer registrations.
+
+### [2026-10-15] Headless Opus often returns the wrong number of structured items; validate and re-send
+
+**Category**: tip
+
+**What happened**: 13 of 432 generation calls (almost all Opus 5.5) returned 0, 1 or 6 ideas instead of 5, or an empty scaffold list, despite the JSON schema. Re-sending the identical prompt fixed every case within three attempts.
+
+**Why it matters**: A JSON schema does not enforce array length; silent acceptance would bias per-call counts.
+
+**Resolution**: 01_generate.valid() checks idea count and scaffold lists; retries are logged per call (`attempts`).
+
+**Tags**: llm, tooling, claude-cli, structured-output
+
+**mitigation_type**: structural
+
+**structural_mitigation_candidate**: valid() in scripts/01_generate.py
+
+### [2026-10-15] Report reviewers again caught "same ranking" overclaims next to correct numbers
+
+**Category**: insight
+
+**What happened**: The abstract, a heading and the caveat said a second judge gave "the same ranking"; the data supported only the same best and worst prompts (Spearman ~0.86 over nine prompts). The numerical reviewer also caught a wrong superlative ("lost the most usefulness") and a wrong causal "so". Same failure class as the 2026-10-03 report.
+
+**Why it matters**: The orchestrator checks numbers but not the comparative words and causal connectives around them; this recurs across reports.
+
+**Resolution**: Fixed; future drafts should check every superlative and "so/because" against the summary JSON before review.
+
+**Tags**: report, review, overclaiming
+
+**mitigation_type**: ambient-awareness
+
+**structural_mitigation_candidate**: a pre-review script that lists superlatives and causal connectives in report prose for manual check
+
+### [2026-10-16] Bolting new arms onto a judged study: judge them with anchor ideas, keep every main batch frozen
+
+**Category**: tip
+
+**What happened**: Two follow-up arms (required poem, random words) were added after the main analysis. Re-judging all 2,640 ideas together would have cost about $45. Instead the new ideas were judged in their own batches, half new and half already-judged main-study anchors. The anchors' new scores tracked their original means (Spearman 0.88 novelty, 0.80 usefulness; novelty +0.18). The follow-up arms were kept out of the main arm list. That kept strip and judge batches byte-identical (cache-validated), along with RNG streams and Holm families. A diff of analysis_summary.json confirmed that no main-study value changed.
+
+**Why it matters**: Arms can be added cheaply (~$19 here) without silently changing reported results, and the anchors put a number on judge drift instead of leaving it assumed. The drift was material here. Ranks held, but the level moved: the share of anchor ratings clearing both bars rose from 13% to 17%. Many new ideas sat exactly at the novelty cutoff, so subtracting the anchor shift cut the follow-up counts from 12 and 9 to 4 and 2. Compare levels as well as ranks, and report a drift-adjusted count next to the raw one.
+
+**Resolution**: config.FOLLOWUP_ARMS / ALL_ARMS; 02_strip.py cohorts; 04b_judge_followup.py; follow-up block in 05_analysis.py with its own seed.
+
+**Tags**: llm, evaluation, judge-calibration, reproducibility, phased-analysis
+
+**mitigation_type**: structural
+
+**structural_mitigation_candidate**: cache prompt-hash validation plus the summary diff; could be a test that main-study keys are unchanged when follow-up arms exist

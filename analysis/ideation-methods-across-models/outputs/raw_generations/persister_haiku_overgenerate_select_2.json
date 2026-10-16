@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment reporter tracking linked to retrospective single-cell profiling",
+      "description": "Use live-cell fluorescent reporters (e.g., CDK2 activity, cell-cycle or stress-pathway sensors) to follow individual cells through drug exposure and record their fate. Then profile the tracked cells retrospectively (e.g., by fixing and sequencing or by photo-labelled recovery) to identify which pre-treatment states predict survival."
+    },
+    {
+      "title": "Lineage barcoding to distinguish pre-existing from drug-induced tolerance",
+      "description": "Label each founder cell with a unique heritable DNA barcode before treatment and track barcode frequencies through drug exposure and recovery. If survivors come from a small set of pre-marked clones, tolerance was pre-existing; if barcodes are randomly represented, tolerance is induced by the drug."
+    },
+    {
+      "title": "Per-cell intracellular drug quantification",
+      "description": "Measure how much drug each cell actually accumulates, using fluorescent analogs of the drug or LC-MS on flow-sorted cells. Test whether survivors have lower intracellular drug levels due to uptake or efflux differences rather than altered target biology."
+    },
+    {
+      "title": "Chromatin accessibility priming and causal perturbation",
+      "description": "Profile chromatin accessibility by scATAC-seq in drug-naive cells and identify regions that are open in cells that later survive. Then perturb the implicated chromatin regulators to test whether they causally change survival fraction."
+    },
+    {
+      "title": "Pooled CRISPR screen with single-cell transcriptomic readout",
+      "description": "Run a genome-wide knockout screen under drug treatment with single-cell RNA readout so each perturbation's effect on both survival and cell state is measured together. This separates genes that drive survival from those that merely mark a tolerant state."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Single-cell RNA-seq of drug-naive population to find pre-existing transcriptional states that predict survival",
+      "DNA lineage barcoding to test whether survivors derive from pre-existing clones or drug-induced switching",
+      "Time-lapse imaging with fluorescent cell-cycle or kinase reporters, linking each cell's pre-treatment state to its fate",
+      "scATAC-seq of pre-treatment cells to identify chromatin priming that marks future persisters",
+      "Perturbation of chromatin regulators (e.g., KDM5A, EZH2) to test whether epigenetic state causally controls survival",
+      "Pooled CRISPR knockout screen comparing survivors with unsorted cells to find genes that enable survival",
+      "Perturb-seq with single-cell readout to link individual gene knockouts to changes in drug-tolerant state",
+      "Per-cell intracellular drug quantification by fluorescent drug analogs or sorted-cell LC-MS to test uptake and efflux heterogeneity",
+      "ABCB1 and other efflux-pump expression heterogeneity measured by flow and sorted for drug challenge",
+      "Mitochondrial membrane potential or OXPHOS heterogeneity sorted by TMRM and tested for drug survival",
+      "Single-cell metabolomics (Raman or mass spec imaging) to detect metabolic states of survivors",
+      "Cell-cycle or quiescence phase at time of drug exposure, measured with FUCCI reporters",
+      "Measuring stochastic gene expression noise and transcriptional bursting in single cells over time",
+      "Mass cytometry of phospho-signaling networks to identify signaling heterogeneity before and after drug",
+      "Spatial transcriptomics or imaging of organoids to test whether niche position or neighbor contact predicts survival",
+      "Paracrine or conditioned-media experiments to test whether neighboring cells secrete survival factors",
+      "Deep sequencing of survivors to detect pre-existing subclonal resistance mutations at low allele frequency",
+      "Extrachromosomal DNA (ecDNA) copy-number quantification per cell by imaging or single-cell DNA-seq",
+      "Drug-pulse and holiday timing experiments to probe the dynamics of entry into and exit from the tolerant state",
+      "Machine learning on pre-treatment morphology or time-lapse features to predict which cells survive"
+    ]
+  },
+  "output_tokens": 3018,
+  "cost_usd": 0.0016515199999999999
+}

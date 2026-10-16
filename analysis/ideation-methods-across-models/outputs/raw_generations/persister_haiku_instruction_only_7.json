@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 7,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Portfolio bet-hedging analysis of pre-existing clones",
+      "description": "Borrowing from finance portfolio theory, treat each clone's drug response as an asset with a mean and variance in growth rate. Combine DNA barcode lineage tracking with single-cell growth measurements before treatment, then test whether survivors come from clones with high pre-treatment variance, as a hedging strategy, or from random Luria-Delbr\u00fcck-style jackpot events."
+    },
+    {
+      "title": "Neural decoding of pre-treatment cell states",
+      "description": "Borrowing from neuroscience population decoding, record time-lapse fluorescent reporters (e.g., ERK activity, FUCCI cell cycle, NRF2) in untreated cells and train a classifier on the pre-drug state of each cell. Then index-sort cells by predicted survival, expose them to the drug, and sequence or profile the survivors to validate which pre-treatment features predicted tolerance."
+    },
+    {
+      "title": "Dye-dilution pulse-chase to date survivor cell histories",
+      "description": "Borrowing from radiocarbon dating and stellar population ages, label cells with a division-tracking dye such as CFSE, then treat and measure the dye content of survivors by flow cytometry. Dim, slowly diluted cells would indicate a history of quiescence or slow cycling before treatment, whereas bright cells would indicate recent division, revealing whether tolerance is linked to a slow-cycling state."
+    },
+    {
+      "title": "Drug-holiday hysteresis test for epigenetic memory",
+      "description": "Borrowing from materials science hysteresis, where a material's state depends on its history, expose cells to the drug, withdraw it for several cycles, and track chromatin accessibility (ATAC-seq) and repressive marks (CUT&Tag for H3K27me3) at each step. If tolerant cells retain an epigenetic state that persists after withdrawal and only slowly reverts, that memory explains the survival and can be targeted by epigenetic inhibitors."
+    },
+    {
+      "title": "Spatial microhabitat mapping in tumor spheroids",
+      "description": "Borrowing from ecology, where species occupy specific microclimates, grow tumor spheroids or biopsy slices and use multiplexed spatial transcriptomics or imaging to map where survivors sit relative to oxygen, nutrient, and drug-penetration gradients. Survivors clustered in a particular microniche would point to environmental protection rather than an intrinsic cell property."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2037,
+  "cost_usd": 0.0011618
+}

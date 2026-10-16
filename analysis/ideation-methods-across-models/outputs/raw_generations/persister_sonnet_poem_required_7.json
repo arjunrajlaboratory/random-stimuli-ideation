@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from induced persisters",
+      "description": "Like tagging individual daffodils in a field to see which ones bloom, label each cell with a heritable DNA barcode, split the population into replicates, and treat them. If the same barcodes survive across replicates, the resistance was pre-existing and heritable. If different barcodes survive in each replicate, the state is stochastic or drug-induced. Sequencing the surviving clones' transcriptomes (e.g., with Watermelon or CellTag-style methods) then links lineage to cell state."
+    },
+    {
+      "title": "Single-cell multiome profiling of the 'crowd' before and after drug",
+      "description": "Run scRNA-seq plus scATAC-seq on untreated cells and on cells at several times after treatment. Look for a rare subpopulation with a distinct transcriptional or chromatin state, such as a drug-efflux, stress-response or dedifferentiated program, that exists before treatment and expands afterward. Compare it with the survivors to find the regulators involved."
+    },
+    {
+      "title": "Live-cell time-lapse tracking with fluorescent reporters, followed by retrospective omics",
+      "description": "Image thousands of individual cells for days with reporters for signaling activity (ERK or AKT), cell cycle, apoptosis and mitochondrial state. Record each cell's dynamics, including fluctuations like the breeze moving the flowers, before drug addition, then follow who survives. Fix and profile the same cells afterward, or use photoactivatable labeling to isolate them, to test whether pre-treatment signaling dynamics or slow-cycling behavior predict survival."
+    },
+    {
+      "title": "Mathematical modeling of state-switching from fluctuation-test data",
+      "description": "Do a Luria-Delbr\u00fcck-style fluctuation test with sibling clones and measure the distribution of survivor counts and the persister fraction in clonal lineages over time. Fit stochastic models of phenotype switching between sensitive and tolerant states, including switching rates and memory duration. This gives quantitative estimates of how heritable the tolerant state is and whether it is random or induced, and it can guide which timescales to profile."
+    },
+    {
+      "title": "Sorting on candidate state markers and functional perturbation",
+      "description": "Use FACS to enrich subpopulations defined by candidate state markers, such as ALDH activity, mitochondrial membrane potential, drug efflux, cell-cycle dwell time or a reporter for the survival program, and test their drug survival. Then use CRISPRi/a screens or pharmacologic inhibitors targeting the implicated pathways, such as anti-apoptotic BCL-2 family members, oxidative phosphorylation, or chromatin modifiers like KDM5. These experiments test whether the pathways are causally required for survival, not just correlated with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 983,
+  "cost_usd": 0.014705499999999998
+}

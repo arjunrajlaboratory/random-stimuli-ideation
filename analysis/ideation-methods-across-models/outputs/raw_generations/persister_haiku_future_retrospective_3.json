@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with live-cell fate tracking (imagined 'Paper 1')",
+      "description": "Label cells with heritable DNA barcodes (e.g., CellTag-style) and track each lineage by time-lapse imaging through drug exposure and washout. This reveals whether survivors come from a pre-existing clone or arise stochastically within lineages that were initially sensitive."
+    },
+    {
+      "title": "Pre-treatment multi-omic profiling linked to later fate (imagined 'Paper 2')",
+      "description": "Profile individual cells before treatment with paired scRNA-seq and scATAC-seq, or index-sort them, then follow the same cells' fates with a live reporter of drug response. Searching for baseline chromatin or expression signatures that predict survival tests whether survival is encoded before the drug arrives."
+    },
+    {
+      "title": "Reversibility kinetics after drug withdrawal (imagined 'Paper 3')",
+      "description": "Use a fluorescent chromatin-state reporter (for example, an H3K27me3 or H3K4me3 sensor) and measure how survivors revert to sensitivity after drug removal, at single-cell resolution over days. Whether the survival state decays on a predictable timescale distinguishes a heritable epigenetic memory from a reversible, non-genetic switch."
+    },
+    {
+      "title": "Pulsed-drug Perturb-seq screen (imagined 'Paper 4')",
+      "description": "Run a pooled CRISPR perturbation screen with single-cell RNA readout while cells receive short drug pulses rather than constant exposure. Genes whose knockdown changes the probability of survival, rather than just the average response, reveal the regulators that gate entry into the tolerant state."
+    },
+    {
+      "title": "Spatial mapping of survivors within tumor niches (imagined 'Paper 5')",
+      "description": "Use spatial transcriptomics or multiplexed imaging on treated tumors or organoids to locate surviving cells relative to hypoxic zones, stromal contact, and vasculature. If survival clusters in specific niches, then niche-dependent signals, not intrinsic cell heterogeneity alone, drive persistence, and the niche becomes the therapeutic target."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1781,
+  "cost_usd": 0.0010333999999999999
+}

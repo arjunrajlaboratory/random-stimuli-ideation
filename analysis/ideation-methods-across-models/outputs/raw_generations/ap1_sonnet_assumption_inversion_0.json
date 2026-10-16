@@ -1,0 +1,44 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-resolved binding and perturbation map",
+      "description": "Use CUT&RUN or ChIP-seq with antibodies or epitope tags for individual FOS, JUN, ATF and MAF members before, during and after stimulus. Combine this with paralog-specific degron depletion to find which dimers mark and maintain remembered loci, so that results are not blurred across the whole family."
+    },
+    {
+      "title": "Acute degron removal after the stimulus ends",
+      "description": "Prime cells, wash out the stimulus, then rapidly degrade AP-1 factors (dTAG or AID) at different delays before restimulation. If the enhanced response and accessibility persist without AP-1, the memory is downstream of it. If they collapse, AP-1 is needed for maintenance and not only for establishment."
+    },
+    {
+      "title": "Separating memory from ongoing signaling input",
+      "description": "Block upstream kinases (JNK, ERK) after priming and measure AP-1 phosphorylation, protein abundance, and binding over days. Pair this with a nuclear-localization or synthetic-input reporter, so you can tell self-sustaining AP-1 states (such as positive feedback via FOS/JUN promoters) from continued signaling."
+    },
+    {
+      "title": "Single-cell lineage-tracked memory readout",
+      "description": "Combine live-cell AP-1 reporters or endogenous FOS/JUN tagging with time-lapse imaging and lineage tracking through divisions, then restimulate and record each cell's response. Compare sister cells to test whether memory is heritable, digital or graded, and how much heterogeneity the population average hides."
+    },
+    {
+      "title": "Synthetic AP-1 recruitment to test sufficiency",
+      "description": "Use dCas9 or a tethered AP-1 DNA-binding domain to impose transient AP-1 binding at a naive enhancer or reporter, and track chromatin accessibility, histone marks and later inducibility after release. This tests whether AP-1 occupancy alone can write a heritable state. Repeat it across cell types and stimulus histories, such as repeated versus single pulses, to test context-dependence."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single entity, but it is a family of dimers (FOS, JUN, ATF, MAF members) with distinct DNA-binding preferences and dynamics.",
+      "Memory is assumed to be carried by AP-1 itself (protein level or activity) rather than by downstream chromatin states or other transcription factors that AP-1 merely triggers.",
+      "Memory is typically inferred from persistent AP-1 binding or accessibility at fixed time points, assuming persistence equals memory rather than continuous re-input from signaling.",
+      "AP-1 is assumed to be needed for maintaining the state, when it may only be needed for establishing it (hit-and-run).",
+      "Bulk population averages are assumed to represent single-cell behavior, though memory may be heterogeneous or digital at the single-cell level.",
+      "Memory is assumed to be tested with one stimulus type, one cell type, and one in vitro timescale, though it may depend on stimulus history, context, and longer in vivo timescales.",
+      "Correlation of AP-1 occupancy with enhancer accessibility is assumed to indicate function, but a memory mechanism must show that the altered response is causally AP-1 dependent and heritable through cell division."
+    ]
+  },
+  "output_tokens": 1182,
+  "cost_usd": 0.018496000000000002
+}

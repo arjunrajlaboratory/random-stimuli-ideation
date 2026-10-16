@@ -1,0 +1,49 @@
+{
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nDo not answer it. Instead, list 8 parallel problems, each from a different field outside biology and medicine, that share the underlying structure of this question. Make the fields as different from one another as you can. For each, give the field, the parallel problem in one sentence, and two or three sentences on how people in that field investigate or measure it (specific methods, experimental designs, or analyses).",
+  "n_returned": 8,
+  "parallels": [
+    {
+      "field": "Materials science / metallurgy",
+      "problem": "Why do a few grains or specimens in a nominally identical batch of metal survive extreme stress or corrosion when most fail?",
+      "how_studied": "Researchers use electron backscatter diffraction and atom-probe tomography to map microstructure, grain boundaries and impurities at the sites of survival versus failure. They run many replicate fatigue or corrosion tests and apply Weibull statistics to the failure distribution. They also do in situ loading under a microscope to watch where damage starts and stops."
+    },
+    {
+      "field": "Finance / economics",
+      "problem": "Why do a few firms that look identical on paper survive a market crash or regulatory shock while their peers fail?",
+      "how_studied": "Analysts use event studies and matched-pair comparisons of survivors against non-survivors. They apply survival (hazard) models with covariates such as leverage, liquidity and network position. They use stress-test simulations and difference-in-differences designs to separate hidden heterogeneity from luck."
+    },
+    {
+      "field": "Ecology / conservation science",
+      "problem": "Why do a few individuals or populations of a genetically uniform clonal plant or invasive species persist through a pesticide, drought or fire that kills most of the others?",
+      "how_studied": "Ecologists use mark-recapture studies and long-term plots to track individual fates. They measure microhabitat variables such as soil moisture, refuge availability and local density, and fit spatial and occupancy models. They also run common-garden and manipulative field experiments to separate environmental refuges from intrinsic differences."
+    },
+    {
+      "field": "Cybersecurity / software engineering",
+      "problem": "Why do a small fraction of identical servers or software instances survive a targeted attack or patch while the rest are compromised or crash?",
+      "how_studied": "Teams use fault injection and chaos engineering to perturb systems on purpose. They collect per-instance logs and telemetry, then compare the state of survivors with that of failed instances. They use differential debugging and statistical analysis of rare events to find hidden state differences, such as memory layout, load or configuration drift."
+    },
+    {
+      "field": "Epidemiology of infrastructure / civil engineering",
+      "problem": "Why do a few buildings of the same design and construction survive an earthquake while most nearby ones collapse?",
+      "how_studied": "Engineers run post-event forensic surveys that compare damaged and undamaged structures. They add soil-condition and site-response data, such as local geology and shaking intensity. They use shake-table experiments and finite-element models with randomized material properties to test which hidden variability explains the survival."
+    },
+    {
+      "field": "Education / social science",
+      "problem": "Why do a few students from identical schools and backgrounds thrive despite an intervention or adversity that derails most others?",
+      "how_studied": "Researchers use longitudinal cohort studies and positive-deviance analysis to identify outliers. They conduct qualitative interviews and mixed-methods work to find hidden factors such as mentors and routines. They also use randomized trials and propensity-score matching to test whether those factors cause the outcomes."
+    },
+    {
+      "field": "Physics / statistical mechanics",
+      "problem": "Why do a few identical particles in an ensemble escape a potential well or avoid a perturbation, when the others are trapped or driven out?",
+      "how_studied": "Physicists use single-particle tracking and large Monte Carlo or molecular dynamics ensembles to build distributions of trajectories. They compute rare-event statistics, such as first-passage times, and use transition-path sampling to isolate the rare pathways. They separate intrinsic noise from hidden slow variables by measuring autocorrelations over time."
+    },
+    {
+      "field": "Agricultural science / entomology",
+      "problem": "Why do a few insects in a genetically uniform lab colony or crop pest population survive a pesticide dose that kills nearly all the others?",
+      "how_studied": "Researchers run dose-response bioassays with many replicates to quantify the tail of the survival curve. They compare survivors with non-survivors in terms of age, size, developmental stage and exposure, and do reciprocal-transfer and re-challenge experiments to test whether survival persists in the next generation. They use sequencing and metabolite profiling to look for epigenetic or physiological differences."
+    }
+  ],
+  "cost_usd": 0.020828
+}

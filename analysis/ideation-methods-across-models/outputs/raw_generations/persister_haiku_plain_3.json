@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing across drug pulses",
+      "description": "Introduce heritable cellular barcodes (e.g., CellTag or lentiviral barcode libraries) into a clonal population, then apply the targeted drug and track which barcoded lineages survive. Comparing barcode frequencies before and after treatment, and across washout and re-challenge, shows whether survivors were pre-existing rare clones or arose through drug-induced reprogramming."
+    },
+    {
+      "title": "Pre-treatment sorting and profiling of future survivors",
+      "description": "Use live-cell reporters or surface markers to sort cells before drug exposure, then profile sorted subpopulations and the survivor fraction with single-cell RNA-seq and ATAC-seq. This tests whether a transcriptional or chromatin state that predicts survival already exists in the untreated population."
+    },
+    {
+      "title": "Live-cell signaling and cell-cycle reporters linked to fate",
+      "description": "Express biosensors such as ERK or AKT kinase translocation reporters and FUCCI cell-cycle markers, then image individual cells continuously through drug addition and record their fate. Correlating signaling amplitude, dynamics, and cell-cycle phase at the moment of treatment with eventual survival identifies the dynamic states that predict persistence."
+    },
+    {
+      "title": "Genome-wide and single-cell CRISPR screens under drug pressure",
+      "description": "Run pooled CRISPR knockout or CRISPRi screens with the drug, comparing guide representation in surviving versus dying cells, and follow hits with Perturb-seq to see how each perturbation shifts the persister state. Hits from chromatin, signaling, and stress-response genes point to the mechanisms that enable survival, and validation of top candidates tests whether they are necessary and sufficient."
+    },
+    {
+      "title": "Metabolic and epigenetic priming profiling with washout and re-challenge",
+      "description": "Measure metabolic state (for example NAD(P)H fluorescence lifetime imaging, mitochondrial respiration, and metabolomics) and key histone marks or chromatin accessibility in pre-treatment, early-treatment, and surviving cells. Then remove the drug and re-challenge: if survivors retain their metabolic or epigenetic signature across several passages, the data point to a heritable adaptive memory, while loss of the signature implies a reversible tolerance state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1401,
+  "cost_usd": 0.0008422499999999999
+}

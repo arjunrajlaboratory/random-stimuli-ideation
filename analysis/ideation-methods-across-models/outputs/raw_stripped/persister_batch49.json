@@ -1,0 +1,150 @@
+{
+  "batch": 49,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "9d736a27a5e1a01862aab352b28fa87b2e6e9d3d7cd83dc44abbe887204322a9",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Drug-holiday reversion kinetics with fate-model fitting",
+      "description": "Expose cells to drug, withdraw it at intervals, and track how quickly survivors revert to drug-sensitive behavior. Fit stochastic switching and heritable memory models to the lineage-resolved fate data; reversion timescales distinguish reversible non-genetic switching from stable epigenetic memory, which predict different clinical dosing strategies.",
+      "idea_id": "persister_haiku_future_retrospective_6_4",
+      "source_sha256": "32fa5712c689a31082bb2183725397a586d615319984d881e224295b2346ce7c"
+    },
+    {
+      "id": "I2",
+      "title": "Micropatterned adhesion area as a survival variable",
+      "description": "Plate cells on fibronectin micropatterns of defined sizes to control spreading area and cytoskeletal tension, apply the drug, and quantify survival against area. Test whether YAP/TAZ nuclear localization and nuclear size explain which cells survive, which would indicate that mechanics determines persistence.",
+      "idea_id": "persister_haiku_critique_revise_3_2",
+      "source_sha256": "1b4ac4d21f1e60501a6ce601ab3cc320669edc0e99aed0972cc88841cb278692"
+    },
+    {
+      "id": "I3",
+      "title": "Single-cell lineage barcoding with drug-response tracking",
+      "description": "Introduce heritable DNA barcodes (e.g., CRISPR-based scar or lentiviral barcode libraries) into a clonal population, treat with the targeted drug, and track barcode frequencies and transcriptomes over time. This reveals whether survivors are pre-existing clones or arise from non-genetic state transitions, and whether they share a common precursor identity.",
+      "idea_id": "persister_haiku_plain_5_0",
+      "source_sha256": "f51e013821da3cb53d58ca32351937587499556814718fb0b883f4178c2cec87"
+    },
+    {
+      "id": "I4",
+      "title": "Sister-cell split-and-retreat assay for heritability and reset",
+      "description": "Barcode cells and split each expanded clone into parallel arms: treat one arm immediately and culture the other drug-free for varying numbers of generations before treating. If survival frequency stays clone-specific, the trait is heritable; if it decays with a characteristic relaxation time, it is a fluctuating state, and the decay constant quantifies its memory.",
+      "idea_id": "persister_opus_parallel_rotated_7_1",
+      "source_sha256": "fa7042d138af27d95dd00110153cd219d620a44e60f3067978155fb78c1716d2"
+    },
+    {
+      "id": "I5",
+      "title": "Perturbations of known magnitude and timing",
+      "description": "Apply perturbations of known magnitude and timing, such as drug pulses, serum or heat shocks, or forced cell-cycle synchronization, and measure how the survival fraction changes with each. Plotting survival rate against perturbation intensity distinguishes a perturbation-sensitive, timing-dependent mechanism from a stochastic baseline that is insensitive to perturbation.",
+      "idea_id": "persister_haiku_parallel_rotated_2_2",
+      "source_sha256": "78131a8597b6d1a6f17d878aacc9a4d6443784a162dca03c9414fa224f8deb61"
+    },
+    {
+      "id": "I6",
+      "title": "Spatial profiling of patient tumor sections around residual cells",
+      "description": "Apply spatial transcriptomics and multiplexed protein imaging to matched pre-treatment and residual-disease patient specimens to determine whether surviving cells cluster near specific stromal, immune, hypoxic, or nutrient-limited niches. Then use ligand\u2013receptor analysis and co-culture of patient-derived cells with autologous stromal or immune cells to test whether these niche signals cause tolerance.",
+      "idea_id": "persister_sonnet_assigned_constraint_7_4",
+      "source_sha256": "26d37c73c045b36969adf7629ad894038fa3bd97ae19af67e3ea728f5a5a43eb"
+    },
+    {
+      "id": "I7",
+      "title": "Neighbor and microenvironment contribution via spatial co-culture and conditioned-medium swaps",
+      "description": "Plate cells at controlled densities and micropatterns, or use mixed fluorescently labeled populations. Quantify survival as a function of neighbor identity, distance to dying cells, and secreted factors, using spatial transcriptomics or cell-cell proximity labeling (e.g., TurboID), to test whether persistence is a cell-intrinsic state or a collective property arising from paracrine rescue or local contact signaling.",
+      "idea_id": "persister_sonnet_critique_revise_3_4",
+      "source_sha256": "376240beaf6b2f176102ae76c5a317c4fab6a6a1bde36739ba1bdf7a9a7832b4"
+    },
+    {
+      "id": "I8",
+      "title": "Spatial and microenvironment perturbation of survival in co-culture, 3D, or in vivo models",
+      "description": "Use spatial transcriptomics or imaging in 3D spheroids, co-cultures, or xenografts to map survivors relative to neighbors, oxygen and drug gradients, and stromal secretion. Then perturb the niche, for example with conditioned medium, a drug-penetration reporter, or fluorescent drug analogs, to test whether survival depends on local drug exposure or paracrine support rather than intrinsic state, including whether drug exposure is uniform and whether monolayer culture is sufficient.",
+      "idea_id": "persister_sonnet_assumption_inversion_1_4",
+      "source_sha256": "4533ac6eb7d70823bbd362b7b8894472c43252a3808edc4451f5559814e6a03b"
+    },
+    {
+      "id": "I9",
+      "title": "Metabolic state sorting followed by drug challenge",
+      "description": "Use NAD(P)H FLIM or mitochondrial membrane potential dyes to sort live cells by metabolic state before treatment, then expose each fraction to drug. This tests whether metabolic heterogeneity, such as oxidative phosphorylation reliance or redox buffering, causally predicts survival.",
+      "idea_id": "persister_sonnet_overgenerate_select_5_3",
+      "source_sha256": "587a2c8dcd3269e7c857284c310046d21de6a50323b97a3d56ac3daa1acedfb3"
+    },
+    {
+      "id": "I10",
+      "title": "Spatial multiplexed imaging of drug-treated tumor or organoid niches",
+      "description": "Run cyclic immunofluorescence or imaging mass cytometry on a treated tumor section or organoid, co-staining the drug target, hypoxia markers, and stromal and vascular markers. Map survivors relative to their neighbors and distance to vasculature or stroma to determine whether niche position, rather than cell-intrinsic state, governs persistence.",
+      "idea_id": "persister_haiku_assigned_constraint_6_3",
+      "source_sha256": "d5b28be6dab7e5bcdb6aa6f5b22954f0e241225cc6c803de35637ad9b4ec5f8c"
+    },
+    {
+      "id": "I11",
+      "title": "Single-cell multiome with FACS-based state enrichment",
+      "description": "Use paired scRNA and ATAC profiling to define a persister-like signature and its regulatory elements. Sort cells by a surface marker or reporter for that state, challenge them with drug, and test causality by perturbing the identified chromatin regulators or transcription factors.",
+      "idea_id": "persister_sonnet_overgenerate_select_6_3",
+      "source_sha256": "860fac658afcd3ac0a45f9780232477c5770910c005fca8d489ecabdc5c193ef"
+    },
+    {
+      "id": "I12",
+      "title": "CRISPR screens scored on the size and switching rate of the primed subpopulation",
+      "description": "Run pooled CRISPR screens scored on the size and switching rate of the primed subpopulation, read out by barcode diversity and clone-size distributions of survivors, rather than on bulk viability. This identifies regulators that change the number of primed cells while leaving average drug sensitivity unchanged, which bulk viability screens would miss.",
+      "idea_id": "persister_opus_future_retrospective_3_3",
+      "source_sha256": "06a2dea4ead208ad99a7d7eeeb82c4e6c14212279ed78c6c8c00be5286bb7fc4"
+    },
+    {
+      "id": "I13",
+      "title": "Iterative drug selection cycles with re-expansion of early-passage aliquots",
+      "description": "Run repeated cycles of drug kill, drug withdrawal, and re-expansion, tracking at each round whether the same barcodes survive (fixed survival potential) or a newly different set does (resampled survival). In parallel, re-expand frozen early-passage aliquots of the same clone to test whether survival potential was already fixed at that earlier point, comparing recurrence of the same barcodes against reset in the earlier-passage aliquots.",
+      "idea_id": "persister_opus_parallel_rotated_1_2",
+      "source_sha256": "db6ff063819d233880263b6e0d3a9cc024f8fb9c2f2f4127b931816d3896cf79"
+    },
+    {
+      "id": "I14",
+      "title": "Lineage barcoding with pre-treatment transcriptome profiling",
+      "description": "Label each cell with a heritable lentiviral barcode, profile transcriptomes before drug exposure, and then sequence the survivors. If survivors were already enriched for particular pre-treatment states, the population contains stochastic state diversity that pre-exists drug; if not, the state is induced by the drug.",
+      "idea_id": "persister_haiku_instruction_only_4_0",
+      "source_sha256": "fb77dfb072baad1e228aec2a1f1a04533f872eb2a58b9dea0024a275d0fc045b"
+    },
+    {
+      "id": "I15",
+      "title": "Early-warning signals before entry into the drug-tolerant state",
+      "description": "Test whether cells entering a drug-tolerant state show critical slowing down, meaning rising variance, rising autocorrelation, and flickering in reporter time series, before committing. This would allow prospective identification and sorting of pre-transition cells for molecular profiling.",
+      "idea_id": "persister_opus_instruction_only_4_3",
+      "source_sha256": "c6e987130174164d17135f081890a800cdd43201a657d22043ce5eb3d5cbdd34"
+    },
+    {
+      "id": "I16",
+      "title": "Spatial and microenvironmental mapping of survivors in 3D and tumor models",
+      "description": "Apply spatial transcriptomics or multiplexed imaging to spheroids or xenografts after treatment to test whether survivors cluster by hypoxia, nutrient gradients, drug penetration, or neighbor contact. Pair this with local drug-concentration measurements, such as mass spectrometry imaging, to separate intrinsic from positional causes.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_2_3",
+      "source_sha256": "48eec329e219f6c86c30b121a91e8431ffcde4a1a8805b3f2d7d81e356ebf061"
+    },
+    {
+      "id": "I17",
+      "title": "Sorting cells by physical and organelle traits, then treating each group",
+      "description": "Before drug exposure, use FACS to sort live cells into bins by cell size, mitochondrial membrane potential (TMRM), lysosome content, or ribosome/translation rate (OPP labeling). Treat each bin separately to determine which physical or organelle traits predict survival; these traits arise from unequal partitioning of cell contents at division and would not be detected in transcript or chromatin data.",
+      "idea_id": "persister_opus_obvious_then_avoid_7_4",
+      "source_sha256": "7e4b5ba3c8c4d8f37d2b9a261cdf850edba3dd58b3856297f6f691b61e5d1624"
+    },
+    {
+      "id": "I18",
+      "title": "Re-challenge of sorted survivors after drug removal",
+      "description": "Isolate survivors after drug removal, let them regrow, and re-challenge them with the same drug to compare their survival rate with that of the parental population. This distinguishes a stable adaptive state from a transient, reversible one and measures how long the survival advantage persists.",
+      "idea_id": "persister_haiku_parallel_rotated_3_4",
+      "source_sha256": "2e7e419b7e246c91a2cf7de2c24d3868bbbb1640440543ae53f812fb273cb6e4"
+    },
+    {
+      "id": "I19",
+      "title": "Sibling-pair death-timing correlation under drug",
+      "description": "Film isolated daughter-cell pairs (and later cousins) from a recent division through drug exposure and record each cell's time of death or arrest. Compare sister-sister concordance with random pairing, and its decay over generations, to quantify the heritability and half-life of the tolerance state without molecular assumptions.",
+      "idea_id": "persister_sonnet_critique_revise_2_0",
+      "source_sha256": "4fa333c6039e72c4918a192770bda7b88c1702bf648009486cf3c68821bbb497"
+    },
+    {
+      "id": "I20",
+      "title": "Paired pre-treatment and survivor single-cell multiome",
+      "description": "Profile scRNA-seq and scATAC-seq (or CITE-seq) of untreated cells and of cells surviving at a single post-treatment endpoint, then test whether survivors were already enriched for particular transcriptional or chromatin states before drug exposure. This separates pre-existing persister programs from states induced by the drug.",
+      "idea_id": "persister_haiku_assigned_constraint_6_0",
+      "source_sha256": "615ce62b8f7a9b5165a2c4150c1d22329448ba706a8225bb0242d4c3d101d642"
+    }
+  ],
+  "cost_usd": 0.0478492
+}

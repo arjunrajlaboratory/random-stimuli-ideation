@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 4,
+  "parallel": {
+    "field": "Structural and earthquake engineering",
+    "problem": "Why do a few identical buildings of the same design stand after an earthquake while most of their neighbours collapse?",
+    "how_studied": "Engineers build fragility curves by running incremental dynamic analysis on a structural model across many ground-motion records. Monte Carlo sampling over material strength, construction quality, and soil properties gives the probability of collapse for a given shaking intensity. Post-earthquake reconnaissance surveys then compare damaged and undamaged buildings to identify the construction details that mattered."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Structural and earthquake engineering\nProblem: Why do a few identical buildings of the same design stand after an earthquake while most of their neighbours collapse?\nHow it is studied: Engineers build fragility curves by running incremental dynamic analysis on a structural model across many ground-motion records. Monte Carlo sampling over material strength, construction quality, and soil properties gives the probability of collapse for a given shaking intensity. Post-earthquake reconnaissance surveys then compare damaged and undamaged buildings to identify the construction details that mattered.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Drug-dose fragility curves per cell",
+      "description": "Borrowing incremental dynamic analysis, treat clonal populations across a graded series of drug doses and exposure times, and fit a survival-probability curve for each. Compare curve shapes and thresholds between subpopulations to see whether survival reflects a shifted threshold or a fixed fraction of tolerant cells."
+    },
+    {
+      "title": "Monte Carlo sensitivity over cell-intrinsic parameters",
+      "description": "Build a stochastic model of the drug response with parameters for target expression, efflux pump activity, cell-cycle phase, and signalling noise, then sample them as engineers sample material and soil variation. Use variance decomposition (e.g., Sobol indices) to find which parameter spread best reproduces the observed survivor fraction."
+    },
+    {
+      "title": "Reconnaissance-style survivor versus victim profiling",
+      "description": "Before treatment, record each cell's state with live reporters (e.g., FUCCI for cell cycle, fluorescent drug-efflux or stress reporters) and single-cell transcriptomics or chromatin accessibility, then after treatment sort survivors and dead cells and compare their pre-treatment profiles. This mirrors comparing damaged and undamaged buildings to find the construction details that mattered."
+    },
+    {
+      "title": "Lineage-barcoded fate tracking",
+      "description": "Label founder cells with heritable DNA barcodes and follow each clone through drug exposure and drug withdrawal to measure whether survival is pre-determined, stochastically acquired, or inherited. Clonal correlation of survival outcomes distinguishes heritable tolerance from random per-cell escape."
+    },
+    {
+      "title": "Stress-condition robustness testing across many perturbations",
+      "description": "Analogous to testing a structure against many ground-motion records, expose the same clone to a battery of perturbations such as seeding density, serum level, hypoxia, and drug combinations or sequences. Map how the survivor fraction shifts across conditions to identify the environmental and temporal factors that most strongly govern survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1585,
+  "cost_usd": 0.00106065
+}

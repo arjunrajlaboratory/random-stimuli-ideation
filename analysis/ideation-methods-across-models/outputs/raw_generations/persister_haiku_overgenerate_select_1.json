@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment live-cell reporter tracking linked to fate",
+      "description": "Track signaling and cell-cycle reporters (e.g., FUCCI, ERK-KTR, p53 pulses) in individual cells before drug exposure, then map each cell's pre-treatment state to its post-treatment fate. This tests directly whether survival is predictable from a cell's state at the time of treatment."
+    },
+    {
+      "title": "Lineage barcoding to separate pre-existing from induced tolerance",
+      "description": "Introduce heritable barcodes into the population, treat, and use scRNA-seq to see whether survivors share barcodes with pre-marked clones or arise from many lineages that switch state after drug exposure. This distinguishes selection of rare pre-adapted cells from drug-induced reprogramming."
+    },
+    {
+      "title": "Per-cell drug accumulation and efflux measurement",
+      "description": "Quantify intracellular drug concentration in each cell using fluorescent drug analogs or imaging mass spectrometry, and correlate it with survival. Differences in uptake or efflux could explain survival even when target and genotype are identical."
+    },
+    {
+      "title": "Chromatin accessibility priming with epigenetic perturbation",
+      "description": "Use scATAC-seq on untreated cells to find regions that are already open near survival-associated genes in the rare cells that later persist. Then perturb the implicated chromatin regulators to test whether they are causal for tolerance."
+    },
+    {
+      "title": "Metabolic state sorting by NAD(P)H FLIM",
+      "description": "Measure each cell's NAD(P)H fluorescence lifetime as a label-free readout of its metabolic state, sort cells by that readout, and test whether the metabolically distinct subsets differ in drug survival. Follow up with metabolic tracing on the sorted groups to identify the specific pathways involved."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Single-cell RNA-seq of untreated cells to find pre-existing transcriptional subpopulations that match later survivors",
+      "Lineage barcoding (e.g., CellTag or ClonTracer) to test whether survivors descend from pre-marked clones or arise from induced switching",
+      "Live-cell reporters (FUCCI, ERK-KTR, p53 pulse) imaged before drug exposure, then linked to each cell's fate after treatment",
+      "scATAC-seq on untreated cells to find chromatin accessibility priming at survival genes",
+      "Genome-wide CRISPR knockout screen comparing surviving and dying populations under drug",
+      "Pooled CRISPRi/CRISPRa screen at sub-lethal dose to find modifiers that shift survival odds",
+      "Phosphoproteomics of sorted survivors versus bulk cells to map signaling rewiring",
+      "Mitochondrial membrane potential heterogeneity measured by TMRM and sorted for survival assays",
+      "NAD(P)H autofluorescence FLIM to measure per-cell metabolic state, then sort and test survival",
+      "13C-glucose and glutamine tracing in sorted survivors to reveal metabolic adaptation",
+      "ABCB1/efflux pump expression heterogeneity measured by flow cytometry",
+      "Per-cell intracellular drug accumulation measured by imaging mass spectrometry or fluorescent drug analogs",
+      "smFISH quantification of transcriptional noise and burst kinetics for target and bypass genes",
+      "Duplex sequencing to detect rare pre-existing resistance mutations at low allele frequency",
+      "Drug-holiday and re-challenge experiments to measure reversibility and regrowth kinetics of survivors",
+      "Hi-C or ATAC-based 3D genome conformation comparison between persisters and bulk cells",
+      "Spatial transcriptomics of residual tumor regions to test niche or paracrine survival signals",
+      "Ferroptosis and lipid peroxidation susceptibility profiling across single cells",
+      "H2B-GFP label-retention to identify slow-cycling cells and test their drug tolerance",
+      "Karyotype and copy-number profiling by single-cell DNA-seq to link aneuploidy to tolerance",
+      "Ribosome profiling to test whether translation-level heterogeneity distinguishes survivors",
+      "Co-culture with conditioned media from survivors to test secreted survival factors"
+    ]
+  },
+  "output_tokens": 3224,
+  "cost_usd": 0.00175512
+}

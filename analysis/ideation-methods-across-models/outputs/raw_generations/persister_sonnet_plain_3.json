@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sister-cell tracking",
+      "description": "Label cells with heritable DNA barcodes (e.g., ClonTracer/Perturb-seq-style), split the population before drug exposure, and compare which barcodes survive across replicates. Shared survivors indicate pre-existing, heritable states, while random survivors indicate stochastic or induced tolerance."
+    },
+    {
+      "title": "Single-cell multi-omic profiling of pre-treatment and persister cells",
+      "description": "Run scRNA-seq paired with scATAC-seq or CITE-seq on untreated cells and on cells at multiple time points after drug exposure. Look for rare transcriptional or chromatin states, such as drug-efflux, stress-response, or EMT programs, that exist before treatment and are enriched among survivors."
+    },
+    {
+      "title": "Live-cell imaging with reporters, followed by retrospective omics",
+      "description": "Time-lapse image cells carrying reporters for signaling activity (ERK, p53, apoptosis), cell cycle, and mitochondrial state before and during drug exposure, tracking each cell to its fate. After imaging, fix or isolate the survivors and the cells that died, then profile them (e.g., by spatial or single-cell sequencing) to link dynamic pre-treatment features to survival."
+    },
+    {
+      "title": "Epigenetic and chromatin state perturbation screens",
+      "description": "Use CRISPRi/a screens or small-molecule inhibitors of chromatin regulators (e.g., KDM5, HDACs, EZH2) to test whether altering epigenetic plasticity changes the persister fraction. Pair this with ChIP-seq or CUT&Tag on sorted survivors to identify the marks that maintain the tolerant state."
+    },
+    {
+      "title": "Metabolic and stress-state measurements of survivors",
+      "description": "Measure ROS, mitochondrial membrane potential, oxidative phosphorylation, lipid peroxidation or ferroptosis sensitivity, and drug uptake or efflux at the single-cell level using flow cytometry or imaging. Sort cells by these properties before treatment, then test whether they predict survival and whether targeting the pathway (e.g., GPX4 inhibition) eliminates persisters."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 801,
+  "cost_usd": 0.0107655
+}

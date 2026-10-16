@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 2,
+  "parallel": {
+    "field": "Neuroscience-free cognitive economics (behavioral economics)",
+    "problem": "Establishing whether past exposure to a price, shock or policy leaves a lasting imprint on consumer or investor behavior (habit or imprinting) rather than simply reflecting current incentives.",
+    "how_studied": "Economists use panel data and difference-in-differences designs comparing cohorts that experienced a shock at different times. They include lagged-term regressions and test for persistence after the incentive is removed. Natural experiments, such as a cohort entering the labor market during a recession, provide quasi-random assignment of the initial exposure."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Neuroscience-free cognitive economics (behavioral economics)\nProblem: Establishing whether past exposure to a price, shock or policy leaves a lasting imprint on consumer or investor behavior (habit or imprinting) rather than simply reflecting current incentives.\nHow it is studied: Economists use panel data and difference-in-differences designs comparing cohorts that experienced a shock at different times. They include lagged-term regressions and test for persistence after the incentive is removed. Natural experiments, such as a cohort entering the labor market during a recession, provide quasi-random assignment of the initial exposure.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Persistence-after-withdrawal test (washout time course)",
+      "description": "Give a transient stimulus (e.g., EGF, TPA, or injury signal), then remove it and track chromatin accessibility (ATAC-seq), AP-1 binding (CUT&RUN) and target gene expression over days of washout. Memory is indicated if accessibility and transcriptional priming persist well beyond AP-1 activity returning to baseline, analogous to testing for effects that persist after the incentive is removed."
+    },
+    {
+      "title": "Cohort-style timing design with re-stimulation (primed vs naive)",
+      "description": "Compare cells exposed at different times or doses (early vs late, single vs repeated) against never-exposed matched controls, then challenge all with the same second stimulus. Use a difference-in-differences model on the response (gene induction, enhancer opening) to estimate the exposure-history effect, controlling for current AP-1 levels, much as cohort comparisons isolate imprinting from current incentives."
+    },
+    {
+      "title": "Lagged-term regression on single-cell multiome data",
+      "description": "In single-cell RNA plus ATAC time series, regress the current state of target loci on both current AP-1 (FOS/JUN) activity and lagged AP-1 activity or past accessibility. A significant lagged coefficient after conditioning on present AP-1 supports memory, while dependence only on current levels supports ongoing incentive-driven regulation."
+    },
+    {
+      "title": "Acute degradation of AP-1 after the exposure (removing the current incentive)",
+      "description": "Use degron-tagged JUN/FOS (dTAG or auxin-inducible) or a dominant-negative such as A-FOS. Degrade AP-1 only after the priming stimulus, then test whether accessibility and enhanced re-induction persist. Compare with degradation before or during priming to separate the role of AP-1 in establishing memory from its role in maintaining it."
+    },
+    {
+      "title": "Natural-experiment-like quasi-random exposure via heterogeneity or optogenetics",
+      "description": "Use optogenetic or chemogenetic control of AP-1 pulses (such as light-inducible FOS/JUN) so that exposure history is assigned randomly across cells or wells, independent of cell state. Measure later chromatin and transcriptional outcomes as a function of pulse number, duration and timing, which gives causal dose-history relationships free of the selection confounds in endogenous exposure."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 854,
+  "cost_usd": 0.013919500000000001
+}

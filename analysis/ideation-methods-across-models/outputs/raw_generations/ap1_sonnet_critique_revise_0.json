@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Longitudinal ATAC-seq/CUT&RUN after transient stimulus: Stimulate cells (e.g., injury, TNF, or growth factor), then profile chromatin accessibility and AP-1 (FOS/JUN) binding at multiple time points through washout and weeks later. Persistent AP-1 motif-containing open regions after signal withdrawal would indicate a retained chromatin memory.\n2. Acute AP-1 degradation or dominant-negative perturbation during priming vs. recall: Use degron-tagged JUN/FOS or A-FOS to remove AP-1 either only during the priming stimulus, or only during the later challenge. If memory needs AP-1 during priming (for establishment) and/or recall (for maintenance), enhancer accessibility and the faster or stronger secondary transcriptional response will be lost accordingly.\n3. Prime-and-rechallenge transcriptional response assays: Measure RNA-seq or nascent transcription (PRO-seq) and single-cell responses to a second stimulus after varying rest intervals in primed vs. naive cells. Link the magnitude of the response to the pre-existing AP-1 occupancy at each gene's enhancers, and map how long the memory lasts and how many cell divisions it survives.\n4. Optogenetic or synthetic AP-1 activation sufficiency test: Briefly induce AP-1 using optogenetic or chemically inducible FOS/JUN, with no natural stimulus. Then test whether it creates stable accessible enhancers, histone marks (H3K27ac, H3K4me1) and an altered response to later signals, including after division. This tests whether AP-1 activity alone is sufficient to establish memory.\n5. Single-cell multiome and lineage tracing in vivo: Use scATAC+RNA with lineage barcodes or AP-1 reporter/fate-mapping alleles in tissue such as skin wound repair, to follow descendants of previously AP-1-active cells. Compare their accessibility and function with those of AP-1-naive siblings, and test whether the memory is inherited through division and linked to AP-1 recruitment of BAF (SWI/SNF) and chromatin remodelers.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitotic bookmarking live-imaging and Mitotic ChIP",
+      "description": "Image endogenously tagged (HaloTag) FOS/JUN with single-molecule tracking in mitotic versus interphase cells, and perform CUT&RUN on FACS-sorted mitotic cells. This tests whether AP-1 stays on chromatin through division, and whether its mitotic retention at specific enhancers predicts which sites reactivate fastest after mitosis."
+    },
+    {
+      "title": "Dwell-time and cooperativity analysis by single-molecule footprinting",
+      "description": "Use single-molecule footprinting (SMF/Fiber-seq) in primed and naive cells to resolve, on individual DNA molecules, AP-1 motif occupancy together with nucleosome positions and co-bound TFs. This tests whether memory is stored as a stable AP-1-nucleosome-remodeler configuration, or as heterogeneous cell-to-cell occupancy that is quickly lost."
+    },
+    {
+      "title": "Motif-mutant enhancer knock-in with recall reporter",
+      "description": "Use base or prime editing to mutate AP-1 sites at a few endogenous memory-associated enhancers. Then measure whether priming-induced accessibility and the stronger second transcriptional response are lost at those loci specifically. This gives a cis-acting, locus-level causal test that is independent of global AP-1 knockdown, and it separates the memory role from AP-1's role in normal gene activation."
+    },
+    {
+      "title": "Dosage and dynamics encoding with optogenetic pulse patterns",
+      "description": "Drive endogenous AP-1 or its upstream kinases (e.g. optogenetic ERK/JNK) with pulses of different duration, frequency and amplitude. Then quantify how each pulse pattern maps to lasting accessibility and to the response to rechallenge. This tests whether memory is a thresholded or integrating function of AP-1 history, which a simple on/off priming design cannot reveal."
+    },
+    {
+      "title": "Competition between AP-1 family members and pioneer-factor swap",
+      "description": "Perform paired, time-resolved CUT&Tag for different FOS/JUN paralogs (e.g. FOSL1, JUNB, ATF3) and for pioneer or lineage factors during priming and during memory. Combine this with paralog-specific degradation to ask whether memory is carried by a specific AP-1 composition, or is handed off to a lineage TF that maintains the sites after AP-1 is gone. This would distinguish AP-1 as an initiator from AP-1 as a maintainer."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 911,
+  "cost_usd": 0.0165055
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 5,
+  "constraint": "finishing within three months",
+  "prompt": "Constraint: every one of your ideas must be carried out finishing within three months. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse\u2013chase hysteresis assay: does AP-1 activity persist after the signal is gone?",
+      "description": "Deliver graded, defined-duration pulses of an AP-1-activating stimulus (TPA, serum/growth factor, or substrate stiffness) and then withdraw it, sampling RNA-seq plus a TRE-driven destabilized-fluorophore reporter at 0, 6, 24, 48, 96 h and 1 week to measure the decay timescale of AP-1 target output relative to FOS/JUN protein half-life. The key memory signature is hysteresis: cells approaching the same final stimulus level from above versus below should settle into different stable AP-1 output states, which is a 6\u20138 week experiment with a dose\u00d7history matrix read out by flow cytometry."
+    },
+    {
+      "title": "Degron separation of establishment versus maintenance",
+      "description": "Knock dTAG or auxin-inducible degrons into endogenous FOSL1/JUN (or express a dominant-negative A-FOS under a Tet promoter) so AP-1 can be removed acutely either during a priming stimulus or only after the primed state is established, then compare ATAC-seq and RNA-seq outcomes. A true memory mechanism requires continuous AP-1 occupancy for maintenance, so the informative result is whether late depletion collapses the primed state (AP-1 is the memory carrier) or leaves it intact (AP-1 only writes a state stored elsewhere, e.g., in chromatin or DNA methylation)."
+    },
+    {
+      "title": "Latent-enhancer priming and second-stimulus amplification",
+      "description": "Run matched ATAC-seq and FOS/JUN CUT&RUN time courses across stimulus, washout, and re-stimulation, asking whether AP-1 motif-containing peaks opened during the first exposure remain accessible days after AP-1 binding has decayed, and whether those specific loci show faster/larger induction on a second exposure. Quantifying the fraction of primed peaks and the magnitude of the re-stimulation boost (with nascent transcription by SLAM-seq or EU-seq) directly tests the 'latent enhancer' model of AP-1 memory within roughly two months."
+    },
+    {
+      "title": "Clone-splitting heritability test with barcode lineage tracing",
+      "description": "Sort cells on an AP-1 activity reporter into high and low bins, let each bin expand for 5\u201310 divisions, then re-measure the distribution and compute the memory half-life in generations; in parallel, use a lentiviral barcode library so sister cells from the same clone can be split across plates and compared. Strong within-clone concordance of AP-1 state relative to between-clone variance (an intraclass correlation estimate) distinguishes mitotically heritable memory from fast stochastic fluctuation, and can be run in ~10 weeks in a fast-cycling line."
+    },
+    {
+      "title": "Targeted AP-1 recruitment as a sufficiency test",
+      "description": "Use dCas9 fused to a JUN or FOS activation domain (or a chemically induced dimerization recruitment system) to pulse AP-1 onto a handful of endogenous primed enhancers for 24\u201348 h, then release and track locus accessibility, target gene expression, and reporter output for two weeks. If a transient synthetic AP-1 pulse alone installs a self-sustaining accessible state at those loci in the absence of any upstream signal, that is causal evidence that AP-1 writes rather than merely reports cellular memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2954,
+  "cost_usd": 0.1054905
+}

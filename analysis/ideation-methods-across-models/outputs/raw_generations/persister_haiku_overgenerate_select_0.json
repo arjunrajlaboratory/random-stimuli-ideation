@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode lineage tracing to separate pre-existing from drug-induced survivors",
+      "description": "Label each founder cell with a heritable DNA barcode, expand the population, treat with drug, and use scRNA-seq to see whether surviving barcoded clones were already transcriptionally distinct before treatment. Clonal overlap between pre-treatment and survivor states distinguishes selection of rare pre-existing cells from induction of a new state in naive cells."
+    },
+    {
+      "title": "Live-cell signaling and cell-cycle reporters with retrospective fate tracking",
+      "description": "Express a KTR-type ERK or AKT activity reporter together with a FUCCI cell-cycle reporter, image cells by time-lapse before and during drug exposure, and compute each cell's signaling pulse frequency and cycle phase history. Comparing these dynamics between cells that die and cells that survive tests whether temporal signaling behavior, not average activity, predicts survival."
+    },
+    {
+      "title": "Sorting on pre-treatment mitochondrial state and testing survival and metabolism",
+      "description": "Sort the untreated population by TMRM or mitochondrial membrane potential and by NADH autofluorescence, then challenge each fraction with drug and measure survival. Pair this with 13C tracing on sorted survivors to determine whether an OXPHOS-high or glycolysis-high metabolic state is a causal, pre-existing determinant of persistence."
+    },
+    {
+      "title": "Single-cell measurement of drug uptake and efflux heterogeneity",
+      "description": "Use fluorescent drug analogs or intracellular LC-MS on sorted subpopulations to quantify how much drug each cell accumulates and how quickly it is pumped out. If survivors show low intracellular drug at the time of exposure, reduced uptake or increased efflux is a sufficient non-genetic explanation for survival that does not require any target-level change."
+    },
+    {
+      "title": "Drug-holiday and re-challenge assays to test reversibility and epigenetic memory",
+      "description": "Expose cells to drug until a persister pool forms, withdraw drug for several passages, then re-challenge and track the survivor fraction and CUT&Tag or ATAC profiles over time. Whether survivors revert to baseline sensitivity and how quickly they do so reveals if persistence is a transient adaptive state, a heritable epigenetic memory, or a stable genetic change."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Pre-treatment scRNA-seq to find transcriptional states that predict later survival",
+      "Lineage barcoding (CellTag/LARRY) to test whether survivors are pre-existing or drug-induced",
+      "Time-resolved scRNA-seq during drug exposure to map trajectories into the persister state",
+      "scATAC-seq before treatment to detect chromatin priming of survivor clones",
+      "FUCCI cell-cycle reporter time-lapse to test whether slow-cycling cells are enriched among survivors",
+      "ERK/AKT activity reporters (KTR) in live cells to link signaling pulse dynamics to fate",
+      "Pooled CRISPR knockout screen under drug vs control to find survival modifiers",
+      "Perturb-seq combining CRISPR perturbations with scRNA-seq readout under drug",
+      "Sorting on TMRM/mitochondrial membrane potential before treatment and testing survival rates",
+      "13C-glucose/glutamine metabolic tracing on FACS-sorted survivors",
+      "Single-cell drug accumulation and efflux measurement with fluorescent analogs or LC-MS on sorted cells",
+      "Efflux pump (ABCB1/ABCG2) activity profiling with Hoechst/rhodamine assays across subclones",
+      "smFISH or proteomics quantifying the drug target level and its cell-to-cell variance",
+      "Drug-holiday and re-challenge assays to test reversibility and heritability of the persister state",
+      "Multigenerational tracking of survivor daughters to measure epigenetic memory duration",
+      "CUT&Tag for H3K4me3/H3K27me3 on sorted persisters to identify epigenetic memory marks",
+      "Single-cell whole-genome or deep amplicon sequencing to detect rare pre-existing resistance alleles",
+      "Proteomics and ribosome profiling of persisters to measure translation and proteostasis changes",
+      "Spatial transcriptomics of xenograft tumors to test whether survivors localize to hypoxic or niche regions",
+      "Paracrine/conditioned-medium and co-culture assays to test whether neighboring cells protect survivors",
+      "Pulsed versus continuous dosing schedules to test how exposure history shapes survivor fraction",
+      "Lipid droplet and ferroptosis-sensitivity profiling of survivors versus bulk population"
+    ]
+  },
+  "output_tokens": 3491,
+  "cost_usd": 0.00197276
+}

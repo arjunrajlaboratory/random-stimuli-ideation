@@ -1,0 +1,150 @@
+{
+  "batch": 8,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "f1d73aab1f9d96e0941e5800c3d88e67f9dad5a471b1860c708743159e8a6030",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Spatial and live metabolic mapping of survivor niches",
+      "description": "Use multiplexed spatial imaging or spatial transcriptomics on tumour sections or 3D organoids during treatment to locate surviving cells relative to hypoxic, stromal, or immune niches. In parallel, use fluorescence lifetime imaging of NAD(P)H and FAD to measure the metabolic state of individual living cells, and sort survivors by that state to test whether it predicts persistence.",
+      "idea_id": "persister_haiku_poem_required_1_4",
+      "source_sha256": "7b7a24d341ea6f0dfef8a4bc4c96dd0f1f91738bc8d41c57ee097cbbd23732c9"
+    },
+    {
+      "id": "I2",
+      "title": "Barcoded lineage tracing before and after drug",
+      "description": "Label a clonal population with heritable expressed DNA barcodes, split it into replicates, and treat them with the drug. Sequence the surviving barcodes to test whether the same sister lineages survive across replicates (pre-existing, heritable state) or different ones each time (stochastic induction). Pair this with single-cell RNA-seq of sibling cells sampled before treatment, so that pre-treatment transcriptional states can be linked to each lineage's later fate.",
+      "idea_id": "persister_sonnet_poem_required_0_0",
+      "source_sha256": "fae042e6f706f62f7401ffbeb595ca863719b86a33a7037ec4c99731431c216a"
+    },
+    {
+      "id": "I3",
+      "title": "Persistence and reversibility timescales of the rare state",
+      "description": "Use long-term live imaging with endogenous fluorescent knock-ins of candidate priming genes plus sister-cell and drug-holiday experiments to measure how many generations a high-expressing state persists and whether resensitization occurs after withdrawal. Luria-Delbruck fluctuation tests on split subclones quantify whether the heritability is genetic, epigenetic with memory, or transient.",
+      "idea_id": "persister_opus_word_salad_required_6_3",
+      "source_sha256": "e3ec14ce5fd15ddbef1b2e6519fe1344b7dfbd1ed914393a04e096ce9d4f01b3"
+    },
+    {
+      "id": "I4",
+      "title": "Functional perturbation screens in the persister state",
+      "description": "Run a CRISPR knockout or interference screen, or a small-molecule screen, during drug exposure. Measure which perturbations change the fraction of survivors, targeting chromatin regulators, metabolic and stress pathways, and anti-apoptotic genes. The results show which factors cause tolerance and which could be co-targeted.",
+      "idea_id": "persister_sonnet_word_salad_required_7_3",
+      "source_sha256": "264baac9d1e73886075cd9b52873222d231696d2968dc8543d8d87d09b95bf8f"
+    },
+    {
+      "id": "I5",
+      "title": "Perturbation screens targeting the persister state with drug-treated versus untreated comparison",
+      "description": "Perform a CRISPR knockout or interference screen with a drug-treated versus untreated comparison, plus pharmacological tests of candidate pathways identified in other analyses (e.g. epigenetic regulators, oxidative stress/GPX4, anti-apoptotic BCL2 family). Genes whose loss reduces the persister fraction without affecting bulk growth are causal mediators, and a combined drug plus inhibitor test shows whether the survivor fraction can be shrunk.",
+      "idea_id": "persister_sonnet_poem_required_3_4",
+      "source_sha256": "6622c28c16960fb19395d385fd858e95b9c5635345e4d9a3c97c1f78416aae22"
+    },
+    {
+      "id": "I6",
+      "title": "Live-cell reporters of signaling and cell-cycle dynamics during drug exposure",
+      "description": "Use time-lapse imaging with a FUCCI cell-cycle reporter and a kinase translocation reporter (for example ERK or AKT activity) to follow individual cells through the drug pulse. Test whether cells that eventually survive show distinct pathway rebound, a delayed cell cycle entry, or a transient signaling dip before the drug takes effect.",
+      "idea_id": "persister_haiku_word_salad_required_3_2",
+      "source_sha256": "5e973b6e20e0cbdaf8b1759d5b51de89c6f932a7a932884bb1d012f8662a219e"
+    },
+    {
+      "id": "I7",
+      "title": "Pre-treatment state sorting to test whether survivors were distinct before the drug",
+      "description": "Profile untreated cells with single-cell multiome (RNA plus ATAC) or live-cell fluorescent reporters of stress and chromatin states, then sort or computationally link pre-existing states to later survival after drug exposure. If persisters were already distinct before treatment, the rare state is a pre-existing cell state rather than a drug-induced change.",
+      "idea_id": "persister_haiku_poem_required_4_0",
+      "source_sha256": "68f374e2e5126839b98b70dac03389a6480c9d8b760991e6f44f5181d7f07681"
+    },
+    {
+      "id": "I8",
+      "title": "Pooled genome-wide CRISPR knockout screen of survivors",
+      "description": "Transduce cells with a genome-wide sgRNA library, apply a lethal dose of the drug, and compare guide abundance in survivors to the untreated population. Genes whose knockout enriches or depletes survivors reveal the mechanisms that protect cells, and the hits can be validated individually and tested for synthetic interactions with the drug.",
+      "idea_id": "persister_haiku_word_salad_required_1_3",
+      "source_sha256": "e793128421998581333f37a12f70004071529c700b0540aee65b989b09a91f5e"
+    },
+    {
+      "id": "I9",
+      "title": "Pooled CRISPR screen comparing sublethal and lethal dosing",
+      "description": "Perform a genome-wide CRISPR knockout screen at a sublethal drug dose that allows a small fraction to survive, and compare guide enrichment in survivors against the untreated library. Validate top hits by knocking them out individually and measuring the survival fraction, which identifies the genes that let a minority of cells escape the drug.",
+      "idea_id": "persister_haiku_word_salad_required_2_4",
+      "source_sha256": "95fe1a64f45454300d117e0f5832ed4a893f7a3e6e4037898d2d8e84330c27da"
+    },
+    {
+      "id": "I10",
+      "title": "Drug-holiday and re-challenge test of heritable epigenetic memory",
+      "description": "Expose cells to the drug, withdraw it until survivors regrow, then re-challenge them, while profiling histone marks (CUT&RUN for H3K27ac and H3K4me3) at each step. If the survivors' tolerance and chromatin state persist through several cell divisions without drug, the memory is stable; if both reset, the tolerance is reversible and non-genetic.",
+      "idea_id": "persister_haiku_word_salad_required_0_2",
+      "source_sha256": "362b65a3b6e026cc9db163c988e51b66127818320eb9375ae51984605308693b"
+    },
+    {
+      "id": "I11",
+      "title": "Timescale of transcriptional state fluctuation",
+      "description": "Knock in live-cell fluorescent reporters at candidate priming loci (e.g., AXL, NGFR, EGFR) and use long-term timelapse imaging to measure dwell times and autocorrelation of the high-expressing state. Sorting cells by how long they have occupied that state and then challenging them tests whether survival probability depends on the duration, not just the level, of priming.",
+      "idea_id": "persister_opus_poem_required_6_1",
+      "source_sha256": "c1c7336c090bd4a3877c9695c85b26d06610e28d3733443544fa571d47c44bcb"
+    },
+    {
+      "id": "I12",
+      "title": "Live-cell time-lapse imaging with reporters and fate tracking",
+      "description": "Image cells for days before and during drug exposure using reporters for signaling activity (e.g., ERK, apoptosis, cell cycle), then retrospectively trace survivors to see which dynamics, such as slow cycling, pulsatile signaling, or mitochondrial priming, predicted survival. This captures transient states that fixed snapshots miss.",
+      "idea_id": "persister_sonnet_word_salad_required_2_2",
+      "source_sha256": "58a946c9e4bceda1ff6709809fc7b4e1d69cf6f92743e7b19a42f0dc64f179ef"
+    },
+    {
+      "id": "I13",
+      "title": "Time-lapse single-cell tracking with reporters and post-hoc fate mapping",
+      "description": "Image live cells carrying reporters for signaling (ERK, AKT), cell cycle and stress responses for several generations before and after drug addition. Then retrospectively align the traces of the survivors with those of the dead cells to find early dynamic features, such as slow cycling or pulsatile signaling, that predict survival.",
+      "idea_id": "persister_sonnet_poem_required_1_1",
+      "source_sha256": "3a46b2b0cec4e4915ddea27beadef87048b3bd954a70dcd818610ec7de4df51d"
+    },
+    {
+      "id": "I14",
+      "title": "Lineage barcoding to separate pre-existing from induced tolerance",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicates, and apply drug. If the same barcodes recur among survivors across replicates, tolerance is pre-existing and heritable, whereas random barcodes imply drug-induced adaptation.",
+      "idea_id": "persister_sonnet_word_salad_required_2_0",
+      "source_sha256": "8fe72f205b92fd86cbd4d64de88c3898b03f0bf55fa7c6d0c2936d7759300503"
+    },
+    {
+      "id": "I15",
+      "title": "Genome-wide CRISPR screen for survival and survivor-enriched gene loss",
+      "description": "Run a pooled CRISPR knockout or CRISPRi screen under sub-lethal and lethal drug doses, and sequence guides in surviving cells versus untreated controls. Genes whose loss sensitizes or enriches survivors point to the causal pathways and separate true genetic resistance from non-genetic tolerance.",
+      "idea_id": "persister_haiku_word_salad_required_6_2",
+      "source_sha256": "a555cfd17d395dccead31e30a61ce0091a053cb397df48cb44000fbde063bd10"
+    },
+    {
+      "id": "I16",
+      "title": "Clonal recurrence test with split-population barcoding",
+      "description": "Transduce the cell line with a high-complexity heritable barcode library (e.g., ClonMapper/Watermelon), split the labeled population into replicate arms, treat each independently, and sequence barcodes in the survivors. The degree of barcode overlap between arms quantifies how much survival is driven by a heritable, pre-existing clonal state versus a stochastic, non-heritable process, and a barcode-plus-scRNA readout links each recurring clone to its expression program.",
+      "idea_id": "persister_opus_word_salad_required_7_0",
+      "source_sha256": "9e75f9688702e6f8bdc467e2582c7cd7d146ab1c1eb6347438987c4de379393b"
+    },
+    {
+      "id": "I17",
+      "title": "Fluctuation-style kinetic analysis of state switching",
+      "description": "Sort cells by a candidate marker, such as high or low expression, and measure how fast each subpopulation re-equilibrates and how its drug survival changes over time. Fit a Luria\u2013Delbr\u00fcck-type or Markov model to estimate switching rates, which distinguishes stable, slowly interconverting states from fast noise.",
+      "idea_id": "persister_sonnet_word_salad_required_4_3",
+      "source_sha256": "a06aabd776b9a235f106dc21f4aedaa4d714596dac4a57e933f6a11002fa5dbb"
+    },
+    {
+      "id": "I18",
+      "title": "Continuous live-cell tracking of survival trajectories",
+      "description": "Perform long-term time-lapse imaging with signaling and cell-cycle reporters spanning drug addition, tracking each cell's complete history. This reveals whether survival reflects a persistent fluctuating state, cell-cycle phase at the moment of exposure, or stochastic escape from apoptotic commitment.",
+      "idea_id": "persister_opus_poem_required_0_2",
+      "source_sha256": "c62ad7355981a1c9d113251095ee5b061888ba541d5b7cccec007df33f0e94ce"
+    },
+    {
+      "id": "I19",
+      "title": "Optical tagging of rare primed cells before drug exposure",
+      "description": "Live-image a fluorescent reporter for a candidate priming marker and use photoconversion or photo-crosslinking to permanently mark the rare brightest cells, then sort and sequence them while following matched wells through treatment. This provides a causal link between a pre-drug optical phenotype and eventual survival, rather than a post hoc correlation.",
+      "idea_id": "persister_opus_word_salad_required_1_1",
+      "source_sha256": "cf598cabdc879ff669e72bbbbbcc7a44cc96d8a326eaa4821fbcdfe5bc6708a0"
+    },
+    {
+      "id": "I20",
+      "title": "Genome-wide CRISPR screen with reversibility and re-challenge tests",
+      "description": "Run a pooled CRISPR knockout screen under sustained drug treatment, comparing guide enrichment in survivors versus the starting population, then validate hits in sorted survivors that are released from drug and re-challenged. Measuring whether tolerance is reversible and whether knockouts shift the survival fraction distinguishes genetic resistance from transient, epigenetically maintained persistence.",
+      "idea_id": "persister_haiku_poem_required_2_4",
+      "source_sha256": "c11ffd6b7591914a1ecc4b586ed60c949e3cc0772528f7c526f49ac39eaf788f"
+    }
+  ],
+  "cost_usd": 0.0493832
+}

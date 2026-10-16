@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 0,
+  "parallel": {
+    "field": "Condensed-matter physics (spin glasses)",
+    "problem": "Whether a disordered magnet stores a record of its past thermal history in its internal configuration, so that the state persists after the driving temperature is removed and can be read out later.",
+    "how_studied": "Researchers use stop-and-wait protocols, where the system is cooled and held at intermediate temperatures, then the wait time is varied and the susceptibility is re-measured to see whether the memory dip reappears. They use ac susceptibility and thermoremanent magnetization over long timescales, and they compare these against controls with no stops to separate true memory from simple aging."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Condensed-matter physics (spin glasses)\nProblem: Whether a disordered magnet stores a record of its past thermal history in its internal configuration, so that the state persists after the driving temperature is removed and can be read out later.\nHow it is studied: Researchers use stop-and-wait protocols, where the system is cooled and held at intermediate temperatures, then the wait time is varied and the susceptibility is re-measured to see whether the memory dip reappears. They use ac susceptibility and thermoremanent magnetization over long timescales, and they compare these against controls with no stops to separate true memory from simple aging.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stop-and-wait re-stimulation (memory dip test)",
+      "description": "Apply a sustained AP-1 stimulus (e.g., inducible c-Fos/c-Jun or a defined growth factor pulse), hold it at an intermediate 'stop' for varying wait times, then withdraw and re-apply the stimulus while measuring the AP-1 target response (reporter luciferase, qPCR of targets). If AP-1 stores a memory, the re-stimulated response should show a wait-time-dependent signature that reappears when the stop is repeated, analogous to the spin-glass memory dip reappearing after re-cooling."
+    },
+    {
+      "title": "Stop versus no-stop control to separate memory from aging",
+      "description": "Run matched-duration protocols in which the same total AP-1 exposure is delivered either continuously or interrupted by rests, and include sham-rest controls with equal elapsed time but no stimulus. Any history-dependent difference that persists beyond what time alone (aging) produces is the candidate memory signal."
+    },
+    {
+      "title": "Thermoremanent-style persistence readout over long timescales",
+      "description": "After removing the AP-1 stimulus, measure the retained state at many later times (hours to weeks) using AP-1 occupancy (ChIP-qPCR or CUT&RUN), chromatin accessibility (ATAC-seq), and enhancer marks at AP-1 target loci, and fit the decay of this residual signal. Persistence well beyond the transcript and protein half-lives would indicate a stored state rather than simple carryover."
+    },
+    {
+      "title": "Frequency-domain (ac-style) probing of AP-1 response",
+      "description": "Drive AP-1 with small periodic pulses across a range of frequencies in naive versus previously stimulated cells, and measure the amplitude and phase lag of a live-cell reporter (e.g., a FRET or luciferase AP-1 sensor). A history-dependent change in the slow relaxation component, absent in naive cells, would indicate an internal memory state that the fast pulses cannot erase."
+    },
+    {
+      "title": "Genetic dissection with AP-1 component perturbation",
+      "description": "Repeat the stop-and-wait and thermoremanent-style protocols in cells with inducible dominant-negative c-Jun (TAM67), c-Fos or JunB knockdown, and in cells lacking specific AP-1 partners, rescuing with wild-type constructs. If the memory signature disappears specifically when AP-1 function is lost and returns on rescue, AP-1 is necessary for the memory rather than just correlated with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1744,
+  "cost_usd": 0.0012412
+}

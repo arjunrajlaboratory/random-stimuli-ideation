@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 1,
+  "constraint": "with a total budget under $20,000",
+  "prompt": "Constraint: every one of your ideas must be carried out with a total budget under $20,000. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation analysis with split sister clones",
+      "description": "Grow many small clonal populations from single cells, split each into sister wells, and treat them with drug. Compare the variance in resistant-colony counts within sister pairs and between clones to tell a heritable pre-existing state (Luria\u2013Delbr\u00fcck-like jackpots that sisters share) from stochastic or drug-induced survival, and estimate how long the state lasts by varying the time before splitting (about $3\u20135k in plates, drug and imaging)."
+    },
+    {
+      "title": "Barcode 'twins' lineage tracing to capture survivors' pre-drug state",
+      "description": "Label cells with a lentiviral barcode library, let them divide a few times, then split them so sister cells end up in both halves. Treat one half, sequence the barcodes of the survivors, and profile the untreated sisters with the same barcodes using targeted barcode capture plus one small single-cell RNA-seq run, to see which expression programs mark future survivors before any drug exposure (about $12\u201318k)."
+    },
+    {
+      "title": "Multiplexed smFISH/HCR counts of rare 'primed' cells before and during treatment",
+      "description": "In thousands of untreated cells and along a fixed time course of drug treatment, image transcript counts of 10\u201320 candidate resistance genes (e.g., AXL, EGFR, NGFR, WNT5A, SOX10). This shows whether a rare subpopulation that co-expresses several markers exists beforehand, how often it occurs, and whether its frequency matches the surviving fraction (about $4\u20138k in probes and reagents, using existing microscopes)."
+    },
+    {
+      "title": "Live-cell imaging of signaling and cell-cycle history before drug addition",
+      "description": "Express cheap fluorescent reporters (an ERK/AKT kinase-activity reporter plus FUCCI cell-cycle markers) and film cells for 1\u20132 days before and 3\u20135 days after drug addition. Then track each cell's lineage to test whether survival is predicted by earlier signaling pulses, cell-cycle phase, quiescence or inheritance from the mother cell (about $3\u20136k)."
+    },
+    {
+      "title": "Sorting and perturbation tests of candidate survival states",
+      "description": "Use FACS to sort the top and bottom ~1% of cells for candidate markers (from the ideas above), and separately knock down or overexpress the candidate regulators with siRNA, CRISPRi or a small pooled guide library. Then count resistant colonies to test whether the marked state actually causes survival rather than just correlating with it (about $5\u201310k)."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1491,
+  "cost_usd": 0.038499
+}

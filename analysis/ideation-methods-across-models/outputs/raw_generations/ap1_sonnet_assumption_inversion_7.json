@@ -1,0 +1,45 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paralog-resolved ChIP/CUT&RUN time course",
+      "description": "Profile individual FOS, FOSL, JUN, JUND and ATF family members by CUT&RUN before, during, and days after the stimulus to see which dimers remain at memory loci. This tests the single-entity assumption by showing whether memory is carried by specific complexes."
+    },
+    {
+      "title": "Acute degron removal after the stimulus",
+      "description": "Prime cells, then deplete AP-1 with a dTAG or auxin degron (for example, c-JUN or a dominant-negative A-FOS) only after the stimulus has cleared, and measure whether the faster secondary response and the open chromatin persist. If memory survives AP-1 loss, it lives in chromatin rather than in AP-1, which separates AP-1 as the memory carrier from AP-1 as the writer."
+    },
+    {
+      "title": "Long-term washout with matched ATAC, histone marks and AP-1 occupancy",
+      "description": "Measure accessibility, H3K27ac/H3K4me1 and AP-1 binding at several time points over many days and cell divisions after the stimulus ends. Comparing their decay kinetics shows whether AP-1 stays bound (a true memory mechanism) or only leaves behind marks, and avoids single-time-point snapshots."
+    },
+    {
+      "title": "Site-specific causal perturbation of AP-1 motifs",
+      "description": "Use CRISPR base editing or dCas9-based tethering to mutate or recruit AP-1 at individual enhancers, then test the primed response of the linked genes after a rest period. This tests causality at individual loci rather than motif enrichment, and tests whether AP-1 binding alone is sufficient to create memory."
+    },
+    {
+      "title": "Single-cell multiome with live AP-1 reporters and lineage tracking",
+      "description": "Combine live-cell imaging of endogenously tagged FOS/JUN with single-cell RNA and ATAC, and track daughter cells after division, to test whether memory is digital, heritable and tied to AP-1 state in each cell. Memory should appear as a bimodal, clonally inherited state that bulk averages would miss."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single entity, but it is a heterodimer family (FOS, JUN, ATF, MAF) whose composition differs by context and may carry memory differently.",
+      "Memory is assumed to reside in AP-1 itself (its levels or activity), rather than in the chromatin or other factors AP-1 acts on.",
+      "Memory is assumed to be a persistent state after the stimulus ends, yet AP-1 binding is often transient and the readout is usually taken at a single time point.",
+      "Correlation is assumed to be enough: that sites bound or accessible after a stimulus show AP-1 motifs implies AP-1 causes the memory.",
+      "Bulk population averages are assumed to represent single-cell behavior, hiding whether memory is a graded or a digital, heritable state.",
+      "Memory is assumed to be a property of AP-1 alone, whereas it may emerge from a network, such as positive feedback with FOS/JUN transcription or signaling kinases (JNK/ERK), rather than from AP-1 as a molecule.",
+      "A single cell type and stimulus (for example, a cell line or one cytokine) is assumed to generalize, while memory may depend on lineage, cell cycle, and stimulus history.",
+      "Memory is assumed to be binary (present or absent), whereas it may be quantitative and decay over cell divisions, so it needs a dose and time-resolved readout."
+    ]
+  },
+  "output_tokens": 1251,
+  "cost_usd": 0.0152899
+}

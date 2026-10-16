@@ -1,0 +1,62 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sibling-split profiling to read out the survivor's pre-drug state",
+      "description": "Barcode a population, let each cell divide a few times, then physically split each clone so that one half is drug-challenged and the matched half is profiled untreated by single-cell RNA-seq. Because barcodes link the two halves, you can read the transcriptome of the cells that would have survived without ever exposing them to drug, cleanly separating pre-existing priming from drug-induced adaptation."
+    },
+    {
+      "title": "Fluctuation analysis to estimate the rate of entry into and exit from the primed state",
+      "description": "Expand many independent parallel cultures from small inocula, treat each identically, and analyze the variance in survivor counts across cultures using a Luria-Delbruck style framework extended to reversible states. The shape of the distribution distinguishes a rare heritable mutation from a transient, interconverting state, and fitting it yields quantitative switching rates rather than just a qualitative claim of plasticity."
+    },
+    {
+      "title": "Prospective reporter sorting as a falsifiable test of priming",
+      "description": "Knock fluorescent reporters into the endogenous loci of candidate priming genes, sort live untreated cells from the top and bottom of the expression distribution, and challenge each fraction with drug. The fold-enrichment of survival in the reporter-high fraction converts a correlational signature into a predictive, quantitative measurement, and re-sorting after varying culture times measures how long the state is remembered."
+    },
+    {
+      "title": "Continuous imaging through the moment of drug addition, with in situ molecular endpoints",
+      "description": "Time-lapse image a sparse population from before drug exposure through survivor outgrowth, recording cell-cycle phase, size, division history, and neighbor context for every cell, then perform in situ sequencing or multiplexed RNA FISH on the same field at the end. This retrospectively assigns a complete behavioral and molecular history to each survivor and to its non-surviving neighbors, which bulk or dissociated methods cannot do."
+    },
+    {
+      "title": "Screening on survivor frequency rather than on survival itself",
+      "description": "Run a CRISPR or small-molecule screen whose readout is the fraction of cells that enter the primed state, measured by a priming reporter or by the number of independent surviving colonies per starting cell, rather than overall viability. Perturbations that change the frequency without changing the identity of the resistant state point to the upstream machinery that generates rare-cell variability, a target class that conventional viability screens systematically miss."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Twin/sibling split design: barcode cells, split a clone, treat one half and transcriptionally profile the untreated half to infer the pre-existing state of survivors",
+      "Retrospective enrichment of rare primed cells using barcode-targeted probes, then profile those primed cells before drug exposure",
+      "Massively multiplexed single-molecule RNA FISH on untreated cells to map rare coordinated high-expression states and their spatial/clonal clustering",
+      "Live-cell reporter knock-ins for candidate priming genes, with time-lapse imaging followed by sorting and drug challenge to test predictive power of the reporter state",
+      "Measure the memory half-life of the primed state by sorting reporter-high cells, culturing for varying times, then challenging with drug",
+      "Clonal fate mapping with repeated sampling: track whether the same lineage repeatedly produces survivors across independent drug challenges (heritability test)",
+      "Time-lapse tracking of every cell through drug addition to distinguish pre-existing survival from drug-induced adaptation, with endpoint in situ transcriptomics on tracked cells",
+      "Single-cell ATAC plus RNA on untreated populations to ask whether primed cells are chromatin-poised versus transcriptionally distinct only",
+      "CUT&RUN or chromatin profiling on sorted primed cells to test for bivalent or pre-opened enhancers at resistance genes",
+      "Perturb chromatin regulators (e.g., KDM5A, DOT1L, BRD4) and measure the frequency, not just the existence, of surviving cells",
+      "CRISPR screen scored on survivor frequency and on priming-reporter fraction rather than on bulk viability",
+      "Dose-response and time-course deconvolution: fit survivor fraction across drug doses and durations to distinguish fixed subpopulation versus stochastic escape models",
+      "Drug holiday and re-challenge experiments to measure reversibility of resistance and estimate state switching rates",
+      "Infer state-transition rates from the Luria-Delbruck style fluctuation analysis of survivor numbers across parallel cultures",
+      "Metabolic and redox single-cell measurements (NAD(P)H imaging, lipid peroxidation sensors) to test whether survivors occupy a distinct metabolic state",
+      "Cell-cycle and size measurements at the moment of drug addition, correlating with subsequent survival",
+      "Measure intracellular drug concentration per cell (fluorescent drug analog or mass spec imaging) to test trivial pharmacokinetic explanations first",
+      "Protein-level single-cell profiling (CyTOF or 4i) of signaling network states to see whether pathway reactivation is pre-wired",
+      "Test paracrine and neighborhood effects by mixing labeled cells at varying densities and spatial arrangements",
+      "Test whether primed state is an artifact of cell culture by applying the same lineage tracing in xenografts or organoids",
+      "Allele-specific expression in survivors to ask whether priming is monoallelic bursting at key loci",
+      "Translation-level profiling of rare cells to test whether priming is post-transcriptional",
+      "Ultra-deep sequencing of survivors versus parental to rule out rare pre-existing mutations and copy-number events",
+      "Measure whether survivors are enriched for recent mitosis or asymmetric division using division-tracking dyes",
+      "Compare priming-state frequency across drug classes to test whether the same cells survive different targeted drugs"
+    ]
+  },
+  "output_tokens": 2456,
+  "cost_usd": 0.0914158
+}

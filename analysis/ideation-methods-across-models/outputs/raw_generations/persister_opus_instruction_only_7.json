@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 7,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Metal fatigue testing: hysteresis of the resistant state",
+      "description": "Borrowing cyclic load-testing from materials science, expose cells to repeated pulses of drug with varying washout intervals and track single-clone phenotypes, measuring whether the surviving state relaxes back (elastic) or latches permanently (plastic deformation). Mapping the hysteresis loop \u2014 how long drug exposure must last and how long memory persists after removal \u2014 distinguishes transient transcriptional priming from heritable epigenetic or genetic fixation, and pinpoints the dosing interval that prevents the state from latching."
+    },
+    {
+      "title": "Seed-bank ecology: quantifying dormancy depth as a bet-hedging trait",
+      "description": "Treat survivors like a plant seed bank with staggered germination, and use long-term live imaging plus quiescence-depth reporters (CDK2 activity, p21, DNA-labeling dilution) to measure the full distribution of dormancy depths and re-entry times before and during treatment. Fitting classic bet-hedging models to the observed switching rates tests whether survival is an evolved stochastic dormancy strategy rather than a drug-induced response, and predicts the optimal drug-holiday timing to catch germinating cells."
+    },
+    {
+      "title": "Transition-path theory: committor probabilities for candidate priming markers",
+      "description": "Adapting rare-event analysis from statistical physics, build live reporters for candidate pre-resistance markers, FACS-sort untreated cells into narrow bins spanning the full expression range, and measure the fraction of each bin that survives drug \u2014 the empirical committor function. A marker whose committor rises sharply and monotonically is on the true reaction coordinate of survival; markers that merely correlate with survivors show flat or noisy committors, cleanly separating causal priming from bystander correlation."
+    },
+    {
+      "title": "Water-utility leak auditing: per-cell drug accounting before blaming signaling",
+      "description": "Before attributing survival to signaling states, audit the drug itself the way a utility meters flow to find leaks: use a fluorescent or clickable drug analog, intracellular mass-spectrometry imaging, and efflux-pump reporters to measure the actual single-cell intracellular drug concentration and target occupancy (e.g., by a target-engagement FRET or thermal-shift reporter) in survivors versus dying neighbors. This tests whether the surviving fraction is a pharmacokinetic phenomenon \u2014 uptake, efflux, or sequestration heterogeneity \u2014 rather than a cell-state phenomenon."
+    },
+    {
+      "title": "Actuarial survival modeling with time-varying covariates",
+      "description": "Apply the insurance industry's hazard-modeling framework to single cells: from continuous imaging of thousands of cells during treatment, fit a Cox proportional-hazards model where each cell's time-to-death is regressed on time-varying covariates (reporter intensities, cell size, cell-cycle phase, local density, mitotic history) measured hours earlier. The resulting hazard ratios quantify how much each measurable feature actually changes the instantaneous risk of death, and deviations from proportional hazards reveal whether survivors are a distinct 'cured' subpopulation or just the tail of one continuous risk distribution."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2247,
+  "cost_usd": 0.08143679999999999
+}

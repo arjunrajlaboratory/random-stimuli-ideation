@@ -1,0 +1,150 @@
+{
+  "batch": 0,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "97dfa94082019e8b8731c7c9858763d3bc63190f33edd30430fb3122398e6c8c",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Fluctuation-test lineage barcoding",
+      "description": "Split a barcoded clonal population into many parallel replicates, apply drug, and compare the variance in survivor barcodes across replicates. Pre-existing heritable states should give large, shared barcode overrepresentation across replicates, while drug-induced switching should give Poisson-like variation. Sequencing barcodes before and after treatment, and after regrowth, also shows how stable the resistant state is.",
+      "idea_id": "persister_sonnet_instruction_only_7_0",
+      "source_sha256": "b72b633758bd66aaf61026a63c491f12bcd5006b71b3e609358fada57734e1e3"
+    },
+    {
+      "id": "I2",
+      "title": "Single-cell measurement of apoptotic threshold dynamics",
+      "description": "Use live reporters for caspase activation and mitochondrial outer membrane permeabilization, together with BH3 profiling of single cells. This quantifies cell-to-cell variation in how close each cell is to the death threshold and in the timing of commitment to death after drug exposure, separately from drug target inhibition.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_6_3",
+      "source_sha256": "80cf25af4ec8862e1de5f8831370e9644a2ec3639f46a34cf495454cd5c2d387"
+    },
+    {
+      "id": "I3",
+      "title": "Neighborhood-resolved survivor mapping with mixing and conditioned-medium controls",
+      "description": "Live-image a labeled monolayer through treatment and test whether each survivor's local density, contact number, and spatial position at the time of dosing predict survival better than its own pre-drug reporter intensity. Follow with low- versus high-density plating, transwell or conditioned-medium transfer, and mixing of color-coded populations to separate paracrine or neighborhood-mediated protection from intrinsic cell state.",
+      "idea_id": "persister_opus_assumption_inversion_1_1",
+      "source_sha256": "f6e5dfab8c5a1296bc7f64c45189b531a13bc22c80abb113c104afd379a2cff2"
+    },
+    {
+      "id": "I4",
+      "title": "Lineage barcoding with split populations before treatment",
+      "description": "Label cells with heritable DNA barcodes (e.g., ClonTracer or Perturb-seq-style), split the population before drug exposure, and determine which barcodes survive in parallel replicates. Shared survivors across replicates would indicate a pre-existing, heritable state. Random survivors would indicate stochastic or induced tolerance.",
+      "idea_id": "persister_sonnet_plain_6_0",
+      "source_sha256": "930de34b135b68e6f5a7e1789a66d477a4e88f0d08fd25dd62a7d72214a4d113"
+    },
+    {
+      "id": "I5",
+      "title": "Re-challenge and drug-holiday experiments for inheritance of tolerance",
+      "description": "Expand the survivors in drug-free medium for varying numbers of generations. Re-challenge them at different time points and compare the surviving fraction with that of naive cells. A fraction that reverts over time indicates a reversible epigenetic or metabolic state. A fraction that stays high suggests a genetic change, which exome sequencing can then test for. Add single-cell-derived clones to measure how quickly the survival fraction returns to baseline.",
+      "idea_id": "persister_sonnet_parallel_rotated_7_3",
+      "source_sha256": "de6947995f370da620b3bd659488e8cb8de8398d8c0dc37c7444a364fb36eb7b"
+    },
+    {
+      "id": "I6",
+      "title": "Retrospective tracing of survivors to pre-treatment state",
+      "description": "Use fluorescent reporters or lineage barcodes to record each cell's state before treatment, then sort survivors and matched non-survivors and profile them by scRNA-seq or ATAC-seq. Comparing survivors back to their pre-treatment signatures identifies the pre-existing feature (for example, an efflux, stress, or chromatin state) that predicted survival.",
+      "idea_id": "persister_haiku_parallel_rotated_0_1",
+      "source_sha256": "8d3088426078d6f233c3a6595a4ffaa9311f4eb6d82592a2e0bfaf36a2deff5e"
+    },
+    {
+      "id": "I7",
+      "title": "Time-resolved CRISPR screen under sub-lethal dosing",
+      "description": "Run a pooled CRISPR knockout library at a sub-lethal drug dose and sort cells at multiple time points, rather than only at endpoint. Genes whose loss kills cells early but not late, or that enrich only in the persister fraction, reveal the sequence of adaptive steps that build tolerance and suggest which dependencies to target.",
+      "idea_id": "persister_haiku_future_retrospective_4_4",
+      "source_sha256": "2720f58ef72cd17c0a2a4b31ebdaf76cc8d1c18e5910b131c0eca337a55aeaef"
+    },
+    {
+      "id": "I8",
+      "title": "Spatial mapping of survivors within tumor niches",
+      "description": "Use spatial transcriptomics or multiplexed imaging on treated tumors or organoids to locate surviving cells relative to hypoxic zones, stromal contact, and vasculature. If survival clusters in specific niches, then niche-dependent signals, not intrinsic cell heterogeneity alone, drive persistence, making the niche a therapeutic target.",
+      "idea_id": "persister_haiku_future_retrospective_3_4",
+      "source_sha256": "2ec1617d128580fe617fe8ab3f25238f4b4c7a2e4bce8025699f3bef40f772f0"
+    },
+    {
+      "id": "I9",
+      "title": "Chromatin accessibility time course to find a primed epigenetic state",
+      "description": "Run single-cell ATAC-seq across a drug time course and align the profiles with later survival, so the chromatin landscape of cells that will persist can be compared with that of cells that will die. Accessibility at lineage or stress-response enhancers that is already open before treatment would indicate epigenetic priming.",
+      "idea_id": "persister_haiku_future_retrospective_5_1",
+      "source_sha256": "b1d371510369379219c9d9c5d622da29ecbdaedbe920f65a21ba38b074bf0a86"
+    },
+    {
+      "id": "I10",
+      "title": "Micronucleus rupture and cGAS-STING history as a survival predictor",
+      "description": "Use live imaging of a nuclear-localization reporter and a cGAS sensor to score which cells form micronuclei, rupture them, or activate innate immune signaling during the first drug cycle. Then test whether cells with prior micronuclear damage are enriched among survivors, and whether blocking cGAS or STING before treatment changes persister frequency.",
+      "idea_id": "persister_haiku_critique_revise_0_3",
+      "source_sha256": "caae28db3acae27ef913edf1a42f66954bfc31b2d74a935d989c667559ca8a65"
+    },
+    {
+      "id": "I11",
+      "title": "Epigenetic and chromatin perturbation to test memory of survival",
+      "description": "Measure chromatin accessibility, histone marks, and DNA methylation in persister cells sorted after drug withdrawal versus drug-naive cells, then perturb candidate epigenetic regulators (e.g., KDM5 family, DNMTs, or BET proteins) to see if persistence is reversed. Comparing drug-naive, persister, and drug-removed-regrown populations separates transient adaptive states from stable, heritable changes.",
+      "idea_id": "persister_haiku_plain_1_4",
+      "source_sha256": "961a7a1761a3c3a77c24ef460f8669af94f509aaf0c8fff5ddef1ad3137cf33c"
+    },
+    {
+      "id": "I12",
+      "title": "Same-cell multiplexed profiling before and during treatment",
+      "description": "Use imaging mass cytometry, multiplexed immunofluorescence, or cyclic imaging to measure phospho-proteins, drug-target occupancy, and efflux-pump levels in the same cells at several time points during treatment. This shows whether survival is linked to a specific signaling state that changes over time, rather than to a fixed trait.",
+      "idea_id": "persister_haiku_parallel_rotated_7_1",
+      "source_sha256": "100786f190f35dd1179af398754cfd500534cba45048250944b521ff230c1099"
+    },
+    {
+      "id": "I13",
+      "title": "Spatial mapping of survivor niches",
+      "description": "Use multiplexed spatial transcriptomics or imaging to map where surviving cells sit relative to hypoxic zones, stromal or immune neighbors, and vasculature. Enrichment of survivors in particular niches, followed by niche-disruption experiments, would show whether the microenvironment, rather than intrinsic cell state, protects them.",
+      "idea_id": "persister_haiku_instruction_only_3_4",
+      "source_sha256": "3ce13d5bc375487e96ce93e476ce1f78ee63327a105260ed079f50f30a2a3ca3"
+    },
+    {
+      "id": "I14",
+      "title": "Long-term live imaging for precursor signaling dynamics and lead time",
+      "description": "Image cells for days before and during treatment with multiplexed live reporters (e.g., ERK/AKT kinase translocation sensors, NF-\u03baB, stress and cell-cycle reporters), then align single-cell traces retrospectively to the survival outcome. Fitting the hazard of survival to the preceding signaling history identifies precursor signatures and the characteristic lead time over which the predisposed state exists.",
+      "idea_id": "persister_opus_instruction_only_3_1",
+      "source_sha256": "c7315669ca299e433cc7a8a1bdb246ccfff82e009da2659f9d27139eb42c91a9"
+    },
+    {
+      "id": "I15",
+      "title": "Tuning expression noise at fixed mean with synthetic circuits",
+      "description": "Put a candidate resistance driver (e.g., a transcription factor or receptor) under a synthetic circuit that changes cell-to-cell variability without changing average expression, using negative-feedback or noise-tuner constructs. Then measure whether the surviving fraction tracks variance or mean. This directly tests whether expression fluctuations themselves, rather than a specific expression state, cause survival.",
+      "idea_id": "persister_opus_obvious_then_avoid_1_2",
+      "source_sha256": "4379aa095628a99eb9957598d33140f14cf410ac895502853b06df8667ffe214"
+    },
+    {
+      "id": "I16",
+      "title": "Apoptotic priming measurement with BH3 profiling and live caspase reporters",
+      "description": "Measure each cell's mitochondrial apoptotic priming with single-cell BH3 profiling or live caspase and MOMP reporters. Then test how priming, rather than drug target inhibition, sets survival after drug exposure. Compare the variance in priming with that in target-inhibition readouts to see which drives the surviving fraction.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_2_4",
+      "source_sha256": "84198cc33b09252bedee1b4a0510b9f851fb6c65c26ceb2dcad38c42c9e66ce0"
+    },
+    {
+      "id": "I17",
+      "title": "Live-cell imaging of cell fate with zebrafish xenograft or transgenic reporters",
+      "description": "Image fluorescent reporters of cell cycle (FUCCI), ERK/kinase activity (FRET biosensor), mitochondrial state, and apoptosis in individual cells in transparent zebrafish tumors or cultured fish cancer cells. Record cells for days before and during drug exposure, and retrospectively classify the cells that survive. Because cells are tracked over time, this links pre-treatment dynamics (pulsatile signaling, quiescence, cell-cycle phase, mitochondrial priming) to survival at single-cell resolution, which snapshot omics cannot do.",
+      "idea_id": "persister_sonnet_assigned_constraint_4_2",
+      "source_sha256": "d1d35c87ba4768e99c4b7ac84ff84fe4cd9e70507cdc1b6f731c2871b9948506"
+    },
+    {
+      "id": "I18",
+      "title": "Spatial neighborhood mapping of survivors in dense versus sparse colonies",
+      "description": "After treatment, map surviving cells in situ (multiplexed imaging or spatial transcriptomics) and quantify survival as a function of local neighbor density and contact with dying cells. If survival depends on local neighborhood rather than intrinsic cell identity, the mechanism involves community or contact-dependent protection, which can be tested by co-culture and conditioned-medium experiments.",
+      "idea_id": "persister_haiku_critique_revise_4_4",
+      "source_sha256": "a9243c48e1ab437f94424c8755576490e888f525856c49fdf2dcea2d07a2ea26"
+    },
+    {
+      "id": "I19",
+      "title": "Fluctuation tests with heritability timing",
+      "description": "Run Luria-Delbr\u00fcck-style assays on many small parallel clonal expansions, varying the time between subcloning and drug exposure. The variance in survivor numbers and its decay over generations quantify switching rates and memory duration, separating stable, transient, and drug-induced tolerance.",
+      "idea_id": "persister_sonnet_overgenerate_select_5_1",
+      "source_sha256": "77d529578ce69995ee56b8784e7213e12edd73ddfa26aa93c3a7055499e6da4c"
+    },
+    {
+      "id": "I20",
+      "title": "Measurement of drug uptake and target engagement in single cells",
+      "description": "Pair fluorescent or clickable analogs of the inhibitor (or single-cell mass spectrometry) with a live readout of target pathway activity, such as an ERK kinase translocation reporter, in the same cells. This shows whether survivors are cells in which the drug never fully reached or inhibited its target (due to efflux, uptake, or target-level differences) or cells that were fully inhibited and survived anyway.",
+      "idea_id": "persister_opus_obvious_then_avoid_4_1",
+      "source_sha256": "e70bc33cd1d9070af5f4f35750e3debc3a31872bce9a1709564a22834b7985dc"
+    }
+  ],
+  "cost_usd": 0.050135200000000005
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fearful symmetry: sister-cell concordance as a memory clock",
+      "description": "Live-image an endogenous FOS/JUN reporter through cell division, then measure the correlation in restimulation response between sister cells versus randomly paired cells. The decay of this 'symmetry' as a function of time since division yields a direct half-life for the heritable AP-1 state, with cousin and second-cousin comparisons separating true heritable memory from shared microenvironment."
+    },
+    {
+      "title": "The immortal hand that framed, then left: AP-1 degron washout",
+      "description": "Tag FOS/JUNB with dTAG or auxin-inducible degrons and acutely destroy the protein during defined windows after a priming stimulus, then restimulate. If the primed response survives AP-1 protein loss, AP-1 is the writer of a memory stored elsewhere (chromatin); if memory collapses with the protein, AP-1 is itself the storage medium."
+    },
+    {
+      "title": "Dare seize the fire: latent enhancers across prime-rest-restimulate",
+      "description": "Collect matched ATAC-seq, AP-1 CUT&RUN, and nascent transcription (PRO-seq or intronic scRNA-seq) across a prime to long-rest to restimulate time course, identifying sites that retain accessibility during rest even after AP-1 occupancy decays. Testing whether these retained, AP-1-motif-enriched sites are precisely the loci that fire faster or higher on the second stimulus is the central mechanistic test."
+    },
+    {
+      "title": "What distant deeps: lineage barcodes tracing the fire to its origin",
+      "description": "Combine heritable lineage barcoding (CRISPR recorders or static barcodes as in Watermelon/FateMap) with single-cell ATAC and RNA to ask whether drug-tolerant or hyper-responsive cells descend preferentially from AP-1-high ancestors. This quantifies how many generations the AP-1 state persists and how much of final-state variance it explains."
+    },
+    {
+      "title": "The returning refrain: a memory transfer function from spaced stimuli",
+      "description": "Deliver two identical stimulus pulses separated by systematically varied intervals (minutes to many days, spanning several divisions) and fit response amplitude versus inter-pulse interval to extract a memory decay constant, then test whether it matches decay of AP-1-site accessibility rather than AP-1 protein. As a sufficiency arm, insert synthetic AP-1 motif arrays at ectopic naive loci and ask whether they can be framed into acquiring the same memory behavior."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2936,
+  "cost_usd": 0.1141085
+}

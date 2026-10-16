@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Prospective isolation by candidate-marker sorting",
+      "description": "Use flow cytometry on untreated cells to purify the rare subpopulation expressing high levels of a suspected resistance-associated surface protein, then compare drug-survival frequency of sorted-high versus sorted-low fractions. A large enrichment implies the surviving fraction was specified before the drug was applied."
+    },
+    {
+      "title": "Clonal split-and-compare design",
+      "description": "Expand single-cell-derived clones, split each into treated and untreated arms, and ask whether survival frequency is reproducible across clones or randomly distributed. Reproducible clone-specific rates point to heritable causes, while scatter points to transient fluctuations."
+    },
+    {
+      "title": "Longitudinal imaging of individual survivors",
+      "description": "Track every cell in a field from before treatment through weeks of exposure to record division history, dormancy duration, and timing of outgrowth. Survivors can then be retrieved by micromanipulation or photoconversion for downstream molecular profiling."
+    },
+    {
+      "title": "Chromatin and epigenome profiling of the resistant state",
+      "description": "Apply single-cell ATAC-seq and histone-modification mapping to survivors versus naive cells to find accessibility changes underlying tolerance. Test reversibility by withdrawing drug, reseeding, and re-profiling to see whether the state decays."
+    },
+    {
+      "title": "Genome-wide perturbation screening for state entry and exit",
+      "description": "Run CRISPR activation and knockout screens scored on survivor frequency to identify regulators that change how often cells occupy the drug-tolerant state. Comparing hits from pre-treatment versus post-treatment perturbation separates factors controlling state entry from those controlling survival once treatment begins."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1603,
+  "cost_usd": 0.0682957
+}

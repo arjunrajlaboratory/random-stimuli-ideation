@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 2,
+  "constraint": "using live-cell imaging as the only readout",
+  "prompt": "Constraint: every one of your ideas must be carried out using live-cell imaging as the only readout. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Endogenous AP-1 reporter tracking across stimulus-washout-restimulus",
+      "description": "Knock in fluorescent tags (e.g., c-Fos/JunB-mNeonGreen) or a live AP-1 transcriptional reporter (TRE-driven destabilized fluorescent protein) and image single cells over days through a first stimulus (e.g., EGF, TPA, or TNF), washout, and a second stimulus. Test whether single-cell response amplitude, kinetics and fraction of responders in the second round depend on the first, and how long that history effect lasts (memory decay time)."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1 state inheritance through divisions",
+      "description": "Time-lapse imaging of AP-1 reporter levels in lineages after transient stimulation, quantifying correlation of reporter state between mother, daughter and sister cells over multiple generations. Compare with the correlation expected from shared noise or cell-cycle effects to determine if the AP-1 state is heritable (mitotically stable) and how many divisions it persists."
+    },
+    {
+      "title": "Bistability and hysteresis from dose-ramp imaging",
+      "description": "Expose cells to ascending and then descending stimulus dose ramps while tracking AP-1 reporter per cell, and plot single-cell dose-response curves for each direction. Bimodal distributions and a hysteresis loop (different thresholds on the up and down ramps) would indicate a self-sustaining, positive-feedback memory state rather than a simple graded response."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-encoding with live readout of persistence",
+      "description": "Use optogenetic control of AP-1 activity (e.g., light-inducible c-Jun/c-Fos dimerization or upstream ERK/JNK activation via optoSOS) with varying pulse number, duration and frequency, while imaging a separate AP-1 target reporter and the AP-1 factor itself. Determine whether defined input histories produce persistent output after light off, identifying the input dynamics needed to 'write' memory and whether it requires AP-1 positive autoregulation (c-Jun/FOS promoter feedback)."
+    },
+    {
+      "title": "Live imaging of AP-1 dynamics and chromatin accessibility/target locus at single loci",
+      "description": "Co-image fluorescently tagged AP-1 (e.g., Halo-JunD/c-Fos) with single-molecule tracking for residence time and with live MS2/PP7 nascent transcript reporters on AP-1 target genes, or a chromatin-state live sensor, during primary and secondary stimulation. Test whether prior stimulation lengthens AP-1 binding dwell times, increases burst frequency, or primes loci to respond faster, and whether acute AP-1 degradation (degron tag, imaged) after the first stimulus abolishes the primed response, establishing necessity for memory maintenance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1021,
+  "cost_usd": 0.014557500000000001
+}

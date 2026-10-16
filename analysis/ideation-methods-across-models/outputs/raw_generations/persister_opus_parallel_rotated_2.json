@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 2,
+  "parallel": {
+    "field": "Distributed systems / site reliability engineering",
+    "problem": "Why do a few identical server replicas running the same software stay healthy during a cascading failure that takes down the rest of the fleet?",
+    "how_studied": "Engineers use chaos engineering, injecting controlled faults (added latency, dropped packets, killed processes) into fleets that are identical except for runtime state. They then compare telemetry from just before the fault in survivors and casualties, such as cache warmth, garbage-collection phase, connection pool size and queue depth. Distributed tracing and survival analysis over replica-level time series show which temporary states predicted staying up."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Distributed systems / site reliability engineering\nProblem: Why do a few identical server replicas running the same software stay healthy during a cascading failure that takes down the rest of the fleet?\nHow it is studied: Engineers use chaos engineering, injecting controlled faults (added latency, dropped packets, killed processes) into fleets that are identical except for runtime state. They then compare telemetry from just before the fault in survivors and casualties, such as cache warmth, garbage-collection phase, connection pool size and queue depth. Distributed tracing and survival analysis over replica-level time series show which temporary states predicted staying up.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clonal-twin split: reading the telemetry snapshot from just before the fault",
+      "description": "Because profiling a cell destroys it, use lineage barcoding plus a sibling-split design (e.g., Rewind/FateMap-style): expand single-cell-derived clones, then split each clone so one half is profiled untreated by scRNA-seq/ATAC-seq while the matched half receives drug, letting you retrospectively assign the pre-treatment molecular state of lineages that survived versus those that died \u2014 the direct analog of comparing pre-fault telemetry in survivor and casualty replicas."
+    },
+    {
+      "title": "Live-cell 'distributed tracing' with per-cell survival regression",
+      "description": "Image cells for days before and during drug exposure while recording a multiplexed panel of fluorescent reporters (ERK/AKT activity, cell-cycle CDK2 sensor, mitochondrial membrane potential, ATF4/stress response, autophagy flux), then fit a time-varying Cox proportional-hazards model on the single-cell traces to identify which transient states, and in which time window relative to dosing, predict survival \u2014 the analog of tracing spans plus survival analysis over replica time series."
+    },
+    {
+      "title": "Fault-injection matrix: is persistence state-specific or fault-specific?",
+      "description": "Systematically vary the injected 'fault' \u2014 drug class (kinase inhibitor vs. chemotherapy vs. nutrient withdrawal), intensity, and schedule (step, ramp, pulse, repeated short bursts) \u2014 on barcoded replicate populations, and test by barcode overlap whether the same lineages survive every insult (a general robust state) or different lineages survive different insults (mechanism-matched states), mirroring chaos experiments that inject distinct fault types to localize the failure mode."
+    },
+    {
+      "title": "Resource-reserve and local-load measurements (cache warmth, pool size, queue depth)",
+      "description": "Quantify the cell-intrinsic 'resource state' at the moment of dosing \u2014 actual intracellular drug concentration via a fluorescent drug analog or MALDI mass-spec imaging, plus efflux-pump activity, lysosomal sequestration, NADPH/GSH redox buffer, ATP, and ribosome/translation capacity \u2014 alongside the cell's 'load context' (local cell density, neighbor identity, mechanical confinement) measured by spatial imaging, to separate survivors that never received the dose from survivors that absorbed it."
+    },
+    {
+      "title": "Staging-environment replay: force the candidate state and re-run the incident",
+      "description": "Take the top state inferred from the twin and tracing experiments and install it deliberately \u2014 CRISPRa/optogenetic or small-molecule induction of the marker gene program in a tunable fraction of cells, or FACS pre-sorting on a live reporter of that state \u2014 then test whether the surviving fraction rises proportionally and whether blocking the state collapses it, converting a correlational post-mortem into a reproducible, causal re-enactment of the failure."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2096,
+  "cost_usd": 0.0937555
+}

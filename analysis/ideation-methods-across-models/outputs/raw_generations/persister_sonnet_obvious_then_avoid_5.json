@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pedigree-resolved sister-cell tracking with post-hoc transcriptomics",
+      "description": "Time-lapse image cells for several generations before drug, then drug-treat and track survival, and finally lyse and sequence/FISH-profile identified survivors and their pre-drug sisters or cousins. This tests whether survival is heritable across divisions and which pre-existing state markers correlate with it, beyond static snapshots."
+    },
+    {
+      "title": "Single-cell mitochondrial and metabolic state mapping (FLIM-NADH, mtDNA content, ROS) before drug",
+      "description": "Measure NAD(P)H lifetime, mitochondrial membrane potential, mtDNA copy number and ROS in individual live cells, sort or track them, and then challenge with drug to see if metabolic/redox state predicts survival. Mitochondrial heteroplasmy and apoptotic priming can differ between genetically identical cells."
+    },
+    {
+      "title": "BH3 profiling / dynamic apoptotic-priming and caspase-signal live reporters",
+      "description": "Quantify per-cell mitochondrial apoptotic priming (BH3 profiling of sorted subpopulations, MCL1/BCL-xL/BIM levels) and use live caspase and cytochrome-c reporters to test whether survivors fail to commit to apoptosis after drug rather than escaping the drug's target inhibition."
+    },
+    {
+      "title": "Extrachromosomal DNA and copy-number heterogeneity via single-cell long-read/ecDNA imaging",
+      "description": "Use single-cell DNA sequencing and ecDNA FISH/CRISPR-imaging to test whether uneven ecDNA segregation and copy-number variation of target or bypass genes produces rare high-copy survivors in nominally identical cells. Longitudinal sampling shows if copy number changes reversibly under drug."
+    },
+    {
+      "title": "Cell-cycle-and-stress-history reporters with optogenetic/perturbation of noise",
+      "description": "Combine endogenous-tagged reporters (p53 pulses, ERK/AKT activity, FUCCI, heat-shock/UPR) in single cells and use these dynamics to predict survival, then causally test by optogenetically or chemically forcing the dynamics in cells. This distinguishes whether transient signaling fluctuations or cell-cycle position causally determines who survives."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated populations to find persister signatures",
+      "Whole-exome/genome sequencing of resistant survivors to find resistance mutations",
+      "Single-cell ATAC-seq / chromatin accessibility profiling of persisters",
+      "Cellular barcoding/lineage tracing to test pre-existing vs. induced resistance",
+      "CRISPR knockout/activation screens for survival genes under drug",
+      "Bulk and phosphoproteomic profiling of signaling pathway rewiring",
+      "Fluctuation test (Luria-Delbr\u00fcck) to distinguish mutation from non-genetic origin",
+      "Live-cell imaging of single-cell fates after drug exposure",
+      "Measuring drug efflux pump (ABC transporter) expression and activity",
+      "DNA methylation / histone modification profiling of persisters"
+    ]
+  },
+  "output_tokens": 1134,
+  "cost_usd": 0.0141037
+}

@@ -1,0 +1,48 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment ERK/AKT pulse dynamics linked to fate",
+      "description": "Use live fluorescent kinase translocation or FRET reporters to record signaling pulse frequency and amplitude in each cell before drug addition, then score each cell's fate after treatment. If pulse dynamics, not average activity, predict survival, the lab can identify a temporal signaling signature that determines tolerance."
+    },
+    {
+      "title": "Per-cell intracellular drug and target-engagement quantification",
+      "description": "Combine fluorescent or isotope-labeled drug analogs with imaging or flow-based readouts to measure how much drug each cell actually accumulates and how much target is occupied (e.g., with a NanoBRET or CETSA-style readout). This tests a pharmacological explanation, uptake or efflux variability, separately from any genetic or state explanation."
+    },
+    {
+      "title": "Spatial niche and neighbor-density effects on survival",
+      "description": "Plate cells at controlled densities and in mixed co-cultures, then use spatial transcriptomics or multiplexed imaging to map survivors relative to their neighbors and local secreted-factor gradients. Conditioned-medium and paracrine-blocking experiments would then test whether a local microenvironment protects a subset of cells."
+    },
+    {
+      "title": "Pre-treatment mechanical phenotype sorting",
+      "description": "Sort cells by nuclear and whole-cell deformability using microfluidic deformability cytometry or AFM before drug exposure, then test the sorted fractions for drug tolerance and compare their cytoskeletal and nuclear-lamina profiles. This asks whether physical cell state, rather than molecular state, predetermines survival."
+    },
+    {
+      "title": "Per-cell nascent translation rate as a predictor of tolerance",
+      "description": "Measure nascent protein synthesis in individual cells using puromycin incorporation or a SunTag-based translation reporter before treatment, sort high- and low-translation fractions, and compare their drug responses. Combining this with ribosome profiling of sorted fractions would show whether translational capacity sets the threshold for surviving drug-induced stress."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of treated vs untreated populations to find a transcriptionally distinct persister state",
+      "Barcoded lineage tracing to test whether survival is clonal or stochastic",
+      "Drug washout and re-challenge assays to test whether the survivor phenotype is reversible",
+      "Genome-wide CRISPR knockout or CRISPRi screens to find genes required for survival",
+      "ATAC-seq or ChIP-seq of survivors to detect chromatin or epigenetic remodeling",
+      "Single-cell DNA or whole-genome sequencing to detect pre-existing resistant subclones",
+      "Phosphoproteomics or proteomics of survivors to map signaling rewiring",
+      "Live-cell imaging with cell-cycle reporters (e.g., FUCCI) to see whether survivors are quiescent",
+      "Measuring mutation rates or mismatch-repair status to test whether survivors arise from elevated mutagenesis",
+      "Measuring efflux-pump expression (e.g., ABCB1) in survivors",
+      "Metabolomics of survivors to find altered metabolic dependencies"
+    ]
+  },
+  "output_tokens": 2707,
+  "cost_usd": 0.00149787
+}

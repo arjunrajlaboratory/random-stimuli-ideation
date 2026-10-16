@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Retrospective profiling of future survivors (barcode rewind)",
+      "description": "Heritably barcode a clonal population, split it, treat one arm, and use the barcodes of surviving colonies to retrospectively isolate and sequence their untreated siblings from a frozen aliquot of the other arm. This directly measures the molecular state of cells destined to survive, before any drug exposure, instead of inferring it from post-treatment comparisons."
+    },
+    {
+      "title": "Live-cell biography linked to end-point molecular state",
+      "description": "Image every cell in a well continuously from before dosing through colony outgrowth, then perform in-situ transcriptomics or protein imaging on the same fixed plate, registering each survivor to its full behavioral history. This separates survival driven by a pre-existing expression state from survival driven by transient events such as cell-cycle phase, division timing, or neighbor death at the moment of treatment."
+    },
+    {
+      "title": "Single-cell pharmacology: measure the drug, not just the cell",
+      "description": "Quantify per-cell intracellular drug concentration using fluorescent drug analogs, mass spectrometry imaging, or efflux-transporter reporters, paired with a live readout of target-pathway inhibition in the same cells. This tests the overlooked possibility that survivors are cells that simply received or retained less drug, rather than cells in a special signaling or transcriptional state."
+    },
+    {
+      "title": "Sister-cell splits across a relatedness ladder",
+      "description": "Physically separate sister cells, cousins, and progressively more distant clonal relatives, treating some while profiling or freezing the others, and measure how strongly survival fate is shared as a function of generations since common ancestor. This converts vague claims of non-genetic heritability into a measured memory half-life for the resistant state, with explicit units of cell divisions."
+    },
+    {
+      "title": "Screening on the tail of the distribution rather than the mean",
+      "description": "Run CRISPR, CRISPRi, or epigenetic-editing screens scored on the fraction of cells surviving drug or on the shape and tail-weight of a single-cell reporter distribution, rather than on bulk growth or mean expression. Hits that alter variability without altering the average, followed by targeted epigenetic writing and erasing of the primed state, would establish causal control over how many cells enter the surviving minority."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2641,
+  "cost_usd": 0.0988885
+}

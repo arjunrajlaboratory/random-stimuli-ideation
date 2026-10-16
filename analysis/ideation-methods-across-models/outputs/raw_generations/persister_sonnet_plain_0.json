@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sibling tracking",
+      "description": "Label cells with heritable DNA barcodes, split the population before drug exposure, and treat one arm while profiling the sibling arm by scRNA-seq. This tests whether survivors are pre-existing, heritable states, and lets you read out the pre-treatment transcriptional state of clones that later survive."
+    },
+    {
+      "title": "Live-cell imaging with reporters and retrospective single-cell profiling",
+      "description": "Track thousands of individual cells by time-lapse microscopy before and during drug exposure, using reporters for signaling activity (e.g., ERK), cell cycle, and apoptosis. Fix and profile survivors afterward, for example by multiplexed FISH or imaging-based proteomics, to link pre-drug dynamics and fluctuations to survival fate."
+    },
+    {
+      "title": "Single-cell multiomics (scRNA + scATAC) across a drug time course",
+      "description": "Profile the transcriptome and chromatin accessibility of untreated, early-treated, persister, and regrown populations. This identifies epigenetic and transcriptional programs, such as a drug-tolerant or dedifferentiated state, and shows whether they are present before treatment or induced by it."
+    },
+    {
+      "title": "Functional perturbation screens of candidate persistence regulators",
+      "description": "Run CRISPRi/CRISPRa or epigenetic-modifier-focused screens under drug pressure, with single-cell readouts such as Perturb-seq. This tests whether candidate genes, such as chromatin regulators, stress-response pathways, or drug efflux and metabolic genes, are causally required for persister survival."
+    },
+    {
+      "title": "Metabolic and stress-state measurements of persisters",
+      "description": "Use single-cell assays such as FLIM of NADH, mitochondrial membrane potential, ROS, lipid peroxidation, and drug-uptake fluorescence, combined with FACS sorting and metabolomics, to compare survivors and non-survivors. Pair these with pharmacologic tests (e.g., GPX4 inhibition) to see whether metabolic or redox states predict and enable survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 764,
+  "cost_usd": 0.013828
+}

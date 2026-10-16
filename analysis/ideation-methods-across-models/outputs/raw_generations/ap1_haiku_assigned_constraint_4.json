@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 4,
+  "constraint": "in an organism or cell system other than human or mouse",
+  "prompt": "Constraint: every one of your ideas must be carried out in an organism or cell system other than human or mouse. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-washout with reactivation kinetics in Drosophila S2 cells",
+      "description": "Induce a defined AP-1 (Jun/Fos or Kayak/Jra) pulse with an inducible system, wash it out, and track target-gene expression, AP-1 occupancy (CUT&RUN), and H3K27ac/H3K4me1 at enhancers over days. Re-stimulate after washout and test whether faster or stronger re-induction persists, then repeat with TRE-mutated enhancers to show the memory depends on AP-1 binding rather than on the stimulus alone."
+    },
+    {
+      "title": "Tethered-AP-1 sufficiency test using dCas9 or dCas13 in Drosophila cells",
+      "description": "Use a dCas9-based or synthetic zinc-finger tether to recruit Jun or Fos to a silent reporter locus for a short window, then release it and measure whether the locus stays primed (chromatin opening, Pol II poising, reporter expression on re-challenge). Compare against tethers of an unrelated transcription factor to show that AP-1 specifically writes a persistent state, not just transient activation."
+    },
+    {
+      "title": "Single-cell lineage tracking of repeated stress pulses in yeast",
+      "description": "In S. cerevisiae carrying an AP-1-like bZIP (Yap1) or a heterologous Jun/Fos, use microfluidic time-lapse imaging of a fluorescent reporter across repeated stress pulses with varying intervals. Quantify whether cells that experienced a prior pulse respond faster on the next exposure, whether memory decays with interval, and whether it is lost with an auxin- or anchor-away-mediated depletion of the factor or with binding-site mutations."
+    },
+    {
+      "title": "Learning-dependent AP-1 requirement in C. elegans behavior",
+      "description": "Train worms in a pathogen-avoidance or aversive olfactory paradigm while knocking down jun-1 or fos-1 with a temporally controlled degron or heat-shock promoter, separating the training window from the retention interval and recall test. Pair this with calcium imaging of the relevant interneurons and neuron-specific rescue to determine whether AP-1 is needed for acquisition, consolidation, or retention."
+    },
+    {
+      "title": "Injury-priming test of AP-1 enhancers during zebrafish regeneration",
+      "description": "Perform a first fin amputation, allow recovery, then re-amputate and compare regeneration speed and fos/jun enhancer reporter activity with naive fish. Use scATAC-seq or single-cell RNA-seq at the second injury to identify primed cell states, and CRISPR knockout of jun or fos paralogs to test whether the faster second response, and the enhancer's persistent accessibility between injuries, depends on AP-1."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2293,
+  "cost_usd": 0.00136645
+}

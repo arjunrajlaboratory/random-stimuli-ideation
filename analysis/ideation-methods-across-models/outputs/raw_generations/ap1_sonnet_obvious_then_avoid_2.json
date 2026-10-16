@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-based temporal separation of establishment vs maintenance",
+      "description": "Use an acute degron (dTAG/AID) on JUN/FOS family members and degrade them only after priming but before re-challenge. If memory persists without AP-1 protein, it is stored elsewhere. If it collapses, AP-1 is needed for maintenance, not just establishment."
+    },
+    {
+      "title": "Optogenetic/synthetic AP-1 pulse-encoding of memory",
+      "description": "Drive AP-1 with a light-inducible FOS/JUN or a synthetic AP-1 transactivator using defined pulse durations and frequencies, without the upstream stimulus. Then measure target-gene response to a later challenge to see whether AP-1 activity alone is sufficient to write memory, and how its dose and dynamics set memory strength."
+    },
+    {
+      "title": "Single-cell lineage-tracked memory inheritance through division",
+      "description": "Combine live imaging of an AP-1 reporter and a target-gene reporter with lineage tracking across several divisions after a transient stimulus. Then compute mother-daughter and sister-cell correlations and decay half-life, to test whether the memory state is mitotically heritable and clonal rather than a transient signaling echo."
+    },
+    {
+      "title": "Targeted motif editing and synthetic AP-1 site insertion",
+      "description": "Use base editing to mutate specific AP-1 motifs at a memory-associated enhancer, and insert AP-1 sites at a non-memory locus. Measure whether the locus gains or loses primed accessibility and a faster re-induction, to test cis-level necessity and sufficiency."
+    },
+    {
+      "title": "Single-molecule footprinting of residence and nucleosome occupancy",
+      "description": "Apply single-molecule footprinting (e.g., Fiber-seq or SMF) and live single-molecule tracking of JUN/FOS before and after stimulus washout. Read out whether individual enhancer molecules stay nucleosome-free or bound, and measure AP-1 residence times. This distinguishes a stable remodeled state from continuous AP-1 occupancy, and from a bistable or hysteretic switch."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (FOS/JUN) binding before, during and after a stimulus",
+      "ATAC-seq to track chromatin accessibility at AP-1 motifs over time after stimulus removal",
+      "Knockdown/CRISPR knockout of FOS or JUN and test loss of memory phenotype",
+      "Dominant-negative AP-1 (A-FOS) expression to block AP-1 function",
+      "Pioneer factor/motif enrichment analysis of memory-associated open regions",
+      "Histone modification profiling (H3K27ac, H3K4me1) at AP-1 sites after priming",
+      "scRNA-seq of primed vs naive cells re-stimulated to measure faster/stronger transcriptional response",
+      "Live-cell reporter of AP-1 activity (e.g., FOS-GFP) to track persistence",
+      "Hi-C/HiChIP to examine enhancer-promoter looping at AP-1 targets",
+      "Pharmacological JNK/MAPK inhibition during priming and re-challenge"
+    ]
+  },
+  "output_tokens": 1124,
+  "cost_usd": 0.014014800000000001
+}

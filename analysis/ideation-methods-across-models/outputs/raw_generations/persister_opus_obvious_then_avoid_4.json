@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Tune noise in a candidate gene while keeping its mean fixed",
+      "description": "Use synthetic gene circuits (for example, negative-feedback versus open-loop designs, or promoter variants with different burst kinetics) to change cell-to-cell variability in a candidate survival gene without changing its average level, then measure the survivor fraction. If survival scales with variance rather than mean expression, this is causal evidence that rare high-expressing tail cells, not the bulk level, explain survival."
+    },
+    {
+      "title": "Measure drug uptake and target engagement in single cells",
+      "description": "Pair fluorescent or clickable analogs of the inhibitor (or single-cell mass spectrometry) with a live readout of target pathway activity, such as an ERK kinase translocation reporter, in the same cells. This tells you whether survivors are cells where the drug never fully reached or inhibited its target (efflux, uptake, or target-level differences) or cells that were fully inhibited and survived anyway."
+    },
+    {
+      "title": "Track unequal inheritance of organelles and proteins between sister cells",
+      "description": "Use photoconvertible labels on mitochondria, lysosomes, or aggregated proteins to follow how these are split between sister cells at the divisions just before drug is added. Then test whether the sister that got more (or less) predicts which one survives. This separates a deterministic cell-division effect from heritable transcriptional priming."
+    },
+    {
+      "title": "Control local neighborhood with micropatterning",
+      "description": "Plate single cells or small groups on micropatterned islands with set neighbor number, spacing, and island geometry. Also mix barcoded cells with unlabeled carriers at different densities. This tests whether the chance of surviving depends on contact, local paracrine signaling, or mechanical context rather than on anything intrinsic to the cell."
+    },
+    {
+      "title": "Optogenetically induce candidate states at set times to find when they matter",
+      "description": "Optogenetically or chemically switch on candidate drivers (for example, AP-1 factors or receptor tyrosine kinases) in random subsets of cells for short pulses at different times before and after drug is added, then measure the survivor fraction. This maps the time window during which a transient state is enough to confer survival, and shows how long that state's protective effect lasts."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of cells before treatment and of surviving cells after treatment to find transcriptional signatures of survivors",
+      "Lineage barcoding with retrospective identification of pre-treatment survivor precursors (e.g., Rewind, FateMap, ClonMapper, Watermelon)",
+      "Luria\u2013Delbr\u00fcck fluctuation analysis to tell pre-existing from drug-induced resistance",
+      "Whole-exome/genome sequencing of survivors to rule out pre-existing genetic resistance mutations",
+      "Single-cell ATAC-seq or other chromatin profiling to find epigenetic states that mark survivors",
+      "Time-lapse live-cell imaging of fluorescent reporters to track individual cells' fates during treatment",
+      "Pooled CRISPR knockout or activation screens to find genes that change the survivor fraction",
+      "Sorting cells on candidate markers (e.g., EGFR, AXL, NGFR) and testing their drug sensitivity",
+      "Drug washout and re-challenge experiments to test whether tolerance is reversible (drug-tolerant persisters)",
+      "Profiling quiescence, cell-cycle state, or metabolism (e.g., OXPHOS, ROS, label-retaining slow cyclers) in survivors"
+    ]
+  },
+  "output_tokens": 2337,
+  "cost_usd": 0.05227540000000001
+}

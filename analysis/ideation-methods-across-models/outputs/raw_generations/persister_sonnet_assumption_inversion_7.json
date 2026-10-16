@@ -1,0 +1,44 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with split-clone pre-drug sampling",
+      "description": "Label cells with heritable expression barcodes (e.g., Watermelon/CellTag-style), split the population before treatment, and sequence one half while treating the other. This tests whether survivors are pre-determined by a heritable (non-genetic or hidden genetic) state by matching surviving lineages to their pre-drug transcriptomes, and measuring how much of survival is shared among sister clones versus random."
+    },
+    {
+      "title": "Single-cell multi-omic and long-read genomic profiling of survivors for hidden genetic variation",
+      "description": "Perform single-cell WGS or DNA+RNA co-profiling (plus ecDNA and copy-number analysis) on survivors and matched untreated cells, with ultra-deep duplex sequencing of the parental line. This directly tests the 'genetically identical' premise by detecting rare subclonal SNVs, CNVs, or ecDNA that are enriched in survivors."
+    },
+    {
+      "title": "Long-term live-cell imaging with reporters and retrospective fate mapping",
+      "description": "Image thousands of single cells for days before and during drug exposure using reporters for signaling (ERK/AKT), cell cycle (FUCCI), and apoptosis, then identify survivors and trace their histories backward. This tests the assumption of static, binary, endpoint-measured survival by revealing whether pre-drug dynamics, such as pulsatile signaling, slow cycling, or division-time history, predict survival, and whether cells enter and exit tolerance."
+    },
+    {
+      "title": "Spatial and co-culture perturbation of microenvironment and drug exposure",
+      "description": "Use spatial transcriptomics or imaging in 3D spheroids or xenografts, together with microfluidic or conditioned-medium manipulations, to map where survivors sit relative to drug gradients, hypoxia, stroma, and neighboring dying cells. This tests the cell-intrinsic assumption by asking whether local niche, paracrine signals (e.g., from dying neighbors), or reduced effective drug dose, rather than intrinsic state, cause survival."
+    },
+    {
+      "title": "Sorting live pre-drug cells by non-transcriptional state (metabolism, mitochondria, chromatin) and testing causality",
+      "description": "Use live-cell reporters or dyes (mitochondrial membrane potential, NADH/FLIM, ROS, lysosomal content) and single-cell ATAC or histone-mark profiling to sort rare states, then challenge sorted fractions with drug. Pairing this with CRISPR perturbation or inhibitors of the candidate states (e.g., GPX4, histone demethylases) tests whether the tolerance state is encoded outside mRNA levels and whether it is causal rather than correlative."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical means functionally identical: cells are assumed to share no heritable differences, yet subclonal mutations, copy-number changes, or extrachromosomal DNA may exist below the detection limit of bulk sequencing.",
+      "Survivors are a pre-existing, special subpopulation (a fixed 'persister' state) rather than cells that become tolerant stochastically or are induced by the drug after exposure.",
+      "Bulk or endpoint population measurements (bulk RNA-seq, viability curves) adequately represent the rare cells; averaging over millions of cells hides the few that matter.",
+      "Survival is a cell-intrinsic property; the microenvironment, neighboring cells, drug gradients and cell-cell signaling are assumed to be uniform and unimportant in culture.",
+      "Survival is determined by the drug-target pathway (target reactivation, bypass signaling) and is a single, binary, static trait measured at one time point.",
+      "Transcriptional or protein state is the relevant readout; the tolerant state is assumed to be encoded in gene expression rather than in metabolism, chromatin, cell cycle timing, or organelle state.",
+      "Cells that survive are a stable end state; the dynamics of how cells enter and exit tolerance, and their history before drug, are assumed not to matter."
+    ]
+  },
+  "output_tokens": 1432,
+  "cost_usd": 0.0171008
+}

@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 7,
+  "parallel": {
+    "field": "Machine learning",
+    "problem": "Determining whether a neural network or recurrent system retains information from earlier inputs or training stages (such as a recurrent hidden state or catastrophic-forgetting resistance) and whether that retained information causally affects later predictions.",
+    "how_studied": "Researchers run ablation and intervention experiments, such as zeroing or patching specific units or hidden states and measuring downstream changes. They train linear probes to decode earlier inputs from later activations. They also test performance after delays or distractor inputs to find the timescale of retention."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Machine learning\nProblem: Determining whether a neural network or recurrent system retains information from earlier inputs or training stages (such as a recurrent hidden state or catastrophic-forgetting resistance) and whether that retained information causally affects later predictions.\nHow it is studied: Researchers run ablation and intervention experiments, such as zeroing or patching specific units or hidden states and measuring downstream changes. They train linear probes to decode earlier inputs from later activations. They also test performance after delays or distractor inputs to find the timescale of retention.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute degradation/inhibition of AP-1 after the stimulus (causal ablation of the 'hidden state')",
+      "description": "Prime cells with a transient stimulus (e.g., serum, TNF, or injury signal), then after the stimulus is removed, use degron-tagged FOS/JUN or a dominant-negative (A-FOS) to acutely deplete AP-1 at defined delays, and measure whether the enhanced response to a second stimulus is lost. If memory requires AP-1 during the retention window, and not only during priming, this separates maintenance from encoding."
+    },
+    {
+      "title": "Patching AP-1 binding sites in chromatin (site-specific intervention)",
+      "description": "Use dCas9-based tools or motif mutation by base editing to block or remove AP-1 motifs at specific enhancers that gained accessibility after priming, then test whether re-stimulation transcription at the linked genes is selectively reduced. This is analogous to patching individual units: it tests whether specific AP-1-marked loci causally carry the memory for particular downstream genes."
+    },
+    {
+      "title": "Linear-probe-style decoding of past stimulus history from AP-1 state",
+      "description": "Collect single-cell multiome data (ATAC with AP-1 motif accessibility/ChromVAR, FOS/JUN levels) from cells with different prior stimulus histories (type, dose, duration), and train classifiers to decode that history from AP-1 features alone after a washout. Compare decoding from AP-1 features with that from other TFs or random features to show AP-1 specifically stores the information."
+    },
+    {
+      "title": "Delay and distractor retention-timescale experiments",
+      "description": "Vary the washout interval between prime and challenge (hours to weeks, across cell divisions) and insert distractor stimuli (an unrelated pathway activator) in between, while tracking AP-1 occupancy (CUT&RUN/ChIP) and the secondary response magnitude. The decay curve of AP-1 binding and response, and its robustness to distractors, defines the memory timescale and whether it survives division."
+    },
+    {
+      "title": "Live-cell reporters with sufficiency tests via state transplantation",
+      "description": "Image endogenous-tagged FOS/JUN dynamics and an AP-1 target reporter in single cells with lineage tracking, testing whether past AP-1 activity levels predict later responses in the same cell and in daughters. Then optogenetically or chemically drive AP-1 in naive cells (without the original stimulus) to test whether AP-1 activity alone is sufficient to install the primed, persistent response, like writing a state into a hidden vector and seeing if it changes outputs."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 924,
+  "cost_usd": 0.014519500000000001
+}

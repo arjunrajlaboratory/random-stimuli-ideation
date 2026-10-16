@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 1,
+  "stimulus": "couchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\ncouchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hornbook-style sequential stimulus\u2013washout\u2013restimulus ATAC/CUT&RUN time course",
+      "description": "Like a hornbook, a primer that is read again on a later pass, test whether a first stimulus leaves AP-1 sites 'pre-read'. Stimulate cells (e.g. with serum, TPA or an inflammatory signal), wash out the stimulus, and let them rest for days. Then profile chromatin accessibility (ATAC-seq), AP-1 (FOS/JUN) binding and H3K27ac by CUT&RUN. Restimulate and compare the transcriptional response with that of naive cells. Persistent open sites that carry AP-1 motifs and give faster or stronger induction would support memory."
+    },
+    {
+      "title": "Acute degron depletion of AP-1 after the priming window",
+      "description": "Use dTAG or auxin degrons on FOS, JUN or a dominant-negative A-FOS at defined times. Degrade AP-1 only after priming has finished, then measure whether the accessible sites and the enhanced response persist. If AP-1 is needed only to establish memory, the state should survive its removal. If it is needed to maintain memory, the state should decay. This separates initiation from maintenance."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Run paired scRNA/scATAC with barcoded lineages, or sister-cell pairs after division. Test whether AP-1 motif accessibility (chromVAR scores) and target gene expression are more concordant between sisters than between random cells. Combine this with a prior-stimulus history. Mitotic inheritance of the primed state would indicate a memory mechanism rather than transient signaling."
+    },
+    {
+      "title": "Live-cell AP-1 reporter and imaging with mitotic bookmarking assay",
+      "description": "Image endogenously tagged FOS or JUN, or an AP-1 transcriptional reporter, in single cells over repeated pulses and across cell divisions. Quantify the dependence of the response amplitude on pulse history, the decay time, and the heritability between mother and daughter cells. Add live imaging and ChIP/CUT&RUN on mitotic cells to see whether AP-1 stays on chromatin as a bookmark. Hysteresis or a history-dependent response would be quantitative evidence for memory."
+    },
+    {
+      "title": "Targeted site-specific perturbation of AP-1 motifs and chromatin state",
+      "description": "Use CRISPR base editing to mutate individual AP-1 motifs at primed enhancers. Use dCas9 with a pioneer-like or acetyltransferase fusion to impose AP-1 occupancy artificially. Then measure whether memory of the earlier stimulus (accessibility, histone marks, enhanced induction of the nearby gene) is lost or gained locally. Necessity and sufficiency at specific loci would test causality, separate from global AP-1 effects."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1025,
+  "cost_usd": 0.015529500000000002
+}

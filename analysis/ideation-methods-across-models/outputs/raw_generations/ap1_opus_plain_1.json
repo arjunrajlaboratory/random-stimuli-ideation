@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stimulus washout time course of AP-1 occupancy versus chromatin state",
+      "description": "Deliver a defined transient stimulus (growth factor, cytokine, or drug pulse), then profile AP-1 binding (CUT&RUN for FOS/JUN family members), chromatin accessibility, and target gene expression at densely sampled time points after washout. Memory is supported if enhancer accessibility and transcriptional output outlast both the stimulus and the AP-1 protein burst itself."
+    },
+    {
+      "title": "Heritability of AP-1 state measured through clonal lineage tracing",
+      "description": "Use expressed DNA barcodes combined with single-cell RNA and ATAC profiling to ask whether cells sharing a recent ancestor also share high or low AP-1 target activity. Quantifying how barcode identity predicts AP-1 state as a function of generations elapsed gives a direct estimate of the memory half-life in divisions rather than hours."
+    },
+    {
+      "title": "Acute degron removal of AP-1 subunits after a state is established",
+      "description": "Knock degron tags into endogenous FOS, FOSL1, and JUN loci so the proteins can be eliminated within minutes at chosen times. Comparing degradation during stimulation versus long after it reveals whether AP-1 is required only to write the state or must be continuously present to maintain it, which distinguishes a true memory element from a persistent signaling readout."
+    },
+    {
+      "title": "Second-stimulus challenge to test for priming and faster reactivation",
+      "description": "Expose cells to one pulse, allow a long recovery, then re-stimulate and measure response speed, amplitude, and fraction of responding cells relative to naive controls. A faster or larger response in previously exposed cells, tracked alongside AP-1 motif accessibility at the responsive enhancers, is the functional behavioral assay for memory."
+    },
+    {
+      "title": "Live single-cell reporters linking AP-1 dynamics to downstream fate",
+      "description": "Build knock-in fluorescent reporters for an AP-1 subunit and for a downstream target gene, then image individual cells continuously through and beyond a stimulus while tracking lineage relationships. This directly tests whether transient differences in AP-1 activity at the moment of stimulation predict divergent long-term states in daughter cells, and whether that prediction decays over time."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1283,
+  "cost_usd": 0.055210999999999996
+}

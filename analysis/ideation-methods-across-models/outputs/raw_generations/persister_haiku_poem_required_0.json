@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 0,
+  "stimulus": "\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded scRNA-seq to test for pre-existing survivor states",
+      "description": "Label an isogenic population with a lineage barcode library, profile single-cell transcriptomes before drug exposure, and then at several time points during treatment. Compare barcoded clones to see whether survivors already carried a distinct expression program (the 'tune without words') before treatment, or whether they acquired it only under drug, with no genetic change in either case."
+    },
+    {
+      "title": "Live-cell lineage tracking with cell-cycle and stress reporters, plus washout",
+      "description": "Use time-lapse imaging of FUCCI or p21/ERK biosensor reporter cells under drug to follow each cell's fate, cycling history and switching rate over days. Remove the drug at defined points to test whether the tolerant state reverses (non-genetic, reversible persistence) or stays heritable, which shows whether survival is a persistent trait that 'never stops'."
+    },
+    {
+      "title": "Metabolic-state sorting under minimal fuel",
+      "description": "Measure single-cell metabolic state with NAD(P)H fluorescence lifetime imaging or SCENITH, then sort cells by their pre-treatment metabolic profile and track which sorted fractions survive. Test whether survivors depend on oxidative phosphorylation or fatty-acid oxidation with targeted inhibitors, which would show they persist on a minimal resource budget."
+    },
+    {
+      "title": "Paracrine protection assay from survivor secretomes",
+      "description": "Co-culture sorted survivors with drug-sensitive cells under treatment, and profile the survivor secretome by mass spectrometry and cytokine arrays. Test candidate factors by conditioned-media experiments and by knocking them down in survivors, to see whether survivors keep their neighbours alive ('kept so many warm')."
+    },
+    {
+      "title": "Sublethal-dose CRISPR screen and chromatin profiling of the tolerant state",
+      "description": "Run a genome-wide CRISPR knockout screen at a sublethal dose to find genes whose loss prevents the tolerant state, and pair it with scATAC-seq and CUT&Tag on sorted persisters to map the chromatin changes that accompany it. Dosing at a graded range of drug strengths maps the threshold at which survivors emerge, and checking whether the chromatin state persists after a drug holiday tests for epigenetic memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2492,
+  "cost_usd": 0.0015999999999999999
+}

@@ -1,0 +1,62 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-clone splitting to quantify heritability of AP-1 state",
+      "description": "Barcode a clonal population, split it into sister subclones after a defined number of divisions, and compare AP-1 reporter activity and AP-1 target-gene expression between sisters versus random pairs. The intraclass correlation as a function of elapsed divisions directly yields the memory half-life of the AP-1 state and separates true heredity from transient, stimulus-driven fluctuation."
+    },
+    {
+      "title": "Washout-and-rechallenge priming assay",
+      "description": "Transiently induce AP-1 (growth factor, optogenetic FOS/JUN dimerization, or an inducible construct), wash out, wait for AP-1 protein and transcript levels to return to baseline, then re-stimulate and measure response amplitude and kinetics. A faster or larger secondary response in previously stimulated cells\u2014when current AP-1 levels are indistinguishable\u2014is the cleanest functional signature of stored memory rather than persistent signaling."
+    },
+    {
+      "title": "Decoupling stored chromatin state from ongoing AP-1 activity by acute degron depletion",
+      "description": "Use a dTAG/auxin degron on FOS and JUN family members to acutely remove AP-1 protein for hours to days, then restore it, measuring enhancer accessibility (ATAC) and target expression before, during, and after. If the pre-depletion enhancer landscape is re-established in the same cells, the memory is carried by something other than AP-1 occupancy itself; if it resets to a naive state, AP-1 occupancy is the memory."
+    },
+    {
+      "title": "Prospective sorting plus retrospective lineage tracing of AP-1-high cells",
+      "description": "Sort AP-1-reporter-high and -low cells from a barcoded population, let each grow out for several weeks, then measure both the reporter distribution and a functional fate (e.g., drug survival or invasion) in the progeny. Combining this with barcode recovery lets you ask whether a given clone's AP-1 state at time zero predicts its fate at time T, which is the operational definition of a memory mechanism."
+    },
+    {
+      "title": "Hysteresis and bistability mapping of the AP-1 dose response",
+      "description": "Expose cells to a graded series of stimulus doses from below and from above (stepping up from zero versus stepping down from saturating stimulus) and measure single-cell AP-1 activity at matched steady-state doses. Overlapping curves indicate a passive relay; a hysteresis loop with a bistable regime would show AP-1 is wired as a self-sustaining memory switch, and mutating AP-1 motifs in FOS/JUN's own regulatory elements should collapse the loop."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage-barcode twin-clone assay: split barcoded clones, measure AP-1 reporter/target expression in sister subclones to quantify heritability across many divisions",
+      "Live-cell AP-1 transcriptional reporter (TRE-destabilized fluorophore) with long-term tracking to measure autocorrelation time of AP-1 activity relative to cell cycle",
+      "Retrospective lineage tracing (Rewind-style): sort high- vs low-AP-1 cells, grow out, and ask whether their progeny retain the state weeks later",
+      "Single-cell multiome (ATAC + RNA) across time to test whether AP-1 motif accessibility precedes and outlasts AP-1 transcript expression",
+      "Degron-mediated acute depletion of FOS/JUN followed by washout: does the prior chromatin/expression state recover (memory) or reset (no memory)?",
+      "Transient optogenetic or chemical AP-1 induction, then washout, then re-challenge to test for faster/stronger secondary response (priming memory)",
+      "Pulse-chase of AP-1 pioneer-driven enhancer accessibility with ATAC after stimulus removal, measuring enhancer closure half-lives genome-wide",
+      "Mitotic bookmarking test: live imaging and ChIP/CUT&RUN of FOS/JUN on mitotic chromatin, plus mitotic-retention mutants",
+      "Nucleosome/epigenome editing: dCas9-recruited AP-1 domain at a single enhancer, then release, to test self-sustaining accessibility",
+      "Test for AP-1 autoregulatory feedback loop (FOS/JUN binding their own promoters) as a bistability mechanism using motif mutation",
+      "Mathematical bistability test: dose-response hysteresis of AP-1 activity to graded stimulus up and down",
+      "Single-cell protein half-life measurement of FOS/JUN (SunTag/pulse-chase) to ask whether protein stability alone can explain state persistence",
+      "Correlate AP-1 state with functional memory readout: does pre-existing AP-1-high state predict drug-resistant or metastatic fate in barcoded populations?",
+      "Serial transplantation / serial passaging of AP-1-high sorted cells in vivo to test persistence of the state outside culture",
+      "Perturb candidate memory carriers (BRD4, p300, SWI/SNF, H3K27ac, DNA methylation) and ask which abolishes AP-1 state heritability",
+      "Single-molecule FISH for FOS/JUN nascent transcription in sister-cell pairs immediately after division (memory vs. shared cytoplasm confounds)",
+      "Cell-cycle-arrested versus dividing cells: does AP-1 state persistence require or survive DNA replication?",
+      "CRISPR screen for genes whose loss collapses AP-1 state heterogeneity or erases memory after stimulus washout",
+      "Compare AP-1 memory across cell types / species orthologs to test generality and identify conserved enhancer architectures",
+      "Integrate published scATAC atlases to test whether AP-1 motif accessibility marks cell-state transitions better than lineage TF motifs",
+      "Spatial transcriptomics of tissue to test whether AP-1-high cells occur in clonal/spatially contiguous patches (indicating inherited state)",
+      "Measure AP-1 target enhancer accessibility in single cells with and without transcription blockade to separate ongoing signaling from stored state",
+      "Design synthetic AP-1-responsive circuits with and without feedback to test sufficiency of AP-1 for making a memory module",
+      "Allele-specific analysis in hybrid cells: is AP-1 enhancer accessibility cis-heritable at one allele independent of the other",
+      "Reconstitute memory in vitro: nucleosome arrays plus AP-1 to test whether AP-1 alone maintains accessibility through replication"
+    ]
+  },
+  "output_tokens": 2528,
+  "cost_usd": 0.08623170000000001
+}

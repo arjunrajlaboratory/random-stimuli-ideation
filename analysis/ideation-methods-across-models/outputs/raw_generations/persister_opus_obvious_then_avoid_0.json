@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell concordance decay curve",
+      "description": "Use microfluidic traps to catch mitotic sister pairs. Separate them and add drug at a range of delays after division (0 to more than 10 generations' worth), then measure how often both sisters survive or both die. How fast that concordance falls off gives the memory time of the survival-competent state. It also shows whether the state is inherited at birth or decided stochastically after division."
+    },
+    {
+      "title": "Single-cell drug uptake and target-occupancy imaging",
+      "description": "Use isotope-labeled drug with NanoSIMS or MALDI imaging mass spec, or a FRET/fluorescent probe of target occupancy, to measure the intracellular drug concentration and how much of the target is inhibited in each cell. Then tie these readings to whether that cell survives. This tests a simple pharmacological explanation: survivors may just be under-dosed or have incomplete target engagement, rather than being in a different signaling or transcriptional state."
+    },
+    {
+      "title": "Change gene-expression noise without changing the mean, then measure survival",
+      "description": "For candidate genes, build promoter or 5'UTR variants (e.g., changes to TATA-box or burst size) that keep average expression fixed but raise or lower cell-to-cell variability. Then test whether the surviving fraction changes. This gives a causal test that variability itself, not the average expression level, produces the rare surviving cells."
+    },
+    {
+      "title": "Biophysical fate prediction with buoyant mass and growth rate",
+      "description": "Measure single-cell buoyant mass, density and mass-accumulation rate with suspended microchannel resonators before adding drug. Then follow each cell through treatment in the same device. This tests whether physical traits that sequencing-based methods don't capture, such as cell size, density or biosynthetic rate, predict which cells survive."
+    },
+    {
+      "title": "Asymmetric organelle partitioning at the last mitosis",
+      "description": "Image photoactivatable or age-tagged (e.g., MitoTimer, SNAP-tag pulse-chase) mitochondria, lysosomes and protein aggregates through the last cell division before drug. Measure how unevenly each daughter inherits them and whether that predicts which daughter survives. This tests whether random, non-transcriptional inheritance of cellular contents seeds the rare surviving cells."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of populations before, during and after drug treatment to find a transcriptional signature of the survivors",
+      "Lineage barcoding (e.g., Rewind, FateMap, ClonTracer) to check whether survivors come from a pre-existing subpopulation and to recover their state before treatment",
+      "Luria\u2013Delbr\u00fcck fluctuation analysis to tell pre-existing variability apart from drug-induced variability",
+      "Single-cell ATAC-seq or chromatin/epigenetic profiling to look for the chromatin states that underlie survival",
+      "Genome-wide CRISPR knockout or activation screens for genes that change the fraction of cells that survive",
+      "Time-lapse live-cell imaging to follow how individual cells respond and what happens to them",
+      "Live reporters of signaling activity (e.g., ERK/AKT kinase translocation reporters) to link pathway dynamics with survival",
+      "Cell-cycle and quiescence reporters (e.g., FUCCI, p21/CDK2 sensors) to test whether slow-cycling or dormant cells survive",
+      "Metabolic profiling (OXPHOS vs glycolysis, ROS, Seahorse) of drug-tolerant persister cells",
+      "Testing known persister and stemness markers and regulators (e.g., KDM5A, ALDH, CD133, AXL, EGFR, NGFR) by sorting cells and checking how they respond to drug"
+    ]
+  },
+  "output_tokens": 2351,
+  "cost_usd": 0.06035599999999999
+}

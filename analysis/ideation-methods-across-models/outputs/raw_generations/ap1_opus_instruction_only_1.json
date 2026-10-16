@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 1,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop mapping (ferromagnetism)",
+      "description": "Ramp a stimulus (serum, TGF-beta, or a MAPK inhibitor) up in fine dose steps and then back down, measuring AP-1 factor levels, AP-1 motif accessibility, and target gene output at each step by single-cell ATAC/RNA. A reproducible open loop between the ascending and descending branches, which collapses when AP-1 is acutely degraded with dTAG-FOS/JUN at a matched point on each branch, is the signature of AP-1-maintained bistable memory rather than slow relaxation."
+    },
+    {
+      "title": "Heritability partitioning across lineage trees (quantitative genetics)",
+      "description": "Combine live imaging of an AP-1 activity reporter with expressed lineage barcodes so that each cell's state can be placed on a family tree, then compute intraclass correlation of AP-1 activity and of AP-1-dependent target expression between sisters, cousins, and increasingly distant relatives. Fitting the decay of kinship correlation with generation number gives a quantitative memory half-life in cell divisions, and the analysis can be repeated under AP-1 degradation to ask whether AP-1 is the carrier or merely a correlate of the inherited state."
+    },
+    {
+      "title": "Mutual information between stimulus history and present state (information theory)",
+      "description": "Expose cells to randomized sequences of stimulus pulses, then at a later readout time estimate the mutual information, in bits, between the past pulse sequence and current single-cell AP-1 occupancy, chromatin accessibility, and transcriptome. Memory is quantified as information about the past that survives after the stimulus is gone, and the causal claim is tested by showing that this bit count drops sharply when AP-1 is degraded during the silent interval but not when an unrelated abundant factor is degraded."
+    },
+    {
+      "title": "Frequency-response and step-response profiling with optogenetic AP-1 (control engineering)",
+      "description": "Use a light-controlled AP-1 (optogenetic FOS/JUN dimer or LOV-caged degron) to deliver pulse trains spanning a wide range of frequencies and duty cycles while holding total AP-1 dose constant, and record downstream enhancer accessibility and gene output. Building an effective Bode plot, with a low-pass characteristic plus persistence of output long after input ceases, distinguishes a true integrator-with-memory from a system that simply tracks its input, and the measured time constants predict responses to novel input waveforms."
+    },
+    {
+      "title": "Molecular stratigraphy with a DNA recorder (archaeology)",
+      "description": "Place a CRISPR base-editing or recombinase-based recorder under an AP-1-responsive promoter so that each episode of AP-1 activity leaves a dated, cumulative edit layer in the genome, then read the recorded history and the current chromatin and expression state from the very same single cell. This directly tests whether cells carrying a deeper record of past AP-1 activity retain a distinguishable present-day state, converting a correlational claim about memory into a within-cell comparison of past and present."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2163,
+  "cost_usd": 0.07887229999999999
+}

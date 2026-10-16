@@ -1,0 +1,150 @@
+{
+  "batch": 9,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "a8821d63c9357749f20de6ecf43634313294bd99abaaf651965b7d130510090b",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Retrospective linkage of pre-drug expression fluctuations to survival",
+      "description": "Knock fluorescent reporters into endogenous candidate resistance loci (e.g., AXL, NGFR, EGFR, MITF-low program genes) and continuously image a clonal population for several days before adding drug. Track each imaged cell's fate so that rare, transient, low-amplitude expression excursions can be scored as predictive of survival or not. Complement this with a transcriptome-wide version in which cells are split and one half is profiled by scRNA-seq while the sister half is treated, or with RNA-barcode capture, so the pre-treatment state of the eventual survivors is recovered rather than inferred.",
+      "idea_id": "persister_opus_word_salad_required_4_0",
+      "source_sha256": "0f02fd566c471ae2d3890769d67c9e9ceb58b38ae68aebf4d1e83fcff668853d"
+    },
+    {
+      "id": "I2",
+      "title": "Spatial mapping of survivors within the tumour niche",
+      "description": "Apply multiplexed spatial transcriptomics or imaging mass cytometry to treated tumour sections or organoids to locate surviving cells relative to hypoxic zones, vasculature, stromal cells, and cell-cell contacts. Test whether survival clusters in particular microenvironments and whether ligand-receptor signals from those niches protect cells from the drug.",
+      "idea_id": "persister_haiku_poem_required_7_3",
+      "source_sha256": "9aaf30d4bfa5dea34fff7775d7b945f830b373456e9c7e06bddfb509d7dd98ae"
+    },
+    {
+      "id": "I3",
+      "title": "Pre-treatment single-cell profiling linked to outcome",
+      "description": "Run scRNA-seq and scATAC-seq on the untreated population, then use live-cell or FACS-based sorting to isolate candidate cells (e.g., slow-cycling, high-AXL, or specific chromatin-accessibility states) before drug exposure. Test whether these sorted subpopulations are enriched for survival, which would show the tolerant state is predictable from baseline.",
+      "idea_id": "persister_haiku_word_salad_required_2_1",
+      "source_sha256": "25c706e115a6910065209862c8cd651ec60a48890e956212fd9d46621b53d50a"
+    },
+    {
+      "id": "I4",
+      "title": "Split-clone lineage barcoding with retrospective pre-treatment profiling",
+      "description": "Label cells with heritable expressed barcodes, then split each clone into a treated arm and an untreated arm profiled immediately. Survivors in the treated arm identify barcodes whose siblings' pre-treatment transcriptomes and chromatin can be retrieved retrospectively. This directly tests whether survival is predictable from a prior molecular state or arises only after drug exposure.",
+      "idea_id": "persister_opus_word_salad_required_6_1",
+      "source_sha256": "057489424236773957d616c5272b36e1f88dd84c9ce80d82a4223b0b5b1faa96"
+    },
+    {
+      "id": "I5",
+      "title": "Live reporters of rare high-expressing states",
+      "description": "Knock fluorescent reporters into endogenous candidate resistance loci (e.g., AXL, NGFR, EGFR, SOX10) and image untreated populations for days to identify rare, transiently high-expressing cells, then add drug and determine which imaged cells survive. This converts the retrospective question of what survivors were like beforehand into a prospective one, and also yields the on/off switching rates and state lifetimes that set the size of the surviving fraction.",
+      "idea_id": "persister_opus_poem_required_5_1",
+      "source_sha256": "cd83233a3ef90b6b41ac9074d93c55dfee011cadd1595671bd703dd0a0011b5a"
+    },
+    {
+      "id": "I6",
+      "title": "Spatial mapping of persisters within their niche",
+      "description": "Apply multiplexed spatial transcriptomics or imaging to residual tumor sections from treated patients or organoids, and measure how persister cells' distance and contact with vasculature, cancer-associated fibroblasts, and extracellular matrix relate to their state. Co-culture experiments with and without the niche components then test whether surrounding cells supply signals that allow a few cells to survive.",
+      "idea_id": "persister_haiku_poem_required_3_4",
+      "source_sha256": "9e31f04e2bcd35e8083165c87358badde6827284ee8ef951a514c75b40406316"
+    },
+    {
+      "id": "I7",
+      "title": "Pooled CRISPR screens with drug plus metabolic and survival-pathway readouts in persisters",
+      "description": "Perform genome-wide or focused CRISPRi/a screens under drug treatment, selecting for cells that survive the first days rather than for stable resistance. Combine this with measurements of persister metabolism (oxidative phosphorylation, lipid peroxidation or GPX4 dependence, ATP/ROS) and drug-efflux activity. This identifies the genes and vulnerabilities that make survival possible and tests whether blocking them eliminates the surviving fraction.",
+      "idea_id": "persister_sonnet_poem_required_0_4",
+      "source_sha256": "2b98116a6de6660108d897a2d12436f669b1317d67637d41d6f5b00c7fde5a66"
+    },
+    {
+      "id": "I8",
+      "title": "Functional screen of survivor-state regulators with sorted-state CRISPR",
+      "description": "Use a live reporter or surface marker for the high-tolerance state to sort cells. Run CRISPRi/a screens that read out either the frequency of the state or survival under drug, and compare the two. Genes that change survival through the state, rather than through general drug sensitivity, are candidate regulators of how the state is entered and exited, and are candidate targets for combination therapy.",
+      "idea_id": "persister_sonnet_poem_required_4_4",
+      "source_sha256": "1292bb6e28400d0d824cf71241743b41bc9c6031361c7a7588f46eef5d7e5c2e"
+    },
+    {
+      "id": "I9",
+      "title": "Metabolic and redox profiling of single cells",
+      "description": "Many drug-tolerant cells rely on altered oxidative metabolism, reactive oxygen species handling, or lipid peroxidation defenses. Use single-cell metabolic imaging (NAD(P)H FLIM, mitochondrial membrane potential dyes, ROS sensors) and sort by these readouts, then test drug sensitivity of each sorted fraction. Pharmacological or CRISPR perturbation of the identified pathway tests causality.",
+      "idea_id": "persister_sonnet_poem_required_5_3",
+      "source_sha256": "b5181ee1851b9cb1bb6bdb57d36b718c9d57c396ff314e43db1175d4064b77a0"
+    },
+    {
+      "id": "I10",
+      "title": "Spatial and paracrine determinants of survival",
+      "description": "Treat cells at controlled densities and micropatterned spacings, then image survivors in situ with multiplexed single-molecule FISH or spatial transcriptomics to test whether they arise in non-random neighborhoods. Conditioned-medium and transwell co-culture experiments then determine whether tolerance is transferable between neighbors or strictly cell-intrinsic.",
+      "idea_id": "persister_opus_poem_required_6_2",
+      "source_sha256": "8c78a23b427c2d4d790d19d4584f0d3007ccb751dff684f2c94df40f1e073e48"
+    },
+    {
+      "id": "I11",
+      "title": "Per-cell drug accumulation biosensing linked to survival",
+      "description": "Use a FRET-based intracellular drug biosensor or a fluorescent drug analogue with live imaging to measure how much drug each cell takes up and how fast it is effluxed, then track each cell's fate. Cells with low intracellular drug, from efflux-pump activity or reduced uptake, may be the survivors, so comparing uptake with the target-engagement readout (for example a phospho-reporter) tests whether the drug never reaches a lethal dose in those cells.",
+      "idea_id": "persister_haiku_word_salad_required_0_3",
+      "source_sha256": "1212eecc33cdfa0f6d37c438092fa2a2778a6e2274c0880aea2fa4825f27c8ad"
+    },
+    {
+      "id": "I12",
+      "title": "Metabolic and stress-state measurements on single cells",
+      "description": "Measure mitochondrial membrane potential, ROS, NAD(P)H lifetime by FLIM, and lipid peroxidation or ferroptosis sensitivity in individual cells. Sort cells by these properties before treatment and see if each fraction survives differently. This tests whether non-genetic variation in metabolism or redox buffering sets drug tolerance.",
+      "idea_id": "persister_sonnet_word_salad_required_1_3",
+      "source_sha256": "fc5e8b6b997b8bcab66dec7013198a279f0fca8a3711dfea188304989d122bd0"
+    },
+    {
+      "id": "I13",
+      "title": "Dye-dilution division history combined with single-cell multi-omics",
+      "description": "Label cells with a dye that halves with every division, such as CFSE, before treatment, then sort the survivors by dye intensity to find out whether they divided less often than the bulk population. Profile the sorted slow-cycling survivors with single-cell RNA-seq and ATAC-seq to test whether the survivors occupy a distinct quiescent, chromatin-accessible state that could be targeted.",
+      "idea_id": "persister_haiku_word_salad_required_1_4",
+      "source_sha256": "a32d383fb5d62823c1c2e3dab05089d08a5b68e9ff55be650b49c3ddb1834f88"
+    },
+    {
+      "id": "I14",
+      "title": "Survival as a property of local neighborhood",
+      "description": "Systematically vary local context (seeding density, micropatterned colonies of defined size, conditioned-medium swaps, fibroblast co-culture) and record position-resolved survival by imaging. Combine this with spatial reporters of secreted factors to test whether survivors sit preferentially at colony edges or in regions of altered paracrine signaling, shifting the question from which cell survives to which location supports survival.",
+      "idea_id": "persister_opus_poem_required_1_4",
+      "source_sha256": "9ae778d07c7cb11fb5d63118619d76dce7d474390ec594794d2fb9b30039e6fb"
+    },
+    {
+      "id": "I15",
+      "title": "Cell-cell communication and microenvironment effects on survival",
+      "description": "Test whether survival depends on contact or secreted signals between neighbors. Use spatial transcriptomics or co-culture and conditioned-medium experiments, and compare isolated single cells with dense colonies. Survivors may be supported by paracrine factors or by gap junctions or ligand-receptor links between cells, so quantifying neighbor composition around survivors versus dying cells would show whether tolerance is a cell-intrinsic or a collective property.",
+      "idea_id": "persister_sonnet_poem_required_3_3",
+      "source_sha256": "4c54013631387e7ef390944711c3a473e9366eeb3d25b3643ad47607cb202fbf"
+    },
+    {
+      "id": "I16",
+      "title": "Barcoded scRNA-seq to test for pre-existing survivor states",
+      "description": "Label an isogenic population with a lineage barcode library, profile single-cell transcriptomes before drug exposure, and then at several time points during treatment. Compare barcoded clones to see whether survivors already carried a distinct expression program before treatment, or whether they acquired it only under drug, with no genetic change in either case.",
+      "idea_id": "persister_haiku_poem_required_0_0",
+      "source_sha256": "8d5c3db7fbc78240d9486508a5aef2cf2645b6a07a9e08fde2a2c923a3907437"
+    },
+    {
+      "id": "I17",
+      "title": "Sorting on candidate state markers and functional perturbation",
+      "description": "Use FACS to enrich subpopulations defined by candidate state markers, such as ALDH activity, mitochondrial membrane potential, drug efflux, cell-cycle dwell time or a reporter for the survival program, and test their drug survival. Then use CRISPRi/a screens or pharmacologic inhibitors targeting the implicated pathways, such as anti-apoptotic BCL-2 family members, oxidative phosphorylation, or chromatin modifiers like KDM5. These experiments test whether the pathways are causally required for survival, not just correlated with it.",
+      "idea_id": "persister_sonnet_poem_required_7_4",
+      "source_sha256": "c01fe50442fa95f65aa564ad561eb040cdff3f39243cfa9dbb1dc38f25061627"
+    },
+    {
+      "id": "I18",
+      "title": "Metabolic and drug-exposure heterogeneity measurements",
+      "description": "Measure single-cell drug accumulation (fluorescent drug analogs or mass cytometry), efflux activity, mitochondrial state, ROS and lipid metabolism in survivors versus non-survivors. This tests whether survival comes from non-genetic physiological differences, such as lower effective dose or an altered redox state, rather than from target-pathway rewiring. Pairing the measurements with exome sequencing of survivors rules out hidden mutations.",
+      "idea_id": "persister_sonnet_poem_required_1_4",
+      "source_sha256": "acb56c770ef2948447b2cdc56d44c50c2ac6f91de6c9d02689a0f6ec3665e640"
+    },
+    {
+      "id": "I19",
+      "title": "Spatial map of survivors in situ",
+      "description": "Use live-cell imaging or spatial transcriptomics to map where survivors sit relative to their neighbors, colony edges, local density, and oxygen or nutrient gradients. Spatial statistics such as clustering versus random dispersion of survivors would show whether tolerance depends on microenvironment or is cell-intrinsic. Neighbor-swap or conditioned-medium experiments can then test causality.",
+      "idea_id": "persister_sonnet_poem_required_2_1",
+      "source_sha256": "d11f86adce404b1207e0154f38e1fb74daafeef039a02f9d638d1e172f0c5103"
+    },
+    {
+      "id": "I20",
+      "title": "Barcoded lineage tracing with drug pulses",
+      "description": "Label each founder cell with a heritable DNA barcode, then apply the drug and sequence barcodes in survivors and in cells that re-expand after drug withdrawal. Shared barcodes between pre-treatment and surviving clones show whether survival is a pre-existing, inherited state or a stochastic, drug-induced switch.",
+      "idea_id": "persister_haiku_word_salad_required_4_0",
+      "source_sha256": "a6f34651bcea3b1b36843c89155c765889ce85f524c3ef233c78163f45b5fae7"
+    }
+  ],
+  "cost_usd": 0.0537872
+}

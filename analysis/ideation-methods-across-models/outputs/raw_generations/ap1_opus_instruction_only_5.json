@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 5,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loops, borrowed from ferromagnetism",
+      "description": "Slowly ramp a stimulus (e.g., TPA, EGF, or drug dose) up and then back down. At each step, measure single-cell AP-1 activity with a live reporter, plus AP-1 motif accessibility with scATAC. If the downward path does not retrace the upward path (an open hysteresis loop, with a width that persists over time), the system has memory; if AP-1 motifs are knocked out, that memory should disappear."
+    },
+    {
+      "title": "Write vs. refresh test, modeled on DRAM",
+      "description": "In computer DRAM, stored data fades unless it is periodically refreshed. By analogy, use an inducible degron (dTAG-FOS/JUN or a dominant-negative A-FOS) to remove AP-1 at different times after a transient stimulus. Then measure whether chromatin accessibility and the faster re-response persist. This tells you whether AP-1 only writes the memory (it survives removal) or must keep refreshing it (it decays with a measurable time constant)."
+    },
+    {
+      "title": "Twin-study heritability with lineage barcodes",
+      "description": "Borrowing heritability estimation from quantitative genetics, use lineage barcoding (e.g., Rewind or ClonMapper) to track sister and cousin cells across several divisions after a stimulus. Then calculate how strongly AP-1 target accessibility and expression correlate within each lineage. If the correlation within clones decays slowly across generations, and does so more slowly than for non-AP-1 programs, that is evidence AP-1 carries a state that cells inherit."
+    },
+    {
+      "title": "Measuring the system's response to pulses, as in signal processing",
+      "description": "Use optogenetic ERK/RAS control or microfluidics to deliver pulse trains that vary in frequency, duration, and spacing. Then fit linear and nonlinear transfer-function models to AP-1 reporter dynamics and downstream enhancer opening. If the fitted decay time constant is much longer than the turnover of AP-1 protein and mRNA, the memory sits downstream of AP-1 (e.g., in chromatin), not in AP-1 levels themselves."
+    },
+    {
+      "title": "Prime-boost recall test with edited AP-1 motifs, borrowed from vaccination",
+      "description": "Prime cells, let them rest until AP-1 levels return to baseline, then challenge them again and measure how fast and how strongly AP-1 target genes respond, including in contexts such as drug-resistance priming. Repeat this in lines where base editing has destroyed the AP-1 motifs at specific memory enhancers. Losing the faster, stronger second response without changing the first response would show that the memory is carried at those AP-1 sites."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1528,
+  "cost_usd": 0.0360682
+}

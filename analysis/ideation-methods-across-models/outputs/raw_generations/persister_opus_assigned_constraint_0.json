@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 0,
+  "constraint": "using only data that are already publicly available (no new experiments)",
+  "prompt": "Constraint: every one of your ideas must be carried out using only data that are already publicly available (no new experiments). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Cross-dataset meta-analysis of pre-resistant transcriptional states",
+      "description": "Harmonize dozens of public pre-treatment scRNA-seq datasets across melanoma/BRAFi, lung/EGFR-TKI, breast/CDK4-6i and leukemia, and test whether the rare primed high-expressing subpopulations (AXL, NGFR, EGFR-high) reflect one shared program or lineage- and drug-specific ones. This distinguishes a universal priming axis from idiosyncratic per-model heterogeneity."
+    },
+    {
+      "title": "Reanalysis of lineage-barcoding data for heritability and memory half-life",
+      "description": "Public Watermelon, ClonMapper, TraCe-seq, Rewind and CellTag datasets contain sister- and cousin-cell relationships that allow survival to be partitioned into heritable-clonal versus stochastic components. Fitting a state-switching model yields the number of generations a primed state persists, a quantity rarely extracted in the original papers."
+    },
+    {
+      "title": "Luria-Delbruck fluctuation analysis of published clonal outgrowth data",
+      "description": "Apply fluctuation-test statistics to replicate-well colony counts reported after targeted-drug treatment to estimate the rate at which cells enter the drug-tolerant state. The shape of the across-well count distribution separates heritable genetic mutation from reversible epigenetic switching."
+    },
+    {
+      "title": "DepMap/PRISM modeling of residual viability rather than IC50",
+      "description": "Extract the dose-response plateau, i.e. the fraction surviving at saturating drug, across roughly a thousand cell lines in PRISM and GDSC, then regress it on baseline CCLE expression, methylation, chromatin and copy-number features. This identifies determinants of a large persister fraction that are independent of average drug sensitivity."
+    },
+    {
+      "title": "Benchmarking in vitro persister signatures against patient residual disease",
+      "description": "Score published on-treatment and minimal-residual-disease patient biopsies (scRNA-seq cohorts in GEO, plus deconvolved TRACERx/TCGA bulk data) against cell-line-derived persister signatures. This reveals which laboratory persister programs actually survive therapy in humans and which are culture artifacts."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2980,
+  "cost_usd": 0.1056655
+}

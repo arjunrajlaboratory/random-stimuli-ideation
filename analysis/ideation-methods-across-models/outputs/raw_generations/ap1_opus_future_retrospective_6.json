@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron timing: is AP-1 the ledger or the pen?",
+      "description": "Tag FOS/JUN with auxin degrons, establish an AP-1-dependent cell state (e.g., drug-tolerant melanoma, activated fibroblasts), then degrade AP-1 after establishment while tracking accessibility, nascent transcription, and state markers hourly, with washout re-induction. A state that survives acute AP-1 loss but cannot be re-established shows AP-1 writes the memory without storing it."
+    },
+    {
+      "title": "Hysteresis curves instead of on/off experiments",
+      "description": "Drive AP-1 with a dose- and duration-tunable synthetic input (inducible FOS-JUN dimer or optogenetic dimerizer) and map the full up-and-down dose-response of enhancer accessibility and target gene output. Memory becomes a measured quantity: the area of the hysteresis loop and the width of the bistable range, comparable across cell types."
+    },
+    {
+      "title": "Memory half-life measured per cell division, not per hour",
+      "description": "Combine a live AP-1 activity reporter with lineage barcoding and continuous imaging so stimulus-induced state is followed through known numbers of mitoses in single lineages. Fitting decay of mother-daughter and cousin-cousin correlations separates dilution-by-division from time-dependent decay, distinguishing heritable chromatin memory from a merely slow protein."
+    },
+    {
+      "title": "Watching memory get rebuilt behind the replication fork",
+      "description": "Use EdU-capture-coupled ATAC and CUT&RUN to ask, minute-by-minute after fork passage, whether AP-1 reoccupies its sites before accessibility returns or vice versa, and image AP-1 retention on mitotic chromosomes. The temporal ordering identifies the physical carrier of the memory rather than just its correlates."
+    },
+    {
+      "title": "Motif knock-ins that break recall but not response",
+      "description": "CRISPR-mutate individual AP-1 motifs in candidate memory enhancers, in cells and in a mouse epithelium with wound or inflammatory memory, then assay the second stimulus rather than the first. A mutation leaving the naive response intact while abolishing faster/stronger recall is direct evidence that those sites are the memory element itself."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3232,
+  "cost_usd": 0.1350626
+}

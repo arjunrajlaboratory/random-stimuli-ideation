@@ -1,0 +1,59 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Timed degron depletion: establishment vs. maintenance",
+      "description": "Use dTAG/AID-tagged FOS/JUN family members and deplete during the first stimulus only, or only after stimulus withdrawal but before rechallenge. Measuring recall transcription and accessibility distinguishes AP-1 as an initiator from AP-1 as a continuously required maintainer of memory."
+    },
+    {
+      "title": "Long-chase occupancy and accessibility time course",
+      "description": "Perform CUT&RUN for AP-1 subunits and ATAC-seq at multiple times after transient stimulus, extending through many cell divisions. Test whether AP-1-bound, newly opened sites persist after AP-1 levels return to baseline, and whether persistence predicts stronger rechallenge response."
+    },
+    {
+      "title": "Sufficiency by synthetic AP-1 recruitment",
+      "description": "Use optogenetic or chemically induced AP-1 activation, or dCas9-targeted AP-1 domains, at specific loci in naive cells with a pulse and then withdrawal. If the locus retains accessibility and shows primed re-induction without the native stimulus, AP-1 is sufficient for memory."
+    },
+    {
+      "title": "Motif-level necessity at memory enhancers",
+      "description": "Use base editing or CRISPR to mutate AP-1 motifs at selected memory-associated enhancers, then run a stimulus-rest-rechallenge paradigm. Compare chromatin marks and gene induction with unedited controls and with edits to neighboring non-AP-1 motifs to establish cis-level necessity."
+    },
+    {
+      "title": "Single-cell lineage-resolved memory and mitotic bookmarking",
+      "description": "Combine live-cell FOS/JUN reporters or barcoded lineage tracing with single-cell multiome readouts, and image or profile AP-1 on mitotic chromatin. Test whether sister cells share memory states and AP-1 occupancy, and whether blocking division or bookmarking alters inheritance."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "ChIP/CUT&RUN of AP-1 (FOS/JUN) occupancy before, after, and long after transient stimulus",
+      "ATAC-seq time course tracking AP-1 motif accessibility after stimulus withdrawal",
+      "Acute degron (dTAG/AID) depletion of FOS/JUN after stimulus to test if memory maintenance requires AP-1",
+      "Degron depletion during stimulus only, to test requirement for memory establishment",
+      "Single-cell multiome (RNA+ATAC) lineage tracing of memory persistence across divisions",
+      "Optogenetic AP-1 activation pulses with varying dose/timing to test priming and memory decay",
+      "dCas9-KRAB/dCas9-p300 targeting of AP-1 sites to test sufficiency of the chromatin state",
+      "Mutating AP-1 motifs at a memory enhancer via base editing and assaying recall response",
+      "Live imaging of FOS/JUN reporter dynamics in single cells and correlating with later responsiveness",
+      "Mitotic bookmarking assay: AP-1 retention on mitotic chromosomes by live imaging/CUT&RUN",
+      "Dominant-negative A-FOS expression to block AP-1 and test loss of secondary response potentiation",
+      "Proteomics of AP-1 dimer composition shifts (FOS vs FOSL vs JUND) after stimulation",
+      "Co-occupancy analysis of AP-1 with BAF/SWI-SNF and pioneer factors via sequential ChIP",
+      "Histone mark (H3K27ac, H3K4me1) persistence at AP-1 sites after stimulus, with and without AP-1 depletion",
+      "Micro-C/Hi-C to detect persistent AP-1-dependent enhancer-promoter loops",
+      "Kinetic modeling of bistable feedback (FOS/JUN autoregulation) fitted to single-cell data",
+      "In vivo memory test: inflammatory training in mice, then sorted cells assayed for AP-1 occupancy and challenge response",
+      "Optical-tweezers/single-molecule residence time of AP-1 on nucleosomal DNA",
+      "Cross-cell-type comparison of AP-1 memory (epithelial stem cells, macrophages, neurons) using existing datasets",
+      "Perturb-seq screen of AP-1 family members and cofactors for effect on memory persistence",
+      "Methylation/CpG state at AP-1 sites after memory (bisulfite) to separate DNA methylation from AP-1",
+      "Inhibit DNA replication/cell cycle to test whether memory requires division-dependent propagation"
+    ]
+  },
+  "output_tokens": 1589,
+  "cost_usd": 0.018660299999999998
+}

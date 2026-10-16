@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-treatment sibling tracking: Label cells with heritable DNA barcodes, split the population before drug exposure, and treat one arm while profiling the sibling arm by scRNA-seq. This tests whether survivors are pre-existing, heritable states, and lets you read out the pre-treatment transcriptional state of clones that later survive.\n2. Live-cell imaging with reporters and retrospective single-cell profiling: Track thousands of individual cells by time-lapse microscopy before and during drug exposure, using reporters for signaling activity (e.g., ERK), cell cycle, and apoptosis. Fix and profile survivors afterward, for example by multiplexed FISH or imaging-based proteomics, to link pre-drug dynamics and fluctuations to survival fate.\n3. Single-cell multiomics (scRNA + scATAC) across a drug time course: Profile the transcriptome and chromatin accessibility of untreated, early-treated, persister, and regrown populations. This identifies epigenetic and transcriptional programs, such as a drug-tolerant or dedifferentiated state, and shows whether they are present before treatment or induced by it.\n4. Functional perturbation screens of candidate persistence regulators: Run CRISPRi/CRISPRa or epigenetic-modifier-focused screens under drug pressure, with single-cell readouts such as Perturb-seq. This tests whether candidate genes, such as chromatin regulators, stress-response pathways, or drug efflux and metabolic genes, are causally required for persister survival.\n5. Metabolic and stress-state measurements of persisters: Use single-cell assays such as FLIM of NADH, mitochondrial membrane potential, ROS, lipid peroxidation, and drug-uptake fluorescence, combined with FACS sorting and metabolomics, to compare survivors and non-survivors. Pair these with pharmacologic tests (e.g., GPX4 inhibition) to see whether metabolic or redox states predict and enable survival.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test (Luria-Delbr\u00fcck) analysis of survivor-rate variance",
+      "description": "Seed many small replicate cultures from single cells or a few cells at varied expansion times, treat with drug, and compare the variance and mean of survivor counts across replicates and expansion times. Fit stochastic state-switching models to estimate switching rates in and out of the tolerant state, and thereby distinguish pre-existing heritable states, rapid reversible switching, and drug-induced adaptation, and to estimate state memory duration."
+    },
+    {
+      "title": "Sister-cell pair survival concordance with time-resolved decay",
+      "description": "Plate cells at clonal density, track the divisions of individual cells, and treat sister pairs, cousins and more distant relatives at defined times after division. Measure how survival concordance decays with lineage distance to quantify how long the tolerant state is inherited and whether the determinant is cytoplasmic (e.g. mitochondria, protein levels) or epigenetic."
+    },
+    {
+      "title": "Mitotic-history and cell-cycle-timing dependence of survival",
+      "description": "Combine live imaging with fluorescent cell-cycle reporters and a short drug pulse to test whether survival depends on cell-cycle phase at exposure, time since last division, or mitotic duration, including slow-cycling or G0-like states. Use pulsed or synchronized drug application and asymmetric partitioning markers (e.g. label-retention dyes) to separate the effects of cycle state from stable cell identity."
+    },
+    {
+      "title": "Single-cell DNA copy number and extrachromosomal DNA heterogeneity profiling",
+      "description": "Use single-cell DNA sequencing, or ecDNA FISH combined with drug-target gene imaging, on untreated and surviving cells to test whether apparently identical cells differ in target or bypass-gene copy number, ecDNA content, or low-frequency mutations. Compare the rate at which copy number diverges in sub-clones with survivor frequency to see whether copy number variation or ecDNA drives survival."
+    },
+    {
+      "title": "Intracellular drug and target-engagement quantification per cell",
+      "description": "Measure per-cell intracellular drug concentration (using intrinsically fluorescent drugs, a fluorescent drug analog, or mass-spec imaging/CyTOF for metal-labeled compounds) together with target occupancy or downstream phosphorylation shortly after exposure. Test whether survivors simply experience lower effective target inhibition (via efflux, lysosomal sequestration, or target abundance) versus tolerating equal inhibition, by sorting on drug content and re-challenging."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 924,
+  "cost_usd": 0.016459500000000002
+}

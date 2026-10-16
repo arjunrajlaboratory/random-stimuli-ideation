@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode lineage tracing before and after drug exposure",
+      "description": "Label thousands of genetically identical cells with heritable DNA barcodes (e.g., CellTag or LARRY-style), treat with the targeted drug, and sequence barcodes plus transcriptomes at intervals. Whether survivor clones were already present before treatment, or arose de novo from drug-exposed cells, would show if survival is pre-selected or induced."
+    },
+    {
+      "title": "Live ERK/AKT reporter tracking of survivor cells",
+      "description": "Use fluorescent kinase-activity biosensors (ERK-KTR, AKT-KTR) and time-lapse microscopy to follow individual cells through drug exposure, then recover and sort the survivors. Pre-treatment signaling dynamics, such as pulse frequency or basal activity, may predict which cells persist."
+    },
+    {
+      "title": "Single-cell multiome on pre-treatment cells to find a chromatin priming signature",
+      "description": "Profile chromatin accessibility and gene expression together (scATAC plus scRNA) in drug-naive cells, then sort and compare cells that later survive versus those that die, using a reporter or live-cell marker. A chromatin-state signature present before any drug exposure would indicate epigenetic priming."
+    },
+    {
+      "title": "Genome-wide CRISPR screen in persister-enriched populations",
+      "description": "Run pooled CRISPR knockout or activation screens under sustained drug pressure with a sub-lethal dose, and compare guide representation in the rare surviving population against controls. Genes whose loss or gain changes survival, especially ones that act only in the tolerant state, would point to the mechanism."
+    },
+    {
+      "title": "Single-cell metabolic and mitochondrial imaging of survivors",
+      "description": "Combine live metabolic readouts (NAD(P)H autofluorescence, TMRM for membrane potential, or Seahorse-style measurements on sorted cells) with single-cell RNA-seq to test whether slow-cycling, oxidative-phosphorylation-high cells are the drug-tolerant fraction. Perturbing mitochondrial function in those cells would then test whether the metabolic state is causal."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1398,
+  "cost_usd": 0.0008414999999999999
+}

@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Prime\u2013washout\u2013restimulate with acute degron",
+      "description": "Prime cells with a stimulus, wash out, then acutely degrade (dTAG/AID) c-Jun/Fos or express A-Fos either before or after the rest period, and measure the faster/stronger secondary response. If memory persists after AP-1 removal, AP-1 is only the initiator. If it requires AP-1 during the rest period or at recall, AP-1 is the maintainer."
+    },
+    {
+      "title": "Time-resolved chromatin accessibility and histone marks at AP-1 sites",
+      "description": "Run ATAC-seq and CUT&Tag (H3K27ac, H3K4me1, AP-1 factors) at several time points after priming and withdrawal. Test whether AP-1 motif-containing enhancers stay open or marked, and whether their persistence predicts the magnitude of the recall response."
+    },
+    {
+      "title": "Single-cell lineage-resolved memory with live AP-1 reporters",
+      "description": "Tag endogenous Fos/Jun and a target gene with fluorescent reporters, and track primed cells and their descendants by live imaging across divisions. Compare sister-cell correlations and decay kinetics with those of unprimed controls to quantify heritability and test whether memory is cell-autonomous and AP-1 dependent."
+    },
+    {
+      "title": "Hysteresis and bistability test with a feedback model",
+      "description": "Expose cells to increasing and then decreasing stimulus doses and measure single-cell AP-1 activity and target output, looking for bimodal distributions and path-dependent thresholds. Fit a model of c-Jun autoregulation, and test its predictions by breaking the feedback loop, for example by mutating the AP-1 site in the JUN promoter."
+    },
+    {
+      "title": "Locus-specific causal test by motif editing and dCas9 perturbation",
+      "description": "At a memory-associated enhancer, base-edit the AP-1 motif or use dCas9-KRAB to close it, either before priming or after priming and washout. Then test recall of the target gene to show whether the local AP-1 site is necessary for establishing the memory, for maintaining it, or for both."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Optogenetic transient AP-1 (c-Jun/Fos) pulse then long-term tracking of target gene expression",
+      "Degron-mediated acute AP-1 depletion after priming to test whether memory persists without AP-1",
+      "ATAC-seq/CUT&Tag time course of AP-1 motif accessibility after stimulus withdrawal",
+      "Live-cell imaging of endogenous Fos/Jun reporters across cell divisions",
+      "Single-cell lineage tracing: sister-cell correlation in AP-1 target response",
+      "Mathematical modeling of AP-1 positive feedback bistability (c-Jun autoregulation)",
+      "Hysteresis measurement: dose-escalation vs de-escalation of stimulus",
+      "Dominant-negative (A-Fos) induction after priming vs before",
+      "dCas9-based forced AP-1 site closure/opening at specific enhancers",
+      "Mitotic bookmarking assay: AP-1 binding on mitotic chromosomes by live imaging/ChIP",
+      "Co-occupancy with BAF/SWI-SNF and pioneer-factor requirements via degron of BRG1",
+      "Histone mark (H3K27ac, H3K4me1) persistence at AP-1 enhancers after washout",
+      "Cross-species/in vivo: wound-healing/inflammatory memory in epidermal stem cells with Jun/Fos conditional KO",
+      "Single-cell multiome (RNA+ATAC) of primed vs naive cells to infer AP-1 regulon states",
+      "Proteomic turnover/phosphorylation state (JNK-dependent c-Jun phospho) persistence",
+      "Perturb-seq of AP-1 family members to map which paralogs confer memory",
+      "Synthetic AP-1 responsive circuit with memory readout (recombinase-based recording)",
+      "Heterodimer composition (Fos vs Fosl vs ATF) mass-spec/ChIP to see composition shifts across memory",
+      "Nuclear transplant / cell fusion heterokaryon to test dominance of memory state",
+      "Mutating specific AP-1 motifs at a memory-associated enhancer via base editing and testing recall"
+    ]
+  },
+  "output_tokens": 1483,
+  "cost_usd": 0.017620300000000002
+}

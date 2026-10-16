@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 4,
+  "parallel": {
+    "field": "Atmospheric physics (ice nucleation)",
+    "problem": "When a population of identical supercooled water droplets is cooled, why do a few stay liquid far below the temperature at which most freeze?",
+    "how_studied": "Researchers repeatedly freeze and thaw the same droplets in microfluidic arrays or on cold stages. This tests whether the same droplets freeze at the same temperature every cycle ('singular' hypothesis: a fixed particle or site causes it) or at random temperatures ('stochastic' hypothesis). It parallels the Luria\u2013Delbr\u00fcck fluctuation test. Hold-at-constant-temperature experiments then measure freezing-rate statistics, and electron microscopy identifies any nucleating particles."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Atmospheric physics (ice nucleation)\nProblem: When a population of identical supercooled water droplets is cooled, why do a few stay liquid far below the temperature at which most freeze?\nHow it is studied: Researchers repeatedly freeze and thaw the same droplets in microfluidic arrays or on cold stages. This tests whether the same droplets freeze at the same temperature every cycle ('singular' hypothesis: a fixed particle or site causes it) or at random temperatures ('stochastic' hypothesis). It parallels the Luria\u2013Delbr\u00fcck fluctuation test. Hold-at-constant-temperature experiments then measure freezing-rate statistics, and electron microscopy identifies any nucleating particles.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Constant-dose kill-kinetics analysis (isothermal hold analog)",
+      "description": "Hold cell populations at a fixed drug concentration and measure the death rate over time using live-cell imaging. A single-exponential decay points to a uniform stochastic hazard, while a biphasic curve with a plateau points to a pre-existing subpopulation with a lower hazard."
+    },
+    {
+      "title": "Luria\u2013Delbr\u00fcck fluctuation test across many small subclones",
+      "description": "Expand many independent subclones, each started from a few cells, for different numbers of generations, then treat them in parallel and compare how much the survivor counts vary from clone to clone. Variance near Poisson suggests drug-induced or random survival. Very high variance suggests pre-existing survivor states, and how it changes with expansion time gives the rate at which cells switch into and out of that state."
+    },
+    {
+      "title": "Dose-ramp survival spectrum (freezing-spectrum analog)",
+      "description": "Measure the fraction of cells surviving across a fine range of drug concentrations and convert it into a cumulative density of resistance-conferring states per cell, similar to how ice-nucleation work builds an active-site spectrum. Compare these spectra between cell lines and growth conditions to test whether a fixed, quantifiable cellular feature sets the tail."
+    },
+    {
+      "title": "Retrospective lineage barcoding to identify the 'nucleating particle'",
+      "description": "Label cells with expressed lineage barcodes, split the population, treat one half, and use single-cell RNA and ATAC sequencing on the untreated twin half to profile the pre-treatment state of the lineages that later survived. This works like electron microscopy finding the particle responsible for freezing: it identifies the specific molecular feature linked to survival."
+    },
+    {
+      "title": "Remove the putative site and re-test (site-deactivation control)",
+      "description": "Use FACS to deplete, or CRISPR to knock down, the candidate marker found in idea 4 (for example, high expression of a drug-efflux or stress-response gene) before treatment, then check whether the low-survival tail disappears or comes back. This is like heat-treating samples to destroy nucleating sites, and it tests whether the feature actually causes survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1354,
+  "cost_usd": 0.042664799999999996
+}

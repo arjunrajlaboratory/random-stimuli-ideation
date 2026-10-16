@@ -1,0 +1,45 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-specific degron and CUT&RUN panel",
+      "description": "Endogenously tag individual Fos, Jun, ATF and Maf family members with degrons and map each one's occupancy and role in primed enhancers after a stimulus/rest/restimulus protocol. This tests which specific AP-1 composition, if any, carries memory rather than treating AP-1 as one factor."
+    },
+    {
+      "title": "Acute depletion after establishment (establishment vs maintenance)",
+      "description": "Prime cells with stimulus, wash out, then rapidly degrade AP-1 (e.g., dTAG/auxin or dominant-negative A-Fos) during the rest phase only, and compare restimulation response with depletion applied during priming only. If memory persists after AP-1 loss, AP-1 is an initiator and not the maintainer; if it is lost, AP-1 is required for maintenance."
+    },
+    {
+      "title": "Chromatin-versus-AP-1 uncoupling with epigenome editing",
+      "description": "Use dCas9-based tools to erase or install H3K27ac/accessibility at AP-1 motif enhancers, or mutate AP-1 motifs by base editing, and test whether memory follows the AP-1 site or the chromatin state. This separates AP-1 as the memory carrier from downstream chromatin marks that could be self-sustaining."
+    },
+    {
+      "title": "Live-cell single-cell AP-1 reporters with lineage tracking",
+      "description": "Image endogenously tagged Fos/Jun and a transcriptional reporter in single cells through priming, rest, and restimulation, tracking lineages through divisions. Quantify whether the memory is bimodal, how it correlates with AP-1 dynamics, and whether it is inherited by daughter cells, going beyond bulk averages."
+    },
+    {
+      "title": "Single-cell multiome across stimuli, contexts and delays",
+      "description": "Run paired scRNA/scATAC (with AP-1 motif deviation analysis) in several cell types, such as fibroblasts, macrophages and T cells, with different priming stimuli, rest durations, and passage numbers. Test if memory is graded, locus-specific, stimulus-specific and durable through divisions, and whether AP-1 motif activity predicts the secondary response across contexts."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single entity, but it is a heterodimeric family (Fos, Jun, ATF, Maf) with distinct members and dimer compositions that may differ in memory function.",
+      "Memory is assumed to be maintained by AP-1 itself (protein level or activity) rather than by downstream chromatin or other layers that AP-1 merely initiates.",
+      "Persistence of AP-1 binding or accessible chromatin after stimulus removal is taken as evidence of memory, though persistence can reflect ongoing weak signaling or slow decay.",
+      "Population-averaged bulk assays (ChIP-seq, ATAC-seq, RNA-seq) are assumed to reflect single-cell states, hiding bimodal or heterogeneous memory.",
+      "AP-1 memory is assumed to be a property of the cell's history in a single cell type and stimulus, studied in cell lines or fixed timepoints, and generalizes across contexts.",
+      "Correlation between AP-1 occupancy and enhanced re-response is assumed to be causal; loss-of-function tests are usually long-term knockouts that cannot separate establishment from maintenance.",
+      "Memory is assumed to be binary (primed or not) and readout is assumed to be transcription of a few canonical genes, rather than a graded, locus-specific and stimulus-specific property.",
+      "Memory is assumed to last across a short window (hours-days) and to be tested without cell division, though true memory must survive replication and mitosis."
+    ]
+  },
+  "output_tokens": 1321,
+  "cost_usd": 0.0159819
+}

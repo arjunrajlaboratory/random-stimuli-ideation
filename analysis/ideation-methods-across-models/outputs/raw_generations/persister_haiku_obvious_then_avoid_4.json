@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment mitochondrial membrane potential sorting with mtDNA heteroplasmy readout",
+      "description": "Sort live cells by baseline TMRM or MitoTracker signal before drug exposure, challenge each sorted pool with the drug, and sequence mtDNA and measure OXPHOS capacity in survivors. This tests whether baseline mitochondrial state and mtDNA heteroplasmy predict survival, independent of nuclear-genome or transcriptional explanations."
+    },
+    {
+      "title": "Per-cell intracellular drug accumulation as a pharmacokinetic filter",
+      "description": "Measure intracellular drug concentration in individual cells using a clickable or intrinsically detectable drug analog, or by single-cell mass spectrometry imaging, and correlate it with later survival in live-cell tracking. If survivors accumulate less drug at the time of exposure, the cause is cellular pharmacokinetics rather than target biology."
+    },
+    {
+      "title": "Live ERK/AKT activity pulse dynamics before treatment, linked to fate",
+      "description": "Express kinase translocation reporters (e.g., ERK-KTR) in a clonal population and record pulse frequency and amplitude for many hours before adding drug. Then photoconvert or trace the cells that survive and compare their pre-drug signaling dynamics with those of cells that die, to test whether temporal signaling dynamics rather than mean activity set the survival fate."
+    },
+    {
+      "title": "Nascent protein synthesis rate per cell as a survival predictor",
+      "description": "Label newly made proteins with puromycin or OPP click chemistry in single cells before treatment, sort by translation rate, and challenge each sorted fraction with the drug. This tests whether low or high translational throughput determines the chance of survival, which would point to proteostasis and ribosome biogenesis as the controlling variable."
+    },
+    {
+      "title": "Spatial mapping of survivors within micropatterned or density-controlled colonies",
+      "description": "Seed cells on micropatterned adhesive islands or at defined densities, treat with the drug, and use multiplexed spatial transcriptomics or imaging to map where survivors sit relative to neighbors, edges, and matrix contacts. If survivors cluster at specific positions, the survival state is a niche-dependent property rather than an intrinsic cell-level one."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of persister versus bulk-treated populations to find a surviving transcriptional state",
+      "Bulk RNA-seq or ATAC-seq of sorted or enriched drug-tolerant cells to find shared pathways",
+      "Genome-wide CRISPR knockout or activation screens under drug pressure to find resistance genes",
+      "Lineage barcoding to test whether survivors are a pre-existing clone or arise de novo",
+      "Time-lapse microscopy with fluorescent cell-cycle reporters (e.g., FUCCI) to test whether slow-cycling cells survive",
+      "Single-cell DNA sequencing to look for pre-existing resistance mutations in survivors",
+      "Chromatin and epigenetic profiling (histone marks, DNA methylation) of survivors",
+      "Proteomics or phosphoproteomics comparing survivors and non-survivors for signaling changes",
+      "Combination screens with epigenetic, MAPK, or PI3K inhibitors to block the survival state",
+      "Drug-tolerant persister studies focusing on quiescence or slow-cycling states"
+    ]
+  },
+  "output_tokens": 3071,
+  "cost_usd": 0.0016794699999999997
+}

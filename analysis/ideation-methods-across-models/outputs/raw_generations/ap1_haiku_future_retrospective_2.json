@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Time-resolved AP-1 degradation during consolidation (imagined 2036 paper 1)",
+      "description": "The paper used auxin-inducible degrons on endogenous c-Fos and JunB to remove AP-1 at defined windows after a learning-like stimulus, then scored later recall. Labs can replicate this with rapid degron tags, asking whether memory needs AP-1 during induction, during a consolidation window, or only at retrieval."
+    },
+    {
+      "title": "Persistence of AP-1 motif accessibility after stimulus washout (imagined 2036 paper 2)",
+      "description": "The study tracked AP-1 motif accessibility and occupancy in single cells with paired ATAC-seq and CUT&Tag over days after stimulus removal, separating chromatin states that persist from transcription that has returned to baseline. A lab could run this in primary neurons or T cells, with the key readout being whether accessibility outlasts AP-1 binding."
+    },
+    {
+      "title": "Enhancer-level memory tested by re-induction kinetics (imagined 2036 paper 3)",
+      "description": "Researchers measured how quickly previously stimulated enhancers respond to a second stimulus, using CRISPRi or dCas9 blocking of AP-1 sites and CUT&RUN for H3K27ac and 3D contacts. The test is whether faster or stronger re-induction depends on enhancer marks that outlast AP-1 occupancy."
+    },
+    {
+      "title": "Optogenetic reactivation of AP-1-tagged ensembles to test sufficiency (imagined 2036 paper 4)",
+      "description": "The team tagged cells that were active during an AP-1 pulse with a light- or drug-inducible label, then reactivated only those cells optogenetically to see whether behavior or a downstream program was restored. A lab could adapt activity-dependent tagging systems to AP-1 target promoters to ask whether reactivating the tagged population is enough to recall the state."
+    },
+    {
+      "title": "Reconstitution of AP-1 on nucleosomal templates with ligand withdrawal (imagined 2036 paper 5)",
+      "description": "The paper reconstituted AP-1 with nucleosome-containing templates in vitro and measured dimer dwell time, nucleosome remodeling, and residual accessibility after the activating signal was removed. A lab could reproduce this with purified Fos/Jun and defined chromatin, using phosphosite or bZIP domain mutants to separate binding-dependent from remodeling-dependent memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2019,
+  "cost_usd": 0.00115191
+}

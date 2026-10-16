@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 6,
+  "stimulus": "owerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nowerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Post-stimulus persistence of chromatin accessibility (crackled-glaze test)",
+      "description": "Pulse cells with a defined AP-1 inducer (e.g., TPA or EGF), then wash out and track AP-1 occupancy (JUN/FOS CUT&RUN), chromatin accessibility (ATAC-seq), and H3K27ac at AP-1 motifs over days. Memory requires that accessibility and enhancer marks remain after JUN/FOS binding has returned to baseline, like the fine cracks that stay in a crackled glaze after the stress is gone."
+    },
+    {
+      "title": "Acute JUN/FOS degradation after priming",
+      "description": "Prime cells with a stimulus, then use an auxin-inducible degron to rapidly deplete JUN or FOS before re-stimulation. If primed responses and retained enhancer states survive depletion, the memory is carried by downstream chromatin rather than by continued AP-1 presence; if they vanish, AP-1 itself is required to maintain the memory."
+    },
+    {
+      "title": "Binding-site dependence via dCas9 and motif mutants",
+      "description": "Mutate AP-1 motifs at endogenous memory-associated enhancers and separately tether dCas9-p300 or dCas9-KRAB to these sites while leaving AP-1 intact. Compare retention of the primed transcriptional response to show whether specific AP-1 binding is necessary and whether writing a chromatin mark is sufficient."
+    },
+    {
+      "title": "Sister-cell lineage tracking of AP-1 activity states",
+      "description": "Use a live AP-1 transcriptional reporter (destabilized fluorescent protein under an AP-1-responsive enhancer) with time-lapse microscopy to track cell lineages through several divisions. Measure whether prior high or low AP-1 history is heritable across sister cells and predicts later responses to a second stimulus, separating true memory from transient signaling noise."
+    },
+    {
+      "title": "Mitotic bookmarking and memory across cell division",
+      "description": "Sort mitotic cells from primed and unprimed populations and perform ATAC-seq and AP-1 occupancy assays on mitotic chromatin to see whether AP-1 sites stay accessible during mitosis. Then test whether daughter cells retain the primed state, and whether blocking mitotic bookmarking factors removes the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1853,
+  "cost_usd": 0.00119645
+}

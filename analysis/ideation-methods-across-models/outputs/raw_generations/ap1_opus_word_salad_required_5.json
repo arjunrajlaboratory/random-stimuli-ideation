@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 5,
+  "stimulus": "chondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nchondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "\"Underlap\": decoupling AP-1 occupancy from the accessibility it leaves behind",
+      "description": "Pulse cells with a stimulus and run parallel washout time courses of AP-1 protein abundance (Halo-tag live imaging/quantitative immunoblot), AP-1 occupancy (CUT&RUN), and chromatin accessibility (ATAC-seq). Memory is supported if a class of sites retains accessibility and H3K4me1/H3K27ac for many AP-1 protein half-lives after occupancy is undetectable, with a bimodal rather than occupancy-tracking decay-time distribution."
+    },
+    {
+      "title": "\"Exaugurate\": timed degron removal to map the window of AP-1 dependence",
+      "description": "Tag endogenous FOS/JUN/JUNB with dTAG or AID degrons and ablate AP-1 at a graded series of delays after a priming pulse, then assay survival of the primed enhancer landscape and the potentiated secondary response. The latency at which degradation no longer erases memory defines the handoff from AP-1 to a maintenance mechanism such as nucleosome positioning, a partner TF, or DNA methylation loss."
+    },
+    {
+      "title": "\"Cathood\": clonal inheritance of the primed state through division",
+      "description": "Combine expressed lentiviral barcodes with a split-clone design: prime a population, allow 1-8 divisions without stimulus, then assay one half of each clone by scATAC/scRNA-seq and challenge the other half. Heritability is quantified as within- versus between-clone concordance of AP-1-site accessibility and secondary-response magnitude, with dilution versus faithful copying distinguished by the slope across division number."
+    },
+    {
+      "title": "\"Prewelcome\": dual-pulse recall kinetics at single-allele resolution",
+      "description": "Knock MS2/PP7 cassettes into AP-1 target genes and live-image transcriptional bursting across a priming pulse, rest interval, and second pulse, testing whether memory appears as shortened latency, higher burst frequency, or reduced cell-to-cell variance. Critically, test whether the same alleles that fired first fire again, establishing allele-level rather than merely cell-level memory."
+    },
+    {
+      "title": "\"Tetrasemic\"/\"hemiglyph\": synthetic AP-1 enhancer ladders to find the dose-memory law",
+      "description": "Integrate at a single safe-harbor locus a panel of reporters with 1, 2, 4, or 8 canonical TRE sites plus half-site and spacing variants, and measure both initial induction and retained memory after washout. Supralinear scaling of memory depth with site number alongside linear scaling of initial induction would implicate cooperative, self-reinforcing occupancy as the storage mechanism rather than proportional signal readout."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3140,
+  "cost_usd": 0.1177085
+}

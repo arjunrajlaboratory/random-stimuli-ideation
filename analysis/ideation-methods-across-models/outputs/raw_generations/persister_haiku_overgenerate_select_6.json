@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Per-cell intracellular drug quantification linked to fate",
+      "description": "Use fluorescent drug analogs or imaging mass spectrometry to measure how much drug each cell accumulates, then compare survivors with dying cells. If survivors hold lower drug levels, the cause is uptake or efflux heterogeneity rather than a change in the target pathway."
+    },
+    {
+      "title": "Live-cell cell-cycle reporter tracking at drug addition",
+      "description": "Use FUCCI or a similar reporter with time-lapse imaging to record each cell's cycle phase when the drug is added and follow it to death or division. This tests whether quiescent or slow-cycling cells are the ones that persist, and whether they re-enter the cycle later."
+    },
+    {
+      "title": "Lineage barcoding combined with pre-treatment scRNA-seq",
+      "description": "Barcode cells before treatment, profile their transcriptomes, then see which barcoded lineages and states survive. This separates survivors that were already in a distinct state from survivors whose state was induced by the drug, and shows whether a few clones dominate."
+    },
+    {
+      "title": "Reversibility and memory test of sorted survivors",
+      "description": "Sort survivor cells by a reporter, withdraw the drug, and re-challenge them over several generations. Comparing re-challenged cells with naive controls shows whether tolerance is heritable epigenetic memory or a reversible state that resets."
+    },
+    {
+      "title": "Causal pooled CRISPR with single-cell readout",
+      "description": "Run a pooled CRISPR perturbation screen read out by single-cell RNA-seq under drug, and check which knockouts shift cells out of the survivor state or change their survival. This tests whether candidate survival programs are causal rather than just correlated with survival."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Single-cell RNA-seq of drug-naive populations to find pre-existing transcriptional states that predict later survival",
+      "Lineage barcoding (DNA or CRISPR barcodes) to test whether survivors descend from a few pre-existing clones or arise de novo",
+      "Live-cell time-lapse with FUCCI or similar cell-cycle reporters to link cell-cycle or quiescence state at drug addition to fate",
+      "Fluorescent drug analogs or imaging mass spectrometry to measure intracellular drug concentration per cell and sort by survival",
+      "ATAC-seq and histone-mark profiling of sorted survivors versus bulk to detect epigenetic priming",
+      "Reversibility and memory assays: withdraw drug from sorted survivors, re-challenge, and measure whether tolerance is heritable",
+      "Pooled CRISPR screens comparing survivors to pre-treatment populations to identify genetic modifiers of tolerance",
+      "Perturb-seq style pooled CRISPR with single-cell readout to test causality of candidate survival-associated states",
+      "Single-molecule FISH measuring stochastic expression noise and copy number of the drug target itself",
+      "Mitochondrial membrane potential and NAD(P)H FLIM imaging to sort cells by oxidative metabolic state before challenge",
+      "Isotope tracing and metabolomics of survivors to identify nutrient dependencies that differ from sensitive cells",
+      "Ultra-deep sequencing of target and pathway genes to quantify rare pre-existing resistance alleles",
+      "Extrachromosomal DNA (ecDNA) copy-number quantification per cell with lineage tracking across treatment",
+      "Mitochondrial DNA heteroplasmy profiling of single-cell-derived clones before and after treatment",
+      "Spatial transcriptomics of persister niches in organoids or xenografts to test microenvironment-dependent survival",
+      "Paracrine or secreted survival-factor profiling and conditioned-medium transfer experiments",
+      "Phospho-flow or mass cytometry of signaling networks to detect heterogeneous pathway rewiring across individual cells",
+      "Proteostasis and autophagy flux reporters to measure stress-handling capacity in individual cells",
+      "Ferroptosis susceptibility and lipid peroxidation reporters (e.g., C11-BODIPY) to test a non-apoptotic death route",
+      "Cell density, mechanical, and adhesion measurements (e.g., traction or morphology imaging) correlated with survival"
+    ]
+  },
+  "output_tokens": 3402,
+  "cost_usd": 0.00184472
+}

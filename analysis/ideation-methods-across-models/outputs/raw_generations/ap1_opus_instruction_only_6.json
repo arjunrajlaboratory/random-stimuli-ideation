@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 6,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Twin-study heritability (behavioral genetics) via lineage barcoding",
+      "description": "Use barcode lineage tracing to find sister and cousin cells, then measure how similar related cells are in AP-1 activity (FOS/JUN RNA FISH and AP-1 motif accessibility) and in their later response to a stimulus, across several generations. If AP-1 carries memory, its similarity between relatives should decay at the same rate as the similarity in response, and this shared heritability should disappear when AP-1 is knocked down."
+    },
+    {
+      "title": "Channel capacity (information theory): how much past information is retained",
+      "description": "Expose cells to defined stimulus histories, remove the stimulus, and wait varying times. Then calculate the mutual information between the past history and the present single-cell state (scATAC/scRNA) at AP-1 targets versus non-AP-1 loci. Test whether AP-1 inhibition lowers the number of bits retained or makes the information fade faster."
+    },
+    {
+      "title": "Radiocarbon dating: an AP-1 chromatin clock for elapsed time",
+      "description": "Collect a time series after the stimulus is removed and train a model that predicts the time since stimulation from AP-1-bound enhancer accessibility and histone marks, much as decaying isotopes are used to date objects. If AP-1 chromatin features predict elapsed time much better than transcripts do, AP-1 is a persistent record of the past."
+    },
+    {
+      "title": "Non-commutativity (algebra): does stimulus order matter?",
+      "description": "Treat cells with two signals in the order A-then-B and B-then-A, using equal doses and equal total exposure. Measure the final transcriptional and phenotypic state. A memory mechanism predicts the order will matter, so test whether the order effect lines up with AP-1 dimer composition and goes away when the AP-1 family is blocked."
+    },
+    {
+      "title": "Metal fatigue (Miner's rule): accumulating weak signals",
+      "description": "Give cells repeated stimulus pulses that are each too weak to trigger a response, at different spacings. Test whether AP-1 occupancy and accessibility build up step by step until the cells reach a persistent state, and whether the summed AP-1 signal predicts when the switch happens. This would show AP-1 integrating and storing past exposure."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2476,
+  "cost_usd": 0.06805339999999999
+}

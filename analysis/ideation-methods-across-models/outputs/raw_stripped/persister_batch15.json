@@ -1,0 +1,150 @@
+{
+  "batch": 15,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "d2e464e3e6ea56690764d6a8014a54ea32454257a108070bd5f5f82f830dec65",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Inheritance of drug tolerance across generations by sister and cousin concordance",
+      "description": "Time-lapse image newly divided sister pairs and their daughters across several generations, then apply drug and score survival concordance in sister pairs versus cousin pairs. The decay of sister/cousin correlation with generation distance gives the memory time of the tolerant state. Asymmetric partitioning of mitochondria, p53, or protein aggregates can be tested as a causal inherited factor.",
+      "idea_id": "persister_sonnet_critique_revise_4_0",
+      "source_sha256": "2158e3011fdc20c8b836901e2031fef576b9d47a0a60e5d69b41d9b9cad903fa"
+    },
+    {
+      "id": "I2",
+      "title": "Unequal inheritance of organelles and proteins between sister cells",
+      "description": "Use photoconvertible labels on mitochondria, lysosomes, or aggregated proteins to follow how these are split between sister cells at the divisions just before drug addition. Then test whether the sister that received more (or less) predicts which one survives. This separates a deterministic cell-division effect from heritable transcriptional priming.",
+      "idea_id": "persister_opus_obvious_then_avoid_4_2",
+      "source_sha256": "0ba64d5e6abae695cd10c0a5b27fa8add963146a04b15458544ead051463be7d"
+    },
+    {
+      "id": "I3",
+      "title": "Mitochondrial heteroplasmy and OXPHOS heterogeneity in survivors",
+      "description": "Sequence mtDNA and image membrane potential and respiration in sorted survivor and dying populations. Test whether naturally varying mitochondrial genotype or function among cells with identical nuclear genomes sets drug tolerance.",
+      "idea_id": "persister_haiku_overgenerate_select_7_4",
+      "source_sha256": "ef07771c7659388e56e325e9adde17e021afd460b9f7fe9c1ebd43f9ed82f434"
+    },
+    {
+      "id": "I4",
+      "title": "Genetic and epigenetic perturbation screens in the persister state",
+      "description": "Run CRISPR knockout, CRISPRi, or CRISPRa screens and epigenetic-modifier inhibitor screens (HDAC, KDM5, EZH2, and others) under drug pressure, measuring persister survival rather than only proliferation. Hits would show which pathways and chromatin regulators are necessary for tolerance, such as anti-apoptotic buffering, oxidative stress handling, or lipid metabolism.",
+      "idea_id": "persister_sonnet_plain_6_3",
+      "source_sha256": "e3686dc58975839b03ff3f5e195376284f853d05f99b4f876eacc341f8b90e87"
+    },
+    {
+      "id": "I5",
+      "title": "Time-to-death distributions from a live caspase biosensor",
+      "description": "Express a caspase-3 FRET or translocation reporter in the cell line and track each cell's time to apoptotic commitment for several days after drug addition. Comparing survivors that never commit with cells that commit late would separate a fixed resistant subpopulation from a population that simply delays death.",
+      "idea_id": "persister_haiku_obvious_then_avoid_5_2",
+      "source_sha256": "2f0105afaf3250dc5e839b548de7f965ccc22835bf63ca113233c5c71f7874a7"
+    },
+    {
+      "id": "I6",
+      "title": "Lineage barcoding with pre-treatment sampling",
+      "description": "Tag cells with heritable DNA barcodes, split the population before drug exposure, and profile sister clones by scRNA-seq or bulk sequencing after treatment. Barcodes shared between pre-treatment sister populations and post-treatment survivors show whether survival is a pre-existing, heritable state, and comparing sister transcriptomes identifies predictive features.",
+      "idea_id": "persister_sonnet_plain_4_0",
+      "source_sha256": "e07674ba13a0810c64c1f0c208ea9713e5e039a121e5c3c383d11d0fec6f41e3"
+    },
+    {
+      "id": "I7",
+      "title": "Live-cell dynamic reporters with retrospective identification of survivors",
+      "description": "Time-lapse image thousands of single cells for days before drug addition, using reporters for signaling (ERK, p53, NF-kB), cell cycle, and mitochondrial or stress state. After drug treatment, trace survivors back through their histories to find dynamic features, such as pulse frequency, cycle timing, or state-switching rates, that predict survival better than any static snapshot.",
+      "idea_id": "persister_sonnet_future_retrospective_0_1",
+      "source_sha256": "cc7049fe02147322f02221da409d9b0c091d3917368e4669a334f64c5c210a19"
+    },
+    {
+      "id": "I8",
+      "title": "Live-cell reporter imaging with retrospective fate mapping",
+      "description": "Image cells for days before and after drug using reporters for ERK or p53 dynamics, cell cycle, and apoptosis, then trace survivors back to their pre-drug history. Dynamic features such as pulsing or cell cycle phase can be tested as predictors of survival. Fixed-cell profiling of the same cells can be added afterward.",
+      "idea_id": "persister_sonnet_assumption_inversion_3_1",
+      "source_sha256": "ecdc23bdbb287267ec916b91d866be16227d0e2ea56055b4173a5fff96cdf1a5"
+    },
+    {
+      "id": "I9",
+      "title": "Microenvironment mapping of survivor locations",
+      "description": "Record local conditions for every cell in culture or in tumor sections, including density, neighbor identity, oxygen, nutrient and pH gradients, drug penetration (using fluorescent drug analogs), and position within colonies. Then use spatial statistics to test whether survivors cluster in protective niches, and compare with spatial transcriptomics from treated tumors.",
+      "idea_id": "persister_sonnet_parallel_rotated_4_1",
+      "source_sha256": "c2116bb80b95849d81ad8fcb88038d2030bb4fe75fe17acb191c7b377d2d1daa"
+    },
+    {
+      "id": "I10",
+      "title": "Comparing the population distribution of a baseline variable with that of survivors",
+      "description": "Measure a candidate intrinsic variable (drug-target expression, efflux transporter levels, DNA content, or cell size) across the whole population by flow cytometry or single-cell RNA-seq, then compare its distribution with the distribution among survivors. Enrichment in a narrow tail points to a causal marker, while no enrichment points to a stochastic or state-based explanation.",
+      "idea_id": "persister_haiku_parallel_rotated_7_3",
+      "source_sha256": "4e13eaf2571b1b32bd95c25d1ce8127fa483a2a7faaf6650ebf0ad3177d4cddb"
+    },
+    {
+      "id": "I11",
+      "title": "Phylogeny reconstruction with CRISPR lineage recorders",
+      "description": "Use inheritable CRISPR-Cas9 lineage recorders to reconstruct the phylogeny of the cell population. Then test whether survivors cluster in particular clades (heritable, high-survival lineages) or are scattered across the tree (independent stochastic escapes), and sequence those clades for shared expression or copy-number features.",
+      "idea_id": "persister_haiku_instruction_only_6_4",
+      "source_sha256": "39c211ae777107b5dbbd3be4d0020bec0fb3f66b9fde8ca432be6276f1a7ab96"
+    },
+    {
+      "id": "I12",
+      "title": "Hazard-model analysis of time to death from live-cell reporters",
+      "description": "Use live-cell imaging with fluorescent viability and cell-cycle reporters (e.g., FUCCI) to record each cell's time to death under drug. Fit hazard models (Weibull, mixture models) to test whether survivors are a memoryless stochastic subpopulation or a distinct, age-independent class with a lower hazard rate.",
+      "idea_id": "persister_haiku_instruction_only_6_1",
+      "source_sha256": "b73cac12a3058aac968b3ac8c30b0f9849a8ffc70e87ad3956e1986727187057"
+    },
+    {
+      "id": "I13",
+      "title": "Cell cycle, neighbors, and intracellular drug dose at the time of exposure",
+      "description": "Image cell cycle phase, local cell density, and intracellular drug concentration (fluorescent analog or mass spectrometry imaging) for every cell at the moment of treatment, then track each cell to its fate. This tests whether survival is explained by extrinsic position and actual delivered dose before invoking any intrinsic transcriptional state.",
+      "idea_id": "persister_opus_future_retrospective_3_4",
+      "source_sha256": "018ab41599f4bb6e5690c976a94c62df0fbb9cb385d0fc18c7a51502aa39db5c"
+    },
+    {
+      "id": "I14",
+      "title": "Epigenomic and extrachromosomal DNA profiling of isogenic single cells",
+      "description": "Run single-cell multiome (ATAC + RNA), histone-mark profiling (e.g., CUT&Tag), and ecDNA/copy-number sequencing on untreated and surviving cells to test whether chromatin states or ecDNA dosage heterogeneity, rather than sequence mutations, distinguish survivors. Perturb candidate regulators (e.g., with KDM5 or EZH2 inhibitors) to test causality.",
+      "idea_id": "persister_sonnet_assumption_inversion_0_1",
+      "source_sha256": "419e6c4aa8610bbf17a341ab43eacf734f5daa810ef768a88668744c12c434ab"
+    },
+    {
+      "id": "I15",
+      "title": "Lineage tracing with barcoded clones",
+      "description": "Introduce heritable random DNA barcodes (e.g., CRISPR-based or lentiviral) into a clonal population, treat with the targeted drug, and follow barcode frequencies over time and in persister-enriched fractions. This shows whether survival is pre-determined in a subset of clones (pre-existing tolerance) or arises stochastically or by induction during treatment, and how many independent lineages contribute to the surviving population.",
+      "idea_id": "persister_haiku_plain_1_0",
+      "source_sha256": "16e21d3e9b07a03c289fba1fb1848119dfe8a9dbf7b99853fb9150ad08c09c1c"
+    },
+    {
+      "id": "I16",
+      "title": "Nascent translation rate as a pre-treatment predictor of survival",
+      "description": "Quantify per-cell nascent protein synthesis with puromycin or HPG labeling at the start of treatment, sort cells by translation rate, and test whether high-translation cells survive more and are more sensitive to translation inhibitors. This tests whether a protein-synthesis state, rather than transcription, sets tolerance.",
+      "idea_id": "persister_haiku_obvious_then_avoid_2_4",
+      "source_sha256": "5a1587615c863f8ef236ca5a0b776c14d02b430ce7206e87a896d55b2c4c2107"
+    },
+    {
+      "id": "I17",
+      "title": "Single-cell live reporters of drug exposure and target engagement",
+      "description": "Combine fluorescent drug analogs or biosensors of target activity (e.g., ERK or AKT kinase reporters) with time-lapse imaging to measure each cell's effective drug dose and pathway inhibition. Test whether survivors show lower intracellular drug or sustained pathway reactivation, which would indicate pharmacokinetic heterogeneity rather than intrinsic resistance.",
+      "idea_id": "persister_haiku_assumption_inversion_4_1",
+      "source_sha256": "f550b36e673b4b2c32654179b0cc9bf9e1a3202b441004f160baf8e2a4fc1b83"
+    },
+    {
+      "id": "I18",
+      "title": "Split-replicate barcode assay of heritability and memory duration of the primed state",
+      "description": "Split an expanded barcoded population into two or more replicate flasks and treat each independently, then measure how strongly survivor barcode identity is shared across replicates; the concordance quantifies heritability. Repeating the split after increasing numbers of pre-treatment generations gives the memory half-life of the primed state. This single design distinguishes stable genetic causes, semi-heritable epigenetic priming, and purely stochastic late decisions.",
+      "idea_id": "persister_opus_overgenerate_select_0_1",
+      "source_sha256": "74c4575e2e8960f604d56ca90177b0af3d273ae769ee98e70b583990ba2a1a56"
+    },
+    {
+      "id": "I19",
+      "title": "Sister-cell concordance in survival with live signaling reporters",
+      "description": "Use time-lapse live imaging with fluorescent signaling reporters, such as ERK and p53 activity, and follow sister cells and cousins through division. Then treat them with the drug. Sister-cell concordance in survival, compared with unrelated cells, estimates how much survival is heritable versus due to non-heritable noise. Pre-treatment reporter dynamics can then be tested as predictors of which lineages survive.",
+      "idea_id": "persister_sonnet_instruction_only_4_2",
+      "source_sha256": "d6ab8899c4cbffc3dc709218f32372df33c5fef66f28553af8e4783968f4a91b"
+    },
+    {
+      "id": "I20",
+      "title": "Sinusoidal drug delivery to measure pathway signaling response",
+      "description": "Use microfluidics to deliver the targeted inhibitor as sinusoidal concentration waveforms with periods from minutes to days, driving the system across many frequencies while recording pathway-activity reporters. Test whether pre-persister cells are defined by a distinct input-output (transfer) function, with a slower, more damped signaling response, rather than by a static difference in baseline expression.",
+      "idea_id": "persister_opus_instruction_only_5_1",
+      "source_sha256": "0b39c4aece633bca9c88178c96d3d3af0e90bce748b0a189508abdd88cf5a76a"
+    }
+  ],
+  "cost_usd": 0.0490332
+}

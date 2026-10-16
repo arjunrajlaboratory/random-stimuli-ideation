@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 6,
+  "stimulus": "owerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nowerloup gemmeous caliology crepon annualize blistering renourish guidwilly magnifier cerebroma seasick sutorious swinging paxwax blossomy pavisade stample cribble calking crackled stoopingly fulgidity paradoxure freezable bally reeder chaliced executancy spikewise overpitch culture printed melodic mildew untrailed rubrisher supposer theridiid galgal narcose amanous marfire jervine angeline fatiscent darac orphanize hemitype werewolf lazybird reedbird unfanged forwander oversoar unrubbed scalpture locale omnibus rondle neurotonic\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from induced tolerance",
+      "description": "Tag a clonal population with heritable DNA barcodes, split it into replicate pools, and apply the drug. If the same barcodes survive across replicates, tolerance was pre-existing and heritable. If the survivors are random, it was stochastic or induced. This echoes the word list, where each word is a distinct item that either recurs or doesn't across samples. Pair it with scRNA-seq of sister cells, which are sampled before treatment, to find the predictive state."
+    },
+    {
+      "title": "Live-cell time-lapse tracking with reporters and retrospective fate mapping",
+      "description": "Image cells with fluorescent reporters of signaling (ERK, p53, NF-\u03baB), cell cycle, and mitochondrial state for days before the drug, then follow each cell's fate after treatment. Machine-learning models trained on pre-treatment dynamics then show which single-cell features, such as pulse frequency or cycle phase, predict survival. They also show how long the state persists across divisions."
+    },
+    {
+      "title": "Single-cell multi-omics of survivors across time",
+      "description": "Run paired scRNA-seq and scATAC-seq, or CITE-seq, on untreated cells, cells at early drug exposure, and persisters at weeks. Compare them to find a rare pre-existing transcriptional or chromatin state, such as a drug-tolerant, stress-response or EMT-like program. Then test whether survivors arise from that state or switch into it after treatment (RNA velocity, trajectory inference)."
+    },
+    {
+      "title": "Pooled CRISPR screens and perturbation of candidate state regulators",
+      "description": "Run genome-wide or epigenetic-focused CRISPRi/a screens under drug to find genes that raise or lower the survivor fraction. Then validate hits by perturbing chromatin regulators (KDM5, HDACs) and anti-apoptotic or antioxidant pathways such as GPX4 or BCL-2. This shows which factors cause tolerance and which merely mark it."
+    },
+    {
+      "title": "Quantifying state-switching dynamics with fluctuation analysis and mathematical modeling",
+      "description": "Sort cells by a marker of the tolerant state and measure how fast the sorted populations return to the original mix (Luria\u2013Delbr\u00fcck-style fluctuation tests plus Markov state models). Fit the switching rates to the observed survival fractions to tell apart genetic mutation, stable epigenetic states, and rapid stochastic fluctuations. This also predicts dosing schedules that could shrink the survivor fraction."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 909,
+  "cost_usd": 0.014477499999999999
+}

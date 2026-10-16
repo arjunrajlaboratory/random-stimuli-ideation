@@ -27,5 +27,6 @@ All future work items, ideas, and planned improvements for this project are trac
 | Item | Priority | Status | Category | Date | Author | File |
 |------|----------|--------|----------|------|--------|------|
 | Compare with public datasets | idea | open | validation | 2026-03-06 | Arjun Raj | [compare-public-data.md](compare-public-data.md) |
+| Blind human ratings for the ideation-methods study | high | open | validation | 2026-10-15 | Arjun Raj | [blind-ratings-ideation-methods.md](blind-ratings-ideation-methods.md) |
 
 <!-- Add new entries above this line -->

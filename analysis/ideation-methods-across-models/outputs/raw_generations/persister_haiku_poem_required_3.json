@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcode tracing of persister origins (the spider's filaments)",
+      "description": "Label drug-naive cells with a heritable lentiviral or CRISPR barcode library (e.g., LARRY or CellTag), apply the drug, and sequence barcodes in surviving clones. Comparing barcode frequencies before and after treatment, and across independent replicates, shows whether persisters descend from a pre-marked subpopulation or arise de novo from unmarked cells."
+    },
+    {
+      "title": "Pre-treatment single-cell multiomics to find the 'anchor' state",
+      "description": "Profile drug-naive populations with paired scRNA-seq and scATAC-seq, then use machine learning to find chromatin and expression signatures that predict which cells later survive. Validate by sorting live cells on the top predictive markers (for example AXL, NGFR, or a slow-cycling reporter) and testing their drug survival in vitro and in xenografts."
+    },
+    {
+      "title": "Live-cell reporter tracking with washout and re-challenge",
+      "description": "Use fluorescent reporters of candidate persister states together with time-lapse imaging to follow individual cells through drug exposure, drug holiday, and re-challenge. Measuring switching rates, lag times, and whether state memory persists after withdrawal distinguishes stochastic non-genetic switching from instructive, drug-induced reprogramming, and fitting these data with stochastic models quantifies the rates."
+    },
+    {
+      "title": "Genome-wide CRISPR screens for genes that gate survival",
+      "description": "Run pooled CRISPR knockout or CRISPRa screens under sustained drug pressure and compare sgRNA dropout between early persisters and established resistant populations. Hits that block or enable entry into the persister state, especially genes whose loss changes chromatin accessibility, point to the bridge between transient tolerance and stable resistance."
+    },
+    {
+      "title": "Spatial mapping of persisters within their niche",
+      "description": "Apply multiplexed spatial transcriptomics or imaging to residual tumor sections from treated patients or organoids, and measure how persister cells' distance and contact with vasculature, cancer-associated fibroblasts, and extracellular matrix relate to their state. Co-culture experiments with and without the niche components then test whether surrounding cells supply the signals that let a few cells hold on."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1554,
+  "cost_usd": 0.00104775
+}

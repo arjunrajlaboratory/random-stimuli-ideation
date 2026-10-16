@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with drug challenge and transcriptomic readout",
+      "description": "Label each founder cell with a unique heritable barcode, expose the population to the drug, and sequence barcodes plus transcriptomes of survivors. This tests whether survivors arise from a few pre-existing clones or from stochastic, independent cell-level switches, and whether survivor states are inherited."
+    },
+    {
+      "title": "Pre-treatment apoptotic priming by BH3 profiling",
+      "description": "Measure each subpopulation's mitochondrial apoptotic priming with BH3 profiling before drug exposure, then sort high- and low-priming cells and challenge each with the drug. If survival tracks priming, tolerance is set by a pre-existing mitochondrial threshold, not by drug-specific pathways."
+    },
+    {
+      "title": "Per-cell drug accumulation and efflux measurement",
+      "description": "Quantify intracellular drug concentration in single cells using a fluorescent analog or mass-spec imaging, paired with efflux-transporter reporters. Test whether low drug accumulation, rather than target-level differences, explains which cells survive."
+    },
+    {
+      "title": "Single-cell multiome of chromatin priming before and during treatment",
+      "description": "Profile paired ATAC and RNA in drug-naive cells and at early drug timepoints to find accessible-chromatin states and transcription factor motifs that predict survival. Validate top factors by perturbing them and measuring survival."
+    },
+    {
+      "title": "Mitochondrial heteroplasmy and OXPHOS heterogeneity in survivors",
+      "description": "Sequence mtDNA and image membrane potential and respiration in sorted survivor and dying populations. Test whether naturally varying mitochondrial genotype or function among genetically identical nuclear genomes sets drug tolerance."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., CellTag or lentiviral barcodes) combined with drug exposure to see whether survivors are clonally related",
+      "Longitudinal scRNA-seq of drug-naive cells to find transcriptional states that predict later survival",
+      "Single-cell ATAC-seq or multiome before and after drug to find chromatin states that prime survival",
+      "Live-cell reporter tracking of fate (fractional killing) linked to pre-treatment reporter levels",
+      "BH3 profiling of individual subpopulations to measure apoptotic priming before drug exposure",
+      "Per-cell intracellular drug concentration via fluorescent drug analogs or mass-spec imaging, to test uptake and efflux",
+      "ABCB1 or other efflux-transporter expression sorting, followed by drug challenge and regrowth",
+      "Mitochondrial DNA heteroplasmy and membrane potential heterogeneity measured in sorted survivors",
+      "Single-cell proteomics or mass cytometry of stress-response and proteostasis capacity (HSPs, NRF2, ATF4)",
+      "Pooled CRISPRi/CRISPRa screen with survival sorting to find regulators of tolerance state",
+      "Drug-pulse and washout experiments to test whether tolerance is reversible or epigenetically stable",
+      "Histone-mark profiling (H3K27me3, H3K4me3) of sorted survivors to test epigenetic memory",
+      "Cell-cycle reporter (FUCCI) and drug-timing experiments to test whether G1 or quiescence determines survival",
+      "Paracrine protection assays with conditioned media and co-culture of survivors with sensitive cells",
+      "3D spheroid spatial transcriptomics to test whether position in microenvironment gradients determines survival",
+      "Single-cell metabolic imaging (NADH FLIM, glucose uptake reporters) to measure metabolic state per cell",
+      "Single-cell DNA-seq to detect low-frequency pre-existing ecDNA or copy-number variation among 'identical' cells",
+      "Target engagement measured per cell (e.g., single-cell CETSA or drug-bound target fraction) to test whether drug actually reaches its target",
+      "DNA damage and replication-stress reporters (53BP1, RPA foci) compared between survivors and dying cells",
+      "Nuclear mechanics and chromatin compaction measured by imaging, correlated with survival",
+      "Stochastic gene expression noise (smFISH or dual-reporter promoter-noise measurements) of key survival genes",
+      "Ribosome profiling or puromycin incorporation per cell to measure translation rate heterogeneity"
+    ]
+  },
+  "output_tokens": 3733,
+  "cost_usd": 0.00200942
+}

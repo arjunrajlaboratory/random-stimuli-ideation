@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Synthetic minimal memory elements in a landing-pad library",
+      "description": "Integrate a barcoded library of synthetic enhancers at a single neutral genomic landing pad, systematically varying AP-1 motif number, affinity, spacing, and co-occurring partner motifs, then deliver one defined stimulus pulse and track reporter expression and accessibility for days. This turns the question into a quantitative sufficiency map of which cis-architectures convert a transient input into a persistent output, free of endogenous locus history."
+    },
+    {
+      "title": "Memory duration versus AP-1 protein lifetime arithmetic",
+      "description": "Use HaloTag pulse-chase or SILAC on endogenously tagged FOS/JUN to measure actual protein half-lives and dilution-by-division rates in the same cells whose memory duration is being assayed. If the phenotypic memory substantially outlasts the integrated lifetime of all AP-1 protein present at the end of the stimulus, the information cannot reside in AP-1 protein levels and must be relayed to a chromatin or feedback-based store, a decisive and rarely performed accounting test."
+    },
+    {
+      "title": "Mitotic bookmarking and single-molecule residence time as the heritability mechanism",
+      "description": "Combine single-molecule tracking of Halo-FOS/JUN through mitosis with mitotic-chromosome CUT&RUN in synchronized cells to ask whether AP-1 remains bound to memory enhancers when the rest of the genome is evicted. Then test separation-of-function mutants (e.g., bZIP phospho-site or DNA-binding-surface variants) that selectively abolish mitotic retention without altering interphase binding, and ask whether memory survives division."
+    },
+    {
+      "title": "Dimer identity, not AP-1 amount, as the stored variable",
+      "description": "Quantify the full bZIP dimer repertoire (FOS/FOSB/FRA1/FRA2 x JUN/JUNB/JUND, plus ATF partners) in single cells over the memory window using dimer-specific proximity ligation or split-reporter/BiFC panels, paired with per-cell response magnitude on restimulation. The test is whether the memory-predictive variable is which dimer species persists rather than total AP-1 activity, which would reframe AP-1 memory as a combinatorial code."
+    },
+    {
+      "title": "Information-theoretic capacity of AP-1 for stimulus history",
+      "description": "Deliver programmed pulse trains that vary amplitude, duration, number, and inter-pulse interval (microfluidics or optogenetic input), and compute the mutual information between past input sequence and present AP-1 state or chromatin readout at single-cell resolution. This quantifies in bits how much history AP-1 actually stores and distinguishes genuine multi-state memory from a single slowly relaxing variable, since true memory should preserve information about pulse order and spacing, not just cumulative dose."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Prime-rest-restimulate assays showing faster/stronger second responses that are AP-1 dependent.",
+      "ATAC-seq time course after stimulus withdrawal to see if AP-1-motif enhancers stay accessible.",
+      "CUT&RUN/ChIP-seq for FOS/JUN before, during, and long after stimulation, with motif analysis of persistent peaks.",
+      "Acute degron (dTAG/AID) depletion of FOS/JUN after priming to separate establishment from maintenance.",
+      "CRISPR knockout or dominant-negative A-FOS to test necessity of AP-1 for the memory phenotype.",
+      "Overexpression of FOS/JUN to test sufficiency for installing a primed chromatin/transcriptional state.",
+      "CRISPRi or base-editing of individual AP-1 motifs at candidate latent enhancers to test locus-specific necessity.",
+      "Live-cell imaging of an AP-1 reporter with lineage tracking to measure heritability across divisions.",
+      "Clonal barcoding (Rewind/Watermelon-style) to ask whether AP-1-high states are heritable and predict later phenotypes.",
+      "Single-cell multiome (RNA+ATAC) of naive vs previously stimulated cells to find AP-1-driven memory signatures, e.g. in drug-tolerant cancer cells."
+    ]
+  },
+  "output_tokens": 5103,
+  "cost_usd": 0.1888301
+}

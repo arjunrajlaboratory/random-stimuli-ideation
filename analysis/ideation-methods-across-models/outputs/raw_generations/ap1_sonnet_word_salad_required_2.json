@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 2,
+  "stimulus": "haploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nhaploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus then washout: ATAC-seq/CUT&RUN persistence",
+      "description": "Expose cells to a transient AP-1 activating stimulus (e.g., TPA, injury, or cytokine), then wash out and profile chromatin accessibility and AP-1 (FOS/JUN) binding at days to weeks. Persistent open sites that remain after AP-1 itself returns to baseline would indicate memory, like the 'hoseless' or 'unreleased' state that stays set after the trigger is gone."
+    },
+    {
+      "title": "Acute degron depletion to separate maintenance from initiation",
+      "description": "Use an auxin-inducible degron or dTAG on JUN/FOS at defined times (before, during, or after the priming stimulus) and measure whether accessibility and re-stimulation response are lost. If depleting AP-1 after priming does not erase the memory, it is needed only to write it. If depletion erases it, AP-1 is also needed to maintain it."
+    },
+    {
+      "title": "Re-stimulation kinetics and dose-response of primed vs naive cells",
+      "description": "Prime cells with a first stimulus, rest them, then give a second challenge. Use time-resolved RNA-seq or nascent transcription (PRO-seq) to compare induction speed and magnitude with naive cells, and test whether this depends on AP-1 motif-bearing enhancers. Compare with enhancer-motif mutants or dCas9 blocking of selected sites to show causality."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of memory inheritance",
+      "description": "Combine single-cell RNA and ATAC with live reporters of AP-1 activity, and track cells across divisions by barcodes or time-lapse imaging. Test whether primed accessibility and responsiveness pass from mother to daughter cells and whether they decay in a heritable, cell-autonomous way rather than reflecting continuing signaling."
+    },
+    {
+      "title": "Synthetic AP-1 activation and epigenetic mark readout",
+      "description": "Use optogenetic or chemogenetic control of FOS/JUN, or a dCas9-AP-1 tether, to impose AP-1 activity at a chosen locus, then remove it. Measure H3K27ac, H3K4me1 and DNA methylation, and whether the locus stays open without AP-1 by a feed-forward loop, sufficiency being the strongest test of memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 844,
+  "cost_usd": 0.0138155
+}

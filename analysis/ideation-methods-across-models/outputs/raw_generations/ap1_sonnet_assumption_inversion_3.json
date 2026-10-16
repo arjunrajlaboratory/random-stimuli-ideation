@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-specific degron and mutant panel",
+      "description": "Use acute degradation (dTAG/AID) or dominant-negative lines (A-Fos, specific bZIP mutants) for individual Fos/Jun/ATF family members, and test which ones are needed for priming versus recall. This tests whether memory belongs to a particular AP-1 dimer rather than to AP-1 as a whole."
+    },
+    {
+      "title": "Priming-then-depletion order-of-events experiment",
+      "description": "Prime cells with a stimulus, wash it out, then degrade AP-1 during the rest period. Re-stimulate and measure whether the enhanced transcriptional response (nascent RNA, PRO-seq) persists without AP-1. If it does, AP-1 initiates memory but chromatin maintains it. If it doesn't, AP-1 maintains memory itself."
+    },
+    {
+      "title": "Time-resolved occupancy and accessibility tracking",
+      "description": "Run CUT&RUN or CUT&Tag for AP-1 members, together with ATAC-seq and H3K27ac, at several points: during the stimulus, at hours and days after washout, and after re-stimulation. This shows whether AP-1 stays bound at primed enhancers or leaves behind accessibility that persists without it."
+    },
+    {
+      "title": "Single-cell live imaging of AP-1 dynamics and response",
+      "description": "Image endogenously tagged Fos/Jun, or use an AP-1 reporter, in single cells through repeated stimulations, and link each cell's earlier AP-1 history to its later response. This tests whether memory is a heterogeneous, cell-autonomous state, and whether it is inherited through division by lineage tracing."
+    },
+    {
+      "title": "Synthetic AP-1 site editing and rewiring",
+      "description": "Use CRISPR to mutate or insert AP-1 motifs at candidate enhancers, or to recruit dCas9 AP-1 activators or repressors. Then test whether the primed response, accessibility and re-induction speed change at those loci. This gives causal evidence at specific sites and tests whether AP-1 sites are sufficient to create memory in naive loci. Pair it with perturbation of partners such as pioneer factors or SWI/SNF to find out what else is required."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single entity, but it is a heterogeneous family of Fos/Jun/ATF/Maf dimers with distinct DNA preferences and functions.",
+      "Memory is assumed to be encoded by AP-1 itself (its levels or activity), rather than by the chromatin state it leaves behind.",
+      "AP-1 binding at enhancers is assumed to be stable and persistent, whereas it may be transient, with binding lost after the stimulus.",
+      "Memory is assumed to be a property of the cell population, so bulk assays and averages are enough. It may instead be a heterogeneous, stochastic single-cell property.",
+      "Memory is assumed to be read out as sustained expression or faster re-induction of the same genes, when it may show up as altered enhancer accessibility or as changes in other pathways.",
+      "Correlation (AP-1 motif enrichment, ChIP occupancy at primed loci) is assumed to be evidence of causality.",
+      "Memory is assumed to be a generic AP-1 property, independent of cell type, stimulus and timescale, so one model system at one time point is assumed to be enough.",
+      "AP-1 is assumed to act alone, when it may need partners (pioneer factors, ETS, SWI/SNF) or feedback loops to maintain memory.",
+      "Steady-state or endpoint snapshots are assumed to capture a dynamic process that really needs time-resolved measurement."
+    ]
+  },
+  "output_tokens": 1283,
+  "cost_usd": 0.015613900000000002
+}

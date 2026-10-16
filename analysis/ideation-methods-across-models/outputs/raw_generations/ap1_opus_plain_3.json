@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing across a state transition",
+      "description": "Use clonal DNA barcodes to split sister cells, measuring AP-1 motif accessibility or FOS/JUN levels in one half and challenging the other half with a stimulus such as a drug or differentiation cue. Ask whether the pre-measured AP-1 state predicts the clone's eventual fate, the core test of a heritable, predictive memory."
+    },
+    {
+      "title": "Degron-based timed removal separating establishment from maintenance",
+      "description": "Tag c-JUN/c-FOS with an auxin or dTAG degron (or express dominant-negative A-FOS) and deplete AP-1 either during a priming stimulus or only after it ends. Memory requires that post-stimulus depletion erases the primed response even though the initiating signal is already gone."
+    },
+    {
+      "title": "Direct measurement of persistence and heritability timescales",
+      "description": "Track an endogenous AP-1 reporter such as a knock-in FOS-HaloTag or AP-1 motif-driven fluorophore by live imaging across many divisions. Extract state autocorrelation times, mother-daughter correlations, and switching rates to distinguish true multigenerational memory from slow protein turnover."
+    },
+    {
+      "title": "Decoupling AP-1 binding from chromatin accessibility",
+      "description": "Perform paired ATAC-seq and CUT&RUN for JUN/FOS before, during, and long after stimulation to test whether stimulus-opened enhancers remain accessible after AP-1 unbinds. This asks whether AP-1 acts as a pioneer factor that writes a latent chromatin memory read out upon restimulation."
+    },
+    {
+      "title": "Synthetic write/erase perturbation of specific AP-1 enhancers",
+      "description": "Use dCas9-VPR or targeted recruitment of JUN to a defined set of AP-1-bound enhancers, plus CRISPRi or deletion to remove them. Test whether transiently imposing the AP-1 state suffices to install a long-lived primed phenotype and whether erasing those elements abolishes memory of prior exposure."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1636,
+  "cost_usd": 0.0959649
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after a priming stimulus",
+      "description": "Prime cells (e.g., macrophages, fibroblasts, or neurons) with a stimulus, then use degron tags (dTAG/AID) on FOS, JUN, and ATF family members to remove AP-1 at defined times after priming. Measure whether the enhanced secondary response persists without AP-1 during maintenance, which would separate AP-1 as an initiator from AP-1 as a maintainer of memory."
+    },
+    {
+      "title": "Single-molecule live imaging of AP-1 residence and chromatin occupancy across cell divisions",
+      "description": "Tag endogenous FOS/JUN with HaloTag and track them in single cells and their lineages through priming, rest, and restimulation. Combine with CUT&Tag on sorted descendants to test whether AP-1 stays bound at primed enhancers, or whether occupancy is lost and later re-established by other factors."
+    },
+    {
+      "title": "Causal enhancer editing: AP-1 motif mutation versus chromatin-state rewriting",
+      "description": "Use base editing or prime editing to disrupt AP-1 motifs at memory-associated enhancers, and use dCas9 epigenome editors to put accessibility or histone marks back without AP-1. Test whether the memory phenotype requires the motif sequence, the accessible chromatin state, or both, and whether restoring accessibility is enough to rescue memory."
+    },
+    {
+      "title": "Lineage-resolved multiome with barcoded stimulation history",
+      "description": "Combine single-cell ATAC and RNA with heritable lineage barcodes and a recordable stimulation history (e.g., a CRISPR-based or immediate-early-gene-driven recorder). Model how AP-1 motif accessibility and target-gene responsiveness correlate between sister cells, which would give an unbiased estimate of how heritable AP-1-linked memory is and for how many generations."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-code titration with a mathematical model",
+      "description": "Drive AP-1 with light-controlled FOS/JUN or upstream kinases using different pulse durations, frequencies, and amplitudes, and read out later response using live reporters and chromatin profiling. Fit dynamical models to test whether memory shows hysteresis or bistability, and whether it depends on the temporal pattern of AP-1 activity or only on total dose."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 847,
+  "cost_usd": 0.0112441
+}

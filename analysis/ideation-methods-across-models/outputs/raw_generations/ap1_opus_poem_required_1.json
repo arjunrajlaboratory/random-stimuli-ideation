@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "\"The hand that mocked them\": decoupling AP-1 occupancy from its chromatin trace",
+      "description": "After a transient stimulus, run parallel time courses of AP-1 protein levels (FOS/JUN immunofluorescence, degron-tagged reporters) and of chromatin state at AP-1 motifs (ATAC-seq, FOS/JUN CUT&RUN, H3K27ac). Memory is supported only if accessibility and enhancer marks persist long after AP-1 occupancy has decayed, just as the inscription outlasts the sculptor's hand."
+    },
+    {
+      "title": "\"Look on my Works\": restimulation latency as a readout of a stored trace",
+      "description": "Stimulate, let the response fully subside, then restimulate at a range of intervals while imaging an AP-1 target reporter in single living cells to quantify response latency, amplitude, and responder fraction. Faster or larger second responses that decay as a function of the inter-stimulus interval give a quantitative memory half-life, read out by the second 'traveller'."
+    },
+    {
+      "title": "\"Nothing beside remains\": acute AP-1 erasure separating establishment from maintenance",
+      "description": "Use dTAG or auxin-inducible degradation of FOS/JUN applied either during the initial stimulus or only afterward, during the putative memory window. Persistence of the trace despite post-hoc depletion would localize memory to chromatin, whereas its collapse would show memory is merely sustained AP-1 presence."
+    },
+    {
+      "title": "The pedestal that outlasts the king: a genomic recorder of past AP-1 activity",
+      "description": "Engineer an AP-1-responsive enhancer driving a recombinase or base editor that writes a permanent DNA barcode when AP-1 fires, then read the written mark jointly with scRNA-seq or ATAC days later. This tests cell by cell whether a past AP-1 episode predicts present transcriptional and chromatin state independently of current AP-1 levels."
+    },
+    {
+      "title": "\"Round the decay of that colossal Wreck\": dilution versus erosion of the trace",
+      "description": "Compare memory persistence in proliferating versus cell-cycle-arrested cells and assay AP-1 mitotic bookmarking by CUT&RUN on mitotic chromosomes, distinguishing stepwise loss per division from continuous chromatin turnover. Analyzing which sites survive versus crumble (motif strength, cooperating factors, CpG content, enhancer-promoter contacts) identifies the determinants of a durable memory trace."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2705,
+  "cost_usd": 0.1155765
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 2,
+  "constraint": "using live-cell imaging as the only readout",
+  "prompt": "Constraint: every one of your ideas must be carried out using live-cell imaging as the only readout. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-tracked pre-treatment history of survivors",
+      "description": "Long-term time-lapse of cells before drug addition, tracking lineages with nuclear and cell-cycle reporters (e.g., H2B-mCherry, FUCCI), then add drug and retrospectively trace survivors back to their ancestors. This tests whether survival is predicted by pre-existing states such as cell-cycle length, quiescence or division history, and whether sister and cousin cells share fates, which would indicate heritable rather than stochastic states."
+    },
+    {
+      "title": "Live biosensors of signaling and stress dynamics",
+      "description": "Image single cells carrying fluorescent reporters for the drug's target pathway (e.g., ERK KTR for MAPK inhibitors), p53, NF-\u03baB, and the integrated stress response through drug exposure. Quantify whether survivors show faster pathway reactivation, pulsatile or adaptive dynamics, or lower stress amplitude than cells that die, linking dynamic signaling signatures to fate."
+    },
+    {
+      "title": "Real-time apoptosis and caspase-threshold imaging",
+      "description": "Use live caspase-3/7 or FRET-based caspase reporters, mitochondrial membrane potential dyes and BH3-sensitivity reporters to measure each cell's distance from the apoptotic threshold. Compare the timing, rate and reversibility (anastasis) of caspase activation in survivors and dying cells to show whether survivors resist initiation of death, show sublethal caspase activity, or recover after partial activation."
+    },
+    {
+      "title": "Post-treatment fate mapping of persister state transitions",
+      "description": "Continuously image survivors for weeks under drug with proliferation and cell-cycle reporters, plus size and morphology readouts. This classifies fates such as arrest, slow cycling, polyploidization, or drug-tolerant re-entry, and measures the kinetics of regrowth after drug withdrawal. It shows whether persisters are a stable subpopulation or a transient, reversible state, and how rare re-entry events arise."
+    },
+    {
+      "title": "Live imaging of drug exposure and metabolic or organelle state",
+      "description": "Image intrinsically fluorescent or fluorescently labeled drug to measure per-cell uptake and efflux, alongside live readouts of NAD(P)H/FAD autofluorescence (FLIM), mitochondrial content, ROS and lysosomal dye. This tests whether survival reflects lower intracellular drug dose, efflux activity, or distinct metabolic and organelle states, using single-cell correlations with eventual fate."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 912,
+  "cost_usd": 0.0134915
+}

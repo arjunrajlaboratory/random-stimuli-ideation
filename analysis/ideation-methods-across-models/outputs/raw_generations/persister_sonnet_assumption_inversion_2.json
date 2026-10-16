@@ -1,0 +1,44 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with sister-cell split-and-treat",
+      "description": "Tag cells with expressed heritable barcodes, split clonal families before drug, and sequence the pre-treatment sibling to learn the baseline state of cells whose relatives survive. This tests whether survival is a pre-existing, heritable-like state versus post-drug stochastic adaptation, and recovers the pre-drug transcriptome of future survivors."
+    },
+    {
+      "title": "Single-cell whole-genome and clonal deep sequencing for hidden genetics",
+      "description": "Run single-cell DNA-seq (CNV, SNV) or deep clonal sequencing on pre-treatment populations and on survivors to test for rare subclonal variants, extrachromosomal DNA, or mtDNA heteroplasmy that were assumed absent. A matched comparison of survivors against the clonal parental population shows whether apparent non-genetic persistence has a cryptic genetic basis."
+    },
+    {
+      "title": "Spatial and co-culture perturbation of microenvironment effects",
+      "description": "Use spatial transcriptomics or imaging with defined neighbor-density gradients, conditioned media, and sparse-versus-dense plating or microfluidic isolation of single cells to test whether survival depends on neighbors, paracrine signals, or local drug and oxygen gradients. Comparing isolated cells to colonies separates cell-intrinsic from community-driven survival."
+    },
+    {
+      "title": "Live-cell time-lapse tracking with retrospective fate mapping",
+      "description": "Image reporter lines (cell-cycle, ERK/AKT activity, apoptosis, stress response) in single cells for days before and during drug, then link dynamic histories (cycle length, signaling pulses) to fate by machine learning. This avoids post-hoc identification of survivors and shows whether survival is predicted by dynamics or history instead of a static snapshot state."
+    },
+    {
+      "title": "Multi-omic profiling with dose-response and 3D/in vivo context",
+      "description": "Apply paired single-cell ATAC/RNA plus proteomics or metabolic imaging (NADH FLIM, mitochondrial membrane potential) across a dose range, in 2D, organoid, and xenograft settings, to find whether survivors use multiple, dose- and context-dependent mechanisms. Perturbing candidate factors by CRISPRi in a pooled screen then tests which layers causally contribute, beyond mRNA-only single-cause models."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survivors are a pre-existing, intrinsically distinct subpopulation (a 'persister state') rather than cells that stochastically or reactively adapt after drug exposure.",
+      "Genetically identical means functionally identical: no low-frequency genetic or mutational/copy-number variants exist among the cells.",
+      "Survival is a property of the individual cell, not of its neighbors, microenvironment, or cell-cell communication.",
+      "Snapshot, bulk, or endpoint measurements (bulk RNA-seq, single-time-point scRNA-seq) can reveal the cause of survival; survivors can be identified only after the fact.",
+      "Survival is a binary, single-cause trait explained by one dominant pathway (e.g., drug target reactivation or efflux), and the state is measured in standard 2D culture at a single dose.",
+      "Persistence is stable and heritable-like during treatment, so surviving cells are a fixed type; the relevant timescale is that of the drug exposure, not of prior history or cell cycle/lineage dynamics.",
+      "Transcriptional state is the main layer of regulation; mRNA abundance is an adequate readout of cell state (ignoring chromatin, metabolism, protein, and mitochondrial state)."
+    ]
+  },
+  "output_tokens": 1299,
+  "cost_usd": 0.0157788
+}

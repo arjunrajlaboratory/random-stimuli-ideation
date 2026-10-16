@@ -1,0 +1,150 @@
+{
+  "batch": 11,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "e695025a51da441480bec718e49b716376a65ea28c1a8e85d42b3ed5e5630c3f",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Pulsed-dose CRISPR screens for persister-specific dependencies",
+      "description": "Run genome-wide CRISPR knockout screens at multiple timepoints during intermittent (pulsed) drug exposure rather than a single high dose, and compare guide dropout in persisters versus bulk cells. Genes essential only in the persister state would reveal therapeutic vulnerabilities that bulk-cell screens miss.",
+      "idea_id": "persister_haiku_future_retrospective_1_3",
+      "source_sha256": "b162883a3b326e2e656b65492797d370559e5e15aca2d75effb356dc44100ce8"
+    },
+    {
+      "id": "I2",
+      "title": "BH3 profiling and single-cell apoptotic priming and caspase kinetics",
+      "description": "Measure mitochondrial apoptotic priming and the timing of drug-induced caspase activation in individual cells, sorted by survival outcome. This tests whether survivors have a lower apoptosis threshold (e.g., due to BCL-2 family levels) rather than escaping inhibition of the drug target.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_0_2",
+      "source_sha256": "c301c6b601d977c5d9d7b78a7d3b96d702c13eda29621bd2fd7395462cd69e05"
+    },
+    {
+      "id": "I3",
+      "title": "Pooled CRISPR knockout screen comparing persisters with bulk cells",
+      "description": "Transduce patient-derived organoids with a genome-wide or druggable-genome CRISPR library, treat at a near-lethal drug dose, and compare guide representation in surviving cells against untreated bulk cells. Genes whose loss enriches or depletes survivors identify regulators of persister tolerance and dependencies that could serve as combination targets.",
+      "idea_id": "persister_haiku_assigned_constraint_7_3",
+      "source_sha256": "3f96175eeec7c2b4553ef76f34bdbafe4b5a4cfd54a1a0652dd7a07e3dff73ac"
+    },
+    {
+      "id": "I4",
+      "title": "Re-challenge and reversibility test of heritable tolerance",
+      "description": "Sort surviving cells, expand them without drug, and re-challenge them alongside parental cells, measuring survival fraction and tracking reversion over multiple cycles. Persistent tolerance after drug withdrawal indicates heritable epigenetic memory, whereas rapid reversion indicates a transient, reversible state.",
+      "idea_id": "persister_haiku_overgenerate_select_4_4",
+      "source_sha256": "07bff10f35c535953933f12738f697a6d7fa926a7a3cddb348f52434d9402717"
+    },
+    {
+      "id": "I5",
+      "title": "Manipulating cell\u2013cell feedback with matched replicate cultures",
+      "description": "Run matched replicate cultures that differ only in whether cell\u2013cell feedback can operate: dense monolayers, single cells isolated in nanowells, or conditioned-media transfer, all at identical drug exposure. Compare the inequality of clone success (Gini coefficient) and reproducibility across replicates in these conditions to test whether paracrine and spatial feedback amplify small initial differences into large survival differences.",
+      "idea_id": "persister_opus_parallel_rotated_6_4",
+      "source_sha256": "6fc7660db5947f5f60a863bbd8509c9643552b7d7e1ddf979de5ca290767eb7f"
+    },
+    {
+      "id": "I6",
+      "title": "Single-cell DNA replication stress and mitotic history readout",
+      "description": "Using scEdU, 53BP1 staining and fixed-cell cell-cycle profiling, quantify inherited DNA damage, under-replicated DNA, and 53BP1 nuclear bodies in mother-daughter pairs before drug, then relate them to survival. This tests whether persisters arise from a prior stress or mitotic-error history rather than from a stable transcriptional state.",
+      "idea_id": "persister_sonnet_critique_revise_1_1",
+      "source_sha256": "e869e1885a537898a283bc0c88bd30bfdc527e954b28609c674fada07542dbb0"
+    },
+    {
+      "id": "I7",
+      "title": "Live single-cell multi-reporter imaging with retrospective fate mapping",
+      "description": "Image cells for days before drug addition with reporters for cell cycle, p53/stress signaling, and ERK activity, then add drug and record which cells survive. Tracing survivors' pre-drug dynamics back in time identifies predictive features such as slow cycling or pulsatile signaling.",
+      "idea_id": "persister_sonnet_overgenerate_select_5_2",
+      "source_sha256": "1f6a4b9c29245d07c023169b2a6c94da12cff8f39bf0a99991be10afde27e534"
+    },
+    {
+      "id": "I8",
+      "title": "Stepped dose titration to measure per-lineage tolerance threshold",
+      "description": "Expose barcoded lineages to stepped drug concentrations and durations, estimating a survival threshold for each lineage. Then re-derive clones from survivors and repeat to see whether the threshold is heritable and how fast it relaxes. This converts a binary live/die readout into a distribution of per-lineage tolerance limits, and their stability over generations distinguishes stable resistance from transient tolerance.",
+      "idea_id": "persister_opus_parallel_rotated_0_4",
+      "source_sha256": "602c2902f035022beb0accd05bdbd97dcbe9a569835a06a8e95e2988458836fa"
+    },
+    {
+      "id": "I9",
+      "title": "Survival modeling with time-varying covariates",
+      "description": "From continuous imaging of thousands of cells during treatment, fit a Cox proportional-hazards model in which each cell's time to death is regressed on time-varying covariates (reporter intensities, cell size, cell-cycle phase, local density, mitotic history) measured hours earlier. The hazard ratios quantify how much each feature changes the instantaneous risk of death, and deviations from proportional hazards reveal whether survivors are a distinct subpopulation or the tail of a single continuous risk distribution.",
+      "idea_id": "persister_opus_instruction_only_7_4",
+      "source_sha256": "446e833eed70cdb6906d3a665a9804416e2a3dfeb062a29d624ae3c707b55387"
+    },
+    {
+      "id": "I10",
+      "title": "System identification of signaling dynamics",
+      "description": "Use ERK or AKT translocation reporters to record pulsatile signaling in single cells, then fit transfer functions or feedback gain and damping parameters to each cell's response to a drug step input. Test whether survivors show systematically different feedback gains or response bandwidths before treatment, which would point to a dynamical rather than genetic basis for survival.",
+      "idea_id": "persister_haiku_instruction_only_6_2",
+      "source_sha256": "7bc2d9b9a27fd162ab3e12d552842e26115f63eecfa19e2dd93e48a51cdd92b9"
+    },
+    {
+      "id": "I11",
+      "title": "Deep single-cell and duplex DNA sequencing of survivors",
+      "description": "Compare high-depth single-cell whole-genome sequencing and duplex error-corrected sequencing of the pre-treatment population with those of survivors to detect rare pre-existing mutations, CNVs, or subclones enriched after treatment. Enrichment of a specific variant among survivors would show the cells are not truly genetically identical.",
+      "idea_id": "persister_haiku_assumption_inversion_7_1",
+      "source_sha256": "43c0c7141f3de1fdbfd4ca2ee5044dd5dabd8cf8c37166e03a461c86ae60ca9d"
+    },
+    {
+      "id": "I12",
+      "title": "Lineage barcode analysis of mean and variance of clone survival",
+      "description": "Barcode thousands of genetically identical cells, then track each clone's survival across repeated drug pulses and drug holidays. Compare each clone's mean and variance in survival to separate stochastic bet-hedging (random variation in survival odds) from heritable, clone-specific tolerance.",
+      "idea_id": "persister_haiku_instruction_only_6_0",
+      "source_sha256": "68530d893e1120115ba923adb63641571b3323454efbb2a3db55cf269f552565"
+    },
+    {
+      "id": "I13",
+      "title": "Live-cell imaging of signaling and cell-cycle history before drug addition",
+      "description": "Express an ERK/AKT kinase-activity reporter and FUCCI cell-cycle markers and film cells for 1\u20132 days before and 3\u20135 days after drug addition. Track each cell's lineage to test whether survival is predicted by earlier signaling pulses, cell-cycle phase, quiescence, or inheritance from the mother cell (about $3\u20136k).",
+      "idea_id": "persister_opus_assigned_constraint_1_3",
+      "source_sha256": "a04a04eaae483f9a7f889441e2563ee815cdba02a3265530df34f9cde3755cb3"
+    },
+    {
+      "id": "I14",
+      "title": "Testing genetic heritability of rare survival with replicate-split barcode lineages",
+      "description": "Barcode a population, split it into many independent replicate cultures, treat each, and ask whether the same barcodes survive reproducibly across splits. Pair this with single-cell DNA/CNV and mitochondrial heteroplasmy profiling of survivors. Perfect cross-replicate reproducibility implicates fixed genetic or stably heritable differences, while partial reproducibility quantifies a heritable-but-reversible component.",
+      "idea_id": "persister_opus_assumption_inversion_2_3",
+      "source_sha256": "b6c38c33627d56379c7c418a3c6555743fa02786c454630fdedf51ffa667567c"
+    },
+    {
+      "id": "I15",
+      "title": "Pooled CRISPR screen under pulsed dosing with pooled-testing deconvolution",
+      "description": "Run a genome-wide CRISPR knockout or activation screen under pulsed drug dosing and deconvolve guide enrichment in survivors using pooled-testing statistics. Genes whose perturbation reliably changes survival in the pooled design point to regulators of the persister state and can be validated individually.",
+      "idea_id": "persister_haiku_instruction_only_3_3",
+      "source_sha256": "0bc0c1c0fc005f1e6a80b4143b19a4c8a1418649f8b91b0acebcad2f40ccd04f"
+    },
+    {
+      "id": "I16",
+      "title": "Retrospective lineage barcoding to identify pre-treatment features of survivors",
+      "description": "Label cells with expressed lineage barcodes, split the population, treat one half, and use single-cell RNA and ATAC sequencing on the untreated half to profile the pre-treatment state of the lineages that later survived. This identifies the specific molecular feature linked to survival.",
+      "idea_id": "persister_opus_parallel_rotated_4_3",
+      "source_sha256": "821e9ce0a8e21c1ec98c5d76b8ead9ef78a4d8866420776ede862937dc62da56"
+    },
+    {
+      "id": "I17",
+      "title": "Sort on a rare-state reporter, then score survival at one endpoint",
+      "description": "Use multiplexed RNA imaging on fixed untreated cells to define the rare co-expression state (for example high AXL/NGFR/EGFR), build a live reporter or antibody panel for it, and sort high versus low cells. Treat each sorted fraction and count colonies at a single endpoint to directly quantify the fold enrichment in survival probability attributable to that state.",
+      "idea_id": "persister_opus_assigned_constraint_6_2",
+      "source_sha256": "a2ddf441ae8df21e3f6e701f6e25a318e67113fe45ebc7ceb266a0d5c40b352e"
+    },
+    {
+      "id": "I18",
+      "title": "Replicate overlap and expression fluctuation spectra to separate genetic from stochastic origins",
+      "description": "Apply high-depth clonal barcoding plus whole-genome or targeted sequencing of survivors to test whether survivors are a reproducible set of clones (genetic, fixed) or a different, non-overlapping set in each independent replicate of the same population (stochastic, fluctuating). Quantify barcode overlap across replicates and the power spectrum of expression fluctuations in implicated genes to assign each candidate mechanism to a stable or transient origin.",
+      "idea_id": "persister_opus_parallel_rotated_7_4",
+      "source_sha256": "58cc50a33dc730e8d78f3590e14d2325bac3210eabd83d3afb71c37289e9d192"
+    },
+    {
+      "id": "I19",
+      "title": "Barcoded lineage phylogenetics to separate heritable from stochastic tolerance",
+      "description": "Label founder cells with heritable lentiviral barcodes, reconstruct clonal trees from the sequenced barcodes, and fit Bayesian phylogenetic models to ask whether drug survival is clustered within clades (heritable, cell-intrinsic) or scattered across the tree (stochastic).",
+      "idea_id": "persister_haiku_parallel_rotated_1_2",
+      "source_sha256": "b9fa1d45e360bb6e481de55b5e7217e7c89808886a39dab2df1e3ea90ac31f3b"
+    },
+    {
+      "id": "I20",
+      "title": "Multi-generational inheritance and decay-time measurement of the resistant state",
+      "description": "Sort or isolate rare survivor-prone cells, then follow their lineages through divisions with imaging and single-cell multiomics to measure how long the state persists and how it fades. Fitting the data to stochastic state-switching models distinguishes epigenetic memory, transient noise, and slow-cycling states, and quantifies the transition rates between them.",
+      "idea_id": "persister_sonnet_future_retrospective_0_2",
+      "source_sha256": "ec5f4434ec515245e3033ba50152c4d7613f0526d88b30b70c3e1dda2638d204"
+    }
+  ],
+  "cost_usd": 0.04911320000000001
+}

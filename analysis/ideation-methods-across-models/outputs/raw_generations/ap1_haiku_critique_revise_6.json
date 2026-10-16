@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Stimulus washout with persistence tracking: Induce AP-1 activity with a controlled stimulus or an inducible Fos/Jun system, then withdraw it and track chromatin accessibility (ATAC-seq), H3K27ac, and target-gene expression over days. Memory is supported if these marks and transcripts stay elevated after AP-1 activity returns to baseline, and decay kinetics can be compared with control sites.\n2. Rechallenge test for primed responses: Compare first and second exposures to the same stimulus after a rest period, measuring the speed, amplitude, and AP-1 target-gene induction in each. Repeating this in Fos or Jun knockout and dominant-negative cells tests whether AP-1 is required for the faster, stronger secondary response.\n3. Causal dissection of AP-1 motifs at memory enhancers: Identify enhancers that stay open after washout, then use CRISPR base editing or saturation mutagenesis to disrupt their AP-1 motifs. Check whether accessibility persistence and faster re-induction are lost, and use dCas9-based epigenetic editing to test whether AP-1 binding alone is sufficient to restore the memory signal.\n4. Mapping AP-1 occupancy versus epigenetic retention over time: Run CUT&RUN or ChIP-seq for c-Fos and c-Jun alongside histone marks across a stimulation and washout time course. This shows whether memory is carried by retained histone marks after AP-1 has left the chromatin (bookmarking), or whether AP-1 must rebind at each re-exposure.\n5. Single-cell live reporting of activation history across divisions: Use a destabilized fluorescent reporter driven by the Fos promoter, with live imaging and lineage tracking, to record each cell's prior activation history. Test whether past AP-1 activity predicts future response in the same cell and whether that history is inherited by daughter cells, which would distinguish cell-intrinsic memory from population-level effects.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heterodimer composition drift as a stored state",
+      "description": "Use endogenous HaloTag or degron knock-ins with proximity ligation to track which Fos-family and Jun-family partners (e.g., c-Fos vs. Fra1, JunB vs. c-Jun, ATF3) form dimers at target sites across stimulation and washout. Test whether a persistent shift in partner ratio, rather than AP-1 presence, predicts faster re-induction, then lock a specific dimer with a fusion construct to see if memory changes."
+    },
+    {
+      "title": "Phosphorylation-site knock-ins as a durable mark",
+      "description": "Generate Fos and Jun phosphosite knock-ins (phospho-null and phospho-mimetic at ERK/JNK-dependent sites) and run phosphoproteomics across a pulse-washout-rechallenge series. If a long-lived phospho-state carries information after total protein has returned to baseline, the phospho-mimetic and phospho-null lines should differ in second-exposure responses even when first-exposure responses match."
+    },
+    {
+      "title": "Pulse-pattern decoding with optogenetic AP-1 input",
+      "description": "Use a light-inducible AP-1 or upstream ERK control to deliver matched total doses delivered as different pulse numbers and inter-pulse intervals. Map how long the memory persists as a function of spacing, which distinguishes a dose-encoded memory from a timing-encoded one, and identify the interval beyond which prior pulses no longer influence the response."
+    },
+    {
+      "title": "Paused Pol II and nascent transcription after washout",
+      "description": "Apply PRO-seq or NET-seq at AP-1 target genes during washout to quantify paused RNA polymerase II density and elongation competence, separate from chromatin marks. A poised, paused polymerase that persists after AP-1 leaves would indicate transcriptional-level memory, and its loss after promoter-proximal pause-release inhibition would test causality."
+    },
+    {
+      "title": "3D enhancer-promoter contacts and lamina positioning through washout",
+      "description": "Combine DNA FISH or Micro-C at AP-1 target loci with lamina-association mapping (DamID or Lamin-GFP tracking) to ask whether looping and nuclear-periphery positioning persist after stimulus removal independently of accessibility. Disrupting cohesin or lamina tethers and then testing re-induction speed would show whether architecture, rather than chromatin opening, is the memory substrate."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2267,
+  "cost_usd": 0.0014910499999999998
+}

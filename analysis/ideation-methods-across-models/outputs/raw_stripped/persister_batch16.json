@@ -1,0 +1,150 @@
+{
+  "batch": 16,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "f4735ac6d3a641093dd6505fd2b10ca9a25585fee92f08dcf98639a238db9ce5",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Per-cell intracellular drug concentration and target occupancy",
+      "description": "Quantify per-cell intracellular drug levels using a fluorescent drug analog, MALDI or nanoSIMS imaging of the compound, or a drug-displaceable target-binding biosensor. Correlate each cell's measured exposure with its later fate by tracked imaging. This tests whether survival reflects heterogeneity in drug uptake, efflux, lysosomal sequestration, or target abundance rather than a transcriptional program.",
+      "idea_id": "persister_opus_obvious_then_avoid_3_0",
+      "source_sha256": "5891fc2936e70dc36260f6ddeb69cedf8d4cf8bae33e60188b0bc0b220b58884"
+    },
+    {
+      "id": "I2",
+      "title": "Pooled CRISPRi/CRISPRa screen of candidate persister regulators",
+      "description": "Run a targeted CRISPRi/CRISPRa library covering chromatin regulators, stress-response genes, anti-apoptotic factors, and metabolic genes, with drug and vehicle arms and sgRNA counts read out at several time points. Genes whose loss reduces the persister fraction, or whose activation raises it, identify pathways that are causally required for survival rather than only correlated with it.",
+      "idea_id": "persister_sonnet_assigned_constraint_5_3",
+      "source_sha256": "4be363035eef3b9aedc24ba393b5baf57f9d936336f412b85a99f142bfd5ffe8"
+    },
+    {
+      "id": "I3",
+      "title": "Drug washout and re-challenge with time-resolved single-cell multiomics",
+      "description": "Expose cells to drug, withdraw it at defined times, and re-challenge, profiling scRNA-seq and scATAC-seq at each step. If survivors revert to drug sensitivity after washout, the persister state is reversible rather than a stable heritable resistance.",
+      "idea_id": "persister_haiku_assumption_inversion_1_2",
+      "source_sha256": "124f629f276ac216f767663d997fb2f94b0893842a12e756697c5bbe0ff2cca9"
+    },
+    {
+      "id": "I4",
+      "title": "Mutual-information biomarker screen with CRISPR validation",
+      "description": "Measure single-cell pre-treatment features such as target-pathway activity, drug-efflux levels, and cell-cycle phase, and compute the mutual information between each feature and later survival. Then knock out the top-ranked genes in a pooled CRISPR screen under drug to test which features causally drive survival rather than merely correlating with it.",
+      "idea_id": "persister_haiku_instruction_only_4_4",
+      "source_sha256": "dc1cf42ee39515de8cbfb194a836614ba78f6e11c1453fabe986b24eb2f0376d"
+    },
+    {
+      "id": "I5",
+      "title": "Live-cell reporter imaging linked to fate",
+      "description": "Use fluorescent reporters for candidate survival pathways (e.g., drug target activity, stress signaling, cell-cycle phase) and time-lapse microscopy under drug to link each cell's pre-treatment reporter state to its eventual fate. This tests whether a measurable pre-treatment state predicts survival.",
+      "idea_id": "persister_haiku_plain_6_2",
+      "source_sha256": "cc5f02911fc0c4b1fe1e63614f16d61a7c8661de25fd0582a43687b88acf6d61"
+    },
+    {
+      "id": "I6",
+      "title": "Live-cell lineage tracking with post-hoc multi-omic readout",
+      "description": "Image thousands of single cells and their lineages for many generations before and during drug exposure, using reporters for signaling, cell cycle, and stress. Then fix the same cells in place and run spatial transcriptomics, proteomics, or chromatin profiling, linking each survivor's history to its molecular state. This shows which dynamic behaviors, such as pulsatile signaling, slow cycling, or mitochondrial state, precede survival and whether they are transient or inherited.",
+      "idea_id": "persister_sonnet_future_retrospective_3_1",
+      "source_sha256": "529523a743bc6c13580aad89d33dfb6bfe6705727a56b5106dd9412c3cf8da19"
+    },
+    {
+      "id": "I7",
+      "title": "Pulse labeling to separate active maintenance from passive carryover",
+      "description": "Combine 4sU/SLAM-seq with pulsed SILAC on sorted persisters and bulk cells to decompose their distinctive profile into newly synthesized versus inherited, slowly degraded mRNA and protein. This distinguishes an actively transcribed regulatory program from passive inheritance of long-lived molecules, which imply different intervention points.",
+      "idea_id": "persister_opus_critique_revise_4_2",
+      "source_sha256": "c04e16eafdb2bad10443a27987c52ac61d752481a188ddadca27ed0ed27426ed"
+    },
+    {
+      "id": "I8",
+      "title": "Asymmetric organelle and damaged-protein inheritance at the last pre-treatment division",
+      "description": "Pulse-label mitochondria, lysosomes, and long-lived or oxidatively damaged proteins with photoconvertible or SNAP/Halo pulse-chase tags. Time-lapse image the divisions immediately preceding drug addition and score which daughter survives. This quantifies whether survival is set by noisy partitioning at cytokinesis (mitochondrial mass/membrane potential, lysosomal drug sequestration capacity, proteostasis load) rather than by a transcriptional program.",
+      "idea_id": "persister_opus_obvious_then_avoid_6_3",
+      "source_sha256": "a38fbdb778bd0dede11aaaea268be943c902f7404910af3b20476c8157ec572a"
+    },
+    {
+      "id": "I9",
+      "title": "Pre-treatment ERK/AKT pulse dynamics linked to fate",
+      "description": "Use live fluorescent kinase translocation or FRET reporters to record signaling pulse frequency and amplitude in each cell before drug addition, then score each cell's fate after treatment. If pulse dynamics, rather than average activity, predict survival, this identifies a temporal signaling signature that determines tolerance.",
+      "idea_id": "persister_haiku_obvious_then_avoid_6_0",
+      "source_sha256": "05fe7a7291dc0f6834cf01d36a1df1c5bc8ff018c19e71280d3bd7c9aefe7b2a"
+    },
+    {
+      "id": "I10",
+      "title": "Paracrine protection from dying neighbors",
+      "description": "Test whether dying cells release factors that protect neighboring cells. Use transwell co-cultures, conditioned medium from drug-killed cells with extracellular vesicles removed by ultracentrifugation, and proteomic or metabolite profiling of that medium. Then apply the candidate protective factor to naive cells to see whether it rescues them from drug.",
+      "idea_id": "persister_haiku_critique_revise_3_3",
+      "source_sha256": "07c554903978125bec1f25ddff5c37c69c441fe24690cfd3c657b27e92f187a4"
+    },
+    {
+      "id": "I11",
+      "title": "Lineage barcoding of paired populations to profile future survivors",
+      "description": "Introduce expressed heritable barcodes into the cell line, split the population into treated and untreated halves, and identify barcodes enriched after drug treatment. Then profile the matched untreated sibling cells carrying those same barcodes to measure the pre-existing molecular state that predicted survival, rather than inferring it from survivors already altered by the drug.",
+      "idea_id": "persister_opus_plain_3_0",
+      "source_sha256": "438a75d56c44b7bfe58d84cc1d7e7b34a38670d5a54475c520c750be3efbefc4"
+    },
+    {
+      "id": "I12",
+      "title": "Pre-treatment live-cell reporter tracking with fate mapping",
+      "description": "Before adding drug, image cells carrying fluorescent reporters for candidate states (e.g., FUCCI cell cycle, NRF2, or an EMT or stemness reporter) and record each cell's state. Then track each cell's fate under drug and test whether pre-treatment reporter state predicts survival, showing whether survival is pre-determined or drug-induced.",
+      "idea_id": "persister_haiku_assumption_inversion_3_1",
+      "source_sha256": "31dc729467ad51e4b92e0f647b1c100d07ff5c8ac5cc55e4484954f680bb13d3"
+    },
+    {
+      "id": "I13",
+      "title": "Post-treatment fate mapping of persister state transitions",
+      "description": "Continuously image survivors for weeks under drug with proliferation and cell-cycle reporters, plus size and morphology readouts. Classify fates such as arrest, slow cycling, polyploidization, or drug-tolerant re-entry, and measure regrowth kinetics after drug withdrawal. This shows whether persisters are a stable subpopulation or a transient, reversible state, and how rare re-entry events arise.",
+      "idea_id": "persister_sonnet_assigned_constraint_2_3",
+      "source_sha256": "dc3c4dce286d9bf13d99c27c854c75118e6add08974807f750f0bdafefc815a0"
+    },
+    {
+      "id": "I14",
+      "title": "Barcode-based lineage tracing of tolerant-state inheritance",
+      "description": "Label founder cells with heritable DNA barcodes and track them through drug exposure and recovery to determine whether the survival state is passed to daughter cells and how long it persists across generations. Fitting the decay of the survivor-lineage correlation over time gives a characteristic lifetime for the tolerant state.",
+      "idea_id": "persister_haiku_parallel_rotated_6_3",
+      "source_sha256": "c3e8bc9d210d16d8916a8f5293a2aad935aac3e07d69d9012c9c26bc7acb25e4"
+    },
+    {
+      "id": "I15",
+      "title": "Manipulation of stochastic gene-expression noise",
+      "description": "Engineer cells with promoter variants or feedback circuits that tune expression noise of a candidate survival gene at constant mean expression, then measure persister frequency. This tests whether expression noise itself, rather than the mean level, causally drives survival.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_1_4",
+      "source_sha256": "a57a5f6b2bdd85dc675bb1f30ec4e853ca4af47c17fbb1c66dc17e3c7d8e24ed"
+    },
+    {
+      "id": "I16",
+      "title": "Single-cell intracellular drug quantification by imaging mass cytometry",
+      "description": "Use a mass-tagged or fluorescent analog of the drug, or mass spectrometry imaging, to measure intracellular drug concentration in each cell shortly after dosing. Correlating per-cell drug load with later survival tests whether survivors accumulate less drug, a pharmacokinetic explanation distinct from altered target signaling.",
+      "idea_id": "persister_haiku_obvious_then_avoid_5_1",
+      "source_sha256": "16eccf9f4dff9662c9576c97c17ba346d3409563e1831fa75801c822cfb46f0e"
+    },
+    {
+      "id": "I17",
+      "title": "Live-cell tracking with retrospective multi-omic readout",
+      "description": "Time-lapse image thousands of single cells for weeks to record lineage history (cell cycle length, signaling reporters, mitochondrial state, division asymmetry), apply drug, then fix the cells and run in situ spatial transcriptomics or proteomics on the same tracked survivors. This tests whether fluctuating dynamics, inherited memory, or stress history, rather than static state, determines survival.",
+      "idea_id": "persister_sonnet_future_retrospective_4_1",
+      "source_sha256": "ee3f0edea0ba2983e91db16bfd4dcc26435d191ec4ea141cfd3c199df288a20f"
+    },
+    {
+      "id": "I18",
+      "title": "Longitudinal imaging of individual survivors",
+      "description": "Track every cell in a field from before treatment through weeks of drug exposure to record division history, dormancy duration, and timing of outgrowth. Survivors can then be retrieved by micromanipulation or photoconversion for downstream molecular profiling.",
+      "idea_id": "persister_opus_plain_6_2",
+      "source_sha256": "fda0eb41637d4166fc7ba0e4cfe60053ea46f987ce2075fd9162fdfd99dd91a4"
+    },
+    {
+      "id": "I19",
+      "title": "Paired single-cell transcriptomic and epigenomic profiling over time",
+      "description": "Run scRNA-seq and scATAC-seq (or multiome) on cells before treatment, during drug exposure, and after regrowth. Identify pre-treatment signatures of cells that later survive, such as drug-tolerant persister programs, EMT-like states, or stress-response pathways, and test them as predictors. Chromatin accessibility and histone marks can show whether the state is epigenetically encoded.",
+      "idea_id": "persister_sonnet_plain_7_1",
+      "source_sha256": "81fd248820cd3da8f50f6b22f7472a2ebe05fca5bb02be5477f04d01a556939e"
+    },
+    {
+      "id": "I20",
+      "title": "Nuclear deformability and chromatin compaction by microfluidic constriction",
+      "description": "Pass untreated cells through a constriction channel to measure nuclear deformability, then sort by deformability and test drug sensitivity. A link between nuclear stiffness and survival would indicate a mechanical, nucleus-level determinant of drug tolerance that gene expression assays would miss.",
+      "idea_id": "persister_haiku_obvious_then_avoid_5_3",
+      "source_sha256": "f8b47c9e0f4f90876e01b030b60dd666a7bfa91a904e02fdd6d0fcdb9b04da65"
+    }
+  ],
+  "cost_usd": 0.04789120000000001
+}

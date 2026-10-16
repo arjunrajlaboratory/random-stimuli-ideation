@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron washout time-course for memory necessity (hypothetical 2036 paper)",
+      "description": "Use an auxin- or dTAG-inducible degron on c-Jun or Fos to remove AP-1 after a defined priming stimulus, then re-challenge at intervals and track chromatin accessibility (ATAC-seq) and reporter re-induction. If memory persists after degradation, AP-1 is needed for establishment but not maintenance; if it vanishes, AP-1 itself is the maintenance mechanism."
+    },
+    {
+      "title": "Optogenetic pulse-train coding of AP-1 history (hypothetical 2036 paper)",
+      "description": "Drive a light-inducible AP-1 dimerizer or nuclear-shuttling construct with pulse trains that vary in number, spacing, and frequency while holding total dose constant. Then measure a downstream enhancer reporter days later in single cells to test whether memory encodes timing and not just cumulative exposure."
+    },
+    {
+      "title": "Mitotic inheritance of AP-1 occupancy (hypothetical 2036 paper)",
+      "description": "Combine live-cell imaging of endogenously tagged Fos/Jun through mitosis with CUT&RUN or CUT&Tag on FACS-sorted daughter cells at G1 entry. Testing whether AP-1 remains bound to memory enhancers during mitosis, and whether its loss at specific sites predicts failure to re-activate in daughters, would establish mitotic bookmarking as the heritable step."
+    },
+    {
+      "title": "In vivo rechallenge with cell-type-specific AP-1 knockout (hypothetical 2036 paper)",
+      "description": "Delete Jun or Fosb conditionally in a defined population (for example, monocytes or tissue-resident macrophages) after a primary inflammatory or stimulatory insult, then rechallenge weeks later and measure the secondary response with scRNA-seq and chromatin profiling. Comparing the memory response in knockout and wild-type animals tests whether AP-1 is required for in vivo memory, not just in culture."
+    },
+    {
+      "title": "Single-molecule residence-time measurement at memory enhancers (hypothetical 2036 paper)",
+      "description": "Use single-molecule tracking (for example, HaloTag-based SMT) to measure c-Jun residence time on chromatin in cells with and without a prior stimulus. Then test whether sites with prolonged residence are the ones that retain accessibility, and whether mutating the bZIP dimer partner or the binding motif shortens residence and erases the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2140,
+  "cost_usd": 0.00121301
+}

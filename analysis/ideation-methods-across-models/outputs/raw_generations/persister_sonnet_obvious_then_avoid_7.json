@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment state memory via sister-cell pairing",
+      "description": "Track lineages by time-lapse imaging, split sister cells so one is drugged and the other is profiled by scRNA-seq or proteomics. This links the pre-drug state of the sibling to the survival fate of its pair, which tests the causes directly and avoids correlating after the fact."
+    },
+    {
+      "title": "Cell-cycle and mitotic timing history as a predictor",
+      "description": "Use FUCCI or similar live reporters with long-term tracking to test whether the cell-cycle phase at drug exposure, G1 length, or a recent mitotic error predicts survival. Combine this with synchronization and perturbation of the cycle to test causality."
+    },
+    {
+      "title": "Stress-response and apoptotic priming heterogeneity (single-cell mitochondrial priming)",
+      "description": "Measure per-cell BH3 profiling or live mitochondrial outer-membrane permeabilization reporters, along with caspase kinetics and BCL-2 family protein levels. This tests whether survivors are cells with high apoptotic thresholds or slow death-signal accumulation."
+    },
+    {
+      "title": "Stochastic gene-expression noise and fluctuation timescale modeling",
+      "description": "Do time-resolved single-cell measurements of key drug-target pathway reporters in untreated cells. Fit stochastic state-switching models (Luria-Delbr\u00fcck-style fluctuation tests) to estimate how fast cells enter and leave the tolerant state and to predict how survival changes with drug-holiday schedules."
+    },
+    {
+      "title": "Spatial and microenvironmental niche mapping with perturbed density",
+      "description": "Use spatial transcriptomics or multiplexed imaging on 3D cultures or xenografts, and vary local density, cell-contact and secreted-factor conditions. This tests whether persister fate depends on microenvironmental position, such as hypoxia or paracrine rescue, rather than on intrinsic cell state."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated cells to find persister transcriptional states",
+      "Whole-genome/exome sequencing to rule out resistance mutations",
+      "Barcode lineage tracing (e.g., Cellecta/ClonTracer) to test pre-existing vs. induced tolerance",
+      "ATAC-seq/ChIP-seq for chromatin accessibility and histone marks in persisters",
+      "Live-cell imaging of drug response with time-lapse microscopy",
+      "CRISPR knockout/activation screens for survival genes",
+      "Phosphoproteomics/signaling pathway profiling (e.g., MAPK/AKT reactivation)",
+      "Metabolic profiling of persisters (OXPHOS, glycolysis, lipid metabolism)",
+      "Drug efflux pump expression/activity assays (ABC transporters)",
+      "Testing epigenetic inhibitors (HDAC, EZH2) or combination therapy to eliminate persisters"
+    ]
+  },
+  "output_tokens": 1046,
+  "cost_usd": 0.0132357
+}

@@ -1,0 +1,14 @@
+format: html
+headline_question: "Which prompting methods make Haiku 5.5, Sonnet 5.5 and Opus 5.5 brainstorm more distinct, useful and novel research ideas, and does the answer depend on the model?"
+baseline: "plain prompt (primary); the unrelated-domain instruction from the earlier study (the bar to beat)"
+primary_metric: "distinct useful-novel ideas (Opus judge, both novelty and usefulness >= 4 averaged over 2 passes, decoration-stripped text, deduplicated by clustering), out of 80 per model x method"
+audience_tier: B
+accessibility: "carried over from the user's brief for the earlier report: plain-language explanations for an adjacent-field scientist, plus page accessibility (alt text, contrast, keyboard navigation, no color-only encoding)"
+standalone: true
+shape: overview-supplement
+results_structure: narrative
+special_requests:
+  - "Start with concrete example ideas to orient the reader before any aggregate data (carried over)."
+  - "Built from scratch as a new report; not an edit of the earlier random-stimuli report."
+source_of_choices: "Phase 0 answers reused from analysis/random-stimuli-ideation/reports/.planning-brief-html.yaml (the user's choices for the earlier report); user asked on 2026-10-15 for a new report and did not specify format."
+skip_preview: false

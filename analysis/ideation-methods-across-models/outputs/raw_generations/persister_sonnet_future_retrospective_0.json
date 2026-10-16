@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded fate mapping before drug exposure",
+      "description": "Tag each cell with an expressed DNA barcode, split the population into sister cultures, and profile one by scRNA-seq before treatment while the other receives drug. Matching barcodes between pre-treatment states and survivors shows whether survival is predetermined by a heritable pre-existing state or arises stochastically after drug exposure, and it identifies the predictive signature."
+    },
+    {
+      "title": "Live-cell tracking of dynamic reporters linked to retrospective survivor identification",
+      "description": "Time-lapse image thousands of single cells with reporters for signaling (ERK, p53, NF-kB), cell cycle, and mitochondrial or stress state for days before drug addition. After drug treatment, trace survivors back through their histories to find dynamic features such as pulse frequency, cycle timing, or state-switching rates that predict survival better than any static snapshot."
+    },
+    {
+      "title": "Multi-generational inheritance and decay-time measurement of the resistant state",
+      "description": "Sort or isolate rare survivor-prone cells, then follow their lineages through divisions with imaging and single-cell multiomics to measure how long the state persists and how it fades. Fitting the data to stochastic state-switching models distinguishes epigenetic memory, transient noise, and slow-cycling states, and quantifies the transition rates between them."
+    },
+    {
+      "title": "Joint single-cell chromatin, transcriptome, and mutation profiling of survivors versus matched sensitive cells",
+      "description": "Apply single-cell multiome assays with targeted DNA sequencing and copy-number calling to the same cells at baseline and at several times on drug. This rules in or out rare genetic variants, extrachromosomal DNA, and mitochondrial heteroplasmy, and shows which chromatin accessibility states and regulators precede survival."
+    },
+    {
+      "title": "Perturbation screens in the survivor state with in situ readouts of drug-target engagement",
+      "description": "Run pooled CRISPR (knockout, interference, and base-editing) screens whose readout is survival fraction and single-cell state, combined with biosensors of drug-target occupancy and downstream pathway inhibition within individual cells. This tests causality, separating cells that never reach effective drug inhibition (uptake, efflux, metabolism) from those that inhibit the target yet rewire downstream, and it reveals which mechanisms can be targeted to eliminate survivors."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 860,
+  "cost_usd": 0.0129195
+}

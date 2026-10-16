@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 7,
+  "parallel": {
+    "field": "Political science (historical institutionalism)",
+    "problem": "Do temporary historical events, such as colonial rule or wartime mobilization, persist through specific institutions so that they shape present-day outcomes long after the cause is gone?",
+    "how_studied": "Scholars use spatial regression-discontinuity designs at historical borders, instrumental variables, and persistence regressions linking past exposure to present outcomes. They then do mediation analysis to test which carrier explains the persistence: formal institutions, cultural norms, or elite networks. Placebo tests on boundaries that had no institutional consequence, and cases where the institution was later abolished, help separate a real memory carrier from correlated geography."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Political science (historical institutionalism)\nProblem: Do temporary historical events, such as colonial rule or wartime mobilization, persist through specific institutions so that they shape present-day outcomes long after the cause is gone?\nHow it is studied: Scholars use spatial regression-discontinuity designs at historical borders, instrumental variables, and persistence regressions linking past exposure to present outcomes. They then do mediation analysis to test which carrier explains the persistence: formal institutions, cultural norms, or elite networks. Placebo tests on boundaries that had no institutional consequence, and cases where the institution was later abolished, help separate a real memory carrier from correlated geography.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Persistence regression with lineage tracing and formal mediation",
+      "description": "Expose cells to a transient stimulus, withdraw it, and track barcoded clones over many divisions with longitudinal scATAC/scRNA, regressing later response amplitude on past exposure dose. Then run mediation analysis to ask how much of the persistence coefficient is carried by retained AP-1 motif accessibility/FOS-JUN occupancy versus competing carriers such as DNA methylation, H3K4me1, BAF retention, or residual protein."
+    },
+    {
+      "title": "Abolish the institution: degron removal during the memory window",
+      "description": "Apply an auxin/dTAG degron to FOS/JUN family members only after stimulus withdrawal and before restimulation, mimicking the political-science test of whether persistence survives abolition of the carrier. If AP-1 maintains memory, degradation confined to the latent period should erase enhanced recall despite an intact exposure history."
+    },
+    {
+      "title": "Placebo loci: matched AP-1 motifs that were never occupied",
+      "description": "CRISPR-mutate AP-1 motifs that gained stable accessibility after the transient stimulus (the treated border) alongside sequence- and expression-matched motifs that were never occupied (the placebo border with no institutional consequence). Memory should be lost only for the first set, excluding generic AP-1 dependence or motif-adjacent genomic context."
+    },
+    {
+      "title": "Allele-level natural experiment in F1 hybrid cells",
+      "description": "In F1 hybrid cells, use heterozygous SNPs that disrupt AP-1 motifs as a within-nucleus discontinuity: both alleles share an identical trans environment and exposure history, so allele-specific differences in retained priming and recall isolate cis AP-1 motif function. Motif-neutral heterozygous sites serve as the placebo comparison."
+    },
+    {
+      "title": "Dose-threshold discontinuity plus an orthogonal instrument",
+      "description": "Finely titrate stimulus to locate the sharp threshold where AP-1 enhancer priming switches on, then compare cells just below versus just above the cutoff (sorted on a live AP-1 reporter) for long-term recall. Complement with instrumental-variable logic by inducing FOS/JUN optogenetically without the original stimulus, shifting AP-1 activity through a route that bypasses other stimulus-induced changes."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3044,
+  "cost_usd": 0.11634649999999999
+}

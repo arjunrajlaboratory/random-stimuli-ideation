@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron timing to separate maintenance from establishment",
+      "description": "Add an auxin-inducible degron to endogenous Fos and JunB, then deplete AP-1 at varying times after a priming pulse. If the primed response or chromatin state is lost only when AP-1 is removed during the memory window, AP-1 is required to maintain the memory rather than only to set it up."
+    },
+    {
+      "title": "Protein turnover versus chromatin residence",
+      "description": "Use Halo or SNAP tags on Fos or Jun to measure protein half-life and chromatin dwell time by pulse-chase. If the chromatin mark outlasts the protein, memory must be carried by something other than AP-1 protein itself, such as a self-sustaining chromatin state."
+    },
+    {
+      "title": "Motif-level necessity at endogenous enhancers",
+      "description": "Use base or prime editing to mutate AP-1 motifs in endogenous enhancers, then track accessibility and H3K27ac through a stimulus-washout time course. Retained chromatin opening that depends on the intact motif is a direct test of AP-1 as the memory element."
+    },
+    {
+      "title": "Heritability of the primed state through division",
+      "description": "Use live single-cell reporters with barcoded lineage tracking to ask whether the primed state passes to daughter cells. Combine this with AP-1 perturbation to see whether heritability depends on AP-1 itself."
+    },
+    {
+      "title": "Pulse-history and re-stimulation kinetics",
+      "description": "Vary the number, spacing and interval of AP-1 inducing pulses, then measure how fast and how strongly cells respond on re-stimulation. This shows whether AP-1 encodes input history in a way that matches training-like memory, and it can be fitted to a model."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Auxin-inducible degron of Fos/JunB added at different times after a priming pulse, to test whether AP-1 is needed for maintenance or only for establishment of the memory",
+      "Halo/SNAP-tagged Fos or Jun pulse-chase to compare protein half-life with chromatin residence time, to test whether persistence outlasts the protein",
+      "Single-molecule tracking of AP-1 dimers to measure dwell times on chromatin before and after priming",
+      "Base-editing or prime-editing of AP-1 motifs in endogenous enhancers, then measuring retained accessibility after stimulus washout",
+      "Synthetic reporter with an AP-1 site inserted at a neutral locus to test whether a sequence alone is sufficient for memory",
+      "CUT&RUN time course of Fos, Jun and H3K27ac after a single stimulus pulse, tracking how long occupancy persists after washout",
+      "Time-resolved ATAC-seq after washout to measure how long chromatin opening lasts at AP-1 sites compared with non-AP-1 sites",
+      "Histone turnover measurement with pulse-labelled H3 (SNAP-H3) at AP-1 enhancers to test whether nucleosome exchange erases the mark",
+      "Hi-C or Micro-C after priming to test whether AP-1 stimulation changes 3D enhancer-promoter contacts that persist",
+      "Enhancer RNA measurement at AP-1 sites to see whether transcription at enhancers outlasts the stimulus",
+      "smFISH or MS2 live imaging of target transcriptional bursting in primed versus naive cells, to test whether memory acts on burst frequency or amplitude",
+      "Single-cell lineage tracing with barcoded reporters across divisions to test whether a primed state is heritable through mitosis",
+      "Optogenetic AP-1 pulse trains with varied number, spacing and frequency to map how past input history is encoded",
+      "Pulse-interval sweep with re-stimulation to measure how fast and how strongly primed cells respond compared with naive cells",
+      "Mathematical modelling of AP-1 autoregulatory feedback (e.g. Fra1 induction) to predict memory duration, then test the predictions with perturbations",
+      "Phospho-site mutants of c-Fos (e.g. at stability-regulating residues) to test whether protein stability controls memory length",
+      "Proximity proteomics (BioID or APEX) of AP-1 before and after priming to identify co-factors that stay bound",
+      "Fos-TRAP lineage tagging with later reactivation and conditional Fos/Jun deletion in vivo, to test whether AP-1 is required for an engram",
+      "Cross-cell-type comparison of the memory in fibroblasts, T cells and neurons to test whether AP-1 memory is context-dependent",
+      "Cross-species or evolutionary comparison of AP-1 site turnover to test whether memory-linked sites are conserved"
+    ]
+  },
+  "output_tokens": 3411,
+  "cost_usd": 0.0018493299999999997
+}

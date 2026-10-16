@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Time-lapse measurement of the lifetime of the primed state",
+      "description": "Knock a fluorescent reporter into an endogenous resistance-associated locus (AXL, NGFR, EGFR, WNT5A) and image untreated cells for days to extract per-cell dwell-time distributions in the high state. Add drug at a defined moment and retrospectively link survival to whether each cell was in the high state at treatment onset, testing whether survival requires occupancy of a short-lived state rather than membership in a stable subpopulation."
+    },
+    {
+      "title": "Sister-cell splitting with varying delay to measure memory decay",
+      "description": "Barcode cells, split each clone into two arms, and treat the second arm after delays from hours to weeks; twin-to-twin concordance in survivor frequency as a function of delay yields the decay constant of the heritable component. This quantifies how long the primed state is held before it subsides back to the population mean."
+    },
+    {
+      "title": "Retrospective capture of the pre-treatment state (barcode rewind)",
+      "description": "Use expressed lineage barcodes to identify, in an untreated replicate aliquot, the clones that survived in the treated arm, then barcode-sort those cells and profile transcriptome, chromatin accessibility, and histone marks. This captures the primed state in its original form, before survivors have transitioned to a different phenotype."
+    },
+    {
+      "title": "Reversion kinetics after drug withdrawal",
+      "description": "Subject survivors to a drug holiday and track resensitization via single-cell profiling and clonal re-barcoding across timepoints, asking whether and how fast the resistant phenotype relaxes back to the naive distribution. Full reversion implicates a transient non-genetic mechanism, while a non-reverting subset separates genuinely mutated clones from epigenetically primed ones and quantifies the mixture."
+    },
+    {
+      "title": "Perturbing the duration of the state, not its mean",
+      "description": "Apply chromatin-regulator inhibitors (DOT1L, KDM5, EZH2, HDAC) or degron-controlled modifiers before drug, and use reporter time-lapse to measure whether each perturbation changes state amplitude, entry frequency, or dwell time; then test which parameter predicts survivor frequency. If interventions that shorten dwell time reduce survivors without changing how many cells ever enter the state, survival is causally set by how long the state persists."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2604,
+  "cost_usd": 0.0999315
+}

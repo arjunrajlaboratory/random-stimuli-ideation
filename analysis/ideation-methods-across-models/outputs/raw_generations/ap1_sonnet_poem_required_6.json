@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 6,
+  "stimulus": "I will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Return-to-Innisfree: stimulus-memory chromatin profiling",
+      "description": "Expose cells (e.g., fibroblasts or macrophages) to a transient AP-1-activating stimulus, such as TPA or a stress signal, then withdraw it for days to weeks. At matched time points, run ATAC-seq, CUT&Tag for AP-1 subunits (FOS, JUN), and H3K27ac. Persistent accessibility or binding at the same loci after AP-1 activity has returned to baseline would indicate a memory-like imprint. The image of hearing the lake 'in the deep heart's core' long after leaving the shore suggests testing for a trace that outlasts the stimulus."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse\u2013chase with reporter memory",
+      "description": "Put AP-1 activity under optogenetic or chemogenetic control, for example a light-inducible c-Jun/FOS dimerizer. Deliver pulses of varied number, duration and spacing, then measure single-cell reporter output and endogenous target transcription after a washout. Compare the response of naive cells with that of pre-pulsed cells to measure hysteresis, priming and decay time. The 'dropping slow' of peace in the poem suggests testing for slow, cumulative integration of repeated pulses."
+    },
+    {
+      "title": "Acute degradation to separate initiation from maintenance",
+      "description": "Use a dTAG or auxin-inducible degron on JUN/FOS, or a dominant-negative A-FOS, and deplete AP-1 at different times: before, during, or after the stimulus. If a memory state persists after AP-1 is removed, AP-1 is needed only for establishment. If the state collapses, AP-1 is needed for maintenance. Read out the effect with nascent RNA-seq (PRO-seq) and with accessibility. This is like building the cabin and asking whether it stands once the builder has left."
+    },
+    {
+      "title": "Single-cell multiome lineage tracing of inheritance",
+      "description": "Combine single-cell multiome (RNA + ATAC) with a barcoded lineage tracer on stimulated cells. Follow the cells through several divisions after the stimulus ends. Test whether sister cells share AP-1 motif accessibility and target-gene expression more than unrelated cells do. Shared states would indicate mitotic inheritance. Add live-cell imaging of an AP-1 reporter to track the memory across divisions, much like the repeated refrain of the stanzas."
+    },
+    {
+      "title": "Pioneer-like activity and feedback-loop perturbation",
+      "description": "Test whether AP-1 stabilizes memory through nucleosome remodeling (BAF recruitment) or positive feedback (FOS/JUN autoregulation). Use CRISPRi or mutation of AP-1 motifs at memory loci, inhibitors of BAF (e.g., ATPase inhibitors), and measurements of motif-dependent accessibility with a reporter. In parallel, build a mathematical bistability model fitted to dose\u2013response and washout data. Loss of memory after motif or feedback disruption would support a direct mechanistic role for AP-1. It would also show that the 'cabin' persists because of its structure and not because of continuing input."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1125,
+  "cost_usd": 0.0166535
+}

@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis mapping instead of decay curves",
+      "description": "Using a live AP-1 activity reporter, drive cells up and then back down a graded stimulus dose (e.g. serum, TGF-beta, stiffness, or an optogenetic FOS/JUN input) and ask whether the up- and down-going dose-response curves separate into a hysteresis loop with a bistable region, rather than retracing one another. This distinguishes a true self-sustaining memory state from slow first-order relaxation, which no 'state persists for N days' experiment can do."
+    },
+    {
+      "title": "Dimer-resolved pulse-chase of who actually stores the information",
+      "description": "Endogenously HaloTag every major AP-1 subunit, then use pulse-chase labeling plus CUT&RUN and sequential (re-)ChIP to measure, for each specific dimer, protein lifetime and residence at candidate memory enhancers across the memory window. If memory duration tracks one long-lived species (e.g. a FosB/deltaFosB- or JUND-containing dimer) and not aggregate motif accessibility, the storage element is a particular dimer, not 'AP-1'."
+    },
+    {
+      "title": "Swap the matrix, not the cell",
+      "description": "Test whether memory is extrinsic by moving 'remembering' cells onto decellularized naive ECM (and naive cells onto ECM deposited by remembering cells), and by replating at clonal density in fresh matrix with autocrine signaling blocked. If memory transfers with the matrix or evaporates when self-deposited ECM and autocrine loops are removed, AP-1 is a continuously re-driven reporter of an environmental store rather than the memory itself."
+    },
+    {
+      "title": "Locus-targeted write/erase to test sufficiency and necessity of the footprint",
+      "description": "Use dCas9-recruited synthetic AP-1 activation domains to transiently write AP-1 occupancy at a handful of candidate memory enhancers with no upstream stimulus, remove the recruiter, and ask whether the downstream state persists; conversely, use an acute AP-1 degron applied only after the state is established to test whether AP-1 is required to maintain, not just to establish, the state. Pairing this with inhibition of candidate chromatin writers separates AP-1 as the cause from AP-1 accessibility as a readout."
+    },
+    {
+      "title": "Lineage-barcoded single-cell tracking across controlled division rates",
+      "description": "Combine heritable barcoding (Rewind/ClonMapper-style) with longitudinal live imaging of an AP-1 reporter to measure sister-sister and mother-daughter correlation decay, giving a memory half-life in generations versus in hours; then repeat with division rate manipulated (contact inhibition, serum starvation, CDK inhibition, or post-mitotic cells). If memory decays per unit time rather than per division, and if barcodes show the persistent state is re-entered by naive cells rather than only inherited by a pre-existing clone, the mechanism is neither replication-coupled nor selection."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "That 'memory' is a well-defined phenomenon rather than slow relaxation of a decaying signal: a state persisting hours-to-days after stimulus removal gets scored as memory without testing for the bistability/hysteresis that genuine memory implies.",
+      "That 'AP-1' is one entity, when it is a family of FOS/FOSB/JUN/JUNB/JUND/ATF dimers with very different protein half-lives and specificities; motif-based readouts (ATAC footprints, TGASTCA enrichment) cannot distinguish them and implicitly treat them as interchangeable.",
+      "That the memory is cell-autonomous and stored inside the cell, ignoring that AP-1 is strongly mechano- and paracrine-responsive, so the stored information could live in self-deposited ECM, matrix stiffness, or an autocrine loop that continuously re-induces AP-1.",
+      "That chromatin accessibility at AP-1 motifs IS the memory and is causal, rather than a passive footprint of a state actually maintained by some other factor or modification.",
+      "That population-average or snapshot measurements report per-cell memory (an ergodicity assumption), and that a persistent population state reflects instruction of individual cells rather than selection/outgrowth of cells already in that state.",
+      "That memory must be mitotically heritable, so the right assay is 'does it survive division' - biasing the field toward chromatin-replication explanations and away from memory that decays in real time or exists in non-dividing cells.",
+      "That loss-of-function cleanly separates writing from maintaining: constitutive knockouts conflate establishing the state with storing it, and ignore pleiotropy and compensation among family members.",
+      "That the question is duration (how long is it remembered) rather than capacity and content (how many distinct past experiences, in what order, could AP-1 actually encode).",
+      "That memory is read out in the same assay used to detect it (usually transcription), rather than as a latent change in how the cell responds to a future challenge."
+    ]
+  },
+  "output_tokens": 6289,
+  "cost_usd": 0.218513
+}

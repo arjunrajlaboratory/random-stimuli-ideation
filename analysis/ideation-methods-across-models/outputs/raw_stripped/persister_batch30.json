@@ -1,0 +1,150 @@
+{
+  "batch": 30,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "cbb65c4be5590e23fd419986fd3ddbb62918eccc2e22b68eb40df6341bfc2005",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Per-cell protein turnover profiling",
+      "description": "Use pulse-chase labeling (e.g., click-chemistry amino acid analogs) combined with flow sorting to measure the synthesis and degradation rates of the drug target and key survival proteins in individual cells. Comparing turnover between survivors and dying cells would test whether proteostasis or translational capacity, rather than target levels, underlies tolerance.",
+      "idea_id": "persister_haiku_obvious_then_avoid_0_2",
+      "source_sha256": "c75a58dee1ebbe3fea656af5ef2f04349f45d99ac1cb0fc5550134351dcf31c2"
+    },
+    {
+      "id": "I2",
+      "title": "Graded drug-pulse protocols with single-cell RNA-seq",
+      "description": "Expose cells to systematically varied drug pulse lengths, doses and recovery intervals, then measure survivor fractions alongside single-cell RNA-seq at each step. Mapping the dose-history response surface shows whether survival comes from a pre-existing state, adaptation the drug induces, or both, and where the transition happens.",
+      "idea_id": "persister_opus_instruction_only_0_2",
+      "source_sha256": "0d6110395f19ec8e1184bc4d2ef8d23dd0f747cc631da293dc4c7c6daef3c409"
+    },
+    {
+      "id": "I3",
+      "title": "Per-cell drug accumulation and target-engagement biosensor",
+      "description": "Quantify intracellular drug levels in single cells (using a fluorescent drug analog or LC-MS on sorted cells) alongside a live-cell biosensor of target pathway activity, such as a kinase translocation reporter. This tests whether survivors have lower drug uptake, higher efflux pump expression, or maintained pathway signaling despite equal extracellular dosing.",
+      "idea_id": "persister_haiku_assumption_inversion_6_3",
+      "source_sha256": "bc28b6492dc7486f8dc8dc6dd71e361b6d63d6a6c6b820492fd75da36140864c"
+    },
+    {
+      "id": "I4",
+      "title": "Linking baseline transcriptomes to drug survival in CCLE/GDSC data",
+      "description": "Use the CCLE baseline expression profiles and GDSC/PRISM dose-response curves across hundreds of cell lines to ask whether lines with a high-tolerance residual fraction share an expression or pathway signature. Focus on the shape of the dose-response curve (plateau or residual viability) rather than only IC50, since the plateau reflects the surviving fraction.",
+      "idea_id": "persister_haiku_assigned_constraint_0_1",
+      "source_sha256": "8a60a6d58dd5ad4e28945a51dee5e4d46b662ac0aed27bc3ac3883fd99f7345f"
+    },
+    {
+      "id": "I5",
+      "title": "Chromatin accessibility profiling in early-treated cells",
+      "description": "Profile ATAC-seq and histone marks in cells sorted by early drug response (e.g., reporter activation at 24 h) versus bulk. Differential accessibility at lineage or stress genes would indicate epigenetic priming that precedes survival.",
+      "idea_id": "persister_haiku_overgenerate_select_4_2",
+      "source_sha256": "101de668d519638c0a8134e5d064de6fd8aa38af6282b179fa12ed3b886e0bc0"
+    },
+    {
+      "id": "I6",
+      "title": "Retrospective lineage barcoding with sister-cell profiling",
+      "description": "Label cells with expressed barcodes, let them divide, then split the population. Treat one half with drug and profile the untreated sister cells by scRNA-seq/ATAC-seq to find the molecular state that existed before treatment in cells whose lineages went on to survive.",
+      "idea_id": "persister_opus_overgenerate_select_6_0",
+      "source_sha256": "c453216ed920ab88537aec9c581b772969a30cc35d291593948295356d7ce21a"
+    },
+    {
+      "id": "I7",
+      "title": "Single-cell DNA sequencing of survivors versus pre-treatment population",
+      "description": "Perform single-cell whole-genome or targeted DNA sequencing on the untreated population and on survivors to detect pre-existing rare subclones, copy-number changes, or mutations that expand under treatment. Compare allele and CNV profiles to determine whether survival is genetic or non-genetic.",
+      "idea_id": "persister_haiku_assumption_inversion_6_2",
+      "source_sha256": "c15e27eb096eeb38ee8cef9873519aab21b305a001c0126ac16d0a44708c373a"
+    },
+    {
+      "id": "I8",
+      "title": "Sorting dormant versus active cells by metabolic labeling",
+      "description": "Label cells before drug exposure by biosynthetic activity without destroying them (BONCAT or OP-Puro for translation, heavy-water stimulated Raman for metabolic turnover) and sort dormant from active cells. Comparing survival between sorted fractions directly tests whether generic quiescence, rather than any specific resistance program, is the causal determinant.",
+      "idea_id": "persister_opus_instruction_only_2_3",
+      "source_sha256": "d4a8dd258869a848882074107f201edc82a93f29f0b0fc15478486e2d665dc2c"
+    },
+    {
+      "id": "I9",
+      "title": "CRISPR screens for regulators of priming frequency",
+      "description": "Run pooled CRISPR screens that read out how often cells enter the primed state or how many resistant colonies form, rather than overall viability. This identifies genes that control how often rare surviving states arise, separate from genes that affect general fitness.",
+      "idea_id": "persister_opus_overgenerate_select_6_3",
+      "source_sha256": "477dff799e333f94067048fb3a6579efb04f51d7ab9e3c0e0affab98c86d9484"
+    },
+    {
+      "id": "I10",
+      "title": "Single-cell multiomics of one clone, including genetic and non-nuclear variation",
+      "description": "Run joint scRNA/scATAC with single-cell DNA sequencing, which gives copy number, ecDNA and mtDNA variants, on cells before drug, during drug and after it. This tests whether small genetic or mitochondrial differences exist within the apparently identical clone. It also tests whether survivors share any such difference or any state.",
+      "idea_id": "persister_sonnet_assumption_inversion_3_2",
+      "source_sha256": "3b3d1fec78e2813be2b46a30ce01518fe9a3c065f1168b56481873bdfdafebe6"
+    },
+    {
+      "id": "I11",
+      "title": "Chromatin state profiling with drug washout and rechallenge",
+      "description": "Profile histone modifications (CUT&Tag for H3K27me3, H3K4me3, H3K27ac) and chromatin accessibility in sorted or bulk persisters over a drug holiday and after rechallenge. Testing whether the chromatin state persists after drug removal distinguishes a heritable epigenetic memory from a reversible, transient adaptive state.",
+      "idea_id": "persister_haiku_assigned_constraint_3_4",
+      "source_sha256": "8a6def1071cdc00e011dca0473e738ec8e10b923fe4c88077adb3ac2b6dbf1b9"
+    },
+    {
+      "id": "I12",
+      "title": "Barcoded clonal replicates with sister-cell comparisons",
+      "description": "Label cells with heritable lineage barcodes, split a population into parallel replicates, and treat them. If the same barcodes survive across replicates, the survival state is pre-existing and heritable. If different barcodes survive, the cause is stochastic. Single-cell RNA-seq or ATAC-seq on matched pre-treatment sister cells then identifies the molecular features that predict survival.",
+      "idea_id": "persister_sonnet_parallel_rotated_6_4",
+      "source_sha256": "c3ff7a440fba734ff9b65d885ea215bb3a8ad4bfd28397d2f76d7565e248f410"
+    },
+    {
+      "id": "I13",
+      "title": "Fluctuation test with switching-rate modeling",
+      "description": "Run Luria-Delbr\u00fcck fluctuation assays on many small clonal expansions, then fit stochastic models to separate pre-existing, rapidly switching states from drug-induced adaptation and estimate state switching rates and memory duration.",
+      "idea_id": "persister_sonnet_overgenerate_select_7_1",
+      "source_sha256": "73c457695b8050f30ebf1c54d0418a8e6fdd4cf48a0e79f71c7732d39627f140"
+    },
+    {
+      "id": "I14",
+      "title": "Persister-fraction-focused CRISPR and epigenetic perturbation screens",
+      "description": "Run pooled CRISPRi/a or epigenetic-inhibitor screens that read out the fraction of surviving cells at a fixed high dose, not bulk sensitivity. Hits that change only the persister fraction point to regulators of cell-state plasticity, and comparing them with scATAC/multiome data in persisters links them to chromatin mechanisms.",
+      "idea_id": "persister_sonnet_overgenerate_select_4_4",
+      "source_sha256": "9009c365f2a61e31b97d728e3967e214a6391d94b50d245b14af1fb7f5635204"
+    },
+    {
+      "id": "I15",
+      "title": "Pre-treatment state sorting and causal perturbation of candidate features",
+      "description": "Before drug exposure, sort cells by candidate features such as reporter-defined transcriptional state, cell-cycle phase, mitochondrial content or epigenetic marks. Then challenge each sorted fraction with the drug to test whether the feature predicts survival, and use CRISPR or small-molecule perturbations to add or remove it, which would show whether it causes survival or only correlates with it.",
+      "idea_id": "persister_sonnet_parallel_rotated_0_4",
+      "source_sha256": "6b203cc4e1baf6f40dbecf8606a1d1bbf5983eb80e4e6427a7dd1a19af377821"
+    },
+    {
+      "id": "I16",
+      "title": "Spatial lineage tracing of survivors in tumors",
+      "description": "Combine in vivo lineage barcodes with spatial transcriptomics, imaging tumors before and during treatment, to map where survivors start and which neighboring cells or local niches they sit in. This tests whether a cell's location and signals from nearby cells, rather than its own internal state, decide survival, and whether the in vitro finding of rare primed cells holds in tissue.",
+      "idea_id": "persister_opus_future_retrospective_2_4",
+      "source_sha256": "68c1125ced246dce2b37ba55cc4438047e8bd63bf19dc74ac5c307bbd1164c56"
+    },
+    {
+      "id": "I17",
+      "title": "Pooled CRISPR screen with time-resolved persister sampling",
+      "description": "Run a genome-wide knockout or CRISPRi screen and sample at several times during drug exposure and during drug holidays. Comparing enrichment dynamics separates genes that set persister frequency from genes that maintain the tolerant state.",
+      "idea_id": "persister_haiku_overgenerate_select_5_3",
+      "source_sha256": "6ef4a56b8337b243c3337fa3b9d91a23c0bebf2844f28d17a061f069f8e50c61"
+    },
+    {
+      "id": "I18",
+      "title": "Single-cell lineage barcoding with drug-response tracking",
+      "description": "Label a clonal cancer population with heritable DNA barcodes (e.g., CRISPR-based lineage tracers), treat with the targeted drug, and track which lineages persist and how their transcriptomes and chromatin states differ before treatment. This separates pre-existing drug-tolerant clones from cells that switch state after exposure.",
+      "idea_id": "persister_haiku_plain_4_0",
+      "source_sha256": "bc62ff2eefb31409229f935f1956e5d9b4e43b9a89ab7ec439607ddd5cbd27ca"
+    },
+    {
+      "id": "I19",
+      "title": "Lineage-barcoded pre-treatment sister-cell tracing",
+      "description": "Barcode a clonal population, split it into sister aliquots before drug, then profile one aliquot by scRNA-seq/ATAC and treat the other to identify which barcodes survive. This lets you read out the pre-existing state of future survivors and test whether the state is heritable, how long it lasts, and whether it predicts survival better than genotype.",
+      "idea_id": "persister_sonnet_future_retrospective_1_0",
+      "source_sha256": "3919774d287d20b0f55f2146577a7cf31501d80a7673dfe8a435125777d8dffb"
+    },
+    {
+      "id": "I20",
+      "title": "Single-cell multiomics of the untreated population with survival classifier",
+      "description": "Profile transcriptome and chromatin accessibility (scRNA-seq plus scATAC-seq) of the untreated population, then train a classifier that predicts which cells survive and check it with sorted cells in a validation experiment. A continuum of predicted survival probabilities would argue against a discrete persister subpopulation. This tests the assumption that survivors form a distinct, stable subpopulation and that the starting state is a representative snapshot.",
+      "idea_id": "persister_haiku_assumption_inversion_0_2",
+      "source_sha256": "69a87dbb01adbfc92f2e375ed8273645bf52cdda884f4698a8d5d45b8d1d61c5"
+    }
+  ],
+  "cost_usd": 0.0456512
+}

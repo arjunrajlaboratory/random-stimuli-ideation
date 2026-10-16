@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis test with inducible AP-1 dosing",
+      "description": "Ramp an inducible AP-1 (e.g., dox- or auxin-tunable Fos/Jun) up and down in a dose series, then measure the same downstream readout at a fixed final dose reached from different histories. A history-dependent (hysteretic or bistable) response that differs between up-ramp and down-ramp cells would be a direct signature of a memory state, distinct from simply asking whether AP-1 is required."
+    },
+    {
+      "title": "Acute degradation washout to separate protein presence from memory",
+      "description": "Use an auxin-inducible degron on endogenous c-Fos or JunB to remove AP-1 protein within minutes after a priming pulse, then track a re-stimulation readout over days. If priming persists after near-complete protein loss, the memory is carried by a self-sustaining chromatin or cofactor state rather than by continued AP-1 occupancy, and proteomic or CUT&Tag profiling of the surviving state can identify the carrier."
+    },
+    {
+      "title": "Domain-swap test of AP-1 identity versus generic occupancy",
+      "description": "Fuse the AP-1 bZIP DNA-binding domain to non-AP-1 activation domains and to unrelated activation domains with AP-1 bZIP, matching their occupancy levels at the same enhancers by ChIP and dosing. If memory tracks AP-1 identity and not just occupancy or transactivation strength, the domains that matter for persistence should be identifiable by systematic swapping."
+    },
+    {
+      "title": "Mitotic retention and sublineage re-induction timing",
+      "description": "Use live imaging of a HaloTag-tagged JunB or Fos to measure whether AP-1 remains bound to mitotic chromosomes, and combine this with mitotic ChIP-seq. Then sort daughter-cell sublineages from a barcoded or photoconvertible lineage and measure whether the re-induction latency is inherited through division, which tests heritability of the memory state rather than its maintenance in interphase."
+    },
+    {
+      "title": "Time-resolved proximity labeling of AP-1 partner composition",
+      "description": "Use TurboID fused to Fos or JunB and sample labeled interactomes at multiple times after a stimulus and during the quiet period. Shifts in the partner set, such as swaps between Fos, ATF3, JDP2, or cofactors, that precede or track the persistence phase would indicate a compositional switch that writes and then maintains the memory, and this can be tested by perturbing the partner that changes."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq or CUT&RUN of Fos/Jun/ATF time course after a stimulus to see whether AP-1 occupancy persists",
+      "ATAC-seq time course to test whether chromatin accessibility at AP-1 sites outlasts the stimulus",
+      "Knockout or knockdown of Fos/Jun family members to test whether the memory is lost",
+      "Profiling H3K27ac/H3K4me1 or other enhancer marks at AP-1 sites across days after stimulation",
+      "Re-stimulation (second-exposure) assay comparing response magnitude and speed in primed versus naive cells",
+      "Single-cell RNA-seq of immediate-early genes to quantify heterogeneity and persistence of the response",
+      "Fos-based activity labeling (e.g., TRAP or Fos-reporter) with optogenetic reactivation of labeled cells in vivo",
+      "CRISPR mutation of AP-1 motifs in candidate enhancers to test whether they are necessary for memory",
+      "Live-cell imaging of a fluorescent AP-1 reporter to track activation and decay dynamics",
+      "Single-molecule tracking of AP-1 residence time on chromatin to link binding kinetics to persistence"
+    ]
+  },
+  "output_tokens": 3530,
+  "cost_usd": 0.00190888
+}

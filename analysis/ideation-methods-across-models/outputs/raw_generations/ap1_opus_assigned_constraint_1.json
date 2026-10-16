@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 1,
+  "constraint": "with a total budget under $20,000",
+  "prompt": "Constraint: every one of your ideas must be carried out with a total budget under $20,000. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-chase decay kinetics of AP-1 binding versus chromatin accessibility",
+      "description": "Deliver a transient AP-1-activating stimulus (e.g., TPA or a brief MEK-inhibitor pulse), wash out, and collect a time course out to 2-3 weeks for low-input ATAC-seq plus CUT&RUN for FOSL1/JUN, asking whether accessibility at AP-1 sites persists after AP-1 protein has returned to baseline. Roughly 30-40 libraries with in-house Tn5 and a shared NovaSeq lane fits comfortably under $20k and directly distinguishes a self-erasing signal from a durable chromatin mark."
+    },
+    {
+      "title": "Degron washout test of whether AP-1 is required to maintain versus establish a state",
+      "description": "Knock a dTAG or auxin degron into an endogenous AP-1 subunit, then compare acute depletion during state establishment versus after a state has been stably held, reading out accessibility at a few hundred AP-1 loci by targeted ATAC or a small qPCR/amplicon panel. The informative result is whether an established state survives AP-1 removal and whether it re-establishes after degrader washout, which is the operational definition of a memory-maintaining factor."
+    },
+    {
+      "title": "Clonal barcoding to ask whether AP-1 state is heritable through cell divisions",
+      "description": "Combine a lentiviral barcode library with FACS sorting of an AP-1 activity reporter, split each sorted population, and sequence barcodes plus re-measure reporter distributions over ~20 divisions to test whether high- and low-AP-1 clones regenerate the parental distribution or stay fixed. Barcode amplicon sequencing is cheap (a few thousand dollars), and the division-number at which memory decays gives a quantitative half-life of the state."
+    },
+    {
+      "title": "Second-stimulus priming assay for faster or stronger reactivation",
+      "description": "Prime cells with a stimulus, let AP-1 activity fully return to baseline, then restimulate and compare induction kinetics and amplitude of AP-1 target genes against naive cells using a modest qPCR or 3'-end RNA-seq panel. Faster or larger secondary responses are the classic signature of transcriptional memory, and the assay costs only reagents and a few sequencing lanes."
+    },
+    {
+      "title": "Live single-cell imaging of AP-1 reporter dynamics across lineages",
+      "description": "Use a stable AP-1-responsive fluorescent reporter plus a nuclear marker, image dividing cells for several days on an existing widefield or confocal system, and build lineage trees to quantify mother-daughter and sister-sister correlations in reporter level. Mother-daughter correlation that decays slowly relative to sister correlation would show heritable, cell-intrinsic memory rather than shared microenvironment, and the main cost is reporter construction plus imaging time."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2035,
+  "cost_usd": 0.08485879999999998
+}

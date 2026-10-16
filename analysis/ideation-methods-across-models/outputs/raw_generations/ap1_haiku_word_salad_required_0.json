@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 0,
+  "stimulus": "allonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nallonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Indelibility test with acute AP-1 depletion (\"indelibly\")",
+      "description": "Use an inducible degron or auxin-degradable tag on endogenous FOS or JUN to remove AP-1 during a washout window after a priming stimulus, then re-stimulate and compare the second-response gene induction to unperturbed cells. If AP-1 is the memory store, depletion during the interval should erase the faster or stronger re-induction (savings) at its target genes."
+    },
+    {
+      "title": "Time-resolved persistence of AP-1 occupancy and chromatin marks",
+      "description": "Run CUT&RUN or ChIP-seq for FOS/JUN, alongside ATAC-seq and H3K27ac, at multiple time points during stimulus, washout, and days-long rest. A memory mechanism predicts AP-1 binding or accessibility that outlasts the transcriptional response at a subset of enhancers, and that this persistence tracks the length of the original stimulus."
+    },
+    {
+      "title": "Motif-specific enhancer knock-in (\"insulator\" logic)",
+      "description": "Use CRISPR to mutate only the AP-1 motifs in a defined enhancer, or to swap in a non-AP-1 binding site, while keeping the surrounding sequence and nearby transcription factor sites intact. Then measure whether the priming and re-induction behavior is lost, which would show the memory depends on AP-1 binding itself rather than on the locus or on general enhancer activity."
+    },
+    {
+      "title": "Lineage-stable reporter to test cell-state memory across divisions (\"sootless\" tracing)",
+      "description": "Combine an activity-dependent Fos reporter or FosTRAP-style recorder with single-cell lineage barcoding, and follow the marked cells through several cell divisions and days after stimulus. If AP-1 maintains a memory, the reporter-positive lineages should keep a primed transcriptional state and faster response even when the AP-1 protein itself has fallen back to baseline."
+    },
+    {
+      "title": "Dissociating protein persistence from mitotic or chromatin bookmarking (\"riskless\" controls)",
+      "description": "Pair cycloheximide or other protein-synthesis blockers, and an optogenetic or light-inducible AP-1 nuclear export switch, with the re-stimulation assay to see whether the memory needs ongoing AP-1 protein or only the chromatin state it left behind. Mitotic chromatin retention assays, such as live imaging of AP-1 on mitotic chromosomes, would test whether AP-1 bookmarks its sites through division."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1890,
+  "cost_usd": 0.0013162
+}

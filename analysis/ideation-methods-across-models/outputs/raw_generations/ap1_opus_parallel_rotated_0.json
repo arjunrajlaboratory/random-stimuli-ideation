@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 0,
+  "parallel": {
+    "field": "Electrical engineering (memristive devices)",
+    "problem": "Does a thin-film device's resistance actually store the history of applied voltage pulses as nonvolatile memory, or is it just a transient response that decays?",
+    "how_studied": "Engineers run pulse-then-read protocols: they apply write pulses of set amplitude and duration, remove the bias, and read resistance with small non-perturbing voltages over hours to years (retention tests), often sped up by heating with Arrhenius extrapolation. They sweep voltage in loops to map pinched hysteresis, and use in-situ TEM or conductive AFM to check that a physical filament forms and dissolves along with the stored state."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Electrical engineering (memristive devices)\nProblem: Does a thin-film device's resistance actually store the history of applied voltage pulses as nonvolatile memory, or is it just a transient response that decays?\nHow it is studied: Engineers run pulse-then-read protocols: they apply write pulses of set amplitude and duration, remove the bias, and read resistance with small non-perturbing voltages over hours to years (retention tests), often sped up by heating with Arrhenius extrapolation. They sweep voltage in loops to map pinched hysteresis, and use in-situ TEM or conductive AFM to check that a physical filament forms and dissolves along with the stored state.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Write-pulse, remove-stimulus, subthreshold-read retention assay",
+      "description": "Deliver a calibrated stimulus pulse of defined amplitude and duration (e.g., TPA, TNF, or growth factor for 15-120 min), wash it out completely, then at intervals from hours to weeks probe cells with a deliberately subthreshold challenge dose that is too weak to re-write the state, scoring AP-1 target induction, AP-1 motif accessibility, and FOS/JUN occupancy. The memory signature is a larger response in pulsed than naive cells long after FOS/JUN protein has returned to baseline."
+    },
+    {
+      "title": "Accelerated decay testing with extrapolated retention lifetime",
+      "description": "Because the memory may outlast a practical experiment, accelerate its loss along defined axes (raising proliferation rate, forcing and counting divisions by dye dilution, or shifting temperature) and fit the decay rates to extrapolate a retention half-life under normal conditions. This yields a quantitative claim, such as the number of divisions over which the AP-1-encoded state persists, rather than a binary answer."
+    },
+    {
+      "title": "Rate-dependent hysteresis loops of stimulus versus AP-1 output",
+      "description": "Sweep stimulus dose slowly up and then back down at several sweep rates, measuring AP-1 activity and target output in single cells, to test whether the dose-response traces a pinched hysteresis loop whose area grows with sweep speed and collapses at very slow sweeps. Identical doses giving different outputs on ascending versus descending arms is direct evidence that state depends on history, not just instantaneous input."
+    },
+    {
+      "title": "Imaging the physical substrate forming and dissolving with the stored state",
+      "description": "Pair functional readouts with in-situ structural measurements of the proposed storage medium: live-cell imaging of tagged FOS/JUN, single-cell ATAC or CUT-and-Tag time courses, and DNA or nascent RNA FISH at specific AP-1-bound enhancers, to show a defined chromatin feature (nucleosome eviction, enhancer-promoter contact) appears on writing and disappears on loss. Memory is supported only if the feature's lifetime matches functional retention in the same cells."
+    },
+    {
+      "title": "Erase, rewrite, and endurance cycling with targeted perturbations",
+      "description": "Selectively erase the stored state with AP-1-directed interventions (auxin degron on FOS/JUN, dominant-negative A-FOS, or dCas9-KRAB/HDAC recruitment to the specific AP-1 enhancers), re-apply the stimulus to confirm rewriting, and repeat write/erase cycles to detect degradation or drift. Clean erasure by an AP-1-specific perturbation with intact rewriting establishes AP-1 as the causal storage element rather than a correlate of some other persistent change."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3154,
+  "cost_usd": 0.1487947
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 0,
+  "constraint": "using only data that are already publicly available (no new experiments)",
+  "prompt": "Constraint: every one of your ideas must be carried out using only data that are already publicly available (no new experiments). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Check whether genes in MemorySeq data that stay on or off for many cell divisions have nearby AP-1 sites",
+      "description": "Use published MemorySeq data (Shaffer et al. 2020, Cell) that identify genes whose expression stays on or off across several generations of a clone. Test whether these 'memory genes' have more AP-1 motifs, and more AP-1 binding in public ENCODE ChIP-seq or ATAC-seq data, than non-memory genes with the same expression level, variability and baseline accessibility."
+    },
+    {
+      "title": "Measure how similar AP-1 activity is within barcoded clones",
+      "description": "Reanalyze public lineage-barcoded single-cell RNA, ATAC or multiome datasets (e.g., FateMap, Rewind, LARRY, ClonMapper, CellTag-multi). Score each cell's TF motif accessibility with chromVAR, then compare how much more alike sister cells are than unrelated cells for AP-1 versus other TF families. Also test whether a cell's AP-1 activity at an early time point predicts the fate of its clone later on."
+    },
+    {
+      "title": "Compare how long AP-1 sites stay open with how long AP-1 itself is present after a stimulus is removed",
+      "description": "Collect public time courses that include a withdrawal phase, such as inflammatory memory in epithelial stem cells (Larsen et al. 2021), trained immunity in macrophages, serum/TPA pulses and BRAF-inhibitor drug holidays in melanoma. Estimate how fast AP-1 FOS/JUN mRNA and protein disappear versus how fast chromatin at AP-1 motif sites closes. Use TOBIAS footprinting to tell whether AP-1 is still bound or has left an open 'scar' behind it. If sites stay open long after the factor is gone, that suggests AP-1 lays down a lasting mark."
+    },
+    {
+      "title": "Meta-analysis across systems: are AP-1 motifs specifically enriched at sites that stay open?",
+      "description": "Gather public before/during/after chromatin datasets from many memory paradigms (inflammatory memory, trained immunity, wound healing, senescence, drug-tolerant persisters, T-cell exhaustion, activity-dependent neuronal enhancers). Classify the induced chromatin sites as persistent or transient. Then test whether AP-1 motifs are enriched at persistent sites compared with transient sites matched for GC content, induction strength and baseline accessibility. The matching controls for AP-1 being common at enhancers in general."
+    },
+    {
+      "title": "Test AP-1 knockout/inhibition data and mitotic binding data for whether AP-1 maintains memory",
+      "description": "Reanalyze public datasets where AP-1 was knocked out or blocked with dominant-negative FOS or JUN, either before or after a priming stimulus (e.g., Vierbuchen et al. 2017; Fosl2/Jun knockouts in inflammatory-memory and T-cell studies). This tests whether AP-1 is needed only to set up lasting accessibility or also to keep it. Separately, check public mitotic ChIP-seq/ATAC-seq data to see whether AP-1 sites stay bound or open during mitosis, which would show whether AP-1 itself can carry the memory through cell division."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2444,
+  "cost_usd": 0.057559
+}

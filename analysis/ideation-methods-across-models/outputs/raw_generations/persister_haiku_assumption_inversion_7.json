@@ -1,0 +1,45 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with pre-treatment sorting",
+      "description": "Label cells with a heritable DNA barcode library, sort pre-treatment subpopulations by a candidate reporter, apply the drug, and quantify which barcode lineages and sorted fractions survive. If survival is inherited from a pre-existing state, survivors should trace back to specific pre-treatment fractions, and a drug holiday followed by re-challenge can test whether that state is stable or reversible."
+    },
+    {
+      "title": "Deep single-cell and duplex DNA sequencing of survivors",
+      "description": "Compare high-depth single-cell whole-genome sequencing and duplex error-corrected sequencing of the pre-treatment population with the survivors to detect rare pre-existing mutations, CNVs, or subclones enriched after treatment. Enrichment of a specific variant among survivors would show the cells are not truly genetically identical."
+    },
+    {
+      "title": "Per-cell target-signaling dynamics with live reporters",
+      "description": "Use a live kinase-activity reporter, such as an ERK translocation sensor, with time-lapse imaging across a drug dose range to track each cell's signaling before and after treatment and its eventual fate. Testing whether survival follows a threshold in pre-treatment signaling or a graded dose-response will show whether it is a discrete subpopulation or a continuum."
+    },
+    {
+      "title": "Per-cell intracellular drug accumulation and efflux measurement",
+      "description": "Quantify single-cell drug levels using a fluorescent or tagged drug analog combined with efflux-transporter reporters, and sort cells by accumulation before measuring survival. Adding a microfluidic drug gradient would also show whether low-accumulation cells survive because they receive less drug rather than because of intrinsic tolerance."
+    },
+    {
+      "title": "Pooled CRISPR screen under drug with causal validation",
+      "description": "Run a genome-wide or focused CRISPR knockout or interference screen under sub-lethal and lethal drug doses, comparing guide abundance before and after treatment to identify genes whose loss sensitizes or protects cells. Then validate the top hits by individually perturbing them and confirming that survival changes, which tests whether the markers enriched in survivors actually cause survival."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "The cells are genetically identical, so survival is not driven by rare pre-existing mutations, copy-number variants, or minor clones.",
+      "Survival is a stable, heritable, pre-existing cell state, not a transient or drug-induced one that the same cell could switch into or out of.",
+      "Survival is a discrete fate of a distinct subpopulation, rather than the tail of a continuous distribution of drug sensitivity.",
+      "Drug exposure and target engagement are uniform across cells, so differences in survival are not caused by differences in intracellular drug levels, efflux, or metabolism.",
+      "A single endpoint count of surviving cells captures the process, so dormant or slow-cycling cells are not confused with dead cells and bulk averages reflect individual cell behavior.",
+      "Survival is cell-autonomous, set by intrinsic programs rather than by microenvironment, niche, or cell-cell signaling.",
+      "Markers or pathways that are enriched in survivors are causal drivers of survival, not just correlates.",
+      "The intended drug target is the only mechanism that matters, so off-target effects and bypass pathways are negligible."
+    ]
+  },
+  "output_tokens": 4390,
+  "cost_usd": 0.0023388799999999998
+}

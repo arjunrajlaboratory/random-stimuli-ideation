@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 1,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria\u2013Delbr\u00fcck from bacterial genetics)",
+      "description": "Label cells with heritable DNA barcodes, split the population into parallel replicate pools, and apply the drug. If the same barcodes survive across replicates, resistance is pre-existing and heritable. If survivors differ randomly between replicates, it arises stochastically from transient states. Comparing the variance in survivor number with Luria\u2013Delbr\u00fcck expectations estimates the switching rates."
+    },
+    {
+      "title": "Pre-treatment state tracing with sister-cell pairing (twin studies)",
+      "description": "Treat recently divided sister cells as 'twins'. Split the pairs, profile one sister by scRNA-seq before drug exposure, and expose the other to the drug. Survival of the sister then predicts the pre-treatment transcriptional state of the profiled twin. This identifies predictive pre-existing states without relying on post-hoc survivor profiling, which is confounded by drug-induced changes."
+    },
+    {
+      "title": "Live-cell reporter time-lapse with hidden Markov / dynamical-systems modeling (neuronal spike-train analysis)",
+      "description": "Track single cells for days in microfluidic or imaging platforms using fluorescent reporters of ERK/AKT signaling, cell cycle, and apoptosis. Fit hidden Markov or dynamical-systems models, as used for spike trains, to find signaling states and transition rates before and after the drug. The models would show whether survivors occupy rare attractor states or take specific trajectories."
+    },
+    {
+      "title": "Information-theoretic analysis of signaling noise (channel capacity from communication engineering)",
+      "description": "Measure single-cell pathway activity (e.g., phospho-flow or kinase translocation reporters) across drug doses. Compute the mutual information between drug input and apoptotic decision, and test how much survival is due to intrinsic noise versus cell-specific upstream differences. Perturbing the noise sources, such as the expression variability of key nodes, tests whether noise itself enables survival."
+    },
+    {
+      "title": "Epigenetic memory half-life measurement using chromatin lineage tracing (radiometric dating / decay kinetics)",
+      "description": "Sort cells by a candidate resistance-state marker, then follow how quickly the sorted population relaxes back to the original distribution of the marker. Pair this with single-cell ATAC-seq or CUT&Tag for chromatin marks such as H3K27me3 and H3K9me3. The decay half-life shows how stable the tolerant state is, and epigenetic drugs (EZH2 or HDAC inhibitors) can test whether the state is causally maintained."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 936,
+  "cost_usd": 0.012131
+}

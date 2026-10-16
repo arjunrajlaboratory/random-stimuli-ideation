@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 2,
+  "constraint": "using live-cell imaging as the only readout",
+  "prompt": "Constraint: every one of your ideas must be carried out using live-cell imaging as the only readout. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment fate prediction with lineage-tracked cell-cycle and death reporters",
+      "description": "Co-express a FUCCI cell-cycle reporter and a caspase-3/7 biosensor, then image the same cells for 24-48 h before and after drug addition. Trace each cell's lineage backward from its eventual fate to ask whether cell-cycle phase, division history, or time since last mitosis before treatment predicts survival."
+    },
+    {
+      "title": "Live kinase-translocation reporters to find pre-existing signaling states",
+      "description": "Use ERK and AKT kinase translocation reporters (KTRs) to measure pathway activity in each cell before the inhibitor is added and then track it through treatment. Test whether survivors had a distinct baseline signaling level or pulse dynamics, and whether that difference is stable across generations."
+    },
+    {
+      "title": "Metabolic and organelle reporters for pre-existing survival states",
+      "description": "Image membrane potential (TMRM or similar dye), an ATP or NADH/NAD+ biosensor such as Peredox, and mitochondrial mass in single cells over time. Compare these baseline and early-treatment metabolic profiles between eventual survivors and dying cells to identify a metabolic signature that precedes survival."
+    },
+    {
+      "title": "Pulse-washout and reseeding kinetics to separate reversible tolerance from heritable resistance",
+      "description": "Apply the drug as a timed pulse, wash it out, and track survivors for several generations in drug-free medium using time-lapse imaging. Measure whether they regain normal proliferation and whether their progeny keep the tolerant phenotype, which separates reversible drug-tolerant states from stable, heritable resistance."
+    },
+    {
+      "title": "Label-free morphology and motility classifier for predicting survival",
+      "description": "Record phase-contrast or brightfield time-lapse of the untreated population and extract single-cell features such as shape, texture, speed, and persistence. Train a classifier on the fates observed after treatment, then validate it on held-out cells and by live-sorting predicted survivors for follow-up."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1724,
+  "cost_usd": 0.00108275
+}

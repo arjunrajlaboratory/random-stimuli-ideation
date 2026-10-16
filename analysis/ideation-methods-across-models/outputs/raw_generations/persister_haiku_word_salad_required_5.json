@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 5,
+  "stimulus": "chondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nchondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing through drug exposure",
+      "description": "Label cells with heritable DNA barcodes before treatment, then sequence barcodes in survivors versus the pre-treatment pool. If survivors share barcodes with pre-existing clones, persistence is selection on pre-existing variation; if barcodes are diverse and the survivors arise from many lineages, the program is more likely drug-induced. Like tributaries of a riverine network, the barcode tree shows how survivors branch from a common source."
+    },
+    {
+      "title": "Pre-treatment single-cell multi-omics linked to fate",
+      "description": "Profile transcriptome and chromatin accessibility (scRNA-seq plus scATAC-seq) of untreated cells, then expose them to drug and track which cells survive. Train a classifier on the baseline profiles to predict survival, and validate by sorting cells on candidate markers (for example, slow-cycling or stress-tolerant states) and testing their drug tolerance in isolation."
+    },
+    {
+      "title": "Live-cell biosensor tracking of signaling dynamics",
+      "description": "Use fluorescent reporters for pathway activity (such as ERK translocation reporters) and cell-cycle state (FUCCI) in time-lapse microscopy, recording each cell's history before and after drug addition. Compare the pre-treatment signaling dynamics and cycle phase of cells that die with those that survive to find dynamic features, not just average levels, that predict persistence."
+    },
+    {
+      "title": "Genome-wide CRISPR screens for persistence modifiers",
+      "description": "Run pooled CRISPR knockout or CRISPRi/a screens under drug and vehicle conditions, using the persister fraction as the readout after treatment. Hits that enrich in survivors point to genes whose loss or gain changes tolerance, and combining them with chromatin profiling tests whether the effect runs through epigenetic memory."
+    },
+    {
+      "title": "Fluctuation analysis with washout and re-challenge",
+      "description": "Measure persister frequency across drug doses, timepoints, and drug-withdrawal and re-challenge schedules, then fit stochastic models (for example, Luria-Delbr\u00fcck-style fluctuation tests) to separate pre-existing random switching from induced adaptation. Reversible tolerance that resets after withdrawal suggests a non-genetic state, while stable tolerance after reintroduction suggests heritable change; the dose-escalation schedule helps tell these apart."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1715,
+  "cost_usd": 0.00112825
+}

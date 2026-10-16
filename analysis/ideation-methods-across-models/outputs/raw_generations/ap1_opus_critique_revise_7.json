@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Pulse-chase stimulation with time-resolved AP-1 and chromatin readouts: Deliver a transient stimulus (e.g., a brief cytokine, growth-factor, or drug pulse), wash it out, and then track AP-1 protein levels, AP-1 motif accessibility (ATAC-seq), and target-gene expression over many days. Memory is supported if accessibility at AP-1-bound enhancers and the primed transcriptional response persist long after the AP-1 proteins themselves and the original signal have decayed.\n2. Single-cell lineage tracing of AP-1 state heritability: Use expressed DNA barcodes (e.g., Rewind/Watermelon-style clone tracking) combined with single-cell RNA-seq or a live AP-1 reporter to ask whether sister cells and clonal descendants share AP-1 activity levels. Quantifying how the correlation of AP-1 state between relatives decays with generations gives a direct measurement of the memory timescale and whether it is heritable versus transient.\n3. Degron-based acute removal to separate maintenance from establishment: Tag endogenous FOS/JUN family members with an auxin or dTAG degron so AP-1 can be eliminated acutely at chosen times: before, during, or long after a priming stimulus. If removal after priming erases the retained accessibility and the faster/stronger secondary response, AP-1 is actively maintaining the memory rather than merely establishing it.\n4. Restimulation challenge assays quantifying the memory benefit: Compare naive versus previously primed cells in a second challenge (same stimulus, a different stimulus, or a drug-resistance assay) and measure response latency, amplitude, fraction of responding cells, and cell-fate outcome. A genuine memory mechanism should produce a quantitatively faster or larger response that scales with prior AP-1 activation and is abolished by AP-1 perturbation.\n5. Targeted AP-1 writing and erasing at specific enhancers: Use dCas9-fused AP-1 activation domains or dominant-negative A-FOS/engineered motif deletions at candidate enhancers to install or remove AP-1 occupancy in the absence of any stimulus. Sufficiency (synthetic AP-1 recruitment alone creates a long-lived primed state) plus necessity (motif deletion blocks memory at that locus but not globally) is the strongest causal test, and pairing it with CUT&RUN for cofactors and histone marks reveals the molecular carrier of the memory.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Primed\u2013naive cell fusion to separate nuclear-intrinsic from diffusible memory",
+      "description": "Fuse differentially labeled primed and naive cells (PEG or virus-mediated heterokaryons, scored by imaging; or fuse cells with distinguishable SNP/barcode genomes and read out allele-specific ATAC/RNA in the fused population) and ask whether each nucleus keeps its own AP-1 accessibility and response state in a shared cytoplasm. Nucleus-autonomous persistence argues for a chromatin-encoded record, whereas rapid equalization of both nuclei indicates the 'memory' is really a diffusible/autoregulatory AP-1 network state."
+    },
+    {
+      "title": "Is the memory clocked by divisions or by wall-clock time?",
+      "description": "Hold primed cells in matched conditions that decouple time from proliferation \u2014 cycling versus arrested (CDK4/6 inhibition, contact inhibition, or serum deprivation) and fast versus slow cycling (thymidine or low-dose aphidicolin) \u2014 and fit the decay of AP-1 motif accessibility and restimulation advantage to a per-division versus per-hour model; complement with nascent-chromatin ATAC (repli-ATAC/early-late BrdU-sorted fractions) to see how quickly AP-1 footprints are rebuilt behind the fork. Replication-coupled dilution versus continuous turnover implies completely different molecular carriers and makes different predictions about heritability."
+    },
+    {
+      "title": "Hysteresis mapping of AP-1 dose versus enhancer state",
+      "description": "Using a tunable AP-1 input (doxycycline-titratable JUN/FOS, or graded degron depletion), drive cells up a dose ladder and then back down along the same ladder, measuring accessibility and target output at each matched dose. A true memory element should show hysteresis \u2014 the same AP-1 concentration yields different chromatin/transcriptional states depending on history \u2014 and the width of the loop quantifies memory strength, whereas a perfectly retraced curve means AP-1 is a graded relay, not a latch."
+    },
+    {
+      "title": "Single-molecule fiber footprinting to test whether memory is digital and locally coordinated",
+      "description": "Apply long-read single-molecule chromatin footprinting (Fiber-seq/SAMOSA/nanoNOMe) to primed and naive cells so that occupancy of many AP-1 motifs across an enhancer cluster is read on the same DNA molecule. This distinguishes an all-or-none heritable unit (molecules are fully primed or fully naive, with correlated multi-site occupancy) from a graded probabilistic shift, and reveals whether memory requires cooperative engagement of several motifs or a single bookmark site."
+    },
+    {
+      "title": "Information-theoretic accounting: how many bits of the past does the AP-1 state actually store?",
+      "description": "Deliver a graded ladder of first-stimulus doses (and distinct stimulus identities), then compute at single-cell resolution the mutual information between the prior exposure and the later AP-1 reporter/response distribution, repeating at several delays to obtain a bit-decay curve. This converts 'memory' from a yes/no claim into a measured capacity and tests the sharper question of whether cells remember only that something happened or also how much and which stimulus \u2014 with AP-1 perturbation expected to collapse capacity toward zero bits."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3308,
+  "cost_usd": 0.1347575
+}

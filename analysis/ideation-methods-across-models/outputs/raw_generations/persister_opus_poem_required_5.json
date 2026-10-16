@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 5,
+  "stimulus": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies.\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand, dare seize the fire?\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fearful Symmetry: the sister-cell split assay",
+      "description": "Separate sister cells immediately after each division by micromanipulation or microwell tracking, expose one to the targeted drug and profile the other by scRNA-seq, then quantify fate concordance as a function of generational distance (sisters, cousins, second cousins). The decay of concordance with lineage distance directly measures the heritability and memory half-life of the primed state, distinguishing a stably inherited epigenetic configuration from a transiently fluctuating one."
+    },
+    {
+      "title": "Burning Bright in the Forests of the Night: live reporters of rare high-expressing states",
+      "description": "Knock fluorescent reporters into endogenous candidate resistance loci (e.g., AXL, NGFR, EGFR, SOX10) and image untreated populations for days to catch the rare, transiently bright cells against the dark majority, then add drug and ask which imaged cells survive. This converts the retrospective question \"what were survivors like beforehand?\" into a prospective one, and also yields the on/off switching rates and state lifetimes that set the size of the surviving fraction."
+    },
+    {
+      "title": "What the Hand Dare Seize the Fire: image-guided retrieval of watched survivors",
+      "description": "Track rare survivors by live imaging through treatment, then photoconvert or laser-mark exactly those cells and recover them for same-cell multiomic profiling (joint ATAC + RNA + surface protein), so that the measured molecular state belongs to a cell whose full behavioral history \u2014 division timing, motility, drug-response dynamics \u2014 is already known. Pairing phenotype trajectory with molecular state in the same cell avoids the ambiguity of profiling bulk survivor pools in which several distinct escape routes are averaged together."
+    },
+    {
+      "title": "In What Distant Deeps or Skies: barcode twin studies of survival origin",
+      "description": "Transduce a high-complexity expressed barcode library, split the population into replicate \"twin\" plates, and ask whether the same barcode lineages survive in independent plates and in independent rounds of drug exposure after a drug holiday. Reproducible barcode overlap implicates a pre-existing heritable priming, non-overlap implicates stochastic induction, and partial overlap with decay over the holiday quantifies how long the primed state persists before it is re-created."
+    },
+    {
+      "title": "Framing the Symmetry: timing when the tolerant state is forged shut",
+      "description": "Run drug-on/drug-off cycles while sampling chromatin (CUT&RUN for enhancer remodeling, DNA methylation) and signaling (phosphoproteomics) at dense time points, and at each time point test reversibility by adding chromatin-modifier inhibitors or withdrawing drug. This identifies the window in which a reversible, fluctuating tolerant state is hardened into a stable resistant one \u2014 the practically important question of when the forge closes and which enzymes are holding the hammer."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2238,
+  "cost_usd": 0.0923525
+}

@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 depletion after washout",
+      "description": "Use an auxin-inducible degron (e.g., AID2) to remove FOS or JUN after the stimulus is withdrawn and measure whether target gene expression and chromatin states persist. If memory collapses on depletion, AP-1 is required to maintain it rather than just to write it."
+    },
+    {
+      "title": "Enhancer motif mutants tested for chromatin memory",
+      "description": "CRISPR-mutate AP-1 motifs in candidate memory enhancers, then run ATAC-seq and H3K27ac time courses after washout in wild-type and mutant cells. Loss of persistence at mutant enhancers would show that AP-1 binding is required for chromatin-level memory."
+    },
+    {
+      "title": "Pulsed optogenetic training with hysteresis readout",
+      "description": "Drive AP-1 with light pulses that vary in frequency, number, and spacing, then measure gene expression and the speed and magnitude of re-induction after a rest period. This tests whether the system encodes stimulus history and how the encoding depends on pulse pattern."
+    },
+    {
+      "title": "Barcoded lineage tracing of memory across divisions",
+      "description": "Pair AP-1-responsive reporters with heritable barcodes and track single-cell memory states across many generations. Tracking whether the primed state is passed to daughters, and at what fidelity, distinguishes heritable memory from memory that is re-established each cycle."
+    },
+    {
+      "title": "Synthetic AP-1 feedback circuit for bistability",
+      "description": "Build an AP-1 autoregulatory loop in a controlled cell line and test whether it sustains expression after the inducer is removed, and whether it shows bistable switching. This checks whether AP-1 self-reinforcement is sufficient for memory, independent of native chromatin context."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Degron-tag FOS/JUN (e.g., AID2) and deplete after stimulus washout to test whether AP-1 is required to maintain the memory",
+      "Time-course CUT&RUN/ChIP-seq of AP-1 occupancy after stimulus washout to see whether binding outlasts the signal",
+      "Barcoded single-cell lineage tracing with AP-1-responsive reporters to test whether memory is inherited across divisions",
+      "Optogenetic or pulsed AP-1 induction at varied frequency and duration to measure hysteresis and dose/frequency encoding",
+      "Re-stimulation kinetics: compare magnitude and speed of target gene induction on a second exposure (priming)",
+      "ATAC-seq time course at AP-1 enhancers after washout to test whether chromatin opening persists",
+      "Histone mark persistence (H3K27ac, H3K4me1) at primed enhancers over days to weeks after stimulus removal",
+      "CRISPR mutation of AP-1 motifs in candidate memory enhancers, then test whether chromatin and transcriptional memory are lost",
+      "Synthetic AP-1 autoregulatory feedback circuit to test whether it can produce bistability and self-sustained expression",
+      "Fluorescent dilution assays to measure how memory is partitioned between daughter cells over generations",
+      "Mitotic chromatin profiling to test whether AP-1 bookmarks target loci through cell division",
+      "Live imaging of FOS transcriptional bursting reporters to see whether burst frequency encodes a stored state",
+      "Phosphoproteomics of JUN/FOS and co-factors to determine whether post-translational marks persist after stimulus removal",
+      "Measure FOS and JUN protein half-lives and test whether they match the observed memory duration",
+      "Knock out chromatin writers and erasers (p300/CBP, KDM family) to see whether memory depends on epigenetic maintenance",
+      "Adoptive transfer or in vivo stimulus exposure to test AP-1 memory in primary T cells or macrophages",
+      "Multi-tissue in vivo profiling after a chronic stimulus (stress, injury, diet) to map persistent AP-1 signatures",
+      "Heterodimer composition shifts (FOS/JUN vs ATF3 or JDP2) tracked as a readout of stimulus history",
+      "Cell-to-cell variability and clonal analysis to distinguish deterministic from stochastic memory",
+      "Mathematical models fit to perturbation data to compare memory mechanisms (bistability, epigenetic, protein stability)"
+    ]
+  },
+  "output_tokens": 2987,
+  "cost_usd": 0.0016373299999999998
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 1,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded bet-hedging profiling",
+      "description": "Borrowing portfolio diversification from finance, label the parental line with a high-complexity lentiviral barcode library, then use scRNA-seq to profile barcoded cells before and early during drug exposure. Test whether survivor barcodes are enriched for pre-existing transcriptional states (a pre-positioned hedge) rather than being randomly distributed or induced by the drug."
+    },
+    {
+      "title": "Frailty survival modeling of live single-cell reporters",
+      "description": "Borrowing burn-in and frailty models from reliability engineering, track individual cells under continuous drug with a live reporter combining cell-cycle (FUCCI) and stress-pathway biosensors, recording time to death. Fit Cox or frailty models against pre-treatment reporter levels and lineage history; a heavy-tailed hazard distribution would indicate a subpopulation with intrinsically lower hazard."
+    },
+    {
+      "title": "Early-warning signals of a drug-induced tipping point",
+      "description": "Borrowing critical slowing down from ecological and climate tipping-point theory, collect time-series single-cell expression data during low-dose drug exposure and track rising variance and lag-1 autocorrelation of key transcripts as a predictor of a bistable switch into the persister state. Validate causally by perturbing noise (for example, pulsed drug or heat shock) and checking whether the persister fraction shifts accordingly."
+    },
+    {
+      "title": "Re-challenge recall assay for tolerance memory",
+      "description": "Borrowing the immunological recall test from vaccine research, sort surviving cells, expand them drug-free for multiple passages, and then re-challenge with drug. Track whether tolerance decays (indicating reversible, epigenetically or transcriptionally maintained memory) or persists (suggesting a stable heritable state), profiling chromatin accessibility by ATAC-seq at each stage to map the memory's regulatory basis."
+    },
+    {
+      "title": "Spatial refugia mapping in 3D tumor models",
+      "description": "Borrowing the habitat-refugia concept from ecology, combine multiplexed spatial imaging (MERFISH or CODEX) with a drug-penetration readout such as a fluorescent drug analog or mass-spectrometry imaging in spheroids or tumor sections. Test whether persisters cluster in low-drug, hypoxic, or cell-contact-protected niches, and whether their transcriptional state tracks the local microenvironment rather than an intrinsic property."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3268,
+  "cost_usd": 0.0017768999999999999
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Barcode lineage tracing with pre-treatment sampling: Label cells with heritable expressed DNA barcodes, split the population before drug exposure, and profile one arm by scRNA-seq while treating the twin arm. Linking surviving clones to their pre-treatment transcriptional states shows whether survival is predetermined, how heritable it is, and which states predict it.\n2. Single-cell multi-omic profiling of persisters over time: Run scRNA-seq combined with scATAC-seq or CITE-seq on cells before treatment, during drug exposure, and after regrowth. This can identify persister-specific transcriptional programs, such as drug-efflux, stress-response, or dedifferentiated states, along with their regulatory chromatin changes.\n3. Live-cell imaging with reporters and lineage tracking: Use time-lapse microscopy with fluorescent reporters for signaling (ERK or AKT), cell cycle, and apoptosis. Follow single cells and their relatives through drug addition to see whether dynamics, such as pulsatile signaling, slow cycling, or mitochondrial priming, predict survival, and to separate pre-existing from drug-induced tolerance.\n4. Functional CRISPR screens in the persister state: Run genome-wide or focused CRISPRi/CRISPRa screens, with and without drug, that read out persister survival or re-entry into proliferation. Hits reveal the genes and pathways required for tolerance, such as epigenetic regulators, antioxidant or lipid-peroxidation defenses, and anti-apoptotic factors, and point to combination therapies.\n5. Single-cell metabolic and apoptotic-priming measurements: Measure mitochondrial membrane potential, ROS, NADH/FAD autofluorescence (FLIM), and BH3 profiling in individual cells, and sort cells by these readouts before drug exposure. Testing the survival of sorted subpopulations shows whether metabolic state or apoptotic threshold drives the stochastic survival.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell concordance after forced division in microfluidic traps",
+      "description": "Track pairs of daughters (or micro-colonies) and compare their drug fate versus random unrelated pairs, using decay of concordance over generations to estimate the memory timescale of tolerance. Fitting this to stochastic-switching models distinguishes fast fluctuation, epigenetic memory, and mutation without requiring molecular markers."
+    },
+    {
+      "title": "Single-cell DNA replication stress and mitotic history readout (scEdU/53BP1 + fixed-cell Cell-Cycle profiling)",
+      "description": "Quantify inherited DNA damage, under-replicated DNA, and 53BP1 nuclear bodies in mother-daughter pairs before drug, then relate them to survival. This tests whether persisters arise from a prior stress or mitotic-error history rather than from a stable transcriptional state."
+    },
+    {
+      "title": "Single-cell proteoform and signaling-network rewiring by mass cytometry or phospho-flow of drug-adjacent cells",
+      "description": "Measure dozens of phospho-proteins and cleaved-caspase markers at several time points after drug in the same cells to infer the rewiring of the target's pathway and the feedback loops. Information-theoretic analysis (e.g., mutual information between input and output, or bypass-pathway reactivation) would show whether survivors reactivate signaling early, an event that transcriptomics often misses."
+    },
+    {
+      "title": "Mitochondrial DNA heteroplasmy and copy-number lineage tracing",
+      "description": "Use natural mtDNA variants (via mitochondrial scATAC or MAESTER) as endogenous lineage barcodes in clonal lines, and test whether heteroplasmy level or mtDNA copy number in sister cells predicts survival. This provides non-genetic, non-nuclear heritable variation that can explain drug tolerance in a genetically identical population."
+    },
+    {
+      "title": "Intracellular drug quantification at single-cell resolution",
+      "description": "Use intrinsically fluorescent drugs, a fluorescent drug analog, or a target-engagement biosensor (such as a cellular thermal shift or a probe competition assay by imaging) to measure how much drug reaches and binds the target in each cell. Comparing this with fate shows whether survivors are simply under-dosed through uptake, efflux, or lysosomal sequestration, rather than intrinsically resistant."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 856,
+  "cost_usd": 0.0157355
+}

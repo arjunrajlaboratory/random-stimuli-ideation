@@ -1,0 +1,150 @@
+{
+  "batch": 18,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "12506553b3978a8697a3c20e1fb8aa4d19df653f6fe9c34cc9a11b32a534e760",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Intracellular drug accumulation and metabolic profiling of survivors",
+      "description": "Quantify intracellular drug levels in single cells or sorted fractions using LC-MS or a fluorescent drug analog, and measure efflux transporter activity to test whether survivors take up less drug. In parallel, run Seahorse respirometry and 13C-glucose or 13C-glutamine isotope tracing on sorted persisters versus bulk cells to identify metabolic dependencies.",
+      "idea_id": "persister_haiku_assigned_constraint_3_3",
+      "source_sha256": "e185bdcda6199cb10718bc3857cfff355bc993e0bb269e6c0b8f05f9a362d957"
+    },
+    {
+      "id": "I2",
+      "title": "Single-cell multiome of pre-treatment cells and early persisters",
+      "description": "Run paired scRNA-seq and scATAC-seq on the untreated population and on cells sampled at days 0, 3, 7, and 14 of drug exposure. Comparing the survivor state with the pre-treatment state shows whether persisters were already enriched for particular transcriptional or chromatin programs, such as interferon, EMT, or slow-cycling signatures, and which regulators drive the shift.",
+      "idea_id": "persister_haiku_assigned_constraint_5_1",
+      "source_sha256": "90db4c8527003956f973e38140428f9d05a2977d90f97ed6d25eed291bfc972f"
+    },
+    {
+      "id": "I3",
+      "title": "Multi-omic single-cell profiling of chromatin, RNA and protein before and after drug",
+      "description": "Run paired single-cell ATAC, RNA, and proteomics, plus histone-modification profiling, on untreated populations and across a drug time course. Use computational lineage inference to separate selection of rare pre-existing states from drug-induced adaptation. This tests whether the persister state is a heritable epigenetic state and which regulators maintain it.",
+      "idea_id": "persister_sonnet_future_retrospective_5_2",
+      "source_sha256": "20d1b6b3db1630b77ad478c10ad33e73e50c3df8a55f7cf0ee9133d3d43f374d"
+    },
+    {
+      "id": "I4",
+      "title": "Lineage-tracked proteostasis inheritance",
+      "description": "Use photoconvertible or tandem aggregation reporters with time-lapse mother-daughter tracking to test whether survivors inherit lower protein-aggregate or misfolded-protein burden through division. Asymmetric segregation of damaged proteins would produce survival without any stable genetic or transcriptional difference.",
+      "idea_id": "persister_haiku_obvious_then_avoid_2_1",
+      "source_sha256": "918510f1cd474f426078575eed33b4c020e17ff566822461407f2190830a1ab7"
+    },
+    {
+      "id": "I5",
+      "title": "Duplex sequencing and barcoded lineage tracing of pre-existing subclones",
+      "description": "Use duplex or error-corrected deep sequencing, plus heritable DNA barcodes, to detect rare pre-existing variants and clonal lineages before treatment and compare them with survivors. This tests whether the apparently genetically identical population contains low-frequency clones that account for survival.",
+      "idea_id": "persister_haiku_assumption_inversion_1_0",
+      "source_sha256": "2c13c63d41edc23b610ab0d755dd7506af152e1c2b09284a7b7d4b13b7a782d4"
+    },
+    {
+      "id": "I6",
+      "title": "Pre-treatment single-cell multi-omics to find predictive baseline states",
+      "description": "Profile untreated cells with paired scRNA-seq and scATAC-seq (or CITE-seq) and use machine learning to identify baseline features, such as expression of stress, quiescence, or drug-efflux genes, that predict which cells will survive. Validate by sorting the predicted tolerant subpopulation and testing its drug response.",
+      "idea_id": "persister_haiku_plain_4_1",
+      "source_sha256": "27fd677e15ceea19749fcd5b245273f55614b73669a8e263bc9caeee2deb7a5a"
+    },
+    {
+      "id": "I7",
+      "title": "Lineage-barcoded longitudinal tracking of persister fates",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicate pools before drug, and sequence barcodes at several timepoints. This tests whether survival is pre-existing and heritable (the same barcodes surviving across replicates) or stochastic.",
+      "idea_id": "persister_sonnet_parallel_rotated_5_0",
+      "source_sha256": "277ad9dadf19bb6b4edc4e213525044e8f5227385d1aced7918a895ff032d77a"
+    },
+    {
+      "id": "I8",
+      "title": "Same-barcode fate comparison across drugs, doses, and in vivo context",
+      "description": "Split one barcoded population across different targeted agents, doses, and matched in vitro versus xenograft environments, then determine whether the same set of barcodes survives in each condition. Shared survivors would indicate a general primed state, while condition-specific survivors would show that the microenvironment and drug mechanism select different subsets, constraining which measurements could predict survival.",
+      "idea_id": "persister_opus_future_retrospective_4_4",
+      "source_sha256": "af6295e6580a8e98722429864cfeb5e2bb2a7f19732f39f6f59514c71a63e524"
+    },
+    {
+      "id": "I9",
+      "title": "Single-cell lineage tracing with barcoded clones",
+      "description": "Introduce heritable random DNA barcodes into a clonal population, treat with the targeted drug, and use barcode sequencing plus scRNA-seq to determine whether survivors arise from a pre-existing transcriptionally distinct subpopulation or from clones already present before treatment. Comparing pre-treatment and post-treatment barcode frequencies distinguishes pre-existing resistance from drug-induced reprogramming.",
+      "idea_id": "persister_haiku_plain_7_0",
+      "source_sha256": "e79a84a61df956b589c823fb75fe15c9107ce3713847a73251aa3d57ddec01a3"
+    },
+    {
+      "id": "I10",
+      "title": "Per-cell intracellular drug accumulation by label-free imaging",
+      "description": "Quantify each cell's intracellular drug concentration with label-free methods such as stimulated Raman imaging or intrinsic fluorescence of the compound, then sort or image-correlate with later fate. If survivors hold systematically lower free drug despite identical efflux transporter levels, uptake or partitioning into lipid and organelles becomes the candidate mechanism, testable with uptake-transporter knockdowns.",
+      "idea_id": "persister_haiku_critique_revise_0_1",
+      "source_sha256": "e851ad8af6014e0a1f7b85051b6e2b7f4f9d274edeb6969fa9287e03425050a7"
+    },
+    {
+      "id": "I11",
+      "title": "Pre-treatment target-engagement imaging linked to fate",
+      "description": "Pre-load live cells with a clickable or fluorescent version of the inhibitor, or a target-occupancy reporter, and image per-cell effective drug occupancy before adding the drug. Sort cells by occupancy, re-plate them under treatment, and check whether low-engagement cells are the ones that survive.",
+      "idea_id": "persister_haiku_obvious_then_avoid_3_1",
+      "source_sha256": "a508fd0bd1caf96840e5f2f96c75b59bb3b86077a0685f7c7e64cd2dfba9eb5b"
+    },
+    {
+      "id": "I12",
+      "title": "Sort-and-remix measurement of state-switching rates",
+      "description": "Use FACS to sort cells that are high or low for a candidate persister marker (such as AXL, EGFR or NGFR), label each group with a different fluorescent dye or barcode, mix them back together, and sample at several time points to measure how fast cells switch between states. Drug-challenging the samples at each time point shows how survival potential changes as cells move between states.",
+      "idea_id": "persister_opus_instruction_only_6_3",
+      "source_sha256": "49ef9c8f41860bd4ad459fb39bcd7ea59ada896a2d0cbc9dc37e2368eb2e253b"
+    },
+    {
+      "id": "I13",
+      "title": "Asymmetric partitioning of tolerance factors at mitosis",
+      "description": "Use live imaging with fluorescently tagged drug target or efflux proteins to track how these proteins partition between daughter cells at division, and correlate the inherited amount with each daughter's fate under drug. If unequal inheritance predicts survival, tolerance may arise through stochastic division asymmetry rather than a fixed pre-existing state.",
+      "idea_id": "persister_haiku_obvious_then_avoid_0_4",
+      "source_sha256": "04bcc5d70a9a0b158fffbf2b0dd2e49d0dde446e37ee78b55c6ebf5059818905"
+    },
+    {
+      "id": "I14",
+      "title": "Single-cell whole-genome and clonal deep sequencing for hidden genetics",
+      "description": "Run single-cell DNA-seq (CNV, SNV) or deep clonal sequencing on pre-treatment populations and on survivors to test for rare subclonal variants, extrachromosomal DNA, or mtDNA heteroplasmy. A matched comparison of survivors against the clonal parental population shows whether apparent non-genetic persistence has a cryptic genetic basis.",
+      "idea_id": "persister_sonnet_assumption_inversion_2_1",
+      "source_sha256": "7303f460ac3cf42ad7c3b72576caff20ab1f4d338dedf1ee253e44e53110dcee"
+    },
+    {
+      "id": "I15",
+      "title": "Neighbor-density and local contact perturbation",
+      "description": "Measure each cell's local density and number of contacts in live imaging before treatment, then experimentally remove neighbors (laser ablation or mixing with dead cells) or add conditioned medium to test whether survival depends on local crowding or cell-cell contact rather than cell-intrinsic state.",
+      "idea_id": "persister_haiku_obvious_then_avoid_1_4",
+      "source_sha256": "39b7423f9c88bf64b70f2e27ab3b3b04bea698af1e44a050a92453d47d189d15"
+    },
+    {
+      "id": "I16",
+      "title": "Sublethal-dose pooled CRISPR screen with survivor sorting and perturbation validation",
+      "description": "Run a genome-wide or CRISPRi screen at a sublethal dose, sort or compare surviving populations, and validate top hits by individual knockouts, including bypass and efflux genes, in cells with and without the transporter blocked. Enriched hits that rescue survival after validation test whether the drug target is the only relevant pathway and whether the survivor correlates are causal.",
+      "idea_id": "persister_haiku_assumption_inversion_1_4",
+      "source_sha256": "85c4b1edf9363a84b3cb39ee9e24733cdc88d1ce245a40cf6d67ec6279a871b3"
+    },
+    {
+      "id": "I17",
+      "title": "Cross-drug identity test with shared lineage barcodes",
+      "description": "Barcode one population, split it into arms challenged with mechanistically distinct targeted agents, and test whether the surviving barcode sets overlap more than expected by chance. Strong overlap implies a general drug-tolerant state (slow cycling, apoptotic unpriming), while disjoint sets imply drug-specific priming such as pathway-specific expression.",
+      "idea_id": "persister_opus_overgenerate_select_4_1",
+      "source_sha256": "c73cdc1394f79e8234c05395da3dd8cd4bd24a18104623d8591c74a51ad28405"
+    },
+    {
+      "id": "I18",
+      "title": "Secretome-mediated rescue of naive cells",
+      "description": "Collect conditioned medium or extracellular vesicles from drug-treated cultures enriched for survivors and apply them to naive cells under drug, then identify the active factors by proteomics and a neutralizing-antibody or vesicle-depletion screen. A positive rescue would indicate that survival can be extrinsically conferred between cells, not only inherited.",
+      "idea_id": "persister_haiku_critique_revise_7_4",
+      "source_sha256": "7d8c3d9cec6f9689aaa4dee5f4798671a6e519f7a44a47fc192855f961955957"
+    },
+    {
+      "id": "I19",
+      "title": "Pooled CRISPR screen under drug with causal validation",
+      "description": "Run a genome-wide or focused CRISPR knockout or interference screen under sub-lethal and lethal drug doses, comparing guide abundance before and after treatment to identify genes whose loss sensitizes or protects cells. Then validate the top hits by individually perturbing them and confirming that survival changes, which tests whether the markers enriched in survivors cause survival.",
+      "idea_id": "persister_haiku_assumption_inversion_7_4",
+      "source_sha256": "0a2d71a117b1e58609160e5709f23a43eecbe4e8855450636ae3ae9c8e554338"
+    },
+    {
+      "id": "I20",
+      "title": "Lineage barcoding with sibling-pair and split-clone tracking",
+      "description": "Barcode cells, split the expanded population into replicate arms before drug, and compare which barcodes survive across arms and between sister cells. This shows whether survival is heritable and pre-existing, or stochastic and drug-induced. It also gives the memory timescale of the state.",
+      "idea_id": "persister_sonnet_assumption_inversion_3_0",
+      "source_sha256": "c3ff661d2e1de2e1723067b1e433123d35e6b9a9c70ccb4c189ae4ce5bb53344"
+    }
+  ],
+  "cost_usd": 0.047317200000000004
+}

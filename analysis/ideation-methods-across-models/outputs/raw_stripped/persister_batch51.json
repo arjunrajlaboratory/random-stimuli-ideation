@@ -1,0 +1,150 @@
+{
+  "batch": 51,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "44d090d8766e8293b97fac1de3eb541de801b8e14729e6022e3ff3cf2ca2b926",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Spatial and microenvironmental mapping with varied density",
+      "description": "Use spatial transcriptomics or multiplexed imaging on 3D cultures or xenografts, and vary local density, cell-contact and secreted-factor conditions. This tests whether persister fate depends on microenvironmental position, such as hypoxia or paracrine rescue, rather than on intrinsic cell state.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_7_4",
+      "source_sha256": "534cdc609c6bca8ef94af1881ae46a371256f8de5bbcb9faf91c221ce2c6c23a"
+    },
+    {
+      "id": "I2",
+      "title": "Barcoding with sister-cell split and pre-treatment profiling",
+      "description": "Barcode a cell population, split it before treatment, and profile one half by scRNA-seq while treating the other. Matching barcodes of survivors to their untreated sister cells reveals pre-existing, predictive transcriptional states and shows whether survival is heritable.",
+      "idea_id": "persister_sonnet_overgenerate_select_2_0",
+      "source_sha256": "918dbc2f575f9799bad711db3df89ac51bc5091dbbdfdb0d0278a1f1b316a92f"
+    },
+    {
+      "id": "I3",
+      "title": "Paired multiome and clonal genotyping of survivors versus naive cells",
+      "description": "Run single-cell RNA plus ATAC on matched naive, early-persister, and late-resistant populations. In parallel, do low-coverage single-cell or bulk whole-genome copy-number analysis and targeted driver sequencing on the same samples. This separates chromatin and expression reprogramming from selection of a pre-existing genetic subclone, and identifies which transcription-factor motifs gain accessibility before expression changes appear.",
+      "idea_id": "persister_opus_assigned_constraint_5_4",
+      "source_sha256": "3e2144142363a98ec5e2005125c9716cb86c730e224b2afd3213f9d4230ff9a8"
+    },
+    {
+      "id": "I4",
+      "title": "Barcoded lineage tracing across drug exposure",
+      "description": "Introduce heritable random barcodes (e.g., CellTag or lentiviral barcode libraries) into a clonal population before treatment, then sequence barcodes in survivors and in pre-treatment cells. Matching barcodes between the two timepoints shows whether survivors come from a pre-existing subclone or arise de novo from drug-induced reprogramming.",
+      "idea_id": "persister_haiku_plain_0_0",
+      "source_sha256": "b68bbfdcba516b9fd371a4ab37f38e105168de1d0ff3fcdc79b0ac61b78f5f18"
+    },
+    {
+      "id": "I5",
+      "title": "Fluctuation-test lineage barcoding",
+      "description": "Split barcoded clonal populations into many parallel replicates before drug exposure, as in a Luria-Delbr\u00fcck fluctuation test. If the same barcodes survive across replicates, the survival state is heritable and pre-existing. If different barcodes survive in each replicate, survival is stochastic or induced. Fitting the variance-to-mean ratio of surviving clones to a mathematical model gives the rate of switching into the resistant state.",
+      "idea_id": "persister_sonnet_instruction_only_4_0",
+      "source_sha256": "7798d22987d9fccd2ce7a8190f0bff1e3d0d4a0ba06baa3eb2f1c420fc3de435"
+    },
+    {
+      "id": "I6",
+      "title": "Testing for genetic differences before invoking non-genetic plasticity",
+      "description": "Run single-cell whole-genome sequencing plus ecDNA-sensitive assays (FISH, Circle-seq) on matched pre-treatment, survivor, and dying populations from the same isogenic culture. Test whether survivors are enriched for pre-existing CNVs, ecDNA copy number, or subclonal variants. This directly tests the premise that the cells are genetically identical and establishes what fraction of survival requires a non-genetic explanation.",
+      "idea_id": "persister_opus_assumption_inversion_6_0",
+      "source_sha256": "758ff6c5dac18a38e8b52ce64ff234a6d1e472af5b6813e86d1e5b90b7532b87"
+    },
+    {
+      "id": "I7",
+      "title": "Continuous live imaging through drug exposure",
+      "description": "Engineer cells with reporters for signaling dynamics (e.g., ERK/AKT pulses), cell-cycle phase and stress responses, then follow thousands of single-cell lineages from days before treatment through weeks on drug. Link each cell's fate to both its history and its earliest responses after the drug is added. This separates pre-existing state from events after drug exposure, such as cell-cycle phase at drug entry or how signaling recovers.",
+      "idea_id": "persister_opus_future_retrospective_5_2",
+      "source_sha256": "3e8dd9056adb161f3e440ee63124ca78b943bed7cb0929e81a445e2150241eee"
+    },
+    {
+      "id": "I8",
+      "title": "Single-cell multiome of chromatin state before and during treatment",
+      "description": "Profile paired ATAC and RNA in drug-naive cells and at early drug timepoints to find accessible-chromatin states and transcription factor motifs that predict survival. Validate top factors by perturbing them and measuring survival.",
+      "idea_id": "persister_haiku_overgenerate_select_7_3",
+      "source_sha256": "84a419a2cbc97e59d897f5b158d63b847c135b357da8c8d711b05a5f6c98e22d"
+    },
+    {
+      "id": "I9",
+      "title": "Stochastic state-switching models fit to fluctuation tests",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation analysis and time-resolved fate-mapping on survivor counts across many replicate clonal cultures, then fit stochastic models of state switching, drug-induced switching, and selection. The variance and time-dependence of survivor numbers across replicates would distinguish rare pre-existing states, induced adaptation, and mixtures of the two. This gives quantitative switching rates that predict how combination or scheduled dosing can reduce or exploit survivors.",
+      "idea_id": "persister_sonnet_future_retrospective_3_4",
+      "source_sha256": "3010ee449a74086226f656ea23a96127445bff0216fcb6bf151b7680ecb1a143"
+    },
+    {
+      "id": "I10",
+      "title": "Single-cell intracellular drug accumulation mapping",
+      "description": "Quantify intracellular concentration of the drug in individual cells, for example with a fluorescent analog or mass-spectrometry imaging, alongside efflux transporter expression. If rare cells keep sub-lethal drug levels because of low uptake or high efflux, survival is explained by single-cell drug pharmacokinetics rather than by cell-state biology.",
+      "idea_id": "persister_haiku_future_retrospective_4_3",
+      "source_sha256": "78689271ad4872bfe4f4350827caf8bb84a6d1d7c14741edb1bf001ceb1fc7ba"
+    },
+    {
+      "id": "I11",
+      "title": "Per-cell intracellular drug quantification with lysosomal probes",
+      "description": "Measure the free intracellular concentration of the drug in individual cells, using intrinsic fluorescence or a clickable analog, together with LysoTracker-based acidic compartment volume. Survivors with low cytosolic drug despite equal extracellular dosing would indicate that sequestration of the drug is a cause of persistence, separate from target biology.",
+      "idea_id": "persister_haiku_critique_revise_5_3",
+      "source_sha256": "fd40c150e361788ab641f2bd5d496e8067a9240d44fc3ead388ec183cc5a2350"
+    },
+    {
+      "id": "I12",
+      "title": "Continuous versus pulsed dosing with survivor-distribution fitting",
+      "description": "Deliver matched total drug exposure as one continuous dose versus many intermittent pulses across thousands of replicate wells. Fit the survivor-fraction distributions with Weibull/extreme-value models to ask whether survival follows a model of rare pre-existing states or a model of tolerance accumulated during treatment.",
+      "idea_id": "persister_opus_instruction_only_5_2",
+      "source_sha256": "81a669343b45153c314bd2cc2ea0256520462ee261cb8ba3da18a0bb97706703"
+    },
+    {
+      "id": "I13",
+      "title": "Manipulation of stochastic gene expression noise",
+      "description": "Use synthetic circuits or promoter and noise-modulating perturbations to raise or lower expression variability of candidate survival genes while keeping their mean level constant. Measuring the persister fraction as a function of noise tests causally whether cell-to-cell variation itself, rather than the average, sets the surviving fraction.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_3_4",
+      "source_sha256": "99b79e310ad01c25345cbe0ea93a9b317627b4fba01d94caa3224ed9e7e84f7c"
+    },
+    {
+      "id": "I14",
+      "title": "Pulse-chase drug exposure with lineage barcoding",
+      "description": "Pulse the drug for a short period and then withdraw it, combined with heritable DNA barcodes, to see whether surviving cells are a pre-existing subpopulation or a transiently induced state. Track whether survivors regrow sensitive progeny after drug removal and whether the barcode lineages of survivors are the same as those of the untreated population.",
+      "idea_id": "persister_haiku_parallel_rotated_7_4",
+      "source_sha256": "49887de487a70ac1929292da510caee04421bb9f04dfb02592e6ad8e5d72df8d"
+    },
+    {
+      "id": "I15",
+      "title": "Barcoded lineage tracing with sibling split and pre-treatment profiling",
+      "description": "Label clonal cells with expressed lineage barcodes (e.g., Watermelon/FateMap-style), split sister cells before drug, profile one half by scRNA-seq and expose the other to drug, then test whether pre-treatment transcriptional state of a lineage predicts survival. This separates pre-existing from drug-induced tolerance and reveals the pre-treatment state of cells that are killed by the drug.",
+      "idea_id": "persister_sonnet_assumption_inversion_0_0",
+      "source_sha256": "7e16fa3759b81708ed4744b32650bb869327470daff34ca005e64d321c45abac"
+    },
+    {
+      "id": "I16",
+      "title": "Clonal barcode lineage tracing before and during treatment",
+      "description": "Transduce a cell line with a high-complexity lentiviral barcode library, sample the population before drug exposure, and sequence barcodes in survivors after treatment. Barcodes enriched among survivors that were already present at baseline indicate pre-existing persisters, while survivors with barcodes that were rare or absent at baseline indicate drug-induced adaptation.",
+      "idea_id": "persister_haiku_assigned_constraint_5_0",
+      "source_sha256": "33e22319a7c760706dcc1541cc94e59e3decba778510c0b39e5a7f2915872ef6"
+    },
+    {
+      "id": "I17",
+      "title": "Intracellular drug accumulation and target engagement in survivors",
+      "description": "Use a fluorescent or clickable analog of the drug, or LC-MS on FACS-sorted cells, to measure intracellular drug levels, and use NanoBRET or CETSA to measure target occupancy in survivors versus dying cells. This tests whether persisters retain less effective drug (through efflux, lysosomal sequestration, or uptake differences) before any signaling rewiring occurs.",
+      "idea_id": "persister_haiku_critique_revise_1_1",
+      "source_sha256": "7260cde8d043a7dc64cf337a37f18c2e40b3986b206955fcadfa9701f4b85677"
+    },
+    {
+      "id": "I18",
+      "title": "Barcoded sister-cell lineage tracing with transcriptome readout",
+      "description": "Label cells with expressed lineage barcodes, split each clone into two halves, and profile one by scRNA-seq before treatment while treating the other. Surviving barcodes reveal the pre-treatment transcriptional state that predicted survival, and show whether persistence is pre-existing or induced.",
+      "idea_id": "persister_sonnet_overgenerate_select_3_0",
+      "source_sha256": "727cc678442ffa398af971cf24936e23c4537dc2e80850af8a13fc4266c7a84a"
+    },
+    {
+      "id": "I19",
+      "title": "Drug-induced mutagenesis fluctuation assay",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation tests with a reporter for mutation under sublethal drug, and compare the mutation rate and spectrum in survivor clones with those from drug-naive lineages. This distinguishes resistance that arises from drug-induced mutagenesis after exposure from resistance that was already present before treatment.",
+      "idea_id": "persister_haiku_obvious_then_avoid_7_3",
+      "source_sha256": "d176798249e4cc0aa2aaee9f3d8da4d9c3adf0cee7fdfebe55febd2aba4d6c8f"
+    },
+    {
+      "id": "I20",
+      "title": "Single-cell multiome of drug-naive cells with lineage barcodes",
+      "description": "Profile untreated cells at one time point with scRNA-seq plus chromatin accessibility, and use clonal barcodes in parallel sister samples (Rosetta/Watermelon-style) to link pre-existing transcriptional and epigenetic states to later survival. This identifies the cell-state signatures and regulatory programs that predispose to persistence, and tests whether states are heritable.",
+      "idea_id": "persister_sonnet_assigned_constraint_6_0",
+      "source_sha256": "1a91a44e9c91a678b9ef6c6173849b94ad46a77e5ed31b723d6ea50c55091793"
+    }
+  ],
+  "cost_usd": 0.0856366
+}

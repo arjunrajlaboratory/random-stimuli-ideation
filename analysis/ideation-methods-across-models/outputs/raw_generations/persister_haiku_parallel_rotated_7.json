@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 7,
+  "parallel": {
+    "field": "Heterogeneous catalysis (catalyst deactivation)",
+    "problem": "Why do only a few particles of an identical catalyst stay active under a poison or coking agent while the rest deactivate?",
+    "how_studied": "Researchers use single-particle fluorescence microscopy with probe reactions to map which individual particles stay active over time. Operando X-ray absorption and Raman spectroscopy track the oxidation state and coking in the same reactor. TEM and STEM before and after reaction link the survivors to particular facets, edges, or support sites, and the activity distribution is compared with the particle size distribution."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Heterogeneous catalysis (catalyst deactivation)\nProblem: Why do only a few particles of an identical catalyst stay active under a poison or coking agent while the rest deactivate?\nHow it is studied: Researchers use single-particle fluorescence microscopy with probe reactions to map which individual particles stay active over time. Operando X-ray absorption and Raman spectroscopy track the oxidation state and coking in the same reactor. TEM and STEM before and after reaction link the survivors to particular facets, edges, or support sites, and the activity distribution is compared with the particle size distribution.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Live-cell single-cell fate tracking with fluorescent activity reporters",
+      "description": "Borrowing the single-particle fluorescence probe approach, track thousands of individual cells under drug with a live reporter for a readout such as caspase-3/7 activity, ERK-KTR signaling, or mitochondrial membrane potential, recording each cell's trajectory over days. Sort the cells that stay active or survive and compare their pre-treatment reporter levels to those of cells that die."
+    },
+    {
+      "title": "Same-cell multiplexed profiling before and during treatment",
+      "description": "Mirroring operando spectroscopy in the same reactor, use imaging mass cytometry, multiplexed immunofluorescence, or cyclic imaging to measure phospho-proteins, drug-target occupancy, and efflux-pump levels in the same cells at several time points during treatment. This shows whether survival is linked to a specific signaling state that changes over time, rather than to a fixed trait."
+    },
+    {
+      "title": "Pre-treatment feature mapping linked to later survival",
+      "description": "Analogous to TEM/STEM imaging before and after reaction, record baseline single-cell features (cell size, cell-cycle phase, organelle content, chromatin marks) by imaging, then follow the same cells through treatment and use correlative imaging to identify which pre-existing features predict survival. Survivors are then checked for the presence or absence of those features."
+    },
+    {
+      "title": "Comparing survival with the distribution of a baseline variable",
+      "description": "Following the particle-size comparison, measure a candidate intrinsic variable (drug-target expression, efflux transporter levels, DNA content, or cell size) across the whole population by flow cytometry or single-cell RNA-seq, then compare its distribution with the distribution among survivors. Enrichment in a narrow tail points to a causal marker, while no enrichment points to a stochastic or state-based explanation."
+    },
+    {
+      "title": "Pulse-chase drug exposure with lineage barcoding",
+      "description": "Use a probe-style approach by pulsing the drug for a short period and then withdrawing it, combined with heritable DNA barcodes, to see whether surviving cells are a pre-existing subpopulation or a transiently induced state. Track whether survivors regrow sensitive progeny after drug removal and whether the barcode lineages of survivors are the same as those of the untreated population."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1720,
+  "cost_usd": 0.00113195
+}

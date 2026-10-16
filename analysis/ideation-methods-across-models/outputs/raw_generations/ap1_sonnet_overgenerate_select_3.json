@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Timed degron depletion to separate establishment from maintenance",
+      "description": "Prime cells with a transient stimulus, then acutely degrade FOS/JUN (dTAG/AID) at different times after washout, before restimulation. If memory (faster or stronger transcription, retained accessibility) is lost upon late depletion, AP-1 is needed to maintain it, not only to set it up."
+    },
+    {
+      "title": "Pulse-pattern optogenetic AP-1 activation with memory readout",
+      "description": "Use optogenetic or chemically gated AP-1 to deliver defined pulse numbers, durations and intervals, then test the response to a later challenge. Dependence on pulse history and a decay time constant would show AP-1 activity itself encodes memory, independent of upstream signaling."
+    },
+    {
+      "title": "Single-cell lineage-resolved tracking across divisions",
+      "description": "Image endogenously tagged FOS/JUN together with a target-enhancer reporter, and follow sister cells through division after priming. Heritable differences in response, together with AP-1 mitotic retention, would test whether memory is carried by AP-1 or by downstream chromatin."
+    },
+    {
+      "title": "Motif-level CRISPR editing plus synthetic AP-1 recruitment",
+      "description": "Delete or mutate AP-1 motifs at specific memory enhancers and ask if priming is lost. Conversely, recruit AP-1 to a neutral locus with dCas9 and ask if it creates a persistent, restimulation-competent state. This tests necessity and sufficiency at the locus level."
+    },
+    {
+      "title": "Hysteresis and bistability of the FOS/JUN feedback circuit",
+      "description": "Measure single-cell dose-response with increasing versus decreasing stimulus, and perturb the FOS/JUN autoregulatory loop while fitting a mathematical model. Bimodality and hysteresis dependent on the loop would support a self-sustaining circuit memory that does not need a chromatin mark."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Time-course ChIP/CUT&RUN of AP-1 (FOS/JUN) occupancy after transient stimulus and after washout",
+      "ATAC-seq footprinting of AP-1 motifs at memory loci days after stimulus removal",
+      "Acute degron (dTAG/AID) depletion of FOS/JUN after stimulus to test maintenance vs. establishment of accessibility",
+      "Optogenetic pulsed AP-1 activation with varying pulse patterns to test history dependence",
+      "Single-cell multiome (RNA+ATAC) tracking of primed vs naive cells upon restimulation",
+      "Live-cell imaging of endogenously tagged FOS/JUN with reporter of target gene to measure memory across divisions",
+      "Mitotic bookmarking assay: imaging/ChIP of AP-1 on mitotic chromosomes",
+      "Dominant-negative (A-FOS) induced at different times to separate initiation from maintenance",
+      "CRISPR mutation of AP-1 motifs at individual enhancers followed by prime-restimulate assays",
+      "dCas9-based synthetic recruitment of AP-1 to a neutral locus to test sufficiency for creating memory",
+      "Histone mark profiling (H3K27ac, H3K4me1) with and without AP-1 depletion during memory",
+      "Hi-C/Micro-C to see AP-1-dependent enhancer-promoter loops persisting after stimulus",
+      "Pioneer-like activity test: nucleosome positioning (MNase) at AP-1 sites after transient binding",
+      "Mathematical modeling of AP-1 positive feedback (FOS/JUN autoregulation) bistability and hysteresis",
+      "Dose-response hysteresis measurements in single cells to detect bistable switch",
+      "Proteomics of AP-1 partner switching (BAF, p300) over time after stimulus",
+      "Lineage tracing/clonal analysis of memory inheritance in sister cells",
+      "In vivo memory test: primed tissue (skin/macrophage) with AP-1 inhibitor given during memory period before rechallenge",
+      "Comparing AP-1 family member dynamics (FOSB, \u0394FOSB stable isoform) as persistent molecular carriers",
+      "Cross-species/cell-type comparison of AP-1 motif architecture in memory-capable vs non-capable enhancers"
+    ]
+  },
+  "output_tokens": 1487,
+  "cost_usd": 0.017656300000000003
+}

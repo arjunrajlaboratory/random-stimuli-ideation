@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Heritability of AP-1 state across clonal lineages: Use live-cell reporters of AP-1 activity (e.g., TRE-driven fluorescent protein) with long-term imaging and cell tracking to quantify mother-daughter and sister-sister correlations in reporter level, fitting the decay of correlation with generation number to estimate a memory half-life. Pair this with single-cell RNA/ATAC profiling of sorted high- and low-reporter cells to confirm that the imaging readout reflects a broader transcriptional state.\n2. Transient stimulation plus timed AP-1 removal: Deliver a brief stimulus that activates AP-1 (cytokine, drug pulse, matrix stiffening, or scratch wound), then use degron-tagged FOS/JUN family proteins to eliminate AP-1 either during the stimulus or only after it has subsided, and ask which window is required for the persistent downstream phenotype. If AP-1 is needed only transiently to establish a state that then persists in its absence, that favors an initiator role; if continued presence is required, it acts as a self-sustaining maintenance circuit.\n3. Chromatin footprint persistence after signal withdrawal: Run time-course ATAC-seq, CUT&RUN for AP-1 factors, and histone modification profiling (H3K27ac, H3K4me1) across stimulation and a long washout, testing whether AP-1-motif-containing enhancers opened during stimulation remain accessible and primed long after AP-1 occupancy and target transcription have returned to baseline. Latent, still-open enhancers that reactivate faster upon restimulation would be direct evidence of a stored chromatin trace.\n4. Restimulation kinetics as a memory assay: Compare naive cells with cells that experienced a prior stimulus days or weeks earlier, measuring the speed, amplitude, and dose threshold of AP-1 target induction on a second exposure using nascent transcription readouts. Faster or stronger secondary responses that scale with the chromatin changes above would operationalize memory as an altered input-output relationship rather than a static expression difference.\n5. Synthetic perturbation of the AP-1 feedback loop: Use CRISPRa/CRISPRi or inducible expression to force AP-1 activity on or off for a defined window in otherwise unstimulated cells, then follow whether the induced state persists after the perturbation ends and whether mutating AP-1 binding sites at key self-reinforcing loci (including FOS/JUN autoregulatory enhancers) abolishes persistence. This tests sufficiency and identifies the specific cis-elements that store the state.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dilution clock: decay per division versus decay per hour",
+      "description": "Establish the AP-1-dependent state, then compare matched arms with identical elapsed time but different numbers of divisions (CDK4/6 inhibition, contact inhibition, serum titration, mitomycin-C arrest) and fit whether the memory half-life is better expressed in generations or in hours, distinguishing replication-coupled chromatin storage from a slowly decaying protein/RNA reservoir. Complement with EdU-based nascent-chromatin capture to measure how rapidly AP-1 sites regain accessibility and factor occupancy behind the replication fork."
+    },
+    {
+      "title": "Heterokaryon and allele-resolved cis/trans discrimination",
+      "description": "Fuse a memory-bearing cell to a naive cell of a distinguishable genotype (F1 hybrid or SNP-divergent lines) and read out AP-1 target expression and accessibility allele-specifically in the shared nucleus. Conversion of the naive genome implies a diffusible trans carrier, whereas persistent discordance between the two genomes implies the state is stored in cis chromatin, a distinction no washout time course can make."
+    },
+    {
+      "title": "Mitosis-restricted degron plus mitotic bookmarking measurement",
+      "description": "Quantify whether AP-1 factors are retained on condensed mitotic chromosomes using single-molecule tracking/FRAP residence times and CUT&RUN on sorted mitotic cells, then deplete AP-1 only during the mitotic window with a timed degron so it is present in interphase both before and after division. Failure to transmit the state under this narrow perturbation would localize storage to the mitotic bookmark rather than to steady-state interphase occupancy."
+    },
+    {
+      "title": "Frequency-domain stimulation to measure the memory time constant",
+      "description": "Deliver stimulus as square waves across roughly two orders of magnitude of frequency at matched total dose using microfluidics or automated media exchange, and fit the amplitude and phase of AP-1 target output as a transfer function. A genuine memory element acts as a low-pass integrator whose corner frequency sets the retention time, giving a dynamical memory estimate that can be cross-validated against the per-division estimate."
+    },
+    {
+      "title": "Screening-off test: is AP-1 state statistically sufficient for history?",
+      "description": "Using expressed clonal barcodes, measure stimulus history, intermediate AP-1 activity, and later fate within the same lineages, then test whether conditioning on AP-1 state renders past history and future outcome conditionally independent. Residual history-dependence quantifies the fraction of stored information AP-1 does not carry, directly testing the sufficiency claim that most memory experiments assume."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4119,
+  "cost_usd": 0.15558149999999998
+}

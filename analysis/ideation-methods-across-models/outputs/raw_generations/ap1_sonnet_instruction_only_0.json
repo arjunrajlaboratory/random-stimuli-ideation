@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 0,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis curves borrowed from magnetic materials",
+      "description": "Treat AP-1 like a ferromagnet: expose cells to ramped-up then ramped-down stimulus (e.g., serum, TPA, or optogenetic ERK/c-Fos drive) and measure AP-1 activity (reporter, FOS/JUN levels, chromatin accessibility) at matched doses. A path-dependent loop, where the same dose gives different outputs on the up and down ramps, would indicate bistability or memory. Compare loop width after blocking AP-1 DNA binding with dominant-negative A-Fos."
+    },
+    {
+      "title": "Engram-style tagging and reactivation of past-stimulated cells",
+      "description": "Borrowing from neuroscience engram labeling, place a FOS-promoter-driven, inducible Cre/tdTomato tag in cells during a first stimulus, then restimulate days later. Test whether tagged cells respond faster or stronger than untagged neighbors, using live imaging or scRNA-seq. Add AP-1 knockdown between the two stimuli to test necessity for maintaining the memory."
+    },
+    {
+      "title": "Immunological recall-kinetics analysis of primed enhancers",
+      "description": "Use the trained-immunity and T-cell recall framework. Profile ATAC-seq, JUN/FOS CUT&RUN, and H3K27ac after a primary stimulus and after a washout period of days to weeks. Look for AP-1-bound enhancers that stay open or marked after the signal ends, then test whether they drive faster transcription on rechallenge. Use CRISPRi or motif mutation at these enhancers to establish causality."
+    },
+    {
+      "title": "Epidemiological decay-and-persistence modelling of single-cell lineages",
+      "description": "Borrow survival and heritability analysis from population genetics. Track AP-1 reporter state in single cells over time with lineage tracing (time-lapse imaging or barcoding). Estimate the autocorrelation time and heritability of AP-1 state across divisions, and compare sister-cell concordance with random pairs. Fit hidden Markov or ODE models to separate a self-sustaining feedback state from slow decay."
+    },
+    {
+      "title": "Synthetic-circuit toggle switch rewiring",
+      "description": "Use the synthetic-biology and electrical-engineering concept of a latch. Build a minimal AP-1 circuit with a doxycycline-pulsed JUN/FOS transgene and a positive-feedback AP-1 reporter, and test whether a transient pulse flips it into a stable ON state that persists after withdrawal. Break the feedback by mutating AP-1 sites in the promoter, or alter it by adding a destabilizing degron. The aim is to define the minimal conditions under which AP-1 stores information."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 978,
+  "cost_usd": 0.016228
+}

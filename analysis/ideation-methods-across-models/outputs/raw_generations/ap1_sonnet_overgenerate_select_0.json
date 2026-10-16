@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time course with acute degron depletion",
+      "description": "Prime cells with a transient stimulus, then after washout acutely degrade JUN/FOS (dTAG/AID) at different delays, measuring retention of chromatin accessibility (ATAC) and transcriptional responsiveness. If accessibility persists without AP-1, it was only needed for establishment; if it collapses, AP-1 actively maintains memory."
+    },
+    {
+      "title": "Priming and re-stimulation hysteresis assay",
+      "description": "Vary the number, duration, and spacing of stimulus pulses and measure the magnitude and kinetics of the second response (nascent RNA, e.g., PRO-seq) in primed versus naive cells. Test whether the enhanced response depends on AP-1 using A-FOS expressed only during priming versus only during recall."
+    },
+    {
+      "title": "Single-cell lineage-traced multiome",
+      "description": "Use barcoded clones or sister-cell pairing with joint scRNA/scATAC to test whether AP-1 motif accessibility and target expression states are shared among related cells beyond what is expected by chance after stimulus removal. Compare concordance across divisions to quantify heritability and its decay."
+    },
+    {
+      "title": "Live imaging of endogenous AP-1 reporters across divisions",
+      "description": "Tag endogenous FOS/JUN and a target-gene reporter, then track mother-daughter lineages by time-lapse to see whether activity states persist through mitosis and across generations. Pair with mitotic CUT&RUN to test whether AP-1 bookmarks chromatin."
+    },
+    {
+      "title": "Motif editing and dCas9 tethering at memory enhancers",
+      "description": "Mutate AP-1 motifs at primed enhancers to test necessity for persistent accessibility and faster recall, and conversely tether AP-1 or its pioneer domain via dCas9 to naive loci to test sufficiency to establish a heritable open state. Read out with ATAC, H3K27ac and reporter expression over weeks."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Time-course ChIP/CUT&RUN of AP-1 (FOS/JUN) after transient stimulus and washout",
+      "ATAC-seq of AP-1 motif accessibility at days after stimulus removal",
+      "Acute degron (dTAG/AID) depletion of JUN/FOS after stimulus to test maintenance of accessibility",
+      "Optogenetic pulse of AP-1 activity with long-term tracking of target gene expression",
+      "Single-cell multiome (RNA+ATAC) lineage-traced clones to test heritability of AP-1 states",
+      "Live imaging of endogenous FOS-GFP reporter across cell divisions in mother-daughter pairs",
+      "Mitotic bookmarking assay: AP-1 retention on mitotic chromosomes by live imaging and CUT&RUN",
+      "Dose/duration-dependence: vary stimulus pulse number and measure persistence of response (hysteresis)",
+      "Re-stimulation assay: primed vs naive cells measuring faster/stronger transcription (memory of prior exposure)",
+      "Dominant-negative (A-FOS) induced at different times after priming",
+      "CRISPR deletion/mutation of AP-1 motifs at memory-associated enhancers",
+      "dCas9-based forced tethering of AP-1 at a locus to test sufficiency for establishing memory",
+      "Histone mark profiling (H3K27ac, H3K4me1) with and without AP-1 loss after priming",
+      "Hi-C/Micro-C to assess AP-1-dependent loop persistence after stimulus",
+      "Mathematical modeling of AP-1 feedback loops (bistability) fitted to single-cell time series",
+      "Phosphorylation state (JNK/ERK) tracking vs AP-1 occupancy to separate signaling persistence from chromatin memory",
+      "In vivo inflammation/injury model with tissue-resident cells re-challenged weeks later, with AP-1 perturbation",
+      "Pioneer activity test: nucleosome occupancy changes by MNase/footprinting at AP-1 sites after priming",
+      "Proteomic turnover/FRAP measurements of AP-1 residence time and protein half-life",
+      "Cross-cell-type comparison of AP-1 composition (dimer identity) in primed states using ChIP-exchange or CUT&Tag"
+    ]
+  },
+  "output_tokens": 1488,
+  "cost_usd": 0.021488
+}

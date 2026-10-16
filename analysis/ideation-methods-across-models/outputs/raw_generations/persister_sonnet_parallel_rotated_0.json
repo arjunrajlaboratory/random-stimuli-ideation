@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 0,
+  "parallel": {
+    "field": "Materials science / metallurgy",
+    "problem": "Why do a few grains or specimens in a nominally identical batch of metal survive extreme stress or corrosion when most fail?",
+    "how_studied": "Researchers use electron backscatter diffraction and atom-probe tomography to map microstructure, grain boundaries and impurities at the sites of survival versus failure. They run many replicate fatigue or corrosion tests and apply Weibull statistics to the failure distribution. They also do in situ loading under a microscope to watch where damage starts and stops."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Materials science / metallurgy\nProblem: Why do a few grains or specimens in a nominally identical batch of metal survive extreme stress or corrosion when most fail?\nHow it is studied: Researchers use electron backscatter diffraction and atom-probe tomography to map microstructure, grain boundaries and impurities at the sites of survival versus failure. They run many replicate fatigue or corrosion tests and apply Weibull statistics to the failure distribution. They also do in situ loading under a microscope to watch where damage starts and stops.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paired survivor-versus-casualty multi-omic mapping at the single-cell level",
+      "description": "Like EBSD/atom-probe comparison of surviving versus failed grains, use live imaging to identify which cells later survive drug, then fix them in place and profile them with spatial transcriptomics/proteomics or single-cell sequencing. Compare each survivor with its nearest dying neighbors to find pre-existing or induced states (e.g., drug-efflux, anti-apoptotic, stress-response, chromatin features) that mark survival."
+    },
+    {
+      "title": "Lineage barcoding with replicate-population statistics",
+      "description": "Barcode cells, split the population into many identical replicate dishes, and treat them all with the drug, then count which barcodes survive in each replicate. Barcodes recurring across replicates indicate pre-existing heritable survivors, whereas random barcodes indicate stochastic or induced survival, analogous to replicate fatigue tests that separate intrinsic from chance failure."
+    },
+    {
+      "title": "Weibull-style survival-time distribution analysis",
+      "description": "Run large numbers of single-cell or small-well drug-exposure time-to-death measurements and fit Weibull or mixture hazard models to the death-time distribution across doses. A distinct tail or separate subpopulation in the fitted shape and scale parameters would show whether survivors are a discrete tolerant class or the extreme end of a continuum, and it would let you quantify how treatments shift the tail."
+    },
+    {
+      "title": "In situ live-cell tracking of damage initiation and recovery",
+      "description": "Time-lapse microscopy with reporters for drug-target activity, DNA damage, apoptosis caspases, ROS and cell-cycle state follows each cell from before treatment through death or survival. Tracking where and when damage starts (e.g., signaling rebound, mitochondrial priming, slow cycling) shows what survivors do differently, much as in situ loading shows where cracks start and stop."
+    },
+    {
+      "title": "Pre-treatment state sorting and causal perturbation of candidate features",
+      "description": "Before drug exposure, sort cells by candidate microstructure-like features such as reporter-defined transcriptional state, cell-cycle phase, mitochondrial content or epigenetic marks. Then challenge each sorted fraction with the drug to test whether the feature predicts survival, and use CRISPR or small-molecule perturbations to add or remove it, which would show whether it causes survival or only correlates with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 868,
+  "cost_usd": 0.0139995
+}

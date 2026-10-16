@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Per-cell intracellular drug quantification and sorting",
+      "description": "Measure how much drug each cell actually accumulates, using a fluorescent drug analog or mass-spectrometry imaging, then sort low- and high-accumulating cells and test whether low uptake or lysosomal sequestration alone predicts survival. This separates pharmacokinetic heterogeneity from changes in cell state."
+    },
+    {
+      "title": "Lineage-tracked proteostasis inheritance",
+      "description": "Use photoconvertible or tandem aggregation reporters with time-lapse mother-daughter tracking to test whether survivors inherit lower protein-aggregate or misfolded-protein burden through division. Asymmetric segregation of damaged proteins would produce survival without any stable genetic or transcriptional difference."
+    },
+    {
+      "title": "Paracrine rescue by survivor-secreted factors",
+      "description": "Fractionate conditioned medium from survivor cultures, identify candidate secreted proteins or metabolites by mass spectrometry, and test whether they rescue drug-sensitive cells in co-culture. This tests whether a few survivors protect neighboring cells, which a per-cell readout would miss."
+    },
+    {
+      "title": "Pre-treatment ERK/AKT signaling dynamics with optogenetic causality test",
+      "description": "Track ERK and AKT activity pulses in single living cells with FRET biosensors before drug addition, and check whether pulse frequency or amplitude predicts later survival. Then use optogenetic control of the pulses to test whether the dynamics cause the survival difference."
+    },
+    {
+      "title": "Nascent translation rate as a pre-treatment predictor",
+      "description": "Quantify per-cell nascent protein synthesis with puromycin or HPG labeling at the start of treatment, sort by translation rate, and test whether high-translation cells survive more and are more sensitive to translation inhibitors. This tests whether a protein-synthesis state, rather than transcription, sets tolerance."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of persisters versus sensitive cells before and during drug exposure",
+      "Bulk RNA-seq or transcriptomic comparison of drug-tolerant persister and parental populations",
+      "Lineage barcoding to track clonal origin and fate of survivors",
+      "Genome-wide CRISPR knockout or activation screens for drug-survival genes",
+      "scATAC-seq or chromatin accessibility profiling to find epigenetic states of survivors",
+      "Proteomics or phosphoproteomics of persisters versus controls",
+      "Live-cell imaging with FUCCI or other cell-cycle reporters to link cycling state to survival",
+      "Measuring ABC transporter or efflux pump expression as a survival mechanism",
+      "Whole-genome or exome sequencing to look for pre-existing resistance mutations",
+      "Testing epigenetic modifier inhibitors (e.g., KDM5A, HDAC) to block the persister state"
+    ]
+  },
+  "output_tokens": 2929,
+  "cost_usd": 0.00160887
+}

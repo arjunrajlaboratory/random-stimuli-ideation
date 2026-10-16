@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitotic retention test of AP-1 at primed enhancers",
+      "description": "Tag endogenous c-Jun or Fos (e.g., HaloTag) and image it through mitosis after a priming stimulus, then sort daughter cells and run ATAC-seq or CUT&Tag. If AP-1 occupancy and chromatin openness survive mitotic chromosome condensation without re-stimulation, the memory is mitotically inherited; if not, it must be re-established each cycle."
+    },
+    {
+      "title": "Site-specific writing and erasing of AP-1 memory with dCas9",
+      "description": "Tether a dCas9-fused AP-1 subunit or a CBP/p300 activator to one defined AP-1 enhancer and, separately, dCas9-KRAB to the same site, then test whether a later stimulus response is potentiated or lost at that locus alone. This gives per-locus necessity and sufficiency without disturbing the global AP-1 pool."
+    },
+    {
+      "title": "Protein-turnover clock and degradation-resistant AP-1 variants",
+      "description": "Measure Fos and Jun protein half-lives and phosphorylation states across the post-stimulus interval with pulse-chase labeling, to identify whether a long-lived AP-1 pool exists. Then express ubiquitin-resistant or phospho-mimetic Fos mutants that extend protein lifetime and test whether memory duration scales with protein stability rather than with transcription."
+    },
+    {
+      "title": "Heterodimer-identity swap to test which bZIP pairing carries memory",
+      "description": "Replace Fos with ATF3, or knock in leucine-zipper chimeras that alter dimer stability and partner preference, while keeping DNA-binding fixed. Compare the persistence of accessibility and the re-stimulation response to determine whether memory depends on the specific Fos-Jun dimer composition or simply on any bZIP occupying the site."
+    },
+    {
+      "title": "Motif-swap specificity control at memory-bearing enhancers",
+      "description": "At enhancers that show AP-1-dependent memory, replace the AP-1 motif with motifs for other stimulus-responsive factors (CREB, NFAT, ISRE, or a scrambled sequence) using CRISPR editing or MPRA-scale libraries, then measure whether the primed state persists. Memory that survives only with AP-1 motifs would support AP-1 specificity, while memory that persists with any motif would point to a generic chromatin-level mechanism."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq or CUT&Tag for Fos/Jun/ATF3 at multiple time points after stimulus and washout, to see whether AP-1 occupancy persists.",
+      "ATAC-seq after stimulus washout to test whether AP-1-bound sites stay open (chromatin accessibility memory).",
+      "H3K27ac or H3K4me1 profiling at AP-1 enhancers to show that active enhancer marks outlast the stimulus.",
+      "Knockout or knockdown of Fos or Jun, then a re-challenge, to test whether the second response (memory) is lost.",
+      "Re-stimulation time course comparing primed and naive cells for faster or stronger induction of AP-1 target genes (transcriptional memory).",
+      "Single-cell RNA-seq or imaging of Fos-reporter cells to show heterogeneity and persistence of a primed subpopulation.",
+      "Enhancer reporter (luciferase or MPRA) assays that test whether AP-1 sites are required for primed-state enhancer activity.",
+      "Live-cell imaging of fluorescent Fos or Jun reporters to track nuclear dynamics and re-activation after washout.",
+      "Engram-style labeling (e.g., TRAP or Fos-tTA) in neurons combined with optogenetic reactivation to test whether AP-1-expressing cells carry memory.",
+      "Hi-C or Micro-C to show that stimulus-induced 3D enhancer-promoter contacts persist and involve AP-1 loci."
+    ]
+  },
+  "output_tokens": 4050,
+  "cost_usd": 0.00216968
+}

@@ -23,3 +23,27 @@ tags: [llm, ideation, mode-collapse, random-stimuli, personas, verbalized-sampli
 ```
 
 19-arm test (phases 1-5) of the idea note "Random stimuli for LLM creative ideation". 760 ideas from 152 fresh-context Sonnet 5.5 calls. Includes call-level permutation tests with per-phase Holm families, a decoration-stripping control, an Opus 5.5 blind judge on both written and stripped text, and a write-once blinded human rating sheet (ratings pending). Reviewed with /mycelium:review on 2026-10-03; all 16 findings addressed.
+
+### ideation-methods-across-models
+```yaml
+name: ideation-methods-across-models
+status: active
+created: 2026-10-15
+last_updated: 2026-10-16
+datasets: []   # data are generated LLM outputs, stored in outputs/raw_generations/
+algorithms: []
+parent_analysis: random-stimuli-ideation
+key_findings:
+  - Nine prompts x Haiku/Sonnet/Opus 5.5 x two questions (2,160 ideas), pre-registered. The plain prompt gave 0 distinct useful-novel ideas (Opus judge, stripped text) for every model.
+  - Critique and revise (show the model its own plain ideas, ask for less obvious ones) was best (34/240 pooled) and the only prompt to beat the earlier unrelated-domain instruction (+18, p_holm 0.042). List the obvious, then avoid it was second (25/240).
+  - Five of seven new prompts beat plain pooled (Holm over 7); assigned constraint and assigned parallel problem did not.
+  - Gains were concentrated in Opus 5.5 (five prompts significant alone) vs Sonnet (one) and Haiku (none); not formally tested as an interaction.
+  - Overgenerate, then select raised novelty with no usefulness cost; most other prompts lowered usefulness by about 0.4-0.6 points.
+  - The unrelated-domain instruction replicated pooled (+16, p < 0.001), alone significant only for Opus.
+  - Sonnet as a second judge agreed on best and worst prompts and also rated Opus ideas most novel.
+  - Follow-up (2026-10-16, exploratory) - required poem and random words: 12 and 9 distinct useful-novel of 240; beat plain, not the unrelated-domain instruction; judged with anchor ideas (calibration rho 0.88/0.80).
+report: analysis/ideation-methods-across-models/reports/ideation-methods-across-models-report.html   # HTML report + 17-slide deck, 2026-10-15
+tags: [llm, ideation, prompting, mode-collapse, model-scale, pre-registered]
+```
+
+Follow-up to random-stimuli-ideation. 432 fresh-context calls, arm- and model-blind stripping, three judging runs (Opus x2 stripped primary, Sonnet stripped, Opus written), stratified call-permutation tests with Holm families fixed in the pre-registration. About $71 CLI-reported cost.

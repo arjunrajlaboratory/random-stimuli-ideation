@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 1,
+  "stimulus": "couchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\ncouchmate phytiform gramenite pard cornet glyphic hominy assumpsit sericteria courageous squireship outthunder photolith hydrazo diaconicum undo impute pyromucic tussur stinginess bint discipular nitid crocketed disorder hornbook immersive queening frijolito filao upsetted briar xebec onlooker semicolon weighing barmy desand voided epigonic writing archform monkflower weason unsolar reposer madder algific craglike sertum outbeggar typal graduator bescarf embassy dreadable bitty innerve honeyberry pedary\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heritable DNA barcode lineage tracing (\"epigonic\" lineages)",
+      "description": "Label a clonal population with a pooled lentiviral DNA barcode library, expand it, sample before treatment, and sequence barcodes in the survivors. If survivors carry barcodes already enriched before treatment, the tolerance was pre-existing in a rare lineage; if the barcode distribution is unchanged, survivors arose from non-heritable switching, which can be tested with single-cell RNA-seq of the same barcoded cells."
+    },
+    {
+      "title": "Drug-holiday washout and re-challenge assay (\"undo\" and \"reposer\")",
+      "description": "Treat cells until the surviving fraction plateaus, remove the drug, and track regrowth and drug sensitivity over several passages before re-challenging. Survivors that regain full sensitivity point to a reversible, plastic persister state, while survivors that stay tolerant point to a heritable genetic or epigenetic change."
+    },
+    {
+      "title": "Pre-treatment reporter tracking in live cells (\"onlooker\")",
+      "description": "Use time-lapse microscopy of cells carrying fluorescent reporters for cell-cycle phase (e.g., FUCCI) and pathway activity (e.g., an ERK kinase translocation reporter) to record each cell's state before adding the drug and its fate afterward. Comparing the pre-treatment reporter states of cells that die with those that survive shows whether a measurable pre-existing state predicts survival."
+    },
+    {
+      "title": "Pooled genome-wide CRISPR knockout screen of survivors (\"voided\" genes)",
+      "description": "Transduce cells with a genome-wide sgRNA library, apply a lethal dose of the drug, and compare guide abundance in survivors to the untreated population. Genes whose knockout enriches or depletes survivors reveal the mechanisms that protect cells, and the hits can be validated individually and tested for synthetic interactions with the drug."
+    },
+    {
+      "title": "Dye-dilution division history combined with single-cell multi-omics (\"madder\" tracer)",
+      "description": "Label cells with a dye that halves with every division, such as CFSE, before treatment, then sort the survivors by dye intensity to find out whether they divided less often than the bulk population. Profile the sorted slow-cycling survivors with single-cell RNA-seq and ATAC-seq to test whether the survivors occupy a distinct quiescent, chromatin-accessible state that could be targeted."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2825,
+  "cost_usd": 0.0016804499999999998
+}

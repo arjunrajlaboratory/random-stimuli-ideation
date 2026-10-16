@@ -1,0 +1,150 @@
+{
+  "batch": 8,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "cd507949fb15daa4518c635c0eba6aa209af4b8fed42053ec5d57f8725c33c42",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Memory timescale of the surviving state by re-challenging subcultures",
+      "description": "Isolate single cells, expand them for variable numbers of generations, and re-challenge replicate subcultures with drug at each time point. The decay of correlation in survival fraction between sibling subcultures as a function of elapsed divisions quantifies how many generations the resistant state is inherited. This separates transient fluctuation, epigenetic memory, and genetic mutation.",
+      "idea_id": "persister_opus_instruction_only_3_2",
+      "source_sha256": "6529948f256f144e8b62c4994b3335bc083350f36ea4b0fb3faf293acf4fa9f3"
+    },
+    {
+      "id": "I2",
+      "title": "Pre-treatment multi-omic profiling linked to later fate",
+      "description": "Profile individual cells before treatment with paired scRNA-seq and scATAC-seq, or index-sort them, then follow the same cells' fates with a live reporter of drug response. Searching for baseline chromatin or expression signatures that predict survival tests whether survival is encoded before the drug is added.",
+      "idea_id": "persister_haiku_future_retrospective_3_1",
+      "source_sha256": "cced15359808dcd688d369fa23a6da6c799d9e17f152dfe6a53c7cc5693a63ec"
+    },
+    {
+      "id": "I3",
+      "title": "Barcode lineage tracing with pre-treatment sampling",
+      "description": "Label cells with heritable expressed DNA barcodes, split the population before drug exposure, and profile one arm by scRNA-seq while treating the other arm. Linking surviving clones to their pre-treatment transcriptional states shows whether survival is predetermined, how heritable it is, and which states predict it.",
+      "idea_id": "persister_sonnet_plain_1_0",
+      "source_sha256": "93e5d735c392cdfd05a69897552c88471a83f59872f749ca8bcfc7968436b75e"
+    },
+    {
+      "id": "I4",
+      "title": "Clonal origin of survivors from public lineage-barcoding data",
+      "description": "Reanalyze published DNA-barcode lineage-tracing experiments in drug-treated cancer cell populations to measure how many surviving clones trace back to a shared pre-treatment barcode versus de novo emergence. The ratio indicates whether survival is driven by rare pre-existing variants or by stochastic or induced switching.",
+      "idea_id": "persister_haiku_assigned_constraint_0_2",
+      "source_sha256": "e922c26e94063e7cd7098ea2046b3610e6d35bb9e9979d8bbe77df3c3b77fd4f"
+    },
+    {
+      "id": "I5",
+      "title": "Spatial-transcriptomic neighborhood mapping of survivors",
+      "description": "Apply multiplexed in situ imaging (MERFISH or similar) to 3D cultures or xenografts during treatment to test whether survivors cluster by local microenvironment such as oxygen, density, or contact with stromal cells. Compare with matched non-survivors to separate cell-intrinsic from position-dependent protection.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_3_1",
+      "source_sha256": "ece5350375e034bdc3630cc796ca1df82fb28e7e1f6538459c546b94eb0387da"
+    },
+    {
+      "id": "I6",
+      "title": "Tracing survivor barcodes back to pre-treatment cell state",
+      "description": "Use expressed, sequenceable lineage barcodes so that the barcodes of drug survivors can be read out and matched to a sibling aliquot of the same population profiled (scRNA-seq, scATAC-seq, or barcode-targeted imaging) before any drug exposure. This retrospectively identifies the molecular state of the future survivors before drug exposure, rather than comparing survivors to the bulk population after selection has altered it.",
+      "idea_id": "persister_opus_parallel_rotated_1_1",
+      "source_sha256": "c0eaf953e6ce4f02469128158e552eb626da4637bd3a3fe72a424b1b35ef69dd"
+    },
+    {
+      "id": "I7",
+      "title": "Intrinsic/extrinsic noise decomposition of gene expression",
+      "description": "Use dual-reporter live imaging and single-cell RNA-seq to separate cell-intrinsic stochastic bursting from extrinsic factors such as cell size, cell-cycle phase and mitochondrial content for survival-linked genes. Then test causality by tuning noise without changing the mean, for example by altering promoter burst kinetics with CRISPRi/a, and measure the effect on survival fraction.",
+      "idea_id": "persister_sonnet_instruction_only_0_2",
+      "source_sha256": "d7bec98d3ee4ee8693b14b8be11fe25a6dbe64b36310633b2b523781c9c3272e"
+    },
+    {
+      "id": "I8",
+      "title": "Spatial statistics of survivor clustering in microenvironments",
+      "description": "Use spatial transcriptomics or multiplexed imaging of 3D cultures or tumors and apply spatial statistics such as Ripley's K and neighborhood enrichment. This tests whether survivors cluster in regions with particular oxygen, density, or paracrine signals, and whether they sit at the edges or core of colonies. Local microenvironments can then be manipulated, for example by changing density or conditioned media, to separate non-genetic cell-intrinsic causes from positional ones.",
+      "idea_id": "persister_sonnet_instruction_only_6_3",
+      "source_sha256": "ce07bbde3a33162a2e3e6d1135c3c41c04d818fdeacd7eceeb681f0d930b54fa"
+    },
+    {
+      "id": "I9",
+      "title": "Fitting persister emergence over repeated drug pulses",
+      "description": "Track the fraction of surviving cells across repeated drug pulses and fit S-curve or spread models. Adding spatial imaging in 3D culture tests whether tolerant states propagate between neighboring cells or arise independently in each cell.",
+      "idea_id": "persister_haiku_parallel_rotated_1_3",
+      "source_sha256": "c031b660e9358cb3b879a5b2dd7012d791c41cad391994188d485df1d1cebdf5"
+    },
+    {
+      "id": "I10",
+      "title": "Prospective reporter sorting to test priming",
+      "description": "Knock fluorescent reporters into the endogenous loci of candidate priming genes, sort live untreated cells from the top and bottom of the expression distribution, and challenge each fraction with drug. The fold-enrichment of survival in the reporter-high fraction converts a correlational signature into a predictive, quantitative measurement, and re-sorting after varying culture times measures how long the state is retained.",
+      "idea_id": "persister_opus_overgenerate_select_2_2",
+      "source_sha256": "3c3b056ee4fe520858eea0db474f284c34caa8d41479cce4d1de131fc9746cf9"
+    },
+    {
+      "id": "I11",
+      "title": "Depleting or knocking down a candidate marker before treatment",
+      "description": "Use FACS to deplete, or CRISPR to knock down, a candidate marker (for example, high expression of a drug-efflux or stress-response gene) before treatment, then check whether the low-survival tail disappears or returns. This tests whether the feature causes survival.",
+      "idea_id": "persister_opus_parallel_rotated_4_4",
+      "source_sha256": "bdd8cc5994cdf31e17c5e41e7e2f99806f4d315d7b211a33511667b8f7f9f394"
+    },
+    {
+      "id": "I12",
+      "title": "Sorting on pre-treatment physiology, then drug challenge",
+      "description": "Use FACS to isolate untreated cells by mitochondrial membrane potential, drug uptake or efflux (fluorescent analogs), size or slow-cycling dye retention, and measure survival of each fraction. This directly tests which physiological axes causally enrich persisters.",
+      "idea_id": "persister_sonnet_overgenerate_select_3_3",
+      "source_sha256": "0dee3a870112ef94a98886d33e4a3a22336a9c8ed03bdb1720199207eabbd267"
+    },
+    {
+      "id": "I13",
+      "title": "Prospective sorting test of the pre-treatment state",
+      "description": "Train a classifier on data linking pre-treatment single-cell state to survival, convert the top features into a live-cell readout (knock-in reporter, surface marker, or live RNA stain), then sort untreated cells on that readout and measure the fold-enrichment in survivor frequency after treatment. A large prospective enrichment establishes that the survival-determining state is present before treatment, while a null result localizes fate determination to events during drug exposure.",
+      "idea_id": "persister_opus_parallel_rotated_1_4",
+      "source_sha256": "506cf62869d889159bdf08fe959a0de1ccdd4bc32994ab713ea5f847207ea902"
+    },
+    {
+      "id": "I14",
+      "title": "Drug washout and re-challenge of sorted persister cells",
+      "description": "Sort surviving cells, remove the drug, and measure regrowth, drug sensitivity, and epigenetic memory over multiple generations, comparing them with naive cells. Whether the persister phenotype is reversible (non-genetic, plastic) or stably inherited (genetic or epigenetic) reveals the underlying mechanism and informs whether intermittent dosing or combination therapy could prevent survival.",
+      "idea_id": "persister_haiku_plain_7_4",
+      "source_sha256": "2aa1c8306ed30b29ee663ab4eb7b8a472494bbb3e4426619f7eafa2f096923da"
+    },
+    {
+      "id": "I15",
+      "title": "Mitotic partitioning asymmetry as the origin of the primed state",
+      "description": "Time-lapse image the unequal inheritance of mitochondria, lysosomes, efflux transporters, damaged/aggregated protein, and the drug target itself at each division, then follow both daughters into drug to test whether partitioning asymmetry at a specific division predicts which sister survives. Perturb mitosis duration or mitochondrial fission (DRP1) to shift the asymmetry distribution and test whether survivor frequency changes as predicted, which would place the origin of priming in stochastic division rather than transcription.",
+      "idea_id": "persister_opus_critique_revise_7_2",
+      "source_sha256": "baa2ce9dab2e93fc3be43631ec812d065ff88da82da54ea84bf9fe74616fbbdb"
+    },
+    {
+      "id": "I16",
+      "title": "Heritable lineage barcoding with pre-treatment tracking",
+      "description": "Introduce a CRISPR-based lineage recorder into a clonal cancer line, then follow single-cell lineages by time-lapse imaging through a drug pulse and sequence barcodes in survivors. If survivors cluster in lineages already distinguishable before treatment, persistence is pre-specified rather than drug-induced.",
+      "idea_id": "persister_haiku_future_retrospective_7_0",
+      "source_sha256": "cb889b37bb64f3f2f91603cea04042a269ad6aca52cf1fc64e866912318766c5"
+    },
+    {
+      "id": "I17",
+      "title": "Apoptotic threshold and mitochondrial inheritance",
+      "description": "Profile the cell death machinery at single-cell resolution: BH3-peptide-induced cytochrome c release or MOMP timing imaged live, together with per-cell mitochondrial mass, membrane potential, and BCL-2-family protein levels. Track how unevenly mitochondria and these proteins are partitioned between daughters at each division. If survivors come disproportionately from the daughter that inherited the less-primed mitochondrial pool, survival is a downstream execution threshold with a short, division-generated memory, which predicts that lowering the threshold with a BH3 mimetic reduces the surviving fraction without affecting any upstream pathway.",
+      "idea_id": "persister_opus_critique_revise_2_3",
+      "source_sha256": "337167d4330d35a6f12f0f337182c8ab9248b0fc062c3d7a085d80f80ed0e3bf"
+    },
+    {
+      "id": "I18",
+      "title": "System identification of the drug-response feedback network",
+      "description": "Apply short drug pulses and collect time-resolved phosphoproteomics and transcriptomics at dense intervals. Fitting a network model to this response can reveal feedback loops or bistable switches that let a subset of cells remain in a low-signaling, drug-tolerant stable state, and can predict which perturbations would push survivors back out of it.",
+      "idea_id": "persister_haiku_instruction_only_0_4",
+      "source_sha256": "64be61dc559fe9c803dbdce4b7aa18222481d1395ff485cf4167d97d2999383c"
+    },
+    {
+      "id": "I19",
+      "title": "Memory timescale of the primed state by delayed-treatment sister assays",
+      "description": "Isolate pairs of sister and cousin cells (micropatterns, microfluidic traps, or single-cell cloning), then treat them after systematically varied delays of 0 to many generations, scoring concordance of survival as a function of relatedness and elapsed divisions. The decay curve of fate concordance yields a quantitative half-life for the heritable determinant, distinguishing short-lived signaling fluctuations, multi-generation epigenetic memory, and permanent genetic differences without assuming what the determinant is.",
+      "idea_id": "persister_opus_obvious_then_avoid_3_1",
+      "source_sha256": "2901e57da5e275cd36c714129584503c9de95905ac4c604f59ad49e20f88aab1"
+    },
+    {
+      "id": "I20",
+      "title": "Heritability of fate across lineage trees",
+      "description": "Perform time-lapse imaging of full lineage trees with drug added at varied times post-division, measuring fate concordance between sisters, cousins, and more distant relatives. The decay of concordance with genealogical distance estimates how long a survival-priming state is heritable versus randomly reset.",
+      "idea_id": "persister_opus_instruction_only_4_1",
+      "source_sha256": "24a2373f4cfe3e4b94e406167aac2b34290e11601ccb67df2952a00074fcde11"
+    }
+  ],
+  "cost_usd": 0.050327199999999996
+}

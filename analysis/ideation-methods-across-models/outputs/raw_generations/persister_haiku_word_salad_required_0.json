@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 0,
+  "stimulus": "allonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nallonymous unsloped desmid souring esteemer believe epitritic desmopexia listedness ergoplasm fallway avulsion bugle entoolitic linoleum unamerced superfolly infamous corebel disconcert antihelix stingless rebuoy hyponoia inheaven pteraspid sootless savanilla mesh iodiferous kalamalo sync bubo blithering guglia riskless enervate indelibly fancical shafty atropism cohesible tricaudal kerchoo insulator toadess scleriasis hoopoe puckball kidsman verveled bedfoot nashgab quinoform panties quadratics spithame verrel pompholyx jacutinga\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with live cell-cycle reporters",
+      "description": "Label each founder cell with a heritable DNA barcode and a FUCCI cell-cycle reporter, then image the population through drug exposure to see whether survivors were already slow-cycling or in a distinct state before treatment. Comparing survivor clones with their pre-treatment lineage shows whether persistence is pre-existing and inherited or arises de novo, like an avulsion that tears a fragment away from the parent population."
+    },
+    {
+      "title": "Single-cell multiomics on early persister cells",
+      "description": "Run paired scRNA-seq and scATAC-seq on cells sorted at multiple early time points after drug exposure, and compare the survivors' chromatin accessibility and transcriptional states with those of the cells that die. This reveals whether a pre-existing or rapidly induced tolerant state, marked by chromatin regions that act like insulators gating gene programs, predicts survival."
+    },
+    {
+      "title": "Drug-holiday and re-challenge test of heritable epigenetic memory",
+      "description": "Expose cells to the drug, withdraw it until survivors regrow, then re-challenge them, while profiling histone marks (CUT&RUN for H3K27ac and H3K4me3) at each step. If the survivors' tolerance and chromatin state persist through several cell divisions without drug, the memory is effectively indelible; if both reset, the tolerance is reversible and non-genetic."
+    },
+    {
+      "title": "Per-cell drug accumulation biosensing linked to survival",
+      "description": "Use a FRET-based intracellular drug biosensor or a fluorescent drug analogue with live imaging to measure how much drug each cell takes up and how fast it is effluxed, then track each cell's fate. Cells with low intracellular drug, from efflux-pump activity or reduced uptake, may be the survivors, so comparing uptake with the target-engagement readout (for example a phospho-reporter) tests whether the drug never reaches a lethal dose in those cells."
+    },
+    {
+      "title": "Pooled CRISPR screen comparing sublethal and lethal drug doses",
+      "description": "Run a genome-wide CRISPR knockout or CRISPRi screen in the cell line under both sublethal and lethal drug doses, then sequence the surviving pool to find guides that enrich or deplete. Hits that appear only at the lethal dose point to the genes whose loss sensitizes or protects cells, and validating them one by one in single-clone experiments separates genetic causes from stochastic tolerance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2624,
+  "cost_usd": 0.00158575
+}

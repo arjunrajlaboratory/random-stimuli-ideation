@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clone-splitting to time when survival is decided",
+      "description": "Barcode a population, let each clone expand for a defined number of divisions, split sister cells across replicate plates, and treat all plates identically with the targeted drug. The degree to which the same barcodes survive across replicates separates heritable pre-existing priming from coin-flip stochasticity at the moment of exposure, and varying the expansion interval measures how long the primed state persists."
+    },
+    {
+      "title": "Retrospective profiling of the untreated sisters of future survivors",
+      "description": "Use expressed lineage barcodes plus sister-cell splitting to identify, after the fact, which barcodes survived, then deeply profile the matched untreated sisters by single-cell RNA, ATAC, and surface protein measurement. This reveals the rare transient pre-treatment state that predicts survival, rather than the post-drug state of cells that have already been reshaped by treatment."
+    },
+    {
+      "title": "Multigenerational live imaging of signaling and cycle history before drug",
+      "description": "Track lineages for many generations with ERK/AKT activity reporters, cell-cycle reporters, and drug-target pathway sensors, then regress survival on each cell's full history, including pulse frequency, quiescence episodes, division timing, and asymmetric partitioning at mitosis. This tests whether temporal history predicts survival better than any single-timepoint snapshot of expression."
+    },
+    {
+      "title": "Screens scored on frequency of priming rather than on survival",
+      "description": "Combine pooled CRISPR or small-molecule perturbations with a live reporter of the primed pre-resistant state and lineage barcodes, scoring each perturbation by how it changes the frequency of primed cells and the rates of switching into and out of that state. This isolates regulators of the variability itself, which are often distinct from genes that confer resistance once a cell is already primed."
+    },
+    {
+      "title": "Same-barcode fate comparison across drugs, doses, and in vivo context",
+      "description": "Split one barcoded population across different targeted agents, doses, and matched in vitro versus xenograft environments, then ask whether the identical set of barcodes survives in each condition. Shared survivors would indicate a general primed state, while condition-specific survivors would show that the microenvironment and drug mechanism select different subsets, directly constraining which measurements could ever predict survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2152,
+  "cost_usd": 0.0843894
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 2,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria\u2013Delbr\u00fcck analogy)",
+      "description": "Borrowing Luria and Delbr\u00fcck's phage-resistance experiment from bacterial genetics, label cells with heritable DNA barcodes, split the population into replicate cultures, and apply drug. If resistant survivors cluster in a few replicates (jackpot distribution), resistance arises from rare pre-existing or heritable states. If survivors are spread evenly across replicates, it arises from stochastic induction. Comparing barcode overlap across replicates and before versus after drug quantifies how heritable the state is and how quickly it switches."
+    },
+    {
+      "title": "Pre-treatment state memory via sister-cell pairing (twin studies analogy)",
+      "description": "Like twin studies separating nature from nurture, split dividing sister cells: profile one by single-cell RNA-seq, and let the other expand and be drug-challenged, which links each pre-treatment transcriptional state to the sister's later fate. Clonal barcoding or live-cell lineage tracking can pair the sisters. This tests whether survival is predicted by a pre-existing state and how many generations that state persists."
+    },
+    {
+      "title": "Bet-hedging noise analysis using information theory",
+      "description": "Apply ecological bet-hedging and information-theoretic ideas by measuring cell-to-cell variability in target pathway proteins, such as live reporters for the drug target's pathway, drug efflux and stress-response activity. Then estimate the mutual information between the pre-drug reporter levels and survival. Time-lapse microscopy with autocorrelation gives the state's persistence time. This shows whether survivors are a heritable stochastic subpopulation with a fitness trade-off in drug-free conditions."
+    },
+    {
+      "title": "Energy-landscape and early-warning dynamics (statistical physics / Waddington landscape)",
+      "description": "Treat cell states as basins in an attractor landscape and take time-resolved single-cell multiome (RNA plus ATAC) at fine intervals after drug exposure. Infer trajectories and transition rates (RNA velocity, optimal transport) to see whether survivors reach a drug-tolerant basin via a distinct path. Look for critical-slowing-down signatures, such as rising variance and autocorrelation, before the transition. Perturbing the identified barriers, for example with chromatin modifiers, tests whether tolerance can be prevented."
+    },
+    {
+      "title": "Spatial and microenvironment mapping of survivors (epidemiology cluster analysis)",
+      "description": "Applying cluster-detection methods from disease epidemiology, map survivors in 3D culture or xenograft sections with spatial transcriptomics or multiplexed imaging. Test whether they cluster near hypoxic, nutrient-rich or paracrine-signalling niches beyond what chance predicts. Spatial statistics, such as Ripley's K and neighbourhood enrichment, separate cell-intrinsic from niche-driven survival. Disrupting the implicated niche factor then tests causality."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1059,
+  "cost_usd": 0.013349
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after a priming pulse",
+      "description": "Induce a transient stimulus, then rapidly degrade FOS or JUN with an inducible degron (e.g., dTAG or auxin-inducible) at defined times after washout. Track chromatin accessibility (ATAC-seq), enhancer marks (H3K27ac), and expression of putative memory genes over days; persistence after AP-1 loss would support a self-sustaining memory, while rapid decay would argue AP-1 is only a transient readout."
+    },
+    {
+      "title": "Time-course of chromatin persistence at AP-1 sites with motif-mutant controls",
+      "description": "After a single pulse with washout, profile CUT&RUN for AP-1 and ATAC-seq/H3K4me1/H3K27ac at multiple timepoints out to weeks. Compare enhancers with intact AP-1 motifs against CRISPR-edited motif-mutant versions of the same elements to test whether AP-1 binding is required for the persistent chromatin state."
+    },
+    {
+      "title": "Priming-and-reinduction assay for transcriptional memory",
+      "description": "Prime cells with a sub-threshold stimulus, wait variable intervals, then re-stimulate and measure the speed and magnitude of FOS/JUN induction and downstream target expression relative to naive cells. Repeat in cells carrying AP-1 binding-site mutations or lacking a chromatin-remodeling cofactor to see whether faster or stronger reinduction depends on AP-1 itself."
+    },
+    {
+      "title": "Live reporter lineage tracing of AP-1 activity across divisions",
+      "description": "Use a destabilized-fluorescent AP-1 target reporter combined with a stable lineage barcode or histone-label to follow individual cells through several divisions after stimulation. Sort subpopulations by heritable reporter state and compare their chromatin landscapes and response to a second stimulus, testing whether AP-1 activity states are inherited through cell division."
+    },
+    {
+      "title": "Stabilized AP-1 variant sufficiency and ensemble reactivation test",
+      "description": "Express a degradation-resistant or long-lived AP-1 isoform (e.g., a \u0394FosB-like stabilized FOS) and test whether it extends the duration of induced chromatin and behavioral or functional changes beyond wild-type lifetimes. Pair this with activity-dependent ensemble tagging and optogenetic or chemogenetic reactivation to determine whether reactivating the tagged, AP-1-positive population is necessary and sufficient to recall the stored state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1653,
+  "cost_usd": 0.0011333
+}

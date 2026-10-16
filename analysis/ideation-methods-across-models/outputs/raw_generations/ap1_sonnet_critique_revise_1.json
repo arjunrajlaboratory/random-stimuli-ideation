@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Transient stimulus with long-term chromatin accessibility tracking: Expose cells (e.g., fibroblasts, macrophages, or keratinocytes) to a defined, transient AP-1-activating stimulus (such as TPA, injury, or inflammatory cues), then perform ATAC-seq/CUT&Tag for AP-1 factors (FOS, JUN) and H3K27ac at time points from hours to weeks after washout. Persistent AP-1-bound accessible sites after stimulus removal, relative to naive controls, would indicate memory.\n2. Acute AP-1 perturbation (degron/CRISPRi/dominant-negative) during priming versus recall: Use dTAG/AID degrons or dominant-negative A-FOS to deplete AP-1 only during the priming phase, only during the memory/maintenance phase, or only during the re-stimulation phase. If memory requires AP-1 for establishment but not maintenance (or vice versa), this dissects whether AP-1 is the initiator, the carrier, or merely a reader of the memory.\n3. Re-stimulation (primed vs naive) transcriptional response assays: Compare primed and naive cells upon second stimulation using RNA-seq, nascent transcription (PRO-seq/TT-seq), and live reporters, testing for faster/stronger induction of AP-1 target genes. Correlate magnitude of the recall response with prior AP-1 occupancy at the corresponding enhancers to link AP-1 binding to functional memory.\n4. Single-cell multiome and lineage-tracing of memory inheritance: Apply single-cell RNA+ATAC (and clonal barcoding) to primed populations across cell divisions to test whether AP-1 motif accessibility/activity is stably inherited by daughter cells and whether sister cells share memory states. Pair with live-cell imaging of endogenous tagged FOS/JUN dynamics to see if heritable differences in AP-1 level or dynamics predict later responses.\n5. Locus-specific causal editing of AP-1 sites and chromatin-state readouts: Mutate or CRISPR-block individual AP-1 motifs at candidate memory enhancers (or tether activators/repressors via dCas9) and measure whether priming-induced accessibility, histone marks, 3D contacts (Micro-C/HiChIP), and recall expression are lost. Also test whether pioneer-associated partners (e.g., BAF/SWI-SNF, p300) at these sites are required, distinguishing AP-1 as a causal memory element from a correlate.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic AP-1 pulse-frequency encoding of memory",
+      "description": "Use optogenetically controlled FOS/JUN (or light-gated dimerization) to deliver identical total AP-1 dose with different pulse durations and frequencies, then measure persistent accessibility and recall after washout. This tests whether memory is encoded by AP-1 dynamics (transient vs sustained) rather than mere presence, and defines a threshold for memory writing."
+    },
+    {
+      "title": "Synthetic AP-1 memory without the native stimulus",
+      "description": "Express a drug-inducible, AP-1-only synthetic activator (e.g., constitutively active JUN/FOS fusion, pulsed and then removed) in naive cells and ask whether it alone reproduces the primed accessibility and recall response of the natural stimulus. A sufficiency test like this separates AP-1 as a memory writer from other signaling arms such as NF-\u03baB, MAPK or STAT that normally co-activate."
+    },
+    {
+      "title": "Nucleosome-resolved single-molecule footprinting at memory loci",
+      "description": "Use Fiber-seq or SMF/NOMe-seq on primed versus naive cells to read nucleosome positions and TF occupancy on single DNA molecules at AP-1 sites after washout. This shows whether memory is a stable open state in a subpopulation of alleles (bimodal, heritable) or a graded shift, and whether AP-1 is still bound or has left behind a remodeled nucleosome."
+    },
+    {
+      "title": "Allele-specific memory in hybrid cells with a single mutated AP-1 site",
+      "description": "In F1 hybrid or heterozygous cells, mutate the AP-1 motif on one allele and track allele-specific accessibility, H3K27ac and nascent RNA through priming, washout, and restimulation. Two alleles in the same nucleus share trans factors, so any difference in memory is cis-encoded at the AP-1 site rather than due to a global cell state."
+    },
+    {
+      "title": "Mitotic bookmarking and replication-coupled retention assay",
+      "description": "Combine CUT&Tag or live imaging of FOS/JUN on mitotic chromosomes with synchronization, EdU-based replication-timing and cell-cycle arrest experiments to test whether AP-1 stays on chromatin through mitosis. Comparing memory persistence in cells forced through division with that in arrested non-dividing cells shows whether memory depends on propagation across divisions or on persistent chromatin state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 880,
+  "cost_usd": 0.0166875
+}

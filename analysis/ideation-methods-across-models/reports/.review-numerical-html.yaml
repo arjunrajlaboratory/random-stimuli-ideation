@@ -1,0 +1,19 @@
+# Phase 6 round 1 (blind sub-agent). All applied in .fill_template.py / scripts/07_report_values.py.
+provenance:
+  - {severity: major, summary: "'same ranking' claimed in abstract, R6 heading, caveat", status: fixed ("best and worst prompts")}
+  - {severity: major, summary: "assigned constraint 'lost the most usefulness' but critique lost more", status: fixed}
+  - {severity: major, summary: "untested claim that several prompts beat running one more often", status: fixed (hedged; not tested at equal calls)}
+  - {severity: minor, summary: "usefulness loss used to explain losing prompts; novelty gain is the difference", status: fixed}
+  - {severity: minor, summary: "abstract 'Sonnet gained little'", status: fixed (per-model gains stated)}
+  - {severity: minor, summary: "'re-sent up to three times' vs 3 attempts total", status: fixed}
+  - {severity: minor, summary: "'ends with the plain request' contradicts suffix prompts", status: fixed}
+  - {severity: minor, summary: "paraphrases in quotation marks", status: fixed}
+  - {severity: minor, summary: "compile log cited but missing", status: written at end of Phase 9d}
+  - {severity: minor, summary: "p '= 0.001' below attainable floor; table 2-sig-fig vs prose", status: fixed (fmt_p 2 sig figs below 0.01; table CSV formatted at fixed decimals)}
+  - {severity: minor, summary: "bare counts 'five of seven', 'seven of nine'", status: fixed (registered and wrapped)}
+  - {severity: minor, summary: "'eighty ideas per model' wrong denominator", status: fixed}
+  - {severity: minor, summary: "'after four rounds' vs 'designed in round four of five'", status: fixed}
+style:
+  - {severity: minor, summary: "all-idea groups caption vs per-question clustering", status: fixed}
+  - {severity: minor, summary: "union counts without denominators", status: fixed}
+  - {severity: minor, summary: "'lowering by' negative numbers", status: fixed}

@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dimer-resolved memory map (breaks the 'AP-1 is one thing' assumption)",
+      "description": "Endogenously tag each major Fos/Jun/ATF subunit and use sequential ChIP/CUT&RUN and dimerization-dependent split-fluorophore reporters to determine which specific dimer compositions occupy memory loci during induction versus maintenance versus recall. Pair with subunit-specific degrons to ask whether the dimer that establishes a site is the same one that maintains it."
+    },
+    {
+      "title": "Erase-and-restore kinetics with acute degron plus single-molecule tracking (breaks 'persistence = storage')",
+      "description": "Use an auxin/dTAG degron to fully remove AP-1 protein for a defined window during the maintenance phase, then restore it and test recall; simultaneously measure AP-1 residence times and turnover by live single-molecule tracking and SNAP-tag pulse-chase. If memory survives transient total loss of AP-1, the information is stored elsewhere and AP-1 is a reader/relay; if it does not, AP-1 occupancy is itself the store."
+    },
+    {
+      "title": "Synthetic sufficiency test by targeted AP-1 writing (breaks the correlation-is-causation assumption)",
+      "description": "Recruit a Fos/Jun bZIP effector to defined candidate memory enhancers with dCas9 in the absence of any stimulus, then withdraw recruitment and assay whether primed behavior appears days later; complement with base-edited destruction of individual endogenous AP-1 motifs to test necessity for maintenance separately from necessity for the acute response."
+    },
+    {
+      "title": "Memory transplantation across cells and matrix (breaks the cell-intrinsic assumption)",
+      "description": "Test whether the primed state travels with the cell or with its environment by swapping decellularized ECM and conditioned medium between primed and naive cultures, co-culturing primed with naive cells, and transplanting primed cells into naive hosts (and vice versa). Readout is AP-1 site accessibility and recall competence in the recipient population."
+    },
+    {
+      "title": "Optogenetic dose/duration/order encoding with clonal lineage recall (breaks the binary, population-average assumptions)",
+      "description": "Deliver quantitatively defined ERK or Fos input patterns with optogenetics while live-imaging an endogenous AP-1 activity reporter, then barcode and track single lineages through division to a second, independent recall stimulus. This measures how much information (amplitude, duration, pulse order) the AP-1 state stores, its decay half-life, and how fast sister-cell correlations are lost."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is treated as a single functional entity, when it is a family of ~18 Fos/Jun/ATF/MAF dimers; motif-accessibility and pan-AP-1 ChIP readouts conflate dimers with different stabilities and functions.",
+      "Memory is assumed to be stored in the persisting molecule/mark itself (continued AP-1 occupancy or accessibility), rather than in a fast-turnover self-sustaining feedback circuit in which AP-1 is a relay, not a repository.",
+      "Persistence that correlates with a later phenotype is assumed to be causal; necessity and sufficiency of AP-1 specifically during the maintenance and recall windows are rarely tested separately from the induction window.",
+      "Memory is assumed to be cell-intrinsic and heritable through division, ignoring extrinsic storage in ECM, secreted factors, or neighbor cells that could continuously re-impose an AP-1 state.",
+      "Population-average, cross-sectional snapshots are assumed to report on single cells, i.e. that the cells with high AP-1 at time 1 are the same cells that respond at time 2 \u2014 which requires lineage resolution to establish.",
+      "Memory is assumed to be binary (primed vs naive) rather than analog, so stimulus dose, duration, pulse pattern and order \u2014 the actual information content of the memory \u2014 go unmeasured.",
+      "The memory readout is assumed to be transcriptional/chromatin-based, and chromatin accessibility is assumed to be the storage medium that AP-1 merely marks.",
+      "The persistent state is assumed to be functional memory rather than an inert scar; many studies lack a defined recall test with an independent second stimulus.",
+      "Timescales studied in culture (hours to days) are assumed to generalize to physiologically relevant memory in tissue."
+    ]
+  },
+  "output_tokens": 3959,
+  "cost_usd": 0.12319169999999999
+}

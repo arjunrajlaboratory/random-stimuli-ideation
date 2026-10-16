@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-treatment sister-cell tracking: Label cells with heritable DNA barcodes, split the population before drug exposure, and compare which barcodes survive in replicate arms. Recurrence of the same clones across replicates indicates pre-existing, heritable states, while random survivors indicate stochastic or non-heritable states.\n2. Single-cell multi-omics of persisters over time: Run scRNA-seq paired with scATAC-seq on cells before treatment, during drug exposure, and after regrowth, to identify transcriptional and chromatin states enriched in survivors. Trajectory and RNA-velocity analysis can show whether persisters arise from a rare pre-existing state or are induced by the drug.\n3. Live-cell imaging with reporters and retrospective fate mapping: Image single cells for days before and after drug addition using fluorescent reporters of signaling (such as ERK or AKT activity), cell cycle, and stress. Then link each cell's pre-treatment history, such as signaling dynamics, cell-cycle phase, or mitochondrial content, to its survival outcome, and isolate survivors for sequencing.\n4. Pooled CRISPR screens plus pharmacologic perturbation of candidate states: Run genome-wide or epigenetic-focused CRISPR knockout/interference screens under drug to find genes that raise or lower persister frequency. Then validate causal mechanisms, such as drug efflux, anti-apoptotic buffering, or oxidative stress (e.g., GPX4/ferroptosis), with targeted inhibitors.\n5. Quantitative modeling of switching rates (fluctuation tests): Use Luria-Delbr\u00fcck-style fluctuation assays and sorted subpopulations to measure the rates at which cells switch into and out of the drug-tolerant state, and its memory duration. Fit stochastic models to the data to distinguish genetic mutation, epigenetic switching, and drug-induced adaptation, and predict dosing schedules that minimize persisters.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell mitochondrial mutation lineage tracing of persister ancestry",
+      "description": "Use naturally occurring mtDNA variants (scATAC/mito-enriched or MAESTER-style) as endogenous barcodes to reconstruct clonal relationships among surviving cells without engineered labels. Test whether survivors are clonally clustered beyond chance and how deep in the lineage tree shared tolerance extends, giving a memory length in divisions."
+    },
+    {
+      "title": "Single-cell cytometry/proteomic profiling of apoptotic priming (BH3 profiling)",
+      "description": "Perform dynamic BH3 profiling or single-cell mitochondrial priming measurements on untreated cells, then correlate priming with survival after sorting by priming level. This tests whether persistence is set by a pre-existing apoptotic threshold rather than by pathway reactivation."
+    },
+    {
+      "title": "Spatial and microenvironment-resolved persister mapping",
+      "description": "Culture cells in 3D or spatially patterned conditions (micropatterns, spheroids) and use spatial transcriptomics or multiplexed imaging after drug exposure to test whether survivors localize to defined local density, hypoxia, or cell-contact niches. Perturbing density/contact (e.g., by cell-contact or secreted-factor manipulation) shows whether persistence is partly a neighborhood property rather than purely cell-intrinsic."
+    },
+    {
+      "title": "Drug-target engagement and intracellular drug concentration at single-cell resolution",
+      "description": "Measure intracellular drug levels (using fluorescent drug analogs, label-free imaging, or mass cytometry of target occupancy/phospho-readouts) and downstream pathway inhibition in individual cells shortly after dosing. This reveals whether survivors escape by receiving less effective inhibition, through efflux, sequestration (e.g., lysosomal trapping), or target-level differences, versus tolerating full inhibition."
+    },
+    {
+      "title": "Cell-division asymmetry and partitioning of organelles/proteins",
+      "description": "Track mother-daughter pairs by time-lapse imaging with labeled mitochondria, lysosomes, or aggregated proteins, and sort daughters by unequal inheritance to test whether asymmetric partitioning predicts survival. Pair with sibling-pair concordance analysis to separate inherited cytoplasmic state from chromatin-based memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 855,
+  "cost_usd": 0.0157415
+}

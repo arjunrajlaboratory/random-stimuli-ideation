@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heritable barcodes to profile the untreated relatives of survivors",
+      "description": "Tag cells with expressed, heritable clonal barcodes, let them expand, then split the population so one arm is treated and the other is left naive. Barcodes identify which naive cells are close relatives of the eventual survivors, and single-cell RNA/ATAC profiling of those relatives reveals the pre-existing molecular state that predicted survival rather than the state the drug induced."
+    },
+    {
+      "title": "Long-term live imaging of single cells from before dosing through outgrowth",
+      "description": "Image a sparse, fluorescently reporter-tagged population continuously from several divisions before treatment until resistant colonies appear, then back-track each survivor's full lineage. This directly links measurable pre-drug properties (cell-cycle phase, size, reporter level, signaling dynamics, local density, time since last division) and post-drug behaviors (dormancy, division timing) to who lives and who dies."
+    },
+    {
+      "title": "Spatially resolved transcriptomics on fixed plates capturing rare survivors in situ",
+      "description": "Rather than dissociating cells, apply in situ sequencing or multiplexed single-molecule FISH to the treated monolayer so that rare persisters are measured together with their immediate neighbors and their position in the colony. This tests whether survival is driven by cell-intrinsic state or by local microenvironment effects such as crowding, paracrine signaling, and nutrient gradients."
+    },
+    {
+      "title": "Sorting on a candidate marker to prospectively enrich and then test future survivors",
+      "description": "Use FISH- or antibody-based sorting on candidate high-expression markers (for example receptor tyrosine kinases or drug-efflux and stress genes) to isolate the rare marker-high subpopulation from an untreated culture, then treat sorted versus unsorted cells in parallel. A reproducible shift in survival frequency converts a correlative signature into a causal, prospectively predictive one, and re-sorting after outgrowth measures how quickly the state reverts."
+    },
+    {
+      "title": "Perturbation screens combined with single-cell readouts to find what controls entry into and exit from the primed state",
+      "description": "Run CRISPR activation/interference or epigenetic-modifier inhibitor screens with a single-cell or barcoded readout, scoring not only total survivor number but also the frequency of cells occupying the primed transcriptional state before treatment. Separating factors that change how often cells enter the state from those that change whether primed cells successfully stabilize resistance distinguishes a fluctuation-driven model from a selection/epigenetic-lock-in model."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1242,
+  "cost_usd": 0.054345899999999996
+}

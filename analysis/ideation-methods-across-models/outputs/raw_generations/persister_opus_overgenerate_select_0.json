@@ -1,0 +1,61 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 2,
+  "ideas": [
+    {
+      "title": "Retrospective lineage tracing of the pre-treatment state",
+      "description": "Barcode cells with an expressed, single-cell-readable lineage tag, let them divide a few times, then split the population so one half is profiled untreated and the other half is drug-treated; barcode matching lets you read out the pre-treatment transcriptome of the exact lineages that go on to survive. This converts an otherwise impossible retrospective question into a direct measurement and avoids relying on guessed marker genes."
+    },
+    {
+      "title": "Twin-split assay to measure how heritable and how long-lived priming is",
+      "description": "Split an expanded barcoded population into two or more replicate flasks and treat each independently, then ask how strongly survivor barcode identity is shared across replicates; the concordance quantifies heritability, and repeating the split after increasing numbers of pre-treatment generations gives the memory half-life of the primed state. This single design distinguishes stable genetic causes, semi-heritable epigenetic priming, and purely stochastic last-minute decisions."
+    },
+    {
+      "title": "Prospective sorting plus controlled re-priming as a causality test",
+      "description": "Use a live-cell reporter or surface marker for the candidate primed state to sort rare high cells before treatment and compare their survival frequency to sorted low cells, then test sufficiency by driving the same gene transiently at the amplitude and duration seen in natural fluctuations. Correlative profiling cannot tell you whether a state causes survival; this pairing of sorting and amplitude-matched induction can."
+    },
+    {
+      "title": "Per-cell drug exposure and target engagement imaging",
+      "description": "Measure fluorescent drug analog accumulation and a phospho-specific target readout in the same cells during the first hours of treatment, so that each survivor can be labeled as under-dosed, poorly target-engaged, or fully engaged but death-resistant. This rules in or out the mundane pharmacological explanations that are rarely measured and that would otherwise confound any transcriptional story."
+    },
+    {
+      "title": "Single-cell apoptotic priming as the death-threshold axis",
+      "description": "Apply BH3 profiling or a comparable mitochondrial depolarization assay at single-cell resolution to untreated cells, then relate measured priming to survival after drug challenge in matched lineages. This tests a distinct hypothesis from the usual signaling-state framing, namely that survivors differ not in how the drug is sensed but in how close they already sit to the apoptotic threshold."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding combined with single-cell RNA-seq to retrospectively recover the pre-treatment transcriptional state of cells that later survive",
+      "Twin/sister-cell split experiments: expand a barcoded population, split it, treat both halves, and ask how often the same lineages survive to measure heritability of the primed state",
+      "Time-resolved live imaging of signaling reporters (ERK kinase translocation reporter, FUCCI cell cycle, p21) through the first days of drug exposure to link dynamics to survival",
+      "Single-molecule RNA FISH for candidate resistance markers in untreated cells to quantify the frequency, co-expression and burst structure of rare high-expressing cells",
+      "Prospective sorting on a candidate pre-treatment marker followed by drug challenge to test whether the state is causal rather than correlative",
+      "Memory-decay experiment: sort primed cells, let them regrow for varying numbers of generations, then challenge with drug to measure the half-life of the primed state",
+      "Single-cell ATAC-seq or joint RNA+ATAC on pre-treatment cells to ask whether the primed state is chromatin-encoded or purely transcriptional noise",
+      "CRISPR interference or activation screens performed specifically in the sorted rare-cell subpopulation rather than the bulk population",
+      "Fluctuation analysis / Luria-Delbruck design across many parallel cultures to partition survival between heritable pre-existing states and drug-induced conversion",
+      "Whole-genome sequencing of surviving colonies versus matched controls to rule in or out pre-existing genetic lesions as the explanation",
+      "Drug washout and re-challenge of expanded survivors to test whether resistance is reversible, which distinguishes epigenetic from genetic causes",
+      "Measuring intracellular drug concentration per cell with a fluorescent drug analog or mass spectrometry imaging to test whether survivors simply get less drug",
+      "Quantifying target engagement per cell with a phospho-specific antibody or in-cell target occupancy assay to separate pharmacokinetic from signaling explanations",
+      "Metabolic labeling and single-cell protein translation or degradation rate measurements to test whether survivors differ in proteostasis rather than mRNA",
+      "Single-cell proteomics or CyTOF on pre-treatment cells to test whether the primed state is visible at the protein level where RNA noise averages out",
+      "Microenvironment reconstruction: imaging local cell density, neighbor identity and position at the time of treatment to ask whether survival is a spatial, not cell-intrinsic, property",
+      "Conditioned-media and co-culture swaps to test whether survivors secrete or receive paracrine survival signals",
+      "Mitochondrial apoptotic priming (BH3 profiling) at single-cell resolution before treatment to test whether survival reflects a death-threshold difference rather than a signaling one",
+      "Long-term continuous imaging of individual drug-tolerant persisters to classify them as quiescent, slow-cycling, or cycling-and-dying-less",
+      "Modeling and inference: fit stochastic state-switching models to survival kinetics across drug doses to extract switching rates and predict the effect of pre-treatment priming",
+      "Sequential perturbation: treat with drug A, let a persister pool form, then profile its vulnerability to a panel of second drugs to map the persister state functionally",
+      "Isotope or dye dilution tracking of division history (CFSE, H2B photobleaching) to test whether survivors were slow-cycling before drug was added",
+      "Allele-specific or single-allele transcription imaging (MS2 tagging) of a resistance gene to see whether rare high expression comes from burst frequency or burst size",
+      "Testing whether the primed state is transferable by nuclear transfer or by transient overexpression pulses that mimic the natural fluctuation amplitude and duration"
+    ]
+  },
+  "output_tokens": 2587,
+  "cost_usd": 0.0885686
+}

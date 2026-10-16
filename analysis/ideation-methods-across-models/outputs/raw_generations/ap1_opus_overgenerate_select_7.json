@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Storage-window degron: is AP-1 the memory, or just the writer?",
+      "description": "Use dTAG/auxin degrons on endogenous FOS, JUN, JUNB and FOSL1 so that AP-1 can be eliminated selectively during the interval between a priming stimulus and a rechallenge, leaving induction and readout phases intact. If priming survives AP-1 loss during storage, AP-1 writes the memory into chromatin; if it collapses, AP-1 protein persistence is itself the memory trace, and the two cases are cleanly distinguished by a single timing variable."
+    },
+    {
+      "title": "Single-molecule footprinting of primed enhancers",
+      "description": "Apply long-read methylation footprinting (Fiber-seq or SAMOSA) to naive, stimulated, and rested cells to ask whether primed AP-1 enhancers show a bimodal population in which a subset of molecules remain fully open and bound, versus a uniform intermediate state across all molecules. Population-average ATAC cannot tell these apart, yet they imply completely different memory mechanisms (a stable per-allele latch versus a graded relaxation)."
+    },
+    {
+      "title": "Hysteresis mapping in stimulus dose space",
+      "description": "Measure AP-1 target output across an ascending and then descending ladder of stimulus doses with matched equilibration times, testing for a hysteresis loop in which cells approaching from the high-dose side stay active at doses that cannot activate naive cells. An open loop is a direct, model-free signature of bistable memory, and the loop width quantifies memory depth; its absence argues for slow relaxation instead."
+    },
+    {
+      "title": "Mitosis-and-replication tracking of the primed state",
+      "description": "Combine clonal barcoding with division counting (dye dilution or FUCCI-gated sorting) and single-cell multiome to measure how many cell divisions a primed AP-1 chromatin state survives, and whether sister cells inherit priming concordantly. Heritability across mitosis plus concordance between sisters is the operational definition of cellular memory and separates it from a long-lived but non-heritable cytoplasmic state."
+    },
+    {
+      "title": "Synthetic AP-1 site arrays as a tunable memory element",
+      "description": "Integrate at a fixed safe-harbor locus a panel of reporters whose enhancers differ in AP-1 site number, affinity, spacing and neighboring cofactor motifs, then run identical prime\u2013wait\u2013rechallenge protocols on each. This converts a correlational question into a design rule: it identifies the minimal cis architecture sufficient to store a transient AP-1 input and shows which features set memory duration."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Measure persistence of AP-1 motif-containing accessible chromatin peaks by ATAC-seq at a dense time course after a transient stimulus is withdrawn, relative to AP-1 protein decay kinetics",
+      "Acute auxin/dTAG degradation of FOS/JUN family members during the storage phase (after stimulus, before restimulation) to test whether continued AP-1 occupancy is required to maintain memory",
+      "Restimulation assay with graded doses and intervals to build a dose-response/decay curve of the primed response, giving a quantitative 'memory half-life' per gene",
+      "Single-cell lineage barcoding (e.g., Watermelon/CellTag) plus scATAC to ask whether primed accessibility and primed transcriptional output are heritable through mitosis within clones",
+      "Live-cell imaging of endogenous FOS/JUN translational-fusion reporters plus a downstream target reporter to correlate past AP-1 dynamics in individual cells with future response amplitude",
+      "Mitotic bookmarking test: live imaging and ChIP/CUT&RUN in synchronized mitotic cells to see whether AP-1 remains chromatin-bound on condensed chromosomes",
+      "Replication-coupled dilution test: label with EdU/SNAP-tag and ask whether primed enhancers survive S-phase and how many divisions memory survives",
+      "Synthetic AP-1 binding-site arrays with tunable number/affinity/spacing integrated at a safe harbor, to test what site architecture is sufficient to store a transient input",
+      "CUT&RUN/ChIP for individual AP-1 dimer partners over time to test whether memory corresponds to a handoff from early FOS-containing dimers to long-lived JUN/JUND/FOSL1 dimers",
+      "Targeted recruitment of AP-1 activation domains (dCas9-FOS/JUN) to naive loci without any stimulus, then withdrawal, to test sufficiency of AP-1 for establishing a persistent state",
+      "Hi-C/Micro-C or multiplexed DNA FISH before/after stimulus to test whether AP-1 creates persistent enhancer-promoter loops or compartment changes that outlast the signal",
+      "Quantify AP-1 protein and mRNA half-lives absolutely (SILAC pulse-chase, metabolic labeling) to determine whether slow turnover alone, rather than chromatin, explains apparent memory",
+      "Nucleosome-resolution MNase or long-read single-molecule footprinting (Fiber-seq/SAMOSA) to see whether primed enhancers retain open single-molecule footprints or just higher population-average accessibility",
+      "Test chromatin cofactor dependence of maintenance: inhibit/degrade p300, BRD4, BAF (SMARCA4), or H3K4me1 writers only during the storage window and score loss of priming",
+      "Combinatorial stimulus-identity test: prime with different AP-1-activating inputs and ask whether the stored state is input-specific or a generic AP-1 attractor, using matched ATAC/RNA signatures",
+      "Mathematical model comparison: fit bistable-feedback vs. slow-relaxation vs. chromatin-hysteresis models to time-course data and identify measurements that discriminate them (e.g., hysteresis loop in dose space)",
+      "Test AP-1 autoregulatory positive feedback directly by mutating AP-1 sites in the endogenous FOS/JUN/ATF3 promoters and measuring whether memory collapses",
+      "In vivo memory test: tamoxifen-inducible lineage labeling of AP-1-high cells (FOS-CreER) in wounded skin or inflamed tissue, then challenge weeks later and measure accelerated response in labeled progeny",
+      "Single-cell multiome in a prime-wait-rechallenge design to directly ask whether accessibility at AP-1 sites predicts which individual cells respond strongly to the second hit",
+      "Proteomic (RIME/BioID) comparison of AP-1 interactomes at naive vs. primed enhancers to identify the maintenance machinery that converts transient binding into a stable state"
+    ]
+  },
+  "output_tokens": 2720,
+  "cost_usd": 0.0900223
+}

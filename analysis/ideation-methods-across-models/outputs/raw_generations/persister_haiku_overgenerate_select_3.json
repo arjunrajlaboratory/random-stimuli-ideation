@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding plus scRNA-seq to trace survivor origin",
+      "description": "Label each cell with a heritable barcode before treatment, then compare barcode frequencies and transcriptomes of survivors to pre-treatment clones. This shows whether survivors were pre-existing lineages with a stable state or arose from induced switching in cells that were not previously distinguished."
+    },
+    {
+      "title": "Pre-treatment live-cell reporter tracking linked to fate",
+      "description": "Track individual cells with a cell-cycle or stress reporter before drug addition, then add the drug and follow each cell to death or survival. Matching pre-treatment reporter state to eventual fate tests whether slow cycling or a specific pre-drug state predicts survival."
+    },
+    {
+      "title": "Per-cell drug accumulation and efflux measurement",
+      "description": "Quantify intracellular drug levels in individual cells with a fluorescent analog, or in sorted subpopulations by LC-MS, and relate them to survival. This tests whether differences in uptake, efflux, or sequestration, rather than target biology, explain why some cells escape."
+    },
+    {
+      "title": "Sort-and-replate memory and heritability assay",
+      "description": "Sort cells defined by a survival-linked reporter before treatment, re-expose them to drug, and measure how well the survival phenotype is inherited across divisions and after drug withdrawal. Heritable survival points to a stable epigenetic or regulatory memory, while loss on replating points to transient tolerance."
+    },
+    {
+      "title": "Endogenous target-abundance and noise profiling",
+      "description": "Tag the drug target at its endogenous locus and quantify per-cell target protein levels and their variability before treatment. Testing whether cells with low target abundance or high expression noise are preferentially spared identifies a dose-target stoichiometry mechanism that could be therapeutically exploited."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (CellTag/LARRY) with scRNA-seq to see whether survivors derive from pre-existing clones or arise from induced switching",
+      "Time-resolved scRNA-seq during early drug exposure to catch transient adaptive states before survivors stabilize",
+      "Live-cell FUCCI or cell-cycle reporter tracking before drug addition, linked to single-cell fate (survive or die)",
+      "ScATAC-seq or chromatin accessibility profiling before treatment to find primed regions that predict survival",
+      "Sort-and-replate memory test: sort reporter-defined survivor-like cells, re-expose to drug, and measure heritability and reversibility",
+      "Drug holiday / pulse-withdrawal experiments to separate reversible tolerance from stable, heritable resistance",
+      "Per-cell intracellular drug quantification with fluorescent analogs or sorted-cell LC-MS to test pharmacokinetic heterogeneity",
+      "Efflux transporter (ABCB1, ABCG2) reporter sorting combined with drug accumulation assays",
+      "Endogenous tagging of the drug target to quantify per-cell target abundance and noise versus survival",
+      "Pooled CRISPR screen with single-cell readout to find genes that shift survival probability, not just IC50",
+      "CRISPRi or CRISPRa perturbation of top predictive pre-treatment genes to test causality",
+      "TMRM or NAD(P)H autofluorescence sorting to test whether mitochondrial or metabolic state predicts survival",
+      "Mass cytometry or phosphoflow of signaling nodes before treatment to find pre-existing pathway heterogeneity",
+      "Phosphoproteomics of sorted pre-treatment subpopulations to compare signaling networks",
+      "Single-cell DNA sequencing or karyotyping to test whether aneuploidy or copy-number variation predicts survival",
+      "Duplex sequencing of survivors to detect rare pre-existing mutations and separate them from nongenetic tolerance",
+      "Fluctuation (Luria-Delbruck) assays combined with barcoding to quantify mutational versus nongenetic routes to survival",
+      "Extrachromosomal DNA FISH per cell to test whether ecDNA copy number underlies drug tolerance",
+      "Spatial imaging of survivors within colonies to test whether position, density, or cell contact predicts survival",
+      "Co-culture or conditioned-medium experiments to test whether neighboring cells or secreted factors protect survivors"
+    ]
+  },
+  "output_tokens": 3341,
+  "cost_usd": 0.00181402
+}

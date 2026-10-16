@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 6,
+  "stimulus": "I will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI will arise and go now, and go to Innisfree,\nAnd a small cabin build there, of clay and wattles made;\nNine bean-rows will I have there, a hive for the honey-bee,\nAnd live alone in the bee-loud glade.\n\nAnd I shall have some peace there, for peace comes dropping slow,\nDropping from the veils of the morning to where the cricket sings;\nThere midnight's all a glimmer, and noon a purple glow,\nAnd evening full of the linnet's wings.\n\nI will arise and go now, for always night and day\nI hear lake water lapping with low sounds by the shore;\nWhile I stand on the roadway, or on the pavements grey,\nI hear it in the deep heart's core.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "The \"Pavements Grey\" Washout\u2013Recall Assay",
+      "description": "Mirroring the poem's speaker who still hears the absent lake while standing on grey pavements, stimulate cells (serum, TGF-beta, MAPK activation, or drug), wash out, wait a defined interval, then re-challenge, while separately tracking endogenously tagged AP-1 proteins (FOS/FOSL1/JUN), AP-1-motif chromatin accessibility, and transcriptional output. The memory signature is a faster or larger second response measured at a time when AP-1 protein has already decayed to baseline, which distinguishes a persistent AP-1 occupancy model from a latent primed-chromatin model."
+    },
+    {
+      "title": "\"Nine Bean-Rows\": Clonal Heritability of AP-1 State",
+      "description": "Because memory implies transmission to daughters, barcode cells (CellTag/Watermelon-style) and sort on a live AP-1 activity reporter, then use scRNA-seq plus time-lapse lineage tracing to measure how strongly AP-1 state and the primed response correlate between sister, cousin, and more distant relatives as a function of generations since division. This partitions observed variance into heritable memory versus cell-intrinsic noise and yields a quantitative memory half-life in cell divisions."
+    },
+    {
+      "title": "\"Peace Comes Dropping Slow\": Timed Degron and Optogenetic Windows",
+      "description": "Use dTAG or auxin-inducible degrons on AP-1 subunits, or optogenetic AP-1 constructs, to remove or supply AP-1 activity selectively during the encoding phase, the storage interval, or the recall challenge. Comparing these three windows separates whether AP-1 writes the memory, is required to maintain it, or is only needed to read it out, which is the central mechanistic distinction the question asks about."
+    },
+    {
+      "title": "\"Veils of the Morning\": Single-Molecule Footprinting of the Stored Trace",
+      "description": "Apply long-read single-molecule footprinting (nanopore methyltransferase footprinting, or CUT&RUN with long-read sequencing) at primed enhancers during the memory interval to ask whether AP-1 is literally still bound or has lifted its veil and handed the trace off to nucleosome positioning, DNA methylation, cohesin, or mitotic bookmarking. Including mitotic timepoints tests whether AP-1 bookmarks its target enhancers through chromosome condensation."
+    },
+    {
+      "title": "\"Lake Water Lapping\": Frequency Encoding of Input History",
+      "description": "Deliver the upstream stimulus as pulse trains of systematically varied frequency, amplitude, and duration using microfluidics or optogenetics, then compute the mutual information between past input history and current AP-1-dependent chromatin and transcriptional state. This tests whether AP-1 behaves as a leaky integrator that stores a running record of stimulation history rather than an instantaneous reporter of present signaling."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3070,
+  "cost_usd": 0.11716649999999999
+}

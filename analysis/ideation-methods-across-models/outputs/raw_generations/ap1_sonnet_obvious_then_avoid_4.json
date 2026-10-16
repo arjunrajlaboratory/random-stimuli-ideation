@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute degron depletion after priming (temporal separation)",
+      "description": "Use an auxin/dTAG degron on a pioneer AP-1 member (e.g., FOS/JUN) and deplete it only after the priming stimulus is gone but before recall. Then measure whether enhancer accessibility and the faster recall transcription persist, which separates AP-1 as the maintainer of memory from AP-1 as only the initiator."
+    },
+    {
+      "title": "Synthetic AP-1 site editing at endogenous enhancers",
+      "description": "Use CRISPR base editing or prime editing to mutate or insert single AP-1 motifs at selected enhancers. Then test whether a motif is necessary and sufficient for stimulus-induced accessibility that persists, and for primed re-induction of the linked gene."
+    },
+    {
+      "title": "Optogenetic AP-1 pulse-encoding with memory decay kinetics",
+      "description": "Drive AP-1 with light-controlled FOS/JUN, or with a light-gated activator, using defined pulse durations, amplitudes and frequencies. Then measure how long the primed state lasts and how it scales with dose. Bistability, hysteresis, or a threshold would point to a self-sustaining memory circuit. Simple decay would not."
+    },
+    {
+      "title": "Lineage-tracked memory inheritance through division",
+      "description": "Barcode or live-image single cells, let them divide after priming, and sort sister cells. Measure AP-1 activity (reporter) and accessibility/recall response in the sisters and in later generations, and compare sister concordance with that of random pairs. High concordance that lasts for many divisions, in cells with no ongoing stimulus, would indicate heritable memory."
+    },
+    {
+      "title": "Nucleosome and cofactor handoff profiling (BAF, p300, mitotic bookmarking)",
+      "description": "Run CUT&Tag for AP-1, SWI/SNF (BRG1/ARID1A) and p300, plus MNase or single-molecule footprinting, in interphase and mitotically arrested primed cells. Test whether AP-1 stays on the DNA through mitosis (bookmarking) or whether it hands off to other factors that keep the sites open. Then perturb the handoff partner to see which one carries the memory."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (FOS/JUN) occupancy before, during, and after a stimulus",
+      "ATAC-seq of chromatin accessibility at AP-1 motifs after stimulus withdrawal",
+      "Knockdown/knockout of FOS or JUN and test whether the memory response is lost",
+      "Dominant-negative AP-1 (A-FOS) expression to block AP-1 function",
+      "Time-course of AP-1 target gene expression upon re-stimulation (primed vs naive)",
+      "Single-cell RNA-seq/ATAC-seq to measure heterogeneity of memory states",
+      "Histone modification profiling (H3K27ac, H3K4me1) at AP-1 bound enhancers",
+      "Pharmacological inhibition of AP-1 (e.g., T-5224) during priming vs. recall",
+      "Motif enrichment analysis of persistently accessible regions",
+      "Live-cell reporter imaging of AP-1 activity over time"
+    ]
+  },
+  "output_tokens": 1138,
+  "cost_usd": 0.014154799999999999
+}

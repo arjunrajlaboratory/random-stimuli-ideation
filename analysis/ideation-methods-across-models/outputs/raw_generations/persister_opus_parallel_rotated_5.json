@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 5,
+  "parallel": {
+    "field": "Battery engineering / electrochemistry",
+    "problem": "Why do a few lithium-ion cells from the same production lot keep their capacity through thousands of identical charge\u2013discharge cycles while most degrade quickly?",
+    "how_studied": "Engineers cycle large sets of cells under the same protocol and extract early-life features, such as the variance in the discharge voltage curve, impedance spectra and coulombic efficiency. They use these features to predict lifetime with statistical or machine learning models, an approach popularized by Severson et al. (2019). They then confirm the mechanism by taking cells apart after testing and imaging electrode heterogeneity with CT and X-ray diffraction."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Battery engineering / electrochemistry\nProblem: Why do a few lithium-ion cells from the same production lot keep their capacity through thousands of identical charge\u2013discharge cycles while most degrade quickly?\nHow it is studied: Engineers cycle large sets of cells under the same protocol and extract early-life features, such as the variance in the discharge voltage curve, impedance spectra and coulombic efficiency. They use these features to predict lifetime with statistical or machine learning models, an approach popularized by Severson et al. (2019). They then confirm the mechanism by taking cells apart after testing and imaging electrode heterogeneity with CT and X-ray diffraction.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment state profiling that predicts survival",
+      "description": "Mirroring the battery practice of extracting early-life features that forecast lifetime, image barcoded clonal cancer cells with live reporters (signaling kinase translocation reporters, cell-cycle FUCCI, mitochondrial membrane potential, size) for 24-48 hours before drug addition, then track each cell's fate. Train an interpretable model to test which pre-treatment features, especially their variance and temporal dynamics rather than their means, predict which rare cells survive."
+    },
+    {
+      "title": "Variance-of-difference analysis across re-challenge cycles",
+      "description": "Adapting the delta-Q(V) variance feature, expose cells to repeated drug pulse and washout cycles and record single-cell response curves (viability, apoptotic reporter, growth rate) each cycle. Compute the cell-to-cell variance of the difference between early and later cycle curves, testing whether this spread predicts the surviving fraction far better than any population-average metric."
+    },
+    {
+      "title": "Retrospective teardown by paired live imaging and in situ sequencing",
+      "description": "Analogous to disassembling cells after cycling for CT and diffraction, perform live imaging through treatment to identify survivors, then fix the same plate and run single-molecule FISH or in situ transcriptomics on the imaged coordinates. This links each survivor's measured pre-drug behavior to its actual molecular state, closing the gap between predictive feature and mechanism."
+    },
+    {
+      "title": "Clonal barcode replicate testing for reproducible versus stochastic survival",
+      "description": "Like testing many cells from one production lot, split a highly barcoded population into parallel replicate cultures before treatment and ask whether the same barcodes survive in all replicates. Reproducible barcodes indicate heritable, stably primed states, while replicate-specific survivors indicate transient fluctuations, directly partitioning the variance that any predictive model must explain."
+    },
+    {
+      "title": "Non-destructive impedance-like perturbation spectroscopy",
+      "description": "In place of impedance spectra that probe a cell without damaging it, apply brief sub-lethal probes such as low-dose drug pulses, nutrient or oxidative stress, or optogenetic pathway stimulation at several frequencies, and read out the single-cell response amplitude and recovery kinetics. Test whether this response spectrum, measured before full treatment, is a non-destructive signature of the drug-tolerant state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1270,
+  "cost_usd": 0.0653114
+}

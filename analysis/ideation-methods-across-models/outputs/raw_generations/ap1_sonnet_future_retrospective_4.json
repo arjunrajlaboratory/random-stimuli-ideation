@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degron with memory-persistence readout",
+      "description": "Using endogenous FOS/JUN family dTAG/AID degrons, the paper transiently stimulated cells (e.g., inflammation or injury), then degraded AP-1 at defined times after the stimulus was removed. It showed that enhancer accessibility and faster re-induction persisted for weeks without AP-1, which separated AP-1's role in establishing memory from maintaining it."
+    },
+    {
+      "title": "Single-cell multiome tracking of lineage-barcoded clones through stimulus, rest and restimulation",
+      "description": "Barcoded cells were profiled with paired scATAC/scRNA before, after, and during restimulation, with AP-1 motif accessibility and target response linked at the clone level. Clonal inheritance of primed enhancers and response magnitude, independent of current AP-1 levels, showed memory was heritable and mapped to specific subsets of AP-1-bound loci."
+    },
+    {
+      "title": "Live imaging of AP-1 dynamics and single-locus reporters across cell divisions",
+      "description": "Knock-in fluorescent FOS/JUN with MS2/nascent-transcript reporters at primed target genes followed single cells and their descendants for days after a pulse. Comparing the AP-1 residence time, the AP-1 bursting history and the later response of each lineage showed whether memory was carried by AP-1 itself, by chromatin state, or by neither."
+    },
+    {
+      "title": "Targeted epigenome editing to uncouple AP-1 binding from chromatin priming",
+      "description": "dCas9 tools were used to force AP-1 site occupancy without a stimulus, and to block or mutate motifs at endogenous enhancers and then erase accompanying marks (H3K27ac, accessibility, SWI/SNF recruitment). Priming required AP-1-dependent remodeler recruitment but not sustained AP-1, and artificial chromatin opening alone reproduced memory only at some loci, which defined a necessary and sufficient hierarchy."
+    },
+    {
+      "title": "In vivo cross-tissue and cross-stimulus memory atlas with AP-1 perturbation",
+      "description": "Mouse models with inducible, tissue-specific AP-1 dominant-negative (A-FOS) expression were exposed to repeated stimuli (skin injury, infection, neuronal activity), and the secondary response was compared against naive animals in matched cells. This showed that memory depended on AP-1 in some tissues (epithelial stem cells, for example) but not others, and that the stimulus history was encoded by which AP-1 family members were present at which enhancers."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 919,
+  "cost_usd": 0.0119641
+}

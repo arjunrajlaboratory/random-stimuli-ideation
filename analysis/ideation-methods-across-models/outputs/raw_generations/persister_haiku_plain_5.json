@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell lineage barcoding with drug-response tracking",
+      "description": "Introduce heritable DNA barcodes (e.g., CRISPR-based scar or lentiviral barcode libraries) into a clonal population, treat with the targeted drug, and track barcode frequencies and transcriptomes over time. This reveals whether survivors are pre-existing clones or arise from non-genetic state transitions, and whether they share a common precursor identity."
+    },
+    {
+      "title": "Pre-treatment single-cell profiling to find predictive states",
+      "description": "Perform scRNA-seq and/or ATAC-seq on untreated cells, then sort or computationally back-trace the cells that later survive (e.g., via live-cell reporters or FACS-based pulse-labeling of persisters). Comparing survivors to non-survivors before drug exposure identifies baseline chromatin, metabolic, or cell-cycle features that predispose cells to persistence."
+    },
+    {
+      "title": "Live-cell reporter tracking of persister emergence",
+      "description": "Use fluorescent reporters for drug target pathway activity, cell-cycle phase (e.g., FUCCI), or stress signaling (e.g., NRF2, p53) combined with time-lapse microscopy under drug. Following individual cells from drug addition to survival or death reveals whether persistence is tied to a transient signaling or cycle state at the moment of treatment."
+    },
+    {
+      "title": "Genome-wide CRISPR screens for survival versus drug sensitivity",
+      "description": "Run pooled CRISPR knockout or CRISPRi/a screens under sublethal and lethal drug doses, sequencing guides in surviving cells at multiple time points. Hits enriched among survivors identify genes whose loss or gain shifts the fraction of persisters, pointing to the pathways that confer tolerance rather than resistance."
+    },
+    {
+      "title": "Epigenetic and metabolic perturbation of persister fraction",
+      "description": "Measure persister frequency after perturbing chromatin regulators (e.g., HDAC or KDM inhibitors), histone marks, or metabolic pathways (e.g., oxidative phosphorylation, lipid or iron metabolism) before and during drug exposure, and assess whether the survival fraction changes. Dose-response and reversibility experiments distinguish heritable epigenetic memory from reversible metabolic or stress-induced tolerance."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 849,
+  "cost_usd": 0.00056665
+}

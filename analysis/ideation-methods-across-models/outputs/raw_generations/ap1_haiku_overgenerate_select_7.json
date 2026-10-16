@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "overgenerate_select",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after priming",
+      "description": "Prime cells with a stimulus, then rapidly degrade c-Fos or c-Jun using a dTAG or AID system and test whether the primed transcriptional response on a second stimulus is lost. If the memory survives degradation, AP-1 is not required to store it; if it disappears, AP-1 itself is the memory carrier."
+    },
+    {
+      "title": "Chromatin persistence time-course after washout",
+      "description": "Run ATAC-seq and H3K27ac CUT&Tag at many time points after stimulus removal to measure how long AP-1-bound enhancers stay open and active. Pair this with CRISPR mutation of AP-1 motifs at those enhancers to test whether persistence depends on AP-1 binding."
+    },
+    {
+      "title": "Mitotic inheritance of AP-1 memory",
+      "description": "Use live imaging of Fos/Jun reporters through mitosis, and sort daughter cells after division to measure whether AP-1 occupancy and enhancer accessibility are passed to them. Retention across division would support a mitotic bookmarking mechanism for memory."
+    },
+    {
+      "title": "Pulse-pattern encoding with optogenetic AP-1",
+      "description": "Drive AP-1 activity with optogenetic pulses that vary in frequency, duration, and number, then measure how each pattern changes the response to a later test stimulus. This tests whether memory depends on the history of AP-1 dynamics rather than on a single active state."
+    },
+    {
+      "title": "Barcoded lineage tracing of past AP-1 activity",
+      "description": "Label cells by their AP-1 activity history with a heritable reporter and barcode them, then profile the population later to see whether past AP-1 activity predicts present transcriptional state. This tests memory at the level of individual cells across time and division."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Degron-tag c-Fos or c-Jun (dTAG/AID) after priming and test whether the primed transcriptional response persists without AP-1",
+      "Time-course ATAC-seq and H3K27ac CUT&Tag after stimulus washout to measure how long AP-1-bound enhancers stay open",
+      "Mutate or block AP-1 motifs at primed enhancers with CRISPR and test whether the memory of a first stimulus is lost",
+      "Live-imaging of Fos/Jun reporters through mitosis to check whether AP-1 occupancy is retained by daughter cells",
+      "Sort daughter cells after division and measure whether AP-1 target accessibility is inherited",
+      "Vary the frequency and duration of optogenetic AP-1 pulses and measure how they change the response to a later stimulus",
+      "Compare reinduction kinetics of immediate-early genes between naive and previously stimulated cells",
+      "Barcoded lineage tracing of reporter cells to link past AP-1 activity to later transcriptional state",
+      "In vivo fate-mapping of Fos-driven reporter cells (e.g., TRAP or Fos-CreERT2) and later single-cell profiling of the labeled population",
+      "Use a split-reporter with AP-1 binding sites to read out memory of past AP-1 activity independent of current activity",
+      "Measure whether \u0394FosB-like stable isoforms or protein half-life extensions are required for long-lasting AP-1 memory",
+      "Compare AP-1 memory across cell types with different baseline chromatin states to test context dependence",
+      "Perform ChIP/CUT&RUN for AP-1 at time points after washout to see whether binding persists or is replaced",
+      "Use histone-modification readers or inhibitors (BET, EZH2, p300) to test whether memory depends on specific chromatin marks",
+      "Test whether AP-1 memory requires transcription itself by using transcription inhibitors during the washout period",
+      "Use CRISPR-based epigenome editors to write or erase marks at AP-1 sites and test whether memory is transferred",
+      "Compare AP-1 memory in cells with knockdown of nuclear architecture or cohesin to test 3D chromatin dependence",
+      "Quantify cell-to-cell variability in AP-1 response to ask whether a memory subpopulation exists",
+      "Use CRISPR screens to identify genes required for maintaining the primed state after AP-1 removal",
+      "Measure whether the memory persists in vivo after the stimulus is removed, compared with in vitro behavior"
+    ]
+  },
+  "output_tokens": 2170,
+  "cost_usd": 0.0012288299999999998
+}

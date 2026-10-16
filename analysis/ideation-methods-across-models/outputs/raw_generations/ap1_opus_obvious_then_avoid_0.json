@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis ladder: measure memory as a bistable loop, not a decay curve",
+      "description": "Titrate an AP-1-driving input (serum, TGF-beta, substrate stiffness, or inducible MEK) up a dose ladder and then back down the identical ladder, reading an AP-1 target reporter in single cells at each step. A genuine memory mechanism yields a hysteresis loop whose width quantifies stored information, while slow signal decay does not; single-cell readout separates true per-cell bistability from graded responses with heterogeneous thresholds."
+    },
+    {
+      "title": "Is the memory clocked in hours or in cell divisions?",
+      "description": "After a transient AP-1 pulse, split cells into cycling versus arrested conditions (CDK4/6 inhibition, contact inhibition, thymidine block) matched for elapsed time and measure decay of the primed state per hour versus per division. Replication-coupled dilution of a chromatin mark predicts division-clocked decay, whereas protein- or feedback-based persistence predicts time-clocked decay."
+    },
+    {
+      "title": "Erase-and-restore with a pan-AP-1 family degron",
+      "description": "Tag all expressed bZIP partners (FOS/FOSB/FOSL1/JUN/JUNB/JUND) with degrons so the entire family can be cleared for defined windows after priming and then restored. Recovery of the primed state would show AP-1 is a reader/writer of memory stored elsewhere, while permanent erasure would show AP-1 occupancy is itself the storage medium, a distinction single-factor knockdowns cannot make because of redundancy."
+    },
+    {
+      "title": "Synthetic TRE-array locus library for minimal sufficient encoding of memory",
+      "description": "Integrate at one fixed safe-harbor site a library of synthetic loci varying AP-1 motif number, affinity, spacing, flanking nucleosome-positioning sequence, and core promoter, then deliver a standardized AP-1 pulse and assay which configurations stay active days later. This tests whether AP-1 sites alone suffice to build a memory element and reveals the sequence grammar that converts transient binding into a persistent state."
+    },
+    {
+      "title": "Allele-specific cis test using heterozygous TRE motif disruption",
+      "description": "Destroy the AP-1 motif on only one allele of candidate memory enhancers (or use F1 hybrid/heterozygous lines with natural motif-disrupting variants) and measure allele-resolved accessibility and nascent transcription before, during, and long after a pulse. Because both alleles share nucleus, trans environment, and stimulus history, persistent loss of priming only in cis is strong evidence that AP-1 binding at that element carries the memory."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq before/during/after a transient stimulus to find AP-1-dependent accessibility that persists after the signal is gone.",
+      "FOS/JUN CUT&RUN or ChIP-seq time courses mapping persistent AP-1 occupancy at primed enhancers.",
+      "dTAG/auxin degradation of FOS or JUN during the maintenance phase to test requirement for memory.",
+      "Transient overexpression of FOS/JUN, or A-FOS dominant negative / T-5224 inhibition, to test sufficiency and loss of priming.",
+      "Restimulation assays showing faster or stronger induction in previously stimulated cells.",
+      "Single-cell multiome (RNA + ATAC) with chromVAR AP-1 motif scores linked to cell state.",
+      "Clonal barcoding (FateMap/Watermelon-style) showing heritable, AP-1-correlated states across sibling cells.",
+      "CRISPRi/CRISPRa or deletion of individual AP-1-bound enhancers, plus enhancer reporter assays.",
+      "Live imaging of a FOS/JUN fusion plus an AP-1 target transcription reporter across cell divisions.",
+      "Mitotic bookmarking assays: AP-1 retention on mitotic chromosomes and inheritance of occupancy through M phase."
+    ]
+  },
+  "output_tokens": 5491,
+  "cost_usd": 0.18133119999999997
+}

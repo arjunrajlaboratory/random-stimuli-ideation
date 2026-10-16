@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clone-splitting with heritable barcodes to catch the primed cell before the drug arrives",
+      "description": "Transduce the population with expressed lineage barcodes, let each clone expand, then physically split it: treat one half with the targeted drug and immediately profile the untreated twin half by single-cell RNA-seq, so that barcodes shared with the eventual survivors identify what the pre-treatment state of those specific cells looked like. This directly distinguishes a rare pre-existing transcriptional state (the filament already flung) from a state induced only after drug exposure, and can be extended with barcode-guided sorting to prospectively enrich and functionally test the primed subpopulation."
+    },
+    {
+      "title": "Continuous live-cell imaging of signaling dynamics through the drug transition",
+      "description": "Image thousands of single cells for days to weeks using kinase-translocation reporters for the drug-targeted pathway (e.g., ERK or AKT activity), plus cell-cycle and stress reporters, tracking every lineage from before treatment through survival or death. Quantify whether survivors are distinguished by repeated transient signaling pulses, a longer quiescent pause, or a single sustained reactivation event, i.e., which dynamic feature of the many 'throws' is the one that holds."
+    },
+    {
+      "title": "Testing the microenvironment as the anchor point for survivors",
+      "description": "Map where survivors sit and what they touch: spatial transcriptomics or in situ imaging of treated 3D cultures and tumor sections to score survivor proximity to ECM-rich regions, fibroblasts, vasculature, or hypoxic cores, paired with micropatterned substrates of defined stiffness and ligand composition to test causality. If survival probability depends on anchorage and neighbor contact rather than intrinsic state, the cell-autonomous framing is the wrong one."
+    },
+    {
+      "title": "Single-cell multiome time course to reconstruct and then break the regulatory bridge",
+      "description": "Collect joint RNA + ATAC profiles at closely spaced timepoints spanning the drug transition to infer which transcription factors and enhancers connect the rare primed state to the stable resistant state. Then test necessity by CRISPRi knockdown or degron depletion of the top bridging regulators at defined times, asking whether the surviving fraction collapses when the bridge is removed."
+    },
+    {
+      "title": "Serial challenge-and-withdrawal to measure how long the surviving state is remembered",
+      "description": "Expand survivors, withdraw drug for varying intervals, re-barcode or re-sequence existing barcodes, and re-challenge, asking whether the same clones survive again (heritable, stably rewired resistance) or whether a fresh random subset survives (a transient, re-sampled state). The decay curve of clone re-use across withdrawal times gives a quantitative memory timescale that predicts whether drug holidays should resensitize the population."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2209,
+  "cost_usd": 0.0932145
+}

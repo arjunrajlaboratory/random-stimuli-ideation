@@ -1,0 +1,44 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paralog- and dimer-resolved memory mapping",
+      "description": "Run CUT&RUN or ChIP-seq for individual FOS, JUN, and ATF family members, and for their dimers (for example by re-ChIP or proximity-based methods). Do this before, during, and after stimulus withdrawal. This shows which specific AP-1 complexes persist at sites that give a memory response, and which do not."
+    },
+    {
+      "title": "Acute degron depletion after the memory is set",
+      "description": "Make a degron (dTAG or AID) knock-in of a key AP-1 subunit, or express a dominant-negative such as A-FOS. Remove AP-1 only after stimulation has ended and test whether the primed accessibility and the faster re-induction on second challenge are lost. If AP-1 is needed to maintain memory, depletion should erase it. If it is needed only to set it, the memory should persist."
+    },
+    {
+      "title": "Test for a hand-off to other factors and chromatin marks",
+      "description": "Follow AP-1, histone marks (H3K27ac, H3K4me1), DNA methylation, and co-factors (for example BAF/SWI-SNF and lineage factors) at memory loci over time after stimulus withdrawal. Combine this with chromatin-modifier inhibitors or catalytic-dead editing at those loci. The aim is to find out whether AP-1 holds the memory itself or only sets the chromatin state that does."
+    },
+    {
+      "title": "Restimulation-challenge time course with a primed-state readout",
+      "description": "Give a first stimulus, wait for varying gaps (hours to weeks), then give a second stimulus of the same or a different type. Measure the speed and size of AP-1-dependent gene induction by nascent RNA (PRO-seq or TT-seq) and AP-1 binding. This tests for latent memory that shows up only on restimulation, and for how long it lasts and how specific it is."
+    },
+    {
+      "title": "Single-cell multiome with lineage tracing and live reporters",
+      "description": "Use single-cell multiome (ATAC plus RNA) with clonal barcodes, plus live-cell AP-1 activity reporters, to follow whether memory is inherited through cell division in sister cells. Link each cell's past AP-1 activity to its later response. This separates real heritable memory from population averaging, and shows whether memory is all-or-none or graded."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "AP-1 is a single entity: the question treats AP-1 as one factor, when it is a family of dimers (FOS, JUN, ATF, MAF) with distinct, sometimes opposing, functions.",
+      "Memory is carried by AP-1 itself (its binding or activity), not by the chromatin, other transcription factors, or signaling states it works with.",
+      "AP-1 acts at the same sites regardless of cell state. Binding and accessibility are assumed to be the readout of memory.",
+      "Memory is a persistent on-state. In practice, it is assumed that AP-1 stays active or bound after the stimulus ends, rather than being a primed or poised state that shows up only on restimulation.",
+      "Population-average measurements (bulk ChIP, ATAC, RNA) reflect single-cell memory, and a one-time snapshot after one stimulus is enough.",
+      "Correlation counts as evidence: AP-1 occupancy that persists is taken to mean AP-1 is needed to maintain memory, rather than just marking it.",
+      "Memory is measured in cells that are held in culture or fixed conditions, with a short time window and a single stimulus type, and with the same function in vivo."
+    ]
+  },
+  "output_tokens": 1238,
+  "cost_usd": 0.015159899999999999
+}

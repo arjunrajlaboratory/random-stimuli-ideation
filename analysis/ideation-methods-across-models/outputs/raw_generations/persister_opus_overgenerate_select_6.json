@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Retrospective lineage barcoding with sister-cell profiling (Rewind/FateMap)",
+      "description": "Label cells with expressed barcodes, let them divide, then split the population. Treat one half with drug and profile the untreated sister cells by scRNA-seq/ATAC-seq to find the molecular state that existed before treatment in cells whose lineages went on to survive."
+    },
+    {
+      "title": "Measuring how long the primed state lasts",
+      "description": "Use FACS to isolate cells that are high or low for a priming marker such as EGFR or NGFR. Track their marker levels with smFISH and their drug survival over successive divisions to estimate how long the state persists and how often cells switch in and out of it. This tells you whether survival depends on a short-lived fluctuation or on a stable memory across many generations."
+    },
+    {
+      "title": "Sister-cell concordance via live imaging",
+      "description": "Track sister and cousin cells by time-lapse imaging during treatment, using signaling (ERK KTR) and cell-cycle (CDK2/p21) reporters. Measure how often related cells share the same fate and which reporter dynamics before treatment predict survival."
+    },
+    {
+      "title": "Fate-coupled CRISPR screens for regulators of priming frequency",
+      "description": "Run pooled CRISPR screens that read out how often cells enter the primed state or how many resistant colonies form, rather than overall viability. This identifies genes that control how often rare surviving states arise, separate from genes that affect general fitness."
+    },
+    {
+      "title": "Multi-dose and multi-drug clone tracking",
+      "description": "Expand barcoded populations and split them across several doses and several targeted drugs. Then measure whether the same barcoded clones survive under each condition. This shows whether surviving cells share one general tolerant state or several distinct states, each specific to a drug or dose."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding plus pre-treatment scRNA-seq on sister cells (Rewind/FateMap style) to capture the transcriptional state of future survivors before drug exposure",
+      "Luria-Delbr\u00fcck fluctuation analysis to tell pre-existing heritable states apart from drug-induced adaptation",
+      "Live-cell imaging of fluorescent reporters (e.g., ERK/AKT KTRs) before and during treatment to link signaling dynamics to survival",
+      "Single-molecule RNA FISH for candidate resistance markers (AXL, EGFR, NGFR) on fixed cells before treatment",
+      "Measuring how long the primed state lasts: sort marker-high cells and track their reversion to the population baseline over time",
+      "Pooled CRISPR knockout/activation screens with cell-fate readout to find regulators of how often primed cells occur",
+      "Single-cell ATAC-seq on barcoded lineages to find chromatin accessibility that predicts survival",
+      "Measuring drug uptake and efflux in single cells with fluorescent drug analogs or mass spectrometry imaging",
+      "Cell cycle phase and quiescence reporters (FUCCI, p21/CDK2 sensors) to test whether slow cycling predicts survival",
+      "Mitochondrial priming (BH3 profiling) of sorted subpopulations to measure differences in apoptotic threshold",
+      "Metabolic profiling (Seahorse, SCENITH, NAD(P)H FLIM) of rare cells to test whether OXPHOS dependence drives persistence",
+      "Spatial analysis of colonies in culture to test whether local density or neighbors influence survival",
+      "Lineage tracing over multiple drug doses to test whether the same clones survive at every dose",
+      "Mathematical modeling of state-switching rates fit to barcode clone-size distributions",
+      "Single-cell proteomics or CyTOF of signaling phosphoproteins before treatment",
+      "Transient perturbations (e.g., HDAC or BRD4 inhibitors) given before the drug to shift how many cells enter the primed state",
+      "Twin or sister-cell imaging to measure how much of the survival fate is shared after division",
+      "Long-read or epigenetic clocks to estimate cell age or replicative history as a predictor",
+      "Xenograft lineage barcoding to test whether the same clones survive in vivo and in vitro",
+      "Multi-drug barcoding to test whether surviving clones are drug-specific or generally resistant"
+    ]
+  },
+  "output_tokens": 1548,
+  "cost_usd": 0.0364784
+}

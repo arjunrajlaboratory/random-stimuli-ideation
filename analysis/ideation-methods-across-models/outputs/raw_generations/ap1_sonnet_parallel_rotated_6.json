@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 6,
+  "parallel": {
+    "field": "Sociology / political science",
+    "problem": "Testing whether institutions or communities carry a lasting legacy of a past event (such as historical oppression or a historical policy) that shapes present attitudes and outcomes after the original conditions are gone.",
+    "how_studied": "Researchers use historical-legacy designs that link archival boundaries or treatments to modern survey outcomes, with regression discontinuity around old borders. They use instrumental variables and placebo tests to rule out other causes. Process tracing and interviews look for the transmission mechanism, such as institutions or family narratives."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Sociology / political science\nProblem: Testing whether institutions or communities carry a lasting legacy of a past event (such as historical oppression or a historical policy) that shapes present attitudes and outcomes after the original conditions are gone.\nHow it is studied: Researchers use historical-legacy designs that link archival boundaries or treatments to modern survey outcomes, with regression discontinuity around old borders. They use instrumental variables and placebo tests to rule out other causes. Process tracing and interviews look for the transmission mechanism, such as institutions or family narratives.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Regression-discontinuity around the old stimulus boundary",
+      "description": "Expose cells to graded doses or durations of an AP-1-inducing stimulus (e.g., serum, TPA, injury, inflammatory cue) and use single-cell imaging or scRNA-seq to compare cells just above versus just below the activation threshold. Test whether a sharp jump in later enhancer accessibility and gene responsiveness appears at the threshold, which would indicate a switch-like memory rather than a smooth dose-response."
+    },
+    {
+      "title": "Historical-legacy time-course linking past AP-1 occupancy to present responses",
+      "description": "Do longitudinal ATAC-seq, CUT&RUN for FOS/JUN, and H3K27ac in the same cell lineage before, during, and long after transient stimulation, after AP-1 levels return to baseline. Regress the strength of the secondary response on prior AP-1 binding at each enhancer, to test whether sites that were occupied earlier remain accessible and more responsive after the original input is gone."
+    },
+    {
+      "title": "Instrumental-variable style causal perturbation with acute degradation",
+      "description": "Use a dominant-negative AP-1 (A-FOS) or a degron-tagged JUN/FOS to remove AP-1 either only during the initial stimulus or only during the later restimulation. If memory requires AP-1 only at the encoding stage, or also at maintenance and recall, the two windows should dissociate. This separates AP-1 as a causal carrier of memory from correlated factors such as chromatin remodelers or other TFs."
+    },
+    {
+      "title": "Placebo sites and placebo stimuli",
+      "description": "Compare AP-1 motif-containing loci that were never bound with those that were, and compare cells given an unrelated stimulus (e.g., a different signaling pathway) with AP-1-stimulated cells. Add motif-mutation or CRISPR-edited enhancer controls so that any retained accessibility or priming is shown to be specific to prior AP-1 binding and not to general stress or cell-state changes."
+    },
+    {
+      "title": "Process tracing of the transmission mechanism across divisions",
+      "description": "Track lineages with live reporters or barcoded clones to measure whether the primed state persists through cell divisions and decays at a defined rate. Pair this with perturbations of candidate carriers (BAF/SWI-SNF recruitment, pioneer cofactors, histone marks, mitotic bookmarking of AP-1) to find which mechanism transmits the memory, and fit a quantitative model to heritability versus decay."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 897,
+  "cost_usd": 0.0142855
+}

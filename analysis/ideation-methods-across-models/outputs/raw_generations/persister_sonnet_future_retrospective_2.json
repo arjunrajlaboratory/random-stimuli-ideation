@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded sister-cell pre-treatment tracing",
+      "description": "Barcode cancer cells, split each clone into twin populations before drug, profile one by single-cell RNA/ATAC and expose the other to drug, then use barcodes to retrospectively identify the pre-existing states of cells that later survive. This tests whether persistence is a heritable pre-existing state versus drug-induced adaptation, and it quantifies how long the state is remembered across divisions."
+    },
+    {
+      "title": "Live-cell lineage tracking with multi-generational reporters",
+      "description": "Time-lapse image thousands of single cells for many generations before, during, and after drug using reporters for cell cycle, stress signaling (p53, ERK, NF-\u03baB), mitochondrial state, and growth rate. Then link each cell's dynamic history, including inherited fluctuations from mother and grandmother cells, to its survival fate, so that dynamics rather than static snapshots explain persistence."
+    },
+    {
+      "title": "Joint multi-omic profiling of drug-tolerant cells with same-cell fate readout",
+      "description": "Combine single-cell RNA, chromatin accessibility, proteomics, and metabolomics with a survival marker, such as live-dead dye sorting or in situ barcoding, to see which layer first diverges in survivors. Perturbing the earliest-diverging layer, such as an epigenetic regulator or metabolic enzyme, tests whether it causally drives survival."
+    },
+    {
+      "title": "Pooled CRISPR perturbation of state-switching with single-cell readout",
+      "description": "Run genome-wide or epigenome-focused CRISPRi/a screens with Perturb-seq under drug, scoring not just survival but also the rate of switching into and out of the tolerant state and the shape of the state landscape. This separates genes that set the baseline probability of persistence from genes that maintain the tolerant state once it is entered."
+    },
+    {
+      "title": "In vivo and spatial mapping of persisters with microenvironment context",
+      "description": "Apply spatial transcriptomics and barcode lineage tracing to xenograft or patient tumor biopsies before, during, and at minimal residual disease after treatment, mapping where survivors sit, such as near hypoxic or stromal niches, and what they share with matched cell-line persisters. Comparing in vivo and in vitro survivors reveals which mechanisms are cell-intrinsic and which depend on local environment."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 849,
+  "cost_usd": 0.011265000000000002
+}

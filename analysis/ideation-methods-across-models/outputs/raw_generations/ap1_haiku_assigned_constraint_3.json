@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 3,
+  "constraint": "without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression)",
+  "prompt": "Constraint: every one of your ideas must be carried out without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-washout chromatin time course",
+      "description": "Stimulate cells (e.g., TPA, EGF, or serum) for varying pulse lengths, wash out, and profile endogenous c-Fos/JunB occupancy (CUT&RUN or ChIP-seq) alongside chromatin accessibility (ATAC-seq) and H3K27ac over days. If AP-1 acts as memory, enhancer accessibility and activity should persist after AP-1 occupancy decays, and a second stimulus should trigger a faster or stronger response at those same sites."
+    },
+    {
+      "title": "Time-gated small-molecule inhibition",
+      "description": "Apply AP-1 pathway inhibitors (e.g., the c-Jun/AP-1 DNA-binding inhibitor T-5224) or upstream JNK/ERK inhibitors only before, during, or after a priming stimulus, then measure chromatin state and re-stimulated transcription. Inhibition during the priming window versus after it separates whether AP-1 is needed to establish a memory versus maintain it, with the caveat that small-molecule specificity must be validated with dose-response and orthogonal readouts."
+    },
+    {
+      "title": "Single-cell history-dependence with multiplexed imaging",
+      "description": "Prime cells with varying stimulus histories, then use cyclic immunofluorescence or multiplexed smFISH on endogenous FOS, JUN, and downstream targets to measure per-cell AP-1 levels and response to a challenge stimulus. Testing whether a cell's prior AP-1 history predicts its challenge response, beyond population averages, is a direct test of cell-intrinsic memory."
+    },
+    {
+      "title": "Mitotic persistence of AP-1-bound sites",
+      "description": "Sort or synchronize cells in mitosis after priming and compare AP-1 occupancy and accessibility on mitotic chromatin to interphase, asking whether AP-1 bookmarks the same enhancers. Then track whether the post-mitotic daughters retain the primed state across several divisions after stimulus removal, which tests whether AP-1 memory is heritable through cell division."
+    },
+    {
+      "title": "Natural variation and trained-immunity cohort",
+      "description": "Use primary monocytes or iPSC-derived macrophages from genetically diverse donors, stimulated with a trained-immunity inducer (e.g., \u03b2-glucan) and then re-challenged after a rest period. Correlate AP-1 binding strength and allele-specific AP-1 occupancy at heterozygous sites with the magnitude and duration of the trained response, using natural genetic variation rather than engineered perturbation to test whether AP-1 binding causally predicts memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2263,
+  "cost_usd": 0.00135525
+}

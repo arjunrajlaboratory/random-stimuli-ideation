@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell drug exposure and target-engagement mapping",
+      "description": "Measure how much drug each cell actually takes in and how strongly the target is hit, using fluorescent or isotope-labeled drug analogs (with NanoSIMS or stimulated Raman imaging) together with FRET target-activity biosensors, then link these values to which cells survive. This tests whether survivors are cells that are biologically primed or simply cells that get less effective drug because of uneven uptake, efflux or target occupancy."
+    },
+    {
+      "title": "Unequal segregation of extrachromosomal DNA (ecDNA) as hidden variability",
+      "description": "Use ecDNA FISH or live-imaged ecDNA tagged with TetO/TetR to count, cell by cell, the copies of ecDNA carrying oncogenes or drug-target genes before treatment, and relate copy number to survival. Because ecDNA splits randomly at cell division, 'genetically identical' populations can still differ widely in gene dosage, and this is rarely measured in persister studies."
+    },
+    {
+      "title": "Tuning noise while holding the mean fixed with synthetic circuits",
+      "description": "Put a candidate resistance driver (e.g., a transcription factor or receptor) under a synthetic circuit that changes cell-to-cell variability without changing average expression, using negative-feedback or noise-tuner constructs. Then measure whether the surviving fraction tracks variance or mean. This directly tests whether expression fluctuations themselves, rather than a specific state, cause survival."
+    },
+    {
+      "title": "Testing cell-autonomy by density and microwell titration",
+      "description": "Plate cells over a wide range of densities and as isolated single cells in microwell arrays, with or without shared medium, and measure the surviving fraction and its Poisson statistics. Departures from density-independent, per-cell survival would show that survival depends on local community effects (paracrine rescue, nutrient sharing, contact) rather than intrinsic cell states."
+    },
+    {
+      "title": "Tracking asymmetric inheritance of old or damaged cellular components",
+      "description": "Use pulse-chase tags (SNAP/Halo-tag protein-age labeling, photoconvertible mito-Dendra2) to follow, over generations, how protein aggregates, aged proteome and mitochondria are split between daughter cells. Then test whether daughters that inherit 'younger' or 'older' material are more likely to persist, revealing a deterministic, division-linked source of survival differences."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of populations before, during and after drug treatment to find transcriptional states that predict survival",
+      "Lineage barcoding (e.g., Rewind, ClonTracer, Watermelon) to trace survivors back to their pre-treatment transcriptomes and clonal origins",
+      "Luria\u2013Delbr\u00fcck fluctuation analysis to tell pre-existing from drug-induced resistance",
+      "smFISH or immunofluorescence for rare high-expressing markers (e.g., AXL, EGFR, NGFR) and sorting marker-high cells to re-challenge them",
+      "Single-cell ATAC-seq or chromatin profiling to find epigenetic states that prime cells to persist",
+      "Live-cell time-lapse imaging with signaling or cell-cycle reporters (e.g., ERK KTR, FUCCI) to follow cell fates under drug",
+      "Genome-wide CRISPR knockout or activation screens to find genes whose loss or gain changes the persister fraction",
+      "Characterizing persister metabolism and quiescence (OXPHOS dependence, slow-cycling label retention, GPX4/ferroptosis vulnerability)",
+      "Phosphoproteomics or mass cytometry (CyTOF) to profile adaptive signaling rewiring in survivors",
+      "Whole-genome or exome sequencing of survivors to rule out pre-existing genetic mutations, plus mathematical modeling of state-switching rates"
+    ]
+  },
+  "output_tokens": 2722,
+  "cost_usd": 0.0599514
+}

@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 5,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcode-linked pre-treatment transcriptomes",
+      "description": "Label cells with expressed lineage barcodes, split the population before drug, profile one half by scRNA-seq, and sequence barcodes in survivors from the other half. This directly reveals the pre-existing state of cells that go on to survive, and whether that state is shared among sister clones."
+    },
+    {
+      "title": "Fluctuation tests with heritability timing",
+      "description": "Run Luria-Delbr\u00fcck style assays on many small parallel clonal expansions, varying time between subcloning and drug exposure. Variance in survivor numbers and its decay over generations quantify switching rates and memory duration, separating stable, transient and drug-induced tolerance."
+    },
+    {
+      "title": "Live single-cell tracking with multi-reporter imaging, then retrospective fate mapping",
+      "description": "Image cells for days before drug with reporters for cell cycle, p53/stress signaling, and ERK activity, then add drug and record who survives. Back-tracing survivors' pre-drug dynamics identifies predictive dynamic features such as slow cycling or pulsatile signaling."
+    },
+    {
+      "title": "Metabolic state sorting by FLIM/mitochondrial probes followed by drug challenge",
+      "description": "Use NAD(P)H FLIM or mitochondrial membrane potential dyes to sort live cells by metabolic state pre-treatment, then expose each fraction to drug. This tests whether metabolic heterogeneity, such as oxidative phosphorylation reliance or redox buffering, causally predicts survival."
+    },
+    {
+      "title": "Single-cell multiome of persisters with chromatin perturbation",
+      "description": "Profile persisters and matched untreated cells by joint scRNA/ATAC to find chromatin accessibility states and transcription factors that define tolerance. Then test causality by perturbing the candidates with CRISPRi or epigenetic inhibitors and measuring changes in persister frequency."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., ClonMapper) to test whether persisters are pre-existing clones or stochastic",
+      "Single-cell RNA-seq of pre-treatment cells linked to post-treatment survival via barcodes",
+      "Time-lapse live-cell imaging with fluorescent reporters, tracking single-cell fates through drug exposure",
+      "Fluctuation test (Luria-Delbr\u00fcck style) to distinguish pre-existing vs drug-induced tolerance",
+      "Sister-cell pair tracking to measure heritability of survival over divisions",
+      "Single-cell ATAC-seq / multiome for chromatin states of persisters",
+      "Single-cell proteomics/mass cytometry of signaling (p-ERK, AKT) before and after drug",
+      "Metabolic imaging (FLIM of NAD(P)H) to sort cells by metabolic state and test survival",
+      "Mitochondrial content/membrane potential sorting followed by drug challenge",
+      "Single-cell lineage tracing with mitochondrial DNA mutations",
+      "Cell-cycle state and slow-cycling reporter (H2B-FUCCI, label retention) analysis",
+      "Pooled CRISPR screens for persistence-specific regulators",
+      "Live-cell sensors for stress response (p53, NF-kB, ISR) dynamics",
+      "Measurement of drug target occupancy and intracellular drug concentration per cell",
+      "Efflux pump activity (ABC transporter) sorting with survival readout",
+      "Spatial transcriptomics of tumor xenografts after treatment to find niche effects",
+      "Persister cell DNA damage/repair and mutation accumulation by single-cell WGS",
+      "Epigenetic perturbation (HDAC/KDM inhibitors) to alter persister frequency",
+      "Mathematical modeling of switching rates fitted to barcoded population data",
+      "Paired secretome/co-culture assays testing paracrine protection of persisters",
+      "Ribosome profiling/translation state measurement in persisters",
+      "Intravital imaging of persisters and regrowth in vivo"
+    ]
+  },
+  "output_tokens": 1379,
+  "cost_usd": 0.016573200000000003
+}

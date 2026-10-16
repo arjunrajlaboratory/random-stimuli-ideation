@@ -88,3 +88,23 @@ Append-only log of non-obvious decisions and their rationale.
 **Consequences**: The report title is scoped to "one brainstorming test". A confirmatory rerun on a second question is listed as a next step.
 
 **Tags**: report, framing, multiple-comparisons, exploratory
+
+### [2026-10-15] Design of the ideation-methods-across-models study
+
+**Context**: The user asked for new ideas on how to generate ideas, tested on Opus, Sonnet and Haiku 5.5, with a new report from scratch. The earlier study (one model, one question, exploratory winner) left open generalization and the domain-level mode collapse of its best levers.
+
+**Decision**:
+- Seven new prompts, each aimed at a known failure (assigned parallel problem, list the obvious then avoid it, overgenerate then select, invert an assumption, assigned constraint, critique and revise, future retrospective), plus plain and the earlier unrelated-domain instruction (pre-registered replication).
+- Three generators; two questions (the AP-1 question for continuity, a drug-tolerant persister question for a different subfield); 8 calls × 5 ideas per cell.
+- Pre-registered primary outcome: distinct useful-novel ideas (Opus judge, stripped text, 2 passes, both ≥ 4, clustered within cell at 0.75). Stratified call permutation tests; Holm over 3 models (H1) and 7 prompts (H2).
+- Robustness: Sonnet as a second judge (self-preference check) and Opus on as-written text.
+- Verbalized sampling and personas dropped (already tested; VS was the weakest arm).
+- Report reused the user's Phase-0 choices from the earlier report (HTML + slides, overview + supplement, tier B).
+
+**Alternatives considered**: One question only (rejected: the main caveat of the earlier study); Haiku as a judge (rejected: weakest); judging written text as primary (rejected: decoration inflates novelty).
+
+**Rationale**: Remove the earlier study's three limits while testing levers that inject variety by construction versus levers that make the mode explicit.
+
+**Consequences**: Exploratory analyses (union of prompts, cost per idea) were added after the results and are labeled as such.
+
+**Tags**: llm, ideation, experimental-design, pre-registration, models

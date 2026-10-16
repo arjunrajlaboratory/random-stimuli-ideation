@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded fate mapping before drug exposure",
+      "description": "Tag a clonal population with expressed heritable DNA barcodes, split it into replicate pools, and treat some pools with drug. Sequence survivors and untreated sister pools to test whether persistence is pre-encoded in specific lineages, how many generations it is inherited, and what pre-treatment transcriptional states predict survival. Matching barcodes between sister pools would settle the question of whether survivors are pre-existing or drug-induced."
+    },
+    {
+      "title": "Live-cell lineage tracking with post-hoc multi-omic readout",
+      "description": "Film thousands of single cells and their pedigrees for many generations before and during drug exposure, using reporters for signaling, cell cycle, and stress. Then fix the same cells in place and run spatial transcriptomics, proteomics, or chromatin profiling, so each survivor's history can be linked to its molecular state. This would show which dynamic behaviors, such as pulsatile signaling, slow cycling, or mitochondrial state, precede survival and whether they are transient or inherited."
+    },
+    {
+      "title": "Single-cell kinetics of drug target engagement and intracellular drug levels",
+      "description": "Use fluorescent or mass-spec-compatible drug analogs, target-engagement biosensors, and single-cell proteomics to measure how much drug reaches its target in each cell and how fast downstream signaling is shut off. Compare survivors and non-survivors within the same genotype to separate drug efflux, target-expression variation, and pathway rewiring from true downstream adaptation. This would show whether survival comes from a failure to inhibit the target or from tolerance despite inhibition."
+    },
+    {
+      "title": "Causal perturbation of candidate persister states with single-cell CRISPR and epigenome editing",
+      "description": "Run pooled CRISPR knockout, interference, and activation screens that read out single-cell transcriptomes under drug, along with targeted epigenome editing of loci that distinguish pre-persister cells. Test whether forcing or blocking a particular state, such as a chromatin configuration, stress-response program, or metabolic state, changes survival probability. This would turn the correlative markers from observational studies into causal determinants and rank which are necessary, sufficient, or only passengers."
+    },
+    {
+      "title": "Mathematical modeling of stochastic state switching with fluctuation tests",
+      "description": "Run Luria\u2013Delbr\u00fcck-style fluctuation analysis and time-resolved fate-mapping on survivor counts across many replicate clonal cultures, then fit stochastic models of state switching, drug-induced switching, and selection. The variance and time-dependence of survivor numbers across replicates would distinguish between rare pre-existing states, induced adaptation, and mixtures of the two. This would give quantitative switching rates that predict how combination or scheduled dosing can reduce or exploit survivors."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1004,
+  "cost_usd": 0.012815
+}

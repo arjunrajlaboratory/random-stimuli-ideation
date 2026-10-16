@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Synthetic sufficiency test with an inducible tethered AP-1 at a silent locus",
+      "description": "Tether a dimerized FOS-JUN (or bZIP fusion) to a transgenic silent reporter locus using dCas9 or a synthetic zinc-finger system under a doxycycline switch. After the tether is removed, measure whether accessibility and transcription persist, which tests whether AP-1 occupancy alone is sufficient to carry a self-sustaining memory state."
+    },
+    {
+      "title": "Residence-time shift of endogenous FOS/JUN by single-molecule tracking",
+      "description": "Knock in HaloTag at the endogenous FOS and JUN loci and use single-molecule tracking with pulse-chase labeling to measure chromatin dwell-time distributions before, during, and after stimulation. A persistent lengthening of dwell time without changes in total occupancy would indicate that memory is encoded in binding kinetics rather than in presence or absence of the factor."
+    },
+    {
+      "title": "Optogenetic pulse-train encoding of AP-1 history",
+      "description": "Drive a light-inducible AP-1 (e.g., optogenetic JUN or FOS) with trains that vary in pulse number, spacing, and total dose, then measure a standardized later response to a fixed challenge. If the response scales with pulse count or spacing rather than with the last pulse, AP-1 is acting as an integrator of activation history, which is a defining property of memory."
+    },
+    {
+      "title": "Mitotic inheritance of AP-1 priming across cell divisions",
+      "description": "Track endogenously tagged AP-1 occupancy and reactivation kinetics through mitosis in live imaging, sorting or following daughter cells that inherited different amounts of bound factor. Faster or stronger reactivation in daughters that inherited high AP-1 occupancy would show that the memory is passed through cell division, distinguishing it from a purely cell-autonomous, reversible state."
+    },
+    {
+      "title": "Lineage-barcoded clonal tracing of primed AP-1 states",
+      "description": "Combine an AP-1 activity reporter with a heritable CRISPR-based lineage barcode so each clone's history of activation is recorded. Then challenge sorted clones with a secondary stimulus and test whether clonal response biases are stable across many generations and across tissue transplantation, which would show heritable memory at the clone level."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq or CUT&RUN for FOS/JUN family members across a time course after stimulus and washout",
+      "ATAC-seq to test whether AP-1-bound chromatin stays open after the stimulus is removed",
+      "Knockout or knockdown of FOS, JUN, or JUNB to see whether the memory phenotype is lost",
+      "Re-stimulation (secondary response) assays comparing primed and naive cells",
+      "Histone mark profiling (H3K27ac, H3K4me1) at AP-1 sites before, during, and after stimulation",
+      "Single-cell RNA-seq to see whether a memory-like transcriptional state persists",
+      "Live-cell imaging of fluorescent AP-1 reporter dynamics",
+      "Massively parallel reporter assays with mutated AP-1 motifs in candidate enhancers",
+      "Pharmacological inhibition of AP-1 (e.g., T-5224) during or after stimulation",
+      "Co-factor analysis (BATF, IRF, or other partners) at AP-1 sites"
+    ]
+  },
+  "output_tokens": 3229,
+  "cost_usd": 0.00175838
+}

@@ -1,0 +1,3940 @@
+<!doctype html>
+<!--
+  Mycelium Report Template — HTML (report + companion slides, one file)
+  =============================================================================
+  One self-contained file with two modes:
+
+    * the long-form REPORT (default view), and
+    * the companion SLIDES (press "Present", or open report.html#slides/1).
+      Esc (or leaving fullscreen) returns to the report section the current
+      slide came from.
+
+  Copy to analysis/[name]/reports/[name]-report.html and replace every
+  %%…%% placeholder marker (check_html_report.py fails on any that remain).
+  Read html-conventions.md in this convention pack before drafting — it
+  defines the value / figure / data / slide contracts used below.
+
+  Numbers: every reportable value is a wrapper span whose text is the
+  rendered value, e.g. <span data-sci-val="n_samples">48</span>. Never type a
+  manifest value as bare text. `scitexlintr report.html --manifest=.manifest.json
+  --write` refreshes stale values; `sync_html_report.py` refreshes figures and
+  interactive data. Do not edit the <style> block or the
+  <script id="sci-report-runtime"> block per report — they are the shared
+  runtime and are replaced wholesale when the template is upgraded.
+
+  Shapes: this file is the OVERVIEW + SUPPLEMENT shape (default).
+    * OVERVIEW: delete the <section id="supplement"> block.
+    * COMPREHENSIVE: move the supplement's methods detail into Methods and
+      delete the supplement heading.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="mycelium report-generator (html)">
+<title>Pushing a language model past its obvious ideas gave the research ideas a model judge rated best</title>
+<style>
+/* ==========================================================================
+   Tokens — light and dark are both selected, not flipped.
+   ========================================================================== */
+:root {
+  color-scheme: light;
+  --paper: #fbfbf9;
+  --surface: #ffffff;
+  --ink: #1a1a19;
+  --ink-2: #52514e;
+  --muted: #7a7973;
+  --rule: #e1e0d9;
+  --rule-strong: #c3c2b7;
+  --accent: #1c5cab;
+  --accent-soft: #e6effa;
+  --caveat: #8a4b00;
+  --caveat-soft: #fbf1e4;
+  --highlight: #fff3c4;
+  --media-paper: #ffffff;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
+  --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
+  --serif: ui-serif, "Iowan Old Style", Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --measure: 42rem;
+  --wide: 60rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121211; --surface: #1a1a19; --ink: #f2f1ec; --ink-2: #c3c2b7;
+    --muted: #9a998f; --rule: #2c2c2a; --rule-strong: #45443f; --accent: #86b6ef;
+    --accent-soft: #17273b; --caveat: #f0b36a; --caveat-soft: #2a1f12; --highlight: #3b3212;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+    --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121211; --surface: #1a1a19; --ink: #f2f1ec; --ink-2: #c3c2b7;
+  --muted: #9a998f; --rule: #2c2c2a; --rule-strong: #45443f; --accent: #86b6ef;
+  --accent-soft: #17273b; --caveat: #f0b36a; --caveat-soft: #2a1f12; --highlight: #3b3212;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+  --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+}
+
+/* ==========================================================================
+   Report
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 1.5rem; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 1.0625rem/1.62 var(--serif);
+  font-kerning: normal; text-rendering: optimizeLegibility;
+}
+body.presenting { overflow: hidden; }
+body.presenting > :not(#deck):not(script) { visibility: hidden; }
+a { color: var(--accent); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--surface); padding: .5rem 1rem; }
+
+.masthead { padding: 3.5rem 1rem 2rem; border-bottom: 1px solid var(--rule); }
+.masthead-inner { max-width: calc(var(--wide) + 16rem); margin: 0 auto; padding-left: 0; }
+@media (min-width: 72rem) { .masthead-inner { padding-left: 16rem; } }
+.kicker { font: 600 .78rem/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 .9rem; }
+.masthead h1 { font: 700 clamp(1.9rem, 4.2vw, 2.9rem)/1.12 var(--sans); letter-spacing: -.02em; margin: 0 0 .9rem; max-width: 28ch; text-wrap: balance; }
+.dek { font-size: 1.28rem; line-height: 1.45; color: var(--ink-2); margin: 0 0 1.4rem; max-width: 38em; text-wrap: pretty; }
+.byline { font: .92rem/1.5 var(--sans); color: var(--ink-2); margin: 0; }
+.byline span + span::before { content: "·"; margin: 0 .5em; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.6rem; }
+.btn {
+  font: 600 .9rem/1 var(--sans); display: inline-flex; align-items: center; gap: .5em;
+  padding: .7em 1.05em; border-radius: 999px; border: 1px solid var(--rule-strong);
+  background: var(--surface); color: var(--ink); cursor: pointer; text-decoration: none;
+}
+.btn:hover { border-color: var(--ink-2); }
+.btn:focus-visible, .deck :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:hover { background: var(--ink-2); border-color: var(--ink-2); }
+.btn svg { width: 1em; height: 1em; }
+
+.layout {
+  display: grid; grid-template-columns: minmax(0, var(--wide)); justify-content: center;
+  max-width: calc(var(--wide) + 16rem); margin: 0 auto; padding: 0 1rem 5rem;
+}
+@media (min-width: 72rem) {
+  .layout { grid-template-columns: 13rem minmax(0, var(--wide)); column-gap: 3rem; }
+}
+.toc { display: none; }
+@media (min-width: 72rem) {
+  .toc { display: block; position: sticky; top: 0; align-self: start; max-height: 100vh; overflow: auto; padding: 2.5rem 0 2rem; font: .84rem/1.35 var(--sans); }
+}
+.toc-title { font: 600 .72rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 .8rem; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc ol ol { padding-left: .85rem; margin: .3rem 0 .5rem; }
+.toc li { margin: .32rem 0; }
+.toc a { color: var(--ink-2); text-decoration: none; display: block; border-left: 2px solid transparent; padding-left: .55rem; margin-left: -.7rem; }
+.toc a:hover { color: var(--ink); }
+.toc a[aria-current="true"] { color: var(--ink); border-left-color: var(--accent); }
+.toc-inline { margin: 2rem 0 0; font: .95rem/1.4 var(--sans); }
+@media (min-width: 72rem) { .toc-inline { display: none; } }
+.toc-inline summary { cursor: pointer; color: var(--ink-2); }
+
+main { min-width: 0; padding-top: 2.2rem; }
+/* Prose keeps a readable measure; figures and tables marked .wide break out. */
+main :is(p, ul, ol, dl, h2, h3, h4, blockquote, pre, figure, .caveat, .table-wrap, math[display="block"]) { max-width: var(--measure); }
+main :is(figure, .table-wrap).wide { max-width: var(--wide); }
+main h2 {
+  font: 700 1.55rem/1.25 var(--sans); letter-spacing: -.01em; margin: 3.2rem 0 1rem;
+  padding-top: 1.2rem; border-top: 1px solid var(--rule); text-wrap: balance;
+}
+main section:first-child > h2 { border-top: 0; margin-top: 1rem; }
+main h3 { font: 650 1.18rem/1.35 var(--sans); margin: 2.4rem 0 .7rem; text-wrap: balance; }
+main h4 { font: 650 1rem/1.4 var(--sans); margin: 1.8rem 0 .5rem; color: var(--ink-2); }
+main p, main li { text-wrap: pretty; hyphens: auto; }
+main p { margin: 0 0 1.05rem; }
+main ul, main ol { padding-left: 1.3rem; margin: 0 0 1.1rem; }
+main li { margin: .3rem 0; }
+.present-here {
+  font: 500 .75rem/1 var(--sans); color: var(--muted); text-decoration: none; margin-left: .6rem;
+  vertical-align: .2em; white-space: nowrap; opacity: 0; transition: opacity .15s;
+}
+h2:hover .present-here, h3:hover .present-here, .present-here:focus { opacity: 1; }
+@media (hover: none) { .present-here { opacity: 1; } }
+.flash { animation: flash 1.6s ease-out; }
+@keyframes flash { from { background: var(--highlight); } to { background: transparent; } }
+
+.abstract { font-size: 1.1rem; line-height: 1.58; }
+.abstract h2 { font: 600 .78rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 0; margin: 1rem 0 .8rem; padding: 0; }
+.caveat {
+  margin: 1.4rem 0; padding: .9rem 1.1rem; border-left: 3px solid var(--caveat);
+  background: var(--caveat-soft); font-size: .98rem; border-radius: 0 6px 6px 0;
+}
+.caveat > :last-child { margin-bottom: 0; }
+.caveat-label { font: 700 .72rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--caveat); display: block; margin-bottom: .45rem; }
+
+[data-sci-val], [data-sci-text] { font-variant-numeric: tabular-nums; }
+code, kbd, samp, pre { font-family: var(--mono); font-size: .88em; }
+main dl { margin: 0 0 1.1rem; }
+main dt { font: 650 .95rem/1.4 var(--sans); margin-top: .7rem; }
+main dd { margin: .15rem 0 0 1.2rem; }
+math[display="block"] { display: block; overflow-x: auto; overflow-y: hidden; margin: 1rem 0; padding: .2rem 0; }
+ol.references { font-size: .92rem; line-height: 1.5; padding-left: 1.6rem; }
+ol.references li { margin: .45rem 0; }
+time { font-variant-numeric: tabular-nums; }
+pre { background: var(--surface); border: 1px solid var(--rule); padding: .9rem 1rem; overflow: auto; border-radius: 6px; }
+
+/* Figures — media sits on a light card in both themes (analysis figures are drawn on white). */
+figure { margin: 2rem 0; }
+.sci-media { background: var(--media-paper); border: 1px solid var(--rule); border-radius: 8px; padding: .75rem; overflow: hidden; }
+.sci-media svg, .sci-media img { display: block; width: 100%; height: auto; max-height: 80vh; }
+[data-sci-diagram] .sci-media { background: var(--surface); }
+[data-sci-diagram] .sci-media svg { color: var(--ink); }
+figcaption { font: .9rem/1.5 var(--sans); color: var(--ink-2); margin-top: .7rem; max-width: var(--measure); }
+/* "Figure 2." / "Table S1." labels are inserted by the runtime, which also
+   numbers the cross-references, so the two can never disagree. */
+.sci-label { font-weight: 650; color: var(--ink); }
+
+.table-wrap { overflow-x: auto; margin: 1.6rem 0; container-type: inline-size; }
+/* A wide table scrolls; its caption stays put and wraps within the visible width. */
+table.sci-table caption { position: sticky; left: 0; max-width: 100cqi; }
+table.sci-table { border-collapse: collapse; font: .9rem/1.4 var(--sans); min-width: 60%; }
+table.sci-table caption { text-align: left; color: var(--ink-2); padding-bottom: .5rem; caption-side: top; }
+
+table.sci-table th, table.sci-table td { padding: .45rem .8rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.sci-table thead th { border-bottom: 1.5px solid var(--rule-strong); font-weight: 650; }
+table.sci-table td.num, table.sci-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.supplement > h2 { font-size: 1.9rem; }
+.supplement { counter-reset: supp; }
+.supplement > section > h3 { counter-increment: supp; }
+.supplement > section > h3::before { content: "S" counter(supp) " "; color: var(--muted); }
+.provenance dl { display: grid; grid-template-columns: minmax(8rem, max-content) 1fr; gap: .35rem 1.2rem; font: .9rem/1.45 var(--sans); }
+.provenance dt { color: var(--ink-2); }
+.provenance dd { margin: 0; overflow-wrap: anywhere; }
+.report-footer { max-width: var(--measure); font: .85rem/1.5 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); margin-top: 4rem; padding-top: 1.2rem; }
+
+/* Interactive time series */
+.sci-ts-controls { display: flex; align-items: center; gap: .8rem; margin-top: .6rem; font: .85rem/1.3 var(--sans); flex-wrap: wrap; }
+.sci-ts-controls input[type="range"] { flex: 1 1 12rem; accent-color: var(--accent); }
+.sci-ts-controls button { font: 600 .8rem/1 var(--sans); border: 1px solid var(--rule-strong); background: var(--surface); color: var(--ink); border-radius: 999px; padding: .45em .9em; cursor: pointer; min-width: 4.6rem; }
+.sci-ts-readout { display: flex; flex-wrap: wrap; gap: .25rem 1rem; font: .85rem/1.35 var(--sans); color: #52514e; min-height: 1.4em; margin-bottom: .4rem; }
+.sci-ts-readout b { color: #0b0b0b; font-variant-numeric: tabular-nums; }
+.sci-ts-legend { display: flex; flex-wrap: wrap; gap: .3rem 1rem; font: .8rem/1.3 var(--sans); color: #52514e; margin-bottom: .3rem; }
+.sci-ts-key { display: inline-block; width: .9rem; height: 2px; vertical-align: middle; margin-right: .35rem; border-radius: 1px; }
+.sci-ts svg text { font: 11px var(--sans); fill: #898781; }
+.sci-ts svg .ts-label { font-size: 12px; fill: #52514e; }
+.sci-data-table { margin-top: .6rem; font: .85rem/1.4 var(--sans); }
+.sci-data-table summary { cursor: pointer; color: var(--ink-2); }
+.sci-data-table table { border-collapse: collapse; margin-top: .5rem; font-variant-numeric: tabular-nums; }
+.sci-data-table th, .sci-data-table td { padding: .2rem .6rem; border-bottom: 1px solid var(--rule); text-align: right; }
+
+/* ==========================================================================
+   Deck — a 1280×720 stage scaled to fit the viewport.
+   ========================================================================== */
+.deck { position: fixed; inset: 0; z-index: 100; background: #0f0f0e; color: var(--ink); font-family: var(--sans); }
+.deck[hidden] { display: none; }
+.deck-viewport { position: absolute; inset: 0 0 44px 0; overflow: hidden; }
+/* Centered by its own midpoint, so it stays centered when scaled below 1280px. */
+.deck-stage {
+  width: 1280px; height: 720px; position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%) scale(var(--deck-scale, 1)); transform-origin: center center;
+}
+.slide {
+  position: absolute; inset: 0; display: none; flex-direction: column;
+  background: var(--surface); color: var(--ink); padding: 56px 72px 48px; overflow: hidden;
+  border-radius: 4px; font: 26px/1.4 var(--sans);
+}
+.slide.is-current { display: flex; animation: slide-in .22s ease-out; }
+@keyframes slide-in { from { opacity: 0; } to { opacity: 1; } }
+.slide > h2 { font: 700 38px/1.18 var(--sans); letter-spacing: -.015em; margin: 0 0 28px; max-width: 30ch; text-wrap: balance; }
+.slide-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+.slide-body p { margin: 0; max-width: 34ch; color: var(--ink-2); }
+.slide-body ul { margin: 0; padding-left: 1.1em; display: grid; gap: 18px; max-width: 36ch; }
+.slide-body li::marker { color: var(--muted); }
+.slide .takeaway { font-size: 24px; color: var(--ink-2); max-width: 44ch; }
+.slide-figure { flex: 1 1 auto; min-height: 0; display: flex; }
+.slide-figure figure { margin: 0; flex: 1; display: flex; flex-direction: column; min-height: 0; max-width: none; }
+.slide-figure .sci-media { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.slide-figure .sci-media svg, .slide-figure .sci-media img { width: 100%; height: 100%; object-fit: contain; }
+.slide-figure .sci-media.sci-ts { flex-direction: column; align-items: stretch; justify-content: flex-start; }
+.slide-figure figcaption, .slide-figure .sci-data-table { display: none; }
+.slide-figure .sci-ts { width: 100%; }
+.slide-figure .sci-ts svg { flex: 1 1 auto; min-height: 0; }
+.slide--split .slide-body { flex-direction: row; align-items: stretch; gap: 44px; }
+.slide--split .slide-figure { flex: 3 1 0; }
+.slide--split .slide-text { flex: 2 1 0; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+.slide--statement .slide-body { align-items: flex-start; }
+.slide .stat { font: 800 120px/1 var(--sans); letter-spacing: -.03em; color: var(--ink); }
+.slide .stat-label { font-size: 28px; color: var(--ink-2); max-width: 34ch; }
+.slide--title { justify-content: center; background: var(--ink); color: var(--paper); padding: 72px 96px 56px; }
+.slide--title h1 { font: 750 52px/1.1 var(--sans); letter-spacing: -.025em; margin: 0 0 24px; max-width: 24ch; text-wrap: balance; }
+.slide--title .slide-dek { font-size: 26px; line-height: 1.4; opacity: .82; max-width: 40ch; margin: 0 0 32px; }
+.slide--title .slide-byline { font-size: 20px; opacity: .7; margin: 0; }
+.slide--title .slide-hint { font-size: 16px; opacity: .55; margin: 40px 0 0; }
+.slide-source {
+  position: absolute; right: 28px; bottom: 16px; max-width: 60%; font: 500 15px/1 var(--sans);
+  color: var(--muted); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.slide-source:hover { color: var(--accent); }
+.deck-bar {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 44px; display: flex; align-items: center;
+  gap: 14px; padding: 0 14px; color: #c3c2b7; font: 500 13px/1 var(--sans); background: #0f0f0e;
+}
+.deck-bar button {
+  background: transparent; border: 0; color: inherit; width: 32px; height: 32px; border-radius: 6px;
+  display: grid; place-items: center; cursor: pointer; padding: 0;
+}
+.deck-bar button:hover { background: #262624; color: #fff; }
+.deck-bar svg { width: 18px; height: 18px; }
+/* Segments touch (no dead gaps between hit targets); the visible gap is padding. */
+.deck-progress { flex: 1; display: flex; gap: 0; align-items: center; height: 100%; }
+.deck-progress button { flex: 1; height: 24px; width: auto; border-radius: 0; padding: 0 1.5px; display: flex; align-items: center; }
+.deck-progress button::before { content: ""; display: block; width: 100%; height: 4px; border-radius: 2px; background: #3a3a37; }
+.deck-progress button.is-done::before { background: #86b6ef; }
+.deck-progress button:hover { background: transparent; }
+.deck-progress button:hover::before { background: #c3c2b7; }
+.deck-count { min-width: 4.5em; text-align: right; font-variant-numeric: tabular-nums; }
+.deck-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.deck:fullscreen { background: #000; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ==========================================================================
+   Print — the report prints as a paper; while presenting, one slide per page.
+   ========================================================================== */
+@page { margin: 18mm 16mm; }
+@page slide { size: 13.333in 7.5in; margin: 0; }
+@media print {
+  /* Same specificity as the dark-mode selectors, and later, so print is always light. */
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"] {
+    color-scheme: light;
+    --paper: #fff; --surface: #fff; --ink: #000; --ink-2: #333; --muted: #555; --rule: #ccc;
+    --rule-strong: #999; --accent: #1c5cab; --accent-soft: #e6effa; --caveat: #8a4b00;
+    --caveat-soft: #fbf1e4; --highlight: #fff3c4;
+    --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
+    --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
+  }
+  body { font-size: 10.5pt; background: #fff; }
+  .toc, .toc-inline, .actions, .present-here, .skip, .sci-ts-controls button, .sci-ts-controls input { display: none !important; }
+  .layout { display: block; max-width: none; padding: 0; }
+  main h2 { break-after: avoid; }
+  main h3 { break-after: avoid; }
+  figure, table, .caveat { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  body:not(.presenting) .deck { display: none !important; }
+  body.presenting > :not(#deck):not(script) { display: none !important; }
+  body.presenting .deck { position: static; background: none; }
+  body.presenting .deck-viewport { position: static; display: block; }
+  body.presenting .deck-stage { position: static; left: auto; top: auto; transform: none !important; width: auto; height: auto; }
+  body.presenting .slide { display: flex !important; position: relative; width: 13.333in; height: 7.5in; page: slide; break-after: page; border-radius: 0; animation: none; }
+  body.presenting .slide:last-child { break-after: auto; }
+  body.presenting .deck-bar, body.presenting .deck-live { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the report</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Ideation methods · Analysis report</p>
+    <h1>Pushing a language model past its obvious ideas gave the research ideas a model judge rated best</h1>
+    <p class="dek">Nine prompts, three Claude models, two cell-biology questions, one blind model judge. In the main analysis, the plain prompt gave no idea the judge rated both novel and useful; prompts that showed the model its default ideas did best, most of all for the largest model. No scientist has rated the ideas yet.</p>
+    <p class="byline"><span>Arjun Raj (with Claude)</span><span><time>2026-10-15</time></span></p>
+    <div class="actions">
+      <button class="btn btn-primary" type="button" data-present>
+        <svg data-sci-icon viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
+        Present slides
+      </button>
+      <a class="btn" href="#provenance">Provenance</a>
+    </div>
+    <details class="toc-inline"><summary>Contents</summary><ol data-toc></ol></details>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Contents">
+    <p class="toc-title">Contents</p>
+    <ol data-toc></ol>
+  </nav>
+
+  <main id="main">
+
+    <section id="abstract" class="abstract">
+      <h2>Abstract</h2>
+      
+<p>Language models brainstorm in a rut: asked for research ideas, they tend to return the same standard experiments. We tested nine ways of prompting for ideas on two cell-biology research questions,
+using three models of different size (<span data-sci-text="model_name_haiku">Haiku 5.5</span>, <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> and <span data-sci-text="model_name_opus">Opus 5.5</span>). Seven prompts were new. Each prompt
+and model produced eighty ideas, <span data-sci-val="n_ideas_total">2160</span> in all. A judge model (<span data-sci-text="judge_model_name">Opus 5.5</span>) scored every idea for novelty and usefulness without knowing
+where it came from, after a rewrite that stripped analogies and other framing. Our main measure counts
+<em>distinct useful-novel ideas</em>: ideas rated at least four out of five on both scales, with near-duplicates
+merged.</p>
+<p>The plain prompt gave <span data-sci-val="distinct_pooled_plain">0</span> distinct useful-novel ideas for every model. The best
+prompt, <em>critique and revise</em>, showed the model its own plain-prompt ideas, said an expert found them
+obvious, and asked for replacements. It gave <span data-sci-val="distinct_pooled_critique_revise">34</span> of <span data-sci-val="n_ideas_per_prompt_all_models">240</span>, and a related
+prompt that has the model list the obvious ideas first and then avoid them gave
+<span data-sci-val="distinct_pooled_obvious_then_avoid">25</span>. Of the seven new prompts, <span data-sci-val="n_methods_beating_plain_pooled">5</span> beat the
+plain prompt after correction for multiple comparisons, but only critique and revise beat the stronger baseline, the best prompt from an earlier
+study (an instruction to borrow from an unrelated field), by <span data-sci-val="h2_instruction_only_critique_revise_distinct_useful_novel_diff">18</span>
+ideas. The gains were largest for <span data-sci-text="model_name_opus">Opus 5.5</span>: critique and revise added <span data-sci-val="h2_plain_opus_critique_revise_distinct_diff">19</span>
+distinct useful-novel ideas for it, against <span data-sci-val="h2_plain_sonnet_critique_revise_distinct_diff">10</span> for <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> and
+<span data-sci-val="h2_plain_haiku_critique_revise_distinct_diff">5</span> for <span data-sci-text="model_name_haiku">Haiku 5.5</span>. A second judge (<span data-sci-text="cross_judge_model_name">Sonnet 5.5</span>)
+agreed on the best and worst prompts. In an exploratory follow-up, an unrelated poem or a list of random words
+that every idea had to use beat the plain prompt but not the earlier unrelated-field instruction. The main caveat is that every score comes from a language-model judge; no scientist has rated these
+ideas yet.</p>
+    </section>
+
+    <section id="problem">
+      <h2>Problem statement</h2>
+      
+<p>Ask a language model for ten research ideas and you get a sensible list. Ask again and you get a largely overlapping
+list. This repetition, often called <em>mode collapse</em>, means a scientist using a model to widen their
+thinking mostly hears the textbook answers back. An earlier study in this repository asked whether unrelated
+material (poems, random words, essays) placed before the prompt fixes this. It did not. The one prompt that
+helped was a single sentence telling the model that each idea must borrow from a field unrelated to the
+question (we call this the <em>unrelated-domain instruction</em>). That study had three limits: one model,
+one research question, and a winning prompt designed in the fourth of five rounds of trying things, which makes it
+an exploratory result.</p>
+<p>This report asks a broader question. <strong>Which ways of asking for ideas make a model produce more ideas
+that are both new and worth doing, and does the answer depend on the model?</strong> We designed seven new
+prompts, each aimed at a specific reason a model might fall back on the obvious, and compared them with the
+plain prompt and with the unrelated-domain instruction. We tested every prompt on three models of different
+size and on two research questions.</p>
+<p>The measure that matters is whether a prompt yields ideas a scientist would find both surprising and
+feasible. We approximate this with a judge model that scores each idea for <em>novelty</em> (would an expert
+have thought of it?) and <em>usefulness</em> (could a typical lab do it within a year or two, and would the result
+be informative?). A <em>useful-novel idea</em> scores at least four out of five on both. We ask each model for ideas many times, each time in a fresh, separate request with no memory of the others
+(a <em>call</em>, which returns five ideas). Because a model can repeat one good idea in call after call, we count <em>distinct useful-novel ideas</em>: useful-novel ideas after merging
+near-duplicates. A good answer is a prompt that raises this count well above the plain prompt, ideally for
+every model.</p>
+
+<section id="examples">
+<h3>What the ideas look like</h3>
+<p>Before any numbers, here is what the difference looks like. The first five ideas below are the
+first plain-prompt call to <span data-sci-text="model_name_opus">Opus 5.5</span> on the drug-tolerance question (why do a few genetically identical cancer
+cells survive a targeted drug?). They are the experiments a researcher in the field would list first: lineage
+barcoding, fluctuation analysis, live imaging, pooled genetic screens. The judge rated them highly useful but
+not novel, so <span data-sci-val="example_n_un_opus_plain">0</span> of them count as useful-novel. The next five come from the
+<em>critique and revise</em> prompt, which showed <span data-sci-text="model_name_opus">Opus 5.5</span> exactly those five plain ideas and asked for less
+obvious replacements; <span data-sci-val="example_n_un_opus_critique_revise">3</span> of them count as useful-novel. The last five are
+<span data-sci-text="model_name_haiku">Haiku 5.5</span>'s replacements under the same prompt (shown <span data-sci-text="model_name_haiku">Haiku 5.5</span>'s own plain ideas). The judge rated them novel but less
+useful, and <span data-sci-val="example_n_un_haiku_critique_revise">0</span> of them pass both bars.</p>
+<div class="table-wrap" id="tab-examples">
+  <table class="sci-table" data-sci-table="tab_example_ideas" data-columns="example,title,novelty,usefulness,useful_novel" data-precision="1" data-sha256="9a57fe89c1fed2291db68e39e61e71ef70149f07734696c1186027b3a95cbdbe" data-content-sha256="fac32e23ee4da9da98b278dc4791214c36c05715c5819de22a02733e6ea44cc4">
+    <caption>Fifteen example ideas for the drug-tolerance question, from the first call of three prompt and model
+    combinations (chosen in advance, not by score). Scores are the judge's means over two readings on a
+    one-to-five scale; "useful-novel" means both are at least four.</caption>
+    <thead><tr><th>Model and prompt</th><th>Idea (title as written)</th><th class="num">Novelty</th><th class="num">Usefulness</th><th>Useful-novel</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_example_ideas rows: 2811 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+</section>
+
+    </section>
+
+    <section id="methods">
+      <h2>Methods</h2>
+      
+<p>In outline: each model answered each prompt in many separate, fresh calls, a rewrite step removed
+decorative language, a judge model scored every idea blind, and statistical tests compared prompts by shuffling
+whole calls between them. The supplement gives the full wording of every prompt and all parameters. The
+design, prompts, outcome and tests were written down before any idea was generated (the pre-registration is in
+the analysis folder); the analyses labeled <em>exploratory</em> below were added after seeing the results.</p>
+
+<h3>Nine prompts</h3>
+<p>Every prompt asks for five concrete ideas (analyses, measurements or experiments), each with a short title and
+one or two sentences of description. They differ in what comes before or around that request.</p>
+<dl>
+  <dt>Plain prompt</dt><dd>The request alone. This is the baseline.</dd>
+  <dt>Unrelated-domain instruction</dt><dd>Each idea must borrow an analogy, structure, principle or pattern from
+  a domain unrelated to the question. This was the best prompt in the earlier study; here it is a pre-specified
+  replication.</dd>
+  <dt>Assigned parallel problem</dt><dd>The model first lists eight problems from eight different fields that share
+  the question's structure. Each later call receives one of them and must transfer a method from it. This keeps
+  the earlier study's most novel approach but forces variety, because in that study the model picked the same
+  parallel (magnetic hysteresis) nearly every time.</dd>
+  <dt>List the obvious, then avoid it</dt><dd>The model first lists the ten ideas most experts would propose, then
+  gives five ideas that are none of them.</dd>
+  <dt>Overgenerate, then select</dt><dd>The model brainstorms twenty one-line candidates, then picks and develops
+  the five that best combine being non-obvious with being feasible.</dd>
+  <dt>Invert an assumption</dt><dd>The model lists the hidden assumptions in the question and in how the field
+  usually tests it; each idea must test or exploit the failure of a different one.</dd>
+  <dt>Assigned constraint</dt><dd>Each call gets one constraint from a fixed list of eight, such as using only data
+  that are already public, or using no genetic perturbation, and every idea must respect it.</dd>
+  <dt>Critique and revise</dt><dd>A second, fresh call shows the model the five ideas it gave to the plain prompt
+  in the matching call, says a senior expert finds them the ideas everyone would propose first, and asks for five
+  less obvious but feasible replacements.</dd>
+  <dt>Future retrospective</dt><dd>The model imagines it is <time>2036</time> and that five landmark papers each settled the
+  question in a way that surprised the field, and describes what each one measured or did.</dd>
+</dl>
+
+<h3>Models, questions and requests</h3>
+<p>The three generators were <span data-sci-text="model_name_haiku">Haiku 5.5</span>, <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> and <span data-sci-text="model_name_opus">Opus 5.5</span>, the small, medium and large models of the same
+family. The two research questions were the earlier study's question, "<span data-sci-text="question_ap1">What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?</span>" (the <em>cellular-memory
+question</em>; <span data-sci-text="factor_name">AP-1</span> is a family of gene-regulating proteins), and a new one from a
+different part of cell biology, "<span data-sci-text="question_persister">What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?</span>" (the drug-tolerance or <em>persister</em> question).
+Each prompt was sent to each model eight times per question, every time as a fresh call with no memory
+of the others, for <span data-sci-val="n_generation_calls">432</span> calls and <span data-sci-val="n_ideas_total">2160</span> ideas. A <em>condition</em> of the design (one
+question, model and prompt) therefore holds forty ideas, and each model and prompt holds eighty across the two
+questions. Two-step prompts used the same model for both steps.</p>
+
+<h3>Removing decoration, then judging blind</h3>
+<p>Prompts that ask for analogies produce ideas dressed in borrowed vocabulary ("Weibull reliability analysis:
+treating cell death as material fracture"). A judge, or an embedding model, can mistake that vocabulary for new
+science. So before judging, <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> rewrote every idea in plain scientific language, keeping the experiment and
+removing analogy, metaphor and numbered framing labels such as "Paper … (hypothetical)". The rewriter saw ideas in
+shuffled batches and was never told which prompt or model wrote them. We call the result the <em>stripped
+text</em>; all primary results use it.</p>
+<p><span data-sci-text="judge_model_name">Opus 5.5</span> then scored each stripped idea for novelty and usefulness on one-to-five scales, in
+shuffled batches of twenty that mixed prompts and models, with opaque labels. It read every idea twice in
+different batches; the two readings agreed with rank correlations of <span data-sci-val="pass_agreement_novelty">0.83</span> for novelty
+and <span data-sci-val="pass_agreement_usefulness">0.73</span> for usefulness. We average the two readings. Because <span data-sci-text="model_name_opus">Opus 5.5</span> is both a
+generator and the judge, we also had <span data-sci-text="cross_judge_model_name">Sonnet 5.5</span> judge every stripped idea once, and had
+<span data-sci-text="judge_model_name">Opus 5.5</span> judge the original, unstripped wording once.</p>
+
+<h3>Counting distinct useful-novel ideas</h3>
+<p>Within each condition, useful-novel ideas are grouped by meaning: we embed each stripped idea as a vector (a sentence
+embedding model) and merge ideas whose vectors are very similar (cosine similarity of at least <span data-sci-val="near_dup_threshold">0.75</span>, average-linkage
+clustering). Each group counts once, and the counts are summed over questions. The worked example below follows one
+idea through these steps. In its condition, <span data-sci-val="worked_cell_n_un">14</span> ideas were useful-novel and they formed
+<span data-sci-val="worked_cell_n_distinct">10</span> groups; the largest group shows three phrasings of the same experiment (single-cell
+apoptotic priming) that count as one.</p>
+<div class="table-wrap" id="tab-worked">
+  <table class="sci-table" data-sci-table="tab_worked_example" data-columns="step,value" data-sha256="d02f74f2a444adf1c515afb9202d50da7902525d107a565ec53e85379f2c02a9" data-content-sha256="42457a503419a1db545b0db0ad7a1300c9e39e816611cb2bb6b05bfca1fc0ebf">
+    <caption>Worked example: one idea from the critique-and-revise prompt (<span data-sci-text="model_name_opus">Opus 5.5</span>, drug-tolerance question, first
+    call), traced from its written title to its contribution to the distinct useful-novel count.</caption>
+    <thead><tr><th>Step</th><th>Value</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_worked_example rows: 1011 characters omitted for review]
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+
+<h3>Follow-up: unrelated material</h3>
+<p>After the main results were in, we added two prompts from the earlier study as an exploratory follow-up. The
+model received an unrelated poem (eight public-domain poems, one per call) or a list of sixty random dictionary words,
+with the instruction that each idea must draw on this material, for example through an analogy, structure, principle or
+pattern. This required wording is the only form in which the earlier study's model used such material at all. Both
+prompts ran on all three models and both questions (<span data-sci-val="n_followup_calls">96</span> calls, <span data-sci-val="n_followup_ideas">480</span> ideas) and
+went through the same stripping and primary judge. To leave the main study's numbers untouched, the new ideas were
+judged in their own batches, each mixing ten new ideas with ten already-judged ideas from the main study. Those anchor
+ideas came back with scores close to their original ones (rank correlations of <span data-sci-val="fu_anchor_novelty_rho">0.88</span> for novelty
+and <span data-sci-val="fu_anchor_usefulness_rho">0.8</span> for usefulness; average shifts of <span data-sci-val="fu_anchor_novelty_shift">0.18</span> and
+<span data-sci-val="fu_anchor_usefulness_shift">-0.07</span> points), so the judge's scale held, though the small rise in novelty may make the
+follow-up counts slightly generous. The second judge model and the original-wording run do not cover these two prompts.</p>
+
+<h3>Statistical tests</h3>
+<p>Ideas from the same call are not independent, so the call is the unit of every test. To compare two prompts we
+pool their calls within each question and model, shuffle which calls belong to which prompt
+<span data-sci-val="n_permutations">5000</span> times, and ask how often a shuffled difference is as large as the real one (a two-sided
+permutation test). Adjusted p-values use the Holm correction: over the three models for the replication test, and
+over the seven new prompts for each comparison of new prompts with a baseline.</p>
+    </section>
+
+    <section id="results">
+      <h2>Results</h2>
+      
+<section id="result-plain-zero">
+<h3>In the main analysis the plain prompt produced no distinct useful-novel idea; five new prompts did significantly better</h3>
+<p>If prompting does not matter, every prompt should yield about the same number of distinct useful-novel
+ideas. It does matter. The plain prompt yielded <span data-sci-val="distinct_pooled_plain">0</span> distinct useful-novel ideas out of
+<span data-sci-val="n_ideas_per_prompt_all_models">240</span>, across all three models and both questions <a class="xref" href="#fig-distinct">Figure</a>. Its ideas were
+judged useful (mean <span data-sci-val="usefulness_pooled_plain">4.08</span> out of five) but not novel (mean
+<span data-sci-val="novelty_pooled_plain">1.72</span>). Pooled over models, <span data-sci-val="n_methods_beating_plain_pooled">5</span> of the seven new prompts beat it (p-values adjusted for
+the seven comparisons with the plain prompt):</p>
+<ul>
+  <li>critique and revise, +<span data-sci-val="h2_plain_critique_revise_distinct_useful_novel_diff">34</span> (p <span data-sci-text="h2_plain_critique_revise_distinct_useful_novel_p">= 0.0014</span>);</li>
+  <li>list the obvious, then avoid it, +<span data-sci-val="h2_plain_obvious_then_avoid_distinct_useful_novel_diff">25</span> (p <span data-sci-text="h2_plain_obvious_then_avoid_distinct_useful_novel_p">= 0.0014</span>);</li>
+  <li>overgenerate, then select, +<span data-sci-val="h2_plain_overgenerate_select_distinct_useful_novel_diff">17</span> (p <span data-sci-text="h2_plain_overgenerate_select_distinct_useful_novel_p">= 0.0014</span>);</li>
+  <li>invert an assumption, +<span data-sci-val="h2_plain_assumption_inversion_distinct_useful_novel_diff">13</span> (p <span data-sci-text="h2_plain_assumption_inversion_distinct_useful_novel_p">= 0.0016</span>);</li>
+  <li>future retrospective, +<span data-sci-val="h2_plain_future_retrospective_distinct_useful_novel_diff">13</span> (p <span data-sci-text="h2_plain_future_retrospective_distinct_useful_novel_p">= 0.0018</span>).</li>
+</ul>
+<p>The assigned parallel problem (+<span data-sci-val="h2_plain_parallel_rotated_distinct_useful_novel_diff">7</span>,
+p <span data-sci-text="h2_plain_parallel_rotated_distinct_useful_novel_p">= 0.122</span>) and the assigned constraint
+(+<span data-sci-val="h2_plain_assigned_constraint_distinct_useful_novel_diff">1</span>,
+p <span data-sci-text="h2_plain_assigned_constraint_distinct_useful_novel_p">= 1.000</span>) did not. Every new prompt raised judged novelty over
+the plain prompt (largest adjusted p <span data-sci-text="max_p_novelty_new_vs_plain">= 0.0014</span>), but shifts in the mean scores do not by themselves explain which prompts cleared both bars: the assigned
+parallel problem raised novelty by +<span data-sci-val="h2_plain_parallel_rotated_novelty_diff">0.96</span> points and failed, while overgenerate,
+then select raised it by only +<span data-sci-val="h2_plain_overgenerate_select_novelty_diff">0.8</span> and succeeded. The pattern held on both questions: critique and revise gave the most
+distinct useful-novel ideas on each, and the plain prompt gave none on either
+(<a class="xref" href="#tab-by-question">Table</a>).</p>
+<figure class="sci-figure" id="fig-distinct" data-sci-fig="fig_distinct_by_model" data-alt="Dot plot of distinct useful-novel ideas for each of nine prompts, one marker per model. Plain prompt is at zero for all models; Opus markers lie far to the right for most prompts." data-sha256="4b3c3972b26caaa4ea1f7b320f8733eb07f0a945917d231c6cceebf668c331e3" data-content-sha256="838ca67e58b91edaaa0e6a3f0dee6b918865b536175f5ac8f5d6cc5d6f7a0ae6">
+  <div class="sci-media"><!-- sci-media -->[figure fig_distinct_by_model: 27607 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-media --></div>
+  <figcaption>Distinct useful-novel ideas for each prompt (rows, ordered by the total over models) and model
+  (marker shape and color), out of eighty ideas per model and prompt. Primary judge, stripped text. Open markers below
+  the dashed line are the two follow-up prompts, judged separately (exploratory). Exact values are in the supplement
+  table of results by model.</figcaption>
+</figure>
+</section>
+
+<section id="result-confront">
+<h3>The two prompts that show the model its default ideas gave the most distinct useful-novel ideas</h3>
+<p>The two strongest prompts share one feature: they put the obvious ideas in front of the model and ask it to go
+elsewhere. Critique and revise does this with the model's own earlier answers; list the obvious, then avoid it
+has the model write the obvious list itself. Critique and revise was the only new prompt that beat the
+unrelated-domain instruction from the earlier study, by <span data-sci-val="h2_instruction_only_critique_revise_distinct_useful_novel_diff">18</span>
+distinct useful-novel ideas (p <span data-sci-text="h2_instruction_only_critique_revise_distinct_useful_novel_p">= 0.042</span>, adjusted for the seven
+comparisons with the instruction). List the
+obvious, then avoid it was ahead by <span data-sci-val="h2_instruction_only_obvious_then_avoid_distinct_useful_novel_diff">9</span> but not
+significantly (p <span data-sci-text="h2_instruction_only_obvious_then_avoid_distinct_useful_novel_p">= 0.531</span>). The assigned constraint fell
+significantly behind the instruction
+(<span data-sci-val="h2_instruction_only_assigned_constraint_distinct_useful_novel_diff">-15</span>,
+p <span data-sci-text="h2_instruction_only_assigned_constraint_distinct_useful_novel_p">= 0.0014</span>).</p>
+<p>The examples above show what this looks like. Critique and revise moved <span data-sci-text="model_name_opus">Opus 5.5</span> off lineage barcoding and
+pooled screens toward ideas such as allele-resolved readout of the rare high-expressing state, sorting cells and
+fitting how fast they relax back, and changing the rate at which cells enter the tolerant state without touching
+resistance genes. Critique and revise costs a second call, since it needs the plain answer first; list the
+obvious, then avoid it gets a similar effect in one call for <span data-sci-text="model_name_opus">Opus 5.5</span> but not for <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>.</p>
+</section>
+
+<section id="result-replication">
+<h3>The earlier study's instruction replicated overall and was significant on its own only for the largest model</h3>
+<p>The unrelated-domain instruction was the earlier study's best prompt, found after several rounds; here we
+specified in advance that it should beat the plain prompt. Pooled over models it did, by
+<span data-sci-val="h1_pooled_distinct_diff">16</span> distinct useful-novel ideas (p <span data-sci-text="h1_pooled_distinct_p">= 0.0002</span>), raising novelty by
+<span data-sci-val="h1_pooled_novelty_diff">1.47</span> points and changing usefulness by <span data-sci-val="h1_pooled_usefulness_diff">-0.56</span>. Tested model by
+model, with p-values adjusted for the three models, the gain was significant for <span data-sci-text="model_name_opus">Opus 5.5</span> (+<span data-sci-val="h1_opus_distinct_diff">9</span>,
+p <span data-sci-text="h1_opus_distinct_p">= 0.012</span>) but not for <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> (+<span data-sci-val="h1_sonnet_distinct_diff">4</span>, p <span data-sci-text="h1_sonnet_distinct_p">= 0.090</span>) or
+<span data-sci-text="model_name_haiku">Haiku 5.5</span> (+<span data-sci-val="h1_haiku_distinct_diff">3</span>, p <span data-sci-text="h1_haiku_distinct_p">= 0.231</span>). The earlier study used <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>, where the
+effect here is smaller and not significant on its own; with only eighty ideas per model and prompt, small effects are
+hard to detect.</p>
+</section>
+
+<section id="result-models">
+<h3>The largest model gained the most from the new prompts</h3>
+<p>If prompt design works the same way regardless of model, each prompt should help the three models by similar
+amounts. The gains were in fact much larger for <span data-sci-text="model_name_opus">Opus 5.5</span>, although we did not test the difference between models
+formally and the smaller models' tests have little power. With <span data-sci-text="model_name_opus">Opus 5.5</span>, <span data-sci-val="n_methods_beating_plain_opus">5</span> of the seven new prompts beat the plain prompt
+on their own (p-values adjusted for the seven prompts within that model): critique and revise and list the obvious, then avoid it
+(+<span data-sci-val="h2_plain_opus_critique_revise_distinct_diff">19</span> and +<span data-sci-val="h2_plain_opus_obvious_then_avoid_distinct_diff">19</span>),
+overgenerate, then select (+<span data-sci-val="h2_plain_opus_overgenerate_select_distinct_diff">14</span>), invert an assumption, and future
+retrospective. With <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>, <span data-sci-val="n_methods_beating_plain_sonnet">1</span> did: critique and revise
+(+<span data-sci-val="h2_plain_sonnet_critique_revise_distinct_diff">10</span>, p <span data-sci-text="h2_plain_sonnet_critique_revise_distinct_p">= 0.0098</span>). With
+<span data-sci-text="model_name_haiku">Haiku 5.5</span>, <span data-sci-val="n_methods_beating_plain_haiku">0</span> did, although critique and revise and list the obvious, then avoid it
+each produced <span data-sci-val="distinct_haiku_critique_revise">5</span> distinct useful-novel ideas of
+<span data-sci-val="n_ideas_per_model_prompt">80</span>, against <span data-sci-val="distinct_haiku_plain">0</span> for the plain prompt.</p>
+<p>The models differ in how their new ideas fall short. Under critique and revise, <span data-sci-text="model_name_haiku">Haiku 5.5</span>'s ideas were judged
+nearly as novel as <span data-sci-text="model_name_opus">Opus 5.5</span>'s (mean novelty <span data-sci-val="novelty_haiku_critique_revise">4.06</span> against
+<span data-sci-val="novelty_opus_critique_revise">4.31</span>) but less useful (<span data-sci-val="usefulness_haiku_critique_revise">3.05</span> against
+<span data-sci-val="usefulness_opus_critique_revise">3.61</span>), so fewer cleared both bars, as in the examples above. <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>'s ideas were
+judged the least novel of the three models for <span data-sci-val="n_prompts_sonnet_least_novel">7</span> of the nine prompts. The order of prompts was similar for <span data-sci-text="model_name_haiku">Haiku 5.5</span> and <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> and less so
+between <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> and <span data-sci-text="model_name_opus">Opus 5.5</span>: rank correlations of the gains over the plain prompt were <span data-sci-val="h3_spearman_haiku_sonnet">0.84</span> between <span data-sci-text="model_name_haiku">Haiku 5.5</span> and
+<span data-sci-text="model_name_sonnet">Sonnet 5.5</span>, <span data-sci-val="h3_spearman_haiku_opus">0.7</span> between <span data-sci-text="model_name_haiku">Haiku 5.5</span> and <span data-sci-text="model_name_opus">Opus 5.5</span>, and <span data-sci-val="h3_spearman_sonnet_opus">0.4</span> between
+<span data-sci-text="model_name_sonnet">Sonnet 5.5</span> and <span data-sci-text="model_name_opus">Opus 5.5</span>. Critique and revise ranked first or tied for first for all three.</p>
+</section>
+
+<section id="result-tradeoff">
+<h3>Most prompts traded usefulness for novelty; overgenerate, then select did not</h3>
+<p>A prompt that pushes a model away from standard experiments could simply push it toward impractical ones. For
+most prompts the judge saw exactly that trade <a class="xref" href="#fig-tradeoff">Figure</a>. Pooled over models,
+critique and revise changed novelty by +<span data-sci-val="h2_plain_critique_revise_novelty_diff">2.25</span> points and usefulness by
+<span data-sci-val="h2_plain_critique_revise_usefulness_diff">-0.64</span>; list the obvious, then avoid it changed novelty by
++<span data-sci-val="h2_plain_obvious_then_avoid_novelty_diff">1.96</span> and usefulness by
+<span data-sci-val="h2_plain_obvious_then_avoid_usefulness_diff">-0.56</span>. Overgenerate, then select was the exception: it raised novelty
+by <span data-sci-val="h2_plain_overgenerate_select_novelty_diff">0.8</span> with no detectable loss of usefulness
+(<span data-sci-val="h2_plain_overgenerate_select_usefulness_diff">-0.03</span>, p <span data-sci-text="h2_plain_overgenerate_select_usefulness_p">= 0.421</span>). For <span data-sci-text="model_name_opus">Opus 5.5</span>,
+its ideas were as useful as the plain prompt's (means <span data-sci-val="usefulness_opus_overgenerate_select">4.22</span> and
+<span data-sci-val="usefulness_opus_plain">4.29</span>). Selecting from a longer list against an explicit feasibility criterion may keep feasibility in view; the design
+cannot separate the two.
+The assigned constraint lost almost as much usefulness (<span data-sci-val="h2_plain_assigned_constraint_usefulness_diff">-0.58</span>) as
+critique and revise while gaining far less novelty, plausibly because constraints such as a single time point per
+sample limit what an idea can test; we did not analyze the constraints one by one.</p>
+<figure class="sci-figure wide" id="fig-tradeoff" data-sci-fig="fig_tradeoff" data-alt="Three scatter panels, one per model, of mean judged usefulness against mean judged novelty for nine numbered prompts. In each panel the plain prompt is high on usefulness and low on novelty, and most prompts lie down and to the right of it." data-sha256="620641acfc4f81c480a3da2a35c2c090cdb4263ba92597ca0812df2375085ec6" data-content-sha256="105b8c07601428e1490e735f74e401ebeb2cee870b7edb8750ef588833aca1e7">
+  <div class="sci-media"><!-- sci-media -->[figure fig_tradeoff: 59278 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-media --></div>
+  <figcaption>Mean judged novelty (horizontal) against mean judged usefulness (vertical) for each prompt
+  (numbered; key below the panels), one panel per model. Each point averages eighty ideas. Points to the right are
+  more novel; points lower down are less useful. Open markers (numbered ten and eleven) are the two follow-up prompts.</figcaption>
+</figure>
+</section>
+
+<section id="result-judges">
+<h3>A second judge, the original wording, and a lower cutoff agreed on the best and worst prompts</h3>
+<p>Three checks address the obvious worries about a model judge. First, <span data-sci-text="model_name_opus">Opus 5.5</span> judging <span data-sci-text="model_name_opus">Opus 5.5</span>'s ideas might
+favor its own style. <span data-sci-text="cross_judge_model_name">Sonnet 5.5</span> judging the same stripped ideas agreed with the primary judge
+idea by idea (rank correlation <span data-sci-val="sonnet_stripped_agreement_novelty">0.82</span> for novelty and
+<span data-sci-val="sonnet_stripped_agreement_usefulness">0.75</span> for usefulness), ranked critique and revise first and the plain prompt
+last (<span data-sci-val="sonnet_stripped_distinct_pooled_critique_revise">27</span> and <span data-sci-val="sonnet_stripped_distinct_pooled_plain">0</span>
+distinct useful-novel ideas of <span data-sci-val="n_ideas_per_prompt_all_models">240</span>), and found <span data-sci-val="sonnet_stripped_n_methods_beating_plain">7</span> of the seven new prompts
+significantly better than the plain prompt, against five for the primary judge <a class="xref" href="#fig-judges">Figure</a>. It also rated <span data-sci-text="model_name_opus">Opus 5.5</span>'s
+ideas the most novel of the three models (mean <span data-sci-val="sonnet_stripped_gen_novelty_opus">3.31</span>, against
+<span data-sci-val="sonnet_stripped_gen_novelty_haiku">2.68</span> for <span data-sci-text="model_name_haiku">Haiku 5.5</span> and <span data-sci-val="sonnet_stripped_gen_novelty_sonnet">2.48</span> for its own
+model), so the advantage of <span data-sci-text="model_name_opus">Opus 5.5</span> is not only self-preference by the primary judge.</p>
+<p>Second, stripping could have hidden or created differences. <span data-sci-text="judge_model_name">Opus 5.5</span> judging the original wording
+gave higher counts for every prompt, including a few for the plain prompt, but the same best and worst prompts
+(critique and revise <span data-sci-val="opus_written_distinct_pooled_critique_revise">52</span>, plain prompt
+<span data-sci-val="opus_written_distinct_pooled_plain">5</span>, of <span data-sci-val="n_ideas_per_prompt_all_models">240</span> each). The plain prompt's zero in the main analysis therefore depends partly on
+judging the stripped text.
+Third, the cutoff of four is arbitrary. With a cutoff of <span data-sci-val="cutoff_low">3.5</span> the same two prompts lead and the same two trail; at
+<span data-sci-val="cutoff_high">4.5</span> almost no idea from any prompt qualifies, too few to rank prompts (supplement). Counts differ in level between the three runs (a single
+reading is noisier than the average of two, which pulls extreme scores toward the middle), so only the order of
+prompts should be compared across runs.</p>
+<figure class="sci-figure" id="fig-judges" data-sci-fig="fig_judges" data-alt="Dot plot of distinct useful-novel ideas for nine prompts under three judging runs. All three put critique and revise first and the plain prompt last." data-sha256="dce10915c7ad82b2847e0b22b97323e816eaf1cfdfab7502131131ecd5335394" data-content-sha256="32eede7d2113d0811531113e6b15b63537445e5569ac7e2d914098d72391e044">
+  <div class="sci-media"><!-- sci-media -->[figure fig_judges: 20188 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-media --></div>
+  <figcaption>Distinct useful-novel ideas per prompt, pooled over models and questions (out of <span data-sci-val="n_ideas_per_prompt_all_models">240</span>), under three
+  judging runs: the primary judge on stripped text with two readings, a second judge model on stripped text with one
+  reading, and the primary judge model on the original wording with one reading.</figcaption>
+</figure>
+</section>
+
+<section id="result-complementary">
+<h3>Exploratory: the two best prompts found mostly different ideas</h3>
+<p>These two analyses were added after seeing the results. First, if critique and revise and list the obvious,
+then avoid it merely reached the same "second tier" of ideas, running both would add little. For <span data-sci-text="model_name_opus">Opus 5.5</span>, each gave
+<span data-sci-val="union_opus_critique_revise">19</span> distinct useful-novel ideas (of <span data-sci-val="n_ideas_per_model_prompt">80</span>) and together they gave
+<span data-sci-val="union_opus_critique_plus_obvious">34</span> (of <span data-sci-val="n_ideas_two_prompts_per_model">160</span>), so most were different. Across all eight
+non-plain prompts (<span data-sci-val="n_ideas_non_plain_per_model">640</span> ideas per model), <span data-sci-text="model_name_opus">Opus 5.5</span> produced
+<span data-sci-val="union_opus_all_non_plain">69</span> distinct useful-novel ideas, against <span data-sci-val="union_haiku_all_non_plain">16</span> for <span data-sci-text="model_name_haiku">Haiku 5.5</span> and
+<span data-sci-val="union_sonnet_all_non_plain">16</span> for <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>. Running several prompts may therefore add more breadth than running one prompt more often, though we did not
+compare the two at equal numbers of calls.</p>
+<p>Second, cost. Using the per-call costs reported by the command-line tool (equivalent to pay-per-use pricing),
+a plain call cost about <span data-sci-text="cost_per_call_haiku_plain">$0.0008</span> for <span data-sci-text="model_name_haiku">Haiku 5.5</span> and <span data-sci-text="cost_per_call_opus_plain">$0.0623</span> for
+<span data-sci-text="model_name_opus">Opus 5.5</span>. Per distinct useful-novel idea, critique and revise cost <span data-sci-text="cost_per_distinct_haiku_critique_revise">$0.008</span>
+with <span data-sci-text="model_name_haiku">Haiku 5.5</span> and <span data-sci-text="cost_per_distinct_opus_critique_revise">$0.164</span> with <span data-sci-text="model_name_opus">Opus 5.5</span>, counting the plain call it depends
+on. <span data-sci-text="model_name_haiku">Haiku 5.5</span> gives far fewer good ideas, and a person still has to read past its weaker ones, which this figure
+does not count.</p>
+</section>
+
+<section id="result-followup">
+<h3>Follow-up: requiring the model to use a poem or random words beat the plain prompt but not the earlier instruction</h3>
+<p>The earlier study found that unrelated material changed a model's ideas only when every idea had to use it. Here,
+in an exploratory follow-up, a required poem gave <span data-sci-val="distinct_pooled_poem_required">12</span> distinct useful-novel ideas of
+<span data-sci-val="n_ideas_per_prompt_all_models">240</span> and required random words gave <span data-sci-val="distinct_pooled_word_salad_required">9</span>. Both beat
+the plain prompt (+<span data-sci-val="fu_plain_poem_required_distinct_useful_novel_diff">12</span>, p <span data-sci-text="fu_plain_poem_required_distinct_useful_novel_p">= 0.0024</span>;
++<span data-sci-val="fu_plain_word_salad_required_distinct_useful_novel_diff">9</span>, p <span data-sci-text="fu_plain_word_salad_required_distinct_useful_novel_p">= 0.0086</span>;
+adjusted over the two follow-up prompts), and neither differed significantly from the unrelated-domain instruction
+(<span data-sci-val="fu_instruction_only_poem_required_distinct_useful_novel_diff">-4</span>, p <span data-sci-text="fu_instruction_only_poem_required_distinct_useful_novel_p">= 0.506</span>;
+<span data-sci-val="fu_instruction_only_word_salad_required_distinct_useful_novel_diff">-7</span>,
+p <span data-sci-text="fu_instruction_only_word_salad_required_distinct_useful_novel_p">= 0.328</span>). Compared with that instruction, their ideas were less
+novel (by <span data-sci-val="fu_instruction_only_poem_required_novelty_diff">-0.81</span> and <span data-sci-val="fu_instruction_only_word_salad_required_novelty_diff">-0.76</span>
+points) and more useful (by +<span data-sci-val="fu_instruction_only_poem_required_usefulness_diff">0.4</span> and
++<span data-sci-val="fu_instruction_only_word_salad_required_usefulness_diff">0.39</span>): the material pulled ideas a little away from the
+standard ones and cost little usefulness, but less than letting the model pick its own unrelated field. Nearly all of the
+gain came from <span data-sci-text="model_name_opus">Opus 5.5</span> (<span data-sci-val="distinct_opus_poem_required">11</span> and <span data-sci-val="distinct_opus_word_salad_required">9</span> of
+<span data-sci-val="n_ideas_per_model_prompt">80</span>); <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> gave <span data-sci-val="distinct_sonnet_poem_required">0</span> and <span data-sci-val="distinct_sonnet_word_salad_required">0</span>.
+Their totals fall in the middle of the main study's range <a class="xref" href="#fig-distinct">Figure</a>, below
+the prompts that show the model its own default ideas.</p>
+</section>
+    </section>
+
+    <section id="conclusions">
+      <h2>Conclusions</h2>
+      
+<p>The question was which ways of asking a model for research ideas yield more ideas that are both new and worth
+doing. On two cell-biology questions and three models, the answer was clear in direction. The plain prompt
+yielded no distinct useful-novel idea in the main analysis. Prompts that confront the model with its own default ideas (critique
+and revise, and list the obvious, then avoid it) yielded the most. Critique and revise was the only prompt to beat
+the earlier study's unrelated-domain instruction, and that instruction itself replicated when pooled over models.
+Overgenerate, then select was the one prompt that raised novelty without lowering usefulness. In the follow-up,
+unrelated material that each idea had to use landed in the middle of the field, no better than simply asking for an
+unrelated field.</p>
+<p>The size of the gain differed by model. Most of it came from <span data-sci-text="model_name_opus">Opus 5.5</span>. Among the smaller models, only
+critique and revise with <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> reached significance on its own; we did not formally test whether the models
+differ. A plausible reading, which this study does
+not test directly, is that a larger model knows more of the less-traveled experiments and can reach them once told
+the obvious ones are off the table, while a smaller model asked for less obvious ideas tends to produce less
+feasible ones.</p>
+<div class="caveat" id="main-caveat"><span class="caveat-label">Main caveat</span>
+<p>Every quality score in this report comes from language-model judges. The judges agree with each other and with
+themselves, and a second judge model picks the same best and worst prompts, but no scientist has rated these ideas. A model judge
+may share the generators' blind spots, may reward ideas that sound unusual more than ideas a lab would actually run,
+and is one of the three generators. The usefulness penalties in particular need checking by people who run these
+experiments.</p></div>
+<p>Further limits: both questions come from cell biology and from the same research area; each model and prompt
+produced eighty ideas from one run, so modest effects for <span data-sci-text="model_name_haiku">Haiku 5.5</span> and <span data-sci-text="model_name_sonnet">Sonnet 5.5</span> could be missed; critique and
+revise uses two calls and so more compute than the single-call prompts; and the exploratory analyses (complementarity
+and cost) were not planned in advance.</p>
+
+    </section>
+
+    <section id="next-steps">
+      <h2>Next steps</h2>
+      
+<ul>
+  <li><strong>Blind ratings by scientists.</strong> Build a rating sheet from the plain prompt, critique and revise, list
+  the obvious, then avoid it, and overgenerate, then select, for the largest and smallest models, and have lab members
+  rate novelty and usefulness without knowing the source.</li>
+  <li><strong>Combine the strongest prompts.</strong> Test a pipeline that runs overgenerate, then select, followed by a
+  critique-and-revise round, and check whether it keeps usefulness while raising novelty.</li>
+  <li><strong>Use it in practice.</strong> Add a critique-and-revise step to the repository's persona-based
+  brainstorming skill (a tool that has the model brainstorm in the voice of several expert
+  personas) and compare its output with the current version on a live project question.</li>
+  <li><strong>Test outside cell biology.</strong> Repeat the design on questions from a field where the judge models know
+  less, to see whether the ranking holds.</li>
+</ul>
+    </section>
+
+    <section id="provenance" class="provenance">
+      <h2>Provenance</h2>
+      
+<dl>
+  <dt><code>scripts/01_generate.py</code></dt><dd>Writes the eight parallel problems per model and question, then sends
+  every generation call and writes <code>outputs/ideas.csv</code>.</dd>
+  <dt><code>scripts/02_strip.py</code></dt><dd>Prompt- and model-blind rewrite of every idea without analogy or framing
+  (<code>outputs/ideas_stripped.csv</code>).</dd>
+  <dt><code>scripts/03_embed.py</code></dt><dd>Sentence embeddings of the written and stripped text.</dd>
+  <dt><code>scripts/04_judge.py</code></dt><dd>Blind judging; three runs (primary, second judge model, original wording).</dd>
+  <dt><code>scripts/05_analysis.py</code></dt><dd>Pre-registered tests, judge checks, cutoff sensitivity, and the
+  exploratory complementarity and cost analyses (<code>outputs/analysis_summary.json</code>).</dd>
+  <dt><code>scripts/06_figures.py</code></dt><dd>The three report figures.</dd>
+  <dt><code>scripts/07_report_values.py</code></dt><dd>Registers every value the report quotes and writes the embedded tables.</dd>
+  <dt>Shared modules</dt><dd><code>config.py</code> (all parameters), <code>prompts.py</code> (prompt wording),
+  <code>llm.py</code> (isolated command-line calls), <code>common.py</code> (helpers).</dd>
+  <dt>Pre-registration and write-up</dt><dd><code>IDEATION_METHODS_ACROSS_MODELS.md</code> in the analysis folder.</dd>
+  <dt>Report build</dt><dd>Manifest <code>reports/.manifest.json</code>; compile log <code>reports/.compile-log-html.md</code>.
+  Reproduce everything with <code>run.sh</code>; all model responses are cached.</dd>
+  <dt>Analyst</dt><dd>Arjun Raj, with Claude (analysis and drafting).</dd>
+</dl>
+    </section>
+
+    <section id="supplement" class="supplement">
+      <h2>Supplement</h2>
+      
+<section id="supp-prompts">
+<h3>Prompt wording</h3>
+<p>Every prompt except the future retrospective and critique and revise is built around the plain request: "Research question:
+[question]. Propose five distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could
+pursue to address this question. For each idea give a short title and a description of one or two sentences." (The
+number is a word only in this report; the prompts use the numeral.) The additions are:</p>
+<dl>
+  <dt>Unrelated-domain instruction (before)</dt><dd>"Each of your ideas must draw on a domain unrelated to the research
+  question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain,
+  while still being a concrete, scientifically sound way to address the question."</dd>
+  <dt>Assigned parallel problem (before)</dt><dd>The field, the parallel problem and how that field studies it, then:
+  "Each of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its
+  problem, while still being a concrete, scientifically sound way to address the research question." The parallels came
+  from one earlier call per model and question that was asked for eight parallel problems from eight different fields
+  outside biology and medicine; a few of the fields chosen (ecology, entomology) are arguably biological.</dd>
+  <dt>List the obvious, then avoid it (after)</dt><dd>"Before proposing your ideas, list in the obvious field the ten
+  ideas that most experts would propose first for this question (one line each). Then propose your five ideas: none of
+  them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound."</dd>
+  <dt>Overgenerate, then select (after)</dt><dd>"Work in two steps. First, in the candidates field, brainstorm twenty
+  candidate ideas, one line each, covering as wide a range as you can. Then select the five candidates that best combine
+  being non-obvious with being feasible and informative, and develop those as your ideas."</dd>
+  <dt>Invert an assumption (after)</dt><dd>"Before proposing your ideas, list in the assumptions field the hidden
+  assumptions built into this question and into the way the field usually tests it. Then propose your five ideas: each
+  must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete,
+  scientifically sound way to address the question."</dd>
+  <dt>Assigned constraint (before)</dt><dd>"Constraint: every one of your ideas must be carried out [constraint]. Within
+  that constraint, make the ideas as informative as possible." The eight constraints are listed below.</dd>
+  <dt>Critique and revise (whole prompt)</dt><dd>The question, the five plain-prompt ideas from the matching call, then:
+  "A senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose five
+  replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete,
+  scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above."</dd>
+  <dt>Poem and random words, follow-up (before)</dt><dd>"Here is a piece of material that is unrelated to the research
+  question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure,
+  a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the
+  question." The material follows in tags: one of eight public-domain poems, or sixty random dictionary words, the same
+  texts as in the earlier study.</dd>
+  <dt>Future retrospective (whole prompt)</dt><dd>The question, then: "It is <time>2036</time>. Looking back, five landmark papers each
+  settled this question in a way that surprised the field, because of how they approached it. For each paper, describe
+  what it measured, analyzed, or did, as a concrete idea a research lab could pursue today."</dd>
+</dl>
+<p>Each call was isolated: the model could not search the web or run code, saw only a generic one-line
+instruction, and had to return its ideas in a fixed machine-readable format. Technically, all calls ran through the
+Claude command-line tool with no tools, a neutral system prompt ("You are a helpful
+assistant."), no user settings, an empty working directory and structured output. A call that returned the wrong number
+of ideas or a missing intermediate list was re-sent unchanged, up to twice (three attempts in all); <span data-sci-val="n_generation_retries">13</span> such
+retries occurred across the <span data-sci-val="n_generation_calls">432</span> calls, almost all with <span data-sci-text="model_name_opus">Opus 5.5</span>. No judging batch was stopped by a
+safety filter (<span data-sci-val="n_blocked_ratings">0</span> ratings missing).</p>
+<div class="table-wrap" id="tab-constraints">
+  <table class="sci-table" data-sci-table="tab_constraints" data-columns="call,constraint" data-sha256="a35327a86c5a53a7b1bdc6fae24705a9c778421b4208c8e9375eaaff800257cd" data-content-sha256="a370659b80717af0928611815f396b1e6c2219d906ad4f60769cadfb18c9f105">
+    <caption>The eight constraints of the assigned-constraint prompt; call number k of every model and question received constraint k.</caption>
+    <thead><tr><th class="num">Call</th><th>Constraint</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_constraints rows: 723 characters omitted for review]
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+<div class="table-wrap" id="tab-parallels">
+  <table class="sci-table" data-sci-table="tab_parallels" data-columns="question,model,call,field" data-sha256="24011135a92ab575722d9bb1766b4e07ea02839c316ba89b3b196f34f5f4b0d1" data-content-sha256="1ec35a0a5d9e18169451485bcc286cbed7d2cfcda8d4d69c37dbc302fb9b266a">
+    <caption>The field of each parallel problem used by the assigned-parallel-problem prompt, as listed by each model for
+    each question.</caption>
+    <thead><tr><th>Question</th><th>Model</th><th class="num">Call</th><th>Field</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_parallels rows: 5912 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+</section>
+
+<section id="supp-by-model">
+<h3>Results by model and prompt</h3>
+<div class="table-wrap wide" id="tab-by-model">
+  <table class="sci-table" data-sci-table="tab_by_model" data-columns="model,method,distinct_useful_novel,useful_novel,novelty,usefulness,clusters_all" data-precision="2" data-sha256="3dcaea7e2b811186c98aa87db4d09e2ce6be763b9bb72df6ff09fad2735fa044" data-content-sha256="f6999bda835c2f6648dfa087c5072856de99ce37b1097e7b1ca128e34a7ebcb5">
+    <caption>Primary judge, stripped text, eighty ideas per row (two questions). "Useful-novel" counts before merging
+    near-duplicates; "all-idea groups" is the number of distinct groups among each question's forty ideas, summed over the
+    two questions, a judge-free measure of variety. The last two prompts are the exploratory follow-up.</caption>
+    <thead><tr><th>Model</th><th>Prompt</th><th class="num">Distinct useful-novel</th><th class="num">Useful-novel</th><th class="num">Mean novelty</th><th class="num">Mean usefulness</th><th class="num">All-idea groups</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_by_model rows: 5872 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+<div class="table-wrap" id="tab-by-question">
+  <table class="sci-table" data-sci-table="tab_by_question" data-columns="question,method,Haiku 5.5,Sonnet 5.5,Opus 5.5,pooled" data-sha256="6e816dfcfd8a1da21ee9d835ecefea6e162668374c8987d234603badc23b94f3" data-content-sha256="7b54f1b1942cb65849066ecd67c88d4b4adfce7dd1ea891fe2fa6b2faf0e82e0">
+    <caption>Distinct useful-novel ideas by question (forty ideas per model, prompt and question).</caption>
+    <thead><tr><th>Question</th><th>Prompt</th><th class="num"><span data-sci-text="model_name_haiku">Haiku 5.5</span></th><th class="num"><span data-sci-text="model_name_sonnet">Sonnet 5.5</span></th><th class="num"><span data-sci-text="model_name_opus">Opus 5.5</span></th><th class="num">All models</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_by_question rows: 3460 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+</section>
+
+<section id="supp-tests">
+<h3>All comparisons of new prompts with the baselines</h3>
+<p>Differences are new prompt minus baseline. Holm adjustment is over the seven new prompts within each comparator and
+scope (all models, or one model); the smallest attainable p-value is set by the number of permutations.</p>
+<div class="table-wrap wide" id="tab-tests">
+  <table class="sci-table" data-sci-table="tab_tests" data-columns="comparator,method,scope,diff_distinct,p_holm_distinct,diff_novelty,p_holm_novelty,diff_usefulness,p_holm_usefulness" data-sha256="93c49cea6b8d42bc3435fb359362ac0a1bb5d24c3d21c92956518dfd540b59a7" data-content-sha256="ebab55af31e6634875e858852d12d9abd371d20ad12d94a2fdd7852e88d59f63">
+    <caption>Permutation tests of each new prompt against the plain prompt and against the unrelated-domain instruction.
+    Rows marked "follow-up" are the exploratory follow-up prompts, adjusted over those two prompts only.</caption>
+    <thead><tr><th>Comparator</th><th>Prompt</th><th>Scope</th><th class="num">Difference, distinct useful-novel</th><th class="num">Adjusted p</th><th class="num">Difference, novelty</th><th class="num">Adjusted p</th><th class="num">Difference, usefulness</th><th class="num">Adjusted p</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_tests rows: 14694 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+</section>
+
+<section id="supp-judges">
+<h3>Judge checks and cutoff sensitivity</h3>
+<div class="table-wrap" id="tab-judges">
+  <table class="sci-table" data-sci-table="tab_judges" data-columns="method,opus_stripped_2pass,sonnet_stripped,opus_written" data-sha256="ebfbb2fada3ad12a2ed4ec747d9b0566edbc98cba2c95420b7ef844a84ff1992" data-content-sha256="0cea0bdb2849d413a299e43fe3ac91f5db486bf684f3f7c691b42eedc6cbb4bd">
+    <caption>Distinct useful-novel ideas per prompt, all models (out of <span data-sci-val="n_ideas_per_prompt_all_models">240</span>), under the three judging runs.</caption>
+    <thead><tr><th>Prompt</th><th class="num">Primary (two readings)</th><th class="num">Second judge model</th><th class="num">Original wording</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_judges rows: 983 characters omitted for review]
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+<div class="table-wrap" id="tab-cutoff">
+  <table class="sci-table" data-sci-table="tab_cutoff" data-columns="method,cutoff_3.5,cutoff_4.0,cutoff_4.5" data-sha256="a3c530ecefb79dcd4d6787fefbab3d4344e8a84356fd9264e188654e31f59186" data-content-sha256="31d90b03bcfa471be3a10c2e0795890fb9d86f0f3eba2fea73ca2512feaa659d">
+    <caption>Distinct useful-novel ideas per prompt, all models, when both mean scores must reach <span data-sci-val="cutoff_low">3.5</span>, <span data-sci-val="useful_novel_cutoff">4</span> (the primary
+    cutoff) or <span data-sci-val="cutoff_high">4.5</span>.</caption>
+    <thead><tr><th>Prompt</th><th class="num">At least <span data-sci-val="cutoff_low">3.5</span></th><th class="num">At least <span data-sci-val="useful_novel_cutoff">4</span></th><th class="num">At least <span data-sci-val="cutoff_high">4.5</span></th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_cutoff rows: 1210 characters omitted for review]
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+</section>
+
+<section id="supp-cost">
+<h3>Output length and cost</h3>
+<div class="table-wrap wide" id="tab-cost">
+  <table class="sci-table" data-sci-table="tab_cost" data-columns="model,method,mean_output_tokens,total_cost_usd,cost_per_distinct_useful_novel" data-precision="3" data-sha256="3f44bd5fb1692fd5128c3b49f437b14974e0984c959a20f052ccdfb598cff9c6" data-content-sha256="fe6a622be5fd2fec5b97a1aff3d1e3b38c94c2d0ffe3f3596d69f9a4976b9d9d">
+    <caption>Mean output tokens per call, total cost of the sixteen calls per model and prompt (including the plain calls
+    that critique and revise depends on and the two calls, one per question, that listed the parallel problems), and cost per distinct useful-novel
+    idea (blank when there were none). Costs are those reported by the command-line tool, in US dollars.</caption>
+    <thead><tr><th>Model</th><th>Prompt</th><th class="num">Output tokens</th><th class="num">Total cost</th><th class="num">Cost per idea</th></tr></thead>
+    <tbody><!-- sci-rows -->[table tab_cost rows: 4360 characters omitted for review]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /sci-rows --></tbody>
+  </table>
+</div>
+</section>
+
+<section id="supp-deviations">
+<h3>Changes to the plan</h3>
+<p>Before any generation call, two details were added to the pre-registration: the judge rubric dropped the earlier
+study's "out-of-place reference" flag (which marked ideas that dragged in the unrelated material placed
+before the prompt), because no prompt here supplies outside material, and the stripping instruction
+also removes framing labels. During generation, a second worker process was started on the same cached job list in
+reverse order to halve the run time; it changed no prompt. After the results were in, two exploratory analyses were
+added (complementarity of the best prompts, and cost per idea); they are labeled as exploratory in the results. On the following day, the two follow-up prompts were added (see
+Methods); they were stripped and judged in separate batches so that no main-study rewrite, rating or test changed, and
+their tests form their own correction family.</p>
+</section>
+    </section>
+
+    <footer class="report-footer">
+      <p>Generated with the Mycelium report generator. Values, figures, and interactive data are checked against the report manifest by scitexlintr.</p>
+    </footer>
+  </main>
+</div>
+
+<!-- ==========================================================================
+     SLIDES — 10 to 20 <section class="slide"> elements.
+     * The first slide is data-slide="title"; it is the only slide exempt
+       from the sentence-title rule.
+     * Every other slide has exactly one <h2> that is a complete sentence
+       (subject, verb, object; ends with a period; no colon). One slide, one
+       point. Read the titles alone in order: they must tell the story.
+     * Every other slide has data-source="#section-id" pointing at the report
+       section it summarizes; Esc returns there.
+     * At most one figure per slide, referenced — not copied — with
+       <div class="slide-figure" data-fig-ref="fig-id"></div>.
+     * About 40 words of body text at most. Values use the same wrapper
+       spans as the report.
+     Slide kinds (add the class to the section):
+       slide--figure     figure + optional <p class="takeaway">
+       slide--split      figure left, <div class="slide-text"> right
+       slide--statement  <div class="stat"><span data-sci-val=…>…</span></div>
+                         + <p class="stat-label">
+       slide--points     up to three short sentences in a <ul>
+     ========================================================================== -->
+<div id="deck" class="deck" hidden role="region" aria-label="Slides" aria-roledescription="slide deck">
+  <div class="deck-viewport">
+    <div class="deck-stage">
+
+      <section class="slide slide--title" data-slide="title">
+        <h1>Pushing a language model past its obvious ideas gave the research ideas a model judge rated best</h1>
+        <p class="slide-dek">Nine prompts, three Claude models, two cell-biology questions, one blind model judge. In the main analysis, the plain prompt gave no idea the judge rated both novel and useful; prompts that showed the model its default ideas did best, most of all for the largest model. No scientist has rated the ideas yet.</p>
+        <p class="slide-byline">Arjun Raj (with Claude) · <time>2026-10-15</time></p>
+        <p class="slide-hint">→ or click to advance · Esc returns to the report · F for fullscreen</p>
+      </section>
+
+            <section class="slide slide--statement" data-source="#result-confront">
+        <h2>Critique and revise, a prompt that shows the model its own plain answers and asks for less obvious ones, gave the most ideas judged both novel and useful.</h2>
+        <div class="slide-body"><div class="stat"><span data-sci-val="distinct_pooled_critique_revise">34</span></div><p class="stat-label">distinct useful-novel ideas of <span data-sci-val="n_ideas_per_prompt_all_models">240</span>, all three models pooled</p></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-plain-zero">
+        <h2>In the main analysis, a plain brainstorming prompt never produced an idea that a blind model judge rated both novel and useful.</h2>
+        <div class="slide-body"><div class="stat"><span data-sci-val="distinct_pooled_plain">0</span></div><p class="stat-label">distinct useful-novel ideas of <span data-sci-val="n_ideas_per_prompt_all_models">240</span> from the plain prompt</p></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#problem">
+        <h2>Language models brainstorming research ideas tend to return the same standard experiments.</h2>
+        <div class="slide-body"><ul><li>Ask twice and much of the list repeats.</li><li>A scientist hoping to widen their thinking mostly hears the textbook answers back.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#methods">
+        <h2>We tested the plain prompt, our earlier study's best prompt, and seven new prompts on three Claude models and two cell-biology questions.</h2>
+        <div class="slide-body"><ul><li>Models: <span data-sci-text="model_name_haiku">Haiku 5.5</span>, <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>, <span data-sci-text="model_name_opus">Opus 5.5</span>.</li><li>Eight fresh calls of five ideas per prompt, model and question: <span data-sci-val="n_ideas_total">2160</span> ideas.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#methods">
+        <h2>Our measure counts distinct ideas that the judge rated at least four out of five for both novelty and usefulness.</h2>
+        <div class="slide-body"><ul><li>A rewrite first strips analogies and framing, blind to the source.</li><li><span data-sci-text="judge_model_name">Opus 5.5</span> judges each idea twice; near-duplicates count once.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#examples">
+        <h2>Under critique and revise, the largest model replaced its standard experiments with less obvious ones.</h2>
+        <div class="slide-body"><ul><li>Plain prompt: lineage barcoding, live imaging, pooled screens; <span data-sci-val="example_n_un_opus_plain">0</span> of five useful-novel.</li><li>After critique: allele-resolved readout, sort-and-relax kinetics, tuning the rate of entry into the tolerant state; <span data-sci-val="example_n_un_opus_critique_revise">3</span> of five.</li></ul></div>
+      </section>
+
+      <section class="slide slide--figure" data-source="#result-plain-zero">
+        <h2>Pooled over the three models, five of the seven new prompts gave significantly more novel, useful ideas than the plain prompt.</h2>
+        <div class="slide-body"><div class="slide-figure" data-fig-ref="fig-distinct"></div></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-confront">
+        <h2>Critique and revise was the only new prompt that beat the earlier study's best prompt.</h2>
+        <div class="slide-body"><div class="stat">+<span data-sci-val="h2_instruction_only_critique_revise_distinct_useful_novel_diff">18</span></div><p class="stat-label">distinct useful-novel ideas over the earlier best prompt (adjusted p <span data-sci-text="h2_instruction_only_critique_revise_distinct_useful_novel_p">= 0.042</span>)</p></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-replication">
+        <h2>Pooled over models, the earlier study's best prompt, an instruction to borrow from an unrelated field, again beat the plain prompt.</h2>
+        <div class="slide-body"><div class="stat">+<span data-sci-val="h1_pooled_distinct_diff">16</span></div><p class="stat-label">distinct useful-novel ideas over the plain prompt; on its own, significant only for <span data-sci-text="model_name_opus">Opus 5.5</span></p></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#result-models">
+        <h2>The largest model gained the most from the new prompts.</h2>
+        <div class="slide-body"><ul><li>Critique and revise added <span data-sci-val="h2_plain_opus_critique_revise_distinct_diff">19</span> ideas for <span data-sci-text="model_name_opus">Opus 5.5</span>, <span data-sci-val="h2_plain_sonnet_critique_revise_distinct_diff">10</span> for <span data-sci-text="model_name_sonnet">Sonnet 5.5</span>, <span data-sci-val="h2_plain_haiku_critique_revise_distinct_diff">5</span> for <span data-sci-text="model_name_haiku">Haiku 5.5</span>.</li><li>The difference between models was not formally tested.</li></ul></div>
+      </section>
+
+      <section class="slide slide--figure" data-source="#result-tradeoff">
+        <h2>Most prompts bought novelty at some cost in usefulness.</h2>
+        <div class="slide-body"><div class="slide-figure" data-fig-ref="fig-tradeoff"></div></div>
+      </section>
+
+      <section class="slide slide--statement" data-source="#result-tradeoff">
+        <h2>Overgenerate, then select raised novelty without lowering usefulness.</h2>
+        <div class="slide-body"><div class="stat">+<span data-sci-val="h2_plain_overgenerate_select_novelty_diff">0.8</span></div><p class="stat-label">novelty over the plain prompt, with a usefulness change of <span data-sci-val="h2_plain_overgenerate_select_usefulness_diff">-0.03</span></p></div>
+      </section>
+
+      <section class="slide slide--figure" data-source="#result-judges">
+        <h2>A second judge model agreed on which prompts were best and worst.</h2>
+        <div class="slide-body"><div class="slide-figure" data-fig-ref="fig-judges"></div></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#result-complementary">
+        <h2>Critique and revise and a second new prompt that first lists the obvious ideas found mostly different good ideas.</h2>
+        <div class="slide-body"><ul><li>For <span data-sci-text="model_name_opus">Opus 5.5</span>: <span data-sci-val="union_opus_critique_revise">19</span> and <span data-sci-val="union_opus_obvious_then_avoid">19</span> on their own, <span data-sci-val="union_opus_critique_plus_obvious">34</span> together.</li><li>Exploratory analysis, added after seeing the results.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#result-followup">
+        <h2>A poem or random words that every idea had to use did no better than asking for an unrelated field.</h2>
+        <div class="slide-body"><ul><li>Poem <span data-sci-val="distinct_pooled_poem_required">12</span> and random words <span data-sci-val="distinct_pooled_word_salad_required">9</span> distinct useful-novel ideas, against <span data-sci-val="distinct_pooled_instruction_only">16</span> for the earlier instruction.</li><li>Exploratory follow-up; nearly all from <span data-sci-text="model_name_opus">Opus 5.5</span>.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#main-caveat">
+        <h2>Every score in this study comes from model judges rather than scientists.</h2>
+        <div class="slide-body"><ul><li>A model judge may reward ideas that sound unusual more than ideas a lab would run.</li><li>The primary judge is also one of the three generators.</li></ul></div>
+      </section>
+
+      <section class="slide slide--points" data-source="#next-steps">
+        <h2>Scientists' blind ratings of the strongest prompts' ideas are the next test.</h2>
+        <div class="slide-body"><ul><li>Rate plain, critique and revise, list the obvious, and overgenerate, then select.</li><li>Then try a critique step in the lab's brainstorming tool.</li></ul></div>
+      </section>
+
+
+    </div>
+  </div>
+  <div class="deck-bar">
+    <button type="button" data-deck="close" aria-label="Back to the report (Esc)" title="Back to the report (Esc)">
+      <svg data-sci-icon viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" data-deck="prev" aria-label="Previous slide" title="Previous slide (←)">
+      <svg data-sci-icon viewBox="0 0 16 16" aria-hidden="true"><path d="M12 3v10L5 8z" fill="currentColor" transform="translate(-1 0)"/></svg>
+    </button>
+    <button type="button" data-deck="next" aria-label="Next slide" title="Next slide (→)">
+      <svg data-sci-icon viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3v10l7-5z" fill="currentColor" transform="translate(1 0)"/></svg>
+    </button>
+    <div class="deck-progress" role="group" aria-label="Slide progress"></div>
+    <span class="deck-count" aria-hidden="true"></span>
+    <button type="button" data-deck="fullscreen" aria-label="Toggle fullscreen (F)" title="Fullscreen (F)">
+      <svg data-sci-icon viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="deck-live" aria-live="polite"></div>
+</div>
+
+<script id="sci-report-runtime">
+/* Mycelium report runtime — shared by every HTML report. Do not edit per
+   report; add report-specific interactive kinds with
+   SciReport.register("kind", function (figure, data) { ... }) in a separate
+   <script> after this one. No external dependencies. */
+(function () {
+  "use strict";
+  var doc = document;
+  // Maps keyed by report data or element ids are prototype-free, so a key
+  // such as "constructor" or "__proto__" is an ordinary key.
+  function dict() { return Object.create(null); }
+  var interactiveKinds = dict();
+  var uid = 0;
+
+  function $(sel, root) { return (root || doc).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || doc).querySelectorAll(sel)); }
+  function el(tag, attrs, text) {
+    var n = doc.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function svg(tag, attrs) {
+    var n = doc.createElementNS(SVGNS, tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    return n;
+  }
+
+  /* ---------------- Figure numbers, cross-references, contents ---------------- */
+
+  // One numbering pass labels every caption and every cross-reference, so
+  // "Figure S2" in a caption and in the prose always agree. Supplement
+  // figures and tables are numbered S1, S2, ... separately.
+  function label(caption, text) {
+    if (!caption) return;
+    var old = $(":scope > .sci-label", caption);
+    if (old) old.remove();
+    var span = el("span", { "class": "sci-label" }, text + ". ");
+    caption.insertBefore(span, caption.firstChild);
+  }
+
+  function numberFigures() {
+    var numbers = dict(), count = { fig: 0, figS: 0, tab: 0, tabS: 0 };
+    $$("main figure.sci-figure").forEach(function (f) {
+      var supp = !!f.closest(".supplement");
+      var text = supp ? "Figure S" + (++count.figS) : "Figure " + (++count.fig);
+      if (f.id) numbers[f.id] = text;
+      label($(":scope > figcaption", f), text);
+    });
+    $$("main table.sci-table").forEach(function (t) {
+      var supp = !!t.closest(".supplement");
+      var text = supp ? "Table S" + (++count.tabS) : "Table " + (++count.tab);
+      var host = t.closest(".table-wrap");
+      if (t.id) numbers[t.id] = text;
+      if (host && host.id) numbers[host.id] = text;
+      label($(":scope > caption", t), text);
+    });
+    $$("a.xref").forEach(function (a) {
+      var id = (a.getAttribute("href") || "").slice(1);
+      var target = id && doc.getElementById(id);
+      if (numbers[id]) { a.textContent = numbers[id]; return; }
+      if (target) {
+        var h = target.matches("h2,h3,h4") ? target : $("h2,h3,h4", target);
+        if (h && !a.textContent.trim()) a.textContent = h.textContent.replace(/\s*▶.*$/, "");
+      }
+    });
+  }
+
+  function buildContents() {
+    var lists = $$("[data-toc]");
+    if (!lists.length) return;
+    var items = [];
+    $$("main > section[id]").forEach(function (sec) {
+      var h = $(":scope > h2", sec);
+      if (!h) return;
+      var sub = $$(":scope > section[id] > h3", sec).map(function (h3) {
+        return { id: h3.parentElement.id, text: h3.textContent };
+      });
+      items.push({ id: sec.id, text: h.textContent, sub: sub });
+    });
+    lists.forEach(function (ol) {
+      items.forEach(function (it) {
+        var li = el("li"); var a = el("a", { href: "#" + it.id }, it.text); li.appendChild(a);
+        if (it.sub.length && ol.closest(".toc")) {
+          var inner = el("ol");
+          it.sub.forEach(function (s) { var l2 = el("li"); l2.appendChild(el("a", { href: "#" + s.id }, s.text)); inner.appendChild(l2); });
+          li.appendChild(inner);
+        }
+        ol.appendChild(li);
+      });
+    });
+    // Highlight the last section whose top has passed a line 30% down the
+    // viewport — recomputed from positions on every scroll, so scrolling up
+    // into a parent section's intro moves the highlight back.
+    var links = $$(".toc a"), sections = $$("main section[id]").filter(function (sec) {
+      return links.some(function (a) { return a.getAttribute("href") === "#" + sec.id; });
+    });
+    var pending = false;
+    function spy() {
+      pending = false;
+      var line = window.innerHeight * 0.3, active = null;
+      sections.forEach(function (sec) { if (sec.getBoundingClientRect().top <= line) active = sec; });
+      links.forEach(function (a) { a.setAttribute("aria-current", active && a.getAttribute("href") === "#" + active.id ? "true" : "false"); });
+    }
+    window.addEventListener("scroll", function () { if (!pending) { pending = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+  }
+
+  /* ---------------- SVG id isolation (for figures copied into slides) ---------------- */
+
+  var ID_LIST_ATTRS = ["aria-labelledby", "aria-describedby", "aria-controls", "aria-owns", "aria-flowto",
+    "aria-activedescendant", "aria-details", "aria-errormessage", "for", "headers", "list"];
+  var HREF_ATTRS = ["href", "xlink:href"];
+
+  // #id in CSS: rename only in selectors (outside declaration blocks) and in
+  // url(#id) — never inside a declaration, where "#fff" is a color.
+  function renameCssIds(css, map, refs) {
+    var out = "", depth = 0, chunk = "";
+    function flush() { out += depth === 0 ? chunk.replace(/#(-?[A-Za-z_][\w-]*)/g, function (m, id) { return map[id] ? "#" + map[id] : m; }) : chunk; chunk = ""; }
+    for (var i = 0; i < css.length; i++) {
+      var ch = css.charAt(i);
+      if (ch === "{" || ch === "}") { flush(); out += ch; depth += ch === "{" ? 1 : -1; if (depth < 0) depth = 0; }
+      else chunk += ch;
+    }
+    flush();
+    return refs(out);
+  }
+
+  // Rename every id in a copied subtree and every reference to it: href="#x",
+  // url(#x) in any attribute, id lists (aria-labelledby, for), and #x / url(#x)
+  // in <style> text, so a copy never resolves to, or is styled by, the original.
+  function isolateIds(root, suffix) {
+    var map = dict();
+    $$("[id]", root).concat(root.id ? [root] : []).forEach(function (n) {
+      var old = n.id; map[old] = old + suffix; n.id = old + suffix;
+    });
+    if (!Object.keys(map).length) return;
+    function refs(v) {  // CSS function names are case-insensitive: URL(#g) too
+      return v.replace(/url\(\s*['"]?#([^'")\s]+)['"]?\s*\)/gi, function (m, id) { return map[id] ? "url(#" + map[id] + ")" : m; });
+    }
+    $$("*", root).concat([root]).forEach(function (n) {
+      Array.prototype.slice.call(n.attributes).forEach(function (attr) {
+        var v = attr.value, nv = v;
+        if (ID_LIST_ATTRS.indexOf(attr.name) >= 0) nv = v.split(/\s+/).map(function (t) { return map[t] || t; }).join(" ");
+        else if (HREF_ATTRS.indexOf(attr.name) >= 0 && /^#/.test(v) && map[v.slice(1)]) nv = "#" + map[v.slice(1)];
+        // A style attribute is declarations only: rename url(#id), never a #hex color.
+        else if (attr.name === "style") nv = refs(v);
+        else if (/url\(/i.test(v)) nv = refs(v);  // fill="#fff" is a color, not a reference
+        if (nv !== v) n.setAttribute(attr.name, nv);
+      });
+    });
+    $$("style", root).forEach(function (st) { st.textContent = renameCssIds(st.textContent, map, refs); });
+  }
+
+  /* ---------------- Interactive figures ---------------- */
+
+  function readData(figure) {
+    var block = $('script[type="application/json"][data-sci-data]', figure);
+    if (!block) return null;
+    try { return JSON.parse(block.textContent); }
+    catch (e) { console.error("[SciReport] invalid JSON in data block", block.getAttribute("data-sci-data"), e); return null; }
+  }
+
+  // Every initialized interactive figure, with the lifecycle hooks its kind
+  // returned: stop() halts animation, reset() returns to the default state.
+  // Deck navigation, closing, and printing call them, so no timer outlives
+  // its slide and print always shows the state the prose describes.
+  var instances = [];
+  function noop() {}
+
+  function initInteractive(figure) {
+    var kind = figure.getAttribute("data-sci-interactive");
+    var init = interactiveKinds[kind];
+    if (!init) { console.warn("[SciReport] no interactive kind registered for", kind); return; }
+    var data = readData(figure);
+    if (!data) return;
+    try {
+      var api = init(figure, data) || {};
+      instances.push({
+        figure: figure, stop: api.stop || noop, reset: api.reset || noop,
+        snapshot: api.snapshot || noop, restore: api.restore || noop
+      });
+    } catch (e) { console.error("[SciReport] interactive figure failed", kind, e); }
+  }
+
+  function eachInstance(root, method) {
+    instances.forEach(function (it) {
+      if (!root || root.contains(it.figure)) {
+        try { it[method](); } catch (e) { console.error("[SciReport] interactive " + method + " failed", e); }
+      }
+    });
+  }
+
+  function niceTicks(lo, hi, count) {
+    if (!(isFinite(lo) && isFinite(hi))) return [0, 1];
+    if (lo > hi) { var t = lo; lo = hi; hi = t; }
+    if (lo === hi) { lo -= 1; hi += 1; }
+    var span = hi - lo, raw = span / Math.max(1, count), mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    var step = [1, 2, 5, 10].map(function (m) { return m * mag; }).find(function (s) { return span / s <= count; }) || 10 * mag;
+    var start = Math.floor(lo / step) * step, ticks = [];
+    for (var v = start; v <= hi + step * 1e-9; v += step) ticks.push(Math.round(v / step) * step);
+    if (ticks[ticks.length - 1] < hi) ticks.push(ticks[ticks.length - 1] + step);
+    return ticks;
+  }
+
+  /* Time series with a scrubber, a play button, and a pinned readout.
+     Data: {"x": [...], "x_label": "Day", "y_label": "Cells",
+            "series": [{"name": "Control", "values": [...]}],
+            "y_format": {Intl.NumberFormat options}, "y_min": 0}
+     or the CSV form {"columns": [x, s1, s2, ...], "rows": [[...], ...]}.
+     data-x-label / data-y-label on the figure override the labels.
+     The figure's default state (data-default-index, default "last") is the
+     one print, reduced motion, and the prose describe. */
+  function timeSeries(figure, data) {
+    // Long format (one row per x and group): data-long="x_column,group_column,value_column"
+    // pivots it into one series per group, before any other handling.
+    var longSpec = figure.getAttribute("data-long");
+    if (longSpec && data.columns && data.rows) {
+      var spec = longSpec.split(",").map(function (c) { return c.trim(); });
+      var ix = data.columns.indexOf(spec[0]), ig = data.columns.indexOf(spec[1]), iv = data.columns.indexOf(spec[2]);
+      if (spec.length !== 3 || ix < 0 || ig < 0 || iv < 0) {
+        console.error("[SciReport] data-long must name three columns (x, group, value) of", data.columns);
+        return;
+      }
+      var xsL = [], groups = [], gIndex = dict();
+      data.rows.forEach(function (r) {
+        if (xsL.indexOf(r[ix]) < 0) xsL.push(r[ix]);
+        if (!(String(r[ig]) in gIndex)) { gIndex[String(r[ig])] = groups.length; groups.push(r[ig]); }
+      });
+      if (xsL.every(function (v) { return typeof v === "number"; })) xsL.sort(function (a, b) { return a - b; });
+      var pivot = groups.map(function (g) { return { name: spec[1] + " " + g, values: xsL.map(function () { return null; }) }; });
+      data.rows.forEach(function (r) { pivot[gIndex[String(r[ig])]].values[xsL.indexOf(r[ix])] = r[iv]; });
+      data = { x: xsL, x_label: spec[0], y_label: spec[2], series: pivot,
+               y_format: data.y_format, y_min: data.y_min, y_scale: data.y_scale };
+    }
+    if (!data.x && data.columns && data.rows) {
+      // CSV form from sync_html_report.py: first column is x, the rest are series.
+      data = {
+        x: data.rows.map(function (r) { return r[0]; }),
+        x_label: data.columns[0],
+        series: data.columns.slice(1).map(function (name, j) {
+          return { name: name, values: data.rows.map(function (r) { return r[j + 1]; }) };
+        })
+      };
+    }
+    data = Object.assign({}, data);
+    if (figure.hasAttribute("data-x-label")) data.x_label = figure.getAttribute("data-x-label");
+    if (figure.hasAttribute("data-y-label")) data.y_label = figure.getAttribute("data-y-label");
+    // data-series="col_a,col_b" picks and orders series; data-series-names
+    // gives them reader-facing names ("Low retention,High retention").
+    var pick = figure.getAttribute("data-series"), names = figure.getAttribute("data-series-names");
+    if (pick) {
+      var byName = dict();
+      (data.series || []).forEach(function (s) { byName[s.name] = s; });
+      data.series = pick.split(",").map(function (n) { return n.trim(); }).filter(Boolean).map(function (n) {
+        if (!byName[n]) console.error("[SciReport] data-series names an unknown series:", n);
+        return byName[n];
+      }).filter(Boolean);
+    }
+    if (names) {
+      var list = names.split(",").map(function (n) { return n.trim(); });
+      data.series = (data.series || []).map(function (s, i) { return list[i] ? Object.assign({}, s, { name: list[i] }) : s; });
+    }
+    var xs = data.x || [];
+    var n = xs.length;
+    // Normalize once: every series has n values, each a finite number or null
+    // (missing arrays, text such as "n/a", and infinities all become null).
+    // data-y-scale="log" (or "y_scale": "log"): a log axis for data spanning
+    // orders of magnitude; values at or below zero cannot be drawn on it.
+    var logY = (figure.getAttribute("data-y-scale") || data.y_scale) === "log";
+    var dropped = 0;
+    function num(v) {
+      if (v == null || v === "" || !isFinite(+v)) return null;
+      if (logY && +v <= 0) { dropped++; return null; }
+      return +v;
+    }
+    var series = (data.series || []).slice(0, 8).map(function (s) {
+      var vals = Array.isArray(s && s.values) ? s.values : [];
+      var out = [];
+      for (var i = 0; i < n; i++) out.push(num(vals[i]));
+      return { name: String(s && s.name != null ? s.name : ""), values: out };
+    });
+    if ((data.series || []).length > 8) console.warn("[SciReport] time series capped at 8 series; fold the rest into Other or facet");
+    if (!n || !series.length) return;
+    var values = [];
+    series.forEach(function (s) { s.values.forEach(function (v) { if (v != null) values.push(v); }); });
+    if (dropped) console.warn("[SciReport] log y-axis: " + dropped + " value(s) at or below zero not drawn");
+    if (!values.length) { console.warn("[SciReport] time series has no finite values to draw"); return; }
+    var fmt = new Intl.NumberFormat(undefined, data.y_format || { maximumSignificantDigits: 4 });
+    var xfmt = function (v) { return typeof v === "number" ? new Intl.NumberFormat(undefined, { maximumFractionDigits: 2 }).format(v) : String(v); };
+    var mount = $(".sci-media", figure) || figure.insertBefore(el("div", { "class": "sci-media" }), $("figcaption", figure));
+    mount.classList.add("sci-ts");
+    mount.textContent = "";
+    var id = "ts" + (++uid);
+
+    var legend = el("div", { "class": "sci-ts-legend" });
+    if (series.length >= 2) series.forEach(function (s, i) {
+      var item = el("span"); var key = el("span", { "class": "sci-ts-key" });
+      key.style.background = "var(--series-" + (i + 1) + ")"; item.appendChild(key); item.appendChild(doc.createTextNode(s.name));
+      legend.appendChild(item);
+    });
+    // Announced only when the reader settles on a value (slider input, end of
+    // Play), never on every animation tick or pointer move.
+    var readout = el("output", { "class": "sci-ts-readout", "data-sci-live": "", "aria-live": "off" });
+    mount.appendChild(legend); mount.appendChild(readout);
+
+    var longest = series.reduce(function (w, s) { return Math.max(w, String(s.name).length); }, 0);
+    var W = 720, H = 340, m = { t: 12, r: series.length <= 4 ? Math.min(180, 16 + longest * 7) : 16, b: 38, l: 56 };
+    // Axis maths runs in "t space": log10(v) on a log axis, v otherwise.
+    function T(v) { return logY ? Math.log10(v) : v; }
+    var tv = values.map(T);
+    var dmin = Math.min.apply(null, tv), dmax = Math.max.apply(null, tv);
+    // y_min extends the axis down to a floor (typically 0) but never hides data below it.
+    var floor = data.y_min != null && isFinite(+data.y_min) && (!logY || +data.y_min > 0) ? T(+data.y_min) : null;
+    var ymin = floor != null ? Math.min(floor, dmin) : dmin;
+    var ymax = floor != null ? Math.max(floor, dmax) : dmax;
+    var yt;
+    if (logY) {
+      var lo = Math.floor(ymin), hi = Math.ceil(ymax);
+      if (lo === hi) hi = lo + 1;
+      var stepD = Math.max(1, Math.ceil((hi - lo) / 6));
+      yt = [];
+      for (var d = lo; d <= hi; d += stepD) yt.push(d);
+      if (yt[yt.length - 1] < hi) yt.push(yt[yt.length - 1] + stepD);
+    } else {
+      yt = niceTicks(ymin, ymax, 5);
+    }
+    var y0 = yt[0], y1 = yt[yt.length - 1];
+    function tickLabel(t) {
+      if (!logY) return fmt.format(t);
+      return Math.abs(t) >= 4 ? "1e" + t : fmt.format(Math.pow(10, t));
+    }
+    var numericX = xs.every(function (v) { return typeof v === "number" && isFinite(v); });
+    var xlo = numericX ? Math.min.apply(null, xs) : 0, xhi = numericX ? Math.max.apply(null, xs) : n - 1;
+    function X(i) { var v = numericX ? xs[i] : i; return m.l + (xhi === xlo ? 0 : (v - xlo) / (xhi - xlo)) * (W - m.l - m.r); }
+    function Yt(t) { return m.t + (1 - (t - y0) / (y1 - y0)) * (H - m.t - m.b); }
+    function Y(v) { return Yt(T(v)); }
+
+    var root = svg("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": (data.y_label || "Value") + " over " + (data.x_label || "time") });
+    var defs = svg("defs"), clip = svg("clipPath", { id: id + "-clip" }), clipRect = svg("rect", { x: 0, y: 0, width: 0, height: H });
+    clip.appendChild(clipRect); defs.appendChild(clip); root.appendChild(defs);
+    yt.forEach(function (t) {
+      root.appendChild(svg("line", { x1: m.l, x2: W - m.r, y1: Yt(t), y2: Yt(t), stroke: "#e1e0d9", "stroke-width": 1 }));
+      var lab = svg("text", { x: m.l - 8, y: Yt(t) + 4, "text-anchor": "end" }); lab.textContent = tickLabel(t); root.appendChild(lab);
+    });
+    root.appendChild(svg("line", { x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, stroke: "#c3c2b7", "stroke-width": 1 }));
+    var xticks = numericX ? niceTicks(xlo, xhi, 6).filter(function (t) { return t >= xlo && t <= xhi; }) : null;
+    (xticks || xs.map(function (_, i) { return i; }).filter(function (i) { return i % Math.ceil(n / 6) === 0; })).forEach(function (t) {
+      var px = numericX ? m.l + (t - xlo) / (xhi - xlo || 1) * (W - m.l - m.r) : X(t);
+      var lab = svg("text", { x: px, y: H - m.b + 18, "text-anchor": "middle" }); lab.textContent = numericX ? xfmt(t) : String(xs[t]); root.appendChild(lab);
+    });
+    if (data.x_label) { var xl = svg("text", { x: (m.l + W - m.r) / 2, y: H - 4, "text-anchor": "middle", "class": "ts-label" }); xl.textContent = data.x_label; root.appendChild(xl); }
+    if (data.y_label) {
+      var yc = (m.t + H - m.b) / 2;
+      var yl = svg("text", { x: -yc, y: 14, "class": "ts-label", "text-anchor": "middle", transform: "rotate(-90)" });
+      yl.textContent = data.y_label; root.appendChild(yl);
+    }
+
+    function pathFor(vals) {
+      var d = "", pen = false;
+      for (var i = 0; i < n; i++) {
+        var v = vals[i];
+        if (v == null || !isFinite(v)) { pen = false; continue; }
+        d += (pen ? "L" : "M") + X(i).toFixed(1) + " " + Y(+v).toFixed(1); pen = true;
+      }
+      return d;
+    }
+    var dots = [], endLabels = [];
+    series.forEach(function (s, i) {
+      var color = "var(--series-" + (i + 1) + ")", d = pathFor(s.values);
+      root.appendChild(svg("path", { d: d, fill: "none", stroke: color, "stroke-width": 2, opacity: 0.22, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      root.appendChild(svg("path", { d: d, fill: "none", stroke: color, "stroke-width": 2, "clip-path": "url(#" + id + "-clip)", "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      if (series.length <= 4) {
+        var last = n - 1;
+        while (last >= 0 && s.values[last] == null) last--;
+        if (last >= 0) endLabels.push({ x: X(last) + 8, y: Y(s.values[last]) + 4, text: s.name });
+      }
+    });
+    // Direct labels at line ends, nudged apart so they never overprint.
+    endLabels.sort(function (a, b) { return a.y - b.y; });
+    for (var k = 1; k < endLabels.length; k++) {
+      if (endLabels[k].y - endLabels[k - 1].y < 14) endLabels[k].y = endLabels[k - 1].y + 14;
+    }
+    endLabels.forEach(function (l) {
+      var lab = svg("text", { x: l.x, y: Math.min(l.y, H - m.b), "class": "ts-label" }); lab.textContent = l.text; root.appendChild(lab);
+    });
+    var cursor = svg("line", { y1: m.t, y2: H - m.b, stroke: "#52514e", "stroke-width": 1, "stroke-dasharray": "3 3" });
+    root.appendChild(cursor);
+    series.forEach(function (s, i) {
+      var c = svg("circle", { r: 4.5, fill: "var(--series-" + (i + 1) + ")", stroke: "#ffffff", "stroke-width": 2 });
+      dots.push(c); root.appendChild(c);
+    });
+    var hit = svg("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: "transparent" });
+    root.appendChild(hit);
+    mount.appendChild(root);
+
+    var controls = el("div", { "class": "sci-ts-controls" });
+    var play = el("button", { type: "button", "data-no-advance": "" }, "Play");
+    var range = el("input", { type: "range", min: 0, max: n - 1, step: 1, "aria-label": (data.x_label || "Time") + " position" });
+    controls.appendChild(play); controls.appendChild(range);
+    figure.insertBefore(controls, $("figcaption", figure));
+
+    var cap = el("details", { "class": "sci-data-table" }); cap.appendChild(el("summary", null, "Data table"));
+    var table = el("table"), head = el("tr"); head.appendChild(el("th", null, data.x_label || "x"));
+    series.forEach(function (s) { head.appendChild(el("th", null, s.name)); });
+    var thead = el("thead"); thead.appendChild(head); table.appendChild(thead);
+    var tbody = el("tbody");
+    xs.forEach(function (x, i) {
+      var tr = el("tr"); tr.appendChild(el("td", null, xfmt(x)));
+      series.forEach(function (s) { var v = s.values[i]; tr.appendChild(el("td", null, v == null ? "–" : fmt.format(v))); });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody); cap.appendChild(table);
+    figure.insertBefore(cap, $("figcaption", figure));
+
+    var attr = figure.getAttribute("data-default-index");
+    var defaultIndex = attr == null || attr === "last" ? n - 1 : Math.max(0, Math.min(n - 1, parseInt(attr, 10) || 0));
+    function show(i, announce) {
+      i = Math.max(0, Math.min(n - 1, i));
+      var px = X(i);
+      cursor.setAttribute("x1", px); cursor.setAttribute("x2", px);
+      // Reveal the played part: from the first point to the cursor, in
+      // whichever direction x runs (descending x plays right to left).
+      var x0 = X(0);
+      clipRect.setAttribute("x", Math.min(x0, px) - 1);
+      clipRect.setAttribute("width", Math.abs(px - x0) + 2);
+      range.value = i;
+      range.setAttribute("aria-valuetext", (data.x_label ? data.x_label + " " : "") + xfmt(xs[i]));
+      readout.setAttribute("aria-live", announce ? "polite" : "off");
+      readout.textContent = "";
+      var head = el("span"); head.appendChild(doc.createTextNode((data.x_label ? data.x_label + " " : "") ));
+      head.appendChild(el("b", null, xfmt(xs[i]))); readout.appendChild(head);
+      series.forEach(function (s, k) {
+        var v = s.values[i], ok = v != null && isFinite(v);
+        dots[k].style.display = ok ? "" : "none";
+        if (ok) { dots[k].setAttribute("cx", px); dots[k].setAttribute("cy", Y(+v)); }
+        var item = el("span"); item.appendChild(el("b", null, ok ? fmt.format(v) : "–")); item.appendChild(doc.createTextNode(" " + s.name));
+        readout.appendChild(item);
+      });
+    }
+    var timer = null;
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; show(+range.value, true); }
+      play.textContent = "Play";
+    }
+    play.addEventListener("click", function () {
+      if (timer) { stop(); return; }
+      var i = +range.value >= n - 1 ? 0 : +range.value;
+      play.textContent = "Pause";
+      show(i);
+      timer = setInterval(function () { i += 1; show(i); if (i >= n - 1) stop(); }, Math.max(40, Math.min(250, 4000 / n)));
+    });
+    range.addEventListener("input", function () { stop(); show(+range.value, true); });
+    function nearest(evt) {
+      var rect = root.getBoundingClientRect(), sx = (evt.clientX - rect.left) / rect.width * W, best = 0, bd = Infinity;
+      for (var i = 0; i < n; i++) { var dd = Math.abs(X(i) - sx); if (dd < bd) { bd = dd; best = i; } }
+      return best;
+    }
+    hit.addEventListener("pointermove", function (evt) { if (!timer) show(nearest(evt)); });
+    hit.addEventListener("pointerleave", function () { if (!timer) show(+range.value); });
+    hit.addEventListener("click", function (evt) { evt.stopPropagation(); stop(); show(nearest(evt)); range.value = nearest(evt); });
+    range.value = defaultIndex; show(defaultIndex);
+    return {
+      stop: stop,
+      reset: function () { stop(); show(defaultIndex); },
+      snapshot: function () { return +range.value; },
+      restore: function (i) { show(i); }
+    };
+  }
+  interactiveKinds.timeseries = timeSeries;
+
+  /* ---------------- Slides ---------------- */
+
+  var deck = $("#deck");
+  var slides = deck ? $$(".slide", deck) : [];
+  var current = 0, returnScroll = 0, leavingFullscreenByKey = false, open = false;
+  var opener = null, quiet = false, pushedEntry = false, pendingReturn = null;
+  // Interactive report figures as they were before initialization; slide
+  // copies are built from these, so a copy never inherits the report
+  // figure's rendered controls (whose listeners do not clone).
+  var pristine = dict();
+
+  function prepareSlides() {
+    slides.forEach(function (slide, i) {
+      slide.setAttribute("aria-roledescription", "slide");
+      slide.setAttribute("aria-label", (i + 1) + " of " + slides.length);
+      $$(".slide-figure[data-fig-ref]", slide).forEach(function (slot) {
+        var ref = slot.getAttribute("data-fig-ref"), src = pristine[ref] || doc.getElementById(ref);
+        if (!src) { console.error("[SciReport] slide figure not found:", ref); return; }
+        var clone = src.cloneNode(true);
+        clone.removeAttribute("id");
+        isolateIds(clone, "--s" + (i + 1));
+        slot.appendChild(clone);
+        if (clone.hasAttribute("data-sci-interactive")) initInteractive(clone);
+      });
+      var source = slide.getAttribute("data-source");
+      if (source && source.charAt(0) === "#") {
+        var link = el("a", { "class": "slide-source", href: source, "data-deck-return": "" }, "↩ " + sectionTitle(doc.getElementById(source.slice(1))));
+        link.title = "Back to this section of the report";
+        slide.appendChild(link);
+      }
+    });
+    var bar = $(".deck-progress", deck);
+    slides.forEach(function (slide, i) {
+      var h = $("h1, h2", slide);
+      var b = el("button", { type: "button", "aria-label": "Slide " + (i + 1) + (h ? ": " + h.textContent : "") });
+      b.addEventListener("click", function (e) { e.stopPropagation(); go(i); deck.focus({ preventScroll: true }); });
+      bar.appendChild(b);
+    });
+    // "Present from here" links next to report headings that slides summarize.
+    var firstSlideFor = dict();
+    slides.forEach(function (s, i) { var src = s.getAttribute("data-source"); if (src && !(src in firstSlideFor)) firstSlideFor[src] = i; });
+    Object.keys(firstSlideFor).forEach(function (src) {
+      var target = doc.getElementById(src.slice(1));
+      var heading = target && (target.matches("h2,h3") ? target : $(":scope > h2, :scope > h3", target));
+      if (!heading) return;
+      var a = el("a", { "class": "present-here", href: "#slides/" + (firstSlideFor[src] + 1), "aria-label": "Present from this section" }, "▶ present");
+      heading.appendChild(a);
+    });
+  }
+
+  // The heading a slide returns to: the target's own heading, else the
+  // heading of the nearest enclosing section (a caveat box, a table).
+  function sectionTitle(target) {
+    for (var n = target; n && n !== doc.body; n = n.parentElement) {
+      var h = n.matches("h2,h3") ? n : $(":scope > h2, :scope > h3", n);
+      if (h) return h.textContent.replace(/\s*▶.*$/, "");
+    }
+    return "Report";
+  }
+
+  function fit() {
+    if (!open) return;
+    var vp = $(".deck-viewport", deck), s = Math.min(vp.clientWidth / 1280, vp.clientHeight / 720);
+    deck.style.setProperty("--deck-scale", Math.max(0.1, s * 0.98).toFixed(4));
+  }
+
+  function render() {
+    slides.forEach(function (s, i) { s.classList.toggle("is-current", i === current); s.setAttribute("aria-hidden", i === current ? "false" : "true"); });
+    $$(".deck-progress button", deck).forEach(function (b, i) { b.classList.toggle("is-done", i <= current); b.setAttribute("aria-current", i === current ? "step" : "false"); });
+    $(".deck-count", deck).textContent = (current + 1) + " / " + slides.length;
+    var h = $("h1, h2", slides[current]);
+    $(".deck-live", deck).textContent = "Slide " + (current + 1) + " of " + slides.length + (h ? ": " + h.textContent : "");
+    var hash = "#slides/" + (current + 1);
+    if (open && !quiet && location.hash !== hash) history.replaceState(null, "", hash);
+  }
+
+  function overflows(slide) {
+    return slide.scrollHeight > slide.clientHeight + 1 || slide.scrollWidth > slide.clientWidth + 1;
+  }
+
+  function go(i) {
+    if (!slides.length) return;
+    var target = Math.max(0, Math.min(slides.length - 1, i));
+    if (!quiet && target !== current && slides[current]) eachInstance(slides[current], "stop");
+    current = target;
+    render();
+    if (!quiet && overflows(slides[current])) {
+      console.warn("[SciReport] slide " + (current + 1) + " content overflows the slide; shorten it or split it");
+    }
+  }
+
+  // Open every slide once and report the ones whose content does not fit
+  // (1-based numbers). Used by the Phase 9 gate: SciReport.checkLayout().
+  // Leaves the page exactly as it found it: URL, scroll position, focus,
+  // and whether (and where) the deck was open.
+  function checkLayout() {
+    var wasOpen = open, was = current, bad = [];
+    var hash = location.hash, x = window.scrollX, y = window.scrollY, focus = doc.activeElement;
+    quiet = true;
+    try {
+      if (!wasOpen) openDeck(0);
+      slides.forEach(function (s, i) { go(i); if (overflows(s)) bad.push(i + 1); });
+      go(was);
+      if (!wasOpen) closeDeck(false);
+    } finally {
+      quiet = false;
+    }
+    if (location.hash !== hash) history.replaceState(null, "", hash || location.pathname + location.search);
+    window.scrollTo(x, y);
+    if (focus && focus.focus) focus.focus({ preventScroll: true });
+    return bad;
+  }
+  function next() { go(current + 1); }
+  function prev() { go(current - 1); }
+
+  function openDeck(i) {
+    if (!slides.length) return;
+    if (!open) {
+      returnScroll = window.scrollY;
+      var active = doc.activeElement;
+      opener = active && active !== doc.body && !deck.contains(active) ? active : null;
+      // One history entry for the whole deck, so Back closes it rather than
+      // leaving the report; slide changes inside the deck replace that entry.
+      pushedEntry = !quiet && !/^#slides/.test(location.hash);
+      if (pushedEntry) history.pushState(null, "", "#slides/" + ((i || 0) + 1));
+    }
+    open = true;
+    deck.hidden = false;
+    doc.body.classList.add("presenting");
+    go(i || 0); fit();
+    if (!quiet) deck.focus({ preventScroll: true });
+  }
+
+  // toSource: return to the current slide's data-source section (Esc, the
+  // return link, leaving fullscreen). keepUrl: the URL already moved (Back
+  // button, a typed hash), so leave history alone and follow it.
+  function closeDeck(toSource, keepUrl) {
+    if (!open) return;
+    open = false;
+    eachInstance(deck, "stop");
+    if (doc.fullscreenElement) { leavingFullscreenByKey = true; doc.exitFullscreen().catch(function () {}); }
+    deck.hidden = true;
+    doc.body.classList.remove("presenting");
+    if (quiet) return;
+    var src = toSource !== false && slides[current] && slides[current].getAttribute("data-source");
+    if (pushedEntry && !keepUrl) {
+      // Opening pushed one entry; pop it so the reader's history is as it
+      // was, then finish the return once the browser has moved back.
+      pushedEntry = false;
+      // The browser would restore the pre-presentation scroll position on
+      // this Back step, undoing the return to the source section.
+      var restoration = history.scrollRestoration;
+      history.scrollRestoration = "manual";
+      pendingReturn = { src: src || null, restoration: restoration };
+      history.back();
+      // Finished on hashchange, which arrives after the browser's own scroll
+      // for this traversal; the timeout covers a browser that sends none.
+      setTimeout(function () { if (pendingReturn) completeReturn(); }, 400);
+      return;
+    }
+    pushedEntry = false;
+    finishClose(src, keepUrl);
+  }
+
+  function finishClose(src, keepUrl) {
+    var target = src && src.charAt(0) === "#" && doc.getElementById(src.slice(1));
+    if (target) {
+      history.replaceState(null, "", src);
+      target.scrollIntoView({ block: "start" });
+      var flashEl = target.matches("section") ? ($(":scope > h2, :scope > h3", target) || target) : target;
+      flashEl.classList.remove("flash"); void flashEl.offsetWidth; flashEl.classList.add("flash");
+      // Keyboard users continue from the section they returned to.
+      if (!flashEl.hasAttribute("tabindex")) flashEl.setAttribute("tabindex", "-1");
+      flashEl.focus({ preventScroll: true });
+    } else if (keepUrl) {
+      var here = location.hash && doc.getElementById(location.hash.slice(1));
+      if (here) here.scrollIntoView({ block: "start" }); else window.scrollTo(0, returnScroll);
+      if (opener && opener.focus) opener.focus({ preventScroll: true });
+    } else {
+      history.replaceState(null, "", location.pathname + location.search);
+      window.scrollTo(0, returnScroll);
+      if (opener && opener.focus) opener.focus({ preventScroll: true });
+    }
+    opener = null;
+  }
+
+  function toggleFullscreen() {
+    if (doc.fullscreenElement) { leavingFullscreenByKey = true; doc.exitFullscreen().catch(function () {}); }
+    else if (deck.requestFullscreen) {
+      deck.requestFullscreen().catch(function (e) {
+        console.warn("[SciReport] the browser refused fullscreen" + (e && e.message ? ": " + e.message : ""));
+      });
+    }
+  }
+
+  // One notion of "the reader is operating a control", shared by clicks,
+  // keys, and touch: such targets keep their own behavior and never turn
+  // the slide.
+  var INTERACTIVE = "a[href], button, input, select, textarea, summary, details, [role=button], [contenteditable], [data-no-advance], [data-sci-interactive]";
+  function interactiveTarget(t) { return !!(t && t.closest && t.closest(INTERACTIVE)); }
+  var NON_TEXT_INPUTS = ["range", "checkbox", "radio", "button", "submit", "reset", "color", "file", "image"];
+  function isTextEntry(t) {
+    if (!t) return false;
+    if (t.isContentEditable || t.tagName === "TEXTAREA") return true;
+    return t.tagName === "INPUT" && NON_TEXT_INPUTS.indexOf((t.type || "").toLowerCase()) < 0;
+  }
+  var ARROW_WIDGETS = "[role=slider],[role=spinbutton],[role=radiogroup],[role=radio],[role=listbox],[role=tablist],[role=tab],[role=grid],[role=menu],[role=tree]";
+  function ownsArrowKeys(t) {
+    if (!t) return false;
+    if (isTextEntry(t) || t.tagName === "SELECT") return true;
+    if (t.tagName === "INPUT" && (t.type === "range" || t.type === "radio")) return true;
+    return !!(t.closest && t.closest(ARROW_WIDGETS));
+  }
+
+  function onKey(e) {
+    if (!open || e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target;
+    if (e.key === "Escape") { closeDeck(); e.preventDefault(); return; }
+    if (isTextEntry(t)) return;
+    var navKeys = ["ArrowRight", "ArrowDown", "PageDown", "ArrowLeft", "ArrowUp", "PageUp", "Home", "End"];
+    if (navKeys.indexOf(e.key) >= 0 && ownsArrowKeys(t)) return;
+    var onControl = interactiveTarget(t) && t !== deck;
+    switch (e.key) {
+      case "ArrowRight": case "ArrowDown": case "PageDown": case "n": next(); break;
+      case " ": case "Enter": if (onControl) return; if (e.shiftKey) prev(); else next(); break;
+      case "ArrowLeft": case "ArrowUp": case "PageUp": case "p": case "Backspace": prev(); break;
+      case "Home": go(0); break;
+      case "End": go(slides.length - 1); break;
+      case "f": case "F": toggleFullscreen(); break;
+      default: return;
+    }
+    e.preventDefault();
+  }
+
+  function onStageClick(e) {
+    if (!open) return;
+    if (interactiveTarget(e.target)) return;
+    if (window.getSelection && String(window.getSelection())) return;
+    var rect = $(".deck-viewport", deck).getBoundingClientRect();
+    if (e.clientX - rect.left < rect.width * 0.25) prev(); else next();
+  }
+
+  function completeReturn() {
+    var ret = pendingReturn; pendingReturn = null;
+    finishClose(ret.src, !ret.src);
+    if (ret.restoration) history.scrollRestoration = ret.restoration;
+  }
+
+  function fromHash(e) {
+    if (pendingReturn) {
+      if (e && e.type === "hashchange") completeReturn();
+      return;  // the popstate half of our own Back step
+    }
+    var m = /^#slides(?:\/(\d+))?$/.exec(location.hash);
+    if (m) openDeck(m[1] ? parseInt(m[1], 10) - 1 : 0);
+    else if (open) closeDeck(false, true);
+  }
+
+  function initDeck() {
+    if (!deck || !slides.length) { $$("[data-present]").forEach(function (b) { b.hidden = true; }); return; }
+    deck.tabIndex = -1;
+    prepareSlides();
+    $$("[data-present]").forEach(function (b) { b.addEventListener("click", function () { openDeck(0); }); });
+    // Deck chrome returns focus to the deck after a click, so Space and Enter
+    // keep advancing slides instead of re-pressing the clicked button.
+    function chrome(fn) { return function (e) { e.stopPropagation(); fn(); if (open) deck.focus({ preventScroll: true }); }; }
+    $$('[data-deck="next"]', deck).forEach(function (b) { b.addEventListener("click", chrome(next)); });
+    $$('[data-deck="prev"]', deck).forEach(function (b) { b.addEventListener("click", chrome(prev)); });
+    $$('[data-deck="close"]', deck).forEach(function (b) { b.addEventListener("click", function (e) { e.stopPropagation(); closeDeck(); }); });
+    $$('[data-deck="fullscreen"]', deck).forEach(function (b) { b.addEventListener("click", chrome(toggleFullscreen)); });
+    $$("[data-deck-return]", deck).forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); e.stopPropagation(); closeDeck(); }); });
+    $(".deck-viewport", deck).addEventListener("click", onStageClick);
+    doc.addEventListener("keydown", onKey);
+    window.addEventListener("resize", fit);
+    window.addEventListener("popstate", fromHash);
+    window.addEventListener("hashchange", fromHash);
+    doc.addEventListener("fullscreenchange", function () {
+      fit();
+      // In fullscreen the browser consumes Esc to exit fullscreen, so leaving
+      // fullscreen by any route other than our own F toggle means "escape the
+      // slideshow" and returns to the report.
+      // Only the exit event consumes the flag: the enter event can arrive
+      // after a quick second F press has already set it.
+      if (!doc.fullscreenElement) {
+        if (open && !leavingFullscreenByKey) closeDeck();
+        leavingFullscreenByKey = false;
+      }
+    });
+    var touchX = null;
+    deck.addEventListener("touchstart", function (e) {
+      // A drag on a slider or chart, or a pinch, is not a swipe.
+      touchX = e.touches.length === 1 && !interactiveTarget(e.target) ? e.touches[0].clientX : null;
+    }, { passive: true });
+    deck.addEventListener("touchend", function (e) {
+      if (touchX == null) return;
+      var dx = e.changedTouches[0].clientX - touchX; touchX = null;
+      if (Math.abs(dx) > 50) { if (dx < 0) next(); else prev(); }
+    });
+    window.addEventListener("beforeprint", function () { slides.forEach(function (s) { s.setAttribute("aria-hidden", "false"); }); });
+    fromHash();
+  }
+
+  window.SciReport = {
+    // init(figure, data) may return {stop, reset, snapshot, restore}: stop()
+    // halts animation, reset() shows the default state, snapshot()/restore(s)
+    // save and put back the reader's state around printing.
+    register: function (kind, init) { interactiveKinds[kind] = init; },
+    open: openDeck, close: closeDeck, go: go, checkLayout: checkLayout,
+    get current() { return current; }, get count() { return slides.length; }, get presenting() { return open; }
+  };
+
+  function start() {
+    numberFigures();
+    buildContents();
+    $$("main figure[data-sci-interactive]").forEach(function (f) {
+      if (f.id) pristine[f.id] = f.cloneNode(true);
+      initInteractive(f);
+    });
+    // Print shows every interactive figure in its default state — the state
+    // the caption and prose describe — and afterwards puts each back where
+    // the reader left it.
+    var beforePrint = null;
+    window.addEventListener("beforeprint", function () {
+      if (beforePrint) return;
+      beforePrint = instances.map(function (it) { try { return it.snapshot(); } catch (e) { return undefined; } });
+      eachInstance(null, "reset");
+    });
+    window.addEventListener("afterprint", function () {
+      if (!beforePrint) return;
+      instances.forEach(function (it, k) {
+        if (beforePrint[k] !== undefined) { try { it.restore(beforePrint[k]); } catch (e) { /* keep default */ } }
+      });
+      beforePrint = null;
+    });
+    initDeck();
+  }
+  // Let report-specific scripts that follow this one call SciReport.register first.
+  if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", start);
+  else setTimeout(start, 0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heritable lineage barcoding with pre-treatment tracking",
+      "description": "Introduce a CRISPR-based lineage recorder into a clonal cancer line, then follow single-cell lineages by time-lapse imaging through a drug pulse and sequence barcodes in survivors. If survivors cluster in lineages already distinguishable before treatment, persistence is pre-specified rather than drug-induced."
+    },
+    {
+      "title": "Sorting on a pre-treatment reporter and re-challenging",
+      "description": "Build a live reporter for a candidate persister-associated transcription factor or chromatin state, sort reporter-high and reporter-low cells before any drug exposure, and measure each sorted population's survival under drug. A large survival difference between sorted pools would show that a pre-existing state, not random chance, decides who survives."
+    },
+    {
+      "title": "Temporally staged CRISPR screens with single-cell readout",
+      "description": "Run a pooled CRISPR perturbation screen with drug added at several time points and read out each perturbation by single-cell RNA and ATAC sequencing. This reveals which regulators are required to enter, maintain, or exit the tolerant state, and when each one acts."
+    },
+    {
+      "title": "Label-free metabolic imaging of single cells before treatment",
+      "description": "Use fluorescence lifetime imaging of NAD(P)H or Raman spectroscopy to classify individual living cells by their metabolic state before drug exposure, then track which metabolic profiles survive. Sorting by that profile and testing metabolic inhibitors would show whether the survivors depend on a specific energy pathway."
+    },
+    {
+      "title": "Spatial mapping of persisters within intact tumors",
+      "description": "Apply spatial transcriptomics or multiplexed imaging to patient-derived xenograft tumors taken during and after treatment, and map where persister cells sit relative to vasculature, hypoxia, and stromal neighbors. If survivors are concentrated in particular niches, niche signals rather than intrinsic cell properties would be the main driver of survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1850,
+  "cost_usd": 0.0010673
+}

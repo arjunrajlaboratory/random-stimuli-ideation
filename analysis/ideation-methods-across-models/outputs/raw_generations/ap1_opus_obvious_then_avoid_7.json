@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Separate time-based from division-based forgetting, and test mitotic bookmarking",
+      "description": "Measure decay of the primed state (accessibility and re-response amplitude) in matched populations that are cycling versus reversibly arrested (CDK4/6 inhibitor or G0, with FUCCI staging), to ask whether memory half-life is set in hours or in cell divisions. Pair this with Halo-tagged Fos/Jun live imaging and mitotic-chromosome CUT&RUN to test whether AP-1 is retained on condensed chromatin, which is the mechanism a division-counting memory would require."
+    },
+    {
+      "title": "Kinetic signature of memory: single-molecule tracking rather than occupancy",
+      "description": "Use HaloTag single-molecule tracking (plus FRAP and AP-1 hub imaging) to compare residence time, bound fraction, and target-search time of JunB/Fos in naive versus primed cells held at matched AP-1 protein levels by a titratable degron. This tests the hypothesis that memory is stored as a faster or more stable rebinding kinetics at primed sites (a search advantage) rather than as higher steady-state occupancy, and predicts how fast memory should recover after transient AP-1 removal."
+    },
+    {
+      "title": "Memory interference between two AP-1-dependent programs",
+      "description": "Prime cells with stimulus A, then deliver an unrelated AP-1-inducing stimulus B, and ask whether B erases, overwrites, or leaves intact the A-specific primed response (and vice versa), including a titration of B's strength. A shared, limiting trans-acting AP-1 pool predicts dose-dependent retroactive interference between memories, whereas locus-local chromatin storage predicts independence; adding an AP-1 decoy-site sponge array that can be excised provides an orthogonal limiting-pool test."
+    },
+    {
+      "title": "Information-theoretic sufficiency test using stimulus-history microfluidics",
+      "description": "Deliver defined sequences of stimulus histories in a microfluidic device to cells carrying a live AP-1 activity reporter plus a downstream response reporter, then compute I(history; AP-1 state) and the conditional information I(history; response | AP-1 state). If AP-1 is the memory substrate, the conditional term should collapse to near zero, which is a quantitative, model-free test that AP-1 lies on the causal path rather than merely correlating with history."
+    },
+    {
+      "title": "Allele-specific memory in F1 hybrid or heterozygous-donor cells",
+      "description": "In F1 hybrid mouse cells or human donor cells heterozygous at thousands of AP-1 motifs, use allele-resolved ATAC and nascent RNA before and long after a transient stimulus to ask whether the persistent (memory) state tracks the motif-disrupting allele in cis. Thousands of natural motif variants give a genome-scale, internally controlled causal test, and the subset showing memory loss without acute-induction loss identifies motifs needed for maintenance specifically."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Time-course ATAC-seq after a transient stimulus to show AP-1-motif enhancers stay accessible long after the signal and the acute transcriptional response decay.",
+      "Fos/Jun CUT&RUN or ChIP-seq before, during, and after stimulation to test whether AP-1 remains bound at primed enhancers during the memory phase.",
+      "Acute degron (auxin/dTAG) depletion of c-Fos/c-Jun restricted to the memory window to separate maintenance from establishment.",
+      "Priming / re-stimulation assay showing a faster or larger second response that is abolished by AP-1 knockdown, A-Fos dominant negative, or AP-1 inhibitors (T-5224, SR11302).",
+      "CRISPR deletion or point mutation of TRE/AP-1 motifs at a candidate memory enhancer and measurement of loss of the primed re-response.",
+      "dCas9 tethering of a Fos/Jun bZIP or transactivation domain to an enhancer to test sufficiency for installing long-lived accessibility.",
+      "Single-cell multiome (RNA+ATAC) with chromVAR AP-1 motif deviation scores to show memory-competent cells are the AP-1-high cells.",
+      "Clonal barcoding / lineage tracing (Rewind-style) to test whether the AP-1-high state is heritable across divisions and predicts future fate or drug tolerance.",
+      "Pulsed optogenetic or chemogenetic induction of Fos/Jun in naive cells to ask whether AP-1 alone is sufficient to create the primed state.",
+      "Measurement of Fos/Jun mRNA and protein half-lives plus tests for an AP-1 -> AP-1 autoregulatory positive feedback loop that could self-sustain the state."
+    ]
+  },
+  "output_tokens": 5850,
+  "cost_usd": 0.22226610000000002
+}

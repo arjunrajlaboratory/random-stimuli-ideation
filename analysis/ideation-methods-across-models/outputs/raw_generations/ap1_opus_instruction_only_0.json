@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 0,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loops (from magnetism)",
+      "description": "Slowly ramp a stimulus such as TGF-\u03b2, a drug, or serum up to a peak and back down. At each step, measure AP-1 binding (CUT&RUN for FOS/JUN), AP-1 motif accessibility (ATAC) and target expression in single cells. If AP-1 holds a memory, the up and down paths will differ, and AP-1 knockdown should shrink the area between them (loop area) more than it changes the response at steady state."
+    },
+    {
+      "title": "Volatile vs. non-volatile storage test (from computer RAM)",
+      "description": "Prime cells, then acutely degrade AP-1 subunits with degron-tagged FOS/JUN/FOSL (dTAG or AID) during the post-stimulus 'storage' window and restore them before re-challenge. If the memory survives removal during storage, AP-1 only reads the memory out. If it is lost, AP-1 is needed to keep the memory going, like RAM that needs constant refreshing."
+    },
+    {
+      "title": "Kinship-correlation decay (from twin and pedigree studies)",
+      "description": "Use lineage barcoding (e.g., Rewind or clonal scRNA/ATAC) to measure how strongly sisters, cousins and second cousins agree on AP-1 target accessibility after a transient stimulus. Fit the drop in correlation per generation to get a memory half-life in cell divisions, and compare it with lines where the AP-1 motifs are mutated or AP-1 is inhibited."
+    },
+    {
+      "title": "Bits of memory (from information theory)",
+      "description": "Expose cells to random combinations of past stimulus histories, then use single-cell multiome to estimate the mutual information between each cell's history and its current state. Divide that information into the part carried by AP-1 motif accessibility and the part that is not, and test how much is lost with AP-1 perturbation."
+    },
+    {
+      "title": "Annealing schedules and locus-level bit-flips (from metallurgy and hard drives)",
+      "description": "After priming, apply defined 'annealing' treatments (passage time, forced divisions, HDAC or BAF inhibitors) to find what erases faster re-induction on a second challenge. Then use base editing on single AP-1 sites at the remembered enhancers to test whether destroying one site removes the memory only at that locus."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1607,
+  "cost_usd": 0.040963
+}

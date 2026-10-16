@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking",
+      "description": "Expose cells to a defined, transient AP-1-activating stimulus (e.g., TPA, growth factor, injury signal), then perform time-resolved ATAC-seq and CUT&RUN for FOS/JUN and H3K27ac after washout (days to weeks, across cell divisions). Persistence of AP-1-motif-enriched accessible sites, and of AP-1 binding at them, after the stimulus is gone would indicate a memory state."
+    },
+    {
+      "title": "Acute AP-1 degradation/inhibition during and after priming",
+      "description": "Use degron-tagged (dTAG/AID) FOS/JUN or dominant-negative A-FOS to remove AP-1 either only during the priming window or only during the later maintenance phase. If depletion during priming blocks memory but depletion later does not, AP-1 is needed for establishment; if late depletion erases it, AP-1 is needed for maintenance. Readouts are accessibility and the enhanced transcriptional response to re-stimulation."
+    },
+    {
+      "title": "Secondary-challenge transcriptional response (primed vs naive)",
+      "description": "Compare RNA-seq or nascent transcription (PRO-seq) after a second stimulus in primed versus naive cells, with and without AP-1 perturbation. Memory predicts faster or stronger induction of specific genes in primed cells, and these genes should be linked to AP-1-bound enhancers that stay open."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory inheritance",
+      "description": "Use single-cell RNA+ATAC (or live reporters of AP-1 activity) with barcoded lineage tracing to test whether sister cells share AP-1 target accessibility and expression states after division. Compare the persistence of AP-1 activity and chromatin state within clones against random pairs to separate heritable memory from continued upstream signaling."
+    },
+    {
+      "title": "Synthetic recruitment of AP-1 to test sufficiency",
+      "description": "Recruit AP-1 (or a FOS/JUN activation domain) to a reporter or endogenous locus with dCas9 or an inducible system for a pulse, then track whether the locus stays open and active after the recruiter is removed. Pairing this with pioneer-factor/chromatin-remodeler (e.g., BAF) inhibition and histone modification profiling tests whether AP-1 alone is sufficient to set a self-sustaining state and whether it acts through remodeling."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 885,
+  "cost_usd": 0.011600599999999999
+}

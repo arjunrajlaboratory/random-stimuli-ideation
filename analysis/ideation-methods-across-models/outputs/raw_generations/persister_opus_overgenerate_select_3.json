@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Twin-plate barcoding to read out the pre-treatment state of future survivors",
+      "description": "Barcode a clonal population, split it into twin plates so that each barcode is represented in both, treat one plate and deeply profile the untreated twin by scRNA-seq. Because survivors are identified retrospectively by barcode, this directly reveals the transcriptional state the surviving cells were in before they ever saw drug, rather than the post-hoc state of cells already reshaped by treatment."
+    },
+    {
+      "title": "Measure the memory half-life of the primed state",
+      "description": "Sort cells that are in the putative primed state (by a FISH-based or reporter-based readout), re-plate them, and assay drug survival and marker expression at a series of time points as the sorted population relaxes back toward baseline. The decay curve gives a quantitative switching rate that distinguishes a transient transcriptional fluctuation from a stably heritable epigenetic state."
+    },
+    {
+      "title": "Fluctuation analysis of survivor counts to infer switching rates",
+      "description": "Grow many small parallel cultures from few cells, treat each identically, and count survivor colonies per culture. The shape of the variance across cultures (Luria-Delbr\u00fcck style) discriminates rare irreversible events arising early in the lineage from fast reversible state-switching, and yields switching and reversion rates without any molecular profiling."
+    },
+    {
+      "title": "Single-cell multiome to test whether chromatin is primed before transcription",
+      "description": "Perform joint ATAC and RNA profiling on untreated cells to ask whether the regulatory regions of resistance-associated genes are already accessible in cells that have not yet upregulated those transcripts. A population with open-but-silent chromatin would identify an intermediate, pre-primed compartment much larger than the eventual survivor fraction."
+    },
+    {
+      "title": "Spatial and conditioned-media tests for non-cell-autonomous survival",
+      "description": "Image whether survivor colonies are spatially clustered more than expected by chance, and complement this with conditioned-media transfer and mixed co-culture of labeled sensitive cells. Together these separate genuinely cell-intrinsic priming from local paracrine protection or density effects, a confound rarely excluded in single-cell priming studies."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Clonal barcoding with split-sister-cell design: barcode a population, split into twin plates, treat one and profile the other to find pre-existing states that predict survival",
+      "Prospective isolation of rare high-expressor cells by RNA FISH-based sorting, then re-plating to test whether the state is heritable and drug-protective",
+      "Live-cell imaging with a fluorescent reporter knock-in at a resistance-associated locus to track state fluctuations and time-to-commitment before drug addition",
+      "Single-cell multiome (ATAC + RNA) of pre-treatment cells to ask whether primed chromatin precedes primed transcription",
+      "Timed drug-addition/removal experiments measuring the memory half-life of the primed state (how long before a sorted cell reverts)",
+      "Whole-genome and targeted deep sequencing of survivor colonies to rule in or out pre-existing mutations and copy-number changes",
+      "CRISPR screens for genes whose loss blocks the emergence of survivors without affecting bulk drug killing",
+      "Mitochondrial or metabolic single-cell measurements (mitochondrial mass, membrane potential, ROS) as a non-transcriptional predictor of survival",
+      "Cell-cycle phase at the moment of drug addition, measured by FUCCI live imaging, correlated with individual cell fate",
+      "Quantifying drug uptake and efflux per cell with fluorescent drug analogs or mass spectrometry imaging",
+      "Single-cell signaling dynamics (ERK/AKT kinase translocation reporters) during the first hours of drug exposure, linked to eventual fate",
+      "Measuring cell size, protein content, and global translation rate per cell as a confounder/predictor of survival",
+      "Spatial analysis of whether survivors arise in clusters, indicating local microenvironment or paracrine effects rather than cell-intrinsic state",
+      "Conditioned-media and co-culture swap experiments to test whether dying cells release factors that protect neighbors",
+      "Serial re-treatment of resistant colonies after drug holiday to measure reversibility and distinguish epigenetic from genetic resistance",
+      "Allele-specific and monoallelic expression analysis in single cells to test whether stochastic bursting at one allele creates rare high states",
+      "Perturbing transcriptional burst kinetics (e.g., with BET or HDAC modulators) and measuring the effect on survivor frequency",
+      "Single-cell proteomics or high-plex imaging of signaling proteins to check whether RNA-level priming is reflected at protein level",
+      "Mathematical inference of state-switching rates from fluctuation analysis (Luria-Delbr\u00fcck style) applied to drug-survivor counts",
+      "Comparing survivor frequency and identity across isogenic subclones to quantify how much variability is clone-heritable versus truly stochastic"
+    ]
+  },
+  "output_tokens": 1832,
+  "cost_usd": 0.0666978
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 1,
+  "stimulus": "I met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI met a traveller from an antique land,\nWho said\u2014\"Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.\"\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with drug-pulse timing",
+      "description": "Label each founder cell with a heritable DNA barcode, expose the population to the drug, and track which clones persist. If survivors are already present before treatment, their barcodes will appear in the pre-treatment sample, and their lineage history will show whether they are stable pre-existing persisters or cells that switched state under drug. Like Ozymandias's shattered statue, the surviving clones are the remnants of a larger population that has mostly vanished."
+    },
+    {
+      "title": "Time-resolved single-cell multiomics across the drug response",
+      "description": "Run paired scRNA-seq and scATAC-seq on the same cells at several times during the first days of treatment, and cluster the cells to find a transcriptional or chromatin state that is enriched before the drug takes effect or during the early tolerant window. Comparing the state of the cells that survive with the state of those that die shows whether the survivors were already different. This is analogous to reading the passions still carved into the statue's face: the residual cell state reveals what the cell was like before the drug arrived."
+    },
+    {
+      "title": "Epigenetic memory test using drug holidays and sorted survivors",
+      "description": "Sort drug-tolerant survivors and profile their chromatin (ATAC-seq, H3K27ac/H3K4me3 CUT&Tag, and DNA methylation) against drug-naive controls, then release the survivors from drug for several weeks and repeat the profiling. Chromatin marks that persist after release point to heritable epigenetic memory, while marks that reset point to reversible adaptation. The inscription on the pedestal outlasts the king, and similarly the epigenetic mark may outlast the drug."
+    },
+    {
+      "title": "Genome-wide CRISPR screen comparing survivors to controls",
+      "description": "Perform a pooled CRISPR knockout or CRISPRi screen under sustained drug exposure and compare guide abundance in surviving cells against an untreated reference at several time points. Genes whose loss consistently changes survival identify the pathways the survivors depend on, such as stress signalling, drug efflux, or mitochondrial or NAD metabolism. Follow-up with knockouts of the top hits in both survivor-enriched and non-enriched lines tests whether these pathways are necessary for persistence."
+    },
+    {
+      "title": "Spatial and live metabolic mapping of survivor niches",
+      "description": "Use multiplexed spatial imaging or spatial transcriptomics on tumour sections or 3D organoids during treatment to locate surviving cells relative to hypoxic, stromal, or immune niches. In parallel, use fluorescence lifetime imaging of NAD(P)H and FAD to measure the metabolic state of individual living cells, and sort survivors by that state to test whether it predicts persistence. Like the lone and level sands surrounding the ruined statue, survival may depend less on the cell itself than on its surroundings."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1646,
+  "cost_usd": 0.00109955
+}

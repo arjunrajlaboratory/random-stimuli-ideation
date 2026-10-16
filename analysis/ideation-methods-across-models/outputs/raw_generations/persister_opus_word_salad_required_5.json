@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 5,
+  "stimulus": "chondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nchondre cosher pyrgoidal vota urgingly revel exaugurate trabea vesting flooding burnie monoureide predict poculary pillas bromlite prewelcome disthene leper griffonne naucrar escalate phaneric snipjack tronage porto mulder chapfallen gebbie fatalistic eviration upblacken eustatic tetrasemic underlap gumptious glide unimitably emulous riverine snootily wareroom idiologism vertically quinogen altarlet yokeless selectedly hemiglyph entangled vilayet piline fretworked inscribe county unitistic workpiece reimpose endless cathood\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Clone-splitting to time the origin of the surviving state (\"prewelcome\")",
+      "description": "Expand single-cell-derived clones, then split each clone into a treated arm and an untreated arm that is profiled by scRNA-seq/protein staining, so that any pre-existing transcriptional program enriched in the untreated twin of a high-survival clone is identified as a primed state present before drug exposure. Varying the number of divisions between splitting and treatment (1, 5, 10, 20 generations) converts the correlation decay into a direct measurement of how many cell generations the survival-conferring state is inherited."
+    },
+    {
+      "title": "Absolute, spike-in-normalized profiling of survivors (\"eustatic\" baseline shift)",
+      "description": "Because standard scRNA-seq normalization hides changes in the global level, quantify survivors with ERCC/UMI spike-ins plus measurements of cell volume, total RNA, total protein, and ribosome content, to test whether persisters differ by a uniform shift in transcriptome and biosynthetic scale (a slow-growing, low-output state) rather than by induction of specific resistance genes. The distinction determines whether the right therapeutic target is a pathway or the global growth/translation setpoint."
+    },
+    {
+      "title": "Barcoded re-challenge after drug holiday to test reversibility (\"reimpose\")",
+      "description": "Transduce cells with a high-complexity lineage barcode library, treat, expand survivors off drug for varying holiday lengths, then re-treat and sequence barcodes, asking whether the same lineages survive again (heritable/genetic or stably epigenetic) or a fresh random subset survives (reversible, re-sampled state). Pairing barcode recovery with whole-genome sequencing and ATAC-seq of the same expanded clones separates mutational resistance from chromatin-encoded memory from pure stochastic re-sampling."
+    },
+    {
+      "title": "Spatial and neighborhood determinants of survival (\"entangled\" / \"underlap\")",
+      "description": "Image cells at controlled densities and in micropatterned colonies, record each cell's local density, contact number, and position (edge versus interior) before treatment, then follow survival by live imaging, and apply spatial transcriptomics or in situ sequencing to the fixed endpoint. This tests whether survivors are defined by a crowded or edge niche with local paracrine signaling and drug-gradient shielding rather than by a cell-intrinsic state, which can be confirmed by conditioned-media and co-culture swaps."
+    },
+    {
+      "title": "Continuous single-cell trajectories through treatment with retrospective in situ readout (\"glide\")",
+      "description": "Use long-term live-cell imaging with cell-cycle (FUCCI), signaling (ERK/AKT biosensors), and candidate-marker reporters to track every cell continuously from before drug addition through death or persistence, then fix the plate and perform single-molecule FISH or multiplexed immunofluorescence on the same imaged cells to link dynamic history to final molecular state. Comparing abrupt dosing with gradual dose escalation reveals whether survival depends on the cell's phase and signaling-pulse history at the moment of exposure or on an adaptive trajectory acquired during treatment."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2284,
+  "cost_usd": 0.0934665
+}

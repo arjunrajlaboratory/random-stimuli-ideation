@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 5,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop analogy: dose-history response curves",
+      "description": "Borrowing from ferromagnetic hysteresis, expose cells to ramped-up then ramped-down stimulus (e.g., optogenetic or chemical AP-1/FOS/JUN activation, or TPA/anisomycin) and measure target gene output and chromatin accessibility at matched doses on the up and down ramps. A non-overlapping loop (path-dependent output) indicates memory, and the loop area and the decay time after stimulus removal quantify its strength."
+    },
+    {
+      "title": "Immunological recall assay design: prime\u2013rest\u2013rechallenge with kinetic comparison",
+      "description": "Mimicking vaccine prime/boost logic, give a primary stimulus, impose a rest period of varying length, then rechallenge and compare AP-1 binding (CUT&RUN), transcription (nascent RNA-seq) and response speed or amplitude against naive cells. Faster or stronger secondary responses at AP-1 sites, with a defined decay half-life, would show memory. Controls would use dominant-negative AP-1 (A-FOS) added only during priming to test whether AP-1 is required to establish the memory."
+    },
+    {
+      "title": "Bistable switch analysis from electronic flip-flops: single-cell bimodality and positive-feedback perturbation",
+      "description": "Following the digital-memory-circuit principle that a latch needs positive feedback, use single-cell live reporters (JUN/FOS promoter-driven fluorescence) and scRNA-seq to look for bimodal, self-sustaining states after a transient pulse. Then break candidate feedback loops (e.g., JUN autoregulation via CRISPRi of the JUN promoter's AP-1 site) and test whether the persistent ON state collapses, which would show the memory is network-encoded."
+    },
+    {
+      "title": "Geological sediment-core dating: pioneer-factor footprint layering",
+      "description": "Like reading strata in sediment cores to infer past events, profile chromatin accessibility (ATAC-seq), histone marks (H3K27ac, H3K4me1) and AP-1 occupancy at several time points after stimulus removal to find 'scar' enhancers that stay open after AP-1 leaves. Compare sites where AP-1 persists with sites where only accessibility persists, and use motif and footprint analysis to tell whether AP-1 itself or downstream epigenetic marks retain the history."
+    },
+    {
+      "title": "Nuclear transplant/relay-race handoff: mitotic inheritance and AP-1 bookmarking",
+      "description": "Borrowing the baton-pass idea from relay races, ask whether the 'baton' of AP-1 is passed through cell division. Use live imaging of tagged JUN/FOS through mitosis, mitotic-chromosome CUT&RUN, and lineage tracing of sister cells after a pulse, with acute degron depletion (dTAG) of AP-1 members at different cell-cycle phases. Transmission of memory to daughter cells only when AP-1 is present at the handoff would show a bookmarking-based memory mechanism."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1085,
+  "cost_usd": 0.013632100000000001
+}

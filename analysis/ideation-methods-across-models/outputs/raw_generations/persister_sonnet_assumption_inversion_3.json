@@ -1,0 +1,45 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with sibling-pair and split-clone tracking",
+      "description": "Barcode cells, split the expanded population into replicate arms before drug, and compare which barcodes survive across arms and between sister cells. This shows whether survival is heritable and pre-existing, or stochastic and drug-induced. It also gives the memory timescale of the state."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporters, followed by retrospective fate mapping",
+      "description": "Image cells for days before and after drug using reporters for ERK or p53 dynamics, cell cycle, and apoptosis, then trace survivors back to their pre-drug history. Dynamic features such as pulsing or cycle phase can then be tested as predictors of survival. Fixed-cell profiling of the same cells can be added afterward."
+    },
+    {
+      "title": "Single-cell multiomics of the same clone, including genetic and non-nuclear variation",
+      "description": "Run joint scRNA/scATAC with single-cell DNA sequencing, which gives copy number, ecDNA and mtDNA variants, on cells before drug, during drug and after it. This tests whether small genetic or mitochondrial differences are hidden under apparent identity. It also tests whether survivors share any such difference or any state.",
+      "assumptionTested": "Genetic identity"
+    },
+    {
+      "title": "Pre-drug state capture linked to fate, using Live-seq or photoactivatable isolation",
+      "description": "Take a non-destructive RNA biopsy, or image-guided photo-marking and sorting, of individual cells before drug. Follow each cell to its fate, then train a model to predict survival from its prior state. This tests directly whether a pre-existing state exists, instead of inferring it from survivors only."
+    },
+    {
+      "title": "Microenvironment and drug-exposure heterogeneity mapping in 3D and in vivo models",
+      "description": "Use spheroids, organoids or xenografts with spatial transcriptomics, hypoxia and nutrient sensors, and mass-spectrometry imaging of drug levels. Compare survivors' positions and local drug concentration with their intrinsic state. This separates cells that are truly resistant from cells that were under-dosed or protected by neighbors or stroma."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical cells are functionally identical, so survival differences must come from rare, stable, pre-existing features rather than from dynamic or acquired ones.",
+      "Survivors are a pre-existing, discrete subpopulation (a 'persister' state) that can be identified before drug, rather than cells that stochastically enter a protective state in response to drug.",
+      "Genetic identity means no relevant genetic or mutational differences, ignoring small subclonal variants, mtDNA heterogeneity, copy-number changes, and extrachromosomal DNA that arise in culture.",
+      "Bulk or endpoint measurements (population RNA-seq, viability at 72 h) or single snapshots capture the mechanism, and survivors can be profiled after selection without losing information on how they got there.",
+      "A single dominant cell-intrinsic mechanism (one gene, pathway or transcript state) explains survival, and the cell's own molecular state is the relevant unit of analysis.",
+      "In vitro monoculture in standard conditions (uniform nutrients, oxygen, drug exposure, no stroma) reflects in vivo behavior, and the drug reaches every cell equally.",
+      "Survival is defined by a fixed viability threshold at a fixed time, so cells that arrest, die late, or later regrow are treated as the same outcome."
+    ]
+  },
+  "output_tokens": 1239,
+  "cost_usd": 0.015174800000000002
+}

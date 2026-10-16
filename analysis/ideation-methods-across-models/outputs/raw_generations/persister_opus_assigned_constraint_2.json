@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 2,
+  "constraint": "using live-cell imaging as the only readout",
+  "prompt": "Constraint: every one of your ideas must be carried out using live-cell imaging as the only readout. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Track lineages before treatment, then trace survivors back",
+      "description": "Film cells for several generations before adding the drug, keep imaging through treatment, then trace every surviving cell back through its lineage tree. Comparing how often sisters and cousins of survivors also survive shows whether survival is a heritable pre-existing state and how many generations that memory lasts, compared with a random or drug-induced event."
+    },
+    {
+      "title": "Test whether pre-drug signaling or rebound predicts survival",
+      "description": "Express multiplexed kinase translocation reporters (for example ERK, AKT and JNK KTRs) and quantify each cell's baseline pathway activity and pulse dynamics before the drug, plus how quickly signaling recovers after it. Then test whether a high baseline or a fast rebound of bypass signaling predicts which cells survive."
+    },
+    {
+      "title": "Use live reporters of a primed state to measure switching",
+      "description": "Knock fluorescent tags or MS2/PP7 tags into endogenous genes linked to rare resistant states (for example AXL, EGFR, NGFR, or loss of SOX10) and image their fluctuations over days. This gives the rate at which cells enter and leave the high-expressing state, and shows whether cells that are in or entering that state when the drug arrives are the ones that survive."
+    },
+    {
+      "title": "Check whether cell-cycle state at drug addition matters",
+      "description": "Use FUCCI and a CDK2/CDK4/6 activity sensor to record each cell's cycle phase and proliferation commitment when the drug is added. This tests whether survivors come from cells that were already in spontaneous quiescence (CDK2-low) rather than from drug-induced arrest, and tracks how and when they re-enter the cell cycle to form resistant colonies."
+    },
+    {
+      "title": "Predict survivors from label-free imaging and neighborhood context",
+      "description": "Train a model on pre-drug, label-free features (morphology, motility, nuclear texture), live dyes for mitochondrial membrane potential and ROS, and spatial neighborhood data (local density, distance to other future survivors). This shows how early survivors can be identified and whether survival depends on the cell's own state, its metabolism, or its surroundings."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1400,
+  "cost_usd": 0.036727
+}

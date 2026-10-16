@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Longitudinal ATAC-seq/CUT&RUN after transient stimulus",
+      "description": "Stimulate cells (e.g., injury, TNF, or growth factor), then profile chromatin accessibility and AP-1 (FOS/JUN) binding at multiple time points through washout and weeks later. Persistent AP-1 motif-containing open regions after signal withdrawal would indicate a retained chromatin memory."
+    },
+    {
+      "title": "Acute AP-1 degradation or dominant-negative perturbation during priming vs. recall",
+      "description": "Use degron-tagged JUN/FOS or A-FOS to remove AP-1 either only during the priming stimulus, or only during the later challenge. If memory needs AP-1 during priming (for establishment) and/or recall (for maintenance), enhancer accessibility and the faster or stronger secondary transcriptional response will be lost accordingly."
+    },
+    {
+      "title": "Prime-and-rechallenge transcriptional response assays",
+      "description": "Measure RNA-seq or nascent transcription (PRO-seq) and single-cell responses to a second stimulus after varying rest intervals in primed vs. naive cells. Link the magnitude of the response to the pre-existing AP-1 occupancy at each gene's enhancers, and map how long the memory lasts and how many cell divisions it survives."
+    },
+    {
+      "title": "Optogenetic or synthetic AP-1 activation sufficiency test",
+      "description": "Briefly induce AP-1 using optogenetic or chemically inducible FOS/JUN, with no natural stimulus. Then test whether it creates stable accessible enhancers, histone marks (H3K27ac, H3K4me1) and an altered response to later signals, including after division. This tests whether AP-1 activity alone is sufficient to establish memory."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing in vivo",
+      "description": "Use scATAC+RNA with lineage barcodes or AP-1 reporter/fate-mapping alleles in tissue such as skin wound repair, to follow descendants of previously AP-1-active cells. Compare their accessibility and function with those of AP-1-naive siblings, and test whether the memory is inherited through division and linked to AP-1 recruitment of BAF (SWI/SNF) and chromatin remodelers."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 822,
+  "cost_usd": 0.014352
+}

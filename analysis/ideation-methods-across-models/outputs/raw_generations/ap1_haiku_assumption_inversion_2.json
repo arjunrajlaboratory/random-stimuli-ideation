@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Time-windowed AP-1 degradation (dTAG/AID) to separate trigger from store",
+      "description": "Acutely degrade c-Fos or JunB with a degron during priming only, during the washout interval, or only at re-stimulation, then measure re-induction kinetics and enhancer accessibility (ATAC-seq, H3K27ac) at each window. If memory survives loss of AP-1 during washout while chromatin marks persist, the store is chromatin rather than AP-1 itself. This tests the assumption that AP-1 must persist to hold memory."
+    },
+    {
+      "title": "Live single-cell reporter tracking through divisions",
+      "description": "Knock a fluorescent reporter into an AP-1 target locus (e.g., FOSL1 or an enhancer-driven reporter) and track primed and naive cells by time-lapse microscopy across several generations after washout. Quantify whether the faster re-induction state is bimodal and whether it is inherited by daughter cells (sibling and lineage correlations). This tests population averaging and mitotic heritability."
+    },
+    {
+      "title": "Subunit-resolved occupancy and combinatorial knockouts",
+      "description": "Use CUT&Tag or ChIP for each Fos, Jun, and ATF family member at memory-associated enhancers during priming and after washout, then test single and double knockouts or knockdowns of the dominant heterodimer partners. This shows which dimer composition persists and whether compensation hides the phenotype. This tests the uniform-AP-1 and clean-knockout assumptions."
+    },
+    {
+      "title": "Cell-autonomy test with co-culture, transwell, and conditioned medium",
+      "description": "Prime one population, then co-culture it with naive, differently labeled cells, separate them with a transwell, or transfer conditioned medium, and then measure whether the naive cells acquire faster re-induction. Repeat the experiment in an in vivo or transplant setting to check generalization. If the naive cells acquire the memory, the memory is not cell-intrinsic. This tests the cell-autonomy and context-generalization assumptions."
+    },
+    {
+      "title": "Priming-history encoding matrix with mutual information",
+      "description": "Systematically vary priming dose, pulse duration, pulse frequency, and interval, and measure re-stimulation response at multiple decay timepoints. Compute the mutual information between priming history and the response to determine how much information the AP-1 system stores and for how long. This tests the single-stimulus, single-timescale, and fixed-definition assumptions."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Question-level: AP-1 is a single, uniform entity. In reality it is a family of Fos, Jun, and ATF dimers whose composition varies by cell type and stimulus.",
+      "Question-level: 'memory' is a defined phenotype, usually faster or stronger re-induction after a washout. The question does not say whether memory means a transcriptional readout, a chromatin state, or a behavioral output.",
+      "Question-level: AP-1 is the persistent store of memory, so its presence or occupancy must last through the memory interval. The alternative is that AP-1 is only the trigger and a downstream chromatin or feedback state holds the memory.",
+      "Question-level: the memory is cell-intrinsic and is not carried by secreted factors, neighboring cells, or tissue context.",
+      "Question-level: the memory is a population-average property. Individual cells are assumed to share the same history-dependent state rather than showing bimodal or heterogeneous states.",
+      "Question-level: the memory is mitotically heritable, or at least persists through cell divisions, if it is to count as cellular memory.",
+      "Field-usual: causality is inferred from correlation, such as ChIP-seq or ATAC-seq signal at a single timepoint, rather than from testing necessity and sufficiency at defined windows.",
+      "Field-usual: genetic loss-of-function is assumed to remove AP-1 function cleanly, ignoring redundancy among family members and compensation by ATF3, JDP2, or other bZIP factors.",
+      "Field-usual: a single canonical priming stimulus and a single timescale are representative. The field rarely maps how dose, duration, interval, and decay of the priming signal shape the memory.",
+      "Field-usual: findings from immortalized cell lines or a single in vitro context generalize to primary or in vivo cells."
+    ]
+  },
+  "output_tokens": 4532,
+  "cost_usd": 0.00241039
+}

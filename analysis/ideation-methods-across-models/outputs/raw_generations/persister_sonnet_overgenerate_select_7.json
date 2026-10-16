@@ -1,0 +1,61 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with sister-cell splitting",
+      "description": "Label cells with expressed lineage barcodes, split each population before drug, and compare survival and transcriptomes of sister clones to quantify heritability of persistence and recover pre-treatment states of future survivors via scRNA-seq of the untreated sibling arm."
+    },
+    {
+      "title": "Fluctuation test plus switching-rate modeling",
+      "description": "Run Luria-Delbr\u00fcck-style assays on many small clonal expansions, then fit stochastic models to separate pre-existing, rapidly switching states from drug-induced adaptation and estimate state switching rates and memory duration."
+    },
+    {
+      "title": "Live-cell imaging with retrospective fate mapping",
+      "description": "Time-lapse image cells carrying reporters (cell cycle, stress response, mitochondrial potential) for days before and during drug, then trace survivors back to identify which pre-drug features predicted survival."
+    },
+    {
+      "title": "Single-cell multiome of persisters with epigenetic perturbation",
+      "description": "Profile chromatin accessibility and RNA jointly in untreated cells and persisters to identify reversible regulatory states, then test causality with CRISPRi/CRISPRa or epigenetic inhibitors of the top candidate regulators."
+    },
+    {
+      "title": "Pre-sorting by metabolic and mitochondrial state",
+      "description": "Use FACS or FLIM to isolate cells by mitochondrial potential, NADH state, or lipid peroxidation susceptibility before drug exposure, then compare their survival to test whether metabolic heterogeneity causally drives tolerance."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., ClonMapper) to test whether persisters are pre-existing and heritable vs stochastic",
+      "Luria-Delbr\u00fcck fluctuation test on persister frequency across clonal expansions",
+      "Single-cell RNA-seq paired with barcodes, comparing sister cells pre-treatment to post-treatment fates",
+      "Live-cell time-lapse imaging with fluorescent reporters tracking cell fate before and during drug",
+      "Single-cell multiome (ATAC + RNA) to find pre-existing chromatin states in persisters",
+      "Metabolic imaging (FLIM of NADH) to sort cells by metabolic state before drug",
+      "Mitochondrial content/membrane potential sorting before treatment followed by drug challenge",
+      "Cell-cycle state / slow-cycling history tracking via dye dilution or FUCCI",
+      "Mitochondrial DNA variant lineage tracing as a natural barcode of inheritance",
+      "CRISPRi/CRISPRa screens targeted at persister-enriched genes and epigenetic regulators",
+      "Proteomic/phosphoproteomic single-cell mass cytometry (CyTOF) of drug-signaling network states",
+      "Spatial transcriptomics in 3D spheroids/xenografts to test microenvironmental positioning effects",
+      "Measuring drug uptake/efflux heterogeneity with fluorescent drug analogs",
+      "Single-cell DNA-seq to rule in or out rare genetic/copy number variants",
+      "Histone modification profiling (CUT&Tag) of persisters for reversible epigenetic marks",
+      "Time-resolved sister-cell correlation analysis to estimate heritability of fate and memory duration",
+      "Stress-response reporter (e.g., HSF1, NRF2, integrated stress response) sorting",
+      "Microfluidic mother-machine style long-term tracking of lineages through drug-on/off cycles",
+      "Mathematical modeling of switching rates fitted to fluctuation data to distinguish stochastic vs induced switching",
+      "Lipid peroxidation/ferroptosis sensitivity profiling in persisters",
+      "Transient DNA damage/replication stress burden measured by 53BP1 foci before treatment",
+      "Cell-size and biophysical (mass, density) measurements with suspended microchannel resonators",
+      "Pulse-chase drug withdrawal to map reversibility and re-sensitization kinetics",
+      "Translation rate and ribosome profiling heterogeneity"
+    ]
+  },
+  "output_tokens": 1410,
+  "cost_usd": 0.016891200000000002
+}

@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Protein-versus-chromatin dissociation with timed degron removal",
+      "description": "Use an auxin- or dTAG-inducible degron on JUN or FOS to remove AP-1 protein only during the quiescent interval after a priming pulse, then re-stimulate. If re-response is retained, memory is carried by chromatin state rather than by persisting AP-1 protein; if lost, the protein itself is required during the rest period."
+    },
+    {
+      "title": "Synthetic tethering of AP-1 to a neutral locus",
+      "description": "Fuse a bona fide AP-1 activation domain or the bZIP domain to dCas9 or a zinc-finger array and tether it transiently to a silent reporter locus, with no endogenous signal. Measure whether chromatin opening, reporter expression, and faster re-induction persist after tether removal, which tests whether AP-1 binding alone is sufficient to write memory."
+    },
+    {
+      "title": "Division-coupled inheritance of memory in sorted daughter cells",
+      "description": "Track HaloTag-labeled JUN or FOS with live imaging through one or more cell divisions after a priming stimulus, then sort daughter cells by nuclear AP-1 level and challenge them with re-stimulation. This tests whether memory is inherited through mitosis via bookmarking or re-established de novo by each daughter."
+    },
+    {
+      "title": "Single-cell information encoding of priming dose and duration",
+      "description": "Vary the intensity and duration of a priming stimulus across a grid, then measure both the nuclear AP-1 dynamics during priming and the re-response in the same single cells, using barcoded or live reporters. Mutual information between priming history and re-response would quantify whether AP-1 encodes memory in its pulse features, such as amplitude, duration, or frequency."
+    },
+    {
+      "title": "Targeted epigenome editing at memorized AP-1 enhancers",
+      "description": "Use dCas9 fused to KRAB, DNMT3A, or TET1 catalytic domains to erase or write the chromatin marks at a few individual AP-1-bound enhancers identified as memory-associated, while leaving AP-1 binding itself intact. If editing these specific enhancers abolishes or creates memory without changing AP-1 occupancy, the mark rather than the factor is the causal memory element."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq at AP-1 sites over a time course after stimulus washout, to see whether chromatin opening persists",
+      "ChIP-seq or CUT&RUN for FOS/JUN family members at early and late timepoints, to track binding persistence",
+      "Knockout or knockdown of FOS/JUN and comparison of re-stimulation responses with wild-type cells",
+      "Secondary-response assays: measure faster or stronger re-induction of AP-1 target genes after a rest period",
+      "Single-cell RNA-seq of stimulated and rested populations to find memory-associated subpopulations",
+      "Live-cell AP-1 activity reporters (e.g., fluorescent sensors) to track activity dynamics over days",
+      "Histone mark profiling (H3K27ac, H3K4me1) at AP-1 enhancers before, during, and after stimulation",
+      "Pharmacological AP-1 inhibition (e.g., T-5224) applied at different windows to test necessity during the stimulus or the rest period",
+      "In vivo lineage tracing with Fos-based reporters (e.g., FosTRAP) to label previously activated cells",
+      "Motif enrichment and footprinting analysis of AP-1 sites in memory-associated enhancers"
+    ]
+  },
+  "output_tokens": 2815,
+  "cost_usd": 0.00155058
+}

@@ -1,0 +1,46 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 3,
+  "ideas": [
+    {
+      "title": "Rule genetics in or out before invoking plasticity",
+      "description": "Run single-cell whole-genome sequencing plus ecDNA-sensitive assays (FISH, Circle-seq) on matched pre-treatment, survivor, and dying populations from the same isogenic culture, specifically asking whether survivors are enriched for pre-existing CNVs, ecDNA copy number, or subclonal variants. This directly tests the 'genetically identical' premise that the entire non-genetic-resistance literature rests on, and establishes what fraction of survival needs a non-genetic explanation at all."
+    },
+    {
+      "title": "Measure the drug, not just the cell",
+      "description": "Quantify intracellular drug concentration and target engagement per cell \u2014 using fluorescent or clickable drug analogs, mass spectrometry imaging, or a CETSA/NanoBRET-style occupancy reporter \u2014 jointly with survival outcome in the same cells. The field's default readout (RNA) may be measuring a correlate while the actual determinant is pharmacokinetic: efflux-pump activity, lysosomal sequestration, or uptake variation producing a sub-lethal exposure in a few cells."
+    },
+    {
+      "title": "Neighborhood-controlled survival mapping",
+      "description": "Use micropatterned islands, defined co-culture ratios, and conditioned-medium swaps to systematically vary each cell's local density and neighbor identity while holding genotype constant, then score survival as a function of neighborhood with live imaging. If survival probability depends on measured local context more than on any cell-intrinsic marker, the standard cell-autonomous framing \u2014 and the search for a 'primed cell' signature \u2014 is misdirected."
+    },
+    {
+      "title": "Retrospective live imaging that converts snapshots into trajectories",
+      "description": "Continuously image cells carrying a reporter for the candidate primed state (e.g., a knock-in of a resistance-associated gene) from before drug addition through outcome, then retrieve individual cells for sequencing via in situ transcriptomics or Live-seq. This reveals whether the state pre-exists, how fast it fluctuates relative to the treatment window, and whether survivors were already in the state at t=0 or entered it stochastically afterward \u2014 none of which a destructive snapshot can distinguish."
+    },
+    {
+      "title": "Sufficiency test by synthetic state induction",
+      "description": "Use inducible CRISPRa/CRISPRi or degron systems to impose the candidate survivor state in a tunable fraction of cells before treatment, and ask whether the surviving fraction shifts quantitatively as predicted. This converts a correlative signature into a causal claim, and a failure to shift survival would be as informative as a success, indicating the signature is a consequence or bystander rather than the driver."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "That survivors are genetically identical to the cells that die \u2014 that an isogenic line or clonal tumor has no subclonal point mutations, copy-number changes, or extrachromosomal DNA (ecDNA) amplifications available for selection.",
+      "That the causal variable is a cell-intrinsic molecular state, and that the transcriptome (scRNA-seq) is the right layer to read it \u2014 rather than protein/phospho levels, metabolic state, or simply how much drug actually entered each cell.",
+      "That survival is cell-autonomous: fate is set by a cell's own internal state, not by its neighbors, local density, matrix contact, or paracrine context.",
+      "That the determining state pre-exists the drug and is stable enough to be inferred from a destructive endpoint snapshot, rather than fluctuating on a timescale comparable to treatment or arising stochastically after drug addition.",
+      "That correlation implies causation: a signature enriched in survivors is the reason they survived, rather than a consequence of surviving, a bystander, or a proxy for slow cycling.",
+      "That 'survival' is one phenomenon with a binary readout at one endpoint \u2014 collapsing dormancy, slow cycling, drug-tolerant proliferation, senescence escape, and mere differences in death timing into a single category.",
+      "That the rare fraction is fixed and reproducible, so bulk enrichment and clonal outgrowth faithfully represent the original survivors rather than a secondary round of selection.",
+      "That saturating drug on 2D plastic for days-to-weeks models residual disease in a patient.",
+      "That death is the relevant alternative fate, and that cells scored as dead were ever capable of surviving at all."
+    ]
+  },
+  "output_tokens": 5183,
+  "cost_usd": 0.1881981
+}

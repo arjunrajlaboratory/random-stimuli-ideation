@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Retrospective twin capture: sequence the cell that was going to survive",
+      "description": "Give every cell a heritable barcode that is both transcribed and readable by hybridization capture, split the population into a treated arm and an untreated arm, then use the barcodes of the survivors to go back and physically pull out their untreated clonal twins for single-cell RNA, ATAC, and imaging. This measures the pre-treatment state that caused survival rather than the post-treatment state that merely accompanies it."
+    },
+    {
+      "title": "Memory half-life by serial clone splitting",
+      "description": "Isolate single survivors, expand them, and repeatedly split the progeny into drug-challenge and continued-growth arms at defined numbers of divisions, fitting the decay of enriched survival to extract a switching rate and memory half-life. The headline number is a timescale, which cleanly separates a stably inherited epigenetic state from a transient fluctuation that happens to be sampled at the moment of drug addition."
+    },
+    {
+      "title": "Single-cell apoptotic priming instead of single-cell signaling",
+      "description": "Combine single-cell BH3 profiling or live reporters of mitochondrial outer membrane permeabilization with time-lapse tracking of death timing across the whole treated population, asking whether survivors differ in their death execution threshold rather than in drug-pathway signaling. The surprise this tests is that persistence is a property of the apoptotic machinery's variability, not of target-pathway rewiring."
+    },
+    {
+      "title": "Screening for the knob that sets the fraction, not the mean",
+      "description": "Run pooled CRISPR screens scored on the size and switching rate of the primed subpopulation, read out by barcode diversity and clone-size distributions of survivors, rather than on bulk viability. This finds regulators that change how many cells are primed while leaving average drug sensitivity untouched, which bulk screens systematically miss."
+    },
+    {
+      "title": "Context at the moment of exposure: cell cycle, neighbors, and actual intracellular drug dose",
+      "description": "Image cell cycle phase, local cell density, and intracellular drug concentration (fluorescent analog or mass spectrometry imaging) for every cell at the instant of treatment, then track each cell to its fate. This directly tests whether survival is explained by extrinsic position and real delivered dose before invoking any intrinsic transcriptional state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2357,
+  "cost_usd": 0.0783409
+}

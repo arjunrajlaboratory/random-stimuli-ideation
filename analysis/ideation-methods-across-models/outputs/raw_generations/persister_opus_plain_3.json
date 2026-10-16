@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 3,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Twin-population lineage barcoding to retrospectively profile future survivors",
+      "description": "Introduce expressed heritable barcodes into the cell line, split the population into treated and untreated halves, and identify the barcodes enriched after drug treatment. Then profile the matched untreated sibling cells carrying those same barcodes to directly measure the pre-existing molecular state that predicted survival, rather than inferring it from survivors already altered by the drug."
+    },
+    {
+      "title": "Live-cell imaging of signaling and cell-cycle dynamics across the treatment window",
+      "description": "Use fluorescent reporters for target-pathway activity, cell-cycle phase, apoptotic commitment, and stress responses, and track individual cells continuously from before dosing through survival or death. This yields each survivor's full dynamic history, distinguishing cells that never engaged the drug target from those that engaged it but failed to commit to death."
+    },
+    {
+      "title": "Single-cell transcriptomic time course of persistence and regrowth",
+      "description": "Profile the population at closely spaced timepoints spanning naive, early drug exposure, deep persistence, and regrowth, and compare the trajectories. This tests whether survivors enter one convergent tolerant program or several distinct ones, and whether the surviving state reverts to the naive distribution after drug withdrawal."
+    },
+    {
+      "title": "Chromatin accessibility mapping plus epigenetic modifier perturbation",
+      "description": "Perform single-cell ATAC-seq on naive, persister, and regrown cells to find regulatory regions that are already open in the rare subpopulation before treatment. Then test causality by knocking down or inhibiting the chromatin modifiers maintaining those regions and asking whether the frequency of survivors drops."
+    },
+    {
+      "title": "Schedule and dose manipulation to separate reversible tolerance from fixed resistance",
+      "description": "Systematically vary dose, treatment duration, and drug-holiday length, then re-challenge the expanded survivors and quantify how often they survive again. If survival frequency resets toward the parental rate after a holiday, the state is reversible and non-genetic; if it is retained, genetic or stably heritable mechanisms dominate, which can be confirmed by sequencing resistant clones."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1419,
+  "cost_usd": 0.056737899999999994
+}

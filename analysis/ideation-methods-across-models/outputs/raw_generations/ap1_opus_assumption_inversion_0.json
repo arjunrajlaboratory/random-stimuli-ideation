@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 3,
+  "ideas": [
+    {
+      "title": "Phase-resolved degron dissection of write, hold, and read",
+      "description": "Tag endogenous c-Jun/c-Fos (and a second redundant family member) with dTAG or auxin degrons and deplete AP-1 acutely in non-overlapping windows: only during the priming stimulus, only during the memory interval with no stimulus present, and only at the moment of restimulation. If memory survives depletion during the interval but not during priming, AP-1 writes but does not store the trace, which directly separates causality from maintenance and avoids the confounds of constitutive knockouts."
+    },
+    {
+      "title": "Sister-cell split assay with heritable barcodes",
+      "description": "Lineage-barcode cells (ClonMapper/Watermelon), prime the population, then physically split sister cells after one division and challenge one sister while profiling the other, repeating across increasing numbers of divisions. This distinguishes true per-cell heritable memory from selection of a pre-existing responsive subpopulation, and quantifies memory as a probability of concordance between relatives rather than a bulk average."
+    },
+    {
+      "title": "Transfer-function mapping to expose latent (invisible) memory",
+      "description": "Instead of asking whether a resting AP-1 state persists, measure the full dose-response and kinetic transfer function to a second stimulus across a matrix of priming doses and rest intervals, using a live AP-1 (TRE) reporter plus a target-gene reporter. Memory then appears as a shift in threshold, amplitude, or latency even when baseline chromatin and transcriptome have returned to naive, capturing primed states that steady-state assays declare erased."
+    },
+    {
+      "title": "Dimer-composition barcoding of the AP-1 state",
+      "description": "Use subunit-resolved CUT&RUN or CUT&Tag for Fos, FosB, Fra-1, Fra-2, JunB, JunD, c-Jun and ATF3 at matched timepoints, combined with split-reporter or proximity-ligation dimer sensors and rapid-exchange (FRAP / SNAP-tag pulse-chase) measurements at the same loci. The test is whether the memory is encoded as a stable swap in dimer identity and residence time at shared sites rather than as a change in total AP-1 output."
+    },
+    {
+      "title": "Cell-versus-matrix swap to localize where the memory is stored",
+      "description": "Prime cells on a deformable or decellularizable substrate, then cross-transplant: primed cells onto naive-cell-derived matrix, naive cells onto primed-cell-derived matrix, plus conditioned-medium swaps and serial replating onto fresh stiffness-matched surfaces. If recall follows the matrix rather than the cell, AP-1 is a mechanochemical relay re-reading an extracellular trace, and the intracellular 'memory' is reconstructed each time rather than stored."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Causality: that AP-1 stores the memory rather than merely reports it. Persistent AP-1 binding/activity after a stimulus is read as the trace itself, when the trace could be held in chromatin modifications, a signaling feedback loop, or the microenvironment, with AP-1 continually re-reading it.",
+      "Establishment equals maintenance equals recall: that the AP-1 activity that writes a memory is the same activity that holds it and reads it out, so constitutive knockouts or dominant-negatives (A-Fos) can distinguish these phases. They cannot.",
+      "Population-average sufficiency: that persistence of an AP-1 signature in bulk ATAC/RNA/ChIP reflects memory inside individual cells, rather than selection, drift, or turnover of subpopulations; and that memory is deterministic rather than probabilistic across cells.",
+      "Manifest state: that a memory must appear as a persistent difference in the resting state (open chromatin, bound factor, expressed gene), ignoring latent/primed memory that exists only as an altered input-output transfer function revealed by a second stimulus.",
+      "Monolithic AP-1: that 'AP-1' is one entity, when it is a combinatorial family of Fos/Jun/ATF/Maf dimers whose composition and exchange kinetics, not aggregate activity, may be the stored variable.",
+      "Motif equals binding equals function: that AP-1 motif enrichment in accessible regions implies AP-1 occupancy, and that occupancy implies a functional, memory-relevant regulatory event at a linked gene.",
+      "Cell-intrinsic storage: that the memory travels with the cell, rather than being stored extracellularly (remodeled ECM, stiffness, geometry, autocrine factors, neighbors) with AP-1 as a relay.",
+      "Transcription-centric encoding: that memory is in gene regulation, not in protein-level, cytoskeletal, metabolic, or mechanical states that AP-1 both responds to and reinforces.",
+      "Timescale and monotonic decay: that memory operates on hours-to-days timescales accessible to standard experiments and decays smoothly, rather than being diluted discretely at mitosis or persisting across many divisions.",
+      "Specificity of perturbation: that AP-1 inhibition is clean, when A-Fos, JNK inhibitors, and Fos/Jun knockouts have broad effects on proliferation, survival, and chromatin that confound any 'memory lost' phenotype."
+    ]
+  },
+  "output_tokens": 5598,
+  "cost_usd": 0.2260404
+}

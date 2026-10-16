@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Acute AP-1 degradation after a priming pulse: Induce a transient stimulus, then rapidly degrade FOS or JUN with an inducible degron (e.g., dTAG or auxin-inducible) at defined times after washout. Track chromatin accessibility (ATAC-seq), enhancer marks (H3K27ac), and expression of putative memory genes over days; persistence after AP-1 loss would support a self-sustaining memory, while rapid decay would argue AP-1 is only a transient readout.\n2. Time-course of chromatin persistence at AP-1 sites with motif-mutant controls: After a single pulse with washout, profile CUT&RUN for AP-1 and ATAC-seq/H3K4me1/H3K27ac at multiple timepoints out to weeks. Compare enhancers with intact AP-1 motifs against CRISPR-edited motif-mutant versions of the same elements to test whether AP-1 binding is required for the persistent chromatin state.\n3. Priming-and-reinduction assay for transcriptional memory: Prime cells with a sub-threshold stimulus, wait variable intervals, then re-stimulate and measure the speed and magnitude of FOS/JUN induction and downstream target expression relative to naive cells. Repeat in cells carrying AP-1 binding-site mutations or lacking a chromatin-remodeling cofactor to see whether faster or stronger reinduction depends on AP-1 itself.\n4. Live reporter lineage tracing of AP-1 activity across divisions: Use a destabilized-fluorescent AP-1 target reporter combined with a stable lineage barcode or histone-label to follow individual cells through several divisions after stimulation. Sort subpopulations by heritable reporter state and compare their chromatin landscapes and response to a second stimulus, testing whether AP-1 activity states are inherited through cell division.\n5. Stabilized AP-1 variant sufficiency and ensemble reactivation test: Express a degradation-resistant or long-lived AP-1 isoform (e.g., a \u0394FosB-like stabilized FOS) and test whether it extends the duration of induced chromatin and behavioral or functional changes beyond wild-type lifetimes. Pair this with activity-dependent ensemble tagging and optogenetic or chemogenetic reactivation to determine whether reactivating the tagged, AP-1-positive population is necessary and sufficient to recall the stored state.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-molecule residence-time tracking of JUN/FOS after a pulse",
+      "description": "Use HaloTag-labeled JUN or FOS in live cells with single-molecule tracking to measure chromatin dwell-time distributions before, during, and for days after a stimulus. A persistent long-dwell bound fraction that outlasts the pulse, without any change in total protein level, would suggest memory is stored as altered factor kinetics rather than as a new steady-state binding pattern."
+    },
+    {
+      "title": "Phosphosite knock-in swaps to test whether post-translational state carries memory",
+      "description": "Knock in phosphomimetic and phospho-dead alleles at key JUN and FOS regulatory sites (for example JUN Ser63/Ser73), then use phospho-specific mass spectrometry and washout time courses to track how long each modification persists. If the memory-related transcriptional response tracks the phospho-state rather than AP-1 protein abundance or occupancy, the modification itself is the stored variable."
+    },
+    {
+      "title": "Pulse-chase separation of carryover from chromatin memory",
+      "description": "Combine SLAM-seq or 4sU pulse-chase labeling with transcription inhibition (such as flavopiridol or triptolide) applied at defined washout times, and then re-stimulate. Persistence that survives transcriptional shutdown would point to carryover of mRNA or protein, while loss of memory under shutdown would indicate that new transcription is needed to maintain the state."
+    },
+    {
+      "title": "Kinase-route coding test with orthogonal upstream stimuli",
+      "description": "Prime cells with equivalent AP-1 induction achieved through different upstream routes (ERK, JNK, or p38, using pathway-selective stimuli or inhibitors) and then cross-challenge with each route. If reinduction is pathway-specific despite similar AP-1 levels, the memory encodes the signaling route, not the transcription factor level, which would make AP-1 a readout rather than the storage element."
+    },
+    {
+      "title": "Coactivator-tethering rescue in a JUN-null background",
+      "description": "Replace endogenous JUN with variants that have matched DNA-binding but differ in their ability to recruit BRD4 or p300/CBP, and measure how long induced enhancer acetylation and target expression persist after washout. If memory duration tracks coactivator recruitment rather than AP-1 occupancy, the persistence mechanism depends on the coactivator feedback loop rather than on the AP-1 complex itself."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2625,
+  "cost_usd": 0.0017016499999999999
+}

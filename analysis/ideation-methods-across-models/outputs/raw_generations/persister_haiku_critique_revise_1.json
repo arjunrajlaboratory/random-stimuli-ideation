@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "critique_revise",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Single-cell lineage tracing with barcoded clones: Introduce heritable random DNA barcodes (e.g., CRISPR-based or lentiviral barcodes) into a clonal population, treat with the targeted drug, and follow barcode frequencies over time and in persister-enriched fractions. This reveals whether survival is pre-determined in a subset of clones (pre-existing tolerance) or arises stochastically/induced during treatment, and how many independent lineages contribute to the surviving population.\n2. Pre-treatment single-cell profiling linked to fate: Perform single-cell RNA-seq and/or ATAC-seq on untreated cells, then use live-cell reporters or sorting to isolate cells that will survive versus die after drug exposure, and compare their baseline transcriptional and chromatin states. Identifying a predictive signature (e.g., stemness, drug-efflux, or cell-cycle markers) would show whether survival is encoded before treatment.\n3. Time-resolved live-cell imaging of drug response: Use fluorescent reporters for the drug target pathway (such as ERK activity or cell-cycle sensors) together with longitudinal microscopy to track individual cells from drug addition through death or survival. This captures the kinetics of signaling changes, whether survivors show delayed or incomplete pathway suppression, and whether they divide during treatment.\n4. Pooled CRISPR screens for persistence modifiers: Run genome-wide CRISPR knockout or CRISPRa/i screens under sustained drug exposure and compare guide representation in surviving cells versus controls at multiple timepoints. Hits that enrich in survivors point to genes whose loss or gain enables tolerance, and can be validated for causal roles in persistence.\n5. Epigenetic and chromatin perturbation to test memory of survival: Measure chromatin accessibility, histone marks, and DNA methylation in persister cells sorted after drug withdrawal versus drug-naive cells, then perturb candidate epigenetic regulators (e.g., KDM5 family, DNMTs, or BET proteins) to see if persistence is reversed. Comparing drug-naive, persister, and drug-removed-regrown populations separates transient adaptive states from stable, heritable changes.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Dynamic BH3 profiling of apoptotic priming at baseline",
+      "description": "Before drug exposure, measure each population's mitochondrial apoptotic priming by dynamic BH3 profiling with peptides such as BIM and BAD, then sort on priming level and treat. If survivors sit at the low-priming end, survival reflects how far cells are from the mitochondrial death threshold rather than a specific drug-resistance pathway."
+    },
+    {
+      "title": "Intracellular drug accumulation and target engagement in individual survivors",
+      "description": "Use a fluorescent or clickable analog of the drug, or LC-MS on FACS-sorted cells, to measure intracellular drug levels, and use NanoBRET or CETSA to measure target occupancy in survivors versus dying cells. This tests whether persisters simply retain less effective drug (through efflux, lysosomal sequestration, or uptake differences) before any signaling rewiring occurs."
+    },
+    {
+      "title": "Mitochondrial DNA heteroplasmy as a natural lineage barcode",
+      "description": "Use single-cell mtDNA sequencing (for example mtscATAC-seq or long-read mtDNA profiling) to read endogenous mtDNA variants as heritable clone markers in a population that is treated and allowed to regrow. Comparing heteroplasmy frequencies in survivors with baseline reveals whether specific mitochondrial genotypes, which change oxidative metabolism, are enriched without any engineered barcodes."
+    },
+    {
+      "title": "Paracrine rescue via conditioned media and extracellular vesicles",
+      "description": "Collect conditioned medium and extracellular vesicles from sorted persisters, fractionate them, and add each fraction to drug-naive cells under treatment to see whether survival can be transferred to neighbors. Transwell co-cultures with sorted survivors can then test whether the protection is secreted and dose-dependent."
+    },
+    {
+      "title": "Collateral-sensitivity fingerprinting of survivors across a drug panel",
+      "description": "Expose drug-tolerant survivors and naive controls to a panel of 100 or more mechanistically diverse compounds and build a drug-response fingerprint for each. Compounds that kill survivors but spare the parental population reveal exploitable collateral vulnerabilities, and the pattern itself shows whether tolerance is a broad state or a narrow, drug-specific adaptation."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2206,
+  "cost_usd": 0.00148055
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "future_retrospective",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Acute AP-1 degradation after priming separates writing from maintaining memory",
+      "description": "Tag endogenous FOS/JUN family members with degron systems and deplete them only after a priming stimulus has resolved, then re-stimulate. If primed accessibility and faster re-induction persist without AP-1 present during the interval, AP-1 writes the memory but does not store it."
+    },
+    {
+      "title": "Lineage-barcoded clonal tracking of AP-1 state heritability",
+      "description": "Combine clonal barcoding with paired single-cell ATAC and RNA readouts to quantify how strongly AP-1 motif accessibility and target expression are shared among sibling cells across many divisions. The decay of within-clone similarity over generations gives a direct half-life for the putative memory."
+    },
+    {
+      "title": "Mitotic bookmarking imaging of AP-1 through division",
+      "description": "Live-image endogenously tagged AP-1 subunits with single-molecule residence-time measurement through mitosis, paired with mitotic-chromosome ATAC. Determine whether a subset of sites retains bound factor or open chromatin through condensation, which is the physical requirement for passing the state to daughters."
+    },
+    {
+      "title": "Motif-resolution epigenome editing at primed AP-1 sites",
+      "description": "Use targeted editing or CRISPRi tiling to disrupt individual AP-1 motifs within primed enhancers without touching the factor itself, then test the second-stimulus response. This distinguishes site-specific memory elements from a global AP-1 dosage effect."
+    },
+    {
+      "title": "Dose-and-interval mapping of memory decay in single cells",
+      "description": "Systematically vary stimulus strength, duration, and the gap before re-stimulation, reading out per-cell response amplitude and AP-1 site accessibility. Fitting the resulting surface tests whether the system behaves like a bistable switch, a slowly decaying analog trace, or simple residual protein."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1690,
+  "cost_usd": 0.0684773
+}

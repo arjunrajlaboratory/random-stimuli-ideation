@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 1,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Black-box flight recorder: molecular history of the survivors",
+      "description": "Borrowing from aviation crash investigation, where the flight recorder lets you read out the state of the plane before the event, engineer cells with a continuously writing CRISPR base-editing/prime-editing recorder coupled to promoters of candidate resistance pathways (e.g., AXL, NGFR, stress/ER programs) plus a static lineage barcode. After drug selection, sequence only the survivors and decode whether their recorders show pathway activity minutes-to-days before treatment, distinguishing pre-existing priming from post-treatment induction."
+    },
+    {
+      "title": "Co-twin control design: split-sister transcriptomics",
+      "description": "Adapt the epidemiological co-twin study, in which one twin is exposed and the genetically identical other serves as the unexposed control, by splitting each cell's immediate progeny (micromanipulation or an early-passage barcoded clone split) so that one half is drug-treated while the matched half is profiled untreated by scRNA/ATAC-seq. Correlating each twin-pair's pre-treatment molecular state with its partner's survival directly measures how much of survival is predictable from the heritable state, and for how many divisions that memory persists."
+    },
+    {
+      "title": "Critical-slowing-down early-warning signals from live imaging",
+      "description": "Use the climate/ecology tipping-point framework, where rising variance and autocorrelation in fluctuations precede a state transition, by long-term live-cell imaging of endogenous reporters (MAPK/ERK, stress, cell-cycle, mitochondrial potential) in thousands of cells before and during drug exposure. Compute per-cell fluctuation statistics (variance, autocorrelation time, dwell-time distributions) and test whether survivors are distinguished not by mean expression but by slow, large-amplitude excursions indicating proximity to an alternative stable state."
+    },
+    {
+      "title": "Weakest-link fracture statistics to separate rare defects from stochastic nucleation",
+      "description": "Apply materials-fatigue reasoning, where Weibull weakest-link statistics distinguish failure from pre-existing flaws versus random nucleation, by measuring survivor frequency as a function of population size, clone size, drug dose, and exposure duration, and fitting the resulting hazard functions. Pair this with a Luria\u2013Delbr\u00fcck-style fluctuation test across many parallel expansions of the same clone: large between-culture variance implies heritable, early-arising 'flaws,' while Poisson-like variance implies transient, independently nucleated escape events."
+    },
+    {
+      "title": "Microclimate refugia mapping of the physical and chemical neighborhood",
+      "description": "Treat survival like species persistence in ecological refugia, where survivors mark sheltered microhabitats rather than intrinsically superior individuals, by mapping each survivor's local context at the time of treatment: local cell density and neighbor identity from imaging, intracellular drug concentration via a fluorescent drug analog or MALDI mass-spectrometry imaging, and local oxygen/nutrient/matrix stiffness readouts. Mixed-effects modeling of survival against niche covariates versus cell-intrinsic expression quantifies how much of the 'rare survivor' phenotype is actually a rare microenvironment, testable by transplanting survivors into uniform conditions and re-challenging."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2907,
+  "cost_usd": 0.10694120000000001
+}

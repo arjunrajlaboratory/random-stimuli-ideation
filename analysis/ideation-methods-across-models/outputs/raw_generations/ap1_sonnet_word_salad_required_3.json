@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient stimulus with long-term chromatin accessibility tracking (ATAC-seq time course)",
+      "description": "Expose cells to a brief stimulus (e.g., TPA, growth factor, or injury), then profile ATAC-seq and AP-1 (FOS/JUN) CUT&RUN at intervals from hours to weeks after the stimulus is removed. Like patination, a mark left on a stone after the original process ends, persistence of AP-1-dependent open sites after AP-1 binding decays would indicate memory. Compare the sites with those of naive cells."
+    },
+    {
+      "title": "Acute AP-1 degradation to separate initiation from maintenance",
+      "description": "Use a degron (dTAG/AID) on FOS or JUN, or a dominant-negative such as A-FOS, and remove AP-1 at different times after the stimulus: before, during, and long after. If accessibility and the faster re-induction of target genes persist after AP-1 is gone, AP-1 is needed only to write the memory. If they collapse, AP-1 is needed to maintain it."
+    },
+    {
+      "title": "Re-stimulation challenge: primed vs. naive transcriptional response",
+      "description": "Give two pulses of stimulus separated by variable rest intervals and measure nascent RNA (PRO-seq or scRNA-seq) of AP-1 target genes after the second pulse. Memory predicts faster or stronger induction in primed cells, with a decay time that can be fitted to a model. Test whether this priming requires AP-1 by degrading it only during the first pulse."
+    },
+    {
+      "title": "Single-cell multiome and lineage tracing of memory inheritance through division",
+      "description": "Run paired scATAC/scRNA-seq on sister cells after live-imaging AP-1 reporter activity or barcoded lineage tracing. This tests whether AP-1-opened chromatin states are inherited by daughter cells in a clonal pattern, and whether they persist across several divisions without ongoing AP-1 activity. The analysis would compare within-clone and between-clone similarity of chromatin state and response."
+    },
+    {
+      "title": "Causal sufficiency tests with synthetic AP-1 recruitment and histone-mark profiling",
+      "description": "Transiently recruit AP-1 (optogenetic or dCas9-tethered FOS/JUN) to a specific locus or reporter and test whether accessibility, H3K27ac and the response to a later stimulus persist after recruitment ends. Profile cooperating factors and chromatin remodelers (BAF, p300) at the site to see which are needed for persistence. This tests whether AP-1 is sufficient to create a heritable state, not just correlated with one."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 931,
+  "cost_usd": 0.014685499999999999
+}

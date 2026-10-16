@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 2,
+  "parallel": {
+    "field": "Chemical engineering (heterogeneous catalysis)",
+    "problem": "Whether a catalyst surface keeps a record of past reaction conditions, so that its activity depends on its history and not just its current gas or temperature environment.",
+    "how_studied": "Experimentalists switch feed composition or temperature up and down and measure hysteresis loops in conversion and selectivity. They use operando spectroscopy (DRIFTS, X-ray absorption) and temperature-programmed desorption to check whether adsorbate or oxidation-state populations lag behind the control variables, and they compare fresh and pre-conditioned catalysts."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Chemical engineering (heterogeneous catalysis)\nProblem: Whether a catalyst surface keeps a record of past reaction conditions, so that its activity depends on its history and not just its current gas or temperature environment.\nHow it is studied: Experimentalists switch feed composition or temperature up and down and measure hysteresis loops in conversion and selectivity. They use operando spectroscopy (DRIFTS, X-ray absorption) and temperature-programmed desorption to check whether adsorbate or oxidation-state populations lag behind the control variables, and they compare fresh and pre-conditioned catalysts.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Up-and-down stimulus ramps to map hysteresis",
+      "description": "Ramp a stimulus (e.g., growth factor or TPA dose) up and then back down over the same range, and measure AP-1 target output (reporter, RT-qPCR, or CUT&RUN occupancy at canonical sites) on both branches. Separated ascending and descending curves at matched stimulus levels would show that cells keep a record of their history rather than responding only to the present input."
+    },
+    {
+      "title": "Lag of chromatin state behind AP-1 occupancy after washout",
+      "description": "Track AP-1 (Fos/Jun, via HaloTag or CUT&RUN) and chromatin accessibility (ATAC-seq) through a time course after stimulus withdrawal, analogous to checking whether adsorbate coverage lags gas-phase changes in operando spectroscopy. If accessibility and H3K27ac persist after AP-1 has left its sites, the chromatin state is retaining a record."
+    },
+    {
+      "title": "Priming and rest-interval re-stimulation protocol",
+      "description": "Pre-condition cells with a priming pulse, then vary the rest interval before a standard re-challenge, and compare induction kinetics and magnitude with naive cells at each interval. Faster or stronger responses that decay with rest time, and that are absent in naive cells, are the signature of a stored memory of past exposure."
+    },
+    {
+      "title": "Degron-based removal of AP-1 during the memory window",
+      "description": "Use an auxin- or dTAG-inducible degron on Jun or Fos to remove the factor at defined times after priming, similar to a temperature-programmed desorption step that removes a species to test what is retained. If the memory phenotype survives degradation of AP-1 but is lost when the marks are erased (e.g., with a histone-acetyltransferase or chromatin-remodeler inhibitor), the memory is carried by the chromatin state rather than by the factor itself."
+    },
+    {
+      "title": "Lineage-tracked test of heritable persistence",
+      "description": "Prime cells, then track single-cell lineages with live reporters of AP-1 activity and chromatin state through several divisions, comparing with mock-treated lineages. Persistence of the primed state across divisions without ongoing stimulation, measured against a null model of stochastic heterogeneity, would indicate a self-sustaining, heritable memory rather than transient signaling."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1737,
+  "cost_usd": 0.00114025
+}

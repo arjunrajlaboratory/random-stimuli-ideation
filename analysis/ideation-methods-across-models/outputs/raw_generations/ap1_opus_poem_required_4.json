@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "\"Nothing gold can stay\": decoupling factor decay from state persistence",
+      "description": "Pulse-stimulate cells, wash out, and run matched time courses of FOS/JUN protein levels (quantitative immunoblot, Halo-tag pulse-chase) against chromatin accessibility and nucleosome positioning at AP-1 motifs (ATAC-seq plus AP-1 CUT&RUN). Memory is supported only if the accessible state at AP-1-bound enhancers outlives the protein by many half-lives; co-decay would instead indicate ongoing signaling rather than memory."
+    },
+    {
+      "title": "\"So dawn goes down to day\": testing the handoff to a durable successor",
+      "description": "Perform time-resolved CUT&RUN for FOS, FOSB, FRA1/FRA2, JUN, JUNB, and JUND together with co-IP of dimer composition at matched timepoints, asking whether labile FOS-containing dimers at a given site are replaced by longer-lived FRA1/JUND dimers or by resident lineage factors. A site-preserving compositional handoff is the concrete mechanistic form that AP-1 memory would need to take."
+    },
+    {
+      "title": "\"Her hardest hue to hold\": mitotic dilution as the decay clock",
+      "description": "Pair a stimulus pulse with FUCCI/live imaging and with cell-cycle arrest (CDK4/6 inhibition or contact arrest), then measure how many divisions the primed state survives using re-stimulation reporters and ATAC-seq on cells sorted by division number via dye dilution. Decay scaling with divisions implies a replication-coupled chromatin carrier, whereas decay on wall-clock time regardless of division implicates slow protein or RNA turnover."
+    },
+    {
+      "title": "\"But only so an hour\": degron separation of establishment versus maintenance",
+      "description": "Tag endogenous FOS and JUN with dTAG or AID degrons and deplete them either before stimulation, during the first hour of response, or only after the state is established. A memory function requires that post-establishment depletion preserves primed accessibility and accelerated secondary responses, while early depletion abolishes both."
+    },
+    {
+      "title": "\"Then leaf subsides to leaf\": clone-resolved second-hit restimulation",
+      "description": "Lineage-barcode cells, stimulate, allow a long rest period, then restimulate and use single-cell RNA-seq/ATAC-seq to ask whether enhanced re-induction is heritable within clones rather than merely a population average. Shared priming among sister cells of the same clone distinguishes a genuinely inherited chromatin state from averaging over transient responders."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2884,
+  "cost_usd": 0.11504049999999999
+}

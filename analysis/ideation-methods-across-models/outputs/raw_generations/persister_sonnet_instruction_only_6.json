@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 6,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Bet-hedging lineage tracing with fluctuation tests (microbial Luria\u2013Delbr\u00fcck)",
+      "description": "Borrowing from Luria\u2013Delbr\u00fcck experiments in bacterial genetics, barcode cells and split clonal populations into many parallel replicates before drug exposure. The variance in surviving-barcode counts across replicates shows whether persistence is pre-existing and heritable (jackpot-like, clone-specific) or induced stochastically. Sister-cell pairs and multigenerational pedigrees can then be used to measure how many divisions the persister state is remembered."
+    },
+    {
+      "title": "Statistical-physics landscape of cell-state transitions",
+      "description": "Using the energy-landscape and Waddington-style attractor idea from physics, do single-cell RNA/ATAC profiling of untreated, early-drug and late-drug cells. Infer a quasi-potential and transition rates between states, and test whether the survivors occupy a rare shallow basin that was already populated before treatment. Perturbing predicted barrier-controlling regulators would test whether the landscape model correctly forecasts survival fractions."
+    },
+    {
+      "title": "Live-cell reporter time-series analyzed with signal-processing/early-warning methods",
+      "description": "Following methods from ecology and climate science for detecting critical transitions, image single cells over days using fluorescent reporters of ERK, p53, or apoptosis signaling. Compute autocorrelation, variance, and pulse-frequency spectra in the hours before drug addition to see if future survivors have distinct signaling dynamics. Retrospective tracking followed by classifier training would identify which dynamic features predict survival."
+    },
+    {
+      "title": "Spatial-microenvironment mapping like epidemiological hotspot analysis",
+      "description": "Treating survivors like disease clusters, use spatial transcriptomics or multiplexed imaging of 3D cultures or tumors and apply spatial statistics such as Ripley's K and neighborhood enrichment. This tests whether survivors cluster in regions with particular oxygen, density, or paracrine signals, and whether they sit at the edges or core of colonies. Local microenvironments can then be manipulated, for example by changing density or conditioned media, to separate non-genetic cell-intrinsic causes from positional ones."
+    },
+    {
+      "title": "Metabolic and mechanical \"stress-test\" profiling inspired by materials fatigue testing",
+      "description": "Like engineers who load a material until it fails, apply graded drug doses and stresses and measure each single cell's capacity to cope. Readouts include mitochondrial membrane potential, ROS, ATP/NADH FLIM, cell cycle slowing, and drug efflux. Index sorting then links these readouts to later colony outgrowth, revealing whether survivors have a distinct tolerance threshold such as slow cycling, higher efflux, or altered metabolism. Sorted subpopulations can also be profiled by proteomics to identify causal mechanisms."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1032,
+  "cost_usd": 0.013090999999999998
+}

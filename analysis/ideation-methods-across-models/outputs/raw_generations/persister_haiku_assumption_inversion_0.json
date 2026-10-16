@@ -1,0 +1,45 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment clone tracking",
+      "description": "Label a population with a heritable DNA barcode library (e.g., CellTag or lentiviral barcodes), then compare barcode clone frequencies before and after drug exposure and after drug withdrawal and re-challenge. Clones already enriched among survivors point to pre-existing heritable states, while survivors that spread across many clones point to induced, non-heritable switching. This tests the assumption that survival is a single mechanism and that the survivor state is stable and inherited."
+    },
+    {
+      "title": "Live-cell reporter tracking of pre-treatment predictors",
+      "description": "Use fluorescent reporters for cell-cycle phase (FUCCI), signaling activity (e.g., ERK-KTR), or stress state, and follow individual cells through drug exposure with time-lapse imaging. Link each cell's pre-treatment reporter state to its fate, and test whether the survivor state is transient by washing out the drug and checking whether sensitivity returns. This tests whether survival is a stable, binary trait and whether a single endpoint captures it."
+    },
+    {
+      "title": "Single-cell multiomics on sorted pre-treatment subpopulations",
+      "description": "Profile transcriptome and chromatin accessibility (scRNA-seq plus scATAC-seq) of the untreated population, then train a classifier that predicts which cells survive and check it with sorted cells in a validation experiment. A continuum of predicted survival probabilities would argue against a discrete persister subpopulation. This tests the assumption that survivors form a distinct, stable subpopulation and that the starting state is a representative snapshot."
+    },
+    {
+      "title": "Error-corrected single-cell genomics of pre-existing variants",
+      "description": "Use single-cell DNA sequencing or duplex-consensus, deep-coverage sequencing of the pre-treatment population to detect rare subclonal SNVs and CNVs, then test whether those variants are enriched in survivors and whether they are causal with CRISPR knock-in. This checks the assumption that the cells are genetically identical, which bulk sequencing cannot show."
+    },
+    {
+      "title": "Spatially resolved drug-exposure and co-culture perturbations",
+      "description": "Run the treatment in a microfluidic gradient, a 3D spheroid, or an in vivo xenograft, and measure local drug concentration (for example with a fluorescent drug analog or a drug-response biosensor) alongside spatial transcriptomics of survivors. Then test whether conditioned medium from survivors or neighboring cells, or a co-culture with stromal cells, changes survival of sensitive cells. This tests the assumptions of uniform drug exposure and cell autonomy."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Survival is cell-intrinsic and was either pre-existing or induced, but a single mechanism explains both, so the question can be answered with one kind of measurement.",
+      "'Genetically identical' means identical at the level that matters: no rare subclonal mutations or copy-number variants that bulk sequencing would miss.",
+      "Survivors form a discrete, stable subpopulation (a binary 'persister' state) rather than a continuum of drug sensitivity or a transient, reversible state.",
+      "The drug reaches every cell at the same effective concentration, so differences in survival reflect cell biology rather than local drug exposure.",
+      "Survival is a cell-autonomous trait, not shaped by neighboring cells, secreted factors, density, or the microenvironment.",
+      "A single endpoint (cell count or viability at a fixed time) reliably separates dead cells from survivors, with slow-cycling or quiescent cells not confounding the readout.",
+      "Survivors are the same cells that later repopulate the culture or drive relapse, so the in vitro survivor pool is a good model of clinical tolerance.",
+      "Pre-treatment cell states are measured at a snapshot that is representative and stays put, so the cause can be inferred from the static starting state."
+    ]
+  },
+  "output_tokens": 2596,
+  "cost_usd": 0.0015288799999999998
+}

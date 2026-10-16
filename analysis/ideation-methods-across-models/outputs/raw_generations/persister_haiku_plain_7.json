@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell lineage tracing with barcoded clones",
+      "description": "Introduce heritable random DNA barcodes into a clonal population, treat with the targeted drug, and use barcode sequencing plus scRNA-seq to ask whether survivors arise from a pre-existing transcriptionally distinct subpopulation or from clones that were already present before treatment. Comparing pre-treatment and post-treatment barcode frequencies distinguishes pre-existing resistance from drug-induced reprogramming."
+    },
+    {
+      "title": "Time-resolved single-cell RNA and ATAC profiling during drug exposure",
+      "description": "Profile chromatin accessibility and gene expression at many early time points after drug addition to track which cells shift state, and when. Identifying the earliest divergent cells and the regulatory programs (e.g., chromatin opening at specific transcription factor motifs) that precede survival reveals the mechanism of the persister state."
+    },
+    {
+      "title": "Genome-wide CRISPR screens comparing survivors to the bulk population",
+      "description": "Run pooled CRISPR knockout or CRISPRi/CRISPRa screens under drug treatment and compare guide enrichment in surviving cells against untreated controls, including sorted fast-cycling versus slow-cycling subsets. Hits that are enriched or depleted in survivors point to the genes and pathways required for persistence and suggest candidate vulnerabilities to target."
+    },
+    {
+      "title": "Live-cell fluorescent reporters and single-cell tracking of drug response",
+      "description": "Use fluorescent reporters for cell-cycle phase, drug-target pathway activity, or stress signaling, combined with time-lapse microscopy, to follow individual cells from drug addition through survival or death. Correlating the reporter state before drug exposure with each cell's fate tests whether survival is predictable from a measurable pre-treatment state or is stochastic."
+    },
+    {
+      "title": "Drug washout and re-challenge assays on sorted persister cells",
+      "description": "Sort surviving cells, remove the drug, and measure regrowth, drug sensitivity, and epigenetic memory over multiple generations, comparing them with naive cells. Whether the persister phenotype is reversible (non-genetic, plastic) or stably inherited (genetic or epigenetic) reveals the underlying mechanism and informs whether intermittent dosing or combination therapy could prevent survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 851,
+  "cost_usd": 0.00056825
+}

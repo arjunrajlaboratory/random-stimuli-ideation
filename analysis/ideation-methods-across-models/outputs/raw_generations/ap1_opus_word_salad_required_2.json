@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "word_salad_required",
+  "call": 2,
+  "stimulus": "haploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nhaploid undolorous steek leash hoseless unkennel pinchbelly unreleased probuying enchant sego doughty relocable hiveward pandrop shoptalk gamely beermaking dishevel terminator instructor esperance mendacious sicklily piedfort inexigible testing picrasmin matrass nonfreeman barful avocado untoothed oblatory muggish importance tortuose sarcoid irately steamless awkwardish tunbellied skewback hypoionian manito jess pregenital rehazard pathicism scourwort desire jugerum campmaster midfrontal vargueno yirn uncupped ominously gyromele tachylalia\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Haploid test: allele-resolved AP-1 reporters",
+      "description": "Use SNP-resolved allele-specific RNA FISH or dual-color knock-in reporters at the two alleles of an AP-1 target (e.g., AXL, SERPINE1) to test whether the same allele remains the high-expressing one across days and through cell division. Allele-autonomous, cis-restricted persistence implies chromatin-encoded memory rather than a diffusible trans-factor set point."
+    },
+    {
+      "title": "Leash-and-unkennel: pulse-release kinetics of Fos/Jun",
+      "description": "Place FOS/JUN under optogenetic or dTAG/auxin degron control, deliver a defined pulse, then fully remove the factor and measure the decay half-life of the downstream state (ATAC accessibility, target RNA, drug-resistant colony formation) relative to division time. Persistence across many divisions after the input is gone is the operational signature of memory; rapid relaxation marks it as a maintained steady state."
+    },
+    {
+      "title": "Instructor versus terminator: lineage-barcoded causality",
+      "description": "Combine barcode lineage tracing (Rewind/FateMap-style retrospective clone recovery) with sorting on an AP-1 activity reporter to test whether AP-1-high cells are the same clones that later survive drug selection. Pair with timed gain- and loss-of-function to distinguish AP-1 as an instructive writer of the state, a permissive reader, or merely the terminator of an already-established transition."
+    },
+    {
+      "title": "Relocable marks: identifying the physical memory substrate",
+      "description": "Run a CUT&RUN/CUT&Tag time course for AP-1 occupancy, H3K27ac, H3K4me1, and nucleosome positioning at primed enhancers after factor withdrawal, plus DNA-FISH/Hi-C for enhancer repositioning and mitotic-chromosome staining for AP-1 bookmarking in synchronized cells. This separates heritable chromatin marks that outlive the factor from simple re-recruitment of AP-1 each cycle."
+    },
+    {
+      "title": "Tachylalia and esperance: burst kinetics and anticipatory re-stimulation",
+      "description": "Use MS2 live-cell imaging of an AP-1 target to quantify whether the remembered state is encoded in burst frequency versus amplitude, and measure sister-cell correlation of burst frequency after mitosis. Then compare a second stimulus pulse to a naive first pulse: faster and larger reinduction, plus inherited burst frequency, is a quantitative memory signature distinguishable from residual mRNA or protein carryover."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2941,
+  "cost_usd": 0.11082149999999999
+}

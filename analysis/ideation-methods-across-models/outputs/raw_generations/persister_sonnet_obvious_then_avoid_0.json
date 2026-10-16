@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell pair tracking with post-hoc molecular readout",
+      "description": "Image dividing cells live to identify sister pairs, treat with drug, and record which sister survives, then compare pre-treatment features between pairs. Shared inheritance (sister concordance decay over generations) quantifies the memory timescale of the survival-permissive state, separating heritable from stochastic fluctuations."
+    },
+    {
+      "title": "Pre-treatment fate prediction via live reporter-to-survival mapping",
+      "description": "Image cells carrying multiplexed live reporters (e.g., p53/ERK/NF-\u03baB dynamics, mitochondrial membrane potential, apoptosis-priming dye) before drug addition, track each cell's eventual fate, and train a model to predict survival from pre-drug dynamics. The predictive features reveal which pathway states causally precede survival."
+    },
+    {
+      "title": "BH3 profiling / single-cell apoptotic priming and caspase kinetics",
+      "description": "Measure mitochondrial apoptotic priming and drug-induced caspase activation timing in individual cells, sorted by survival outcome. This tests whether survivors simply sit lower on the apoptosis threshold (e.g., through BCL-2 family levels) rather than escape the drug's target inhibition."
+    },
+    {
+      "title": "Intracellular drug concentration and target occupancy imaging",
+      "description": "Use fluorescent or label-free (mass spec imaging, intrinsically fluorescent drugs, or a target-engagement biosensor) readouts to quantify drug accumulation, efflux, lysosomal sequestration, and target inhibition per cell. This tests whether survivors experience less effective drug exposure rather than possess altered downstream biology."
+    },
+    {
+      "title": "Spatial/microenvironmental heterogeneity and cell-cell contact mapping",
+      "description": "In 3D cultures or tissue sections, use spatial transcriptomics or multiplexed imaging to relate survivor locations to local density, hypoxia, neighbor identity, and secreted-factor gradients, then perturb the implicated neighbor cues. This tests whether survival comes from transient local niche effects on genetically identical cells."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated cells to find persister transcriptional states",
+      "Whole-exome/genome sequencing of survivors to find resistance mutations",
+      "Barcode lineage tracing to test pre-existing vs. induced resistance",
+      "ATAC-seq/ChIP-seq to profile chromatin accessibility and histone marks in persisters",
+      "Fluctuation (Luria-Delbr\u00fcck) test to distinguish mutation from non-genetic origins",
+      "CRISPR knockout/activation screens for survival genes",
+      "Live-cell imaging of cell cycle state and drug response (slow-cycling cells)",
+      "Proteomics/phosphoproteomics of survivors to identify bypass signaling",
+      "Metabolic profiling (e.g., oxidative phosphorylation, ferroptosis sensitivity) of persisters",
+      "Drug combination testing to eliminate persisters (e.g., HDAC, epigenetic inhibitors)"
+    ]
+  },
+  "output_tokens": 1111,
+  "cost_usd": 0.01777
+}

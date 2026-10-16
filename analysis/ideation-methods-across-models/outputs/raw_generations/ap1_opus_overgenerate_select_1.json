@@ -1,0 +1,61 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Epoch-resolved degron mapping of when AP-1 is actually needed",
+      "description": "Tag FOS and JUN with auxin- or dTAG-inducible degrons and deplete them in narrow windows \u2014 during the priming stimulus, during the washout/storage interval, or only at the moment of restimulation \u2014 then score the primed response. This dissociates AP-1's role in writing the memory, holding it, and reading it out, which a simple knockout cannot do and which is the single most diagnostic experiment for calling AP-1 a memory mechanism rather than just a signal transducer."
+    },
+    {
+      "title": "Heritability half-life from sister- and cousin-cell correlations",
+      "description": "Combine heritable clonal barcoding with single-cell multiome (or live imaging of an AP-1 reporter) to measure how the correlation in AP-1 target expression and AP-1-site accessibility decays as a function of the number of divisions separating two related cells. The resulting correlation decay constant gives a quantitative memory half-life in generations, and comparing it to the AP-1 protein half-life tests whether the memory outlives its putative carrier."
+    },
+    {
+      "title": "Optogenetic history-writing with a cross-stimulus generalization matrix",
+      "description": "Use optogenetic control of ERK or JNK to deliver precisely defined pulse histories (amplitude, duration, number, spacing) that are otherwise impossible to control, then read out the response to a later challenge. Extending this to a prime-A/challenge-B matrix across different stimuli tests whether AP-1 stores a stimulus-specific trace or a generic one \u2014 specificity is the property that separates real memory from general hypersensitivity."
+    },
+    {
+      "title": "Synthetic TRE arrays as a minimal sufficient memory element",
+      "description": "Build a library of integrated reporters that vary the number, affinity, and spacing of AP-1 motifs plus the presence of nearby cofactor motifs, stimulate once, and measure how long each architecture sustains a primed state. This moves from correlation at endogenous loci to a sufficiency claim and yields a design rule for how much memory a given enhancer architecture can hold."
+    },
+    {
+      "title": "Mitotic retention and single-molecule residence time in primed cells",
+      "description": "Ask how AP-1 physically persists by imaging Halo-tagged JUN/FOS retention on mitotic chromosomes (with mitotic CUT&RUN as the genomic counterpart) and by single-molecule tracking of bound fraction and residence time in naive versus primed cells. Longer residence or bookmarking in primed cells would supply the mechanistic carrier for heritability, whereas unchanged kinetics would point the memory to chromatin or cofactors instead."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Serial stimulate-washout-restimulate assay: quantify faster/larger transcriptional response on second exposure as the core behavioral signature of memory",
+      "Degron-mediated acute depletion of FOS/JUN at defined epochs after a stimulus to separate memory establishment from memory maintenance from memory readout",
+      "ATAC-seq time course after a transient stimulus to measure decay constants of AP-1-dependent accessibility versus decay of AP-1 protein",
+      "Single-cell multiome (RNA+ATAC) with heritable clonal barcodes to link a cell's past state to its descendants' future responses",
+      "Sister-cell and cousin-cell correlation decay analysis to measure the half-life of AP-1 state heritability across divisions",
+      "Live-cell FOS/JUN translational or transcriptional reporters with long-term lineage tracking to watch memory propagate or decay",
+      "Optogenetic ERK/JNK pulse trains to write defined stimulus histories, then read out response amplitude as a function of history",
+      "Cross-stimulus generalization matrix: prime with stimulus A, challenge with B, to test whether AP-1 memory is specific or general",
+      "Mitotic bookmarking test: fixed imaging and mitotic-chromosome CUT&RUN for FOS/JUN retention through mitosis",
+      "Single-molecule tracking of Halo-JUN to compare chromatin residence times and bound fractions in naive versus primed cells",
+      "Synthetic reporter arrays with varying numbers and spacings of TRE/AP-1 motifs to find the minimal sufficient memory element",
+      "Base editing of individual TRE motifs at candidate memory enhancers to test necessity at nucleotide resolution",
+      "CRISPRi/CRISPRa tiling of AP-1-bound enhancers during the memory window",
+      "Subunit-resolved CUT&RUN (FOS, FOSL1, JUNB, ATF3, etc.) to test whether dimer composition encodes a combinatorial memory code",
+      "SNAP/Halo pulse-chase to measure AP-1 protein half-lives and ask whether memory outlasts the protein",
+      "Decoupling AP-1 from histone marks: compare H3K4me1/H3K27ac persistence to AP-1 occupancy persistence at the same loci",
+      "Ectopic FOS/JUN expression to write a memory state de novo and test whether it phenocopies a real stimulus history",
+      "Information-theoretic quantification of mutual information between stimulus history and current chromatin/transcriptome state",
+      "Barcoded drug-resistance memory assay: pre-treat, wash out, re-treat and ask whether the same clones re-emerge",
+      "In vitro reconstitution of AP-1 binding to nucleosomal TRE templates to test self-maintaining pioneer-like occupancy",
+      "MNase/footprinting to ask whether primed enhancers retain nucleosome-depleted regions without bound AP-1",
+      "Perturb-seq of AP-1 family members and cofactors with a memory (restimulation) readout rather than a steady-state readout",
+      "Mathematical model fitting: does a bistable AP-1 autoregulatory loop or a slow-relaxation model better fit decay kinetics",
+      "Heterokaryon/fusion experiments between primed and naive cells to test whether memory is trans-dominant or cis-encoded"
+    ]
+  },
+  "output_tokens": 3572,
+  "cost_usd": 0.11965979999999998
+}

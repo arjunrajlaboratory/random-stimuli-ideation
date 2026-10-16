@@ -1,0 +1,49 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment apoptotic priming by BH3 profiling",
+      "description": "Measure mitochondrial apoptotic priming in each cell before drug exposure (BH3 profiling by flow cytometry, with cytochrome c release after BH3 peptides), then sort high- and low-priming subpopulations and compare their survival under the drug. If priming predicts survival, test whether BH3 mimetics that push low-priming cells toward death eliminate the survivors."
+    },
+    {
+      "title": "Per-cell drug accumulation linked to target occupancy",
+      "description": "Use a fluorescent or clickable analog of the drug, or a target-engagement biosensor, to measure intracellular drug concentration and target occupancy in individual live cells by imaging. Correlating these values with each cell's later fate separates pharmacokinetic causes (less drug inside) from pharmacodynamic causes (target still active despite drug)."
+    },
+    {
+      "title": "Death-hazard kinetics from single-cell fate tracking",
+      "description": "Track individual cells by time-lapse microscopy with a caspase or apoptosis reporter and record each cell's time to death, arrest, or escape. Fitting survival models to these distributions distinguishes permanent arrest from slow, stochastic killing and shows whether survivors are a fixed subpopulation or a cell-to-cell rate difference."
+    },
+    {
+      "title": "Chromosomal instability reporter sorting with clonal re-derivation",
+      "description": "Sort cells before treatment by a reporter of chromosome missegregation or micronucleus formation, then expand the sorted groups and test drug survival and karyotype (copy-number profiling) in each derived clone. This asks whether pre-existing aneuploidy or CIN drives tolerance, a question that bulk and transcriptome-based approaches cannot answer directly."
+    },
+    {
+      "title": "Neighbor-density and local contact perturbation",
+      "description": "Measure each cell's local density and number of contacts in live imaging before treatment, then experimentally remove neighbors (laser ablation or mixing with dead cells) or add conditioned medium to test whether survival depends on local crowding or cell-cell contact rather than cell-intrinsic state."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of persisters versus untreated cells to find a transcriptional persister signature",
+      "Bulk RNA-seq or ATAC-seq of sorted or enriched surviving cells to find pathways that change after treatment",
+      "Genome-wide CRISPR knockout or activation screens under drug pressure to identify genes whose loss or gain enables survival",
+      "Lineage barcoding to test whether persisters arise from pre-existing clones or from induced switching",
+      "Time-course single-cell profiling during the first days of drug exposure to track the transition into the persister state",
+      "Whole-exome or deep sequencing of survivors to look for pre-existing resistance mutations",
+      "Epigenetic profiling (H3K27me3, H3K4me3, DNA methylation) of persisters to test chromatin-mediated tolerance",
+      "Proteomics or phosphoproteomics of survivors to find altered signaling networks",
+      "Drug-holiday or washout experiments to test whether the persister state is reversible",
+      "Fluorescent cell-cycle reporters (FUCCI) or EdU pulse labeling to test whether persisters are quiescent or slow-cycling",
+      "Efflux-pump or drug-transporter expression profiling (ABCB1, ABCG2) as a cause of reduced intracellular drug",
+      "Mathematical modeling of stochastic phenotype switching rates from population dynamics"
+    ]
+  },
+  "output_tokens": 3673,
+  "cost_usd": 0.00198007
+}

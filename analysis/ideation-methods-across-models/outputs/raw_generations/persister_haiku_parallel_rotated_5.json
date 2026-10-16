@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 5,
+  "parallel": {
+    "field": "Quantum information (qubit performance on a chip)",
+    "problem": "Why do only some nominally identical qubits on the same chip keep coherence under the same control pulses, while others decohere or leak quickly?",
+    "how_studied": "Experimentalists measure T1 and T2 coherence times and gate fidelities for each qubit, using randomized benchmarking and gate-set tomography. Cross-talk and leakage are characterized by driving neighbouring qubits and mapping the resulting errors. Fabrication variation, such as junction resistance and frequency collisions, is then correlated with the per-qubit performance to find the hidden cause."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Quantum information (qubit performance on a chip)\nProblem: Why do only some nominally identical qubits on the same chip keep coherence under the same control pulses, while others decohere or leak quickly?\nHow it is studied: Experimentalists measure T1 and T2 coherence times and gate fidelities for each qubit, using randomized benchmarking and gate-set tomography. Cross-talk and leakage are characterized by driving neighbouring qubits and mapping the resulting errors. Fabrication variation, such as junction resistance and frequency collisions, is then correlated with the per-qubit performance to find the hidden cause.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Per-cell persistence kinetics (T1/T2 analogy)",
+      "description": "Borrowing the qubit T1/T2 logic, track each cell's time to death or exit from drug tolerance under continuous dosing with live-cell reporters, and fit per-cell survival-time distributions to separate a slow 'energy relaxation' component (the time a cell persists before dying) from a 'dephasing' component (cell-to-cell variability in response timing). This reveals whether survivors are a stable resistant state or a transiently tolerant one."
+    },
+    {
+      "title": "Randomized drug-schedule benchmarking",
+      "description": "Adapting randomized benchmarking, apply random sequences of drug pulses and holidays to clonal and mixed populations, then fit the per-cell survival decay as a function of sequence length to extract an error rate per exposure that is independent of dosing-timing artifacts. Comparing this rate across subclones distinguishes intrinsic per-cell tolerance from effects of when and how long the drug was given."
+    },
+    {
+      "title": "Calibrated single-cell drug-engagement tomography",
+      "description": "Following gate-set tomography, calibrate the 'gate' itself by measuring each cell's actual intracellular drug concentration and target occupancy (for example with a fluorescent or click-tagged drug analog plus spike-in controls), then reconstruct the per-cell response function. This separates survivors that received less effective drug (a delivery or pharmacokinetic error) from survivors that received the full dose but still tolerated it (a true intrinsic resistance)."
+    },
+    {
+      "title": "Neighbour-perturbation cross-talk mapping",
+      "description": "Analogous to driving neighbouring qubits to map cross-talk, selectively ablate, stimulate, or pattern killing of defined neighbouring cells (for example with optogenetic or laser-based perturbation) and measure whether a cell's survival changes with its neighbours' state. Spatial transcriptomics of survivor versus dying neighbourhoods can then identify paracrine or contact-dependent protective signals."
+    },
+    {
+      "title": "Pre-treatment baseline correlated with post-treatment fate",
+      "description": "Analogous to correlating junction resistance and frequency collisions with per-qubit performance, measure pre-treatment per-cell features (copy-number profile, chromatin accessibility, efflux-pump and mitochondrial levels, cell-cycle phase, lineage barcode) and link them to each cell's survival by photoconvertible or barcode-based retrospective sequencing of the same cells. Statistical models then test which baseline 'fabrication' variables, or combinations of them, predict survival and whether they act as a collision-like interaction between two features."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2145,
+  "cost_usd": 0.0013460500000000001
+}

@@ -1,0 +1,150 @@
+{
+  "batch": 10,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "e4e55c7d4b1615b980d11b5741d5ba58cb49b314921647de4f0b4a5343a7e482",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Fluctuation assays and stochastic modeling of state-switching rates",
+      "description": "Run Luria-Delbr\u00fcck-style fluctuation assays with many small parallel clonal cultures and compare the variance in survivor numbers to the mean. Fit stochastic models to estimate rates of switching between sensitive and tolerant states and whether those states are inherited over several divisions. Re-sort survivors and regrow them to measure how quickly the mixture of tolerant and sensitive cells re-establishes itself. Use the inferred rates to determine which timescales to target with combination or sequenced therapy.",
+      "idea_id": "persister_sonnet_poem_required_2_4",
+      "source_sha256": "6701df739070bb924d32af3854b6603cb1d1139b5c62020a75d43a69ad16006f"
+    },
+    {
+      "id": "I2",
+      "title": "Paired single-cell multiome of pre-treatment versus persister cells",
+      "description": "Profile gene expression and chromatin accessibility (scRNA-seq plus scATAC-seq) in the untreated population and in cells that persist after drug exposure, then identify which regulatory programs are already active before treatment. Enrichment of specific transcription-factor motifs or chromatin states in the survivors would indicate an epigenetic mechanism that can be validated experimentally.",
+      "idea_id": "persister_haiku_word_salad_required_7_1",
+      "source_sha256": "582cb0f7ec10f0bdec2381d0ce64b96143cce1dac3535719f16d331345d6a431"
+    },
+    {
+      "id": "I3",
+      "title": "Live imaging with a fluorescent reporter of cell fate before drug exposure",
+      "description": "Use a fluorescent reporter for the suspected survival program, such as a stress-response or drug-efflux reporter. Track single cells by time-lapse microscopy for days before and after drug addition, then retrospectively correlate pre-treatment reporter brightness, cell-cycle length, and mitochondrial state with survival. This shows whether survivors were already distinct before treatment.",
+      "idea_id": "persister_sonnet_poem_required_5_1",
+      "source_sha256": "4b68482681e06e278ef9635d591e15b09b9ae3dea33f7fe04b71453767d21c83"
+    },
+    {
+      "id": "I4",
+      "title": "Barcoded lineage tracing with pre-treatment sister-cell splitting",
+      "description": "Tag cells with heritable expressed barcodes, split the population into sister aliquots, and treat one while sequencing the other (scRNA-seq) before drug. Persister lineages can then be traced back to their pre-existing transcriptional states, which tests whether survival is predetermined or stochastic. The design relies on matching paired units across the two conditions.",
+      "idea_id": "persister_sonnet_word_salad_required_0_0",
+      "source_sha256": "5cad9a42b7531fb74c266b045e331085e9031bdac8e4ec28c7671e3e5a2e5249"
+    },
+    {
+      "id": "I5",
+      "title": "Mark-then-profile retrieval of the pre-treatment state of future survivors",
+      "description": "Use live imaging of a barcoded or photoconvertible cell population during treatment, then retrospectively identify which pre-treatment cells gave rise to survivors. This is done either by photoconverting or laser-marking their sisters in a split-population design, or by lineage barcodes shared with an untreated replicate. Then run scRNA-seq on those specific pre-treatment cells. This directly measures the priming state that preceded survival, rather than the post-treatment state of cells already altered by the drug.",
+      "idea_id": "persister_opus_word_salad_required_2_0",
+      "source_sha256": "29cc1257d1813008cf716c8dd9cd88a1237069e632c1d1ad1a30673f8ce0b633"
+    },
+    {
+      "id": "I6",
+      "title": "Kinetic origin of the rare high-expressing state via transcriptional bursting",
+      "description": "Measure transcriptional bursting of the candidate driver gene using intronic FISH or live MS2/PP7 reporters to determine whether rare high-expressing cells arise from increased burst frequency, larger burst size, or slow mRNA/protein turnover. Then perturb each parameter via promoter swaps or degron tags and test whether survivor frequency shifts accordingly.",
+      "idea_id": "persister_opus_poem_required_2_1",
+      "source_sha256": "8ced5f21b4430d09851b66c83b3aa6141f8e5e6892999f2fd6a294e4004b94a0"
+    },
+    {
+      "id": "I7",
+      "title": "Retrospective capture of the pre-treatment state using expressed lineage barcodes",
+      "description": "Use expressed lineage barcodes to identify, in an untreated replicate aliquot, the clones that survived in the treated arm, then barcode-sort those cells and profile transcriptome, chromatin accessibility, and histone marks. This captures the primed state in its original form, before survivors have transitioned to a different phenotype.",
+      "idea_id": "persister_opus_poem_required_4_2",
+      "source_sha256": "5a0b10872eb5989d0b0a78d63be2c43d7709aa2fd1eb30c52048b5b22d7acb71"
+    },
+    {
+      "id": "I8",
+      "title": "Epigenetic perturbation screens on persister emergence",
+      "description": "Run a CRISPRi/CRISPRa or small-molecule screen focused on chromatin regulators (e.g., KDM5, HDACs, EZH2) and measure change in the persister fraction and in the reversibility of tolerance after drug withdrawal. Hits would show whether non-genetic, reversible chromatin states drive survival and whether they can be blocked.",
+      "idea_id": "persister_sonnet_word_salad_required_2_4",
+      "source_sha256": "9ebf56ed68ad922e62948e9c43892e4ce9876572916419d97047ebf0aded27a8"
+    },
+    {
+      "id": "I9",
+      "title": "Multi-omic profiling of persisters over time (scRNA, scATAC, histone marks)",
+      "description": "Collect cells at several timepoints (untreated, days after drug, regrowth) and measure chromatin accessibility, key histone modifications (e.g., H3K27me3, KDM5 targets) and transcripts in the same cells. This tests whether survival reflects reversible epigenetic states, in which the pattern of chromatin marks, rather than the underlying genome, differs.",
+      "idea_id": "persister_sonnet_word_salad_required_5_2",
+      "source_sha256": "876951a80b2ca85c21779e2f12caacfb056ca3ffc0bcb74c95a6152fab101c6b"
+    },
+    {
+      "id": "I10",
+      "title": "Spatial niche mapping of survivors",
+      "description": "Map each surviving cell's spatial context, including local density, neighbor identity, distance to colony edge, ECM stiffness and substrate contact, by combining live imaging with spatial transcriptomics on the fixed well. Comparing matched dying cells at equivalent positions tests whether microenvironment, drug access, or paracrine signaling explains survival independently of cell-intrinsic state.",
+      "idea_id": "persister_opus_poem_required_7_3",
+      "source_sha256": "84f8da41971fa9c44f282eb003cbd1b4e6f8d7b7094c57bc07a2de360d6b0781"
+    },
+    {
+      "id": "I11",
+      "title": "Retrospective barcoding to read the pre-treatment state of survivors",
+      "description": "Give every cell a heritable, transcribed DNA barcode (ClonMapper/Rewind-style) so that after treatment one can return to a pre-treatment aliquot of the same clone and examine its untreated sister cells by scRNA-seq. This separates rare pre-existing primed states from drug-induced states, and tests whether survival maps onto lineage.",
+      "idea_id": "persister_opus_poem_required_1_0",
+      "source_sha256": "58983ef597d9cc5a88739b1dd4fe18a46126103d241d479c6d0a05e87b8f936d"
+    },
+    {
+      "id": "I12",
+      "title": "Serial challenge-and-withdrawal to measure persistence of the surviving state",
+      "description": "Expand survivors, withdraw drug for varying intervals, re-barcode or re-sequence existing barcodes, and re-challenge, to determine whether the same clones survive again (heritable, stably altered resistance) or a new random subset survives (a transient, re-sampled state). The decay curve of clone re-use across withdrawal times gives a quantitative memory timescale that predicts whether drug holidays should resensitize the population.",
+      "idea_id": "persister_opus_poem_required_3_4",
+      "source_sha256": "516ddedaaf5b8633564981823dc5a9f004ffd35006dfa65423be28d7815f3297"
+    },
+    {
+      "id": "I13",
+      "title": "Fluctuation tests and mathematical modeling of state switching",
+      "description": "Run a Luria\u2013Delbr\u00fcck-style fluctuation test, measuring the variance in survivor counts across many small parallel cultures. Fit stochastic models that distinguish random mutation, reversible phenotype switching and drug-induced adaptation, using the switching rates and the decay of tolerance after drug removal. The many replicate wells provide the statistics needed to estimate the rates. Model predictions about how fast the state changes could then be tested with drug holidays or altered dosing schedules.",
+      "idea_id": "persister_sonnet_poem_required_6_4",
+      "source_sha256": "d7f3f48efa9952772fa1f17f25ffb706402839f56b196feccf23a551b2f8151e"
+    },
+    {
+      "id": "I14",
+      "title": "Pooled CRISPR screens plus epigenetic perturbation in sorted states",
+      "description": "Run genome-wide or chromatin-focused CRISPRi/a screens with drug and read out survivor frequency, not just bulk fitness, to find regulators that tune the size of the tolerant fraction. Combine with histone-modifier inhibitors (KDM5, EZH2) and ChIP/CUT&Tag in persisters to separate epigenetic from genetic causes.",
+      "idea_id": "persister_sonnet_word_salad_required_3_4",
+      "source_sha256": "f0a1248ab646e3d9226d16cc548c630eb672abb1f68ea44dc0fe22fae60a42a8"
+    },
+    {
+      "id": "I15",
+      "title": "Live-cell reporters with sort-and-re-challenge reversibility assays",
+      "description": "Use fluorescent cell-cycle reporters (e.g., FUCCI) and a fluorescent transcriptional marker of the candidate state in time-lapse imaging under drug to follow individual cells from treatment to regrowth. Sort the surviving fraction, release it from drug, and re-challenge, to test whether the tolerant state is reversible and heritable or a stochastic, transient switch.",
+      "idea_id": "persister_haiku_word_salad_required_6_1",
+      "source_sha256": "ec1c4d299843f4bf7fe69746bc6d5a7464485443926802e1014c575af512971f"
+    },
+    {
+      "id": "I16",
+      "title": "Combinatorial perturbation screens to dissect priming programs",
+      "description": "Treat each candidate priming program as composed of separable regulatory components (individual transcription factors, chromatin regulators, signaling nodes) and run CRISPRi/CRISPRa screens before drug addition, scoring changes in the frequency of surviving colonies rather than bulk viability. Pairwise perturbations then reveal which combinations are necessary versus merely co-occurring in the rare state.",
+      "idea_id": "persister_opus_word_salad_required_6_2",
+      "source_sha256": "e4451b8e1092e13fd2d044a84a7a0a9b4cdeffc7c641e68f5ef8186617df41ee"
+    },
+    {
+      "id": "I17",
+      "title": "Pooled CRISPR screens and perturbation of candidate state regulators",
+      "description": "Run genome-wide or epigenetic-focused CRISPRi/a screens under drug to find genes that raise or lower the survivor fraction. Then validate hits by perturbing chromatin regulators (KDM5, HDACs) and anti-apoptotic or antioxidant pathways such as GPX4 or BCL-2. This shows which factors cause tolerance and which merely mark it.",
+      "idea_id": "persister_sonnet_word_salad_required_6_3",
+      "source_sha256": "4fbbe1d7e8e62c669bdf8c4ff76502fe72168890a8f46c1b6ff4fc9e533f651e"
+    },
+    {
+      "id": "I18",
+      "title": "Drug-withdrawal and re-challenge assay",
+      "description": "Treat cells until the surviving fraction plateaus, remove the drug, and track regrowth and drug sensitivity over several passages before re-challenging. Survivors that regain full sensitivity indicate a reversible, plastic persister state, while survivors that stay tolerant indicate a heritable genetic or epigenetic change.",
+      "idea_id": "persister_haiku_word_salad_required_1_1",
+      "source_sha256": "75f75b3016768ce66b0d59505f72610f1c75b7f7edffb1bb00427b1aebd68841"
+    },
+    {
+      "id": "I19",
+      "title": "Lineage barcoding with pre-treatment sister-cell tracking",
+      "description": "Label clonal cells with heritable expressed barcodes (e.g., ClonTracer/TREX-style), split the population before drug exposure, and compare sister-cell fates to see whether survival is heritable and which pre-existing transcriptional states predict it. This tests whether survivors form a distinct pre-existing subpopulation (bimodal distribution) versus the stochastic tail of a continuous distribution.",
+      "idea_id": "persister_sonnet_word_salad_required_3_0",
+      "source_sha256": "ae12f7be93feff5c51ae9032d16ffe96dd786a9035ed184ce893b948fe9258f0"
+    },
+    {
+      "id": "I20",
+      "title": "Multi-omic profiling of survivors versus matched untreated cells (RNA, chromatin, proteins)",
+      "description": "Sort or isolate persisters and matched untreated cells, then compare single-cell RNA-seq, ATAC-seq, and proteomics or metabolomics. Look for epigenetic states, drug-efflux, anti-apoptotic, or metabolic programs such as oxidative phosphorylation and lipid remodeling. Perturb the top candidates (with CRISPR or inhibitors of epigenetic regulators) to test whether they are necessary for survival.",
+      "idea_id": "persister_sonnet_poem_required_2_3",
+      "source_sha256": "aa9f269be01154d3b9f0e9a45e30eed8615a9d18867e4a24ea6a23a057615d90"
+    }
+  ],
+  "cost_usd": 0.0529032
+}

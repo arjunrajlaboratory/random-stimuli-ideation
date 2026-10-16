@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 5,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Fluctuation-test lineage barcoding (Luria-Delbr\u00fcck from microbial genetics)",
+      "description": "Barcode a clonal population, split it into replicate pools, and treat each with drug. If the same barcodes survive across replicates, the resistance is pre-existing and heritable. If different barcodes survive in each replicate, it is stochastic state switching. Comparing the variance in survivor counts across replicates to a Poisson expectation gives a quantitative switching rate, as in the original Luria-Delbr\u00fcck fluctuation test."
+    },
+    {
+      "title": "Pre-treatment state tracing with sister-cell 'twin' sampling (borrowing from twin studies in human genetics)",
+      "description": "Use lineage barcoding with split-clone sampling. Profile one sister arm by single-cell RNA-seq before the drug, and treat the other sister arm. Survivors' barcodes then link each pre-drug transcriptional state to its fate. This identifies predictive pre-existing signatures. Comparing how concordant sister cells are against unrelated cells indicates how heritable the state is."
+    },
+    {
+      "title": "Live-cell reporter time-lapse with hidden Markov state inference (borrowed from neuroscience spike-train/state-space modeling)",
+      "description": "Image thousands of single cells over days with reporters for stress-response, drug-target activity, and cell cycle. Fit hidden Markov models to the single-cell trajectories to infer discrete latent states and transition rates between them. Then test which states and transitions precede survival, and whether drug exposure induces the persister state or merely selects for it."
+    },
+    {
+      "title": "Noise-propagation analysis of signaling networks (borrowed from control engineering and electronic circuit noise analysis)",
+      "description": "Quantify cell-to-cell variability in pathway nodes (e.g., phospho-flow or CyCIF imaging of the target and its bypass pathways) and use information-theoretic or covariance-based measures to find nodes where noise is amplified or buffered. Perturb feedback loops with CRISPRi and check whether altering the noise gain changes the surviving fraction without changing mean expression, which would point to feedback-driven bistability."
+    },
+    {
+      "title": "Spatial niche mapping via ecological patch-occupancy statistics (borrowed from landscape ecology)",
+      "description": "In 3D culture or tumor sections, map survivors with multiplexed imaging or spatial transcriptomics. Use point-process and spatial-autocorrelation statistics to test whether survivors cluster in microenvironmental refugia, such as hypoxic, low-drug-penetration, or cell-contact zones, as opposed to being randomly scattered. Combine this with drug-penetration measurements and local-density manipulations to separate extrinsic microenvironment effects from intrinsic cell state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 978,
+  "cost_usd": 0.012566999999999998
+}

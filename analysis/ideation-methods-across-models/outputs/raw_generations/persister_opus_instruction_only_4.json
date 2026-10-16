@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 4,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Flight-recorder molecular memory (aviation black boxes)",
+      "description": "Use a CRISPR base-editor 'recorder' that writes signaling and transcription-factor activity (AP-1, NF-kB, ERK, Wnt) into genomic barcodes during the days before drug exposure. Then sequence the recordings in survivors versus matched untreated cells to identify which pre-existing states predicted survival."
+    },
+    {
+      "title": "Twin-study heritability of fate (human behavioral genetics)",
+      "description": "Perform time-lapse imaging of full lineage trees with drug added at varied times post-division, measuring fate concordance between sisters, cousins, and more distant relatives. The decay of concordance with genealogical distance estimates how long a survival-priming state is heritable versus randomly reset."
+    },
+    {
+      "title": "Actuarial hazard modeling of single-cell death (life-insurance statistics)",
+      "description": "Image cells carrying multiple live reporters (ERK kinase translocation, caspase sensor, FUCCI cell cycle, mitochondrial potential) through treatment. Fit time-varying-covariate survival models to find which dynamic features, not snapshot levels, shift a cell's instantaneous risk of death."
+    },
+    {
+      "title": "Early-warning signals of tipping points (ecology and climate science)",
+      "description": "Test whether cells entering a drug-tolerant state show critical slowing down -- rising variance, autocorrelation, and flickering in reporter time series -- before committing. This would let you prospectively flag and sort pre-transition cells for molecular profiling."
+    },
+    {
+      "title": "Microenvironmental neighborhood effects (urban epidemiology)",
+      "description": "Treat each cell's local context as a neighborhood exposure: use spatial transcriptomics or imaging of dense cultures and organoids to test whether survival clusters spatially. Regress survival on local density, neighbor identity, and diffusible-factor gradients to separate cell-intrinsic priming from niche-conferred protection."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2740,
+  "cost_usd": 0.1333869
+}

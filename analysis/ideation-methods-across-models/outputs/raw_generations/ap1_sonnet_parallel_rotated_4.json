@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 4,
+  "parallel": {
+    "field": "Linguistics / historical linguistics",
+    "problem": "Deciding whether a speech community's sound patterns or grammar preserve traces of an earlier contact language (substrate memory), even after the original influence has disappeared.",
+    "how_studied": "Linguists compare cognate sets and phonetic measurements across generations, using acoustic analysis of recorded speech. They apply phylogenetic and comparative methods to separate inherited features from borrowed ones. Apparent-time studies compare older and younger speakers to see whether the feature persists without ongoing exposure."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Linguistics / historical linguistics\nProblem: Deciding whether a speech community's sound patterns or grammar preserve traces of an earlier contact language (substrate memory), even after the original influence has disappeared.\nHow it is studied: Linguists compare cognate sets and phonetic measurements across generations, using acoustic analysis of recorded speech. They apply phylogenetic and comparative methods to separate inherited features from borrowed ones. Apparent-time studies compare older and younger speakers to see whether the feature persists without ongoing exposure.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Apparent-time chromatin comparison after stimulus removal",
+      "description": "Like comparing older and younger speakers without ongoing exposure, stimulate cells (e.g., with serum, TPA, or injury signals), then withdraw the stimulus and profile AP-1 (FOS/JUN) binding, ATAC-seq accessibility and H3K27ac at multiple 'generations' (days and cell divisions) post-withdrawal. Persistence of AP-1-motif-linked accessible sites in the absence of the stimulus and of AP-1 re-expression indicates memory rather than ongoing signaling."
+    },
+    {
+      "title": "Cognate-set comparison of AP-1 sites across cell states and lineages",
+      "description": "Treat AP-1-bound enhancers as 'cognate sets' and compare them across primed, naive, and descendant cells to classify sites as inherited (retained through divisions and differentiation) versus newly acquired (de novo from current signaling). Use motif grammar and conservation to distinguish stable memory sites from transient ones."
+    },
+    {
+      "title": "Phylogenetic lineage tracing of memory inheritance",
+      "description": "Use barcoded lineage tracing with single-cell multiome (RNA + ATAC) to build clonal trees and test whether AP-1 accessibility and target-gene expression states are shared among sister cells beyond what the current environment predicts. Phylogenetic-signal statistics (e.g., Pagel's lambda or heritability along the tree) separate heritable memory from convergent responses to shared signals."
+    },
+    {
+      "title": "Acoustic-style quantitative dose-response of re-stimulation",
+      "description": "Measure the kinetics and amplitude of transcription (nascent RNA-seq, live reporters) in primed versus naive cells upon second stimulation, as phonetic measures quantify subtle residual features. Faster or stronger induction of AP-1 targets in primed cells, quantified across priming doses and rest intervals, gives a memory signature with a measurable decay time."
+    },
+    {
+      "title": "Substrate-removal causal perturbation",
+      "description": "Test whether the memory outlasts its originating influence by acutely degrading or knocking out AP-1 (dTAG/AID degron, dominant-negative A-FOS) after priming. Then check whether accessibility and enhanced re-response persist, and whether re-expression is needed to re-open sites. This distinguishes AP-1 as initiator versus maintainer of memory, with other factors carrying it forward."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 874,
+  "cost_usd": 0.0140155
+}

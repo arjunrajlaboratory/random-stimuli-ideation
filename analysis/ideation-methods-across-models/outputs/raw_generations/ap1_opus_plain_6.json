@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-chase of AP-1 activity with clonal lineage tracing",
+      "description": "Transiently induce AP-1 (e.g., optogenetic or degron-controlled FOS/JUN, or a brief TPA pulse), then follow barcoded clones by single-cell RNA-seq and ATAC-seq across many divisions. This directly measures how long an AP-1-opened chromatin and expression state persists after the inducing signal is gone, and whether persistence is heritable within clones."
+    },
+    {
+      "title": "Priming assay: does a prior AP-1 pulse change the response to a later stimulus?",
+      "description": "Give cells a first AP-1-activating stimulus, wash out and rest for days to weeks, then rechallenge and compare response magnitude, speed, and gene set to naive cells. A memory mechanism predicts faster/stronger reactivation at previously bound loci, which can be mapped by comparing ATAC/CUT&RUN peaks before, between, and after the two stimuli."
+    },
+    {
+      "title": "Loss-of-function during the memory window versus during encoding",
+      "description": "Use an auxin/dTAG degron to deplete FOS/JUN either only during the initial stimulus (encoding) or only during the rest period (maintenance), then test whether the primed state survives. This separates AP-1's role as an initiator of a state from a continuously required maintainer, which is the crux of calling it a memory mechanism."
+    },
+    {
+      "title": "Quantify mitotic transmission: AP-1 bookmarking and post-division state recovery",
+      "description": "Combine live imaging of tagged JUN/FOS through mitosis with mitotic chromatin profiling (e.g., CUT&RUN on sorted mitotic cells) and sister-cell comparisons of expression after division. Concordance between sister cells beyond what noise predicts, plus retention of AP-1 at mitotic chromatin, would support heritable rather than merely slow-decaying memory."
+    },
+    {
+      "title": "Perturb AP-1 motif content at specific enhancers and test state stability",
+      "description": "Use base editing or prime editing to delete or add TRE/CRE motifs at candidate memory enhancers, then measure whether the primed/persistent transcriptional state is lost or gained at those loci. Pair with a synthetic reporter carrying a tunable number of AP-1 sites to ask how motif density maps onto duration of state retention."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1118,
+  "cost_usd": 0.049094599999999995
+}

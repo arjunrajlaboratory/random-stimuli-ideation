@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 3,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic/degron pulse-chase of AP-1 timing",
+      "description": "Use an optogenetically controlled or auxin-degron c-Jun/Fos to deliver defined activity pulses and to remove AP-1 at set times after priming (not only during it). If memory persists after degradation, AP-1 only initiates it. If memory decays when AP-1 is removed, AP-1 maintains it."
+    },
+    {
+      "title": "Single-molecule live imaging of residence time and re-binding",
+      "description": "Track endogenously HaloTagged Fos/Jun by single-molecule tracking at defined loci (e.g., with a CRISPR-based locus label) in primed and naive cells. Test whether priming changes residence time, search kinetics, or the fraction of bound molecules, and whether the changes persist after AP-1 levels return to baseline."
+    },
+    {
+      "title": "Synthetic AP-1 site editing and dCas9 recruitment at one enhancer",
+      "description": "Mutate or insert AP-1 motifs at a single memory-associated enhancer, or tether dCas9\u2013Fos/Jun or dCas9\u2013repressor to it. Test whether this locus alone is necessary and sufficient to give primed accessibility and a faster re-response, which separates causal local memory from global effects."
+    },
+    {
+      "title": "Pioneer-factor cooperation and nucleosome positioning test",
+      "description": "Compare MNase-seq/nucleosome maps and BAF (SWI/SNF) occupancy at AP-1 sites after priming. Acute BRG1 inhibition or degradation after priming would test whether AP-1-dependent remodeling is what holds sites open, and whether other factors such as CEBP, ETS or glucocorticoid receptor are needed to maintain memory."
+    },
+    {
+      "title": "Lineage-tracing of memory through cell division with 3D genome readout",
+      "description": "Prime cells, track their lineages for several divisions by barcoding or live-cell tracking, and test response in descendants. Pair this with Micro-C or HiChIP at AP-1 enhancer\u2013promoter loops, and use mitotic bookmarking assays on mitotic chromosomes. Together these show whether AP-1-linked states are inherited and whether they depend on retained AP-1 or on a copied chromatin state."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq/CUT&RUN of AP-1 (c-Fos/c-Jun) binding before, during, and after stimulus",
+      "ATAC-seq of chromatin accessibility at AP-1 motifs after stimulus washout",
+      "Knockout/knockdown of FOS/JUN and test loss of memory response",
+      "Dominant-negative AP-1 (A-Fos) expression to block function",
+      "Re-stimulation assays measuring faster/stronger transcription of target genes",
+      "scRNA-seq to measure heterogeneity of memory responses",
+      "Histone mark ChIP (H3K27ac, H3K4me1) at AP-1 sites",
+      "Pharmacological AP-1 inhibitors (e.g., T-5224) during priming",
+      "Motif enrichment analysis of memory-associated enhancers",
+      "Time-course of AP-1 protein/mRNA levels after stimulus"
+    ]
+  },
+  "output_tokens": 1115,
+  "cost_usd": 0.0139408
+}

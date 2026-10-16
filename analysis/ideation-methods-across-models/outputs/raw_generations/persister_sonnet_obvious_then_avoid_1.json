@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Mitochondrial DNA heteroplasmy and mitochondrial priming",
+      "description": "Sequence mtDNA and perform BH3 profiling or live mitochondrial membrane potential/apoptotic-threshold measurements on sorted single cells before treatment, testing whether differences in mitochondrial state predict who survives."
+    },
+    {
+      "title": "Inheritance of survival state across cell divisions via sister-cell pair analysis",
+      "description": "Use time-lapse imaging of sister pairs and pedigrees, then apply the drug at different generations, to quantify how many divisions the persister-prone state is remembered and whether it is inherited as a fate-like memory or reset stochastically."
+    },
+    {
+      "title": "Asymmetric partitioning of organelles and proteins at division",
+      "description": "Label aggregated proteins, lysosomes, old mitochondria, or stress-granule components with photoconvertible or tandem timer tags and track whether cells that inherit larger or smaller loads at mitosis preferentially survive."
+    },
+    {
+      "title": "Single-cell metabolic flux and redox imaging",
+      "description": "Use FLIM of NAD(P)H, genetically encoded ATP/glutathione/ROS sensors, and lipid peroxidation probes in the same live cells later followed to survival, to test whether ferroptosis sensitivity and metabolic state determine persistence."
+    },
+    {
+      "title": "Stochastic gene-expression noise manipulation",
+      "description": "Engineer cells with promoter variants or feedback circuits that tune expression noise of a candidate survival gene at constant mean, then measure persister frequency to causally test whether noise itself, not the mean, drives survival."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "Single-cell RNA-seq of untreated vs. drug-treated populations to find persister transcriptional states",
+      "Whole-genome/exome sequencing of resistant clones to look for acquired mutations",
+      "Barcoded lineage tracing to test whether persisters pre-exist",
+      "ATAC-seq/ChIP-seq for chromatin accessibility and histone marks in persisters",
+      "Drug efflux pump (ABC transporter) expression and activity assays",
+      "Bypass signaling pathway profiling (phospho-proteomics, RTK arrays)",
+      "CRISPR knockout/activation screens for survival genes",
+      "Cell cycle analysis showing slow-cycling/quiescent persisters",
+      "Epigenetic inhibitor (HDAC/EZH2) combination tests",
+      "Live-cell imaging/time-lapse tracking of single-cell drug response"
+    ]
+  },
+  "output_tokens": 897,
+  "cost_usd": 0.0117417
+}

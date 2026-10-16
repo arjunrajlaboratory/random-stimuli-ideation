@@ -1,0 +1,44 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assumption_inversion",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing with sibling-split and pre-treatment profiling",
+      "description": "Label clonal cells with expressed lineage barcodes (e.g., Watermelon/FateMap-style), split sister cells before drug, profile one half by scRNA-seq and expose the other to drug, then test whether pre-treatment transcriptional state of a lineage predicts survival. This directly separates pre-existing from drug-induced tolerance and reveals the pre-treatment state of cells that would otherwise be destroyed."
+    },
+    {
+      "title": "Epigenomic and extrachromosomal DNA profiling of isogenic single cells",
+      "description": "Run single-cell multiome (ATAC + RNA), histone-mark profiling (e.g., CUT&Tag), and ecDNA/copy-number sequencing on untreated and surviving cells to test whether chromatin states or ecDNA dosage heterogeneity, not sequence mutations, distinguish survivors. Perturb candidate regulators (e.g., KDM5, EZH2 inhibitors) to test causality."
+    },
+    {
+      "title": "Long-term live-cell imaging with single-cell tracking and fate-mapping",
+      "description": "Image thousands of individual cells for days before, during, and after drug using fluorescent reporters (cell cycle FUCCI, ERK/AKT kinase translocation reporters, apoptosis caspase reporters, mitochondrial potential), then retrospectively link dynamics to fate. This captures fluctuating, non-binary states and the temporal course of persister entry, exit, and regrowth, rather than endpoint averages."
+    },
+    {
+      "title": "Rare-cell-enriched spatial and single-cell multi-omics from 3D/in vivo models",
+      "description": "Treat organoids, co-cultures, or xenografts with the drug and perform spatial transcriptomics/proteomics (e.g., MERFISH, imaging mass cytometry) to map where survivors sit relative to drug gradients, hypoxia, stroma, and immune cells. Compare to 2D to show which survival states are microenvironment-dependent artifacts or contributors."
+    },
+    {
+      "title": "Genome-wide CRISPR perturbation screens with single-cell readout across drug schedules",
+      "description": "Run CRISPRi/a and Perturb-seq screens under different doses and schedules (continuous, pulsed, combination) to find regulators of the persister state beyond the target pathway, covering metabolism, stress response, and chromatin. Compare hits across persistence, tolerance, and resistance phenotypes (time-kill curves) to determine which layer of regulation drives survival."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical means functionally identical: that clonal cells lack heritable differences, ignoring epigenetic, transcriptional, and mitochondrial/metabolic states, and extrachromosomal DNA copy-number variation.",
+      "Survivors are a pre-existing, distinct subpopulation (pre-adaptation) rather than cells that acquire tolerance in response to drug (or the reverse); the field usually tests only one of these.",
+      "Bulk or endpoint measurements (bulk RNA-seq, viability at 72 h) represent the rare cells; population averages are informative about a few percent of cells.",
+      "Survival is a single, binary, cell-intrinsic trait, so resistance is a stable property of a cell and not a dynamic state that fluctuates, switches, and differs from persistence versus tolerance versus true resistance.",
+      "In vitro monoculture in 2D with a constant drug dose is a reasonable model, ignoring the microenvironment, drug gradients, cell-cell interactions, and cell-cycle/microenvironment context.",
+      "Snapshot omics at one time point (usually after selection) can reveal causes, when survivors are only observed after the fact and the pre-treatment state of those cells is destroyed by the assay.",
+      "Mutations or known pathway reactivation (e.g., bypass signaling) are the most likely explanation, so the search is restricted to the drug target pathway and to a single molecular layer."
+    ]
+  },
+  "output_tokens": 1409,
+  "cost_usd": 0.018660800000000005
+}

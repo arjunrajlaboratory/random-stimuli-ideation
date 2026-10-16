@@ -1,0 +1,150 @@
+{
+  "batch": 52,
+  "question": "persister",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "572b83b41d6c3007ea3f95193145f0af41dcd2fa9f27a798815598a9a04ab28b",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "In vivo and spatial mapping of persisters",
+      "description": "Apply spatial transcriptomics and barcode lineage tracing to xenograft or patient tumor biopsies before treatment, during treatment, and at minimal residual disease. Map where survivors are located, such as near hypoxic or stromal niches, and what they share with matched cell-line persisters. Comparing in vivo and in vitro survivors shows which mechanisms are cell-intrinsic and which depend on the local environment.",
+      "idea_id": "persister_sonnet_future_retrospective_2_4",
+      "source_sha256": "7bf518402ccaa4e78b91c2c9f42d29e590432dad52a6971e721789eb17dda7c2"
+    },
+    {
+      "id": "I2",
+      "title": "Sorting by intracellular drug accumulation",
+      "description": "Use a fluorescent or intrinsically fluorescent analog of the drug, or mass-spectrometry imaging, to measure each cell's drug uptake and efflux pump activity. Sort cells into low, mid, and high accumulation bins, treat each bin, and test whether survival tracks pharmacokinetic heterogeneity rather than a molecular state.",
+      "idea_id": "persister_haiku_critique_revise_3_1",
+      "source_sha256": "589591f1c24c34132f1778274da64d33ec5d14ad3eb9c359a3f62be6ec4b0a4a"
+    },
+    {
+      "id": "I3",
+      "title": "Spatial and co-culture perturbation of microenvironment effects",
+      "description": "Use spatial transcriptomics or imaging with defined neighbor-density gradients, conditioned media, and sparse versus dense plating or microfluidic isolation of single cells to test whether survival depends on neighbors, paracrine signals, or local drug and oxygen gradients. Comparing isolated cells to colonies separates cell-intrinsic from community-driven survival.",
+      "idea_id": "persister_sonnet_assumption_inversion_2_2",
+      "source_sha256": "daa1d1e65fcdde6281d47e9d8b211949cc47119bd1283293d2586cd9d0f300f5"
+    },
+    {
+      "id": "I4",
+      "title": "Dye-dilution pulse-chase to infer survivor cell histories",
+      "description": "Label cells with a division-tracking dye such as CFSE, then treat and measure the dye content of survivors by flow cytometry. Dim cells (dye diluted) indicate recent division, whereas bright cells (dye retained) indicate quiescence or slow cycling before treatment. This reveals whether tolerance is linked to a slow-cycling state.",
+      "idea_id": "persister_haiku_instruction_only_7_2",
+      "source_sha256": "fa973d4070e840dc3edcfec4f4e4fc8a7bcef06a6e106c9428628888ccd96247"
+    },
+    {
+      "id": "I5",
+      "title": "Time-lapse fate tracking with causal perturbation of candidate survival markers",
+      "description": "Track single cells by live imaging through drug exposure to separate true resistance from delayed death or quiescence, and record the pre-treatment state of each cell. Then sort or fate-map survivors and use CRISPRi or degron knockdown of candidate markers to test whether they are necessary for survival.",
+      "idea_id": "persister_haiku_assumption_inversion_4_4",
+      "source_sha256": "918bb2cde53e3c6ce1ea788ee5a013b77665042d9185c88f043f777f6141bdc8"
+    },
+    {
+      "id": "I6",
+      "title": "Hazard analysis of single-cell death times",
+      "description": "Track thousands of individual cells with a live death or proliferation reporter (e.g., FUCCI plus a caspase sensor) under constant drug, and model death times with Weibull or exponential hazard functions. A constant hazard suggests stochastic survival, while age-dependent or heritable hazards point to a memory-driven, pre-existing tolerant state.",
+      "idea_id": "persister_haiku_instruction_only_0_1",
+      "source_sha256": "a24edf85cd2d134f5e3bec394944e79a688cbd75d4df74d8c5e0d4d04a171f9b"
+    },
+    {
+      "id": "I7",
+      "title": "Live-cell time-lapse imaging with reporters followed by fate-linked fixed profiling",
+      "description": "Image cells carrying reporters (such as FUCCI for cell cycle, ERK/AKT activity, and apoptosis markers) for several days before and during drug treatment, and track single-cell fates. After imaging, fix the cells in place and run multiplexed immunofluorescence or in situ RNA staining on the same cells. This links dynamic signaling history and cell-cycle state to survival or death.",
+      "idea_id": "persister_sonnet_assigned_constraint_5_1",
+      "source_sha256": "6ff1f4b7ce9a81db1a8689d4fed10fb2b57738612e29ae2b1ea49efe3dacaa28"
+    },
+    {
+      "id": "I8",
+      "title": "Same clones across many hosts or environments",
+      "description": "Inject a single barcoded population into many mice, or into many in vitro microenvironments that differ in density, stroma, or nutrients. Treat each one and compare which barcodes survive. If the same clones survive everywhere, survival is cell-intrinsic; if the overlap depends on context, then microenvironmental factors such as neighbors, mechanics, or metabolism help determine which identical cells survive.",
+      "idea_id": "persister_opus_future_retrospective_5_4",
+      "source_sha256": "389b78599824078ebeb6b51855be8a859b1f6ee957ca261b780d5025c17cfae0"
+    },
+    {
+      "id": "I9",
+      "title": "Single-cell apoptotic priming profiling (BH3 profiling)",
+      "description": "Perform dynamic BH3 profiling or single-cell mitochondrial priming measurements on untreated cells, then sort by priming level and correlate priming with survival after treatment. This tests whether persistence is set by a pre-existing apoptotic threshold rather than by pathway reactivation.",
+      "idea_id": "persister_sonnet_critique_revise_5_1",
+      "source_sha256": "efdcf0043fd850fc9de91c89636d6d2649b7623e68664be051bd525ef30cee83"
+    },
+    {
+      "id": "I10",
+      "title": "Spatial neighborhood mapping of survivors in fixed coordinates",
+      "description": "Image the monolayer at the moment of drug addition to record each cell's local density, neighbor identities, and contact geometry, then re-image the same field after the main killing phase to locate survivors. Testing whether survivors are spatially clustered, preferentially arise at colony edges, or sit beside specific secreting neighbors distinguishes a cell-intrinsic primed state from locally produced paracrine protection. Conditioned-medium and sparse-versus-dense plating controls can then confirm the result.",
+      "idea_id": "persister_opus_critique_revise_0_4",
+      "source_sha256": "a2a719ab584314397e9de153839a21fcb7c4d0ffa0d263589182904f0a7529a2"
+    },
+    {
+      "id": "I11",
+      "title": "Sibling-split profiling to read the survivor's pre-drug state",
+      "description": "Barcode a population, let each cell divide a few times, then split each clone so that one half is drug-challenged and the matched half is profiled untreated by single-cell RNA-seq. Because barcodes link the two halves, the transcriptome of cells that would have survived can be read without exposing them to drug, separating pre-existing priming from drug-induced adaptation.",
+      "idea_id": "persister_opus_overgenerate_select_2_0",
+      "source_sha256": "543f39d2618061feb1e4bf2b027b89613a139858f2a2ed43b8728cf72ecf02df"
+    },
+    {
+      "id": "I12",
+      "title": "Sister-cell pairing with pre-treatment profiling",
+      "description": "Separate the daughters of a cell division, profile one by scRNA-seq (destructively) and treat the other, then link the profile to survival using clonal lineage similarity. This could identify the pre-treatment transcriptional state that predicts survival, rather than inferring it after the fact.",
+      "idea_id": "persister_sonnet_overgenerate_select_0_1",
+      "source_sha256": "39a1f9cd10cf74f02b7ca599c4439c22c8d9549a6dc0a1024be3cb36055b77c6"
+    },
+    {
+      "id": "I13",
+      "title": "Spatial profiling of residual tumor in organoids or xenografts",
+      "description": "Treat tumor organoids or xenografts and use spatial transcriptomics or multiplexed imaging to map where survivors sit relative to hypoxic zones, cell-cell contacts, vasculature, and stroma. Survivor enrichment that tracks a niche rather than a fixed intrinsic profile would show that the environment, not the cell alone, drives survival.",
+      "idea_id": "persister_haiku_assumption_inversion_2_3",
+      "source_sha256": "29e7da9d91b4351b3ff14efd0e2c20910260c003ff238153051321cf6ca04e27"
+    },
+    {
+      "id": "I14",
+      "title": "Error-corrected single-cell genomics of pre-existing variants",
+      "description": "Use single-cell DNA sequencing or duplex-consensus, deep-coverage sequencing of the pre-treatment population to detect rare subclonal SNVs and CNVs. Then test whether those variants are enriched in survivors and whether they are causal using CRISPR knock-in. This checks whether the cells are truly genetically identical, which bulk sequencing cannot show.",
+      "idea_id": "persister_haiku_assumption_inversion_0_3",
+      "source_sha256": "fc2a99b3e924ba867be937605c97331abb0df909f7569705c39bd1b9c2b74901"
+    },
+    {
+      "id": "I15",
+      "title": "Reversibility kinetics after drug withdrawal",
+      "description": "Use a fluorescent chromatin-state reporter (for example, an H3K27me3 or H3K4me3 sensor) and measure at single-cell resolution over days how survivors revert to sensitivity after drug removal. Whether the survival state decays on a predictable timescale distinguishes a heritable epigenetic memory from a reversible, non-genetic switch.",
+      "idea_id": "persister_haiku_future_retrospective_3_2",
+      "source_sha256": "3ad2fc17796942733c059fd48affda0dd866eb779763a99d3c256dfb833e124d"
+    },
+    {
+      "id": "I16",
+      "title": "Mitochondrial content and mtDNA heteroplasmy sorting",
+      "description": "Sort untreated cells by mitochondrial mass, membrane potential, or mtDNA heteroplasmy, then drug-challenge each bin to see whether mitochondrial state predicts survival. Single-cell mtDNA variants can also serve as natural lineage markers to test clonal inheritance.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_2_1",
+      "source_sha256": "54d26c201fb6435039dd0e4e12a1ad353b83ff0d9af9a0d8baf74e3d469d81d4"
+    },
+    {
+      "id": "I17",
+      "title": "Making the rare state common",
+      "description": "Use CRISPRa/CRISPRi, defined signaling pre-treatments, or forced cell-cycle and metabolic states to drive a large fraction of cells into the candidate pre-resistant state, then measure whether the surviving fraction shifts by orders of magnitude in the predicted direction. Pairing this with experiments that erase the state turns correlative single-cell profiling into a sufficiency-and-necessity test with an effect-size readout.",
+      "idea_id": "persister_opus_future_retrospective_1_3",
+      "source_sha256": "a8a34630a6c69bada42313ec7fc1fd08e6041ddefa1028f04d3d0b1acdcdc04a"
+    },
+    {
+      "id": "I18",
+      "title": "Neighbor-effect analysis with density titration and conditioned-media swaps",
+      "description": "Vary seeding density, local neighbor composition, and secreted-factor exposure, and use spatial transcriptomics or imaging to ask whether survivors cluster or depend on paracrine or contact signals, such as extruded metabolites, growth factors, or cell-cell junction signaling. Comparing survivor frequency against local cell density tests whether apparent cell-intrinsic heterogeneity is actually determined by position and neighbors.",
+      "idea_id": "persister_sonnet_critique_revise_6_4",
+      "source_sha256": "eb30c07ba0a76caa0f104248da862aff13285b82233b000c33faaa825c11ce18"
+    },
+    {
+      "id": "I19",
+      "title": "Single-cell apoptotic priming and stress-response heterogeneity",
+      "description": "Measure per-cell BH3 profiling or live mitochondrial outer-membrane permeabilization reporters, along with caspase kinetics and BCL-2 family protein levels. This tests whether survivors are cells with high apoptotic thresholds or slow accumulation of death signals.",
+      "idea_id": "persister_sonnet_obvious_then_avoid_7_2",
+      "source_sha256": "3c864e043d0a92d0746d0baf2a59407ea56376532523e7b7349f22af64115c94"
+    },
+    {
+      "id": "I20",
+      "title": "Pooled CRISPR perturbation of state switching with single-cell readout",
+      "description": "Run genome-wide or epigenome-focused CRISPRi/a screens with Perturb-seq under drug, scoring not only survival but also the rate of switching into and out of the tolerant state and the shape of the state landscape. This separates genes that set the baseline probability of persistence from genes that maintain the tolerant state once it is entered.",
+      "idea_id": "persister_sonnet_future_retrospective_2_3",
+      "source_sha256": "c4d39173bd4764b726f12d2d2e2298e9b73d105b740d52d21f724ce917788abf"
+    }
+  ],
+  "cost_usd": 0.0485372
+}

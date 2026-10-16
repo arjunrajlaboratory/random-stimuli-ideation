@@ -1,0 +1,59 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "High-complexity lineage barcoding with fluctuation analysis",
+      "description": "Barcode a clonal population, split into replicate arms, and treat; if the same barcodes survive across replicates, survival is a heritable pre-existing state, whereas random barcodes imply induced stochastic entry. Fitting state-switching rates to the barcode distributions quantifies how long the surviving state persists."
+    },
+    {
+      "title": "Sister-cell pairing with pre-treatment profiling",
+      "description": "Separate daughters of a division, destructively profile (scRNA-seq) one and treat the other, then link the profile to survival using clonal lineage similarity. This could identify the pre-treatment transcriptional state that predicts survival, rather than inferring it after the fact."
+    },
+    {
+      "title": "Live-cell imaging with retrospective lineage tracking",
+      "description": "Image thousands of single cells for days before drug addition with reporters for cell cycle, ERK/p53 or stress signaling, and mitochondrial state, then follow fates after treatment. Mapping survivors back to their pre-drug dynamics (e.g., pulses, cycle length) reveals which dynamic features predict survival."
+    },
+    {
+      "title": "Single-cell multiome of epigenetic priming",
+      "description": "Perform joint ATAC and RNA profiling on untreated, early-treated, and persister populations to find chromatin accessibility present before drug that foreshadows the persister program. Validate by perturbing the identified regulators or chromatin modifiers (e.g., KDM5, HDAC inhibitors) to see if the surviving fraction shifts."
+    },
+    {
+      "title": "Genome-wide CRISPR screens plus BH3 profiling for survival mechanisms",
+      "description": "Run CRISPR knockout/activation screens under drug to identify genes that set the persister fraction, and pair them with single-cell BH3 profiling to test whether survivors are in a lower apoptotic-priming state. This separates causal drivers from correlates and shows whether survival works through apoptosis evasion, metabolism, or stress response."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., ClonTracer/Watermelon) to test whether persisters arise from pre-existing or drug-induced states",
+      "Single-cell RNA-seq of cells before and after drug exposure",
+      "Paired sister-cell experiments: split daughters, treat one, profile the other (pre-treatment state prediction)",
+      "Live-cell time-lapse imaging with fluorescent reporters of stress/signaling, tracked back to pre-drug history",
+      "Single-cell multiome (ATAC + RNA) to find epigenetic priming of persisters",
+      "Mitochondrial mass/membrane potential and metabolic flux (FLIM NADH) in survivors",
+      "Cell-cycle state and slow-cycling dynamics via FUCCI or dye dilution",
+      "Drug efflux transporter activity measurement at single-cell level",
+      "Genome-wide CRISPR screens for persister survival modulators",
+      "Single-cell DNA-seq to rule out/in rare genetic resistance mutations",
+      "Spatial transcriptomics in 3D culture/tumors to test microenvironment contributions",
+      "Proteomic/phosphoproteomic single-cell profiling of signaling rewiring (CyTOF)",
+      "Lipid peroxidation/ferroptosis sensitivity assays in persisters",
+      "Histone modification profiling (CUT&Tag) in persisters; test KDM5 inhibitors",
+      "Cell-size, growth-rate and mass measurement via suspended microchannel resonators",
+      "Mathematical modeling of state-switching rates fitted to fluctuation-test (Luria-Delbr\u00fcck) data",
+      "Transcription burst/noise measurement via smFISH of key genes and noise perturbation",
+      "Reversibility/drug-holiday assays tracking loss of persister phenotype and memory duration",
+      "Metabolic rewiring tracking with isotope tracing in sorted persisters",
+      "Translation regulation/ribosome profiling and integrated stress response in persisters",
+      "Mitochondrial apoptotic priming via BH3 profiling of single cells",
+      "DNA damage/repair capacity and mutagenesis (stress-induced) in persisters"
+    ]
+  },
+  "output_tokens": 1443,
+  "cost_usd": 0.018968600000000002
+}

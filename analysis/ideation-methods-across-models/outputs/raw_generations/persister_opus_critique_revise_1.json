@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Time-lapse imaging to persistence with retrospective tracking: Continuously image a labeled population from before drug addition through the emergence of surviving colonies, tracking every lineage. Then work backward from the survivors to quantify what distinguished them beforehand: cell cycle phase at treatment onset, division history, size, motility, and local neighbor density.\n2. Paired pre- and post-treatment profiling of the same clone via split-population barcoding: Transduce cells with heritable expressed barcodes, split into treated and untreated arms, and sequence both. Barcodes enriched among survivors identify which clones were primed, and single-cell transcriptomes of their untreated counterparts reveal the pre-existing expression state responsible.\n3. Fluctuation-style assay to separate heritable priming from stochastic coin-flips: Expand many independent small subpopulations from single cells, then treat each identically and count survivors. Large clone-to-clone variance in survivor number indicates a heritable, epigenetically transmitted predisposition, while Poisson-like variance points to a transient, cell-autonomous event at the time of treatment.\n4. Chromatin accessibility and histone-mark mapping of survivors versus naive cells: Apply single-cell ATAC-seq and CUT&RUN for repressive and enhancer marks to drug-naive cells, early survivors, and cells after drug withdrawal. This tests whether survival depends on pre-opened enhancers at stress or lineage-plasticity genes and whether that state is reversible.\n5. Signaling and metabolic state reporters measured live at single-cell resolution: Engineer fluorescent reporters for pathway reactivation (ERK or AKT kinase activity), mitochondrial apoptotic priming, and redox or lipid-peroxidation state, then image them in individual cells across treatment. Correlating reporter trajectories with each cell's fate shows whether survival reflects incomplete target inhibition, a high apoptotic threshold, or a distinct metabolic dependency.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell pharmacokinetics: image the drug itself",
+      "description": "Synthesize an alkyne- or deuterium-tagged analog of the targeted inhibitor (or use its intrinsic fluorescence) and quantify intracellular drug concentration cell-by-cell with stimulated Raman scattering microscopy or MALDI/nanoSIMS imaging, at early timepoints and in the eventual survivors. This directly tests the rarely-excluded trivial hypothesis that persisters are simply cells with lower drug accumulation \u2014 from efflux, lipid-droplet sequestration, or lysosomal trapping \u2014 rather than cells in a special signaling state."
+    },
+    {
+      "title": "Allele-resolved smFISH to separate a burst from a state",
+      "description": "Use intron/exon and SNP-discriminating single-molecule FISH on candidate priming genes (e.g. AXL, NGFR, EGFR) in drug-naive cells to measure nascent transcription at each allele, then fit burst frequency, size, and duration. Monoallelic, short-lived bursts with uncorrelated alleles imply priming is transient transcriptional noise; coordinated biallelic activation that persists across the cell cycle implies an upstream heritable chromatin or signaling state \u2014 a distinction that bulk or standard scRNA-seq snapshots cannot make."
+    },
+    {
+      "title": "CRISPR screen scored on survivor clone diversity, not survivor number",
+      "description": "Barcode the library-infected population so every cell carries both a guide and a lineage barcode, then score each gene knockout by the barcode diversity (effective number of surviving clones) among survivors rather than by total survival. Genes that change how many independent clones survive while leaving bulk killing kinetics intact are regulators of state-switching rate, cleanly separable from genes that merely shift intrinsic drug sensitivity."
+    },
+    {
+      "title": "Optogenetic entrainment to test sufficiency of the primed state",
+      "description": "Use an optogenetic actuator of the candidate upstream node (e.g. opto-SOS/opto-Raf for frequency-encoded ERK, or a light-inducible dCas9 activator at a candidate priming locus) to drive the whole population into the putative primed state with defined pulse amplitude and frequency before adding drug. If priming is causal and rate-limiting, the persister fraction should rise toward 100% in a dose- and frequency-dependent way; failure to do so bounds how much of survival the state actually explains."
+    },
+    {
+      "title": "Micropatterned neighborhoods and apoptotic-corpse swaps",
+      "description": "Plate cells on micropatterns that fix colony size, spacing, and neighbor number, and separately add purified apoptotic bodies or conditioned medium from drug-killed cells to sparse cultures. This converts neighbor density from a correlate into a controlled variable and tests whether dying cells actively license their neighbors to survive \u2014 via released factors, apoptosis-induced proliferation signals, or metabolite handoff \u2014 rather than survivors being intrinsically special."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3824,
+  "cost_usd": 0.1434455
+}

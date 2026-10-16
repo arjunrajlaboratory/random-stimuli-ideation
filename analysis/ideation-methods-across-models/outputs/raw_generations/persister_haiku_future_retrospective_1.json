@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment lineage barcoding to test whether survivors were marked before the drug",
+      "description": "Label individual cells with heritable barcodes (e.g., CellTag-style lineage tags), expose the population to a targeted drug, and trace which clones persist. If survivors already carried a distinct barcode-linked state before treatment, the field's 'random switching' explanation is wrong and the pre-existing state becomes the target."
+    },
+    {
+      "title": "Baseline multi-omic profiling with prospective sort-and-test validation",
+      "description": "Profile chromatin accessibility and transcription in drug-naive cells at single-cell resolution, train a classifier that predicts which cells will survive, then sort the predicted survivors and drop-treat them to check the prediction. Success or failure of the prospective test would show whether a survival signature exists before any drug exposure."
+    },
+    {
+      "title": "Live reporters of drug engagement and cell-cycle state at the moment of dosing",
+      "description": "Combine a kinase or target-occupancy biosensor with a cell-cycle reporter (e.g., FUCCI) and time-lapse imaging to record each cell's drug binding and cycling status at the instant of treatment. Retrospectively tracking which cells stay unbound, quiescent, or efflux-high would reveal whether survival is set by drug pharmacology rather than by intrinsic biology."
+    },
+    {
+      "title": "Pulsed-dose CRISPR screens to find persister-specific dependencies",
+      "description": "Run genome-wide CRISPR knockout screens at multiple timepoints during intermittent (pulsed) drug exposure rather than a single high dose, and compare guide dropout in persisters versus bulk cells. Genes that are essential only in the persister state would expose a therapeutic vulnerability that bulk-cell screens miss."
+    },
+    {
+      "title": "Drug-holiday reversibility with epigenetic rewriting",
+      "description": "Track chromatin marks (ATAC-seq, CUT&Tag for histone modifications) across drug holidays and regrowth to see whether the survival state is inherited epigenetically. Then use targeted epigenetic editors to erase or install the marks and test whether survival is lost or gained without any genetic change."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2059,
+  "cost_usd": 0.0011715999999999999
+}

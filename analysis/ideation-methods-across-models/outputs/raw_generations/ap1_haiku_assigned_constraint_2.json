@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 2,
+  "constraint": "using live-cell imaging as the only readout",
+  "prompt": "Constraint: every one of your ideas must be carried out using live-cell imaging as the only readout. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout persistence as a function of pulse duration",
+      "description": "Expose cells carrying a live AP-1 transcriptional reporter (for example, a destabilized fluorescent protein under AP-1 response elements) to stimulus pulses of varying length, then wash out and track reporter decay for days. Memory is supported if the persistence time scales with pulse duration and outlasts the reporter's protein turnover and the stimulus clearance."
+    },
+    {
+      "title": "Savings test with varied inter-pulse intervals",
+      "description": "Give two stimulus pulses separated by different rest intervals and compare the second response's latency, amplitude, and duration with the first using endogenous AP-1 subunit tags (e.g., JUNB or FOSL1 knock-in fluorescent fusions). A faster or stronger second response that decays with longer intervals is a direct, quantifiable signature of memory."
+    },
+    {
+      "title": "Heritability of AP-1 state across cell divisions",
+      "description": "Stimulate cells, remove the stimulus, and track lineages with a nuclear marker while recording the AP-1 reporter in each cell and its daughters. Quantify how well the pre-division state predicts daughter states (lineage autocorrelation), since carrying AP-1 activity through divisions would indicate a heritable memory rather than a signal-dependent state."
+    },
+    {
+      "title": "Degron-based causal test during the memory window",
+      "description": "Once persistent AP-1 activity is established, use an inducible degradation tag (e.g., auxin or dTAG) on a JUN or FOS subunit to remove the protein while following the reporter in real time. If the persistent state collapses on degradation, AP-1 is necessary to maintain it, while persistence after degradation would argue against it being the memory store."
+    },
+    {
+      "title": "Chromatin residence time of AP-1 after stimulus removal",
+      "description": "Use HaloTag-labeled JUN or FOS with live-cell FRAP or single-molecule tracking to measure how long AP-1 remains bound to chromatin after stimulus withdrawal and how that residence time changes over days. A residence time that stays elevated after the signal ends would provide a molecular, binding-level readout of memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1961,
+  "cost_usd": 0.00119965
+}

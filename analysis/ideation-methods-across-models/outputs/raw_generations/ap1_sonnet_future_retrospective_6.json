@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Optogenetic AP-1 pulse-and-erase memory test",
+      "description": "Use an optogenetically controlled c-Jun/c-Fos (or degron-tagged) system to deliver a transient AP-1 pulse, then rapidly remove it and track chromatin accessibility and target gene expression for weeks across cell divisions. Memory is supported only if the accessible state and transcription persist after AP-1 is gone, and it is refuted if they decay with the half-life of AP-1 itself."
+    },
+    {
+      "title": "Single-cell lineage-traced multiome of stimulated clones",
+      "description": "Barcode single cells before an inflammatory or injury stimulus, let sister clones expand, then run paired scATAC/scRNA on the sibling cells with and without re-challenge. Greater within-clone than between-clone similarity of AP-1 motif accessibility and re-stimulation response would show heritable memory rather than stochastic or continuous signaling."
+    },
+    {
+      "title": "Acute degradation of AP-1 after priming to separate initiation from maintenance",
+      "description": "Prime cells with a stimulus, then use dTAG/AID degradation of FOS, JUN, or the pioneer-like partner BAF at defined times after priming and measure the secondary response. If primed enhancers stay open and responsive without AP-1, AP-1 is only an initiator. If they close, AP-1 actively maintains the memory."
+    },
+    {
+      "title": "Live imaging of endogenous AP-1 binding dynamics at memory loci",
+      "description": "Tag endogenous JUN/FOS with HaloTag and use single-molecule tracking, together with a locus-specific live reporter of a memory enhancer, in dividing cells. Measure residence time, mitotic bookmarking, and post-mitotic re-binding to test whether AP-1 stays on mitotic chromosomes and re-establishes the same sites, or whether it is lost and the sites are re-specified by other factors."
+    },
+    {
+      "title": "Epigenome-editing causality test: write or erase the AP-1 site versus its downstream marks",
+      "description": "Use CRISPR base editing to mutate AP-1 motifs at memory enhancers, and dCas9 tools to deposit or erase H3K27ac and H3K4me1 or DNA methylation at the same loci, in primed cells. Ask which manipulation abolishes the enhanced second response and its inheritance. This would show whether the AP-1 motif and binding is necessary, or whether downstream chromatin marks carry the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 877,
+  "cost_usd": 0.0115441
+}

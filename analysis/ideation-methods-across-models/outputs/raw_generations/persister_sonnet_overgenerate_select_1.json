@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell splitting with lineage barcodes",
+      "description": "Barcode a population, split it into replicate pools after a few divisions, and treat one pool while profiling the other by scRNA-seq. Matching barcodes between survivors and untreated sisters reveals the pre-treatment state of cells that would have survived, and shows how heritable it is."
+    },
+    {
+      "title": "Retrospective live-cell tracking of future survivors",
+      "description": "Time-lapse image cells with reporters for signaling (ERK/AKT), cell cycle (FUCCI), and mitochondria before and during drug, then trace survivors backward to find pre-treatment features that predict fate. Fixing and multiplexed staining of the same cells afterward adds molecular depth."
+    },
+    {
+      "title": "Fluctuation assays across subclones to estimate switching rates",
+      "description": "Run Luria-Delbr\u00fcck-style experiments with many single-cell-derived subclones, measuring variance in survivor numbers and how quickly the survivor propensity is lost or regained after drug-free expansion. This distinguishes fixed rare mutations from reversible, epigenetic state switching and estimates the transition rates."
+    },
+    {
+      "title": "BH3 profiling and apoptotic priming in untreated cells",
+      "description": "Measure mitochondrial apoptotic priming and BCL-2 family dependencies at single-cell resolution in drug-naive cells, and relate them to survival after treatment. This tests whether survivors simply sit lower in the apoptotic threshold distribution rather than having a distinct resistance program."
+    },
+    {
+      "title": "Persister-specific CRISPR dependency screens",
+      "description": "Perform genome-wide or targeted CRISPR knockout/inhibition screens under drug, and compare guide depletion in persisters against untreated growth. This finds genes needed only for survival (e.g., chromatin regulators, ferroptosis defense), which can then be tested in combination with the drug."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., ClonMapper) with sister-cell splitting to test pre-existing vs. induced resistance",
+      "Luria-Delbr\u00fcck fluctuation assays across many subclones to measure heritability and switching rates",
+      "Single-cell RNA-seq of barcoded cells before treatment, linked to later survival fate",
+      "Live-cell time-lapse imaging with fluorescent reporters of signaling (ERK/AKT) tracking survivors backward in time",
+      "Single-cell ATAC/multiome profiling of chromatin state in persisters",
+      "Mitochondrial mass/membrane potential sorting before drug exposure",
+      "Single-cell proteomics/CyTOF of apoptotic priming (BH3 profiling) in untreated cells",
+      "Metabolic imaging (FLIM of NADH) to find pre-treatment metabolic states predicting survival",
+      "Cell-cycle history tracking (FUCCI, slow-cycling label retention) vs survival",
+      "CRISPR screens in persisters for genes required for survival but not for baseline growth",
+      "Drug-tolerant persister rebound kinetics and drug holiday cycling to test reversibility",
+      "Single-cell DNA-seq/copy number to rule out or detect extrachromosomal DNA and aneuploidy differences",
+      "Epigenetic inhibitor combination screens (HDAC, KDM5, EZH2) to see if persistence collapses",
+      "Spatial transcriptomics of residual disease in xenografts to test microenvironment contributions",
+      "Stochastic gene-expression noise measurement of key genes and noise-perturbation (e.g., noise-modulating compounds)",
+      "Lipidomics/ferroptosis sensitivity profiling of persisters",
+      "Intracellular drug concentration/efflux measurement by single-cell fluorescent drug analogs or mass spec imaging",
+      "Mathematical modeling of state-transition dynamics fitted to barcode and time-lapse data",
+      "Stress-response/ISR and p53 pulse dynamics reporters under drug",
+      "Paired comparison of persisters from patient biopsies on-treatment vs naive using single-cell sequencing"
+    ]
+  },
+  "output_tokens": 1406,
+  "cost_usd": 0.016843200000000003
+}

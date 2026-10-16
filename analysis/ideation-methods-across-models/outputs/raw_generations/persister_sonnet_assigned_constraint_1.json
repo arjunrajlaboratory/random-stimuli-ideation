@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 1,
+  "constraint": "with a total budget under $20,000",
+  "prompt": "Constraint: every one of your ideas must be carried out with a total budget under $20,000. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Barcoded lineage tracing before and after drug (Watermelon/ClonTracer-style)",
+      "description": "Label a clonal line with a high-complexity expression barcode library, split into replicate pools, treat with the targeted drug, and sequence barcodes pre- and post-treatment. If the same barcodes survive across replicates, the cause is a pre-existing heritable state. If different barcodes survive, the cause is stochastic or induced. Cost is roughly $5\u201310k, covering the library, cell culture and amplicon sequencing."
+    },
+    {
+      "title": "Single-cell RNA-seq of matched lineages (pre-drug sister cells vs. survivors)",
+      "description": "Split barcoded cells so that sister cells are profiled by scRNA-seq before drug and survivors are profiled after. This links the transcriptional state before treatment (for example drug-efflux, EMT-like, or stress-response programs) to later survival. Sequencing about 10\u201320k cells across timepoints fits within about $10\u201315k."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with fluorescent reporters and lineage tracking",
+      "description": "Image cells for days before and during drug exposure. Use reporters for ERK or AKT signaling, cell cycle (FUCCI), and apoptosis, and track single-cell lineages. This shows whether survival is predicted by pre-existing signaling dynamics, slow cycling, or inherited fluctuations, and whether it correlates between sister cells. Use an existing microscope and open-source tracking software, with reagents costing about $3\u20138k."
+    },
+    {
+      "title": "Sort-and-profile of rare states (FACS on candidate markers, then bulk ATAC/RNA-seq and drug re-challenge)",
+      "description": "Sort cells by candidate markers such as a surface marker, a fluorescent reporter of a resistance-associated gene, or a mitochondrial or ROS dye. Then test drug sensitivity and chromatin accessibility and expression in each fraction. Compare how fast sorted populations return to the original distribution to measure state-switching rates and epigenetic memory. Reagents and sequencing cost about $8\u201312k."
+    },
+    {
+      "title": "Perturbation screen of candidate persistence mechanisms",
+      "description": "Run a focused CRISPRi/CRISPRa screen, or a small-molecule screen, targeting chromatin regulators, stress-response genes, drug transporters, and metabolic enzymes. Treat with the drug and score enrichment or depletion of survivors. This tests which pathways are causally needed for survival, as opposed to merely correlated with it. Use a few hundred genes with 5\u201310 guides each, which costs about $10\u201315k."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 939,
+  "cost_usd": 0.013757499999999999
+}

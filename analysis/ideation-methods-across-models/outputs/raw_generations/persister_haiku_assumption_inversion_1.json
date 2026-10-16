@@ -1,0 +1,45 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 1,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Duplex sequencing and barcoded lineage tracing of pre-existing subclones",
+      "description": "Use duplex or error-corrected deep sequencing, plus heritable DNA barcodes, to detect rare pre-existing variants and clonal lineages before treatment and compare them with survivors. This tests whether 'genetically identical' hides low-frequency clones that account for survival (assumption 1)."
+    },
+    {
+      "title": "Live-cell reporter tracking to predict survival from pre-treatment state",
+      "description": "Track single cells over time with fluorescent reporters (e.g., FUCCI for cell cycle, or a pathway activity sensor) before and during drug exposure, then test whether pre-treatment reporter state predicts which cells die. If survival is not predictable, it is stochastic, which tests the fixed-fate and bulk-averaging assumptions (assumptions 2 and 6)."
+    },
+    {
+      "title": "Drug washout and re-challenge with time-resolved single-cell multiomics",
+      "description": "Expose cells to drug, withdraw it at defined times, and re-challenge while profiling scRNA-seq and scATAC-seq at each step. If survivors revert to drug sensitivity after washout, the persister state is reversible and not a stable heritable resistance (assumption 4)."
+    },
+    {
+      "title": "Spatial mapping of survivors against measured local drug concentration",
+      "description": "Treat organoids or xenografts and combine spatial transcriptomics or multiplexed imaging with a per-cell readout of drug exposure, such as a fluorescent drug analogue or a sensor of target engagement. This tests whether survivors cluster in low-exposure or protective niches (hypoxic, perivascular, contact-dependent) rather than being intrinsically resistant (assumptions 3 and 5)."
+    },
+    {
+      "title": "Sublethal-dose pooled CRISPR screen with survivor sorting and perturbation validation",
+      "description": "Run a genome-wide or CRISPRi screen at a sublethal dose, sort or compare surviving populations, and validate top hits by individual knockouts, including bypass and efflux genes, in cells with and without the transporter blocked. Enriched hits that rescue survival after targeted validation test whether the target is the only relevant pathway and whether the correlates are causal (assumptions 7 and 8)."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Genetically identical means functionally identical: standard sequencing is assumed to rule out pre-existing low-frequency subclones or somatic variants that could explain survival.",
+      "Survival is a fixed property determined before drug exposure, rather than a stochastic or dynamic fate that depends on what happens during treatment.",
+      "Every cell receives the same effective drug exposure, meaning the same intracellular concentration and target occupancy, regardless of position or efflux capacity.",
+      "Survivors represent a stable, heritable state, so 'persistence' and durable 'resistance' are treated as the same phenomenon.",
+      "Survival is governed by cell-intrinsic programs, with the microenvironment (neighbours, oxygen, extracellular matrix, spatial niche) assumed to be irrelevant or uniform.",
+      "Bulk or endpoint measurements (population sequencing, population-averaged expression) accurately reflect the mechanisms operating in individual surviving cells.",
+      "The drug acts only through its intended target, and the surrounding signalling network is fixed, so bypass pathways and compensatory feedback are not considered.",
+      "A feature correlated with survival is causal, and in vitro culture conditions are representative of the in vivo tumour setting."
+    ]
+  },
+  "output_tokens": 3982,
+  "cost_usd": 0.0021340800000000004
+}

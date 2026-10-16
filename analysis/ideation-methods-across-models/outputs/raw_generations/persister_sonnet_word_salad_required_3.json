@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sister-cell tracking",
+      "description": "Label clonal cells with heritable expression barcodes (e.g., ClonTracer/TREX-style), split the population before drug exposure, and compare sister-cell fates to see whether survival is heritable and which pre-existing transcriptional states predict it. Like the 'bimodal' pattern in the material, this tests whether survivors form a distinct pre-existing mode versus a stochastic tail."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporter-based fate mapping",
+      "description": "Image single cells for days before and after drug using fluorescent reporters for signaling (ERK, p53, apoptosis, cell cycle) and then fix and profile the survivors by multiplexed imaging or in situ sequencing. Linking dynamic history such as pulsatile signaling or cell-cycle phase to survival identifies the state variables that predict persistence."
+    },
+    {
+      "title": "Single-cell multi-omics of survivors across time",
+      "description": "Run paired scRNA-seq and scATAC-seq (or CITE-seq) on untreated cells, cells shortly after drug, and persisters weeks later. Trajectory analysis then shows whether persisters come from a rare pre-existing state, such as a drug-tolerant or dedifferentiated program, or from drug-induced adaptive rewiring."
+    },
+    {
+      "title": "Metabolic and stress-response profiling of persisters",
+      "description": "Measure single-cell mitochondrial membrane potential, ROS, lipid peroxidation, and NAD(P)H lifetime (FLIM) alongside drug-target activity, then sort high- and low-metabolism fractions to test survival. Follow with perturbations such as GPX4 or OXPHOS inhibition to establish which vulnerabilities are causal."
+    },
+    {
+      "title": "Pooled CRISPR screens plus epigenetic perturbation in sorted states",
+      "description": "Run genome-wide or chromatin-focused CRISPRi/a screens with drug and read out survivor frequency, not just bulk fitness, to find regulators that tune the size of the tolerant fraction. Combine with histone-modifier inhibitors (KDM5, EZH2) and ChIP/CUT&Tag in persisters to separate epigenetic from genetic causes."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 821,
+  "cost_usd": 0.013593500000000001
+}

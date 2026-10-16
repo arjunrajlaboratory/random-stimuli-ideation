@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 3,
+  "stimulus": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nA noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to separate pre-existing from drug-induced persisters",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicate arms, and treat each with the drug. Recurrence of the same barcodes across arms implies a pre-existing, heritable state, while random barcodes imply stochastic induction. Like a spider's threads traced back to a single anchor point, barcodes link survivors to their ancestors, and sequencing the untreated sister clones from before treatment reveals their pre-drug transcriptional state."
+    },
+    {
+      "title": "Single-cell multi-omic profiling over time before and after drug exposure",
+      "description": "Run scRNA-seq combined with scATAC-seq (or CITE-seq) at multiple time points: untreated, early drug exposure, and persister outgrowth. This identifies rare transcriptional or chromatin states, such as drug-efflux, stress-response or dedifferentiation programs, that are over-represented in survivors and trace how the state transitions unfold along the path from sensitive to tolerant."
+    },
+    {
+      "title": "Live-cell reporter imaging with lineage tracking and retrospective fate mapping",
+      "description": "Image thousands of individual cells over days with fluorescent reporters for signaling activity (e.g. ERK, p53, apoptosis caspase activity, cell-cycle state). Track each cell's lineage through drug exposure, then relate pre-treatment dynamics, such as slow cycling, pulse frequency, or mitochondrial state, to which cells and their relatives survive. Fixing and sequencing the same cells afterward connects dynamics to molecular state."
+    },
+    {
+      "title": "Network-of-connections analysis: cell-cell communication and microenvironment effects",
+      "description": "Test whether survival depends on contact or secreted signals between neighbors. Use spatial transcriptomics or co-culture and conditioned-medium experiments, and compare isolated single cells with dense colonies. Survivors may be supported by paracrine factors or by cells bridging to each other through gap junctions or ligand-receptor links, so quantifying neighbor composition around survivors versus dying cells would show whether tolerance is a cell-intrinsic or a collective property."
+    },
+    {
+      "title": "Perturbation screens targeting the persister state combined with drug-tolerance sampling",
+      "description": "Perform a CRISPR knockout or interference screen with a drug-treated versus untreated comparison, plus pharmacological tests of candidate pathways identified in other analyses (e.g. epigenetic regulators, oxidative stress/GPX4, anti-apoptotic BCL2 family). Genes whose loss reduces the persister fraction without affecting bulk growth are causal mediators, and a combined drug plus inhibitor test shows whether the survivor fraction can be shrunk."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 980,
+  "cost_usd": 0.0151595
+}

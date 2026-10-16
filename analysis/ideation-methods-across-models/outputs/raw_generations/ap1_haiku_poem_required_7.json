@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 7,
+  "stimulus": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nI wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Degron-based AP-1 removal after priming",
+      "description": "Give a transient stimulus that primes a cell, then use an acute degron system (dTAG or AID) to deplete c-Fos or c-Jun at set times afterward. Measure whether the primed response (faster or stronger reinduction of target genes on a second stimulus) survives AP-1 protein loss. Persistence without AP-1 points to a chromatin-based memory, while loss of the primed state shows AP-1 is required to maintain memory."
+    },
+    {
+      "title": "Time-resolved chromatin persistence at AP-1 sites",
+      "description": "After one brief stimulus, profile AP-1 binding (CUT&RUN for Fos/Jun), chromatin accessibility (ATAC-seq), and histone marks such as H3K27ac at multiple time points until AP-1 returns to baseline. Sites that stay open or marked after AP-1 is gone, and that predict faster transcription on re-exposure, are the strongest candidate memory marks. Adding an AP-1 perturbation at this stage separates the marks from the transient binding that caused them."
+    },
+    {
+      "title": "Pattern-dependent optogenetic AP-1 pulsing",
+      "description": "Use a light-inducible AP-1 construct (e.g., a LOV-domain-controlled Fos/Jun) to deliver pulses that vary in number, frequency, and spacing. Test which temporal patterns produce a lasting primed state and whether the memory depends on pulse history rather than total AP-1 dose. This tests whether AP-1 encodes information in its dynamics, the way Wordsworth's flash of daffodils is remembered by its repeated return rather than by a single glimpse."
+    },
+    {
+      "title": "Activity-tagged ensemble reactivation test",
+      "description": "Label cells that were AP-1-active during a learning-like stimulus using an activity-dependent reporter (for example, a TRAP-style Fos-CreER system), then re-expose the animal or culture to a partial cue and check whether the tagged cells reactivate preferentially. Compare with animals or cultures carrying a Fos loss-of-function or dominant-negative allele. Selective reactivation of tagged cells that depends on AP-1 function would show that AP-1 marks engram-like memory cells."
+    },
+    {
+      "title": "Single-cell AP-1 history predicts future response",
+      "description": "Use a live knock-in fluorescent reporter of AP-1 activity to track individual cells through repeated stimuli, recording each cell's prior AP-1 pulse history. Test whether that history predicts the magnitude and speed of the cell's response to a later stimulus, and whether AP-1 inhibitors such as T-5224 erase this predictive relationship. A history-dependent response that disappears with AP-1 inhibition directly links AP-1 activity to cellular memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2087,
+  "cost_usd": 0.0012884499999999998
+}

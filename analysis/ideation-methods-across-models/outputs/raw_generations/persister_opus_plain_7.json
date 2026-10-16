@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with retrospective identification of pre-resistant cells (Rewind/FateMap-style)",
+      "description": "Label cells with expressed, heritable barcodes, split clonal populations into a drug arm and a reference arm, and use the barcodes of surviving clones to go back and capture their sister cells before treatment for scRNA-seq or imaging. This shows the transcriptional and epigenetic state that marked a cell as a future survivor before any drug was added."
+    },
+    {
+      "title": "Single-molecule RNA FISH for rare-cell expression states before treatment",
+      "description": "Use multiplexed smFISH (or iterative methods like MERFISH or ClampFISH) on large numbers of untreated cells to measure the frequency and co-occurrence of rare 'jackpot' cells that strongly express resistance-associated genes (e.g., AXL, EGFR, NGFR). Then check whether the fraction of these cells, and how they are spatially clustered, predicts how many colonies survive the drug."
+    },
+    {
+      "title": "Luria\u2013Delbr\u00fcck fluctuation analysis and memory measurements",
+      "description": "Grow many small parallel clonal populations, then treat them and measure how much the number of surviving colonies varies between populations. Excess variance means the pre-resistant state is heritable. Combine this with sister-cell and cousin-cell analysis of barcoded lineages to estimate how many generations the primed state lasts and how fast cells switch in and out of it."
+    },
+    {
+      "title": "Live-cell imaging of signaling dynamics and cell-cycle state during drug exposure",
+      "description": "Use fluorescent reporters for the pathway being targeted (e.g., an ERK kinase translocation reporter), plus cell-cycle (FUCCI) and stress reporters, to follow individual cells through treatment. This tests whether survivors differ beforehand in signaling reactivation, quiescence, or proliferation dynamics, or only adapt afterward."
+    },
+    {
+      "title": "Perturbation screens to identify regulators that set the frequency of primed cells",
+      "description": "Run pooled CRISPR knockout/activation screens with single-cell readout (Perturb-seq), or targeted perturbations of chromatin regulators and transcription factors, to see which genes change how often the rare pre-resistant state appears and how many cells survive the drug. Follow up with single-cell ATAC-seq/multiome to identify the chromatin features that keep the state heritable."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 921,
+  "cost_usd": 0.023947000000000003
+}

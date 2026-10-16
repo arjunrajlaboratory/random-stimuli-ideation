@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 7,
+  "constraint": "using patient-derived samples",
+  "prompt": "Constraint: every one of your ideas must be carried out using patient-derived samples. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded patient-derived organoids with twin splitting",
+      "description": "Barcode a patient-derived organoid or PDX line at high complexity, split it into an untreated reference arm and a drug-treated arm, and test whether the surviving barcodes are reproducibly the same across replicate splits. Reproducible survivors indicate a heritable pre-existing state, while random survivors indicate stochastic induction, and the untreated twin allows direct profiling of survivor ancestors before drug exposure."
+    },
+    {
+      "title": "Serial pre-treatment, on-treatment, and progression biopsies at single-cell resolution",
+      "description": "Collect matched biopsies from the same patients at baseline, at the residual-disease nadir 2-4 weeks into targeted therapy, and at relapse, and profile all three by single-cell RNA-seq and ATAC-seq. The residual-disease timepoint is the only direct window onto persister cells in a human tumor and reveals whether the persister program pre-exists in a rare subpopulation or appears only under drug."
+    },
+    {
+      "title": "Spatially resolved mapping of residual disease in on-treatment biopsies",
+      "description": "Use imaging-based spatial transcriptomics or multiplexed protein imaging on on-treatment patient biopsies to determine whether surviving cells occupy non-random positions such as perivascular, hypoxic, invasive-front, or CAF- and immune-shielded niches. This separates cell-intrinsic tolerance programs from microenvironment-provided protection, which have very different therapeutic consequences."
+    },
+    {
+      "title": "Whole-genome and clonal phylogeny analysis of survivor populations",
+      "description": "Perform deep whole-genome sequencing and single-cell copy-number profiling on matched pre-treatment and residual or relapse patient samples to test whether survivors carry pre-existing resistance mutations, subclonal expansions, or no genetic distinction at all. Reconstructing the clonal phylogeny establishes whether relapse derives from a genetically privileged clone or from genetically identical cells in a permissive transcriptional state."
+    },
+    {
+      "title": "Live ex vivo drug exposure of fresh malignant effusions and circulating tumor cells",
+      "description": "Expose freshly isolated pleural effusion, ascites, or CTC-derived tumor cells from patients to the targeted agent under live-cell imaging, then sort survivors for matched single-cell transcriptomic and proteomic analysis. Repeat sampling from the same patient across multiple taps tests whether the tolerant state is stable and heritable or transient and reversible."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2326,
+  "cost_usd": 0.0912635
+}

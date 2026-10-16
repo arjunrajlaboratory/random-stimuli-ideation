@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 4,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Temporal necessity mapping with inducible degradation",
+      "description": "Use an auxin-inducible degron knock-in on endogenous FOS or JUN to remove the protein at defined times after a priming pulse. If memory depends on AP-1 only during induction, degradation after washout should leave the primed state intact; if it depends on ongoing AP-1, the primed state should collapse at the time of degradation, which defines the length of the necessity window."
+    },
+    {
+      "title": "Pulse-chase turnover of endogenous AP-1 protein and its phosphorylation state",
+      "description": "Tag endogenous JUN or FOS with a HaloTag or SNAP tag and perform pulse-chase labeling after stimulation, measuring protein half-life and parallel phospho-site (e.g., c-Jun S63/S73) and ubiquitination status by quantitative mass spectrometry. Comparing the decay of the protein pool with the decay of memory-gene priming tests whether a stable post-translationally modified AP-1 pool, rather than chromatin marks, carries the memory."
+    },
+    {
+      "title": "Saturation mutagenesis of AP-1 sites in a barcoded synthetic memory locus",
+      "description": "Integrate a library of barcoded reporter constructs carrying a minimal enhancer with variable AP-1 site number, spacing, and flanking sequence into a single landing-pad locus, then pulse, wash out, and measure barcode-resolved reactivation after days. This directly tests which sequence features are sufficient to encode persistent priming, separate from the native genomic context."
+    },
+    {
+      "title": "Mitotic inheritance assay for AP-1-dependent memory",
+      "description": "Combine a stable (long-lived) fluorescent reporter of prior AP-1 activity with lineage tracking through several cell divisions, sorting and re-challenging daughter cells by their inherited reporter state. If primed responsiveness is inherited by daughters at rates above chance and tracks reporter dilution, memory is transmitted through mitosis; if it is lost, the memory must be re-established after each division."
+    },
+    {
+      "title": "Pulse-frequency decoding of AP-1 memory",
+      "description": "Deliver the same total stimulus dose in microfluidic chambers as a single pulse, several spaced pulses, or continuous exposure, then measure the strength and persistence of the priming signature at a fixed later time. Whether memory scales with integrated dose, the number of pulses, or the timing of the last pulse distinguishes a cumulative memory encoding from a simple last-event reporter."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ChIP-seq or CUT&Tag of FOS/JUN occupancy over a time course after stimulation and washout",
+      "ATAC-seq to track whether chromatin accessibility at AP-1 sites persists after the stimulus is removed",
+      "Knockout or knockdown of FOS or JUN to test whether the memory phenotype is lost",
+      "Re-stimulation (rechallenge) after a rest period to compare primed and naive transcriptional responses",
+      "H3K27ac or H3K4me1 profiling to test whether enhancer marks persist after AP-1 binding",
+      "Single-cell RNA-seq of stimulated and rested populations to identify memory-like gene programs",
+      "Live-cell imaging of a FOS or JUN fluorescent reporter to measure activity dynamics",
+      "Dominant-negative c-Jun or pharmacological AP-1 inhibition (e.g., T-5224) to block the response",
+      "In vivo lineage tracing of Fos-active cells (e.g., FosTRAP) to link past activity to later function",
+      "Motif enrichment and footprinting analysis of AP-1 sites at memory-associated enhancers"
+    ]
+  },
+  "output_tokens": 3461,
+  "cost_usd": 0.00187398
+}

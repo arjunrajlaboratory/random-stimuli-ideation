@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "plain",
+  "call": 7,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Inducible, time-resolved AP-1 perturbation with chromatin-memory readout",
+      "description": "Use an acute, reversible degron (e.g., dTAG or AID) or optogenetic control to deplete or activate FOS/JUN for defined windows, then track whether chromatin accessibility (ATAC-seq), H3K27ac and AP-1 motif occupancy at enhancers persist after the stimulus is withdrawn. Persistence of these marks without AP-1 present would be direct evidence of memory, while rapid collapse would argue against it."
+    },
+    {
+      "title": "Stimulus re-exposure (memory recall) assay",
+      "description": "Apply a priming stimulus (e.g., a short TNF or growth-factor pulse), allow a rest period, then re-stimulate and compare the magnitude and kinetics of AP-1 target gene induction (RNA-seq, nascent transcription via PRO-seq) with naive cells. Faster or stronger responses on re-challenge, lost when AP-1 binding sites are mutated or AP-1 is degraded during the rest period, would demonstrate a functional memory."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1 activity history",
+      "description": "Combine a live AP-1 reporter (e.g., FOS-promoter-driven fluorescent timer or destabilized reporter) with barcoded lineage tracing or CRISPR-based recorders to link each cell's past AP-1 activity to its later transcriptional state after a delay. Correlating prior pulse history with future responses across single-cell clones tests whether history is stored and inherited rather than just reflecting current state."
+    },
+    {
+      "title": "Site-specific mutagenesis of AP-1 motifs at memory-associated enhancers",
+      "description": "Use CRISPR base editing or prime editing to mutate individual TRE/AP-1 motifs at candidate memory enhancers and measure, in the same cells, the effect on the persistence of chromatin opening and on the re-induction kinetics after a washout. Mutations that abolish memory while leaving the initial response intact would separate the storage function from the acute transcriptional function."
+    },
+    {
+      "title": "Biochemical test of self-sustaining AP-1 chromatin states and dilution",
+      "description": "Track histone marks and AP-1/co-factor occupancy through cell division using pulse-chase labeling (e.g., SNAP-tag or Hdac/histone turnover reporters) and CUT&RUN or ChIP-seq with and without DNA replication. If AP-1 binding and the associated marks are re-established by sister chromatids or through inheritance of modified histones, that supports a self-propagating mechanism, whereas dilution after division indicates memory requires continuous AP-1 presence."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 965,
+  "cost_usd": 0.00062496
+}

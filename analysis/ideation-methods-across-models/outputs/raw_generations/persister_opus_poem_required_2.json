@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "poem_required",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Rose-moles in stipple: mapping the pre-treatment expression tail",
+      "description": "Use single-molecule RNA FISH (or amplified clampFISH) against candidate resistance drivers across millions of untreated cells, then treat and re-image the identical field to test whether survivors came from the rare high-expressing 'stippled' subpopulation. This quantifies how much of survival is explained by the tail of each gene's distribution rather than its mean."
+    },
+    {
+      "title": "Who knows how?: resolving the kinetic origin of the rare state",
+      "description": "Measure transcriptional bursting of the candidate driver gene using intronic FISH or live MS2/PP7 reporters to determine whether rare high-expressing cells arise from increased burst frequency, larger burst size, or slow mRNA/protein turnover. Then perturb each parameter via promoter swaps or degron tags and test whether survivor frequency shifts accordingly."
+    },
+    {
+      "title": "Swift, slow: live-imaging linkage of division kinetics to survival fate",
+      "description": "Track thousands of single cells through drug addition with FUCCI cell-cycle reporters plus death and division readouts, retrospectively linking each survivor's pre-treatment cycle length and signaling dynamics to its outcome. This distinguishes persistence through quiescence from persistence through active bypass signaling, which have opposite therapeutic implications."
+    },
+    {
+      "title": "Landscape plotted and pieced: spatial neighborhood versus cell-intrinsic causes",
+      "description": "Grow cells at controlled densities and in spatially resolved colonies, then use spatial transcriptomics or imaging mass cytometry to test whether survivors cluster in local patches (indicating paracrine or contact-mediated protection) rather than scattering at random. Follow up with targeted neighbor ablation and conditioned-media swaps to establish causality."
+    },
+    {
+      "title": "All trades, their gear and tackle: cataloguing distinct survivor programs and their heritability",
+      "description": "Profile survivors with single-cell multiome (RNA + ATAC) and phospho-CyCIF to test whether they occupy one state or several distinct bypass-pathway programs requiring different combination therapies. Pair this with heritable lineage barcoding and split-and-retreat experiments to measure how long each primed state persists and whether it is re-inducible, identifying the invariant epigenetic generator behind the variable states."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2680,
+  "cost_usd": 0.1045035
+}

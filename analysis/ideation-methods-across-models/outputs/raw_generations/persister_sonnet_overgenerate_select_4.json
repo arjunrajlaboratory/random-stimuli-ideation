@@ -1,0 +1,58 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with split-sample single-cell RNA-seq",
+      "description": "Barcode a clonal population, split it before drug, profile one arm by scRNA-seq and treat the other, then identify which barcodes survive. This lets you read out the pre-treatment transcriptional state of cells destined to become persisters and test whether it is heritable."
+    },
+    {
+      "title": "Luria-Delbr\u00fcck fluctuation analysis of persister frequency",
+      "description": "Expand many small independent clones, treat each, and compare the variance in persister counts to that expected under pre-existing versus drug-induced tolerance. Fitting a state-switching model to the data yields switching rates and distinguishes stochastic state fluctuations from stable epigenetic or genetic inheritance."
+    },
+    {
+      "title": "Live-cell reporter imaging with retrospective pedigree tracing",
+      "description": "Image cells for days before and after drug with reporters for signaling (ERK, p53), cell cycle (FUCCI) and stress, then trace surviving cells back through their lineage. This shows whether dynamics, cycle history or sister-cell correlations predict survival, which fixed snapshots cannot show."
+    },
+    {
+      "title": "Sort-then-challenge on pre-treatment physiological state",
+      "description": "Use FACS to sort untreated cells by mitochondrial potential, ROS, drug efflux activity, or fluorescent drug uptake, then treat each sorted fraction and measure persister yield. This tests causality of candidate states and how long they last by delaying the drug challenge after sorting."
+    },
+    {
+      "title": "Persister-fraction-focused CRISPR and epigenetic perturbation screens",
+      "description": "Run pooled CRISPRi/a or epigenetic-inhibitor screens that read out the fraction of surviving cells at a fixed high dose, not bulk sensitivity. Hits that change only the persister fraction point to regulators of cell-state plasticity, and comparing them with scATAC/multiome data in persisters links them to chromatin mechanisms."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Lineage barcoding (e.g., ClonMapper) to test whether persisters arise from pre-existing heritable states or stochastically",
+      "Fluctuation test (Luria-Delbr\u00fcck) on drug-tolerant persisters to distinguish pre-existing vs induced tolerance",
+      "Time-lapse live-cell imaging with fluorescent reporters tracing persisters backward to pre-treatment state",
+      "Single-cell RNA-seq before and at multiple times after drug exposure",
+      "Paired barcode-based single-cell RNA-seq of sister cells split before treatment",
+      "Single-cell ATAC-seq / multiome for chromatin accessibility of persisters",
+      "Mitochondrial content and membrane potential sorting before treatment followed by drug challenge",
+      "Single-cell proteomics/CyTOF of signaling network states (MAPK, PI3K) pre- and post-drug",
+      "Pooled CRISPR screens for genes that modulate persister fraction (not bulk IC50)",
+      "Cell-cycle state tracking with FUCCI and quiescence/slow-cycling analysis",
+      "Single-cell metabolomics or NAD(P)H/FLIM imaging of metabolic state",
+      "Measure drug uptake/efflux and intracellular drug concentration per cell using fluorescent drug analogs",
+      "Epigenetic inhibitor combination screens (HDAC, KDM5, EZH2) to alter persister fraction",
+      "Whole-genome sequencing of persisters to rule out or find rare genetic/extrachromosomal DNA changes",
+      "Oxidative stress and lipid peroxidation (ferroptosis) reporters in persisters",
+      "Mathematical modeling of state-switching rates fit to fluctuation and lineage data",
+      "Spatial transcriptomics of 3D spheroids/xenografts to test microenvironmental positioning",
+      "Single-cell tracking of transcription factor dynamics (e.g., p53, ERK pulses) under drug",
+      "Heritability of persistence across divisions via sister-cell pedigree analysis",
+      "Stress-response/translation profiling (ribosome profiling, integrated stress response) in persisters",
+      "Mitotic timing and DNA damage/ replication stress marker analysis in drug-treated cells"
+    ]
+  },
+  "output_tokens": 1486,
+  "cost_usd": 0.0176472
+}

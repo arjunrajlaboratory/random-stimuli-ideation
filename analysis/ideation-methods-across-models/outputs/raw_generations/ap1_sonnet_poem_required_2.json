@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 2,
+  "stimulus": "Glory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nGlory be to God for dappled things \u2013\nFor skies of couple-colour as a brinded cow;\nFor rose-moles all in stipple upon trout that swim;\nFresh-firecoal chestnut-falls; finches' wings;\nLandscape plotted and pieced \u2013 fold, fallow, and plough;\nAnd \u00e1ll tr\u00e1des, their gear and tackle and trim.\n\nAll things counter, original, spare, strange;\nWhatever is fickle, freckled (who knows how?)\nWith swift, slow; sweet, sour; adazzle, dim;\nHe fathers-forth whose beauty is past change:\nPraise him.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Stipple map of AP-1 occupancy after transient stimulus",
+      "description": "Stimulate cells (e.g., macrophages or fibroblasts with TPA or LPS), wash out, and track AP-1 (FOS/JUN) binding, chromatin accessibility (ATAC-seq/CUT&RUN) and H3K27ac at single-cell resolution over weeks. Like spots on a trout, memory would appear as a discrete, persistent pattern of retained accessible sites that outlast the stimulus and AP-1 levels."
+    },
+    {
+      "title": "Acute AP-1 degradation after the stimulus (necessity test)",
+      "description": "Use degron-tagged (dTAG/AID) FOS or JUN, or dominant-negative A-FOS, to remove AP-1 at defined times: during priming, after priming, and before re-challenge. Compare secondary transcriptional responses and accessibility to distinguish AP-1 as initiator of memory from AP-1 as the ongoing maintainer."
+    },
+    {
+      "title": "Site-specific AP-1 motif editing or dCas9 tethering (sufficiency test)",
+      "description": "Mutate AP-1 motifs at candidate memory enhancers with CRISPR, or tether FOS/JUN with dCas9 to naive loci, and measure whether the locus becomes accessible and primed and shows faster or stronger induction on later stimulation. This tests whether AP-1 binding at specific sites is causal for retained state, not just correlated."
+    },
+    {
+      "title": "Single-cell lineage-tracked heterogeneity of memory (fickle, freckled)",
+      "description": "Combine barcoded lineage tracing with live reporters of AP-1 activity or scRNA/scATAC, and compare sister cells after a pulse. If memory is heritable, sister cells should share response magnitude and AP-1 state more than random pairs through divisions, and the decay rate would give a persistence timescale."
+    },
+    {
+      "title": "Dynamics-encoding pulse experiments with optogenetics or microfluidics",
+      "description": "Deliver patterned pulses (swift/slow, strong/weak, single/repeated) of signal and measure how pulse history sets AP-1 composition (FOS vs. FOSL, JUN dimer mix), chromatin state, and later response. Fitting a mathematical model of the feedback and hysteresis would test whether AP-1 creates bistable, history-dependent states and predict which histories are remembered."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 865,
+  "cost_usd": 0.0139255
+}

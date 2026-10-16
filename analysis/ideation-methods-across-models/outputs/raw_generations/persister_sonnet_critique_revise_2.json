@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Lineage barcoding with pre-/post-treatment transcriptomics: Tag cells with heritable DNA barcodes, split the population before drug exposure, profile one arm by scRNA-seq, and treat the other to identify survivors. Matching survivor clones back to their pre-treatment sister cells reveals whether a pre-existing, heritable state predicts survival or whether survival arises stochastically after drug exposure.\n2. Live-cell imaging with single-cell tracking and retrospective fate mapping: Image reporter-labeled cells (e.g., signaling activity, cell cycle, apoptosis, mitochondrial state) for days before and during treatment, then trace survivors back to their earlier histories. This links dynamic features such as pulsatile ERK or p53 activity, cell-cycle phase, or cell size to survival, and shows how long a predictive state persists.\n3. Multi-omic profiling of persisters (chromatin accessibility, epigenome, proteome): Isolate surviving cells at multiple time points and run single-cell ATAC-seq, histone-mark profiling (CUT&Tag), and proteomics or phospho-proteomics, alongside untreated controls. This tests whether persisters occupy a distinct chromatin or signaling state, such as a drug-tolerant program driven by KDM5 or AP-1, rather than carrying new genetic mutations.\n4. Single-cell DNA sequencing and copy-number analysis to rule genetics in or out: Sequence survivors at single-cell resolution to check for rare pre-existing mutations, copy-number changes, or extrachromosomal DNA that the bulk population lacks. Comparing survivors with their reversible, drug-free regrown descendants separates genetic from non-genetic (reversible) tolerance.\n5. Functional perturbation screens and drug-combination tests on the tolerant state: Run CRISPR knockout or inhibition screens, with a pooled library and drug treatment, to find genes and pathways such as antioxidant defense, ferroptosis suppression, or anti-apoptotic factors that change the fraction of survivors. Validate hits by pairing the targeted drug with inhibitors of those pathways and measuring the persister fraction and time to regrowth.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sibling-pair death-timing correlation under drug",
+      "description": "Film isolated daughter pairs (and later cousins) from a recent division through drug exposure and record each cell's time of death or arrest. High sister-sister concordance versus random pairing, with decay over generations, quantifies the heritability and half-life of the tolerance state without any molecular assumptions."
+    },
+    {
+      "title": "Single-cell metabolic and redox state sorting by FLIM/biosensors, then drug challenge",
+      "description": "Measure NAD(P)H lifetime, ATP/NADH biosensors, mitochondrial membrane potential, and ROS in individual drug-naive cells, then gently sort or track them and challenge with drug. This tests whether pre-existing metabolic or redox heterogeneity, not transcript level, predicts survival."
+    },
+    {
+      "title": "Drug-target engagement and intracellular drug concentration heterogeneity",
+      "description": "Use a fluorescent drug analog, a target-engagement reporter (such as a CETSA-like or phospho-substrate readout), or single-cell mass-spec/mass-cytometry to measure how much drug reaches the target in each cell. Compare survivors versus dying cells to determine whether efflux, lysosomal sequestration, or incomplete pathway inhibition explains survival rather than downstream adaptation."
+    },
+    {
+      "title": "Nascent transcription and translation dynamics in early drug response (time-resolved metabolic labeling)",
+      "description": "Apply scSLAM-seq or scNT-seq with 4sU labeling, plus puromycin-based translation readouts, during the first hours of drug exposure to separate newly induced stress programs from pre-existing mRNA. Comparing the labeled and unlabeled fractions shows whether survivors actively rewire, for example through ISR-driven selective translation, or just start from a different baseline."
+    },
+    {
+      "title": "Spatial and microenvironmental mapping of survivors in 3D culture or xenograft sections",
+      "description": "Run spatial transcriptomics or multiplexed imaging (such as CODEX) on drug-treated spheroids or tumors, and test whether survivors cluster by local oxygen, density, stromal contact, or neighbor secreted signals. Complement this with conditioned-medium and density-titration experiments to determine whether tolerance is cell-intrinsic or induced by neighbors."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 833,
+  "cost_usd": 0.0158175
+}

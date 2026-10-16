@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 1,
+  "parallel": {
+    "field": "Machine learning (interpretability of recurrent and transformer models)",
+    "problem": "Does a specific hidden unit or attention-head circuit actually carry information about earlier inputs that the network uses later, or does it only correlate with that history?",
+    "how_studied": "Researchers train linear probes to decode past tokens from activations at later timesteps and track how decodability falls with delay. Then they test causality: activation patching or ablation of the candidate component should remove the history-dependent behavior, and swapping in activations from a different history should transfer that history's downstream output."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Machine learning (interpretability of recurrent and transformer models)\nProblem: Does a specific hidden unit or attention-head circuit actually carry information about earlier inputs that the network uses later, or does it only correlate with that history?\nHow it is studied: Researchers train linear probes to decode past tokens from activations at later timesteps and track how decodability falls with delay. Then they test causality: activation patching or ablation of the candidate component should remove the history-dependent behavior, and swapping in activations from a different history should transfer that history's downstream output.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Decoding probes for stimulus history from AP-1 state, with a decay curve",
+      "description": "Expose cells to a panel of distinct transient stimuli, wash out, and at a log-spaced series of delays profile AP-1 family occupancy and AP-1 motif accessibility (CUT&RUN plus ATAC-seq); train a classifier to predict which stimulus a cell/sample previously saw from AP-1-associated features alone. Plot classification accuracy versus delay and compare it to probes built on non-AP-1 features, so that memory is quantified as a decodability half-life rather than a binary claim."
+    },
+    {
+      "title": "Ablation/knockdown timed after the stimulus has ended",
+      "description": "Degrade AP-1 subunits (dTAG or auxin-degron on FOS/JUN family members) only during the post-stimulus interval, after the acute response has resolved, and ask whether the history-dependent behavior disappears while the acute response remains intact. This is the biological analogue of activation patching: removing the candidate component should erase the downstream history effect without touching the original input processing."
+    },
+    {
+      "title": "Transfer test by installing a foreign AP-1 state",
+      "description": "Use synthetic reprogramming of the AP-1 state (inducible expression of a defined FOS/JUN dimer combination, or dCas9-based recruitment of AP-1 to the enhancer set marked by stimulus A) in naive cells, then challenge with a common second stimulus. If AP-1 carries the memory, these cells should produce the stimulus-A-specific downstream response even though they never saw stimulus A."
+    },
+    {
+      "title": "Single-cell lineage tracing to measure how long the AP-1 trace survives division",
+      "description": "Combine heritable clonal barcoding with paired single-cell ATAC/RNA at multiple timepoints after a transient stimulus to ask whether AP-1 site accessibility and AP-1 target expression are concordant within clones and discordant between them. Clone-level autocorrelation decay gives a direct memory timescale and separates heritable epigenetic storage from slowly decaying protein-level carryover."
+    },
+    {
+      "title": "Dose/sequence experiments that distinguish a true integrator from a correlated readout",
+      "description": "Vary stimulus amplitude, duration, number of pulses, and inter-pulse interval, then test whether AP-1 occupancy predicts the later response better than the stimulus parameters themselves do \u2014 i.e., whether AP-1 is a sufficient statistic that screens off the input history. Pairing this with mediation analysis and with partial AP-1 ablation at graded degrader doses tests whether response magnitude scales with the amount of the putative memory component that remains."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1415,
+  "cost_usd": 0.0655873
+}

@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 0,
+  "parallel": {
+    "field": "Materials science (metallurgy)",
+    "problem": "Determining whether a shape-memory alloy's or metal's microstructure (e.g., dislocation networks) stores a record of past deformation that shapes its future response, once the original stress is gone.",
+    "how_studied": "Researchers run cyclic loading and thermal cycling tests and compare hysteresis loops between pre-treated and virgin samples. They use electron microscopy and X-ray diffraction to map the stored microstructure. Annealing experiments check how much heat is needed to erase the memory, which shows whether the structure itself is the carrier."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Materials science (metallurgy)\nProblem: Determining whether a shape-memory alloy's or metal's microstructure (e.g., dislocation networks) stores a record of past deformation that shapes its future response, once the original stress is gone.\nHow it is studied: Researchers run cyclic loading and thermal cycling tests and compare hysteresis loops between pre-treated and virgin samples. They use electron microscopy and X-ray diffraction to map the stored microstructure. Annealing experiments check how much heat is needed to erase the memory, which shows whether the structure itself is the carrier.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Primed vs. virgin hysteresis comparison",
+      "description": "Pre-stimulate cells (e.g., with EGF, TPA, or a cytokine), withdraw the stimulus for varied rest periods, then restimulate and compare dose-response and induction-kinetics curves of AP-1 target genes against naive cells. Differences in amplitude, threshold, or speed of the second response, plotted as a loop across stimulus history, quantify memory."
+    },
+    {
+      "title": "Chromatin-state mapping of the stored record",
+      "description": "Use ATAC-seq, CUT&RUN/ChIP for FOS/JUN, H3K27ac, and BAF remodeler marks, plus footprinting, in primed, rested, and naive cells to see whether AP-1-bound enhancers remain open after the signal is gone. Persistent accessibility at AP-1 motifs that correlates with enhanced re-induction, analogous to imaging dislocation networks, would identify the structural carrier."
+    },
+    {
+      "title": "Annealing-style erasure titration",
+      "description": "Test how much perturbation is needed to erase memory: dose-titrate inhibitors of chromatin remodeling (BRG1/SWI-SNF), histone acetyltransferases, or DNA replication/cell divisions, and measure when the primed response reverts to naive. If memory decays only with disruption of AP-1-dependent chromatin and not with loss of AP-1 protein levels, the chromatin structure rather than ongoing AP-1 activity carries the record."
+    },
+    {
+      "title": "Acute AP-1 degradation at different time windows",
+      "description": "Use degron-tagged (dTAG/AID) JUN/FOS or dominant-negative A-FOS to remove AP-1 either during priming, during the rest period, or during restimulation, then read out the secondary response. Distinguishing a requirement for writing the memory from maintaining or reading it shows whether AP-1 is the carrier or just an initiator."
+    },
+    {
+      "title": "Single-cell and lineage-tracked history\u2013response mapping",
+      "description": "Combine live reporters of AP-1 activity (FOS/JUN dynamics) with single-cell RNA/ATAC-seq and lineage tracing across divisions to relate each cell's past AP-1 dynamics to its later response. Heritability of response across sister cells and its decay over generations tests whether memory is cell-intrinsic and stable, as opposed to residual signaling."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 853,
+  "cost_usd": 0.0138815
+}

@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 6,
+  "parallel": {
+    "field": "Glass and soft-matter physics (dynamical heterogeneity)",
+    "problem": "Why do a small fraction of identical particles in a supercooled liquid remain nearly immobile for long times while their neighbours move freely?",
+    "how_studied": "Physicists track individual colloidal particles with confocal microscopy and compute the four-point susceptibility \u03c74 to measure the size and lifetime of the mobile and immobile clusters. Propensity analysis and machine-learned structural predictors test whether the immobile particles can be identified from their local arrangement before they move. Molecular dynamics simulations are used to check whether the rearrangement pattern follows from local structure or from chance."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Glass and soft-matter physics (dynamical heterogeneity)\nProblem: Why do a small fraction of identical particles in a supercooled liquid remain nearly immobile for long times while their neighbours move freely?\nHow it is studied: Physicists track individual colloidal particles with confocal microscopy and compute the four-point susceptibility \u03c74 to measure the size and lifetime of the mobile and immobile clusters. Propensity analysis and machine-learned structural predictors test whether the immobile particles can be identified from their local arrangement before they move. Molecular dynamics simulations are used to check whether the rearrangement pattern follows from local structure or from chance.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Four-point susceptibility of drug survival events",
+      "description": "Use time-lapse imaging of a live-cell death reporter (e.g., caspase or SYTOX sensor) under drug and compute a \u03c74-style fluctuation measure of survival to find the spatial extent and temporal lifetime of survivor clusters. A \u03c74 peak with a correlation length beyond nearest neighbours would show that tolerance is cooperative rather than independent per cell."
+    },
+    {
+      "title": "Propensity analysis from pre-treatment single-cell state",
+      "description": "Before drug exposure, record each cell's morphology, cell-cycle reporter (e.g., FUCCI), signaling activity (e.g., ERK or AKT biosensors), and mitochondrial state, then train a classifier to predict which cells survive and which die. High predictive accuracy would indicate a pre-existing structural or state signature, while chance-level performance would point toward stochastic, non-heritable tolerance."
+    },
+    {
+      "title": "Null-model tests against spatial and lineage structure",
+      "description": "Compare the observed survivor pattern to null models that shuffle cell positions, reassign fates randomly within lineages, or use independent Bernoulli survival, in the spirit of molecular dynamics checks on whether rearrangements follow local structure or chance. Agent-based simulations of the same model can then test which mechanism reproduces the measured clustering."
+    },
+    {
+      "title": "Barcode-based lineage tracing of tolerant state inheritance",
+      "description": "Label founder cells with heritable DNA barcodes and track them through drug exposure and recovery to determine whether the survival state is passed to daughters and how long it persists across generations. Fitting the decay of the survivor-lineage correlation over time gives a relaxation-time-like lifetime for the tolerant state."
+    },
+    {
+      "title": "Washout and re-challenge to measure tolerance relaxation",
+      "description": "Remove the drug after a defined exposure, then re-challenge at intervals and measure how quickly the surviving fraction reverts toward the naive baseline. Plotting the relaxation time against drug dose and cell density would reveal whether tolerance is a long-lived, self-sustaining state or a transient one, analogous to how glass physics measures structural relaxation times."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1510,
+  "cost_usd": 0.00103155
+}

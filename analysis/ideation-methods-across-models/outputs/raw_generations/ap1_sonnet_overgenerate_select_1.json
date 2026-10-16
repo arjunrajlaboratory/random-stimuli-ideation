@@ -1,0 +1,57 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 1,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time-course of AP-1 occupancy and accessibility",
+      "description": "After a transient stimulus, profile FOS/JUN CUT&RUN and ATAC footprinting at multiple times post-washout to see whether AP-1 binding and open chromatin persist beyond signaling and TF protein levels. Persistent sites that predict faster secondary transcription define candidate memory loci."
+    },
+    {
+      "title": "Stage-specific acute degradation (degron) of AP-1",
+      "description": "Use dTAG/AID-tagged JUN/FOS to deplete AP-1 only during priming, only during the memory (washout) interval, or only at rechallenge, then measure the secondary response. This separates AP-1 as the initiator from AP-1 as the maintainer of memory."
+    },
+    {
+      "title": "Single-cell multiome with lineage/sister-cell tracking",
+      "description": "Combine live imaging of endogenously tagged FOS/JUN with sister-cell tracking and post-hoc multiome to test whether AP-1 state and accessibility are inherited across divisions and predict each cell's re-response. Mitotic retention can be checked simultaneously."
+    },
+    {
+      "title": "Hysteresis and optogenetic dose-duration mapping",
+      "description": "Drive AP-1 with optogenetic or titratable inputs across ramp-up and ramp-down sweeps and varied pulse patterns, then measure output. Path-dependent output (hysteresis) or persistent state would indicate feedback-based memory."
+    },
+    {
+      "title": "Locus-specific motif editing and dCas9 perturbation",
+      "description": "Mutate AP-1 motifs at memory-associated enhancers, or recruit AP-1 or dominant-negative A-FOS with dCas9, and test primed re-response by RNA and accessibility. Loss or gain of memory at single loci tests necessity and sufficiency independent of global AP-1 changes."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Time-course ChIP/CUT&RUN of AP-1 (FOS/JUN) occupancy before, during, and after a transient stimulus",
+      "ATAC-seq footprinting of AP-1 motifs after stimulus washout to track persistent accessibility",
+      "Acute degron (dTAG/AID) depletion of JUN/FOS after stimulus to test maintenance vs. initiation of memory",
+      "Optogenetic pulse-controlled AP-1 activation with varied dose/duration followed by re-challenge",
+      "Single-cell multiome (RNA+ATAC) of primed vs naive cells to link AP-1 motif accessibility to secondary response",
+      "Live imaging of endogenously tagged FOS/JUN to measure single-cell dynamics and inheritance across divisions",
+      "Sister-cell lineage tracking to test heritability of AP-1 state through mitosis",
+      "Mitotic bookmarking assay: AP-1 retention on mitotic chromosomes by live imaging/CUT&RUN",
+      "Dominant-negative (A-FOS) induction only during priming vs only during rechallenge",
+      "Targeted dCas9 recruitment of AP-1 or its antagonist to specific enhancers to test sufficiency of memory sites",
+      "Mutating AP-1 motifs at memory-associated enhancers by CRISPR base editing",
+      "Hi-C/Micro-C to measure AP-1-dependent loop persistence after stimulus",
+      "Histone mark profiling (H3K27ac, H3K4me1) to test whether AP-1 sites leave chromatin scars independent of AP-1",
+      "Test BAF/SWI-SNF dependence of persistent AP-1 sites via inhibitors during washout",
+      "Mathematical modeling of FOS/JUN positive feedback bistability and hysteresis predictions",
+      "Dose-response hysteresis measurement: sweep stimulus up and down and compare thresholds",
+      "Compare AP-1 family member switching (FOSL1/FOSL2/JUNB) composition over time by proteomics",
+      "In vivo models: epithelial wound-healing or inflammatory memory with AP-1 conditional knockout",
+      "Phosphorylation/JNK-signaling reporter plus AP-1 occupancy to separate signaling memory from chromatin memory",
+      "Cross-cell-type comparison of AP-1 memory in human fibroblast reprogramming or senescence contexts"
+    ]
+  },
+  "output_tokens": 1485,
+  "cost_usd": 0.017620300000000002
+}

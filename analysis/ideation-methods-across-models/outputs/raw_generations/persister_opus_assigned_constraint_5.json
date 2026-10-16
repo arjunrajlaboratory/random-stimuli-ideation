@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assigned_constraint",
+  "call": 5,
+  "constraint": "finishing within three months",
+  "prompt": "Constraint: every one of your ideas must be carried out finishing within three months. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Twin-split clonal barcoding to test heritability of survival",
+      "description": "Lentivirally barcode a drug-sensitive cancer line at low MOI, expand briefly, then split the population into replicate arms that are treated identically with the targeted drug, and sequence barcodes in the survivors. The degree to which the same barcodes survive across split replicates quantifies how much survival is driven by a heritable, pre-existing cell state versus a coin flip at the time of treatment, and the timescale over which splits stop agreeing gives the memory half-life of that state."
+    },
+    {
+      "title": "Prospective sorting on candidate priming markers",
+      "description": "Use scRNA-seq of the untreated population to nominate rare-cell markers with cell-surface or reporter-accessible products, FACS-sort the marker-high and marker-low fractions from drug-naive cells, and then treat both and count colonies. This converts a correlative single-cell signature into a prospective, causal test: if the marker defines the primed state, survival frequency should be strongly enriched in the sorted-high fraction."
+    },
+    {
+      "title": "Continuous live imaging across the treatment boundary",
+      "description": "Image a sparsely plated, nuclear-labeled population for 2-3 days before drug addition and for a week after, so each survivor can be traced back to its own pre-drug history of division rate, cell-cycle phase at dosing, size, motility, and signaling-reporter level. This directly answers whether survivors are distinguished by quiescence, cell-cycle timing, or a transcriptional reporter state before the drug ever arrives."
+    },
+    {
+      "title": "Washout-and-rechallenge kinetics to time the memory",
+      "description": "Isolate drug survivors, culture them without drug for a graded series of durations (days to weeks), and re-challenge at each timepoint to measure how fast the surviving fraction decays back to the naive baseline. A reversible, gradually decaying resistance implicates a non-genetic, epigenetically maintained state, whereas stable resistance points to a fixed genetic or permanently rewired cause."
+    },
+    {
+      "title": "Paired multiome plus clonal genotyping of survivors versus naive cells",
+      "description": "Run single-cell RNA plus ATAC on matched naive, early-persister, and late-resistant populations, and in parallel do low-coverage single-cell or bulk whole-genome copy-number and targeted driver sequencing on the same samples. This separates chromatin and expression reprogramming from selection of a pre-existing genetic subclone, and pinpoints which transcription-factor motifs gain accessibility before the expression changes appear."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1768,
+  "cost_usd": 0.0681615
+}

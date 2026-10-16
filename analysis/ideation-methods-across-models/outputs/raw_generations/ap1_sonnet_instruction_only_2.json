@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 2,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Hysteresis loop mapping (magnetic-materials analogy)",
+      "description": "Borrowing from ferromagnet hysteresis, titrate a stimulus (e.g., EGF, TPA, or FOS/JUN induction) up and then down, and measure AP-1 activity (reporter, chromatin accessibility at AP-1 motifs) at each dose. Path-dependent, non-overlapping up/down curves at matched stimulus levels would show bistability-like memory, and the width of the loop would quantify its strength."
+    },
+    {
+      "title": "Pulse-chase 'priming' assay with decay-kinetics (immunological memory analogy)",
+      "description": "As in vaccine prime-boost studies, give a first stimulus, wash out for varied intervals (hours to weeks), then restimulate and compare transcriptional response magnitude and speed to naive cells by RNA-seq and nascent-transcript assays. Define memory half-life and test whether it is lost when AP-1 is acutely degraded (dTAG/auxin) only during priming versus only during the recall."
+    },
+    {
+      "title": "Pioneer-footprint persistence analysis (geological sediment-record analogy)",
+      "description": "Like reading strata left after a flood has receded, use ATAC-seq/CUT&RUN time courses after stimulus removal to see whether AP-1-dependent accessible sites and H3K27ac stay open once AP-1 binding itself disappears. Use footprinting and BAF/p300 occupancy to distinguish sites that retain the 'scar' independently of AP-1 from those needing continued AP-1 occupancy."
+    },
+    {
+      "title": "Single-cell lineage-tracing of state inheritance (bacterial persistence/epigenetic inheritance analogy)",
+      "description": "Following how bacteria carry on phenotypes over generations, use live-cell AP-1 reporters (e.g., FOS-GFP, AP-1 kinase translocation reporters) with time-lapse microscopy and lineage tracking through division. Calculate autocorrelation of AP-1 state between mother and daughter cells and between sisters to see if states are heritable beyond what shared cytoplasm or signaling would explain."
+    },
+    {
+      "title": "Feedback-network perturbation and model fitting (control-theory/circuit design analogy)",
+      "description": "Treat AP-1 like a flip-flop circuit in electronics: build an ODE model with positive autoregulation (JUN promoter has AP-1 sites) and chromatin-state variables, fit it to dose and time-course data, and predict the effect of breaking the loop. Test predictions by CRISPR mutation of AP-1 sites at the JUN/FOS loci and optogenetic pulsing of AP-1 factors, looking for loss of persistent state when the feedback is cut."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 972,
+  "cost_usd": 0.0125021
+}

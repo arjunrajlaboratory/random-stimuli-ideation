@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 3,
+  "parallel": {
+    "field": "Cybersecurity / software engineering",
+    "problem": "Why do a small fraction of identical servers or software instances survive a targeted attack or patch while the rest are compromised or crash?",
+    "how_studied": "Teams use fault injection and chaos engineering to perturb systems on purpose. They collect per-instance logs and telemetry, then compare the state of survivors with that of failed instances. They use differential debugging and statistical analysis of rare events to find hidden state differences, such as memory layout, load or configuration drift."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Cybersecurity / software engineering\nProblem: Why do a small fraction of identical servers or software instances survive a targeted attack or patch while the rest are compromised or crash?\nHow it is studied: Teams use fault injection and chaos engineering to perturb systems on purpose. They collect per-instance logs and telemetry, then compare the state of survivors with that of failed instances. They use differential debugging and statistical analysis of rare events to find hidden state differences, such as memory layout, load or configuration drift.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pre-treatment lineage-tracked survivor back-tracing",
+      "description": "Label cells with heritable DNA barcodes, split the population into replicate pools, and treat. Then profile sister cells from untreated replicates by scRNA-seq to find the pre-existing state of cells whose barcodes later survive. This is the analogue of comparing the pre-attack state of survivors with that of failed instances, and it separates pre-existing states from drug-induced adaptation."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with retrospective survivor tracking",
+      "description": "Image single cells with fluorescent reporters (e.g. cell cycle, p53/ERK dynamics, mitochondrial potential, drug autofluorescence) for days before and during drug exposure. After treatment, trace the survivors back through their history and compare their trajectories with those of cells that died. This gives per-cell telemetry logs and shows which dynamic or state features predicted survival."
+    },
+    {
+      "title": "Controlled perturbation screen of candidate state variables",
+      "description": "Chaos-engineering style: systematically perturb suspected hidden variables such as cell-cycle phase, drug efflux, mitochondrial priming, chromatin state or stress-pathway activity, using CRISPRi/a, small-molecule modulators or synchronization. Measure how each shifts the survivor fraction, and use this to test which state differences cause survival rather than just correlate with it."
+    },
+    {
+      "title": "Sort-and-compare multi-omics of survivors versus casualties",
+      "description": "Use FACS or microfluidics to isolate cells on pre-treatment markers (e.g. drug uptake, apoptotic priming via BH3 profiling, or an efflux reporter). Then run matched ATAC-seq, proteomics, and single-cell RNA-seq on the sorted groups and treat the data like differential debugging to find the minimal set of state differences that separates the two."
+    },
+    {
+      "title": "Rare-event statistics and heritability of survival",
+      "description": "Run fluctuation-test and Luria\u2013Delbr\u00fcck-style experiments, plus sister-cell and clonal-relative comparisons, to estimate how often cells switch into and out of the survivor state and how long that state is inherited. Fit stochastic state-switching models to the survivor-fraction data across doses and times to tell apart random switching, epigenetic memory, and rare genetic or mutational causes. Complement this with deep sequencing to rule out hidden mutations."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 861,
+  "cost_usd": 0.0138695
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "word_salad_required",
+  "call": 7,
+  "stimulus": "unprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nunprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded clonal tracking before and after drug",
+      "description": "Tag cells with heritable DNA barcodes, split the population into replicates, and treat. Then sequence barcodes to see whether the same lineages survive across replicates (pre-existing heritable state) or different ones (stochastic switching). As in the material's list of many distinct, separately named items, each barcode marks one lineage, so you can count which ones persist. Pair this with scRNA-seq on sister cells collected before treatment, so you can find the transcriptional state that predicts survival."
+    },
+    {
+      "title": "Live-cell time-lapse imaging with reporters and pedigree tracing",
+      "description": "Image single cells for days before and during drug exposure. Use fluorescent reporters for signaling (ERK/AKT), cell cycle, and apoptosis. Then trace each survivor's ancestry to test whether pre-treatment dynamics, such as slow cycling, pulsatile signaling, or a lineage-shared state, predict survival. Comparing sister cells would show how heritable the state is."
+    },
+    {
+      "title": "Multi-omic profiling of survivors over time",
+      "description": "Run single-cell RNA, ATAC and proteomic profiling at time points from untreated through early drug tolerance to regrowth. This separates persister states (such as epigenetic reprogramming, stress-response or drug-efflux programs) from mutations. Like the unrelated word list, where each word looks different but may share hidden structure, apparently identical cells can be grouped by shared features in the data. Whole-genome sequencing of survivors would rule out rare genetic resistance."
+    },
+    {
+      "title": "Functional perturbation screens in the persister state",
+      "description": "Run a CRISPR knockout or interference screen, or a small-molecule screen, during drug exposure. Measure which perturbations change the fraction of survivors, targeting chromatin regulators, metabolic and stress pathways, and anti-apoptotic genes. The results show which factors cause tolerance and which could be co-targeted."
+    },
+    {
+      "title": "Single-cell metabolic and drug-response phenotyping",
+      "description": "Measure intracellular drug concentration, mitochondrial priming (BH3 profiling), ROS, and metabolic state (for example NADH fluorescence lifetime imaging) in single cells just after drug exposure. Then sort or image cells by these readouts and follow their fates. This would show whether survivors take up less drug, resist apoptosis more strongly, or run a different metabolism."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 875,
+  "cost_usd": 0.014145500000000002
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "poem_required",
+  "call": 4,
+  "stimulus": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nNature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.\nThen leaf subsides to leaf.\nSo Eden sank to grief,\nSo dawn goes down to day.\nNothing gold can stay.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Transient-pulse persistence assay (\"nothing gold can stay\" decay kinetics)",
+      "description": "Give cells a brief, defined stimulus (e.g., EGF/TPA/anisomycin pulse) and track AP-1 (FOS/JUN) protein, chromatin occupancy, and target gene expression by live reporters and time-course CUT&RUN well after the stimulus ends. Fit decay curves to distinguish a fleeting early peak (like the first gold leaf fading) from a self-sustaining state that persists for many cell divisions, and test whether persistence outlasts the half-lives of AP-1 proteins and mRNAs."
+    },
+    {
+      "title": "Chromatin accessibility memory with AP-1 degron/acute depletion",
+      "description": "After a priming stimulus, use ATAC-seq and CUT&Tag for H3K27ac/H3K4me1 to identify loci that stay open once the stimulus is gone. Then acutely degrade FOS/JUN (dTAG/AID) either during priming only or after priming only, to test whether AP-1 is needed to establish versus maintain the accessible state, a distinction that separates a memory mechanism from a transient trigger."
+    },
+    {
+      "title": "Re-stimulation (primed vs naive) response test",
+      "description": "Compare transcriptional response magnitude and speed to a second stimulus in primed versus naive cells at varying rest intervals, using RNA-seq and single-cell readouts. Plot the memory decay vs. rest time and ask whether AP-1 motif-containing enhancers show faster/stronger induction, and whether AP-1 dominant-negative (e.g., A-FOS) expressed only during priming abolishes the enhanced second response."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1 states across divisions",
+      "description": "Use live-cell AP-1 activity reporters (e.g., endogenously tagged FOS/JUN or a TRE-driven fluorescent reporter) with time-lapse imaging of mother-daughter pairs to measure whether AP-1 activity state is inherited and correlated between sister cells beyond what shared stimulus explains. Quantify autocorrelation across generations to distinguish heritable bistable states from re-induced noise."
+    },
+    {
+      "title": "Synthetic AP-1 pioneer-site perturbation and mitotic bookmarking",
+      "description": "Use CRISPR to mutate or dCas9-block specific AP-1 motifs at candidate memory enhancers, and perform mitotic-arrest CUT&RUN/imaging to test whether AP-1 stays on mitotic chromosomes as a bookmark. Test necessity and sufficiency by seeing whether motif loss erases the retained accessibility and primed response, and whether tethering JUN/FOS to a naive locus can create a durable open state after release."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 992,
+  "cost_usd": 0.014779500000000001
+}

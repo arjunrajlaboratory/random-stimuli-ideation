@@ -1,0 +1,150 @@
+{
+  "batch": 8,
+  "question": "ap1",
+  "model": "claude-sonnet-5-5",
+  "attempts": 1,
+  "prompt_sha256": "3562f40f9c9ba1135669397e09b8986d498579ec5a21720b0b5c3aea585845b4",
+  "rewrites": [
+    {
+      "id": "I1",
+      "title": "Lineage-tracked single-cell multiome heritability",
+      "description": "Pair scATAC/scRNA multiome with lineage barcodes or sister-cell pair analysis to test whether AP-1-opened chromatin states and gene expression are inherited across divisions in a clonal pattern. Compare their persistence with that in cells with matched exposure but no AP-1 activation, and test whether the similarity between sister cells exceeds chance.",
+      "idea_id": "ap1_sonnet_poem_required_5_2",
+      "source_sha256": "1a448b4d2fbe62b2b55f1ed36097fee4e7225278134a9ebf68f65d1a6961905d"
+    },
+    {
+      "id": "I2",
+      "title": "Synthetic AP-1 recruitment with histone-mark profiling",
+      "description": "Transiently recruit AP-1 (optogenetic or dCas9-tethered FOS/JUN) to a specific locus or reporter. Test whether accessibility, H3K27ac and the response to a later stimulus persist after recruitment ends. Profile cooperating factors and chromatin remodelers (BAF, p300) at the site to see which are needed for persistence. This tests whether AP-1 is sufficient to create a heritable state, not just correlated with one.",
+      "idea_id": "ap1_sonnet_word_salad_required_3_4",
+      "source_sha256": "186ef1c17e7f53789f62f65e7393c043a5e1a7ffcc9734ad220379db5b44170e"
+    },
+    {
+      "id": "I3",
+      "title": "Clone-resolved second-hit restimulation",
+      "description": "Lineage-barcode cells, stimulate, allow a long rest period, then restimulate and use single-cell RNA-seq/ATAC-seq to ask whether enhanced re-induction is heritable within clones rather than only a population average. Shared priming among sister cells of the same clone distinguishes an inherited chromatin state from averaging over transient responders.",
+      "idea_id": "ap1_opus_poem_required_4_4",
+      "source_sha256": "62c5dc9b17bc6d8a1c6d4bf5d4c9f9c0b00fc7c7315ccfc37be32fbb89f0e213"
+    },
+    {
+      "id": "I4",
+      "title": "Re-stimulation kinetics as a memory readout",
+      "description": "Define memory as a primed-versus-naive difference in the second response: compare the latency, amplitude, and duration of AP-1 target gene induction (single-cell RNA-seq or smFISH) after a rest period. Repeat with AP-1 binding-site mutants at primed enhancers to test whether faster reactivation depends specifically on AP-1 motifs.",
+      "idea_id": "ap1_haiku_poem_required_1_2",
+      "source_sha256": "cf9a89fa6af0f1522b5eaea9c21d2f5f1cb948b1b52e9d9bf82c7fdff833f8e8"
+    },
+    {
+      "id": "I5",
+      "title": "Persistence after signal withdrawal",
+      "description": "Pulse cells with a defined AP-1 stimulus (e.g., TPA, EGF, or LPS), wash it out, and track AP-1 occupancy (CUT&RUN for c-Jun/c-Fos), chromatin accessibility (ATAC-seq), and nascent transcription (PRO-seq) at target enhancers over days. Memory requires that the altered state outlasts the stimulus, so loci that stay open or bound after the signal is gone are the strongest candidates.",
+      "idea_id": "ap1_haiku_poem_required_6_0",
+      "source_sha256": "b70bb1e8c35bd0f5b1671af0a1670036b3ef78daab7510c4a281d78933218631"
+    },
+    {
+      "id": "I6",
+      "title": "Protein turnover and bistability modeling",
+      "description": "Measure the half-lives of Fos, Jun and Fra1 with SNAP/HaloTag pulse-chase and FRAP, then build a kinetic model with and without an AP-1-dependent feedback loop. Test whether the model with feedback predicts a long-lived, bistable primed state that persists longer than protein turnover alone allows, and whether that prediction holds in the unstimulated state.",
+      "idea_id": "ap1_haiku_poem_required_5_4",
+      "source_sha256": "69e2564203e877e30f0720b66cd9b72272170c994d17f0af17df46a98adeb7a4"
+    },
+    {
+      "id": "I7",
+      "title": "Multiome lineage tracing of inheritance",
+      "description": "Combine single-cell multiome (RNA + ATAC) with a barcoded lineage tracer on stimulated cells and follow them through several divisions after the stimulus ends. Test whether sister cells share AP-1 motif accessibility and target-gene expression more than unrelated cells do, which would indicate mitotic inheritance. Add live-cell imaging of an AP-1 reporter to track the state across divisions.",
+      "idea_id": "ap1_sonnet_poem_required_6_3",
+      "source_sha256": "1568dc6896d0cc15a86a4ccb15f3c6068d766178a5cb26023ac0eb42321678e1"
+    },
+    {
+      "id": "I8",
+      "title": "Division-coupled decay and mitotic bookmarking assay",
+      "description": "Prime cells, then use CFSE dilution or a FUCCI/division-counting reporter to sort descendants by number of divisions completed, and measure memory half-life in cell divisions rather than hours. In parallel, perform mitotic-chromosome CUT&RUN and live imaging of tagged FOS/JUN in mitosis to test whether AP-1 remains bound to memory enhancers during mitosis, which would allow the state to be copied to daughter cells.",
+      "idea_id": "ap1_opus_poem_required_7_2",
+      "source_sha256": "e4b330074103341183f4e9d3aa42d8e9d98909a80b5c4ec75dba4c76aff2b46a"
+    },
+    {
+      "id": "I9",
+      "title": "Persistence after transient stimulus",
+      "description": "Give cells a brief pulse of a stimulus (e.g., TPA, injury, or cytokine) and track AP-1 (FOS/JUN) occupancy and target gene expression by time-course CUT&RUN and RNA-seq for days to weeks after withdrawal. Memory is supported if a subset of AP-1 sites and genes stay in an altered state long after the AP-1 proteins themselves return to baseline.",
+      "idea_id": "ap1_sonnet_poem_required_0_0",
+      "source_sha256": "ee2d7754a1939f556420863395b1d721375b62c9aa7b224a7fdb4ade21ecc7a2"
+    },
+    {
+      "id": "I10",
+      "title": "Clonal barcoding plus multiome for heritability through division",
+      "description": "Combine heritable lentiviral barcodes (Rewind/FateMap-style) with scATAC+scRNA multiome to test whether primed AP-1 states are concordant within clones and transmitted across mitoses. Quantify within- versus between-clone variance in AP-1 motif accessibility over 5-20 divisions, in cycling versus arrested cells, to separate heritable epigenetic memory from slow protein-level hysteresis.",
+      "idea_id": "ap1_opus_word_salad_required_6_2",
+      "source_sha256": "d539990e5483ef5a345eb9f68a644a5f6ac0d75c4194a22d250dbcafad69e596"
+    },
+    {
+      "id": "I11",
+      "title": "Sister-cell/clonal recurrence test of AP-1 memory heritability",
+      "description": "Barcode a population (e.g., Watermelon/ClonMapper-style lineage barcodes), stimulate transiently, let clones expand, and re-stimulate. If AP-1 is a memory mechanism, the secondary AP-1 response magnitude should be much more correlated among cells sharing a barcode than among unrelated cells, and this intraclonal correlation should decay over a measurable number of divisions. Combine with split-clone designs (one half naive, one half primed) and single-cell multiome to show that the heritable unit is AP-1 motif accessibility rather than a generic proliferative state.",
+      "idea_id": "ap1_opus_word_salad_required_7_0",
+      "source_sha256": "239c8ad2e356fe876bd145f64e96e24958bdee19540da1a612fbfe0bab65c42d"
+    },
+    {
+      "id": "I12",
+      "title": "Live-cell imaging and mathematical modeling of AP-1 dynamics",
+      "description": "Track AP-1 activity with live reporters and single-molecule imaging of FOS/JUN residence times in stimulation-washout experiments, then fit models to test for bistability or hysteresis (self-sustaining state) versus passive decay. Test predictions such as dose-dependent persistence thresholds by titrating the stimulus and by perturbing feedback loops (e.g., JUN autoregulation).",
+      "idea_id": "ap1_sonnet_word_salad_required_4_4",
+      "source_sha256": "eab39b8c9753cb0ae2a6e230dc9f82dc342aae38809bb668e2b10262e14fc253"
+    },
+    {
+      "id": "I13",
+      "title": "Clonal inheritance of the primed state through division",
+      "description": "Combine expressed lentiviral barcodes with a split-clone design: prime a population, allow 1-8 divisions without stimulus, then assay one half of each clone by scATAC/scRNA-seq and challenge the other half. Quantify heritability as within- versus between-clone concordance of AP-1-site accessibility and secondary-response magnitude, and distinguish dilution from faithful copying by the slope across division number.",
+      "idea_id": "ap1_opus_word_salad_required_5_2",
+      "source_sha256": "02f32693bf731d32f292b44b80cf61b8fd50b1767193ce9edeb8a639e5a64de3"
+    },
+    {
+      "id": "I14",
+      "title": "Priming and re-stimulation transcriptional response assay",
+      "description": "Give two stimulus pulses separated by rest intervals of varying length, and measure nascent transcription (PRO-seq or EU-seq) and target-gene RNA after the second pulse. Faster or stronger induction in primed than naive cells, at AP-1 target genes only, would indicate memory. The decay time of the enhanced response quantifies memory duration, and AP-1 knockdown before priming tests necessity.",
+      "idea_id": "ap1_sonnet_word_salad_required_7_2",
+      "source_sha256": "46b53bbf79d9433f039ff703b01da407a3ff21928107a9aca5f3a1171e4206b9"
+    },
+    {
+      "id": "I15",
+      "title": "Single-cell lineage tracing of the primed state through quiescence",
+      "description": "Combine a live AP-1 transcriptional reporter with expressed lineage barcodes (e.g., Watermelon/CellTag-style) so that individual primed cells and their descendants can be re-identified at rechallenge and profiled by scRNA-seq. This distinguishes per-cell memory from a population-level artifact in which a pre-existing responsive subpopulation is selected or expanded, and measures what fraction of cells retain the state.",
+      "idea_id": "ap1_opus_poem_required_7_1",
+      "source_sha256": "1813320153f9f194656b12dbc799f0163350306691ee47d65e421711cdefc3fc"
+    },
+    {
+      "id": "I16",
+      "title": "Time-resolved AP-1 dimer composition at sites",
+      "description": "Perform time-resolved CUT&RUN for FOS, FOSB, FRA1/FRA2, JUN, JUNB, and JUND together with co-IP of dimer composition at matched timepoints. Ask whether short-lived FOS-containing dimers at a given site are replaced by longer-lived FRA1/JUND dimers or by resident lineage factors. A site-preserving change in dimer composition would be a concrete mechanistic form of AP-1 memory.",
+      "idea_id": "ap1_opus_poem_required_4_1",
+      "source_sha256": "7771e167961a5315aa462d7f1f06a99fbeb7b9565fcac801a681678d18b062af"
+    },
+    {
+      "id": "I17",
+      "title": "Single-molecule footprinting of residual state at memory enhancers",
+      "description": "Apply single-molecule methyltransferase footprinting (SMF/Fiber-seq) at AP-1 memory enhancers days after the stimulus has decayed, to distinguish on individual DNA fibers between persistent low-level AP-1 occupancy, nucleosome-depleted chromatin without bound factor, and fully reclosed chromatin. Quantify the fraction of molecules in each state and test, with paired scSMF/transcriptome readout, how that fraction predicts single-cell secondary response, to determine whether the retained state is a structural chromatin remnant rather than ongoing signaling.",
+      "idea_id": "ap1_opus_word_salad_required_7_4",
+      "source_sha256": "ab919a54a56561d4cd54a39f0819fb3640de45ca3ca7f8f083ea667d27487947"
+    },
+    {
+      "id": "I18",
+      "title": "Lineage-tracked AP-1 reporter for heritable memory",
+      "description": "Express a destabilized live reporter of AP-1 activity (e.g., FOS promoter-driven d2EGFP) in cells, then track single-cell lineages by time-lapse imaging across several divisions after a transient stimulus. Test whether prior AP-1 activity history predicts the magnitude of future responses in daughter cells, and whether that correlation decays with generation number.",
+      "idea_id": "ap1_haiku_word_salad_required_7_3",
+      "source_sha256": "650344d5dba734fff024d9e8355889ac1b327ab74976aad79a15eaf5e034a3de"
+    },
+    {
+      "id": "I19",
+      "title": "Dilution-independent persistence across divisions and quiescence",
+      "description": "Label a stimulus-experienced population with a live AP-1 reporter and a division-tracking dye, then separate cells into quiescent and proliferating fractions over a long rest period. Measure whether AP-1-dependent accessibility and priming decay with division, dilution, or time alone, and compare the decay curve with that of stable marks such as DNA methylation or H3K4me1. This separates epigenetic memory from a transient signaling state that persists only while the cell stays alive.",
+      "idea_id": "ap1_haiku_poem_required_2_3",
+      "source_sha256": "7c7fcc998b333decd079593405cdfcd3eb91da90ce032f7d85382c4f1917d402"
+    },
+    {
+      "id": "I20",
+      "title": "Motif insertion/deletion library for motif syntax",
+      "description": "Build an MPRA plus CRISPR knock-in library that inserts TRE/CRE motifs at varied copy number, spacing, and flanking context into naive and endogenous loci, and deletes them from memory-competent enhancers. Measure which configurations retain accessibility and poised transcription after stimulus withdrawal, to separate motif presence from motif syntax as the carrier of memory.",
+      "idea_id": "ap1_opus_word_salad_required_4_1",
+      "source_sha256": "1b816e12410201c88ed863b2ffade4f917a8b32ea1966c49191aaea63eb81bcc"
+    }
+  ],
+  "cost_usd": 0.0551092
+}

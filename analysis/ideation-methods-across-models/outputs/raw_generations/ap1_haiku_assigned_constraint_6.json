@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 6,
+  "constraint": "with only a single time point measured per sample",
+  "prompt": "Constraint: every one of your ideas must be carried out with only a single time point measured per sample. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Chromatin persistence at AP-1 enhancers after signal washout",
+      "description": "Give a transient stimulus, then harvest separate animal or cell cohorts at different washout intervals, each sampled once by ATAC-seq or CUT&Tag for H3K27ac and AP-1 (Fos/Jun) occupancy. If AP-1-bound enhancers stay open or acetylated after c-Fos/JunB protein returns to baseline, that supports a chromatin-based memory rather than a transient signaling response."
+    },
+    {
+      "title": "Single-cell multiome linking prior exposure to a later response",
+      "description": "Split a population into groups with different prior AP-1-activating histories, then challenge each group with a standard stimulus and collect one multiome snapshot per sample at the response peak. Test whether residual AP-1 motif accessibility before the challenge predicts the magnitude and speed of the secondary target-gene induction, and whether that predictive signal is absent in cells lacking the pre-exposure."
+    },
+    {
+      "title": "Necessity test with AP-1 loss-of-function in a persistence readout",
+      "description": "Compare the persistent chromatin and transcriptional state at a single late timepoint in wild-type cells versus cells with Fos or Jun knockdown, dominant-negative A-FOS/TAM67 expression, or conditional deletion, each sampled once after the same stimulus history. If the persistent enhancer marks or memory-associated gene expression disappear without AP-1, AP-1 is required rather than merely correlated with memory."
+    },
+    {
+      "title": "Decoupling AP-1 protein decay from chromatin memory",
+      "description": "Use mass cytometry or phospho/intracellular flow to measure c-Fos, JunB and other AP-1 protein levels in single cells across a series of washout durations, with each cell measured once. A mismatch in which AP-1 protein returns to baseline while chromatin marks or target-gene poised states remain elevated would separate a durable mnemonic state from ongoing AP-1 signaling."
+    },
+    {
+      "title": "Ex vivo re-stimulation of explants harvested after in vivo experience",
+      "description": "Expose animals to a single in vivo stimulus, then at a fixed later time harvest tissue explants and stimulate each one ex vivo with the same challenge, fixing each explant once for AP-1 target-gene and AP-1 motif-enhancer readouts. Explants from experienced animals that show faster or stronger AP-1 target induction than naive controls would indicate a latent, cell-intrinsic memory that survives tissue removal from the original context."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1807,
+  "cost_usd": 0.00112205
+}

@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding to test whether survival is bimodal and inherited",
+      "description": "Label each cell with a heritable DNA barcode, expose the population to the drug, and check whether surviving clones were already present and sized before treatment. If survival is a bimodal, pre-existing trait, survivors will share barcodes with pre-treatment clones; if it is a stochastic, reversible switch, survivors will be spread across many barcodes with no pre-treatment enrichment."
+    },
+    {
+      "title": "Pre-treatment single-cell profiling of the 'subnivean' state",
+      "description": "Run paired scRNA-seq and scATAC-seq on the untreated parental population, then score each cell's pre-existing expression and chromatin signature against its later survival, using barcodes or sorted reporter cells to link the two. This finds any sheltered state (for example slow cycling or a particular chromatin configuration) that predisposes cells to persist beneath the drug's pressure."
+    },
+    {
+      "title": "Live-cell reporters of signaling and cell-cycle dynamics during drug exposure",
+      "description": "Use time-lapse imaging with a FUCCI cell-cycle reporter and a kinase translocation reporter (for example ERK or AKT activity) to follow individual cells through the drug pulse. Test whether cells that eventually survive show distinct pathway rebound, a delayed cell cycle entry, or a transient signaling dip before the drug takes effect."
+    },
+    {
+      "title": "Re-challenge and metabolic profiling of sorted survivors",
+      "description": "Sort the surviving cells, release them from drug for several passages, then re-challenge them to measure whether tolerance is heritable or reverts. In parallel, run Seahorse respirometry and metabolomics on survivors versus sensitive cells to see whether they hold a stable internal metabolic setpoint (like a hematherm regulating its own temperature) that buffers the drug's effects."
+    },
+    {
+      "title": "Pooled CRISPR screen with single-cell readout to find survival regulators",
+      "description": "Run a genome-wide CRISPR knockout screen under drug, comparing sequenced guide representation in survivors versus treated bulk, and pair this with single-cell readouts to see which knockouts change the probability of survival rather than just its magnitude. Hits that rewire the tumor's core rules (an antinomian-like defiance of the drug's logic, such as chromatin regulators or stress-response genes) would point to the mechanisms that make some cells persist."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2716,
+  "cost_usd": 0.00162955
+}

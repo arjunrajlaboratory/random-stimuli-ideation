@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "plain",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pulse-chase perturbation: does the state outlive the trigger?",
+      "description": "Deliver a transient AP-1 stimulus (drug or cytokine pulse, or optogenetic/degron-controlled FOS/JUN induction), withdraw it, and then track AP-1 target accessibility (ATAC-seq) and transcription (RNA FISH, scRNA-seq) over days to weeks. A genuine memory mechanism should show target-state persistence long after AP-1 protein returns to baseline, and the gap between chromatin and transcript decay reveals which layer stores the information."
+    },
+    {
+      "title": "Lineage barcoding to measure heritability across divisions",
+      "description": "Barcode cells, let clones expand, then split sister cells and profile them with paired scRNA-seq and scATAC-seq (or MemorySeq-style enrichment for slow-fluctuating genes). Quantifying how much more similar AP-1 motif accessibility and AP-1 target expression are within clones than between them yields a direct estimate of how many generations the state is inherited."
+    },
+    {
+      "title": "Acute AP-1 removal at defined times after state establishment",
+      "description": "Use an auxin- or dTAG-inducible degron on c-Jun/c-Fos (or a dominant-negative A-Fos) to strip AP-1 either during state establishment or only after the state is already set, and compare outcomes. If AP-1 is required to write but not to read the memory, late degradation should leave the accessible/primed state and its phenotype largely intact."
+    },
+    {
+      "title": "Re-stimulation kinetics as a functional memory assay",
+      "description": "Give cells a first stimulus, allow full recovery, then re-stimulate after varying intervals and measure the speed and amplitude of AP-1 target induction and of the downstream phenotype (e.g., drug tolerance, migration, differentiation competence). Faster or stronger secondary responses that decay with rest interval, and that are abolished by AP-1 loss during the first exposure, are the hallmark of a trained/primed memory."
+    },
+    {
+      "title": "Mapping what physically holds the mark at AP-1 sites",
+      "description": "At AP-1-bound enhancers that stay open after the stimulus, profile the candidate storage layers in parallel: histone modifications (H3K4me1/H3K27ac CUT&RUN), nucleosome positioning, DNA methylation, pioneer-factor and BRD4/cohesin occupancy, and enhancer-promoter contacts (Micro-C). Then test causality by targeting erasers or writers (dCas9-LSD1, dCas9-p300) to those specific sites to see which perturbation wipes or installs the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1477,
+  "cost_usd": 0.0620936
+}

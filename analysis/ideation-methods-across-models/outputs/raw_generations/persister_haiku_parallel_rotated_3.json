@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "parallel_rotated",
+  "call": 3,
+  "parallel": {
+    "field": "Economics (firm survival in a common shock)",
+    "problem": "Why do a few firms with apparently identical technology and market position survive a recession that closes most of their peers?",
+    "how_studied": "Economists fit survival or hazard models (such as Cox regressions) to firm-level administrative panel data and test which pre-shock balance-sheet, liquidity, or management variables predict exit. Difference-in-differences designs exploit natural experiments such as credit-supply shocks. Agent-based simulations with heterogeneous random shocks check whether the observed survival fraction arises from chance alone."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Economics (firm survival in a common shock)\nProblem: Why do a few firms with apparently identical technology and market position survive a recession that closes most of their peers?\nHow it is studied: Economists fit survival or hazard models (such as Cox regressions) to firm-level administrative panel data and test which pre-shock balance-sheet, liquidity, or management variables predict exit. Difference-in-differences designs exploit natural experiments such as credit-supply shocks. Agent-based simulations with heterogeneous random shocks check whether the observed survival fraction arises from chance alone.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Time-to-death hazard model on pre-treatment single-cell states",
+      "description": "Borrowing the firm-exit Cox approach, track individual cells by live-cell imaging and fit a survival model where time-to-death under drug is the outcome and pre-treatment measurements (reporter levels for drug efflux, NRF2 or antioxidant state, cell-cycle phase, mitochondrial membrane potential) are the covariates. This tests which pre-shock states predict survival, rather than only comparing endpoint survivors and non-survivors."
+    },
+    {
+      "title": "Natural-experiment analysis of pulsed or interrupted dosing",
+      "description": "Mirroring difference-in-differences designs that exploit credit-supply shocks, compare cell fates across drug schedules that create quasi-exogenous variation in exposure, such as drug holidays, pulses of different lengths, or staggered starts across otherwise identical wells. Cells whose exposure differs only through timing provide a clean contrast for whether survival depends on the state the cell was in at the moment of the shock."
+    },
+    {
+      "title": "Null simulation of survival from stochastic heterogeneity alone",
+      "description": "Following the economics practice of agent-based simulations with random shocks, build a model in which identical cells have random, transient fluctuations in drug target levels or uptake and simulate the expected survival fraction. Comparing the simulated fraction and its variance with the observed persister fraction shows whether chance alone explains the survivors or whether a specific heritable or regulated state must be invoked."
+    },
+    {
+      "title": "Lineage-linked survival and inheritance tests",
+      "description": "Use lineage barcoding or lineage tracing to link surviving cells to their progenitors, then test whether survival clusters within lineages more than expected by chance. Heritable clustering would point to a stable cell state passed on at division, while no clustering would support transient, stochastic switching."
+    },
+    {
+      "title": "Reversibility and re-challenge experiments as a shock-recovery design",
+      "description": "Sort out survivors after drug removal, let them regrow, and re-challenge them with the same drug to see whether their survival rate differs from that of the parental population. Analogous to asking whether surviving firms in a recession are structurally stronger or merely lucky, this distinguishes a stable adaptive state from a transient, reversible one and measures the persistence of the advantage."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1163,
+  "cost_usd": 0.0008514499999999999
+}

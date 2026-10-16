@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 3,
+  "stimulus": "axwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\naxwort carbamyl vetivene flagstone patination unwebbed adjustment abattoir omasum show nucellar outscream pentagyn mercurate pigeontail stodginess locomotory malmy evacuative praise coverlet hematherm antinomian semirotary whiteblow phylline unshifted muraenoid pinetum smilaceous sproutland janapan kouza suffer bimodal masthead managerial billy sulfurate prescience numinously decyl burbler propionic meute wheyface thetically espy bignoniad pinproof plotty bergut subnivean lasket tripsome ethnic chicken applanate wildly unvital\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time course for persistent chromatin marks (bimodal test)",
+      "description": "Pulse cells with a defined AP-1 stimulus, wash it out, and track AP-1 site accessibility (ATAC-seq), H3K27ac, and AP-1 occupancy (CUT&RUN) at memory loci over days. A memory mechanism predicts that marks persist after stimulus removal and that the population splits into bimodal states rather than decaying smoothly, as a bistable switch would."
+    },
+    {
+      "title": "Degron-based necessity test during the silent interval",
+      "description": "Use an auxin- or dTAG-inducible degron to deplete FOS or JUN only during the quiescent window after stimulation, then re-challenge and measure whether primed (faster or stronger) transcription of memory genes is lost. This separates AP-1 needed to maintain the memory from AP-1 needed only for the initial response."
+    },
+    {
+      "title": "Mitotic inheritance across cell divisions",
+      "description": "Induce AP-1 transiently, sort cells by FACS at several generations after washout, and measure chromatin state and re-stimulation responses in daughter cells. Persistence through divisions, especially when AP-1 protein is absent, would indicate heritable self-maintained memory rather than a direct readout of ongoing AP-1 activity."
+    },
+    {
+      "title": "Dose-timing and delay-dependent recall assay",
+      "description": "Pre-stimulate with varying doses and durations, then re-challenge after increasing delays and fit the decay of the primed response to estimate memory half-life and recall strength. Repeat with DNA-binding-deficient or site-mutant AP-1 at the memory enhancers; a memory mediated by AP-1 should be abolished or shortened in these mutants."
+    },
+    {
+      "title": "Single-cell lineage tracing of heterogeneous memory states",
+      "description": "Combine a live AP-1 reporter with lineage barcoding and single-cell multiome sequencing to follow individual cells after stimulation, asking whether memory is retained in a subset of cells that shows a hidden, stable chromatin state. Such a state should be predictive of later responses, and its persistence should correlate with AP-1 occupancy at specific enhancers rather than with reporter signal alone."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1633,
+  "cost_usd": 0.00108585
+}

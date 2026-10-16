@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "critique_revise",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Transient stimulus / washout with chromatin accessibility tracking: Expose cells to a defined AP-1-activating stimulus (e.g., TPA, injury, or inflammatory cue), then wash out and perform time-resolved ATAC-seq, CUT&RUN for FOS/JUN, and RNA-seq over days to weeks. Persistence of AP-1-dependent open chromatin and primed gene expression after AP-1 activity returns to baseline would indicate memory.\n2. Acute AP-1 degradation or dominant-negative block at different phases: Use degron-tagged FOS/JUN or a dominant-negative (A-FOS) to remove AP-1 either during the initial stimulus (encoding) or after the stimulus has faded (maintenance). If blocking during encoding abolishes the enhanced secondary response but removing it later doesn't, AP-1 is needed to establish but not sustain memory; the opposite pattern implies active maintenance.\n3. Primed vs naive re-stimulation response assay: Compare transcriptional output (RNA-seq, nascent transcription via PRO-seq) and kinetics after a second stimulus in previously stimulated versus naive cells, with varying rest intervals. Quantifying faster, stronger, or more sustained induction at AP-1 target genes, and correlating it with AP-1 binding and H3K27ac at their enhancers, tests functional memory.\n4. Single-cell multiome lineage tracing of memory inheritance: Use scATAC/RNA multiome with lineage barcodes or sister-cell pairing to test whether AP-1-linked accessibility states and primed expression are inherited through cell divisions in clonal lineages. Heritability of states beyond what cell-type or stochastic variation explains, and bimodality of states, would support a memory mechanism.\n5. Locus-specific perturbation of AP-1 motifs and memory-state engineering: Use CRISPR editing of AP-1 motifs, or dCas9-based recruitment or blocking of AP-1/chromatin remodelers (e.g., SWI/SNF) at candidate enhancers, and optogenetic or pulsed AP-1 activation to write memory artificially. Determining whether motif loss erases memory, and whether a synthetic pulse is sufficient to induce a persistent primed state, tests necessity and sufficiency.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Pioneer-like occupancy vs. motif-independent persistence via nucleosome phasing footprinting",
+      "description": "Use single-molecule footprinting (e.g., Fiber-seq or SMF/NOMe-seq) before, after, and long after stimulus to resolve whether AP-1-dependent loci retain remodeled nucleosome arrays and co-occupancy on the same DNA molecules after AP-1 leaves. Molecule-level bimodality of retained remodeled fibers, without AP-1 binding, would distinguish a chromatin-encoded memory from continued AP-1 occupancy."
+    },
+    {
+      "title": "Memory carried by AP-1 protein/mRNA levels vs. chromatin: nuclear transplant or cell-fusion test",
+      "description": "Fuse primed cells with naive cells (heterokaryons, with species-polymorphic SNPs to assign alleles) or transfer primed nuclei into naive cytoplasm, then ask whether primed enhancers stay open in cis while naive-derived ones remain closed. Cis-restricted persistence argues for a chromatin-based memory, while trans-spreading implicates diffusible factors such as AP-1 levels or feed-forward loops."
+    },
+    {
+      "title": "Allele-specific memory with a single-allele AP-1 site switch",
+      "description": "In F1 hybrid cells (or heterozygous knock-in lines) with a motif mutation on only one allele, track allele-specific ATAC, H3K27ac, and nascent RNA after stimulus and rest to test if priming is cis-encoded. A retained primed state only on the intact allele within a shared nuclear environment shows that memory is locally written rather than set by global signaling state."
+    },
+    {
+      "title": "Quantitative AP-1 dynamics decoding via live-cell reporters and optogenetic pulse-train design",
+      "description": "Use endogenously tagged FOS/JUN with a live-cell reporter and an optogenetic upstream kinase or AP-1 activator to deliver pulses with varied amplitude, duration, and frequency, then measure the later response of a memory reporter at the same cells. Identifying a threshold, frequency dependence, or hysteresis (path-dependent response to the same input) would test for bistable memory and distinguish it from simple lingering signaling."
+    },
+    {
+      "title": "Competition with the memory: mapping AP-1 paralog switching and BAF/ATF/CEBP handoff in a CRISPR-barcoded cofactor screen",
+      "description": "Run a pooled CRISPR screen (with a memory-reporter readout like a sorted primed-enhancer-driven fluorescent reporter) after the washout period, targeting AP-1 family members, chromatin remodelers, histone modifiers, and partner TFs. Genes whose loss specifically erases maintenance (not initial response) and the paralog composition of AP-1 dimers identified by re-ChIP or Co-IP at late time points would reveal what mechanism actually holds the memory."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1039,
+  "cost_usd": 0.0179975
+}

@@ -1,0 +1,51 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 2,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Forgetting curves from a two-hit stimulus grid",
+      "description": "Breaks the 'stable switch / no second stimulus' assumption: deliver stimulus 1, then stimulus 2 after a logarithmically spaced interval series (1 h to 6 weeks), and read out the full dose-response of the second response rather than a single dose. Fitting the decay of the memory index gives a timescale that can be compared directly against measured FOS/JUN protein half-lives and chromatin mark turnover, distinguishing a bistable latch from a slowly leaking analog trace.",
+      "assumption_targeted": "Memory is a stable binary switch with an unmeasured timescale."
+    },
+    {
+      "title": "Synthetic sufficiency: writing memory with a stimulus-free AP-1 pulse",
+      "description": "Breaks the 'necessity equals mechanism' assumption: use an optogenetic or chemically dimerizable FOS-JUN (or dCas9-fused AP-1 activation domain targeted to specific motif sets) to deliver a defined-amplitude, defined-duration AP-1 pulse in otherwise unstimulated cells, then test whether the later response to a real stimulus is shifted exactly as it is in genuinely pre-stimulated cells. Pair with an acute degron that removes AP-1 only during the quiescent interval to separate writing from maintenance.",
+      "assumption_targeted": "Loss-of-function alone establishes mechanism; sufficiency untested."
+    },
+    {
+      "title": "Dimer-resolved accounting of writer versus keeper",
+      "description": "Breaks the 'AP-1 is one entity' assumption: endogenously tag each FOS- and JUN-family paralog with distinct degrons and fluorophores, track absolute per-cell protein abundance and dimer composition over the memory interval by live imaging plus proximity ligation or dimer-specific CUT&RUN, and degrade each paralog individually in narrow time windows. This identifies which dimer occupies memory loci during the interval, which is merely transient during induction, and whether composition switching (e.g., FOS to FRA1) is the actual carrier.",
+      "assumption_targeted": "AP-1 subunits are interchangeable."
+    },
+    {
+      "title": "Lineage-barcoded single-cell tracing of memory through division",
+      "description": "Breaks the 'population average equals per-cell heritable memory' assumption: heritably barcode cells before stimulus 1, let them divide a controlled number of times, then apply stimulus 2 and read out scRNA/scATAC with barcodes so that sibling cells can be compared. This separates true heritable per-cell memory (siblings concordant, memory present in all cells) from selection of a pre-existing responsive subpopulation (memory confined to specific clones) and quantifies how many divisions the trace survives.",
+      "assumption_targeted": "Memory is cell-intrinsic, heritable, and uniform across the population."
+    },
+    {
+      "title": "Medium-swap and nuclear-transplant tests of where the trace actually lives",
+      "description": "Breaks the 'AP-1 is the storage medium' assumption: cross-transfer conditioned medium, decellularized ECM, and cells between naive and pre-stimulated conditions, and separately move nuclei or chromatin from pre-stimulated cells into naive cytoplasm (heterokaryon or nuclear transfer, or permeabilized-cell reconstitution). If the memory travels with the medium or matrix rather than the nucleus, AP-1 is a readout of an extracellular loop; CRISPRi or scarless motif deletion at candidate memory enhancers then tests whether the AP-1 sites themselves are causally load-bearing.",
+      "assumption_targeted": "AP-1 and its chromatin footprint store the memory rather than reporting one held elsewhere."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "That 'memory' is operationally defined. Usually only a persistent molecular mark is shown, not an altered response to a later stimulus; a real memory claim needs a two-hit design in which the second response differs from naive, which is rarely done.",
+      "That AP-1 is a single entity. It is a combinatorial dimer family (FOS/FOSB/FRA1/FRA2 with JUN/JUNB/JUND, plus ATF/MAF partners) with very different induction kinetics and protein half-lives; the subunit that installs a trace may not be the one that stores it.",
+      "That the memory is stored in chromatin at AP-1 motifs, and that a persistent ATAC/H3K27ac peak is the memory itself rather than a correlate or passive footprint of an ongoing process.",
+      "That AP-1 is the storage medium rather than a readout of a trace held elsewhere: an autocrine/secreted loop, ECM composition and stiffness, cytoskeletal or mechanical state, metabolic state, or a slowly decaying protein pool that keeps re-writing the mark.",
+      "That the memory is cell-intrinsic and mitotically heritable, rather than maintained by the niche or merely outlasting the experiment without surviving a division.",
+      "That population averages report per-cell memory. A shifted bulk mean can come from a memory-bearing subpopulation, from selection of pre-existing states, or from a graded shift in every cell - mechanistically different outcomes.",
+      "That necessity equals mechanism. Loss-of-function (degron, knockout) is standard, but a memory mechanism should also be sufficient: imposing AP-1 activity alone, absent any stimulus, should write the altered future response.",
+      "That memory is a stable binary switch. Decay timescales are seldom measured, so an analog trace that fades over hours to weeks is indistinguishable from a latch in most designs.",
+      "That the installing and probing stimuli should be the same, which conflates a specific memory (recall of that stimulus) with a generic shift in cell state that alters responses to everything."
+    ]
+  },
+  "output_tokens": 5020,
+  "cost_usd": 0.18176200000000003
+}

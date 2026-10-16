@@ -1,0 +1,45 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Drug-holiday re-challenge with lineage barcodes (tests A1)",
+      "description": "Barcode a clonal population, apply a drug pulse, sort survivors, and grow them drug-free for several passages before re-challenging with the same dose. If survival is heritable, survivor lineages will keep their tolerance across drug-free passages; if it is a reversible state, tolerance will reset and the surviving fraction will return to baseline."
+    },
+    {
+      "title": "Deep single-cell genomic profiling of pre-existing variants (tests A2)",
+      "description": "Perform ultra-deep amplicon or duplex sequencing of the drug target, and single-cell whole-genome or copy-number profiling, on drug-naive cells to detect rare pre-existing variants, amplifications, or ecDNA. Then check whether these variants are enriched in the survivor-derived clones after treatment."
+    },
+    {
+      "title": "Per-cell drug accumulation and target occupancy imaging (tests A3)",
+      "description": "Use a fluorescent or clickable analogue of the drug, or mass cytometry with a drug-bound-target readout, to measure intracellular drug levels and target engagement in each cell over time. Pair these measurements with efflux transporter expression (e.g., ABCB1) and sort by accumulation to test whether survivors are simply those with the lowest effective exposure."
+    },
+    {
+      "title": "Spatial profiling of residual tumour in organoids or xenografts (tests A4)",
+      "description": "Treat tumour organoids or xenografts and use spatial transcriptomics or multiplexed imaging to map where survivors sit relative to hypoxic zones, cell-cell contacts, vasculature, and stroma. A survivor enrichment that tracks a niche rather than a fixed intrinsic profile would show that the environment, not the cell alone, drives survival."
+    },
+    {
+      "title": "Perturb-seq on drug-naive versus treated cells (tests A5)",
+      "description": "Run a pooled CRISPR knockout or CRISPRi screen with single-cell RNA readout under low-dose drug, and compare it with drug-naive controls. Genes whose knockdown changes survival, and that are themselves part of the survivor signature in the pre-treatment state, are candidate causal regulators, while signature genes that only appear after treatment are likely consequences."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "A1. Survival is a fixed, heritable, cell-intrinsic trait that is either present or absent, rather than a reversible, graded, or drug-induced cell state (persister-like plasticity).",
+      "A2. Genetically identical means phenotypically equivalent at the start: there is no pre-existing sub-clonal genetic variation (point mutations, copy-number changes, ecDNA, or target-gene amplification) that could seed resistance.",
+      "A3. Every cell receives the same effective drug exposure, so differences in survival reflect biology rather than differences in intracellular drug concentration, efflux, or target occupancy.",
+      "A4. Survival is determined by intrinsic cell state and not by the microenvironment (neighbouring cells, hypoxia, nutrient gradients, stromal or immune signals, spatial position).",
+      "A5. Markers or signatures found in cells that survive treatment are causes of survival, not consequences of having been treated or of surviving (no reverse causation or confounding).",
+      "A6. Survival can be read out at a single endpoint, and the cells that survive were in the state being measured before or during treatment; cell-cycle status, quiescence, and timing of drug exposure do not confound the result.",
+      "A7. Bulk averages are adequate, or rare survivors (often well under 1%) can be captured and profiled without losing the signal, so no single-cell or lineage-resolved method is needed.",
+      "A8. In vitro survival in a dish is representative of survival in patients (no selection bias from culture adaptation, and the drug's behaviour in vivo matches the culture model)."
+    ]
+  },
+  "output_tokens": 3140,
+  "cost_usd": 0.00171328
+}

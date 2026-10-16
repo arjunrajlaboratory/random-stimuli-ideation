@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "plain",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage barcoding with pre-treatment sampling",
+      "description": "Tag cells with heritable DNA barcodes, split the population before drug exposure, and profile sister clones by scRNA-seq or bulk sequencing after treatment. Barcodes shared between pre-treatment sisters and post-treatment survivors show whether survival is a pre-existing, heritable state, and comparing sister transcriptomes identifies the predictive features."
+    },
+    {
+      "title": "Live-cell imaging with reporters and retrospective single-cell profiling",
+      "description": "Track thousands of individual cells by time-lapse microscopy before and during drug treatment. Use reporters for signaling (such as ERK or AKT activity), cell cycle, and apoptosis, then fix and profile the survivors by multiplexed imaging or spatial transcriptomics. This links pre-drug dynamics, such as slow cycling or pulsatile signaling, to later survival."
+    },
+    {
+      "title": "Single-cell multi-omics of transcriptome, chromatin, and proteome",
+      "description": "Run paired scRNA-seq and scATAC-seq, or CITE-seq, on untreated, early-treated, and persister populations. Look for rare cell states, such as stress-response, drug-efflux, or dedifferentiation programs, and for the chromatin accessibility and transcription factor activity that maintain them. Trajectory and RNA-velocity analysis can show whether persisters arise by selection or by induced switching."
+    },
+    {
+      "title": "Quantifying state-switching kinetics with mathematical modeling (fluctuation test)",
+      "description": "Use Luria\u2013Delbr\u00fcck-style fluctuation assays and time-resolved sorting of high- and low-expressing subpopulations to measure how fast cells switch into and out of the tolerant state. Fit stochastic models to the data to tell apart random mutation, stochastic non-genetic switching, and drug-induced adaptation, and to predict the best dosing schedules."
+    },
+    {
+      "title": "Functional perturbation screens in persisters",
+      "description": "Run CRISPR knockout, CRISPRi, or CRISPRa screens, or small-molecule screens, during drug exposure. Use readouts of survival and persister outgrowth to find genes and pathways needed to enter or maintain tolerance, such as epigenetic regulators, metabolic and oxidative-stress pathways, or anti-apoptotic genes. Validate hits by checking whether co-treatment depletes persisters in vitro and in xenografts."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 874,
+  "cost_usd": 0.0115235
+}

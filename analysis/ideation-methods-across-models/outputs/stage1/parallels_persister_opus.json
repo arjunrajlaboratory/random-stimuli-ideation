@@ -1,0 +1,49 @@
+{
+  "question": "persister",
+  "model": "claude-opus-5-5",
+  "prompt": "Here is a research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nDo not answer it. Instead, list 8 parallel problems, each from a different field outside biology and medicine, that share the underlying structure of this question. Make the fields as different from one another as you can. For each, give the field, the parallel problem in one sentence, and two or three sentences on how people in that field investigate or measure it (specific methods, experimental designs, or analyses).",
+  "n_returned": 8,
+  "parallels": [
+    {
+      "field": "Metallurgy / materials science",
+      "problem": "Why do a few nominally identical metal specimens, cut from the same batch and cycled at the same stress amplitude, survive millions of fatigue cycles when most fail early?",
+      "how_studied": "Researchers first map each specimen's microstructure, such as grain orientation by electron backscatter diffraction (EBSD) and pores and inclusions by X-ray computed tomography (CT). They then follow crack initiation during the test with in situ synchrotron imaging or digital image correlation, so they can check whether survivors lacked particular 'hot-spot' features. Staircase testing and Weibull analysis of the scatter in lifetimes help separate built-in defect populations from random variation."
+    },
+    {
+      "field": "Machine learning",
+      "problem": "Why do a few training runs of the same network architecture, on the same data and with the same hyperparameters, reach high accuracy or survive heavy pruning while most do not (the 'lottery ticket' phenomenon)?",
+      "how_studied": "Researchers run large sweeps over random seeds while controlling sources of randomness separately (weight initialization versus data order versus dropout). They rewind successful runs to early checkpoints to find when the winning trajectory was set. Linear mode connectivity tests, iterative magnitude pruning with weight rewinding, and probes of the initial weights show whether success was already present at initialization or arose during training."
+    },
+    {
+      "field": "Distributed systems / site reliability engineering",
+      "problem": "Why do a few identical server replicas running the same software stay healthy during a cascading failure that takes down the rest of the fleet?",
+      "how_studied": "Engineers use chaos engineering, injecting controlled faults (added latency, dropped packets, killed processes) into fleets that are identical except for runtime state. They then compare telemetry from just before the fault in survivors and casualties, such as cache warmth, garbage-collection phase, connection pool size and queue depth. Distributed tracing and survival analysis over replica-level time series show which temporary states predicted staying up."
+    },
+    {
+      "field": "Economics",
+      "problem": "Why do a small minority of firms in the same industry, facing the same tariff or demand shock, survive and grow while comparable peers exit?",
+      "how_studied": "Economists link firm-level administrative or census panel data and run event studies around the shock. They match survivors and exits on characteristics observed before the shock, such as productivity, liquidity, customer concentration and management practices. Difference-in-differences designs and regression discontinuities around eligibility cutoffs separate advantages that existed beforehand from adaptive responses after the shock, such as product switching."
+    },
+    {
+      "field": "Atmospheric physics (ice nucleation)",
+      "problem": "When a population of identical supercooled water droplets is cooled, why do a few stay liquid far below the temperature at which most freeze?",
+      "how_studied": "Researchers repeatedly freeze and thaw the same droplets in microfluidic arrays or on cold stages. This tests whether the same droplets freeze at the same temperature every cycle ('singular' hypothesis: a fixed particle or site causes it) or at random temperatures ('stochastic' hypothesis). It parallels the Luria\u2013Delbr\u00fcck fluctuation test. Hold-at-constant-temperature experiments then measure freezing-rate statistics, and electron microscopy identifies any nucleating particles."
+    },
+    {
+      "field": "Battery engineering / electrochemistry",
+      "problem": "Why do a few lithium-ion cells from the same production lot keep their capacity through thousands of identical charge\u2013discharge cycles while most degrade quickly?",
+      "how_studied": "Engineers cycle large sets of cells under the same protocol and extract early-life features, such as the variance in the discharge voltage curve, impedance spectra and coulombic efficiency. They use these features to predict lifetime with statistical or machine learning models, an approach popularized by Severson et al. (2019). They then confirm the mechanism by taking cells apart after testing and imaging electrode heterogeneity with CT and X-ray diffraction."
+    },
+    {
+      "field": "Sociology of cultural markets",
+      "problem": "Why do a few songs or products become huge hits while others of apparently equal quality fail, and how much of that comes from intrinsic quality versus chance and social feedback?",
+      "how_studied": "In 'multiple worlds' experiments such as Salganik, Dodds and Watts's MusicLab, the same set of songs is released into several independent, randomized social environments. Researchers measure how consistent success is across the replicate worlds, which separates intrinsic quality from path-dependent luck. Observational studies add cascade tracking and time-stamped diffusion data to find which early fluctuations led to later dominance."
+    },
+    {
+      "field": "Quantum computing hardware",
+      "problem": "Why do a few superconducting qubits fabricated together with the same design keep long coherence times, while others on the same chip suffer sudden, intermittent losses of coherence?",
+      "how_studied": "Engineers monitor relaxation (T1) and dephasing times of each qubit repeatedly over hours to days, building time series and frequency sweeps. These show whether good performance is a stable per-device property or fluctuates as defect states (two-level systems) drift in and out of resonance. Strain or electric-field tuning of the defects, thermal cycling to 'reset' the device, and imaging of the junctions after fabrication separate built-in material flaws from transient states."
+    }
+  ],
+  "cost_usd": 0.08211199999999999
+}

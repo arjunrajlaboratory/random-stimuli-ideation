@@ -1,0 +1,46 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assumption_inversion",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Subunit-resolved, time-gated degradation of AP-1 members",
+      "description": "Tag endogenous c-Fos, FosB, JunB, c-Jun, and ATF3 with dTAG or AID degrons and degrade each one individually, and in combination, only during the quiescent interval after priming, then measure recall. This identifies which dimers are necessary for memory, exposes compensation, and avoids confounds from constitutive loss (Assumptions 1, 7)."
+    },
+    {
+      "title": "Hold-period AP-1 degradation to separate trigger from substrate",
+      "description": "After priming, degrade AP-1 during the rest period, not during re-stimulation, and track chromatin accessibility, H3K27ac, CUT&RUN occupancy, and recall over time. If primed chromatin persists without AP-1 and recall is intact, the memory lies in chromatin; if recall fails, AP-1 itself is the persistent substrate (Assumptions 2, 4)."
+    },
+    {
+      "title": "Single-cell lineage tracing of AP-1 activity across divisions",
+      "description": "Use a destabilized fluorescent AP-1 activity reporter with live imaging and tracking across divisions, paired with single-cell multiome readouts. Test whether the primed state is bimodal, whether mother and daughter cells share it, and whether it predicts later recall at single-cell resolution (Assumptions 3, 6)."
+    },
+    {
+      "title": "Synthetic AP-1 tethering with washout to test sufficiency and specificity",
+      "description": "Recruit the c-Jun activation domain or full c-Jun to a silent enhancer or promoter with dCas9 or optogenetic CRY2/CIB, then wash out the tether and test for a persistent primed state. Run the same design with NF-kB, C/EBP, or STAT tethers as controls, and complement with motif mutations at endogenous enhancers (Assumption 5)."
+    },
+    {
+      "title": "In vivo engram-style tagging with repeated, patterned stimulation",
+      "description": "Use Fos-TRAP2 or an AP-1-responsive reporter mouse to permanently label cells activated by a defined stimulus, then re-expose the animal weeks later and measure reactivation of the tagged ensemble, transcriptional priming, and chromatin state. Vary dose, duration, and frequency of the initial stimulus to test whether the memory encodes input patterns (Assumptions 8, 9)."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "1. AP-1 is treated as one functional entity, but it is a family of Fos, Jun, and ATF dimers with different partners, stabilities, and target sets.",
+      "2. The memory substrate is AP-1 itself (persistent binding or protein levels), not the chromatin, transcriptional, or protein-stability changes it triggers. AP-1 is assumed to be the persistent element rather than only the initiating trigger.",
+      "3. Memory is cell-autonomous and heritable through cell divisions, and population averages reflect what individual cells do (no bimodality or heterogeneity).",
+      "4. Causality runs from AP-1 to chromatin priming. In practice AP-1 may bind where priming already exists, or both may reflect a third factor.",
+      "5. Memory is specific to AP-1. Other stimulus-responsive factors (NF-kB, STATs, C/EBP) or non-TF mechanisms (metabolic or epigenetic states) are assumed not to be equally capable of producing it.",
+      "6. The memory criterion is a magnitude readout of re-induction. Threshold changes, kinetics, and reactivation of tagged cell ensembles are ignored.",
+      "7. Necessity is tested by constitutive knockdown or knockout, which assumes no compensation by other family members and confounds memory with baseline or developmental effects.",
+      "8. Results from immortalized cell lines and single short-interval stimuli generalize to primary cells, tissues, and in vivo memory over weeks.",
+      "9. The input is a single defined stimulus. Real memory may encode dose, duration, or frequency patterns, which the usual design ignores."
+    ]
+  },
+  "output_tokens": 5697,
+  "cost_usd": 0.00299189
+}

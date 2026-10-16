@@ -1,0 +1,3071 @@
+{
+  "namespace": "ideation-methods-across-models",
+  "values": [
+    {
+      "key": "cost_per_call_haiku_plain",
+      "value": "$0.0008",
+      "provenance": "scripts/07_report_values.py:L175",
+      "computed_at": "scripts/07_report_values.py:L175"
+    },
+    {
+      "key": "cost_per_call_opus_plain",
+      "value": "$0.0623",
+      "provenance": "scripts/07_report_values.py:L175",
+      "computed_at": "scripts/07_report_values.py:L175"
+    },
+    {
+      "key": "cost_per_call_sonnet_plain",
+      "value": "$0.0118",
+      "provenance": "scripts/07_report_values.py:L175",
+      "computed_at": "scripts/07_report_values.py:L175"
+    },
+    {
+      "key": "cost_per_distinct_haiku_critique_revise",
+      "value": "$0.008",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_haiku_instruction_only",
+      "value": "$0.007",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_haiku_obvious_then_avoid",
+      "value": "$0.006",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_haiku_overgenerate_select",
+      "value": "$0.013",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_opus_critique_revise",
+      "value": "$0.164",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_opus_instruction_only",
+      "value": "$0.147",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_opus_obvious_then_avoid",
+      "value": "$0.109",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_opus_overgenerate_select",
+      "value": "$0.103",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_sonnet_critique_revise",
+      "value": "$0.045",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_sonnet_instruction_only",
+      "value": "$0.053",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_sonnet_obvious_then_avoid",
+      "value": "$0.231",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cost_per_distinct_sonnet_overgenerate_select",
+      "value": "$0.282",
+      "provenance": "scripts/07_report_values.py:L174",
+      "computed_at": "scripts/07_report_values.py:L174"
+    },
+    {
+      "key": "cross_judge_model_name",
+      "value": "Sonnet 5.5",
+      "provenance": "scripts/07_report_values.py:L64",
+      "computed_at": "scripts/07_report_values.py:L64"
+    },
+    {
+      "key": "cutoff_high",
+      "value": 4.5,
+      "provenance": "scripts/07_report_values.py:L73",
+      "computed_at": "scripts/07_report_values.py:L73"
+    },
+    {
+      "key": "cutoff_low",
+      "value": 3.5,
+      "provenance": "scripts/07_report_values.py:L72",
+      "computed_at": "scripts/07_report_values.py:L72"
+    },
+    {
+      "key": "distinct_haiku_assigned_constraint",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_assumption_inversion",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_critique_revise",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_future_retrospective",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_instruction_only",
+      "value": 3,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_obvious_then_avoid",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_overgenerate_select",
+      "value": 2,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_parallel_rotated",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_poem_required",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_haiku_word_salad_required",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_assigned_constraint",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_assumption_inversion",
+      "value": 13,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_critique_revise",
+      "value": 19,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_future_retrospective",
+      "value": 11,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_instruction_only",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_obvious_then_avoid",
+      "value": 19,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_overgenerate_select",
+      "value": 14,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_parallel_rotated",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_poem_required",
+      "value": 11,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_opus_word_salad_required",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_pooled_assigned_constraint",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_assumption_inversion",
+      "value": 13,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_critique_revise",
+      "value": 34,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_future_retrospective",
+      "value": 13,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_instruction_only",
+      "value": 16,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_obvious_then_avoid",
+      "value": 25,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_overgenerate_select",
+      "value": 17,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_parallel_rotated",
+      "value": 7,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_poem_required",
+      "value": 12,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_pooled_word_salad_required",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L91",
+      "computed_at": "scripts/07_report_values.py:L91"
+    },
+    {
+      "key": "distinct_q_ap1_assigned_constraint",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_assumption_inversion",
+      "value": 7,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_critique_revise",
+      "value": 18,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_future_retrospective",
+      "value": 4,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_instruction_only",
+      "value": 7,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_obvious_then_avoid",
+      "value": 15,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_overgenerate_select",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_parallel_rotated",
+      "value": 2,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_poem_required",
+      "value": 6,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_ap1_word_salad_required",
+      "value": 4,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_assigned_constraint",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_assumption_inversion",
+      "value": 6,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_critique_revise",
+      "value": 16,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_future_retrospective",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_instruction_only",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_obvious_then_avoid",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_overgenerate_select",
+      "value": 8,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_parallel_rotated",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_poem_required",
+      "value": 6,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_q_persister_word_salad_required",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L101",
+      "computed_at": "scripts/07_report_values.py:L101"
+    },
+    {
+      "key": "distinct_sonnet_assigned_constraint",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_assumption_inversion",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_critique_revise",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_future_retrospective",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_instruction_only",
+      "value": 4,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_obvious_then_avoid",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_overgenerate_select",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_parallel_rotated",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_poem_required",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "distinct_sonnet_word_salad_required",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L96",
+      "computed_at": "scripts/07_report_values.py:L96"
+    },
+    {
+      "key": "example_n_un_haiku_critique_revise",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "example_n_un_opus_critique_revise",
+      "value": 3,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "example_n_un_opus_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L248",
+      "computed_at": "scripts/07_report_values.py:L248"
+    },
+    {
+      "key": "factor_name",
+      "value": "AP-1",
+      "provenance": "scripts/07_report_values.py:L62",
+      "computed_at": "scripts/07_report_values.py:L62"
+    },
+    {
+      "key": "fu_adjusted_distinct_poem_required",
+      "value": 4,
+      "provenance": "scripts/07_report_values.py:L165",
+      "computed_at": "scripts/07_report_values.py:L165"
+    },
+    {
+      "key": "fu_adjusted_distinct_word_salad_required",
+      "value": 2,
+      "provenance": "scripts/07_report_values.py:L165",
+      "computed_at": "scripts/07_report_values.py:L165"
+    },
+    {
+      "key": "fu_anchor_n",
+      "value": 960,
+      "provenance": "scripts/07_report_values.py:L156",
+      "computed_at": "scripts/07_report_values.py:L156"
+    },
+    {
+      "key": "fu_anchor_novelty_rho",
+      "value": 0.88,
+      "provenance": "scripts/07_report_values.py:L157",
+      "computed_at": "scripts/07_report_values.py:L157"
+    },
+    {
+      "key": "fu_anchor_novelty_shift",
+      "value": 0.18,
+      "provenance": "scripts/07_report_values.py:L159",
+      "computed_at": "scripts/07_report_values.py:L159"
+    },
+    {
+      "key": "fu_anchor_un_rate_followup",
+      "value": 0.169,
+      "provenance": "scripts/07_report_values.py:L162",
+      "computed_at": "scripts/07_report_values.py:L162"
+    },
+    {
+      "key": "fu_anchor_un_rate_primary",
+      "value": 0.132,
+      "provenance": "scripts/07_report_values.py:L161",
+      "computed_at": "scripts/07_report_values.py:L161"
+    },
+    {
+      "key": "fu_anchor_usefulness_rho",
+      "value": 0.8,
+      "provenance": "scripts/07_report_values.py:L158",
+      "computed_at": "scripts/07_report_values.py:L158"
+    },
+    {
+      "key": "fu_anchor_usefulness_shift",
+      "value": -0.07,
+      "provenance": "scripts/07_report_values.py:L160",
+      "computed_at": "scripts/07_report_values.py:L160"
+    },
+    {
+      "key": "fu_instruction_only_poem_required_distinct_useful_novel_diff",
+      "value": -4.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_instruction_only_poem_required_distinct_useful_novel_p",
+      "value": "= 0.506",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_instruction_only_poem_required_novelty_diff",
+      "value": -0.81,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_instruction_only_poem_required_novelty_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_instruction_only_poem_required_usefulness_diff",
+      "value": 0.4,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_instruction_only_poem_required_usefulness_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_instruction_only_word_salad_required_distinct_useful_novel_diff",
+      "value": -7.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_instruction_only_word_salad_required_distinct_useful_novel_p",
+      "value": "= 0.328",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_instruction_only_word_salad_required_novelty_diff",
+      "value": -0.76,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_instruction_only_word_salad_required_novelty_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_instruction_only_word_salad_required_usefulness_diff",
+      "value": 0.39,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_instruction_only_word_salad_required_usefulness_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_plain_poem_required_distinct_useful_novel_diff",
+      "value": 12.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_plain_poem_required_distinct_useful_novel_p",
+      "value": "= 0.0024",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_plain_poem_required_novelty_diff",
+      "value": 0.66,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_plain_poem_required_novelty_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_plain_poem_required_usefulness_diff",
+      "value": -0.15,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_plain_poem_required_usefulness_p",
+      "value": "= 0.0006",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_plain_word_salad_required_distinct_useful_novel_diff",
+      "value": 9.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_plain_word_salad_required_distinct_useful_novel_p",
+      "value": "= 0.0086",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_plain_word_salad_required_novelty_diff",
+      "value": 0.71,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_plain_word_salad_required_novelty_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "fu_plain_word_salad_required_usefulness_diff",
+      "value": -0.17,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "fu_plain_word_salad_required_usefulness_p",
+      "value": "= 0.0004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h1_haiku_distinct_diff",
+      "value": 3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h1_haiku_distinct_p",
+      "value": "= 0.231",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h1_opus_distinct_diff",
+      "value": 9.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h1_opus_distinct_p",
+      "value": "= 0.012",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h1_pooled_distinct_diff",
+      "value": 16.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h1_pooled_distinct_p",
+      "value": "= 0.0002",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h1_pooled_novelty_diff",
+      "value": 1.47,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h1_pooled_novelty_p",
+      "value": "= 0.0002",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h1_pooled_usefulness_diff",
+      "value": -0.56,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h1_pooled_usefulness_p",
+      "value": "= 0.0002",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h1_sonnet_distinct_diff",
+      "value": 4.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h1_sonnet_distinct_p",
+      "value": "= 0.090",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_assigned_constraint_distinct_useful_novel_diff",
+      "value": -15.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_assigned_constraint_distinct_useful_novel_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_assigned_constraint_novelty_diff",
+      "value": -0.77,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_assigned_constraint_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_assigned_constraint_usefulness_diff",
+      "value": -0.02,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_assigned_constraint_usefulness_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_assumption_inversion_distinct_useful_novel_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_assumption_inversion_distinct_useful_novel_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_assumption_inversion_novelty_diff",
+      "value": -0.49,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_assumption_inversion_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_assumption_inversion_usefulness_diff",
+      "value": 0.39,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_assumption_inversion_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_critique_revise_distinct_useful_novel_diff",
+      "value": 18.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_critique_revise_distinct_useful_novel_p",
+      "value": "= 0.042",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_critique_revise_novelty_diff",
+      "value": 0.78,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_critique_revise_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_critique_revise_usefulness_diff",
+      "value": -0.08,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_critique_revise_usefulness_p",
+      "value": "= 0.708",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_future_retrospective_distinct_useful_novel_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_future_retrospective_distinct_useful_novel_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_future_retrospective_novelty_diff",
+      "value": -0.38,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_future_retrospective_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_future_retrospective_usefulness_diff",
+      "value": 0.18,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_future_retrospective_usefulness_p",
+      "value": "= 0.043",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_assigned_constraint_distinct_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_assigned_constraint_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_assumption_inversion_distinct_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_assumption_inversion_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_critique_revise_distinct_diff",
+      "value": 2.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_critique_revise_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_future_retrospective_distinct_diff",
+      "value": -2.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_future_retrospective_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_obvious_then_avoid_distinct_diff",
+      "value": 2.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_obvious_then_avoid_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_overgenerate_select_distinct_diff",
+      "value": -1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_overgenerate_select_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_haiku_parallel_rotated_distinct_diff",
+      "value": -2.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_haiku_parallel_rotated_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_obvious_then_avoid_distinct_useful_novel_diff",
+      "value": 9.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_obvious_then_avoid_distinct_useful_novel_p",
+      "value": "= 0.531",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_obvious_then_avoid_novelty_diff",
+      "value": 0.49,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_obvious_then_avoid_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_obvious_then_avoid_usefulness_diff",
+      "value": -0.01,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_obvious_then_avoid_usefulness_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_assigned_constraint_distinct_diff",
+      "value": -8.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_assigned_constraint_distinct_p",
+      "value": "= 0.101",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_assumption_inversion_distinct_diff",
+      "value": 4.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_assumption_inversion_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_critique_revise_distinct_diff",
+      "value": 10.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_critique_revise_distinct_p",
+      "value": "= 0.188",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_future_retrospective_distinct_diff",
+      "value": 2.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_future_retrospective_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_obvious_then_avoid_distinct_diff",
+      "value": 10.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_obvious_then_avoid_distinct_p",
+      "value": "= 0.188",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_overgenerate_select_distinct_diff",
+      "value": 5.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_overgenerate_select_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_opus_parallel_rotated_distinct_diff",
+      "value": -4.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_opus_parallel_rotated_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_overgenerate_select_distinct_useful_novel_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_overgenerate_select_distinct_useful_novel_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_overgenerate_select_novelty_diff",
+      "value": -0.66,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_overgenerate_select_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_overgenerate_select_usefulness_diff",
+      "value": 0.52,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_overgenerate_select_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_parallel_rotated_distinct_useful_novel_diff",
+      "value": -9.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_parallel_rotated_distinct_useful_novel_p",
+      "value": "= 0.364",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_parallel_rotated_novelty_diff",
+      "value": -0.51,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_parallel_rotated_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_parallel_rotated_usefulness_diff",
+      "value": 0.15,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_parallel_rotated_usefulness_p",
+      "value": "= 0.101",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_assigned_constraint_distinct_diff",
+      "value": -4.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_assigned_constraint_distinct_p",
+      "value": "= 0.260",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_assumption_inversion_distinct_diff",
+      "value": -4.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_assumption_inversion_distinct_p",
+      "value": "= 0.260",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_critique_revise_distinct_diff",
+      "value": 6.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_critique_revise_distinct_p",
+      "value": "= 0.591",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_future_retrospective_distinct_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_future_retrospective_distinct_p",
+      "value": "= 0.891",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_obvious_then_avoid_distinct_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_obvious_then_avoid_distinct_p",
+      "value": "= 0.891",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_overgenerate_select_distinct_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_overgenerate_select_distinct_p",
+      "value": "= 0.891",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_parallel_rotated_distinct_diff",
+      "value": -3.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_instruction_only_sonnet_parallel_rotated_distinct_p",
+      "value": "= 0.891",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_assigned_constraint_distinct_useful_novel_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_assigned_constraint_distinct_useful_novel_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_assigned_constraint_novelty_diff",
+      "value": 0.7,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_assigned_constraint_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_assigned_constraint_usefulness_diff",
+      "value": -0.58,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_assigned_constraint_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_assumption_inversion_distinct_useful_novel_diff",
+      "value": 13.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_assumption_inversion_distinct_useful_novel_p",
+      "value": "= 0.0016",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_assumption_inversion_novelty_diff",
+      "value": 0.98,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_assumption_inversion_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_assumption_inversion_usefulness_diff",
+      "value": -0.17,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_assumption_inversion_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_critique_revise_distinct_useful_novel_diff",
+      "value": 34.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_critique_revise_distinct_useful_novel_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_critique_revise_novelty_diff",
+      "value": 2.25,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_critique_revise_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_critique_revise_usefulness_diff",
+      "value": -0.64,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_critique_revise_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_future_retrospective_distinct_useful_novel_diff",
+      "value": 13.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_future_retrospective_distinct_useful_novel_p",
+      "value": "= 0.0018",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_future_retrospective_novelty_diff",
+      "value": 1.09,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_future_retrospective_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_future_retrospective_usefulness_diff",
+      "value": -0.38,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_future_retrospective_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_assigned_constraint_distinct_diff",
+      "value": 0.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_assigned_constraint_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_assumption_inversion_distinct_diff",
+      "value": 0.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_assumption_inversion_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_critique_revise_distinct_diff",
+      "value": 5.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_critique_revise_distinct_p",
+      "value": "= 0.669",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_future_retrospective_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_future_retrospective_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_obvious_then_avoid_distinct_diff",
+      "value": 5.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_obvious_then_avoid_distinct_p",
+      "value": "= 0.277",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_overgenerate_select_distinct_diff",
+      "value": 2.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_overgenerate_select_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_haiku_parallel_rotated_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_haiku_parallel_rotated_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_obvious_then_avoid_distinct_useful_novel_diff",
+      "value": 25.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_obvious_then_avoid_distinct_useful_novel_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_obvious_then_avoid_novelty_diff",
+      "value": 1.96,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_obvious_then_avoid_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_obvious_then_avoid_usefulness_diff",
+      "value": -0.56,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_obvious_then_avoid_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_assigned_constraint_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_assigned_constraint_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_assumption_inversion_distinct_diff",
+      "value": 13.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_assumption_inversion_distinct_p",
+      "value": "= 0.004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_critique_revise_distinct_diff",
+      "value": 19.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_critique_revise_distinct_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_future_retrospective_distinct_diff",
+      "value": 11.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_future_retrospective_distinct_p",
+      "value": "= 0.0078",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_obvious_then_avoid_distinct_diff",
+      "value": 19.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_obvious_then_avoid_distinct_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_overgenerate_select_distinct_diff",
+      "value": 14.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_overgenerate_select_distinct_p",
+      "value": "= 0.004",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_opus_parallel_rotated_distinct_diff",
+      "value": 5.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_opus_parallel_rotated_distinct_p",
+      "value": "= 0.445",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_overgenerate_select_distinct_useful_novel_diff",
+      "value": 17.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_overgenerate_select_distinct_useful_novel_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_overgenerate_select_novelty_diff",
+      "value": 0.8,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_overgenerate_select_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_overgenerate_select_usefulness_diff",
+      "value": -0.03,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_overgenerate_select_usefulness_p",
+      "value": "= 0.421",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_parallel_rotated_distinct_useful_novel_diff",
+      "value": 7.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_parallel_rotated_distinct_useful_novel_p",
+      "value": "= 0.122",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_parallel_rotated_novelty_diff",
+      "value": 0.96,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_parallel_rotated_novelty_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_parallel_rotated_usefulness_diff",
+      "value": -0.41,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_parallel_rotated_usefulness_p",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_assigned_constraint_distinct_diff",
+      "value": 0.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_assigned_constraint_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_assumption_inversion_distinct_diff",
+      "value": 0.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_assumption_inversion_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_critique_revise_distinct_diff",
+      "value": 10.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_critique_revise_distinct_p",
+      "value": "= 0.0098",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_future_retrospective_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_future_retrospective_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_obvious_then_avoid_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_obvious_then_avoid_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_overgenerate_select_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_overgenerate_select_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h2_plain_sonnet_parallel_rotated_distinct_diff",
+      "value": 1.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "h2_plain_sonnet_parallel_rotated_distinct_p",
+      "value": "= 1.000",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "h3_spearman_haiku_opus",
+      "value": 0.7,
+      "provenance": "scripts/07_report_values.py:L132",
+      "computed_at": "scripts/07_report_values.py:L132"
+    },
+    {
+      "key": "h3_spearman_haiku_sonnet",
+      "value": 0.84,
+      "provenance": "scripts/07_report_values.py:L132",
+      "computed_at": "scripts/07_report_values.py:L132"
+    },
+    {
+      "key": "h3_spearman_sonnet_opus",
+      "value": 0.4,
+      "provenance": "scripts/07_report_values.py:L132",
+      "computed_at": "scripts/07_report_values.py:L132"
+    },
+    {
+      "key": "judge_model_name",
+      "value": "Opus 5.5",
+      "provenance": "scripts/07_report_values.py:L63",
+      "computed_at": "scripts/07_report_values.py:L63"
+    },
+    {
+      "key": "max_p_novelty_new_vs_plain",
+      "value": "= 0.0014",
+      "provenance": "scripts/07_report_values.py:L116",
+      "computed_at": "scripts/07_report_values.py:L116"
+    },
+    {
+      "key": "model_id_haiku",
+      "value": "claude-haiku-5-5",
+      "provenance": "scripts/07_report_values.py:L61",
+      "computed_at": "scripts/07_report_values.py:L61"
+    },
+    {
+      "key": "model_id_opus",
+      "value": "claude-opus-5-5",
+      "provenance": "scripts/07_report_values.py:L61",
+      "computed_at": "scripts/07_report_values.py:L61"
+    },
+    {
+      "key": "model_id_sonnet",
+      "value": "claude-sonnet-5-5",
+      "provenance": "scripts/07_report_values.py:L61",
+      "computed_at": "scripts/07_report_values.py:L61"
+    },
+    {
+      "key": "model_name_haiku",
+      "value": "Haiku 5.5",
+      "provenance": "scripts/07_report_values.py:L60",
+      "computed_at": "scripts/07_report_values.py:L60"
+    },
+    {
+      "key": "model_name_opus",
+      "value": "Opus 5.5",
+      "provenance": "scripts/07_report_values.py:L60",
+      "computed_at": "scripts/07_report_values.py:L60"
+    },
+    {
+      "key": "model_name_sonnet",
+      "value": "Sonnet 5.5",
+      "provenance": "scripts/07_report_values.py:L60",
+      "computed_at": "scripts/07_report_values.py:L60"
+    },
+    {
+      "key": "n_blocked_ratings",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L75",
+      "computed_at": "scripts/07_report_values.py:L75"
+    },
+    {
+      "key": "n_followup_calls",
+      "value": 96,
+      "provenance": "scripts/07_report_values.py:L85",
+      "computed_at": "scripts/07_report_values.py:L85"
+    },
+    {
+      "key": "n_followup_ideas",
+      "value": 480,
+      "provenance": "scripts/07_report_values.py:L84",
+      "computed_at": "scripts/07_report_values.py:L84"
+    },
+    {
+      "key": "n_followup_retries",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L86",
+      "computed_at": "scripts/07_report_values.py:L86"
+    },
+    {
+      "key": "n_generation_calls",
+      "value": 432,
+      "provenance": "scripts/07_report_values.py:L68",
+      "computed_at": "scripts/07_report_values.py:L68"
+    },
+    {
+      "key": "n_generation_retries",
+      "value": 13,
+      "provenance": "scripts/07_report_values.py:L79",
+      "computed_at": "scripts/07_report_values.py:L79"
+    },
+    {
+      "key": "n_ideas_non_plain_per_model",
+      "value": 640,
+      "provenance": "scripts/07_report_values.py:L123",
+      "computed_at": "scripts/07_report_values.py:L123"
+    },
+    {
+      "key": "n_ideas_per_model_prompt",
+      "value": 80,
+      "provenance": "scripts/07_report_values.py:L124",
+      "computed_at": "scripts/07_report_values.py:L124"
+    },
+    {
+      "key": "n_ideas_per_prompt_all_models",
+      "value": 240,
+      "provenance": "scripts/07_report_values.py:L74",
+      "computed_at": "scripts/07_report_values.py:L74"
+    },
+    {
+      "key": "n_ideas_total",
+      "value": 2160,
+      "provenance": "scripts/07_report_values.py:L67",
+      "computed_at": "scripts/07_report_values.py:L67"
+    },
+    {
+      "key": "n_ideas_two_prompts_per_model",
+      "value": 160,
+      "provenance": "scripts/07_report_values.py:L122",
+      "computed_at": "scripts/07_report_values.py:L122"
+    },
+    {
+      "key": "n_methods_beating_plain_haiku",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "n_methods_beating_plain_opus",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "n_methods_beating_plain_pooled",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "n_methods_beating_plain_sonnet",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L130",
+      "computed_at": "scripts/07_report_values.py:L130"
+    },
+    {
+      "key": "n_permutations",
+      "value": 5000,
+      "provenance": "scripts/07_report_values.py:L69",
+      "computed_at": "scripts/07_report_values.py:L69"
+    },
+    {
+      "key": "n_prompts_sonnet_least_novel",
+      "value": 7,
+      "provenance": "scripts/07_report_values.py:L119",
+      "computed_at": "scripts/07_report_values.py:L119"
+    },
+    {
+      "key": "n_un_haiku_assigned_constraint",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_assumption_inversion",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_critique_revise",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_future_retrospective",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_instruction_only",
+      "value": 3,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_obvious_then_avoid",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_overgenerate_select",
+      "value": 2,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_parallel_rotated",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_poem_required",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_haiku_word_salad_required",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_assigned_constraint",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_assumption_inversion",
+      "value": 15,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_critique_revise",
+      "value": 31,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_future_retrospective",
+      "value": 12,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_instruction_only",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_obvious_then_avoid",
+      "value": 27,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_overgenerate_select",
+      "value": 17,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_parallel_rotated",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_poem_required",
+      "value": 12,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_opus_word_salad_required",
+      "value": 9,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_assigned_constraint",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_assumption_inversion",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_critique_revise",
+      "value": 16,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_future_retrospective",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_instruction_only",
+      "value": 6,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_obvious_then_avoid",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_overgenerate_select",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_parallel_rotated",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_poem_required",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "n_un_sonnet_word_salad_required",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L97",
+      "computed_at": "scripts/07_report_values.py:L97"
+    },
+    {
+      "key": "near_dup_threshold",
+      "value": 0.75,
+      "provenance": "scripts/07_report_values.py:L71",
+      "computed_at": "scripts/07_report_values.py:L71"
+    },
+    {
+      "key": "novelty_haiku_assigned_constraint",
+      "value": 2.28,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_assumption_inversion",
+      "value": 2.36,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_critique_revise",
+      "value": 4.06,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_future_retrospective",
+      "value": 2.59,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_instruction_only",
+      "value": 2.95,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_obvious_then_avoid",
+      "value": 3.69,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_overgenerate_select",
+      "value": 2.26,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_parallel_rotated",
+      "value": 2.61,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_plain",
+      "value": 1.57,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_poem_required",
+      "value": 2.17,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_haiku_word_salad_required",
+      "value": 2.02,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_assigned_constraint",
+      "value": 2.75,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_assumption_inversion",
+      "value": 3.52,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_critique_revise",
+      "value": 4.31,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_future_retrospective",
+      "value": 3.23,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_instruction_only",
+      "value": 3.74,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_obvious_then_avoid",
+      "value": 4.33,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_overgenerate_select",
+      "value": 3.09,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_parallel_rotated",
+      "value": 3.18,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_plain",
+      "value": 1.96,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_poem_required",
+      "value": 3.01,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_opus_word_salad_required",
+      "value": 3.31,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_pooled_assigned_constraint",
+      "value": 2.42,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_assumption_inversion",
+      "value": 2.69,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_critique_revise",
+      "value": 3.97,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_future_retrospective",
+      "value": 2.81,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_instruction_only",
+      "value": 3.19,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_obvious_then_avoid",
+      "value": 3.68,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_overgenerate_select",
+      "value": 2.52,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_parallel_rotated",
+      "value": 2.67,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_plain",
+      "value": 1.72,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_poem_required",
+      "value": 2.38,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_pooled_word_salad_required",
+      "value": 2.42,
+      "provenance": "scripts/07_report_values.py:L92",
+      "computed_at": "scripts/07_report_values.py:L92"
+    },
+    {
+      "key": "novelty_sonnet_assigned_constraint",
+      "value": 2.23,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_assumption_inversion",
+      "value": 2.2,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_critique_revise",
+      "value": 3.54,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_future_retrospective",
+      "value": 2.6,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_instruction_only",
+      "value": 2.86,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_obvious_then_avoid",
+      "value": 3.02,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_overgenerate_select",
+      "value": 2.21,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_parallel_rotated",
+      "value": 2.24,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_plain",
+      "value": 1.61,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_poem_required",
+      "value": 1.95,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "novelty_sonnet_word_salad_required",
+      "value": 1.95,
+      "provenance": "scripts/07_report_values.py:L98",
+      "computed_at": "scripts/07_report_values.py:L98"
+    },
+    {
+      "key": "opus_written_agreement_novelty",
+      "value": 0.85,
+      "provenance": "scripts/07_report_values.py:L141",
+      "computed_at": "scripts/07_report_values.py:L141"
+    },
+    {
+      "key": "opus_written_agreement_usefulness",
+      "value": 0.77,
+      "provenance": "scripts/07_report_values.py:L142",
+      "computed_at": "scripts/07_report_values.py:L142"
+    },
+    {
+      "key": "opus_written_distinct_pooled_assigned_constraint",
+      "value": 13,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_assumption_inversion",
+      "value": 32,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_critique_revise",
+      "value": 52,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_future_retrospective",
+      "value": 17,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_instruction_only",
+      "value": 27,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_obvious_then_avoid",
+      "value": 47,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_overgenerate_select",
+      "value": 26,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_parallel_rotated",
+      "value": 25,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_distinct_pooled_plain",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "opus_written_gen_novelty_haiku",
+      "value": 2.71,
+      "provenance": "scripts/07_report_values.py:L144",
+      "computed_at": "scripts/07_report_values.py:L144"
+    },
+    {
+      "key": "opus_written_gen_novelty_opus",
+      "value": 3.38,
+      "provenance": "scripts/07_report_values.py:L144",
+      "computed_at": "scripts/07_report_values.py:L144"
+    },
+    {
+      "key": "opus_written_gen_novelty_sonnet",
+      "value": 2.42,
+      "provenance": "scripts/07_report_values.py:L144",
+      "computed_at": "scripts/07_report_values.py:L144"
+    },
+    {
+      "key": "opus_written_h1_distinct_diff",
+      "value": 22.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "opus_written_h1_distinct_p",
+      "value": "= 0.0002",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "opus_written_n_methods_beating_plain",
+      "value": 6,
+      "provenance": "scripts/07_report_values.py:L139",
+      "computed_at": "scripts/07_report_values.py:L139"
+    },
+    {
+      "key": "pass_agreement_novelty",
+      "value": 0.83,
+      "provenance": "scripts/07_report_values.py:L80",
+      "computed_at": "scripts/07_report_values.py:L80"
+    },
+    {
+      "key": "pass_agreement_novelty_ref",
+      "value": 0.83,
+      "provenance": "scripts/07_report_values.py:L163",
+      "computed_at": "scripts/07_report_values.py:L163"
+    },
+    {
+      "key": "pass_agreement_usefulness",
+      "value": 0.73,
+      "provenance": "scripts/07_report_values.py:L81",
+      "computed_at": "scripts/07_report_values.py:L81"
+    },
+    {
+      "key": "primary_gen_novelty_haiku",
+      "value": 2.71,
+      "provenance": "scripts/07_report_values.py:L146",
+      "computed_at": "scripts/07_report_values.py:L146"
+    },
+    {
+      "key": "primary_gen_novelty_opus",
+      "value": 3.35,
+      "provenance": "scripts/07_report_values.py:L146",
+      "computed_at": "scripts/07_report_values.py:L146"
+    },
+    {
+      "key": "primary_gen_novelty_sonnet",
+      "value": 2.5,
+      "provenance": "scripts/07_report_values.py:L146",
+      "computed_at": "scripts/07_report_values.py:L146"
+    },
+    {
+      "key": "primary_gen_usefulness_haiku",
+      "value": 3.52,
+      "provenance": "scripts/07_report_values.py:L147",
+      "computed_at": "scripts/07_report_values.py:L147"
+    },
+    {
+      "key": "primary_gen_usefulness_opus",
+      "value": 3.83,
+      "provenance": "scripts/07_report_values.py:L147",
+      "computed_at": "scripts/07_report_values.py:L147"
+    },
+    {
+      "key": "primary_gen_usefulness_sonnet",
+      "value": 3.78,
+      "provenance": "scripts/07_report_values.py:L147",
+      "computed_at": "scripts/07_report_values.py:L147"
+    },
+    {
+      "key": "question_ap1",
+      "value": "What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?",
+      "provenance": "scripts/07_report_values.py:L65",
+      "computed_at": "scripts/07_report_values.py:L65"
+    },
+    {
+      "key": "question_persister",
+      "value": "What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?",
+      "provenance": "scripts/07_report_values.py:L66",
+      "computed_at": "scripts/07_report_values.py:L66"
+    },
+    {
+      "key": "sonnet_stripped_agreement_novelty",
+      "value": 0.82,
+      "provenance": "scripts/07_report_values.py:L141",
+      "computed_at": "scripts/07_report_values.py:L141"
+    },
+    {
+      "key": "sonnet_stripped_agreement_usefulness",
+      "value": 0.75,
+      "provenance": "scripts/07_report_values.py:L142",
+      "computed_at": "scripts/07_report_values.py:L142"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_assigned_constraint",
+      "value": 8,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_assumption_inversion",
+      "value": 15,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_critique_revise",
+      "value": 27,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_future_retrospective",
+      "value": 8,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_instruction_only",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_obvious_then_avoid",
+      "value": 20,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_overgenerate_select",
+      "value": 11,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_parallel_rotated",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_distinct_pooled_plain",
+      "value": 0,
+      "provenance": "scripts/07_report_values.py:L137",
+      "computed_at": "scripts/07_report_values.py:L137"
+    },
+    {
+      "key": "sonnet_stripped_gen_novelty_haiku",
+      "value": 2.68,
+      "provenance": "scripts/07_report_values.py:L144",
+      "computed_at": "scripts/07_report_values.py:L144"
+    },
+    {
+      "key": "sonnet_stripped_gen_novelty_opus",
+      "value": 3.31,
+      "provenance": "scripts/07_report_values.py:L144",
+      "computed_at": "scripts/07_report_values.py:L144"
+    },
+    {
+      "key": "sonnet_stripped_gen_novelty_sonnet",
+      "value": 2.48,
+      "provenance": "scripts/07_report_values.py:L144",
+      "computed_at": "scripts/07_report_values.py:L144"
+    },
+    {
+      "key": "sonnet_stripped_h1_distinct_diff",
+      "value": 10.0,
+      "provenance": "scripts/07_report_values.py:L39",
+      "computed_at": "scripts/07_report_values.py:L39"
+    },
+    {
+      "key": "sonnet_stripped_h1_distinct_p",
+      "value": "= 0.001",
+      "provenance": "scripts/07_report_values.py:L40",
+      "computed_at": "scripts/07_report_values.py:L40"
+    },
+    {
+      "key": "sonnet_stripped_n_methods_beating_plain",
+      "value": 7,
+      "provenance": "scripts/07_report_values.py:L139",
+      "computed_at": "scripts/07_report_values.py:L139"
+    },
+    {
+      "key": "union_haiku_all_non_plain",
+      "value": 16,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_haiku_critique_plus_obvious",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_haiku_critique_revise",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_haiku_obvious_then_avoid",
+      "value": 5,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_opus_all_non_plain",
+      "value": 69,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_opus_critique_plus_obvious",
+      "value": 34,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_opus_critique_revise",
+      "value": 19,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_opus_obvious_then_avoid",
+      "value": 19,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_sonnet_all_non_plain",
+      "value": 16,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_sonnet_critique_plus_obvious",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_sonnet_critique_revise",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "union_sonnet_obvious_then_avoid",
+      "value": 1,
+      "provenance": "scripts/07_report_values.py:L170",
+      "computed_at": "scripts/07_report_values.py:L170"
+    },
+    {
+      "key": "useful_novel_cutoff",
+      "value": 4,
+      "provenance": "scripts/07_report_values.py:L70",
+      "computed_at": "scripts/07_report_values.py:L70"
+    },
+    {
+      "key": "usefulness_haiku_assigned_constraint",
+      "value": 3.26,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_assumption_inversion",
+      "value": 3.93,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_critique_revise",
+      "value": 3.05,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_future_retrospective",
+      "value": 3.46,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_instruction_only",
+      "value": 3.51,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_obvious_then_avoid",
+      "value": 3.35,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_overgenerate_select",
+      "value": 3.84,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_parallel_rotated",
+      "value": 3.41,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_plain",
+      "value": 3.92,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_poem_required",
+      "value": 3.71,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_haiku_word_salad_required",
+      "value": 3.82,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_assigned_constraint",
+      "value": 3.81,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_assumption_inversion",
+      "value": 3.94,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_critique_revise",
+      "value": 3.61,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_future_retrospective",
+      "value": 3.96,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_instruction_only",
+      "value": 3.36,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_obvious_then_avoid",
+      "value": 3.51,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_overgenerate_select",
+      "value": 4.22,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_parallel_rotated",
+      "value": 3.79,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_plain",
+      "value": 4.29,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_poem_required",
+      "value": 4.02,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_opus_word_salad_required",
+      "value": 3.98,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_pooled_assigned_constraint",
+      "value": 3.51,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_assumption_inversion",
+      "value": 3.92,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_critique_revise",
+      "value": 3.45,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_future_retrospective",
+      "value": 3.7,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_instruction_only",
+      "value": 3.52,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_obvious_then_avoid",
+      "value": 3.52,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_overgenerate_select",
+      "value": 4.05,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_parallel_rotated",
+      "value": 3.67,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_plain",
+      "value": 4.08,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_poem_required",
+      "value": 3.93,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_pooled_word_salad_required",
+      "value": 3.91,
+      "provenance": "scripts/07_report_values.py:L93",
+      "computed_at": "scripts/07_report_values.py:L93"
+    },
+    {
+      "key": "usefulness_sonnet_assigned_constraint",
+      "value": 3.46,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_assumption_inversion",
+      "value": 3.88,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_critique_revise",
+      "value": 3.68,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_future_retrospective",
+      "value": 3.69,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_instruction_only",
+      "value": 3.71,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_obvious_then_avoid",
+      "value": 3.7,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_overgenerate_select",
+      "value": 4.08,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_parallel_rotated",
+      "value": 3.82,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_plain",
+      "value": 4.04,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_poem_required",
+      "value": 4.06,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "usefulness_sonnet_word_salad_required",
+      "value": 3.93,
+      "provenance": "scripts/07_report_values.py:L99",
+      "computed_at": "scripts/07_report_values.py:L99"
+    },
+    {
+      "key": "worked_cell_n_distinct",
+      "value": 10,
+      "provenance": "scripts/07_report_values.py:L285",
+      "computed_at": "scripts/07_report_values.py:L285"
+    },
+    {
+      "key": "worked_cell_n_un",
+      "value": 14,
+      "provenance": "scripts/07_report_values.py:L284",
+      "computed_at": "scripts/07_report_values.py:L284"
+    }
+  ]
+}

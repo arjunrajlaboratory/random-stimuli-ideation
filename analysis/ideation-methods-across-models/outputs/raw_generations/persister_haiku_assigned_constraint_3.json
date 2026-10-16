@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 3,
+  "constraint": "without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression)",
+  "prompt": "Constraint: every one of your ideas must be carried out without any genetic perturbation (no knockouts, knockdowns, CRISPR, or overexpression). Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Live-cell tracking of individual cells through drug pulse and washout",
+      "description": "Use label-free imaging (phase-contrast or quantitative phase microscopy) and non-genetic dyes such as CellTrace for division history to follow single cells from before treatment through drug exposure and washout. Then correlate each cell's pre-treatment division history, morphology, and location with survival, and test whether survivors were already slow-cycling or arose through transient induction. Retrospective immunostaining of the same tracked cells links fate to protein state."
+    },
+    {
+      "title": "Single-cell multi-omics time course of early drug response",
+      "description": "Run paired scRNA-seq and scATAC-seq (or multiome) on cells sampled at baseline and at several early timepoints during drug exposure, such as hours to days, to capture the transition into the tolerant state. Use trajectory and RNA velocity analyses to identify the pre-existing or emerging persister program, and check whether baseline chromatin accessibility predicts which cells later survive."
+    },
+    {
+      "title": "Sort pre-existing subpopulations by endogenous markers and test their drug tolerance",
+      "description": "Before treatment, sort cells by endogenous surface markers and by functional dyes that report mitochondrial membrane potential (TMRM), ROS (CellROX), lysosomal load, or drug-efflux activity (Hoechst or rhodamine efflux). Then challenge each fraction with the drug and measure survival and regrowth. This tests whether a pre-existing phenotypic state, rather than random chance, determines persistence."
+    },
+    {
+      "title": "Intracellular drug accumulation and metabolic profiling of survivors",
+      "description": "Quantify intracellular drug levels in single cells or sorted fractions using LC-MS or a fluorescent drug analog, and measure efflux transporter activity to test whether survivors simply take up less drug. In parallel, run Seahorse respirometry and 13C-glucose or 13C-glutamine isotope tracing on sorted persisters versus bulk to reveal metabolic dependencies that might be exploited."
+    },
+    {
+      "title": "Chromatin state profiling with drug washout and rechallenge",
+      "description": "Profile histone modifications (CUT&Tag for H3K27me3, H3K4me3, H3K27ac) and chromatin accessibility in sorted or bulk persisters over a drug holiday and after rechallenge. Testing whether the chromatin state persists after drug removal distinguishes a heritable epigenetic memory from a reversible, transient adaptive state."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2019,
+  "cost_usd": 0.00123545
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "assigned_constraint",
+  "call": 1,
+  "constraint": "with a total budget under $20,000",
+  "prompt": "Constraint: every one of your ideas must be carried out with a total budget under $20,000. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time-course of AP-1 occupancy and chromatin state",
+      "description": "After a defined AP-1-inducing stimulus (e.g., TPA or serum), wash out and profile c-Fos/JunB/ATF3 occupancy (CUT&Tag) alongside ATAC-seq and H3K27ac at days 0 to 7. Memory is supported if enhancers stay open and retain AP-1 binding or priming marks after the TF signal has returned to baseline. Estimated cost: about $8k to $12k for a single cell line with 6 timepoints in duplicate."
+    },
+    {
+      "title": "Acute degron-mediated necessity test during the memory window",
+      "description": "Tag endogenous FOS or JUN with an auxin-inducible degron, prime cells, then degrade the factor only during the quiescent interval before re-stimulation. If AP-1 is the memory store, degradation should abolish faster or amplified re-induction of primed target genes (measured by RT-qPCR/RNA-seq) without affecting the naive response. Estimated cost: about $10k to $15k for knock-in, validation, and RNA-seq."
+    },
+    {
+      "title": "Base-editing of AP-1 motifs at endogenous primed enhancers",
+      "description": "Use CRISPR base editors or prime editors to mutate the TRE/AP-1 motifs in 3 to 5 enhancers that show memory-like priming, then compare primed-state accessibility and re-stimulation kinetics in edited versus control clones. This tests whether the specific motif sites, rather than general AP-1 presence, carry the memory. Estimated cost: about $9k to $14k for guide design, clone isolation, and ATAC/RNA readouts."
+    },
+    {
+      "title": "Single-cell reporter lineage tracing of memory inheritance",
+      "description": "Build a destabilized-fluorescent-protein reporter driven by an AP-1-responsive enhancer and track individual cells by time-lapse microscopy through several divisions after a pulse of stimulus. Memory is supported if the re-induction response is heritable in daughter cells and decays on a timescale matching the chromatin persistence measured elsewhere. Estimated cost: about $5k to $9k for the lentiviral reporter, imaging, and analysis."
+    },
+    {
+      "title": "Protein-synthesis block and mitotic bookmarking assay",
+      "description": "Pulse stimulus, then add cycloheximide or a translation inhibitor to remove newly made AP-1 protein, and use mitotic-cell CUT&Tag or ChIP to test whether AP-1 stays bound on condensed chromatin through mitosis. Retention of AP-1 at memory enhancers without de novo synthesis would show self-sustaining, bookmarking-like memory, while loss would point to protein turnover as the main driver. Estimated cost: about $4k to $7k for the inhibitor experiments, sorted mitotic cells, and sequencing."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2070,
+  "cost_usd": 0.0012535499999999998
+}

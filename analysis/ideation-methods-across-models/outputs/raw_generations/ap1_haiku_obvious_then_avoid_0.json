@@ -1,0 +1,47 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "obvious_then_avoid",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the obvious field the 10 ideas that most experts would propose first for this question (one line each). Then propose your 5 ideas: none of them may be one of the obvious ideas or a minor variant of one. They must still be concrete and scientifically sound.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Epigenetic-editor sufficiency test after AP-1 removal",
+      "description": "After acutely degrading JUN/FOS (for example with a dTAG system) following priming, target dCas9-p300 or dCas9-KRAB to a single primed AP-1 enhancer and test whether re-establishing its acetylation or silencing state alone reproduces or erases the memory response. This asks whether the epigenetic mark, rather than the transcription factor, is sufficient to carry the memory."
+    },
+    {
+      "title": "History-tagged MPRA with AP-1 motif saturation mutagenesis",
+      "description": "Build a massively parallel reporter library of memory-bearing enhancers with saturation mutagenesis of AP-1 and cofactor motifs, and run each library through a prime, washout, and rechallenge design. Comparing rechallenge responses across variants identifies which sequence features are required to encode memory, separating them from features needed for the initial response."
+    },
+    {
+      "title": "Live imaging of AP-1 binding through mitosis with bookmarking readout",
+      "description": "Use endogenous HaloTag-tagged FOS or JUN and live single-molecule or time-lapse imaging to ask which AP-1 sites remain bound on mitotic chromosomes. Then test whether daughter cells that inherit bound sites reactivate target genes faster than those that do not."
+    },
+    {
+      "title": "Single-cell history reporter with lineage barcodes",
+      "description": "Combine a fluorescent timer or destabilized-reporter cassette under control of an AP-1 target promoter with CRISPR lineage barcodes to record each cell's past AP-1 activity. Then test whether prior activity history predicts future response within clonal lineages, after conditioning on current cell state."
+    },
+    {
+      "title": "Pol II pause-release kinetics at memory genes after washout",
+      "description": "Use PRO-seq or NET-seq after priming and washout to measure paused RNA polymerase II and pause-release rates at memory genes, comparing primed and naive cells with and without AP-1 degradation. This tests whether the memory is held as a poised transcriptional state that is independent of persistent chromatin marks."
+    }
+  ],
+  "scaffold": {
+    "obvious": [
+      "ATAC-seq of chromatin accessibility at AP-1 motifs before, during, and after stimulus washout",
+      "ChIP-seq or CUT&RUN of FOS/JUN occupancy across a stimulus time course",
+      "Rechallenge experiments showing a faster or stronger second response in primed versus naive cells",
+      "FOS or JUN knockout/knockdown and loss of the memory phenotype",
+      "Profiling H3K27ac, H3K4me1, and H3K4me3 persistence at AP-1-bound enhancers after washout",
+      "RNA-seq of primed versus naive cells to check whether memory genes stay elevated",
+      "Hi-C or enhancer-promoter contact mapping to see if looping persists after stimulus removal",
+      "Measuring ERK/MAPK signal amplitude and duration (pulsatile versus sustained) to link dynamics to AP-1 output",
+      "Single-cell RNA-seq to assess heterogeneity in memory retention across cells",
+      "Live reporter of AP-1 transcriptional activity (for example a c-Fos promoter reporter) tracked over time"
+    ]
+  },
+  "output_tokens": 3536,
+  "cost_usd": 0.0020992
+}

@@ -1,0 +1,59 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "overgenerate_select",
+  "call": 5,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Post-stimulus degron depletion",
+      "description": "Prime cells with a transient stimulus, then acutely degrade FOS/JUN (dTAG/AID) after the stimulus ends and before re-challenge. If the faster or stronger secondary response is lost, AP-1 is needed to maintain memory and not only to establish it."
+    },
+    {
+      "title": "Chromatin state tracking through washout",
+      "description": "Run CUT&RUN for FOS/JUN and ATAC-seq plus H3K27ac at several times after stimulus removal. Compare how long AP-1 occupancy, accessibility and marks persist, and whether accessibility outlasts AP-1 binding, which would indicate AP-1 acts as an initiator and not a maintainer."
+    },
+    {
+      "title": "Single-cell hysteresis imaging",
+      "description": "Image an endogenous FOS or AP-1 reporter in single cells through repeated stimulus pulses with variable intervals. Look for history-dependent responses and heritable states across divisions, and link them to later transcription by lineage tracking."
+    },
+    {
+      "title": "Motif-specific enhancer editing",
+      "description": "Use CRISPR base or prime editing to mutate AP-1 motifs at selected primed enhancers, then compare the secondary response with unedited controls. This tests whether AP-1 binding at those specific sites is required for the memory at the associated genes."
+    },
+    {
+      "title": "Synthetic AP-1 recruitment sufficiency test",
+      "description": "Use dCas9 to recruit AP-1 or a pioneer-like FOS/JUN domain to a neutral reporter locus with a transient pulse. Then test whether the locus keeps a more accessible state and responds faster after the recruitment is gone, which would show AP-1 is sufficient for memory."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "ChIP/CUT&RUN of FOS/JUN before, during, and after transient stimulus to see persistent occupancy",
+      "ATAC-seq time course after stimulus withdrawal to track lasting accessibility at AP-1 motifs",
+      "Acute degron (dTAG/AID) depletion of FOS/JUN after stimulus to test if AP-1 is needed for maintaining memory vs. establishing it",
+      "Optogenetic pulsed AP-1 activation with varied timing to test priming/memory of prior dosing",
+      "Single-cell multiome (RNA+ATAC) lineage-tracing of memory of prior stimulus across divisions",
+      "Live imaging of AP-1 reporter (FOS-GFP) in single cells across repeated stimuli to measure hysteresis",
+      "Dominant-negative A-FOS expression timed after priming to erase memory",
+      "Mutating AP-1 motifs at specific enhancers by CRISPR to test necessity for faster secondary response",
+      "dCas9-based synthetic recruitment of AP-1 to a neutral locus to test sufficiency for creating memory",
+      "Histone mark profiling (H3K27ac, H3K4me1) at AP-1 sites after stimulus decay",
+      "Hi-C/Micro-C to test whether AP-1 maintains loops after stimulus",
+      "Pioneer activity assay: nucleosome positioning with MNase at AP-1 sites in primed vs naive cells",
+      "Mathematical modeling of AP-1 feedback (FOS/JUN autoregulation) to predict bistability and compare with data",
+      "Mitotic bookmarking assay: live-cell imaging and CUT&RUN of AP-1 on mitotic chromosomes",
+      "Compare AP-1 memory across cell types (fibroblast, macrophage, neuron) with same stimulus",
+      "Proteomics of AP-1 dimer composition shifts (FOS vs. FOSL vs. ATF) after priming",
+      "Phosphorylation/post-translational state of JUN (JNK) persistence measurement",
+      "Cell-cycle-synchronized priming to test replication-dependence of memory",
+      "In vivo wound/inflammation re-challenge in AP-1 conditional knockout mice",
+      "Perturb-seq of AP-1 family members to map which paralogs affect memory of response",
+      "Measure memory decay half-life vs. AP-1 level via titration",
+      "Single-molecule tracking of JUN residence time at primed vs naive loci"
+    ]
+  },
+  "output_tokens": 1458,
+  "cost_usd": 0.017346300000000002
+}

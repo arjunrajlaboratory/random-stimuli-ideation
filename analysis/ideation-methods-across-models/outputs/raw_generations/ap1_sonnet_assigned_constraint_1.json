@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 1,
+  "constraint": "with a total budget under $20,000",
+  "prompt": "Constraint: every one of your ideas must be carried out with a total budget under $20,000. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Primed-versus-naive re-stimulation time course with ATAC/CUT&RUN",
+      "description": "Stimulate cells (e.g., fibroblasts or macrophages) with a transient signal such as TNF, EGF or PMA, rest them for days to weeks, then restimulate and compare to naive cells. Measure chromatin accessibility (ATAC-seq), AP-1 (FOS/JUN) binding by CUT&RUN, H3K27ac, and nascent transcription (PRO-seq/4sU-seq) to see whether AP-1-bound sites stay open and give faster or stronger responses (cost roughly $8\u201312k)."
+    },
+    {
+      "title": "Acute AP-1 degradation during the rest phase",
+      "description": "Use dTAG/auxin-degron or dominant-negative A-FOS to remove AP-1 either only during the initial stimulus or only during the rest period, then restimulate. If memory needs continuous AP-1 occupancy, depletion during rest will erase the primed response. If AP-1 is only needed to establish memory, depletion during rest will not erase it, which separates initiation from maintenance (about $10\u201315k with existing degron lines or CRISPR knock-in)."
+    },
+    {
+      "title": "Site-specific AP-1 motif perturbation and reporter test",
+      "description": "Use CRISPR to mutate or delete AP-1 motifs, or use dCas9-KRAB/dCas9 blocking, at a few primed enhancers. Test whether memory of accessibility and of gene induction is lost. In parallel, run a lentiviral MPRA or reporter library with wild-type and mutated AP-1 motifs, integrated and chromatinized, to test sufficiency and motif-grammar rules (about $6\u201310k)."
+    },
+    {
+      "title": "Single-cell multiome and live-cell imaging of heritability",
+      "description": "Run 10x multiome (RNA + ATAC) on stimulated, rested and restimulated cells to link AP-1 motif activity (chromVAR) to single-cell memory states. Add a live-cell AP-1 reporter (e.g., a FOS-promoter or AP-1 response element driving destabilized fluorescent protein) and track lineages by time-lapse across divisions to measure how long the state lasts and whether sister cells inherit it, which would indicate bistable or self-sustaining memory (about $12\u201318k)."
+    },
+    {
+      "title": "Reanalysis of public datasets for AP-1 memory signatures",
+      "description": "Mine existing ATAC, ChIP and RNA-seq data from trained immunity, wound-healing, neuronal activity, and epithelial inflammatory-memory studies. Test whether sites that stay open after stimulus withdrawal are enriched for AP-1 motifs and binding, and whether this predicts faster re-induction. Check for co-occurrence with pioneer factors (e.g., CEBP, ETS) and for histone mark persistence, which gives cheap, cross-system evidence of generality (under $2k compute)."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1046,
+  "cost_usd": 0.0147995
+}

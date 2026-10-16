@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "future_retrospective",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded pre-treatment sister-cell splitting",
+      "description": "Barcode a clonal population, split it into matched sister aliquots before drug, profile one aliquot by single-cell RNA/ATAC and treat the other, then link each surviving barcode back to its sister's pre-drug state. This tests whether survivors were predetermined and identifies the predictive molecular signature before any drug exposure."
+    },
+    {
+      "title": "Live-cell tracking with retrospective multi-omic readout",
+      "description": "Time-lapse image thousands of single cells for weeks of lineage history (cell cycle length, signaling reporters, mitochondrial state, division asymmetry), apply drug, then fix and run in situ spatial transcriptomics/proteomics on the same tracked survivors. This reveals whether fluctuating dynamics, inherited memory, or history of stress, rather than static state, determines survival."
+    },
+    {
+      "title": "Heritability timescale mapping via fate-lineage correlation",
+      "description": "Quantify how survival and the resistant-like state correlate across sister, cousin, and distant relatives in lineage trees, and how that correlation decays across generations and after drug pulses at varying delays. The decay constant distinguishes stable genetic or epigenetic inheritance from fast stochastic transcriptional noise and from drug-induced adaptation."
+    },
+    {
+      "title": "Single-cell multiome with CRISPR perturbation of candidate state regulators",
+      "description": "Use Perturb-seq or CRISPRi/a screens aimed at chromatin and transcription factors found enriched in the pre-survivor state, with barcoded survivor readout under drug. Causally shifting the fraction surviving up or down shows which regulators set the survival probability rather than just marking it."
+    },
+    {
+      "title": "Single-cell DNA, copy number, and extrachromosomal DNA sequencing of survivors versus matched ancestors",
+      "description": "Do paired single-cell whole-genome and mutation sequencing of barcode-matched survivors and untreated siblings to rule in or out cryptic genetic changes such as ecDNA amplification, copy number shifts, or mutations in rare subclones. This separates truly non-genetic persistence from low-frequency genetic variation hidden in ostensibly identical populations."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 801,
+  "cost_usd": 0.010781
+}

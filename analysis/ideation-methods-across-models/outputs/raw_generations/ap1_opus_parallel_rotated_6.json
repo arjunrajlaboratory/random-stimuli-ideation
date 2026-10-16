@@ -1,0 +1,39 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "parallel_rotated",
+  "call": 6,
+  "parallel": {
+    "field": "Organizational science / management",
+    "problem": "Do firms really retain lessons from past crises or production experience in their routines, or does the knowledge decay or leave when employees leave?",
+    "how_studied": "Researchers estimate learning curves with depreciation terms, regressing unit cost on cumulative output with discounting for knowledge decay. They use natural experiments such as shift changes, turnover shocks, or plant transfers to see whether the knowledge persists and moves with people, documents, or routines. They also run lab group experiments where members are swapped out to test where the memory is stored."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Organizational science / management\nProblem: Do firms really retain lessons from past crises or production experience in their routines, or does the knowledge decay or leave when employees leave?\nHow it is studied: Researchers estimate learning curves with depreciation terms, regressing unit cost on cumulative output with discounting for knowledge decay. They use natural experiments such as shift changes, turnover shocks, or plant transfers to see whether the knowledge persists and moves with people, documents, or routines. They also run lab group experiments where members are swapped out to test where the memory is stored.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Priming learning curve with an explicit depreciation term",
+      "description": "Stimulate cells a controlled number of times with systematically varied rest intervals and fit the re-challenge response to a Wright-type learning curve in which cumulative exposures are discounted by a decay factor, yielding a per-gene and per-enhancer AP-1 memory half-life. Adding an unrelated second stimulus measures 'transfer of learning,' separating stimulus-specific memory from a general increase in responsiveness."
+    },
+    {
+      "title": "Timed degron turnover shocks at encoding, storage, and recall",
+      "description": "Use dTAG/auxin degron alleles of FOS, JUN, JUNB, and ATF3 to deplete AP-1 only during the first stimulus, only during the quiescent storage interval, or only just before re-challenge, with washout and re-expression controls. If AP-1 is the memory store rather than the writer or reader, only storage-window depletion should erase the primed response."
+    },
+    {
+      "title": "Partition the memory between protein, chromatin, and network feedback",
+      "description": "In the same primed cells, measure AP-1 protein residence time (pulse-chase SILAC, FRAP), the chromatin record (ATAC-seq, FOS/JUN CUT&RUN, H3K4me1/H3K27ac, DNA methylation at AP-1 motifs), and the AP-1 autoregulatory feedback dynamics, then test whether primed accessibility outlives AP-1 protein by many half-lives. Persistence after the protein is gone localizes the engram to AP-1-written chromatin; decay tracking protein turnover localizes it to AP-1 itself."
+    },
+    {
+      "title": "Sister-cell split design with clonal barcodes",
+      "description": "Barcode cells, let clones divide, then challenge one sister branch and use its response to predict the untouched sister's response after the same priming history, as a function of intervening divisions, giving a mitotic retention rate that separates heritable memory from noise. Transplanting primed cells into a naive microenvironment tests whether the memory travels with the cell or with its context."
+    },
+    {
+      "title": "Heterokaryon fusion and nuclear/cytoplasmic swap",
+      "description": "Fuse primed to naive cells (and primed nuclei to naive cytoplasts via enucleation or nuclear transfer) with allele-distinguishable reporters, then score allele-specific AP-1 target induction in the hybrid. Dominance of the primed state and whether it is nucleus- or cytoplasm-borne pins down the physical substrate, and recruitment of the naive genome would indicate a diffusible trans-acting AP-1 memory rather than a cis-chromatin one."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3711,
+  "cost_usd": 0.1293875
+}

@@ -1,0 +1,35 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "poem_required",
+  "call": 0,
+  "stimulus": "\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\n\"Hope\" is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all -\n\nAnd sweetest - in the Gale - is heard -\nAnd sore must be the storm -\nThat could abash the little Bird\nThat kept so many warm -\n\nI've heard it in the chillest land -\nAnd on the strangest Sea -\nYet - never - in Extremity,\nIt asked a crumb - of me.\n</material>\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Washout time-course with inducible AP-1 degradation",
+      "description": "Like the bird that sings without words and never stops, test whether an AP-1-dependent transcriptional state outlasts the stimulus. Pulse cells with a defined stimulus, wash it out, and use an auxin- or dTAG-inducible degron to remove c-Fos or c-Jun at different times. Then track chromatin accessibility (ATAC-seq), H3K27ac, and target-gene expression over days. If the state persists after AP-1 protein is gone, AP-1 is acting as a trigger that sets a self-sustaining state rather than as the memory itself."
+    },
+    {
+      "title": "Priming test under interference (the storm)",
+      "description": "Ask whether a prior AP-1 experience survives disruption, as the bird survives the storm. Prime cells with a stimulus, then expose them to unrelated stressors, noise, or competing signals before re-stimulation. Compare the speed and magnitude of the second response (CUT&RUN for AP-1 occupancy plus nascent transcription, e.g., NET-seq or 4sU labeling) with unprimed controls. A memory should keep giving a faster or stronger response even when the intervening conditions are harsh."
+    },
+    {
+      "title": "Lineage-resolved memory with a live AP-1 reporter",
+      "description": "Test whether the memory is heritable, the way the bird keeps many warm across generations. Use a fluorescent AP-1-responsive reporter or a FosTRAP-style lineage recorder and follow single cells through several divisions by time-lapse microscopy. Measure whether daughter cells inherit the primed state and whether the fraction that retains it decays on a predictable schedule, as expected for a memory rather than a transient response."
+    },
+    {
+      "title": "Necessity and sufficiency of AP-1 binding sites for maintenance",
+      "description": "Ask what AP-1 must still do after the memory is set, as the poem's bird asks only a crumb. After priming, use CRISPRi/dCas9-KRAB or base editing to disrupt AP-1 motifs at specific enhancers, or use optogenetic AP-1 pulses to re-engage them at defined times. If the memory depends on continued binding, site disruption should erase it; if it persists, the site has served only to establish the state. Compare with knockouts of chromatin modifiers (e.g., p300/CBP or BRD4) to separate initiation from maintenance."
+    },
+    {
+      "title": "Cross-context generalization of the AP-1 memory",
+      "description": "Test whether an AP-1 memory generalizes to new settings, as the bird is heard in the chillest land and strangest sea. Prime cells or an in vivo tissue (e.g., a Fos-based engram labeling system in neurons or a stimulated epithelium) with one stimulus, then challenge them with a different stimulus, cell type, or dose. Use single-cell multiome to see whether the same enhancers and gene modules are reused in the new context. Reuse of the same primed loci across contexts would argue for a genuine memory mechanism rather than a context-specific response."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1900,
+  "cost_usd": 0.0013026000000000001
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "instruction_only",
+  "call": 1,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Magnetic hysteresis loop assay for AP-1 state",
+      "description": "Borrowing from ferromagnet hysteresis, ramp a stimulus (e.g., ERK/JNK activation or a titrated optogenetic c-Fos/c-Jun input) up and then down, and measure AP-1 target expression and chromatin accessibility at matched input doses on each leg. Path-dependent output, meaning different outputs at the same dose on the up and down legs, would indicate memory, and the loop area would quantify it."
+    },
+    {
+      "title": "Immunological recall-style prime\u2013rest\u2013rechallenge design",
+      "description": "Following the vaccine prime/boost paradigm, give cells a transient stimulus (e.g., TPA or injury signal), allow a washout of days to weeks, then re-stimulate and compare transcriptional kinetics and amplitude with naive cells. Pair it with ATAC-seq and AP-1 (FOS/JUN) CUT&RUN to test whether sites kept accessible after priming are the ones that drive faster, stronger secondary responses, and use dominant-negative A-Fos to test necessity."
+    },
+    {
+      "title": "Epidemiological survival analysis of single-cell memory duration",
+      "description": "Treat the memory state like a disease state and estimate its 'half-life' by live-cell imaging of AP-1 reporters (e.g., endogenous-tagged FOS or an AP-1 GFP reporter) in lineage-tracked cells. Fit survival/hazard models to the time to loss of the state, and test whether the state is inherited across divisions and whether covariates such as cell cycle, histone-mark levels or AP-1 dose predict persistence."
+    },
+    {
+      "title": "Circuit-engineering bistability test via positive-feedback perturbation",
+      "description": "Borrowing from the synthetic biology toggle switch and control theory, build a mathematical model of the AP-1 loop (FOS/JUN autoregulation plus chromatin opening) and use it to predict bistability. Then test it experimentally by single-cell flow or smFISH showing bimodal distributions at intermediate input, and by CRISPRi/degron (dTAG) removal of AP-1 after induction to see whether the state self-sustains once the trigger is gone, versus decaying as monostable dynamics would predict."
+    },
+    {
+      "title": "Geological core-sampling of chromatin layers with time-stamped lineage barcoding",
+      "description": "Like dating sediment layers, use a temporally inducible recorder (e.g., a Cre-ER or DNA-barcode tracer activated by AP-1 activity) to permanently mark cells that experienced AP-1 activation at defined times. Later, isolate marked versus unmarked cells and profile with single-cell multiome (RNA+ATAC) and motif-accessibility analysis to test whether past AP-1 exposure leaves durable, AP-1-motif-centered chromatin changes and altered functional responses."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1022,
+  "cost_usd": 0.012990100000000001
+}

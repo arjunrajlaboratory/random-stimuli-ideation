@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 2,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Sister-cell fate correlation as a clock for how long priming lasts",
+      "description": "Attacks the determinism assumption: split sister cells (by imaging or by barcoding followed by replicate splitting) and add drug at staggered intervals after division, then measure how the correlation in sister fates decays with elapsed time. Rapid decay implies a short-lived fluctuating state and bounds how much of the outcome is set before treatment versus rolled during it."
+    },
+    {
+      "title": "Per-cell drug exposure and target occupancy as the primary variable",
+      "description": "Attacks the uniform-pharmacology assumption: use a fluorescent drug analog or mass-spec imaging plus a live target-occupancy reporter (e.g., pathway phospho-reporter or NanoBRET-style binding readout) to quantify intracellular drug concentration and inhibition depth in every cell before fate is known. Test whether survivors are simply the cells that received or retained the least drug, which would reframe 'resistant state' as an efflux, uptake, or volume phenomenon."
+    },
+    {
+      "title": "Controlled-neighborhood survival mapping",
+      "description": "Attacks cell autonomy: use micropatterning or defined seeding densities, plus mixing of labeled cells at varying ratios, to measure survival probability as a function of local neighbor number and identity, with conditioned-media and transwell swaps to separate contact from secreted signals. This directly quantifies how much of the surviving fraction is explained by microenvironmental position rather than internal state."
+    },
+    {
+      "title": "Testing whether rare survival is genetically heritable using replicate-split barcode lineages",
+      "description": "Attacks the genetic-identity assumption: barcode a population, split it into many independent replicate cultures, treat each, and ask whether the same barcodes survive reproducibly across splits; pair this with single-cell DNA/CNV and mitochondrial heteroplasmy profiling of survivors. Perfect cross-replicate reproducibility implicates fixed genetic or stably heritable differences, partial reproducibility quantifies a heritable-but-reversible component."
+    },
+    {
+      "title": "Sufficiency testing by forcing candidate states before treatment",
+      "description": "Attacks the correlation-equals-cause assumption: take the states enriched in survivors and impose them prospectively using CRISPRa/CRISPRi or inducible expression of their candidate drivers, or sort live cells on a reporter of the state and re-plate them, then measure whether the surviving fraction shifts as predicted. A dose-response between imposed state level and survival probability converts a descriptive signature into a causal, quantitative claim."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "Determinism: that survival is dictated by a pre-existing cell state present before the drug is added, rather than arising stochastically during or after treatment.",
+      "Measurement layer: that the determining state is visible in the transcriptome, since the default assay is single-cell RNA-seq of pre-treated or surviving cells.",
+      "Cell autonomy: that fate is a property of the individual cell alone, not of its neighbors, local density, secreted factors, or position.",
+      "Genetic identity: that a clonal or low-passage line is truly genetically uniform, so any heterogeneity must be non-genetic by elimination.",
+      "Correlation equals cause: that a feature enriched in survivors caused survival, rather than being a consequence of surviving or of the drug itself.",
+      "Discreteness: that survivors form a distinct primed subpopulation rather than the tail of a continuous quantitative trait.",
+      "Unity of mechanism: that there is one explanation, rather than several parallel routes whose relative weight shifts with dose, time, and context.",
+      "Destructive snapshots suffice: that profiling different cells before and after treatment substitutes for watching the same cell across its fate decision.",
+      "Uniform pharmacology: that every cell experiences the same intracellular drug concentration and target occupancy, so differences must lie downstream.",
+      "Model validity: that 2D culture of an immortalized line at a saturating dose reports on clinically relevant residual disease."
+    ]
+  },
+  "output_tokens": 4529,
+  "cost_usd": 0.1734041
+}

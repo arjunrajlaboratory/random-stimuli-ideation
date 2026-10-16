@@ -1,0 +1,18 @@
+# Phase 9b round 1 (blind sub-agent on .ghost-deck.md v1).
+restatement:
+  headline: "A prompt that makes the model confront and move past its own obvious ideas produced the most novel-and-useful ideas; the plain prompt produced none."
+  baseline: "The plain prompt (zero) and the earlier study's best instruction."
+  caveat: "Every score comes from model judges, not scientists."
+findings:
+  - {severity: major, line: 8, summary: "winning prompt named inconsistently across titles", status: fixed in v2 (critique and revise named on slides 2, 7, 9, 15)}
+  - {severity: major, line: 2, summary: "first three titles give only the negative result", status: fixed in v2 (slide 2 states the positive result)}
+  - {severity: minor, line: 2, summary: "uses 'plain prompt' and 'judge' before introduced", status: fixed (self-contained wording)}
+  - {severity: minor, line: 8, summary: "earlier study not introduced", status: fixed (slide 5)}
+  - {severity: minor, line: 9, summary: "'held up' vague", status: fixed (slide 10 states the comparison)}
+# Round 2 appended below.
+round2:
+  restatement: {headline: "Critique and revise produced the most ideas a model judge rated both novel and useful", baseline: "plain prompt (zero) and the earlier study's best prompt", caveat: "model judges, not scientists; blind ratings next"}
+  verdict: restatement matches the planning brief; no major findings
+  findings:
+    - {severity: minor, line: 8, summary: "'beat the plain prompt' ambiguous (pooled vs per model)", status: fixed}
+    - {severity: minor, line: 15, summary: "list-the-obvious prompt not introduced", status: fixed (described as a second new prompt); earlier best prompt described on slide 10}

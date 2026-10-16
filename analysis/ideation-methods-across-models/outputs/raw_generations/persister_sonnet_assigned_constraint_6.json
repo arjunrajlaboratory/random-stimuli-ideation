@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "assigned_constraint",
+  "call": 6,
+  "constraint": "with only a single time point measured per sample",
+  "prompt": "Constraint: every one of your ideas must be carried out with only a single time point measured per sample. Within that constraint, make the ideas as informative as possible.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell multiome (RNA + ATAC) of drug-naive populations with lineage barcodes",
+      "description": "Profile untreated cells at one time point with scRNA-seq plus chromatin accessibility, and use clonal barcodes in parallel sister samples (Rosetta/Watermelon-style) to link pre-existing transcriptional and epigenetic states to later survival. This identifies the cell-state signatures and regulatory programs that predispose to persistence, and tests whether states are heritable."
+    },
+    {
+      "title": "Single-cell profiling of survivors at one late post-treatment time point, with matched untreated control",
+      "description": "Harvest cells after a fixed drug exposure and run scRNA-seq or CITE-seq, comparing against untreated cells to define the persister state (e.g., drug-tolerant, EMT-like, stress response, dormancy). Cell-surface markers from CITE-seq can then be used to isolate and test persisters."
+    },
+    {
+      "title": "Spatial transcriptomics/multiplexed imaging of treated tumors or 3D cultures",
+      "description": "Take a single fixed snapshot of treated spheroids or xenograft sections and map surviving cells with spatial transcriptomics or CODEX/IMC. This reveals whether survival depends on microenvironment, such as hypoxia, proximity to stroma, or drug-penetration gradients, rather than on cell-intrinsic state alone."
+    },
+    {
+      "title": "Pooled CRISPR screen read out at a single endpoint",
+      "description": "Transduce a genome-wide or focused (epigenetic, stress-response, apoptosis, drug-efflux) CRISPR library, treat, and sequence guide abundance once at endpoint relative to the untreated control. Enriched or depleted guides identify genes that causally enable or prevent persistence, which goes beyond correlative profiling."
+    },
+    {
+      "title": "Single-cell quantification of drug, signaling and apoptotic-priming state in fixed cells",
+      "description": "At one time point after treatment, use mass cytometry or high-content multiplexed immunofluorescence to measure target inhibition (phospho-signaling), intracellular drug levels (for fluorescent drugs), efflux pump expression, cell-cycle status, and BH3 profiling or cleaved caspase levels in each cell. This distinguishes persisters that avoid drug exposure, bypass target inhibition, or resist apoptosis, and it captures multiple mechanisms simultaneously per cell."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 871,
+  "cost_usd": 0.013093500000000001
+}

@@ -1,0 +1,47 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "assumption_inversion",
+  "call": 4,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nBefore proposing your ideas, list in the assumptions field the hidden assumptions built into this question and into the way the field usually tests it. Then propose your 5 ideas: each must test, exploit, or work around the failure of a different one of those assumptions, while still being a concrete, scientifically sound way to address the question.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Genetic-vs-nongenetic partition using barcoded twin populations plus single-cell DNA and ecDNA readout",
+      "description": "Tags the assumption of true genetic identity: label a population with high-complexity heritable barcodes, split it into replicate 'twin' flasks, and test whether the same barcodes survive drug in independent replicates (heritable/genetic) or different ones each time (transient state). Pair this with deep whole-genome sequencing of pre-treatment single-cell-derived clones, single-cell DNA-seq, and ecDNA FISH on the untreated population to quantify directly how much of the rare-survivor fraction is explained by cryptic mutations or amplifications rather than by non-genetic state."
+    },
+    {
+      "title": "Retrospective profiling of the pre-treatment cells that are destined to survive",
+      "description": "Tags survivor bias: identify the barcodes enriched in survivors, then go back to an archived, never-treated aliquot of the same barcoded population and physically recover those specific cells using barcode-targeted probes or barcode-driven reporters, so their transcriptome, protein, and chromatin state can be measured before any drug exposure. This separates the causal priming state from the downstream reprogramming that drug treatment imposes on survivors."
+    },
+    {
+      "title": "Per-cell drug exposure and apoptotic priming, not just RNA, measured live and linked to fate",
+      "description": "Tags the assumption that the transcriptome and the nominal dose are the right variables: measure in each cell the actual intracellular drug concentration (fluorescent drug analog or mass-spectrometry imaging), the degree of target inhibition (live kinase-activity or signaling biosensors such as ERK/AKT reporters), efflux-pump activity, and mitochondrial apoptotic priming by single-cell dynamic BH3 profiling, then time-lapse track the same cells to death or survival. This tests whether rare survival is simply heterogeneous pharmacology and death-threshold setting rather than a transcriptional 'resistant program'."
+    },
+    {
+      "title": "Neighborhood-controlled survival assay: isolate the cell-autonomous component",
+      "description": "Tags cell-autonomy: compare survival frequency for cells seeded as isolated singletons in microwells or micropatterns versus matched cells in dense colonies, swap conditioned media, and use time-lapse plus spatial transcriptomics to score each survivor's local density, contact history, and position within a colony. Cross-mixing of differentially labeled populations then reveals whether a surviving cell confers or receives protection, distinguishing an intrinsic primed state from a locally created protective niche."
+    },
+    {
+      "title": "Measuring the timescale, heritability, and causal sufficiency of the primed state",
+      "description": "Tags the assumption of a stable discrete subpopulation and of single-cell independence: build a live reporter of the candidate priming marker, track lineages for weeks, and compute sister/cousin/aunt correlation decay and state-switching rates to obtain the memory half-life and determine whether the state is discrete or continuous. Then sort marker-high cells, let them re-equilibrate for varying times before dosing to see how quickly survival advantage decays, and force the state on or off with inducible CRISPRa/CRISPRi to test whether it is causally sufficient rather than merely correlated."
+    }
+  ],
+  "scaffold": {
+    "assumptions": [
+      "That the cells really are genetically identical: in practice so-called isogenic lines harbor rare subclonal point mutations, copy-number changes, extrachromosomal DNA amplifications, and mitochondrial heteroplasmy that can themselves explain rare survivors.",
+      "That profiling the cells that survive tells you why they survived: survivor states are measured after days of drug-induced reprogramming and selection, so they are a consequence of survival as much as a cause (survivor bias).",
+      "That the causal variable lives in the transcriptome, because single-cell RNA-seq is the convenient assay; protein levels, signaling dynamics, apoptotic priming, chromatin, metabolic state, cell-cycle phase, and per-cell intracellular drug concentration are often not measured.",
+      "That survival is cell-autonomous: a property of the individual cell at the moment of dosing, independent of neighbors, local cell density, contact, secreted factors, and position in a colony.",
+      "That the resistant state is a discrete, stable, pre-existing subpopulation, so that a single snapshot before treatment is sufficient; this ignores continuous fluctuation, the timescale over which a state persists, and heritability across divisions.",
+      "That survival is a single binary phenotype, conflating slow-cycling drug-tolerant persistence, outright non-response, and clonal outgrowth of genuine resistance, which may have different mechanisms.",
+      "That correlation between a marker and survival implies the marker causes survival, rather than being a passenger of a broader state.",
+      "That an exponentially growing 2D monoculture, saturated with a constant drug dose, is a faithful model; real tumors have drug gradients, pharmacokinetic fluctuation, stroma, matrix, and immune pressure.",
+      "That the relevant unit of analysis is the single cell rather than the lineage, i.e. that sister and cousin cells are independent samples.",
+      "That a uniform nominal drug dose means every cell experiences the same effective drug exposure and the same degree of target inhibition."
+    ]
+  },
+  "output_tokens": 4216,
+  "cost_usd": 0.13010300000000002
+}

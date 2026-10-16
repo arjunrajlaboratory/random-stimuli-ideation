@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "instruction_only",
+  "call": 4,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Portfolio-style lineage barcoding with pre-treatment state tracing",
+      "description": "Borrowing from finance portfolio diversification, label each cell with a heritable lentiviral barcode, profile transcriptomes before drug exposure, and then sequence the survivors. If survivors were already enriched for particular pre-treatment states, the population is hedging its bets through stochastic state diversity; if not, the state is induced by the drug."
+    },
+    {
+      "title": "Per-cell survival analysis from reliability engineering",
+      "description": "Borrowing from reliability engineering, run long-term live-cell imaging with FUCCI cell-cycle and caspase or ERK activity reporters, then fit Kaplan-Meier curves and frailty or mixture models to each cell's time-to-death. A survivor fraction with a near-zero, constant hazard points to a distinct tolerant state, whereas a uniformly slowed hazard points to a shared, graded response."
+    },
+    {
+      "title": "Hysteresis test of drug-tolerant memory",
+      "description": "Borrowing the idea of hysteresis from magnetism, apply a defined drug pulse, withdraw the drug, and track whether survivors retain their tolerant state across generations. Pair this with ATAC-seq and histone-mark pulse-chase reporters to measure how quickly the state relaxes and whether it depends on an epigenetic memory that persists after the stimulus is gone."
+    },
+    {
+      "title": "Refugia mapping in residual tumors",
+      "description": "Borrowing from conservation ecology, where species persist in protected refugia, use multiplexed spatial imaging (MERFISH or CODEX) on residual tumors from treated animals to map where survivors sit relative to vasculature, hypoxia, stromal interfaces, and immune niches. Spatial clustering of survivors in specific microhabitats would show that the microenvironment, not intrinsic cell identity, determines who survives."
+    },
+    {
+      "title": "Information-theoretic biomarker screen followed by causal CRISPR validation",
+      "description": "Borrowing from communications and information theory, measure single-cell pre-treatment features such as target-pathway activity, drug-efflux levels, and cell-cycle phase, and compute the mutual information between each feature and later survival. Then knock out the top-ranked genes in a pooled CRISPR screen under drug to confirm which features causally drive survival rather than merely correlating with it."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2432,
+  "cost_usd": 0.0013590999999999998
+}

@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 6,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Prospective isolation by candidate-marker sorting: Use flow cytometry on untreated cells to purify the rare subpopulation expressing high levels of a suspected resistance-associated surface protein, then compare drug-survival frequency of sorted-high versus sorted-low fractions. A large enrichment implies the surviving fraction was specified before the drug was applied.\n2. Clonal split-and-compare design: Expand single-cell-derived clones, split each into treated and untreated arms, and ask whether survival frequency is reproducible across clones or randomly distributed. Reproducible clone-specific rates point to heritable causes, while scatter points to transient fluctuations.\n3. Longitudinal imaging of individual survivors: Track every cell in a field from before treatment through weeks of exposure to record division history, dormancy duration, and timing of outgrowth. Survivors can then be retrieved by micromanipulation or photoconversion for downstream molecular profiling.\n4. Chromatin and epigenome profiling of the resistant state: Apply single-cell ATAC-seq and histone-modification mapping to survivors versus naive cells to find accessibility changes underlying tolerance. Test reversibility by withdrawing drug, reseeding, and re-profiling to see whether the state decays.\n5. Genome-wide perturbation screening for state entry and exit: Run CRISPR activation and knockout screens scored on survivor frequency to identify regulators that change how often cells occupy the drug-tolerant state. Comparing hits from pre-treatment versus post-treatment perturbation separates factors controlling state entry from those controlling survival once treatment begins.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Non-genetic fluctuation analysis to measure state switching rates",
+      "description": "Adapt the Luria\u2013Delbr\u00fcck fluctuation test to a reversible, non-genetic state: expand many parallel sub-cultures from small inocula for varying numbers of generations, treat each in full, and fit the mean-versus-variance structure of survivor counts across cultures to competing kinetic models. The jackpot statistics yield numerical entry and exit rates for the tolerant state \u2014 distinguishing a rare, stably inherited subpopulation from a fast-flickering one \u2014 without ever identifying the responsible molecules."
+    },
+    {
+      "title": "Sister- and cousin-cell concordance decay to time the memory",
+      "description": "Physically separate related cells at defined lineage distances (sisters split immediately after mitosis, cousins after two divisions, with imaging to control elapsed time), treat all of them identically, and measure how fate concordance decays as a function of generations and hours since the common ancestor. The decay constant is a direct readout of the priming state's memory half-life, which can then be compared against measured protein and chromatin-mark half-lives to nominate the class of carrier molecule."
+    },
+    {
+      "title": "Single-cell drug exposure and target engagement as the first explanation to exclude",
+      "description": "Quantify, cell by cell, how much inhibitor each cell actually accumulates (fluorescent drug analog or efflux-activity dye) alongside live target-pathway reporters such as an ERK kinase-translocation reporter, then follow the same cells to their fate. This tests the deflating but rarely measured possibility that survivors are simply cells with incomplete target inhibition or rapid signaling rebound dynamics, rather than occupants of a distinct transcriptional program."
+    },
+    {
+      "title": "Micropatterned neighborhoods and ratio-mixing tests of non-cell-autonomy",
+      "description": "Seed cells on micropatterned islands that fix local density, neighbor number, and colony geometry, and separately mix differentially labeled isogenic cells at varying ratios and total densities before treatment. If per-cell survival probability depends on neighborhood configuration or on the abundance of dying bystanders rather than being constant, the rare survivor is specified by context, and conditioned-medium and transwell swaps can then separate secreted from contact-mediated signals."
+    },
+    {
+      "title": "Decoupling mean expression from cell-to-cell variability of candidate regulators",
+      "description": "Using CRISPRa/dCas9 titration or a degron, shift the mean level of a suspected priming factor without changing distribution shape, and separately install a negative-feedback or microRNA-based buffering circuit that compresses cell-to-cell variability while holding the mean fixed. Comparing survivor frequency across these two orthogonal manipulations causally distinguishes a threshold acting on the rare tail of a noisy distribution from a mechanism that depends only on average expression."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 4115,
+  "cost_usd": 0.1216399
+}

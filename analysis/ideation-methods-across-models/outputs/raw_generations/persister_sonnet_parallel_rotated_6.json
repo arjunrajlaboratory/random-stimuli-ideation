@@ -1,0 +1,39 @@
+{
+  "question": "persister",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "arm": "parallel_rotated",
+  "call": 6,
+  "parallel": {
+    "field": "Physics / statistical mechanics",
+    "problem": "Why do a few identical particles in an ensemble escape a potential well or avoid a perturbation, when the others are trapped or driven out?",
+    "how_studied": "Physicists use single-particle tracking and large Monte Carlo or molecular dynamics ensembles to build distributions of trajectories. They compute rare-event statistics, such as first-passage times, and use transition-path sampling to isolate the rare pathways. They separate intrinsic noise from hidden slow variables by measuring autocorrelations over time."
+  },
+  "prompt": "Here is a problem from another field that shares the underlying structure of the research question below, with notes on how that field investigates it.\n\n<parallel>\nField: Physics / statistical mechanics\nProblem: Why do a few identical particles in an ensemble escape a potential well or avoid a perturbation, when the others are trapped or driven out?\nHow it is studied: Physicists use single-particle tracking and large Monte Carlo or molecular dynamics ensembles to build distributions of trajectories. They compute rare-event statistics, such as first-passage times, and use transition-path sampling to isolate the rare pathways. They separate intrinsic noise from hidden slow variables by measuring autocorrelations over time.\n</parallel>\n\nEach of your ideas must transfer a specific method, measurement logic, or principle from how that field studies its problem, while still being a concrete, scientifically sound way to address the research question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Single-cell live tracking with lineage-resolved drug response",
+      "description": "Time-lapse microscopy tracks thousands of individual cells and their lineages through drug exposure, with reporters for signaling (e.g., ERK, p53) and cell-cycle state. This gives the full distribution of single-cell trajectories and shows whether survivors differ in dynamics before the drug is added, and when divergence begins."
+    },
+    {
+      "title": "First-passage-time analysis of death and escape",
+      "description": "Record each cell's time to apoptosis or to resumed division after drug addition, and fit the full distribution rather than the mean. A heavy tail or multimodal shape would indicate either a single stochastic rate process or a distinct slow-cycling subpopulation, and dose-dependence of the tail would constrain mechanistic models."
+    },
+    {
+      "title": "Transition-path sampling by retrospective and prospective tracing of survivors",
+      "description": "Follow cells continuously, then trace the survivors' ancestors backward to find what states they passed through before the drug. Compare these paths with those of cells that died, and where possible use barcoded or live-reporter sorting to isolate cells in candidate pre-resistant states and test whether they are enriched for survival."
+    },
+    {
+      "title": "Autocorrelation and heritability of cell state to separate noise from hidden slow variables",
+      "description": "Measure how long expression of candidate markers (e.g., drug-efflux or anti-apoptotic genes) stays correlated in a cell and between sister cells and cousins. Compare this timescale with the drug-exposure window. If the state persists for several generations, a slow epigenetic or metabolic variable is implied. If it decays quickly, fast noise is implied. Test the inference by sorting cells by marker level and measuring how survival changes with the delay between sorting and treatment."
+    },
+    {
+      "title": "Barcoded clonal ensembles with sister-pair and replicate comparisons",
+      "description": "Label cells with heritable lineage barcodes, split a population into parallel replicates, and treat them. If the same barcodes survive across replicates, the survival state is pre-existing and heritable. If different barcodes survive, the cause is stochastic. Single-cell RNA-seq or ATAC-seq on matched pre-treatment sister cells then identifies the molecular features that predict survival."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 814,
+  "cost_usd": 0.013479500000000002
+}

@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 6,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Pulse-chase of AP-1 activity with clonal lineage tracing: Transiently induce AP-1 (e.g., optogenetic or degron-controlled FOS/JUN, or a brief TPA pulse), then follow barcoded clones by single-cell RNA-seq and ATAC-seq across many divisions. This directly measures how long an AP-1-opened chromatin and expression state persists after the inducing signal is gone, and whether persistence is heritable within clones.\n2. Priming assay: does a prior AP-1 pulse change the response to a later stimulus?: Give cells a first AP-1-activating stimulus, wash out and rest for days to weeks, then rechallenge and compare response magnitude, speed, and gene set to naive cells. A memory mechanism predicts faster/stronger reactivation at previously bound loci, which can be mapped by comparing ATAC/CUT&RUN peaks before, between, and after the two stimuli.\n3. Loss-of-function during the memory window versus during encoding: Use an auxin/dTAG degron to deplete FOS/JUN either only during the initial stimulus (encoding) or only during the rest period (maintenance), then test whether the primed state survives. This separates AP-1's role as an initiator of a state from a continuously required maintainer, which is the crux of calling it a memory mechanism.\n4. Quantify mitotic transmission: AP-1 bookmarking and post-division state recovery: Combine live imaging of tagged JUN/FOS through mitosis with mitotic chromatin profiling (e.g., CUT&RUN on sorted mitotic cells) and sister-cell comparisons of expression after division. Concordance between sister cells beyond what noise predicts, plus retention of AP-1 at mitotic chromatin, would support heritable rather than merely slow-decaying memory.\n5. Perturb AP-1 motif content at specific enhancers and test state stability: Use base editing or prime editing to delete or add TRE/CRE motifs at candidate memory enhancers, then measure whether the primed/persistent transcriptional state is lost or gained at those loci. Pair with a synthetic reporter carrying a tunable number of AP-1 sites to ask how motif density maps onto duration of state retention.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Heterokaryon cis/trans test for where the memory is stored",
+      "description": "Fuse a primed cell with a naive cell of distinguishable genotype (SNP- or species-distinct) and measure allele-specific transcription and accessibility in the shared cytoplasm. Retention of each genome's own state implicates cis chromatin storage, whereas conversion of the naive genome implicates diffusible AP-1 protein or autoregulatory feedback."
+    },
+    {
+      "title": "Hysteresis and bistability mapping of the AP-1 input-output curve",
+      "description": "Titrate an AP-1-activating input upward from zero and downward from saturation, measuring steady-state single-cell output at each dose with a quantitative reporter. A true memory system should show a hysteretic loop, bimodal populations within the loop, and measurable spontaneous switching rates, which slow passive decay cannot generate."
+    },
+    {
+      "title": "Single-molecule footprinting of primed enhancers",
+      "description": "Apply dual-enzyme methyltransferase single-molecule footprinting with long reads at candidate memory enhancers to determine whether priming increases the fraction of cells with an open element or alters per-molecule occupancy and dwell structure. Co-occupancy correlations among multiple AP-1 sites on the same molecule reveal cis-coordination invisible to population ATAC-seq."
+    },
+    {
+      "title": "AP-1 dimer composition as the stored variable",
+      "description": "Track dimer identity at primed loci over the memory window using sequential/co-IP CUT&RUN and crosslinked-dimer mass spectrometry, testing whether short-lived FOS is replaced by long-lived FRA1/FRA2/JUND. Isoform-specific degrons applied only during the maintenance phase test whether the long-lived subunit, rather than chromatin, carries the memory."
+    },
+    {
+      "title": "Decoding stimulus history and measuring memory capacity",
+      "description": "Deliver combinatorial stimulus histories that differ in identity, order, and spacing, then quantify how much of the history is decodable from current chromatin and transcriptome, and whether decoding collapses when AP-1 motifs are disrupted. Running matched arms in proliferating versus arrested cells separates replication-driven dilution from time-dependent decay."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 3913,
+  "cost_usd": 0.11656309999999998
+}

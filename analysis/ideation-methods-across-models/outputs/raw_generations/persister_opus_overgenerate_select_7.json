@@ -1,0 +1,57 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "overgenerate_select",
+  "call": 7,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.\n\nWork in two steps. First, in the candidates field, brainstorm 20 candidate ideas, one line each, covering as wide a range as you can. Then select the 5 candidates that best combine being non-obvious with being feasible and informative, and develop those as your ideas.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Split-sibling barcode design to test heritable memory",
+      "description": "Tag a population with heritable DNA barcodes, let it expand so each barcode is represented by many sibling cells, then split the population into several arms treated independently. If the same barcodes dominate survivors across arms, the surviving state was present and heritable before treatment; if survivor barcodes differ across arms, survival is largely a chance event occurring during treatment."
+    },
+    {
+      "title": "Retrospective imaging of the same cells before and after treatment",
+      "description": "Image a sparse, position-registered untreated population with live reporters for candidate pathway activity, then add drug and return to the identical fields over days to link each cell's pre-treatment state to its fate. This avoids the usual problem that profiling methods destroy the cell whose outcome you want to know."
+    },
+    {
+      "title": "Reversibility and re-treatment kinetics after drug holiday",
+      "description": "Expand survivors in drug-free medium for varying lengths of time, then re-treat and measure how the fraction of survivors changes. A return toward the original low frequency indicates a transient, reversible state with a measurable relaxation time, while persistent high resistance indicates genetic or stably epigenetic change."
+    },
+    {
+      "title": "Single-cell apoptotic threshold versus signaling output",
+      "description": "In the same untreated cells, measure both proximity to the apoptotic threshold (for example by peptide-induced mitochondrial permeabilization) and drug-target pathway output. This distinguishes survivors that are genuinely drug-insensitive from those that receive full target inhibition but are simply harder to kill."
+    },
+    {
+      "title": "Tuning the switching rate to test causality of state fluctuations",
+      "description": "Use chromatin-modifying perturbations or controlled expression noise to raise or lower the rate at which cells enter the rare primed state, then ask whether survivor frequency moves correspondingly. This converts a correlative observation about rare states into a causal test and suggests interventions that reduce the reservoir of survivors."
+    }
+  ],
+  "scaffold": {
+    "candidates": [
+      "Heritable lineage barcoding with a split-population design: barcode cells, expand, split into treated and untreated arms, and test whether the same barcodes survive in replicate treated arms (memory) versus different ones (non-heritable chance)",
+      "Serial re-treatment after drug holiday to test whether the resistant state is reversible, and measure the timescale of reversion",
+      "Live imaging of a fluorescent reporter for a candidate resistance gene before drug addition, then tracking which reporter-high cells survive",
+      "Single-cell RNA-seq of untreated populations combined with retrospective identification of pre-resistant cells via barcode overlap",
+      "Timed drug addition relative to cell cycle phase using a cell-cycle reporter to ask whether phase at exposure predicts survival",
+      "RNA FISH for many candidate genes simultaneously in thousands of untreated cells to find rare cells co-expressing multiple resistance factors",
+      "Imaging-based capture: image untreated cells, then treat, then return to the same field to retrospectively link pre-state to fate",
+      "Measuring drug uptake and efflux per cell with fluorescent drug analogs or dye assays to test pharmacokinetic rather than signaling explanations",
+      "Chromatin accessibility profiling of sorted rare high-expressing cells versus the bulk to find a primed epigenetic state",
+      "Clonal fluctuation analysis in the style of Luria-Delbruck to distinguish pre-existing from drug-induced resistance statistically",
+      "Quantifying cell-to-cell variability in drug target abundance and pathway output by immunofluorescence at single-cell level",
+      "CRISPR screens restricted to genes that are variably expressed, to test whether variability-associated genes are causal",
+      "Perturbing the rate of state switching with chromatin modifiers and asking whether the frequency of survivors changes",
+      "Mitochondrial priming/apoptotic threshold measurement in single cells to see if survivors simply sit further from the death threshold",
+      "Tracking protein degradation and synthesis rates in single cells to find slow-turnover proteins that could carry memory across divisions",
+      "Long-term time-lapse of the entire treatment course to classify survivors into never-arrested, arrested-then-resumed, and slow-cycling categories",
+      "Spatial analysis of whether survivors arise preferentially in dense colonies or isolated positions, testing local microenvironment effects",
+      "Comparing resistance frequency across subclones derived from single cells to see whether propensity itself is heritable over long timescales",
+      "Multiplexed measurement of signaling dynamics after drug addition in single cells to find transient adaptive pulses in survivors",
+      "Combining DNA sequencing of survivors with transcriptional barcoding to separate genetic mutants from non-genetic escapers"
+    ]
+  },
+  "output_tokens": 1729,
+  "cost_usd": 0.0646052
+}

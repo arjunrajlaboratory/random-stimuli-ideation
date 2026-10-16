@@ -1,0 +1,35 @@
+{
+  "question": "persister",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "word_salad_required",
+  "call": 7,
+  "stimulus": "unprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs",
+  "prompt": "Here is a piece of material that is unrelated to the research question below. Each of your ideas must draw on this material in some way (for example through an analogy, a structure, a principle, or a pattern it suggests), while still being a concrete, scientifically sound way to address the question.\n\n<material>\nunprivate recur serpulidan illatively tonger swigger beeman analytical unmask quiverer untill taxibus cilectomy unmighty wheatbird ascoma abomasus manlike blankish sparred osteophyte spookology opinably colp underbrew melologue forego twinter meekling sonless heder whittle limacel dyaster oblongated recoat badgerer mussel objectify custerite arid spitz squiggle beguiling unpiercing cosmozoic typicum diiambus unrigging skilling perorator ghostcraft cebid rattlepate secularism friarbird overplain semifamine nosopoetic dubs\n</material>\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Lineage-barcoded live imaging to test whether survivors were pre-marked",
+      "description": "Label a clonal population with heritable lineage barcodes and a fluorescent cell-cycle or stress reporter, then track single cells through drug exposure by time-lapse microscopy. Comparing pre-treatment reporter states of cells that survive with those that die tests whether survival is predicted by a transient, heritable state (the 'quiverer' idea: a trembling, fluctuating expression state) rather than by genetics."
+    },
+    {
+      "title": "Paired single-cell multiome of pre-treatment versus persister cells",
+      "description": "Profile gene expression and chromatin accessibility (scRNA-seq plus scATAC-seq) in the untreated population and in cells that persist after drug exposure, then identify which regulatory programs are already active before treatment. Enrichment of specific transcription-factor motifs or chromatin states in the survivors would point to an epigenetic mechanism that can be validated experimentally."
+    },
+    {
+      "title": "Drug-washout and re-challenge with reporter-sorted subpopulations",
+      "description": "Sort cells by a fluorescent reporter of candidate persister genes, then remove the drug and re-challenge each sorted fraction with a dose-response curve and measure regrowth rate. This shows whether the pre-treatment state itself confers tolerance and whether it reverts ('squiggle'-like oscillation) or is stably inherited across divisions."
+    },
+    {
+      "title": "Adhesion and matrix-attachment perturbation screen in survivors",
+      "description": "Compare focal-adhesion and integrin signaling in survivors versus killed cells, then run a targeted CRISPR knockout or small-molecule screen of adhesion genes (anchoring the cell to its substrate, much like a mussel's byssus) during drug treatment. If loss of adhesion sensitizes the persisters, adhesion-linked survival signaling becomes a concrete, testable mechanism and a potential combination-therapy target."
+    },
+    {
+      "title": "Duplex-sequencing of pre-existing resistant clones at ultra-low frequency",
+      "description": "Use error-corrected duplex sequencing or deep amplicon sequencing on untreated cell populations, and on cells that persist after drug exposure, to detect rare pre-existing variants at frequencies below 0.1%. Distinguishing genetic pre-existence from non-genetic tolerance is the key control: if no survivors carry a shared variant, the survival must be non-genetic, which in turn argues for the single-cell state assays above."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1747,
+  "cost_usd": 0.00114385
+}

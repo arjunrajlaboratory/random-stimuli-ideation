@@ -26,6 +26,17 @@ The report is a single self-contained HTML file. Its "Present slides" button ope
 - **Writing first about a parallel problem** in another field gave the most novel ideas. The judge rated those ideas less useful.
 - **Main caveat:** every quality score comes from a single model judge on one question. Blind ratings by scientists are still pending.
 
+## Follow-up: nine ideation prompts across three models
+
+A second, pre-registered study tested seven new ways of asking for ideas against the plain prompt and the instruction above. It ran on Haiku 5.5, Sonnet 5.5 and Opus 5.5 with two research questions (2,160 ideas). The report is **[analysis/ideation-methods-across-models/reports/ideation-methods-across-models-report.html](analysis/ideation-methods-across-models/reports/ideation-methods-across-models-report.html)**. In brief:
+
+- **The plain prompt** never yielded an idea that the model judge rated both novel and useful.
+- **Critique and revise was best.** This prompt shows the model its own plain answers and asks for less obvious ones. It was the only prompt to beat the instruction above.
+- **The largest model gained the most.** Opus 5.5 benefited far more than the two smaller models.
+- **Follow-up:** a required poem or random words did no better than the unrelated-domain instruction. Their small edge over the plain prompt shrank after correcting for drift in the judge's scoring.
+
+As in the first study, all scores come from model judges.
+
 ## Help wanted: blind ratings
 
 The report's conclusions rest on a model judge, and the real test is ratings by scientists. A blind rating sheet with instructions is in [`analysis/random-stimuli-ideation/outputs/blinded_rating/`](analysis/random-stimuli-ideation/outputs/blinded_rating/). Please rate it **without opening** `rating_key_DO_NOT_OPEN_BEFORE_RATING.csv`.

@@ -1,0 +1,49 @@
+{
+  "question": "ap1",
+  "model": "claude-sonnet-5-5",
+  "prompt": "Here is a research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nDo not answer it. Instead, list 8 parallel problems, each from a different field outside biology and medicine, that share the underlying structure of this question. Make the fields as different from one another as you can. For each, give the field, the parallel problem in one sentence, and two or three sentences on how people in that field investigate or measure it (specific methods, experimental designs, or analyses).",
+  "n_returned": 8,
+  "parallels": [
+    {
+      "field": "Materials science (metallurgy)",
+      "problem": "Determining whether a shape-memory alloy's or metal's microstructure (e.g., dislocation networks) stores a record of past deformation that shapes its future response, once the original stress is gone.",
+      "how_studied": "Researchers run cyclic loading and thermal cycling tests and compare hysteresis loops between pre-treated and virgin samples. They use electron microscopy and X-ray diffraction to map the stored microstructure. Annealing experiments check how much heat is needed to erase the memory, which shows whether the structure itself is the carrier."
+    },
+    {
+      "field": "Climate science / paleoclimatology",
+      "problem": "Testing whether ice sheets or ocean circulation act as a memory of past climate forcing, with a persistent state that outlasts the trigger and changes later responses (hysteresis).",
+      "how_studied": "Earth system models are run with ramped-up and then ramped-down forcing to trace hysteresis curves. Ice cores and sediment proxies are used to check whether the past state predicts present behavior beyond current conditions. Autocorrelation and critical-slowing-down statistics are applied to time series to quantify memory timescales."
+    },
+    {
+      "field": "Neuroscience-free cognitive economics (behavioral economics)",
+      "problem": "Establishing whether past exposure to a price, shock or policy leaves a lasting imprint on consumer or investor behavior (habit or imprinting) rather than simply reflecting current incentives.",
+      "how_studied": "Economists use panel data and difference-in-differences designs comparing cohorts that experienced a shock at different times. They include lagged-term regressions and test for persistence after the incentive is removed. Natural experiments, such as a cohort entering the labor market during a recession, provide quasi-random assignment of the initial exposure."
+    },
+    {
+      "field": "Computer engineering (hardware)",
+      "problem": "Verifying that a circuit element such as a flip-flop, SRAM cell or memristor holds a state after the input signal that set it is removed, and that this state later changes its output.",
+      "how_studied": "Engineers apply write pulses, remove them, then read the state repeatedly over time to measure retention and decay. They sweep inputs to map bistability and hysteresis in the transfer curve. Stress tests with noise, temperature and repeated cycling show how reliable and durable the stored state is."
+    },
+    {
+      "field": "Linguistics / historical linguistics",
+      "problem": "Deciding whether a speech community's sound patterns or grammar preserve traces of an earlier contact language (substrate memory), even after the original influence has disappeared.",
+      "how_studied": "Linguists compare cognate sets and phonetic measurements across generations, using acoustic analysis of recorded speech. They apply phylogenetic and comparative methods to separate inherited features from borrowed ones. Apparent-time studies compare older and younger speakers to see whether the feature persists without ongoing exposure."
+    },
+    {
+      "field": "Geology / geomorphology",
+      "problem": "Determining whether a landscape or rock formation retains a record of past events (such as a flood, glaciation or earthquake) that controls how it responds to later events.",
+      "how_studied": "Geologists date landforms and sediments with cosmogenic nuclides and luminescence to build chronologies. They use paleomagnetic and stratigraphic analysis to read the preserved signal. Flume or numerical erosion experiments then test whether a landscape with a prior history responds differently from a naive one."
+    },
+    {
+      "field": "Sociology / political science",
+      "problem": "Testing whether institutions or communities carry a lasting legacy of a past event (such as historical oppression or a historical policy) that shapes present attitudes and outcomes after the original conditions are gone.",
+      "how_studied": "Researchers use historical-legacy designs that link archival boundaries or treatments to modern survey outcomes, with regression discontinuity around old borders. They use instrumental variables and placebo tests to rule out other causes. Process tracing and interviews look for the transmission mechanism, such as institutions or family narratives."
+    },
+    {
+      "field": "Machine learning",
+      "problem": "Determining whether a neural network or recurrent system retains information from earlier inputs or training stages (such as a recurrent hidden state or catastrophic-forgetting resistance) and whether that retained information causally affects later predictions.",
+      "how_studied": "Researchers run ablation and intervention experiments, such as zeroing or patching specific units or hidden states and measuring downstream changes. They train linear probes to decode earlier inputs from later activations. They also test performance after delays or distractor inputs to find the timescale of retention."
+    }
+  ],
+  "cost_usd": 0.022066000000000002
+}

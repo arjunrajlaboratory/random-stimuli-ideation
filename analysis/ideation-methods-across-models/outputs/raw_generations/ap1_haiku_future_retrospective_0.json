@@ -1,0 +1,34 @@
+{
+  "question": "ap1",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "arm": "future_retrospective",
+  "call": 0,
+  "prompt": "Research question: \"What analyses or measurements would best test whether AP-1 acts as a cellular memory mechanism?\"\n\nIt is 2036. Looking back, 5 landmark papers each settled this question in a way that surprised the field, because of how they approached it. For each paper, describe what it measured, analyzed, or did, as a concrete idea a research lab could pursue today. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Paper 1 (hypothetical): Degron washout of AP-1 after priming",
+      "description": "Use an auxin- or dTAG-inducible degron to remove Fos or Jun after a priming stimulus, then measure chromatin accessibility (ATAC-seq) and the transcriptional response to re-stimulation at days to weeks. If the primed state survives AP-1 loss, AP-1 is needed to establish memory but not to maintain it; if it collapses, AP-1 is the maintenance mechanism."
+    },
+    {
+      "title": "Paper 2 (hypothetical): Tracking AP-1 through mitosis",
+      "description": "Tag endogenous Jun or Fos with HaloTag or a similar label for live imaging across cell divisions, and run CUT&Tag on sorted mitotic cells to see whether AP-1 stays bound to memory enhancers during mitosis. Then test whether daughter cells inherit accessibility and the primed response. Mitotic retention would support bookmarking as a memory mechanism."
+    },
+    {
+      "title": "Paper 3 (hypothetical): Optogenetic pulse-pattern encoding of AP-1",
+      "description": "Build light-controlled Fos/Jun constructs and deliver the same total AP-1 dose as pulses of different frequency, duration, or spacing. Compare the resulting memory after a long rest, measured by how strongly cells respond on re-stimulation. This tests whether memory depends on dose, timing, or pattern, which is central to whether AP-1 encodes history."
+    },
+    {
+      "title": "Paper 4 (hypothetical): Activity-dependent tagging and manipulation of AP-1 engram cells",
+      "description": "Use an activity-dependent system (such as a TRAP-style tamoxifen-inducible Fos reporter) to permanently label AP-1-active cells during a learning or immune-challenge event in vivo. Then reactivate or ablate those labeled cells later to test whether they are both necessary and sufficient for the memory-driven response. This moves the question from correlation to causation in a living animal."
+    },
+    {
+      "title": "Paper 5 (hypothetical): Lineage-barcoded multiomics of trained immunity",
+      "description": "Introduce a DNA barcode into hematopoietic progenitors, prime them in vivo with a single AP-1-driving stimulus, and then run single-cell multiome (RNA plus ATAC) on barcoded clonal descendants months later. Comparing primed and unprimed clones shows whether AP-1-dependent memory is carried by specific progenitor lineages, and whether it is heritable across the clone."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2187,
+  "cost_usd": 0.00131025
+}

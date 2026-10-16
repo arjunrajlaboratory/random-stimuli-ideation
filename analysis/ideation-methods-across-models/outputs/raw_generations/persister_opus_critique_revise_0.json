@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "critique_revise",
+  "call": 0,
+  "prompt": "Research question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nHere are 5 ideas that were proposed for this question:\n\n1. Twin-population lineage barcoding with retrospective state profiling: Label cells with heritable expressed barcodes, split the population into sister halves, and treat only one half so that surviving lineages can be identified by barcode. Then profile the matched untreated sisters by single-cell RNA-seq or ATAC-seq to directly read out the pre-treatment molecular state that predicted survival.\n2. Fluctuation analysis to distinguish pre-existing heritable states from drug-induced adaptation: Seed many small parallel cultures from single cells, expand them for varying numbers of generations, then treat each with drug and count survivors. Large between-culture variance in survivor number indicates heritable pre-existing states, and the dependence on expansion time estimates how many generations that state persists.\n3. Highly multiplexed single-molecule RNA FISH of candidate resistance markers before treatment: Image thousands of untreated cells for simultaneous transcript counts of resistance-associated genes (receptor tyrosine kinases, stress and dedifferentiation markers) to measure how often rare high-expressing cells arise and whether the markers co-fluctuate as a coordinated program. Fixing and re-imaging the same field after treatment links the measured state to actual survival.\n4. Long-term live-cell imaging with signaling and cell-cycle reporters through drug exposure: Track individual cells by time-lapse microscopy using reporters for pathway activity, cell-cycle phase, and division history from before drug addition through the survival bottleneck. This reveals whether survival depends on dynamic properties such as quiescence, division timing, or transient signaling pulses rather than a static expression state.\n5. Pooled CRISPR activation/interference screens scored specifically on the rare-survivor fraction: Run genome-scale or focused CRISPRa and CRISPRi screens and compare guide representation in drug survivors versus untreated controls, using barcode-level statistics tuned to the extreme bottleneck. Hits identify which genes are causally sufficient or necessary to enter the survival-prone state, converting correlative markers into mechanism.\n\nA senior expert reviewing them says they are the ideas everyone in the field would propose first. Propose 5 replacement ideas (analyses, measurements, or experiments) that are substantially less obvious but still concrete, scientifically sound, and feasible for a research lab. Do not repeat or lightly modify the ideas above. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Allele-resolved readout of the rare high-expressing state",
+      "description": "In a cell line with heterozygous SNPs (or an engineered dual-reporter knock-in at both alleles of a resistance driver such as AXL or NGFR), use allele-specific single-molecule FISH or nascent-transcript imaging to ask whether rare high-expressing cells activate one allele or both. Coordinated biallelic activation implicates an upstream trans/signaling fluctuation shared by the nucleus, whereas monoallelic activation implicates a cis-chromatin switch, which sharply narrows the mechanistic search space before any screening is done."
+    },
+    {
+      "title": "Per-cell drug exposure and target engagement as a competing explanation",
+      "description": "Measure the actual intracellular drug concentration and target occupancy in single cells before scoring survival, using a fluorescent or clickable drug analog plus a target-engagement readout (e.g., single-cell CETSA/thermal-shift or a proximity reporter for the inhibited kinase), combined with live efflux-pump activity dyes. This tests the frequently ignored possibility that survivors are pharmacologically under-dosed rather than transcriptionally privileged, and quantifies how much of the survivor fraction that alone explains."
+    },
+    {
+      "title": "Sort-and-relax kinetics to fit a transition-rate model with a quantitative sufficiency test",
+      "description": "Isolate the extreme tails of a live reporter for the candidate primed state by FACS, return them to drug-free culture, and track how the expression distribution relaxes back to steady state over days, fitting entry and exit rates of a two- or three-state Markov model. Then ask whether those independently measured rates numerically predict the observed survivor frequency and the frequency after a defined pre-treatment delay; a mismatch proves another determinant is in play."
+    },
+    {
+      "title": "Manipulating the rate of state entry without touching the resistance genes",
+      "description": "Vary only the cells' drug-free history (confluence, nutrient or hypoxic pulses, transient inhibition of specific chromatin writers/erasers, or enforced slow versus fast growth) and measure the resulting survivor frequency together with the abundance of primed cells. Finding conditions that shift survivor frequency severalfold while leaving bulk drug sensitivity unchanged identifies the upstream process that generates the rare state, which is the actionable target rather than the downstream marker."
+    },
+    {
+      "title": "Spatial neighborhood mapping of survivors in fixed coordinates",
+      "description": "Image the monolayer at the moment of drug addition to record each cell's local density, neighbor identities, and contact geometry, then re-image the identical field after the killing bottleneck to locate survivors. Testing whether survivors are spatially clustered, preferentially arise at colony edges, or sit beside specific secreting neighbors distinguishes a cell-intrinsic primed state from locally produced paracrine protection, which conditioned-medium and sparse-versus-dense plating controls can then confirm."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 2458,
+  "cost_usd": 0.1099195
+}

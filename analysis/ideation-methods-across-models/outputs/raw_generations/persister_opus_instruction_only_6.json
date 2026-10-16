@@ -1,0 +1,34 @@
+{
+  "question": "persister",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "arm": "instruction_only",
+  "call": 6,
+  "prompt": "Each of your ideas must draw on a domain unrelated to the research question below, for example through an analogy, a structure, a principle, or a pattern borrowed from that domain, while still being a concrete, scientifically sound way to address the question.\n\nResearch question: \"What measurements or analyses would best reveal why a small fraction of genetically identical cancer cells survive targeted drug treatment?\"\n\nPropose 5 distinct, concrete ideas (analyses, measurements, or experiments) that a research lab could pursue to address this question. For each idea give a short title and a description of one or two sentences.",
+  "attempts": 1,
+  "ideas": [
+    {
+      "title": "Flight-recorder lineage tracing (aviation black boxes)",
+      "description": "Black boxes record a flight continuously so investigators can work out the cause after a crash. In the same way, give cells heritable barcodes and split each clone into twin populations before treatment: drug one half, and profile the untreated twin with single-cell RNA-seq and ATAC-seq to read out the pre-drug state of the lineages that went on to survive. This shows whether survivors were already distinct before the drug was added, and which genes and chromatin features marked them."
+    },
+    {
+      "title": "Precursor signals before survival (earthquake forecasting)",
+      "description": "Seismologists look for patterns in small tremors that come before large earthquakes. Here, image live-cell reporters (for example ERK, AKT and p53 activity sensors, plus a cell-cycle reporter) for 48\u201372 hours before and during drug exposure. Then fit survival-analysis models to ask which features of each cell's signaling history best predict whether it lives or dies, such as how often it pulses, its baseline level, or its cycle phase."
+    },
+    {
+      "title": "Sister-cell 'twin study' to split heritable from random effects (twin studies in epidemiology)",
+      "description": "Epidemiologists compare identical and fraternal twins to separate inherited effects from chance. Similarly, track lineages by time-lapse microscopy and measure how often sister cells, cousins, and unrelated cells share the same outcome after drug treatment. Fitting these correlations to a branching model tells you how much of survival comes from a state passed down through divisions and how long that state lasts."
+    },
+    {
+      "title": "Mark\u2013recapture to measure state-switching rates (wildlife ecology)",
+      "description": "Ecologists tag animals, release them and recapture them later to estimate population sizes and movement rates. Here, use FACS to sort cells that are high or low for a candidate persister marker (such as AXL, EGFR or NGFR), label each group with a different fluorescent dye or barcode, mix them back together, and then sample at several time points to measure how fast cells switch between states. Drug-challenging the samples at each time point then shows how survival potential decays as cells move between states."
+    },
+    {
+      "title": "Stress-testing the survivor state (bank stress tests in finance)",
+      "description": "Regulators test banks against simulated shocks to find weak points. Analogously, run pooled CRISPR knockout or activation screens with a single-cell readout (Perturb-seq) at low drug doses, and score each gene by how much it raises or lowers the fraction of surviving cells, not just whether cells grow. This separates the genes that create the rare pre-resistant state from those that only help survival after the drug is added."
+    }
+  ],
+  "scaffold": {},
+  "output_tokens": 1542,
+  "cost_usd": 0.036358
+}
